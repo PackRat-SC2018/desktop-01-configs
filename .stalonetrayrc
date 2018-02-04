@@ -1,0 +1,31 @@
+# stalonetrayrc
+#----------------#
+
+## transparent tray
+background "#C9C9C1"
+transparent true
+tint_color "#C9C9C1"
+tint_level 0
+
+## decor
+decorations border
+dockapp_mode simple
+fuzzy_edges 1
+parent_bg false
+scrollbars none
+
+## geometry
+geometry 6x1+680-4
+max_geometry 6x1
+grow_gravity W
+icon_gravity E
+icon_size 32
+slot_size 40
+no_shrink true
+
+kludges fix_window_pos,force_icons_size,use_icons_hints
+skip_taskbar true
+sticky true
+window_type normal
+window_layer bottom
+window_strut none

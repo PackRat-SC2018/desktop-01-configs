@@ -1,0 +1,190 @@
+# static modules
+Style FvwmIdent* !Title, WindowListSkip, HandleWidth 2, Borderwidth 2, !Button 1, !Button 4, !Button 6
+Style FvwmIconMan02* !Title, !Handles, !Borders, Sticky, WindowListSkip, CirculateSkip, StaysOnBottom, NeverFocus
+Style FvwmButtons* !Title, !Handles, BorderWidth 1, CirculateSkip, Sticky, WindowListSkip, StaysOnTop, NeverFocus
+Style FvwmPager* !Title, HandleWidth 1, Borderwidth 1, Sticky, WindowListSkip, CirculateSkip, StaysOnBottom, NeverFocus
+
+DestroyModuleConfig FvwmIdent: *
+*FvwmIdentBack #191970
+*FvwmIdentFore #FFB600
+*FvwmIdent: Font "xft:sans:pixelsize=10:antialias=true:hinting=slight"
+
+DestroyModuleConfig FvwmAnimate: *
+*FvwmAnimate: Effect Flip
+*FvwmAnimate: Delay 1
+*FvwmAnimate: Iterations 30
+*FvwmAnimate: Twist 1
+*FvwmAnimate: Width 2
+
+# DestroyModuleConfig FvwmEvent: *
+#*FvwmEvent: Cmd Function
+#*FvwmEvent: new_page CurrentPageFocusFunc
+#*FvwmEvent: new_desk CurrentPageFocusFunc
+#*FvwmEvent: destroy_window CurrentPageFocusFunc
+#*FvwmEvent: focus_change MarkWindowAsActiveFunc
+
+#======FvwmIconBox specs [l t r b]===============#
+
+Style * StickyIcon
+Style * IconTitleRelief 0
+Style * IconBackgroundRelief 1
+Style * IconBackgroundPadding 1
+Style * IconSize 56 56 160 160
+Style * IconFont "Shadow=0 0 SE:xft:Monospace:style=regular:pixelsize=12:antialias=true:hinting=slight"
+Style * IconBackgroundColorset 19
+Style * IconTitleColorset 19
+Style * HilightIconTitleColorset 19
+Style * Icon unknown1.xpm
+
+# comment out if iconbox needed; then select IconBox location
+# Style * !Icon
+Style * !IconTitle
+
+# top left
+# Style "*" IconBox 8 4 256 440, IconGrid 96 24, IconFill left top
+# Style "*" IconBox 8 64 800 128, IconGrid 24 24, IconFill left top
+#
+# top center
+Style * IconBox 512 8 1066 256, IconGrid 24 24, IconFill left top
+#
+# bottom center
+# Style * IconBox 400 836 1200 899, IconGrid 24 24, IconFill left top
+#
+# top right
+# Style * IconBox 1250 48 1360 640, IconGrid 24 24, IconFill left top
+#
+# bottom left
+# Style * IconBox 200 836 1400 895, IconGrid 20 20 , IconFill left top
+#
+# middle right
+# Style * Iconbox 1224 300 1360 600, IconGrid 36 36, IconFill left top
+#
+# middle left
+# Style * Iconbox 16 48 256 600, IconGrid 24 24, IconFill left top
+#
+# thumbnails
+# Style "*" Iconbox 2 680 688 762, IconGrid 8 8, IconFill left top
+#===================================================
+
+# fvwmpager
+DestroyModuleConfig FvwmPager: *
+*FvwmPager: DeskTopScale 25
+*FvwmPager: Geometry +2+60
+*FvwmPager: WindowBorderWidth 0.3
+*FvwmPager: Colorset * 18
+*FvwmPager: HilightColorset * 17
+*FvwmPager: WindowColorsets 17 18
+*FvwmPager: Font none
+#*FvwmPager: SmallFont "xft:Sans:style=Regular:pixelsize=9:antialias=True"
+*FvwmPager: Balloons
+*FvwmPager: BalloonColorset * 5
+# *FvwmPager: BalloonFont "xft:Sans:style=Regular:pixelsize=8:antialias=True"
+*FvwmPager: BalloonFont "Shadow=0 0 SE:xft:123:style=regular:pixelsize=10:antialias=true:hinting=slight"
+*FvwmPager: BalloonYOffset +2
+*FvwmPager: BalloonBorderWidth 0
+*FvwmPager: BalloonFore #1F1F1F
+*FvwmPager: BalloonBack #E5E5E5
+*FvwmPager: UseSkipList
+# *FvwmPager: SolidSeparators
+# *FvwmPager: NoSeparators
+*FvwmPager: ShapeLabels
+*FvwmPager: !MiniIcons
+*FvwmPager: MoveThreshold 5
+
+# FvwmIconMan02
+#===========================================================
+
+DestroyMenu MenuIconOps
+AddToMenu   MenuIconOps
++ "(De)Iconify"         Iconify
++ "(Un)Maximize"        Maximize
++ "(Un)Shade"           WindowShade
++ "(Un)Sticky"		Stick
++ "(No)TitleBar"	Pick (CirculateHit) ToggleTitle
++ "Send To Desk"        Popup MenuSendToDesk
++ "" Nop
++ "Close"               Close
++ "Destroy"             Destroy
++ "" Nop
++ "Raise"		Raise
++ "Lower"		Lower
++ "" Nop
++ "StaysOnTop"          Pick (CirculateHit) Layer 0 6
++ "StaysPut"            Pick (CirculateHit) Layer 0 4
++ "StaysOnBottom"       Pick (CirculateHit) Layer 0 2
++ "" Nop
++ "Identify"            Module FvwmIdent
+
+# Function: IconManClick
+#
+# This function is run from FvwmIconMan when the button is clicked.
+DestroyFunc IconManClick
+AddToFunc   IconManClick
++ I ThisWindow (Raised, !Shaded, !Iconic, CurrentPage) Iconify
++ I TestRc (Match) Break
++ I ThisWindow (!Raised) Raise
++ I ThisWindow (Shaded) WindowShade
++ I ThisWindow (Iconic) Iconify
++ I ThisWindow (AcceptsFocus) FlipFocus
+
+#=======================================================================
+
+DestroyModuleConfig FvwmIconMan02
+*FvwmIconMan02: Title ""    
+*FvwmIconMan02: NumManagers 1
+*FvwmIconMan02: ManagerGeometry 0x1+0-0
+*FvwmIconMan02: ButtonGeometry 148x24
+*FvwmIconMan02: MaxButtonWidthByColumns 1
+*FvwmIconMan02: MaxButtonWidth 148
+*FvwmIconMan02: Font "xft:Roboto:style=Regular:size=11:antialias=true:hinting=slight"
+*FvwmIconMan02: Format "%c: %i"
+*FvwmIconMan02: FollowFocus true
+*FvwmIconMan02: DontShow icon=Untitled resource=Untitled
+*FvwmIconMan02: Resolution desk
+*FvwmIconMan02: ShowOnlyIcons false
+*FvwmIconMan02: DrawIcons flase
+*FvwmIconMan02: ShowOnlyFocused false
+*FvwmIconMan02: ShowTransient false
+*FvwmIconMan02: Sort id
+*FvwmIconMan02: UseWinList true
+*FvwmIconMan02: ReliefThickness 0
+*FvwmIconMan02: Tips Always
+*FvwmIconMan02: TipsDelays 1000 300
+*FvwmIconMan02: TipsFont "Shadow=0 0 SE:xft:Monospace:style=regular:pixelsize=12:antialias=true:hinting=slight"
+# *FvwmIconMan02: TipsFont "xft:Envy Code R:style=regular:pixelsize=10"
+*FvwmIconMan02: TipsFormat "%i"
+*FvwmIconMan02: TipsBorderWidth 1
+*FvwmIconMan02: TipsColorset 3
+*FvwmIconMan02: TipsJustification center
+#======================================================================
+*FvwmIconMan02: IconButton flat
+*FvwmIconMan02: PlainButton flat
+*FvwmIconMan02: SelectButton flat
+*FvwmIconMan02: FocusButton flat
+*FvwmIconMan02: FocusAndSelectButton flat
+
+*FvwmIconMan02: Colorset 14
+*FvwmIconMan02: IconColorset 16
+*FvwmIconMan02: PlainColorset 16
+*FvwmIconMan02: FocusColorset 17
+*FvwmIconMan02: SelectColorset 11
+*FvwmIconMan02: FocusAndSelectColorset 0
+
+#*FvwmIconMan02: Background  #D1D0CC
+#*FvwmIconMan02: Foreground  #000000
+#*FvwmIconMan02: IconButton	up	#6B6B6B #D1D0CC
+#*FvwmIconMan02: PlainButton	up	#4E4E4E #D1D0CC
+#*FvwmIconMan02: SelectButton	up	#191A17 #D1D0CC
+#*FvwmIconMan02: FocusButton	up	#191A17 #B5B4B1
+#*FvwmIconMan02: FocusAndSelectButton	flat	#191A17 #B5B4B1
+
+*FvwmIconMan02: Action    Mouse 1 N sendcommand "TaskRaiseFocus"
+*FvwmIconMan02: Action    Mouse 2 N sendcommand "WindowShade toggle"
+*FvwmIconMan02: Action    Mouse 3 N sendcommand "Focus", sendcommand "Iconify"
+*FvwmIconMan02: Action    Mouse 2 M SendCommand "Close"
+
+*FvwmIconMan02: Action Mouse 1 A sendcommand IconManClick
+*FvwmIconMan02: Action Mouse 2 A sendcommand Nop
+*FvwmIconMan02: Action Mouse 3 A sendcommand "Menu MenuIconOps"
+
+#=======================================================================

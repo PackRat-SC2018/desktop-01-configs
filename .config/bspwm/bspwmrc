@@ -1,0 +1,65 @@
+#! /bin/sh
+
+pkill -x conky &
+pkill -x i3status &
+pkill -x polybar &
+
+# basic user environment
+xsetroot -solid "#406380" &
+xrdb -l $HOME/.Xresources &
+xmodmap $HOME/.Xmodmap &
+
+# wallpaper
+#fbsetbg -c -r $HOME/wallpaper/ &
+nitrogen --restore &
+
+# disable touchpad
+# ktpad &
+
+# polybar
+(sleep 2s && polybar bspwm-bar) &
+
+# key bindings
+sxhkd &
+
+bspc monitor -d 1 2 3 4
+
+bspc config border_width	2
+bspc config window_gap		4
+bspc config left_padding	0
+bspc config right_padding	0
+bspc config top_padding	    24	
+bspc config bottom_padding  0	
+
+bspc config split_ratio          0.50
+bspc config borderless_monocle   false
+bspc config gapless_monocle      true
+bspc config paddingless_monocle true
+
+bspc config pointer_modifier	mod1
+bspc config click_to_focus	true
+bspc configpointer_action1	move
+bspc config pointer_action2	resize_side
+bspc config pointer_action3	resize_corner
+
+#bspc rule -a Gimp desktop='^8' state=floating follow=on
+#bspc rule -a Chromium desktop='^2'
+#bspc rule -a mplayer2 state=floating
+#bspc rule -a Kupfer.py focus=on
+#bspc rule -a Screenkey manage=off
+bspc rule -a XClock state=floating layer=below
+bspc rule -a Xfce4-screenshooter state=floating
+bspc rule -a Galculator state=floating
+bspc rule -a Void_Exit_Session state=floating layer=above
+bspc rule -a UXTerm state=floating
+bspc rule -a Exit_Session state=floating layer=above
+bspc rule -a XCalc state=floating
+bspc rule -a Void_Exit_Session state=floating
+bspc rule -a Xfce4-appfinder state=floating
+bspc rule -a Xfce4-panel state=floating
+bspc rule -a Thunderbird state=floating
+bspc rule -a Audacious state=floating
+
+bspc config normal_border_color "#363636"
+bspc config active_border_color "#646464" 
+bspc config focused_border_color = "#5BAD57" 

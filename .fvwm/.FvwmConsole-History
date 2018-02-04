@@ -1,0 +1,100 @@
+Style * IconSize 120 120 144 144
+Style * IconSize 50 50 144 144
+Style * IconSize 56 56 144 144
+Read Panels
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+Read Panels
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+Read Panels
+Module FvwmButtons FvwmTaskBar
+Read Panels
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Style * !Title
+Style * dzen2 !Titles
+Style * dzen2 !Title
+Style dzen2 !Title
+Style dzen* !Title
+Style lemonbar* !Title !Borders
+Style lemonbar* !Border
+Style lemonbar* !Borders
+Read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+KillModule FvwmButtons ButtonLaunchers
+Read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+KillModule FvwmButtons ButtonLaunchers
+Read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+KillModule FvwmButtons ButtonLaunchers
+Read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+KillModule FvwmButtons ButtonLaunchers
+Read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+KillModule FvwmButtons ButtonLaunchers
+Read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+Read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+Read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+KillModule FvwmButtons ButtonLaunchers
+Read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+KillModule FvwmButtons ButtonLaunchers
+Read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+KillModule FvwmButtons ButtonLaunchers
+Read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+KillModule FvwmButtons ButtonLaunchers
+Read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+KillModule FvwmButtons ButtonLaunchers
+Read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+Read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+KillModule FvwmButtons ButtonLaunchers
+Read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+Read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+Module FvwmIconMan
+Style * !Titles
+Style * !Title
+read LauncherPanel
+Module FvwmButtons ButtonLaunchers
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+Module FvwmButtons ButtonLaunchers
+Module FvwmButtons ButtonLaunchers
+Module FvwmButtons DeskPanel
+Module FvwmButtons DeskPanel
+Module FvwmButtons DeskPanel
+Module FvwmButtons DeskPanel
+Module FvwmButtons DeskPanel
+Module FvwmButtons DeskPanel
+Module FvwmButtons DeskPanel
+Module FvwmButtons RightPanel
+Style * stalonetray !Borders
+Style * stalonetray !Border
+Style *tray !Borders
+Style *tray BorderWidth 1, HandleWidth 1
+Module FvwmButtons FvwmTaskBar

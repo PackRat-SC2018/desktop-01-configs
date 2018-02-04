@@ -1,0 +1,255 @@
+! Xresources file
+! created 05 December 2017
+!
+!----------------------------------------------------------------------
+
+! Xft settings ---------------------------------------------------------
+Xft.dpi: 96
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
+Xft.autohint: 0
+
+
+! colours  terminal.sexy.com
+! special
+*.foreground:   #a8a19f
+*.background:   #1b1918
+*.cursorColor:  #a8a19f
+
+! black
+*.color0:       #1b1918
+*.color8:       #766e6b
+
+! red
+*.color1:       #f22c40
+*.color9:       #f22c40
+
+! green
+*.color2:       #5ab738
+*.color10:      #5ab738
+
+! yellow
+*.color3:       #d5911a
+*.color11:      #d5911a
+
+! blue
+*.color4:       #407ee7
+*.color12:      #407ee7
+
+! magenta
+*.color5:       #6666ea
+*.color13:      #6666ea
+
+! cyan
+*.color6:       #00ad9c
+*.color14:      #00ad9c
+
+! white
+*.color7:       #a8a19f
+*.color15:      #f1efee
+
+! XTerm
+!==============================================================================
+XTerm*geometry:           128x32
+XTerm*loginShell:         false
+XTerm*font:               -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
+XTerm*boldFont:           -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
+!XTerm*font:                xft:Ttyp0:style=Regular:size=14:antialias=false:autohint=true:hinting=slight
+!XTerm*boldFont:            xft:Ttyp0:style=Regular:size=14:antialias=false:autohint=true:hinting=slight
+!XTerm.faceName:           Ttyp0 Bold
+!XTerm*faceSize:           14
+XTerm*dynamicColors:      true
+!XTerm*utf8:               2
+XTerm*eightBitInput:      true
+XTerm*saveLines:          2048
+XTerm*scrollTtyKeypress:  true
+XTerm*scrollTtyOutput:    false
+XTerm*scrollBar:          false
+XTerm*rightScrollBar:     false
+XTerm*jumpScroll:         true
+XTerm*multiScroll:        true
+XTerm*toolBar:            false
+XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+! for emacs
+XTerm*metaSendsEscape: true
+
+! UXTerm
+!======================================================================================
+UXTerm*geometry:           80x24
+UXTerm*loginShell:         false
+UXTerm*font:               -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
+UXTerm*boldFont:           -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
+!UXTerm*font:                xft:Perfect DOS VGA 437:style=Regular:size=12:antialias=false:autohint=true:hinting=slight
+!UXTerm*boldFont:            xft:Perfect DOS VGA 437:style=Regular:size=12:antialias=false:autohint=true:hinting=slight
+!UXTerm.faceName:           Ttyp0 Regular
+!UXTerm*faceSize:           12
+UXTerm*dynamicColors:      true
+UXTerm*utf8:               2
+UXTerm*eightBitInput:      true
+UXTerm*saveLines:          2048
+UXTerm*scrollTtyKeypress:  true
+UXTerm*scrollTtyOutput:    false
+UXTerm*scrollBar:          false
+UXTerm*rightScrollBar:     false
+UXTerm*jumpScroll:         true
+UXTerm*multiScroll:        true
+UXTerm*toolBar:            false
+UXTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+! for emacs
+UXTerm*metaSendsEscape: true
+
+! URxvt
+!==============================================================================
+
+!real transparency with active compositor
+URxvt*depth:		32
+!URxvt*background: rgba:0000/0000/0200/c800
+!URxvt*foreground: rgba:ffff/ffff/ffff/ffff
+URxvt*background: [80]#1b1918
+URxvt*fading:      50
+!URxvt*fadeColor:   rgba:0000/0000/0000/0000
+URxvt*fadeColor:	#1b1918
+URxvt*foreground: #a8a19f
+URxvt*cursorColor: #a8a19f
+
+URxvt*boldMode:   false
+URxvt*colorBDMode: true
+URxvt*colorBD:     #FFFFFF
+URxvt.colorUL:     #E6B55C
+URxvt*underlineColor: #DBB86E
+URxvt.colorIT:     #686868
+URxvt.blurRadius:  3x3
+
+URxvt.geometry:             80x24
+URxvt.internalBorder:		4
+URxvt.scrollBar:            false
+URxvt.scrollColor:          #212121
+URxvt.troughColor:          #0f0f0f
+URxvt.scrollBar_floating:   true
+URxvt.scrollBar_right:      true
+URxvt.sveLines:             4000
+URxvt.cursorBlink:          false
+URxvt.termName:             rxvt-256color
+!URxvt*font:               -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
+!URxvt*boldFont:           -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
+URxvt.font:                 xft:Roboto Mono:style=medium:size=11:antialias=true:autohint=true:hinting=slight
+URxvt.boldFont:             xft:Roboto Mono:style=medium:size=11:antialias=true:autohint=true:hinting=slight
+!URxvt.font:                 xft:Fantasque Sans Mono:style=Regular:size=12:antialias=true:autohint=true:hinting=slight
+!URxvt.boldFont:             xft:Fantasque Sans Mono:style=Regular:size=12:antialias=true:autohint=true:hinting=slight
+URxvt.iconFile:             /usr/share/pixmaps/gksu-root-terminal.png
+URxvt.loginShell:          false
+!
+URxvt.letterSpace:                     -1
+URxvt.lineSpace:                       [1,-1]
+URxvt.perl-ext-common:                 default,matcher
+URxvt.urlLauncher:                     /usr/bin/firefox
+URxvt.tabbed.tabbar-fg:      14
+URxvt.tabbed.tabbar-bg:      0
+URxvt.tabbed.tab-fg:         13
+URxvt.tabbed.tab-bg:         0
+URxvt.iso14755_52:          false
+URxvt.matcher.pattern.1:     \\bhttps?:\/\/(www.youtube|youtube).com\/watch\\?v=([\\w-]*)|vimeo.com\/([\\w-]*)
+URxvt.matcher.launcher.1:     mpv $0
+URxvt.matcher.pattern.2:      \\bhttps?:\/\/[\\w-.]*\/[\\w./?&@#-]*.(jpg|jpeg|png)
+!URxvt.matcher.launcher.2:     geeqie $0
+
+! xclock ---------------------------------------------------------------
+xclock*update:          60
+xclock*analog:          true
+xclock*height:		120
+xclock*width:		120
+xclock*background:    rgb:33/32/38
+xclock*foreground:    rgb:E3/E3/E3
+xclock*hourColor:     rgb:E3/E3/E3
+xclock*minuteColor:   rgb:E3/E3/E3
+xclock*secondColor:   rgb:bb/bb/bb
+xclock*majorColor:    rgb:CC/CC/CC
+xclock*minorColor:    rgb:CC/CC/CC
+
+!-------------------Xpdf
+xpdf*Foreground:         #0C0C0C
+xpdf*Background:         #D1D1CD
+xpdf*fontList:           -xos4-terminus-medium-r-normal-*-14-140-*-*-*-*-iso8859-1
+
+! dzen2
+
+!dzen2.font:	-xos4-terminus-medium-r-normal-*-12-120-*-*-*-*-iso8859-1
+dzen2.font:	inconsolata:medium:pixelsize=14:antialias=true:hintstyle=slight
+dzen2.foreground: #C4C4CC
+dzen2.background: #232323
+
+! XCalc --
+xcalc*geometry:               300x400
+XCalc*Cursor:                 hand2
+XCalc*ShapeStyle:             rectangle
+xcalc.ti.button20.label:      /
+!xcalc.ti.button3.label:       SQRT
+xcalc.ti.button16.label:      pi
+xcalc*ti.button1.vertDistance: 4
+xcalc*ti.button2.vertDistance: 4
+xcalc*ti.button3.vertDistance: 4
+xcalc*ti.button4.vertDistance: 4
+xcalc*ti.button5.vertDistance: 4
+xcalc*ti.bevel.borderWidth: 4
+xcalc*ti.bevel.vertDistance: 4
+xcalc*ti.bevel.defaultDistance: 0
+xcalc*ti.background: #332E2E
+xcalc*ti.bevel.borderColor: #404040
+xcalc.ti.bevel.background:             #111111
+xcalc.ti.bevel.screen.background:      #000000
+xcalc.ti.bevel.screen.DEG.background:  #000000
+xcalc.ti.bevel.screen.DEG.foreground:  LightSeaGreen
+xcalc.ti.bevel.screen.GRAD.background: #000000
+xcalc.ti.bevel.screen.GRAD.foreground: LightSeaGreen
+xcalc.ti.bevel.screen.RAD.background:  #000000
+xcalc.ti.bevel.screen.RAD.foreground:  LightSeaGreen
+xcalc.ti.bevel.screen.INV.background:  #000000
+xcalc.ti.bevel.screen.INV.foreground:  Red
+xcalc.ti.bevel.screen.LCD.background:  #000000
+xcalc.ti.bevel.screen.LCD.foreground:  LightSeaGreen
+xcalc.ti.bevel.screen.LCD.shadowWidth: 0
+xcalc.ti.bevel.screen.M.background:    #000000
+xcalc.ti.bevel.screen.M.foreground:    LightSeaGreen
+xcalc.ti.bevel.screen.P.background:    #000000
+xcalc.ti.bevel.screen.P.foreground:    Yellow
+xcalc.ti.Command.foreground:  White
+xcalc.ti.Command.background:  #777777
+xcalc.ti.button5.background:  Orange3
+xcalc.ti.button19.background: #611161
+xcalc.ti.button18.background: #611161
+xcalc.ti.button20.background: #611111
+xcalc.ti.button25.background: #722222
+xcalc.ti.button30.background: #833333
+xcalc.ti.button35.background: #944444
+xcalc.ti.button40.background: #a55555
+xcalc.ti.button22.background: #222262
+xcalc.ti.button23.background: #222262
+xcalc.ti.button24.background: #222272
+xcalc.ti.button27.background: #333373
+xcalc.ti.button28.background: #333373
+xcalc.ti.button29.background: #333373
+xcalc.ti.button32.background: #444484
+xcalc.ti.button33.background: #444484
+xcalc.ti.button34.background: #444484
+xcalc.ti.button37.background: #555595
+xcalc.ti.button38.background: #555595
+xcalc.ti.button39.background: #555595
+
+! XFontsel
+XFontSel*menu*showUnselectable: false
+XFontSel*MenuButton.shadowWidth: 0
+XFontsel*Toggle*ToggleStyle: check
+XFontsel*MenuButton*Justify:    left
+XFontsel*MenuButton*MenuButtonStyle: select
+.xfontsel.pane.commandBox.quitButton.background: #777777
+.xfontsel.pane.commandBox.quitButton.foreground: #FFFAFA
+.xfontsel.pane.commandBox.ownButton.background: #CD8500
+.xfontsel.pane.commandBox.ownButton.foreground: #FFFAFA
+.xfontsel.pane.commandBox.countLabel.background: #008B8B
+.xfontsel.pane.commandBox.countLabel.foreground: #FFFAFA
+.xfontsel.font: -xos4-terminus-medium-r-normal-*-14-140-*-*-*-*-iso8859-1
+
+! vim: set ft=xdefaults:

@@ -1,0 +1,38 @@
+#!/bin/sh
+#
+# fluxbox startup-script:
+#
+# Lines starting with a '#' are ignored.
+
+# kill apps from other wm
+pkill -x conky &
+pkill -x polybar &
+pkill -x i3status &
+pkill -x sxhkd &
+
+# Change your keymap:
+xmodmap "$HOME/.Xmodmap"
+xrdb -l "$HOME/.Xresources"
+fbsetroot -solid "#333366" &
+numlockx &
+
+# Applications you want to run with fluxbox.
+# MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
+#
+# set wallpaper
+#(sleep 2s && fbsetbg -c $HOME/wallpaper/simplewall_tardis.jpg) &
+(sleep 2s && fbsetbg -c -r "$HOME/wallpaper/") &
+
+# 3rd party apps
+# (sleep 2s && conky -dc $HOME/.conky10fboxrc) &
+# (sleep 2s && wicd-gtk --tray) &
+# (sleep 2s && nm-applet) &
+# (sleep 2s && connman-gtk --tray) &
+(sleep 2s && polybar fluxbox-bar) &
+
+# And last but not least we start fluxbox.
+# Because it is the last app you have to run it with ''exec'' before it.
+
+# exec fluxbox
+# or if you want to keep a log:
+exec fluxbox -log "$HOME/.fluxbox/log"

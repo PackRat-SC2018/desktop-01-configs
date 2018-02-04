@@ -1,0 +1,97 @@
+# Panel configurations
+
+# FvwmTaskBar styles
+
+Style FvwmTaskBar !Borders, !Title, WindowListSkip, StaysOnTop, Sticky
+
+# function for clicking on FvwmIconMan
+
+DestroyFunc IconManClick
+AddToFunc   IconManClick
++ I ThisWindow (Raised, !Shaded, !Iconic, CurrentPage) Iconify
++ I TestRc (Match) Break
++ I ThisWindow (!Raised) Raise
++ I ThisWindow (Shaded) WindowShade
++ I ThisWindow (Iconic) Iconify
++ I ThisWindow (AcceptsFocus) FlipFocus
+
+# FvwmIconMan for taskbar
+
+DestroyModuleConfig TaskBarIcons: *
+*TaskBarIcons: Title ""
+*TaskBarIcons: IconName TaskBarIcons
+*TaskBarIcons: UseWinList true
+*TaskBarIcons: Resolution global
+*TaskBarIcons: Tips needed
+*TaskBarIcons: Font "xft:Roboto:style=regular:size=11:antialias=True"
+
+# Manager Size
+*TaskBarIcons: ButtonGeometry 156x28
+*TaskBarIcons: MaxButtonWidth 156
+*TaskBarIcons: ManagerGeometry 1x1
+
+# Button Styles
+*TaskBarIcons: DrawIcons false
+*TaskBarIcons: ReliefThickness 0
+*TaskBarIcons: Format "%t"
+*TaskBarIcons: PlainButton up
+*TaskBarIcons: IconButton up
+*TaskBarIcons: FocusButton up
+*TaskBarIcons: IconAndSelectButton up
+*TaskBarIcons: SelectButton up
+# *TaskBarIcons: Background #003c3c
+*TaskBarIcons: Background #2F333B
+*TaskBarIcons: Foreground #FFFFFF
+*TaskBarIcons: PlainColorset 22
+*TaskBarIcons: FocusColorset 23
+*TaskBarIcons: FocusAndSelectColorset 23
+*TaskBarIcons: SelectColorset 23
+*TaskBarIcons: IconAndSelectColorset 23
+
+# Button Actions
+*TaskBarIcons: Action Mouse 1 A sendcommand IconManClick
+*TaskBarIcons: Action Mouse 2 A sendcommand Nop
+*TaskBarIcons: Action Mouse 3 A sendcommand "Menu MenuIconOps Mouse 0 o100"
+
+# FvwmTaskbar
+
+DestroyModuleConfig FvwmTaskBar: *
+*FvwmTaskBar: Geometry 1600x28+0-0
+*FvwmTaskBar: Colorset 22
+*FvwmTaskBar: Frame 0
+*FvwmTaskBar: Font "xft:Roboto Mono:style=regular:size=11:antialias=True"
+*FvwmTaskBar: Rows 1
+*FvwmTaskBar: Columns 1600
+
+# Menu Button
+*FvwmTaskBar: (25x1, Frame 1, Icon "icons/apps/void.png", ActiveColorset 23, Action(Mouse 1) \
+               Menu MenuFvwmRoot Root 0 o100-24p )
+
+# Quick Launch Buttons
+*FvwmTaskBar: (34x1, Frame 1, Icon "icons/apps/terminal2.png", ActiveColorset 23, \
+              Action(Mouse 1) "Exec exec urxvt")
+*FvwmTaskBar: (34x1, Frame 1, Icon "icons/apps/gedit2.png", ActiveColorset 23, \
+               Action(Mouse 1) "Exec exec subl3")
+*FvwmTaskBar: (34x1, Frame 1, Icon "icons/apps/firefox2.png", ActiveColorset 23, \
+               Action(Mouse 1) "Exec exec firefox")
+*FvwmTaskBar: (34x1, Frame 1, Icon "icons/apps/thunderbird2.png", ActiveColorset 23, \
+               Action(Mouse 1) "Exec exec thunderbird")
+
+# Swallow FvwmIconMan TaskBarIcons
+*FvwmTaskBar: (1388x1, Frame 1, Left, Swallow TaskBarIcons 'Module FvwmIconMan TaskBarIcons')
+
+# Time Button with id TaskTime
+*FvwmTaskBar: (76x1, Frame 1, id "TaskTime", ActiveColorset 22, Title "Time")
+
+# start fvwmtaskbar
+
+# Run FvwmTaskBar
+# Module FvwmIconMan FvwmTaskBar
+
+# Set the time to the current time
+PipeRead 'echo "SendToModule FvwmButtons ChangeButton \
+TaskTime Title \"`date +%k%M`\""'
+
+# Schedule the time to update every 10 seconds
+Schedule Periodic 10000 PipeRead 'echo "SendToModule \
+FvwmButtons ChangeButton TaskTime Title \"`date +%k:%M`\""'

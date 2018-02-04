@@ -1,0 +1,129 @@
+#!/usr/bin/env bash
+
+#REBOOT="sudo /sbin/shutdown -r now"
+#POWEROFF="sudo /sbin/shutdown -h now"
+REBOOT="sudo reboot"
+POWEROFF="sudo poweroff"
+KWNMANGR="killall `wmctrl -m | awk '/Name/ {print tolower($2)}'`"
+SCRNLOCK="slock"
+SUSPEND="sudo zzz"
+
+vslo_menu (){
+vslo_ttle="Really Exit Current Session?"
+vslo_clas="Void_Exit_Session"
+type xtrlock >/dev/null 2>&1
+RETVAL=$?
+if ! [[ "$RETVAL" == 0 ]]; then
+type dm-tool >/dev/null 2>&1
+RETVAL=$?
+if ! [[ "$RETVAL" == 0 ]]; then
+type slock >/dev/null 2>&1
+RETVAL=$?
+if ! [[ "$RETVAL" == 0 ]]; then
+type i3lock >/dev/null 2>&1
+RETVAL=$?
+if ! [[ "$RETVAL" == 0 ]]; then
+type light-locker >/dev/null 2>&1
+RETVAL=$?
+if ! [[ "$RETVAL" == 0 ]]; then
+type xscreensaver >/dev/null 2>&1
+RETVAL=$?
+if ! [[ "$RETVAL" == 0 ]]; then
+vslo_main=$(yad --class="$vslo_clas" --title="$vslo_ttle" --skip-taskbar --center --fixed --on-top --buttons-layout=spread --button="Cancel!!Cancel:1" --button="Logout!!Logout of VSIDO:3" --button="Suspend!!Suspend VSIDO:4" --button="Reboot!!Reboot VSIDO:5" --button="Shutdown!!Shutdown VSIDO:6")
+fi
+fi
+fi
+fi
+fi
+fi
+vslo_main=$(yad --class="$vslo_clas" --title="$vslo_ttle" --skip-taskbar --center --fixed --on-top --buttons-layout=spread --button="Cancel!!Cancel:1" --button="Logout!!Logout of VSIDO:3" --button="Lock Screen!!Lock the screen:2" --button="Suspend!!Suspend VSIDO:4" --button="Reboot!!Reboot VSIDO:5" --button="Shutdown!!Shutdown VSIDO:6")
+vslo_main=$?
+case "$vslo_main" in
+1)
+exit 1
+;;
+2)
+type xtrlock >/dev/null 2>&1
+RETVAL=$?
+if [[ "$RETVAL" == 0 ]]; then
+xtrlock -b
+exit 0
+fi
+type dm-tool >/dev/null 2>&1
+RETVAL=$?
+if [[ "$RETVAL" == 0 ]]; then
+dm-tool lock
+exit 0
+fi
+type slock >/dev/null 2>&1
+RETVAL=$?
+if [[ "$RETVAL" == 0 ]]; then
+slock
+exit 0
+fi
+type i3lock >/dev/null 2>&1
+RETVAL=$?
+if [[ "$RETVAL" == 0 ]]; then
+i3lock
+exit 0
+fi
+type light-locker >/dev/null 2>&1
+RETVAL=$?
+if [[ "$RETVAL" == 0 ]]; then
+light-locker-command -l
+exit 0
+fi
+type xscreensaver >/dev/null 2>&1
+RETVAL=$?
+if [[ "$RETVAL" == 0 ]]; then
+xscrsav=$(which xscreensaver)
+active_xscrsav=$(pidof "$xscrsav")
+if [[ -z "$active_xscrsav" ]]; then
+xscreensaver -no-splash &
+sleep 1
+xscreensaver-command -lock
+exit 0
+fi
+fi
+xscrsav_user=$(ps -p "$active_xscrsav" -o ruser=)
+xscrsav_user_id=$(id -u "$xscrsav_user")
+current_user_id=$(id -u)
+if [[ "$xscrsav_user_id" == "$current_user_id" ]]; then
+xscreensaver-command -lock
+exit 0
+fi
+if [[ "$current_user_id" == 0 ]]; then
+su "$xscrsav_user" -c "xscreensaver-command -lock"
+exit 0
+fi
+yad --title="$vslo_ttle" --class="$vslo_clas" --window-icon="$vslo_wico" --borders=20 --center --fixed --image="$vslo_wico_big" --on-top --button=gtk-ok --text="xscreensaver was started by another user.\nso current user can't use the lock function.\nauto-start xscreensaver with your session.\n"
+exit 0
+;;
+3)
+$KWNMANGR
+exit 0
+;;
+4)
+$SUSPEND
+exit 0
+;;
+5)
+$REBOOT
+exit 0
+;;
+6)
+$POWEROFF
+exit 0
+;;
+#130)
+#exit 1
+#;;
+252)
+exit 1
+;;
+esac
+}
+while :
+do
+vslo_menu
+done

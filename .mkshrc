@@ -1,0 +1,171 @@
+# catch non-mksh (including lksh) trying to run this file
+case ${KSH_VERSION:-} in
+*MIRBSD\ KSH*) ;;
+*) return 0 ;;
+esac
+
+
+#-*- Mode: Shell-script;-*-
+set -a # turn on autoexport 
+PATH=/usr/bin:/usr/sbin:/usr/local/bin:/bin:/sbin:./
+PATH=$HOME/bin:$PATH
+
+MANPATH=/usr/share/man:/usr/local/share/man
+
+umask 022
+
+PAGER="less"
+
+LESS_TERMCAP_mb=$(tput bold; tput setaf 2)
+LESS_TERMCAP_md=$(tput bold; tput setaf 6)
+LESS_TERMCAP_me=$(tput sgr0)
+LESS_TERMCAP_so=$(tput bold; tput setaf 3; tput setab 4)
+LESS_TERMCAP_se=$(tput rmso; tput sgr0)
+LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 7)
+LESS_TERMCAP_ue=$(tput rmul; tput sgr0)
+LESS_TERMCAP_mr=$(tput rev)
+LESS_TERMCAP_mh=$(tput dim)
+LESS_TERMCAP_ZN=$(tput ssubm)
+LESS_TERMCAP_ZV=$(tput rsubm)
+LESS_TERMCAP_ZO=$(tput ssupm)
+LESS_TERMCAP_ZW=$(tput rsupm)
+
+HOST="$(hostname)"
+
+HOSTNAME=${HOST}
+HISTFILE=${HOME}/.mksh_history
+HISTSIZE=2000
+
+PS1='#'; (( USER_ID )) && PS1='$'; \: "${TERM:=vt100}${HOSTNAME:=$(\ulimit -c \
+    0; hostname 2>/dev/null)}${EDITOR:=/bin/ed}${USER:=$(\ulimit -c 0; id -un \
+    2>/dev/null || \echo \?)}${MKSH:=$(\builtin whence -p mksh)}"
+HOSTNAME=${HOSTNAME%%*([	 ]).*}; HOSTNAME=${HOSTNAME##*([	 ])}
+[[ $HOSTNAME = ?(ip6-)localhost?(6) ]] && HOSTNAME=
+\: "${HOSTNAME:=nil}${MKSH:=/bin/mksh}"; \export EDITOR HOSTNAME MKSH TERM USER
+PS4='[$EPOCHREALTIME] '; PS1=$'\001\r''${|
+	\typeset e=$?
+
+	(( e )) && REPLY+="$e|"
+	REPLY+=${USER}@${HOSTNAME%%.*}:
+
+	\typeset d=${PWD:-?}/ p=~; [[ $p = ?(*/) ]] || d=${d/#$p\//\~/}
+	d=${d%/}; \typeset m=${%d} n p=...; (( m > 0 )) || m=${#d}
+	(( m > (n = (COLUMNS/3 < 7 ? 7 : COLUMNS/3)) )) && d=${d:(-n)} || p=
+	REPLY+=$p$d
+
+	\return $e
+} '"$PS1 "
+
+
+set +a # turn off autoexport
+
+ulimit -c unlimited
+
+# aliases
+
+# bash aliases
+alias ll='ls -lh -F --group-directories-first'
+alias la='ls -A --group-directories-first'
+alias ls='ls -hNCF --color --group-directories-first'
+alias rm='rm -vi'
+alias cp='cp -vi'
+alias mv='mv -vi'
+alias dfh='df -hT'
+alias dfk='df -kT'
+alias du='du -h'
+alias duh='du -hca'
+alias path='echo -e ${PATH//:/\\n}'
+alias emacs='emacs -nw'
+alias listusb='ls -l /dev/disk/by-id/*usb*'
+alias sinfo='inxi -CSI -tcm3 -W 29803 -! 31'
+alias screenfetch='screenfetch -n'
+alias shotdate='date +%A_%s'
+alias sshot='import -window root -quality 100 ~/pictures/screen-import-$(shotdate).png'
+alias scrotpng='scrot -q 100 -c -d 5 ~/pictures/scrot-shot-%B_%e_%s.png'
+alias scrotjpg='scrot -q 100 -c -d 5 ~/pictures/scrot-shot-%a_%e_%s.jpg'
+alias kconky='killall -SIGUSR1 conky'
+alias ktint2='killall -SIGUSR1 tint2'
+alias kpolybar='killall -SIGUSR1 polybar'
+alias ufont='fc-cache -f -v'
+alias rufont='sudo fc-cache -f -v'
+alias prmount='sudo mount -o rw,umask=000'
+alias usbmnt='sudo mount -o rw,umask=000 /dev/sdc1 /media/usbhd'
+alias win7mnt='sudo mount -o rw,umask=000 /dev/sda5 /mnt/Win7'
+alias getvideo='youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best''
+alias takeshot='neofetch ; scrotpng'
+
+# new aliases
+alias doy="date '+%j'"
+alias ydoy="date '+%j%y'"
+alias yydoy="date '+%j%Y'"
+alias vdt="date '+%v'"
+alias dt="date '+%D %r'"
+alias dt0="date '+%D'"
+alias isodate="date '+%G-%m-%d'"
+alias isodt="date '+%G-%m-%d %H:%M'"
+alias isodts="date '+%G-%m-%d %H:%M:%S'"
+
+alias d="ls -1p | sed -n '/\/$/s/^/    /p;'"
+alias dl="ls -lhp | grep '^d'"
+alias DL="ls -lTthp | grep '^d'"
+
+alias x='ls -xF'
+alias r='ls -1RF'
+alias rr='ls -lRF'  
+alias R='BLOCKSIZE=1m ls -s1R'
+# alias ll='ls -Llh'
+alias lm='BLOCKSIZE=1m ls -sF'
+alias lmm='BLOCKSIZE=1m ls -1sSF'
+#alias Lz="stat -f '%Lz' "
+#alias Z="stat -f '%z' "
+##### Z=bytes
+alias dirs="ls -1Ap | grep '/$' | column"
+alias files="ls -1AF | sed  '/[@/]$/d;s/\*$//' |column" 
+alias files1="ls -1AF | sed  '/[@/]$/d;s/\*$//'"
+alias syms="ls -1AF | grep '@$'"
+#alias 2cd='pbcopy <<< $PWD'
+#alias cd2='cd $(pbpaste <<< $PWD)'
+alias aux='ps aux'
+alias vax='ps vax'
+alias jax='ps jax'
+alias lax='ps lax'
+alias axl='ps axl'
+alias ax='ps ax'
+alias cax='ps cax'
+alias caxl='ps caxl'
+#alias pcpu='ps rcxo pcpu,pid,uid,command'
+#alias pmem='ps mxco pmem,pid,uid,command'
+#alias ptop='ps mcxo pcpu,pmem,pid,uid,command | head -n $(( LINES - 3 ))'
+#alias mem='ps mxco rss,pid,uid,command'
+
+alias 1ping='ping -qc 1 -t 2'
+
+prompt(){
+case $1 in
+  xterm) 
+PS1=']2;${USER}@${HOSTNAME}:${PWD}[${USER}@${HOSTNAME}:${PWD}]
+]1;${PWD##/*/}%'
+  ;;
+  xterm1) 
+PS1=']2;${USER}@${HOSTNAME}:${PWD}[${USER}@${HOSTNAME}:${PWD}]
+]1;${HOSTNAME}:${PWD##/*/}%'
+  ;;
+  min)
+PS1='${PWD##/*/})'
+  ;;
+  vi) 
+PS1='[$?]'
+;;
+  root)
+PS1=\t\$\W\$
+  ;;
+  ?) 
+PS1="${1} "
+  ;;
+  *|normal)
+PS1='[${USER}@${HOSTNAME}:${PWD}]
+%'
+  
+  ;;
+esac
+}

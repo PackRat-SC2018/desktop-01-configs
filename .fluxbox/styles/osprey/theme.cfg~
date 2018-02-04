@@ -1,0 +1,227 @@
+!fluxbox style template
+! style -
+! by - 
+! 7-17-2016
+! This work is licensed under the Creative Commons 
+! Attribution-NonCommercial-ShareAlike License. 
+!
+!======================================================================!
+
+*font:					Ubuntu-10:Regular
+!toolbar.workspace.font:	Roboto mono-10
+!toolbar.clock.font:		Roboto mono-10
+!window.font:			<font>
+!menu.frame.font:		<font>
+!menu.hilite.font:		<font>
+!menu.title.font:		sans-10:bold
+!toolbar.iconbar.focused.font:	<font>
+!toolbar.iconbar.unfocused.font:	<font>
+
+## this doesn't seem to work
+!window.font:		sans-10:bold
+!window.effect:		halo
+!window.shadow.color:	#64BE2D
+!window.shadow.x:	5
+!window.shadow.y:	5
+
+toolbar:					flat
+toolbar.height:				24
+toolbar.bevelWidth:			2
+toolbar.borderColor:		#181818
+toolbar.borderWidth:			1
+toolbar.color:				#1A1A1A
+toolbar.colorTo:			#1A1A1A
+!toolbar.pixmap:			<filename>
+toolbar.shaped:				false
+
+toolbar.clock:					flat
+toolbar.clock.borderColor:		#181818
+toolbar.clock.borderWidth:		0
+toolbar.clock.justify:			Center
+!toolbar.clock.pixmap:			<filename>
+toolbar.clock.color:			#1A1A1A
+toolbar.clock.colorTo:			#1A1A1A
+toolbar.clock.textColor:		#A3A3A3
+
+toolbar.workspace:				flat
+toolbar.workspace.justify:		Center
+toolbar.workspace.textColor:		#A3A3A3
+toolbar.workspace.borderColor:		#181818
+toolbar.workspace.borderWidth:		0
+toolbar.workspace.color:		#1A1A1A
+toolbar.workspace.colorTo:		#1A1A1A
+!toolbar.workspace.pixmap:		<filename>
+
+toolbar.button:				parentrelative
+toolbar.button.PicColor:		#555555
+toolbar.button.scale:			0.9
+
+toolbar.systemtray:				parentrelative
+
+toolbar.iconbar.empty:				flat
+toolbar.iconbar.empty.color:		#1A1A1A
+toolbar.iconbar.empty.colorTo:		#CBCCC8
+toolbar.iconbar.borderColor:		#181818
+toolbar.iconbar.borderWidth:		2
+!toolbar.iconbar.empty.pixmap:		<filename>
+
+toolbar.iconbar.focused:			raised
+toolbar.iconbar.focused.color:		#B39259
+toolbar.iconbar.focused.colorTo:	#067094
+toolbar.iconbar.focused.borderColor:	#181818
+toolbar.iconbar.focused.borderWidth:	5
+!toolbar.iconbar.focused.pixmap:	unfcs.png
+toolbar.iconbar.focused.justify:	Center
+toolbar.iconbar.focused.textColor:	#FFFFFF
+
+toolbar.iconbar.unfocused:			raised
+toolbar.iconbar.unfocused.color:	#252525
+toolbar.iconbar.unfocused.colorTo:	#252525
+!toolbar.iconbar.unfocused.pixmap:	barfcs.png
+toolbar.iconbar.unfocused.borderColor:	#181818
+toolbar.iconbar.unfocused.borderWidth:	5
+toolbar.iconbar.unfocused.justify:	Center
+toolbar.iconbar.unfocused.textColor:	#A3A3A3
+
+window.title.height:			20
+window.bevelWidth:			1
+window.borderColor:			#181818
+!window.focus.borderColor:	#1A1A1A
+!window.unfocus.borderColor:	#000000
+window.borderWidth:			1
+window.justify:				Center
+!window.frame.focusColor:		red
+!window.frame.unfocusColor:		green
+!window.roundCorners:			<{Top|Bottom}{Left|Right}>
+
+window.title.focus:			flat
+window.title.focus.color:		#1A1A1A
+window.title.focus.colorTo:		#1A1A1A
+!window.title.focus.pixmap:		<filename>
+
+window.title.unfocus:			flat
+window.title.unfocus.color:		#1A1A1A
+window.title.unfocus.colorTo:		#1A1A1A
+!window.title.unfocus.pixmap:		<filename>
+
+!window.label.active:			<texture type>
+!window.label.active.textColor:		<color>
+
+window.label.focus:				raised
+window.label.focus.color:		#B39259
+window.label.focus.colorTo:		#E64C4E
+window.label.focus.textColor:	#FFFFFF
+!window.label.focus.pixmap:		barfcs.png
+
+window.label.unfocus:				raised
+window.label.unfocus.color:			#252525
+window.label.unfocus.colorTo:		#D7D5D5
+window.label.unfocus.textColor:		#A3A3A3
+!window.label.unfocus.pixmap:		unfcs.png
+
+window.button.focus:				raised
+window.button.focus.color:			#1A1A1A
+window.button.focus.colorTo:		#D7D5D5
+window.button.focus.picColor:		#A3A3A3
+!window.button.focus.pixmap:		button.png
+window.button.pressed:				sunken bevel2
+window.button.pressed.color:		#252525
+window.button.pressed.colorTo:		#252525
+!window.button.pressed.pixmap:		pressed.png
+
+window.button.unfocus:				raised
+window.button.unfocus.color:		#252525
+window.button.unfocus.colorTo:		#D7D5D5
+window.button.unfocus.picColor:		#A3A3A3
+!window.button.unfocus.pixmap:		unfcs.png
+
+window.grip.focus:				flat
+window.grip.focus.color:		#555555
+window.grip.focus.colorTo:		#555555
+!window.grip.focus.pixmap:		<filename>
+window.grip.unfocus:			flat
+window.grip.unfocus.color:		#1A1A1A
+window.grip.unfocus.colorTo:		#1A1A1A	
+!window.grip.unfocus.pixmap:		<filename>
+
+window.handle.focus:			flat
+window.handle.focus.color:		#1A1A1A
+window.handle.focus.colorTo:	#1A1A1A
+!window.handle.focus.pixmap:		<filename>
+window.handle.unfocus:			flat
+window.handle.unfocus.color:		#1A1A1A
+window.handle.unfocus.colorTo:		#1A1A1A	
+!window.handle.unfocus.pixmap:		<filename>
+window.handleWidth:			4
+
+!window.close.pixmap:			focus.png
+!window.close.pressed.pixmap:		press.png
+!window.close.unfocus.pixmap:		focus.png
+!window.iconify.pixmap:			focus.png
+!window.iconify.pressed.pixmap:		press.png
+!window.iconify.unfocus.pixmap:		unfcs.png
+!window.maximize.pixmap:		focus.png
+!window.maximize.pressed.pixmap:	press.png
+!window.maximize.unfocus.pixmap:	unfcs.png
+!window.shade.pixmap:			focus.png
+!window.shade.pressed.pixmap:		press.png
+!window.shade.unfocus.pixmap:		unfcs.png
+!window.stick.pixmap:			focus.png
+!window.stick.pressed.pixmap:		press.png
+!window.stick.unfocus.pixmap:		unfcs.png
+!window.stuck.pixmap:			focus.png
+!window.stuck.unfocus.pixmap:		unfcs.png
+!window.lhalf.pixmap:			<filename>
+!window.lhalf.unfocus.pixmap:		<filename>
+!window.rhalf.pixmap:			<filename>
+!window.rhalf.unfocus.pixmap:		<filename>
+
+menu.itemHeight:			20
+menu.bevelWidth:			1
+menu.borderColor:			#181818
+menu.borderWidth:			1
+menu.bullet:				triangle
+menu.bullet.position:		right
+menu.frame:					raised bevel1
+menu.frame.color:			#1A1A1A
+menu.frame.colorTo:			#1A1A1A
+menu.frame.disableColor:	#CCCCCC
+menu.frame.justify:			Left
+menu.frame.textColor:		#A3A3A3
+!menu.frame.pixmap:			<filename>
+
+menu.hilite:				flat
+menu.hilite.color:			#B39259
+menu.hilite.colorTo:		#252525
+menu.hilite.justify:		Left
+!menu.hilite.pixmap:		<filename>
+menu.hilite.textColor:		#FFFFFF
+
+menu.title:					raised bevel1
+menu.title.color:			#B39259
+menu.title.colorTo:			#252525
+!menu.title.pixmap:			<filename>
+menu.title.textColor:		#FFFFFF
+menu.title.justify:			Center
+menu.titleHeight:			20
+!menu.roundCorners:			<{Top|Bottom}{Left|Right}>
+!menu.selected.pixmap:			<filename>
+!menu.submenu.pixmap:			<filename>
+!menu.unselected.pixmap:		<filename>
+
+slit:					flat
+slit.bevelWidth:			0
+slit.borderColor:			#111111
+slit.borderWidth:			0
+slit.color:				#111111
+slit.colorTo:				#111111
+!slit.pixmap:				<filename>
+
+!background:				centered|aspect|tiled|fullscreen|random|solid|gradient <texture>|mod|none|unset
+!background.pixmap:			<file or directory>
+!background.color:			<color>
+!background.colorTo:			<color>
+!background.modX:			<integer>
+!background.modY:			<integer>
+
+!EOF

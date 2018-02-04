@@ -1,0 +1,15 @@
+set atblanks
+set backup
+set boldtext
+set casesensitive
+set titlecolor  cyan,black
+set functioncolor yellow,black
+set keycolor cyan,black
+set statuscolor yellow,black
+set justifytrim
+set linenumbers
+set numbercolor yellow,black
+# this fails when editing
+# set nowrap
+set selectedcolor bright white,black
+set smooth

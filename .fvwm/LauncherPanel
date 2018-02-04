@@ -1,0 +1,120 @@
+Style ButtonLaunchers !Title, HandleWidth 2, BorderWidth 2, WindowListSkip, StaysOnBottom, Sticky
+Style RightPanel !Title, HandleWidth 2, BorderWidth 2, WindowListSkip, StaysOnBottom, Sticky
+
+
+# Function: IconManClick
+#
+# This function is run from FvwmIconMan when the button is clicked.
+DestroyFunc IconManClick
+AddToFunc   IconManClick
++ I ThisWindow (Raised, !Shaded, !Iconic, CurrentPage) Iconify
++ I TestRc (Match) Break
++ I ThisWindow (!Raised) Raise
++ I ThisWindow (Shaded) WindowShade
++ I ThisWindow (Iconic) Iconify
++ I ThisWindow (AcceptsFocus) FlipFocus
+
+# Function: ToggleTitle
+#
+# This function will toggle if fvwm shows the TitleBar.
+DestroyFunc ToggleTitle
+AddToFunc   ToggleTitle
++ I ThisWindow (State 1) WindowStyle Title
++ I TestRc (Match) State 1 False
++ I TestRc (Match) Break
++ I WindowStyle !Title
++ I State 1 True
+
+# Function: ChangeDesk
+#
+# This function is called by FvwmEvent every time the Desk is changed.
+DestroyFunc ChangeDesk
+AddToFunc   ChangeDesk
++ I SendToModule FvwmButtons ChangeButton desk0 Colorset 24
++ I SendToModule FvwmButtons ChangeButton desk1 Colorset 24
++ I SendToModule FvwmButtons ChangeButton desk2 Colorset 24
++ I SendToModule FvwmButtons ChangeButton desk3 Colorset 24
++ I SendToModule FvwmButtons ChangeButton desk$0 Colorset 10
+
+# FvwmEvent
+#
+# FvwmEvent is a module that can run an action or function
+# on specific events. This instance changes which desk number
+# is highlighted when the desk is changed.
+DestroyModuleConfig EventNewDesk:*
+*EventNewDesk: PassID
+*EventNewDesk: new_desk ChangeDesk
+
+# FvwmForm
+#
+# FvwmForm is a module that can be used to build a GUI
+# form. Used with fvwm-menu-desktop-config.fpl.
+# This sets the default colorsets.
+*FvwmFormDefault: Colorset 10
+*FvwmFormDefault: ItemColorset 13
+
+DestroyModuleConfig ButtonLaunchers
+*ButtonLaunchers: Geometry 240x40+8+8
+*ButtonLaunchers: Colorset 24
+*ButtonLaunchers: Columns 6
+*ButtonLaunchers: Rows 1
+*ButtonLaunchers: Frame 1
+*ButtonLaunchers: Font "xft:Sans:Regular:size=9:antialias=True"
+*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/voidtr.png", Action `Exec jgmenu --config-file=/home/doug/.config/jgmenu/jgfvwmrc`)
+*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/network-server.png", Action `Exec thunar`)
+*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/terminix.png", Action `Exec urxvt -g 128x32`)
+*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/sublime-text.png" Action `Exec subl3`)
+*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/firefox32.png" Action `Exec firefox`)
+*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/mail.png" Action `Exec thunderbird`)
+
+# FvwmEvent
+#
+# FvwmEvent is a module that can run an action or function
+# on specific events. This instance changes which desk number
+# is highlighted when the desk is changed.
+DestroyModuleConfig EventNewDesk:*
+*EventNewDesk: PassID
+*EventNewDesk: new_desk ChangeDesk
+
+# FvwmButtons - DeskPanel
+#
+# FvwmButtons is a powerful module that can be used to build custom
+# panels and docks. This config uses FvwmButtons to build the DeskPanel.
+# The panel contains buttons to switch desks, FvwmPager, a system tray,
+# FvwmIconMan (list of running windows), and a clock.
+#
+# Note - To use the system tray you must have "stalonetray" installed.
+DestroyModuleConfig DeskPanel:*
+*DeskPanel: Geometry 120x36+0-0
+*DeskPanel: Colorset 24
+*DeskPanel: Rows 1
+*DeskPanel: Columns 4
+*DeskPanel: Frame 0
+*DeskPanel: Font "xft:Sans:Bold:size=10:antialias=True"
+# *DeskPanel: (4x1, Frame 0)
+# *DeskPanel: (4x1, Frame 0)
+*DeskPanel: (1x1, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 12, ActiveColorset 12, Frame 0)
+*DeskPanel: (1x1, Id desk1, Title "2", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 12, Frame 0)
+*DeskPanel: (1x1, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 12, Frame 0)
+*DeskPanel: (1x1, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 12, Frame 0)
+
+# default panels
+
+# FvwmButtons - RightPanel
+#
+# FvwmButtons is a powerful module that can be used to build custom
+# panels and docks. This config uses FvwmButtons to build the RightPanel.
+# The panel contains buttons to switch desks, FvwmPager, a system tray,
+# FvwmIconMan (list of running windows), and a clock.
+#
+DestroyModuleConfig RightPanel:*
+*RightPanel: Geometry 160x40-8+8
+*RightPanel: Colorset 24
+*RightPanel: Rows 1
+*RightPanel: Columns 4
+*RightPanel: Frame 1
+*RightPanel: Font "xft:Inconsolata LGC Markup:Bold:size=13:antialias=True:hintstyle=slight"
+*RightPanel: (1x1, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 24, ActiveColorset 12, Frame 1)
+*RightPanel: (1x1, Id desk1, Title "2", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 12, Frame 1)
+*RightPanel: (1x1, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 12, Frame 1)
+*RightPanel: (1x1, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 12, Frame 1)

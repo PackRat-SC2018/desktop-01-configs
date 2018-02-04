@@ -1,0 +1,34 @@
+rofi -show run
+gimp
+xfce4-termonal
+xfce4-terminal --drop-down
+skippy-xd
+xfce4-terminal
+yad --font --class FontDisplay
+yad --color --class ColorPicker
+galculator
+xfontsel
+mpv --player-operation-mode=pseudo-gui
+brave
+yad --color
+libreoffice --impress
+connman --gtk
+connman-gtk
+xfce4-appfinder
+urxvt -docapp
+urxvt
+uxterm
+gcolor2
+geanny
+brasero
+jgmenu_run
+pcmanfm
+xterm
+lxappearance
+rofi-logout
+yad --fonts
+yad --font
+geany
+compton
+st
+opera

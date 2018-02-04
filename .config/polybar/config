@@ -1,0 +1,167 @@
+;=====================================================
+;     File Includes
+;=====================================================
+
+[section/base]
+include-file = /home/doug/.config/polybar/master.conf
+include-file = /home/doug/.config/polybar/modules.conf
+
+;=====================================================
+;     Openbox Bars
+;=====================================================
+
+[bar/openbox-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor = VGA1
+
+modules-left = window_switch workspaces menu
+modules-center = clock
+modules-right = pkg memory temperature coreuse network volume
+
+; All available modules (some require configuration in modules.conf)
+; redshift github filesystem mpd wired-network wireless-network battery menu volume-bar bspwm
+; pkg keyboard memory temperature coreuse network clock volume i3-workspaces workspaces
+; window_switch
+
+
+;;;;;; Tray is commented out ;;;;;;;;
+;tray-position = center
+;tray-padding = 10
+;tray-background = ${colors.background}
+;tray-offset-x = 20%
+
+
+
+;=====================================================
+;     i3 Bars
+;=====================================================
+
+[bar/i3-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor = VGA1
+
+modules-left = i3-workspaces void-menu
+modules-center = clock
+modules-right = memory temperature coreuse volume wired-network
+
+; All available modules (some require configuration in modules.conf)
+; redshift github filesystem mpd wired-network wireless-network battery menu volume-bar bspwm
+; pkg keyboard memory temperature coreuse network clock volume i3-workspaces workspaces window_switch
+
+
+;;;;;; Tray is commented out ;;;;;;;;
+tray-position = right
+tray-padding = 4
+tray-background = ${colors.background}
+;tray-offset-x = 20%
+
+
+
+;=====================================================
+;     Bspwm Bars
+;=====================================================
+
+[bar/bspwm-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor = VGA1
+
+wm-restack = bspwm
+
+modules-left = bspwm jgmenu
+modules-center = bspwm-date
+modules-right = uptime coreavg load CoreTemps wired-network
+
+; All available modules (some require configuration in modules.conf)
+; redshift github filesystem mpd wired-network wireless-network battery menu volume-bar bspwm
+; pkg keyboard memory temperature coreuse network clock volume i3-workspaces workspaces window_switch
+
+
+;;;;;; Tray is commented out ;;;;;;;;
+;tray-position = right
+;tray-padding = 10
+;tray-background = ${colors.background}
+;tray-offset-x = 20%
+
+
+;=====================================================
+;     fluxbox Bars
+;=====================================================
+
+[bar/fluxbox-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor = VGA1
+
+modules-left = window_switch jgmenu
+;modules-center = clock
+modules-center = uptime coreavg load CoreTemps wired-network
+modules-right = date
+
+; All available modules (some require configuration in modules.conf)
+; redshift github filesystem mpd wired-network wireless-network battery menu volume-bar bspwm
+; pkg keyboard memory temperature coreuse network clock volume i3-workspaces workspaces window_switch
+; workspaces void-menu
+
+;;;;;; Tray is commented out ;;;;;;;;
+;tray-position = center
+;tray-padding = 10
+;tray-background = ${colors.background}
+;tray-offset-x = 20%
+
+;=====================================================
+;     awesome Bars
+;=====================================================
+
+[bar/awesome-bar]
+inherit = bar/master
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor = VGA1
+
+modules-left = window_switch void-menu
+;modules-center = clock
+modules-center =
+modules-right = uptime coreuse load wired-network
+
+; All available modules (some require configuration in modules.conf)
+; redshift github filesystem mpd wired-network wireless-network battery menu volume-bar bspwm
+; pkg keyboard memory temperature coreuse network clock volume i3-workspaces workspaces window_switch
+
+
+;;;;;; Tray is commented out ;;;;;;;;
+;tray-position = center
+;tray-padding = 10
+;tray-background = ${colors.background}
+;tray-offset-x = 20%
+
+;=====================================================
+;     Fvwm Bars
+;=====================================================
+
+[bar/fvwm-bar]
+inherit = bar/bottom
+
+; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
+monitor = VGA1
+
+modules-left = window_switch workspaces void-menu 
+modules-center = uptime memory coreuse load core0temp core1temp wired-network
+modules-right = date
+
+; All available modules (some require configuration in modules.conf)
+; redshift github filesystem mpd wired-network wireless-network battery menu volume-bar bspwm
+; pkg keyboard memory temperature coreuse network clock volume i3-workspaces workspaces window_switch
+
+
+;;;;;; Tray is commented out ;;;;;;;;
+;tray-position = right
+;tray-padding = 4
+;tray-background = ${colors.background}
+;tray-offset-x = 20%

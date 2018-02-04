@@ -1,0 +1,514 @@
+# fvwmfunctions 10-07-13
+#============================#
+
+###########
+# 1: Functions
+#
+# Fvwm can use custom functions for various tasks.
+# The syntax for defining a function named FunctionName is:
+#
+#   DestroyFunc FunctionName
+#   AddToFunc FunctionName
+#   + I [Action to do Immediately]
+#   + C [Action to do on a Mouse Click]
+#   + D [Action to do on a Mouse Double Click]
+#   + H [Action to do on a Mouse Hold]
+#   + M [Action to do on a Mouse Motion]
+########################################################################
+
+# Move Window
+DestroyFunc MoveRight
+AddToFunc   MoveRight
++ I AnimatedMove w+20p keep
+
+DestroyFunc MoveLeft
+AddToFunc MoveLeft
++ I AnimatedMove w+-20p keep
+
+DestroyFunc MoveUp
+AddToFunc MoveUp
++ I AnimatedMove keep w+-20p
+
+DestroyFunc MoveDown
+AddToFunc MoveDown
++ I AnimatedMove keep w+20p
+
+DestroyFunc ShrinkEast
+AddToFunc ShrinkEast
++ I PipeRead "echo Resize $(($[cw.width] - 15))p keep"
+
+DestroyFunc GrowEast
+AddToFunc GrowEast
++ I PipeRead "echo Resize $(($[cw.width] + 15))p keep"
+
+DestroyFunc ShrinkSouth
+AddToFunc ShrinkSouth
++ I PipeRead "echo Resize keep $(($[cw.height] - 15))p"
+
+DestroyFunc GrowSouth
+AddToFunc GrowSouth
++ I PipeRead "echo Resize keep $(($[cw.height] + 15))p"
+
+# Alt-Tab Window Switching two methods ================================#
+
+#-----------------------------------------------------------------------
+# Switching focus between windows with ALT-Tab and SHIFT-ALT-Tab
+# from the Russian Fvwm Wiki (http://www.linux.org.ru/wiki/en/FVWM)
+#-----------------------------------------------------------------------
+DestroyFunc FuncFvwmNextWindow
+AddToFunc FuncFvwmNextWindow
++ I Next (CurrentPage, !Iconic, AcceptsFocus) FlipFocus NoWarp
++ I Current Raise
+
+DestroyFunc FuncFvwmPrevWindow
+AddToFunc FuncFvwmPrevWindow
++ I Prev (CurrentPage, !Iconic, AcceptsFocus) Focus NoWarp
++ I Current Raise
+
+
+SetEnv DIR Next
+
+DestroyFunc SwitchWindow
+AddToFunc SwitchWindow
++ I $[DIR] (CurrentPage, !Iconic, !Sticky) FvwmRaiseAndFocus
++ I Deschedule 134000
++ I PipeRead `[ "$[DIR]" == "Prev" ] && \
+	echo 'SetEnv NDIR Next' || \
+	echo 'SetEnv NDIR Prev'`
++ I Schedule 700 134000 SetEnv DIR $[NDIR]
+
+DestroyFunc 	NextWindow
+AddToFunc 	NextWindow
++ I ScanForWindow NorthEast NorthWest (CurrentPage, !Iconic, AcceptsFocus) FlipFocus
++ I Current Raise
++ I Current WarpToWindow 5 5
+
+DestroyFunc 	PrevWindow
+AddToFunc 	PrevWindow
++ I ScanForWindow SouthEast SouthWest (CurrentPage, !Iconic, AcceptsFocus) FlipFocus
++ I Current Raise
++ I Current WarpToWindow 5 5
+
+DestroyFunc StartConsole
+AddToFunc StartConsole
++ I Module FvwmConsole -terminal uxterm -fg "#F0F0E9" -bg "#202838" -g 100x40 -fa "Terminus-10" -fb 7x14bold -n "FvwmConsole"
+
+# Undecorate given window
+DestroyFunc UnDecorate
+AddToFunc UnDecorate
+# + I WindowStyle !Title, !Borders, !Handles
++ I WindowStyle !Title
+
+# And decorate it again
+DestroyFunc Decorate
+AddToFunc Decorate
+# + I WindowStyle Title, Borders, Handles
++ I WindowStyle Title
+
+# Undecorate window and maximize it
+DestroyFunc UndecMax
+AddToFunc UndecMax 
++ I ThisWindow UnDecorate
++ I Schedule 100 Maximize 100 100
+
+#-----------------------------------------------------------------------
+# This function maximize a window to fullscreen - no title, no buttons, no border 
+#-----------------------------------------------------------------------
+DestroyFunc FuncMaximizeFullScreen
+AddToFunc   FuncMaximizeFullScreen
++ I ThisWindow (Maximized) WindowStyle Title, Borders
++ I TestRc (!Match) WindowStyle !Title, !Handles
++ I TestRc (!Match) Raise
++ I TestRc (!Match) UpdateStyles
++ I Maximize ewmhiwa
+
+#### Browse Wallpapers Directory
+DestroyFunc WallpaperThumbs
+AddToFunc WallpaperThumbs
++ I PipeRead 'test ! -d "$0/.thumbs" && mkdir "$0/.thumbs"; \
+    for i in "$0/"*; do \
+        test -f "$0/.thumbs/${i##*/}" \
+            -a "${i}" -ot "$0/.thumbs/${i##*/}" || { \
+                convert -quality 0 -scale 64 "${i}" "png:$0/.thumbs/${i##*/}" 2>/dev/null \
+                    || continue; \
+            }; \
+    done; \
+    fvwm-menu-directory --icon-title icons/globes/folder.png --icon-file __PIXMAP__ \
+    --icon-dir icons/globes/folder.png --dir $0 --exec-file "^hsetroot -center" \
+    --exec-t="^eog *" | sed -e "s#FuncFvwmMenuDirectory#WallpaperThumbs#g" \
+    -e "s#__PIXMAP__\\(.*\\)\\"\\(.*/\\)\\(.*\\)\\"#\\2.thumbs/\\3\\1\\2\\3#g"'
+
+DestroyFunc FuncFvwmPrint
+AddToFunc FuncFvwmPrint
++ I Raise
++ I Exec xdpr -id $w
+
+DestroyFunc FuncFvwmPrintReverse
+AddToFunc FuncFvwmPrintReverse
++ I Raise
++ I Exec xdpr 1/2 -h -rv -id $w
+
+DestroyFunc FuncFvwmFocusPolicyChange
+AddToFunc FuncFvwmFocusPolicyChange
++ I Style * $0
++ I Recapture
+
+# The window Ops menus exhibit a different HotKey style.
+# There are 2 versions of the WindowOps Menu, meant to be bound to different
+# things.  Here is the "common" part:
+DestroyFunc FuncFvwmWindowCommon
+AddToFunc FuncFvwmWindowCommon
++ I AddToMenu $0 "$[gt.&Move]"              Move
++ I AddToMenu $0 "$[gt.&Resize]"            Resize
++ I AddToMenu $0 "$[gt.R&aise]"             Raise
++ I AddToMenu $0 "$[gt.&Lower]"             Lower
++ I AddToMenu $0 "$[gt.(De)&Iconify]"       Iconify
++ I AddToMenu $0 "$[gt.(Un)&Stick]"         Stick
++ I AddToMenu $0 "$[gt.(Un)Ma&ximize]"      Maximize
++ I AddToMenu $0 ""                 Nop
++ I AddToMenu $0 "$[gt.&Delete]"            Delete
++ I AddToMenu $0 "$[gt.&Close]"             Close
++ I AddToMenu $0 "$[gt.Destroy]"            Destroy
++ I AddToMenu $0 ""                 Nop
+
+DestroyFunc FvwmViewManPage
+AddToFunc   FvwmViewManPage
++ I Exec exec uxterm -fg "#F8F8ED" -bg "#202838" -g 100x40 -fa "Terminus-10" -fb 7x14bold \
+-n "Manual Page - $0" -T "Manual Page - $0" -e man "$0"
+
+DestroyFunc StartConsole
+AddToFunc StartConsole
++ I Module FvwmConsole -terminal urxvt -fg rgb:DA/D9/97 -bg rgb:18/1B/2C "FvwmConsole"
+
+AddToFunc TaskRaiseFocus
++ I IconifyRaise off
++ I Raise
++ I Focus
+
+AddToFunc TaskbarOne
++ I Iconify off
++ I Raise
++ I Focus
+
+AddToFunc RaiseToTop
++ I Layer 0 ontop
++ I Raise
+
+AddToFunc LowerToBottom
++ I Layer 0 0
++ I Lower
+
+#-----------------------------------------------------------------------
+# replacement for iconify. Creates a small thumb with little app icon
+# on the upper right and the name of the app at the bottom
+#-----------------------------------------------------------------------
+DestroyFunc AppThumbnail
+AddToFunc   AppThumbnail
++ I Raise
++ I ThisWindow (!Iconic) PipeRead "echo SetEnv app_name `xprop -id $[w.id] WM_CLASS |cut -d',' -f2 |cut -d'\"' -f2`"
++ I PipeRead "echo SetEnv Icon-$[w.id] `fns-find-icon -i $[w.id]`"
++ I PipeRead 'test ! -d "${FVWM_USERDIR}/temp" && mkdir "${FVWM_USERDIR}/temp"'
++ I ThisWindow (!Shaded, Iconifiable, !Iconic) PipeRead \
+    "sleep 0.001; xwd -silent -id $[w.id] | convert -scale 100x56! -frame 1x1 \
+    -mattecolor black -quality 0 xwd:- png:$[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png \
+    && echo WindowStyle IconOverride, Icon $[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png \
+    || echo Nop"
++ I TestRc (Match) Test (f $[Icon-$[w.id]], f $[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png) PipeRead \
+    "convert $[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png \\\( $[Icon-$[w.id]] -scale 24x24 \\\) \
+    -gravity northeast -geometry +10+10 -compose multiply -composite \
+    -fill white -undercolor '#00000080' -gravity south -annotate +0+5 \" $[app_name] \" \
+    $[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png; echo Nop"
++ I Iconify
+
+#-----------------------------------------------------------------------
+# replacement for deiconify.
+#-----------------------------------------------------------------------
+DestroyFunc DeAppThumbnail
+AddToFunc   DeAppThumbnail
++ I Test (i $[Icon-$[w.id]]) WindowStyle Icon $[Icon-$[w.id]]
++ I TestRc (NoMatch) WindowStyle NoIconOverride, Icon
++ I Exec rm -f $[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png
++ I All (Iconic, CurrentPage) PlaceAgain icon
++ I PipeRead 'if [ -O $[Icon-$[w.id]] ]; then rm -f $[Icon-$[w.id]];fi'
++ I UnsetEnv Icon-$[w.id]
++ I UnsetEnv app_name
+
+
+Style FvwmForm-RunCommand !Title
+
+# use
+#Module FvwmForm FvwmForm-RunCommand
+
+#***********************************************************************
+# 7.5.1 RunCommand Window
+#***********************************************************************
+DestroyModuleConfig  FvwmForm-RunCommand: *
+*FvwmForm-RunCommand: WarpPointer
+# *FvwmForm-RunCommand: Font 8x13
+*FvwmForm-RunCommand: Font "xft:PT Mono:size=10:antialias=true"
+*FvwmForm-RunCommand: Title         "$[gt.Run Command]"
+*FvwmForm-RunCommand: Line          center
+*FvwmForm-RunCommand: Text          "$[gt.Run Command]"
+*FvwmForm-RunCommand: Line          left
+*FvwmForm-RunCommand: Text          "$[gt.Command:]"
+*FvwmForm-RunCommand: Input         Command 30 ""
+*FvwmForm-RunCommand: Line          center
+*FvwmForm-RunCommand: Selection     cmd multiple
+*FvwmForm-RunCommand: Choice        TERM    TERM     off      "$[gt.Run in Terminal]"
+*FvwmForm-RunCommand: Line          expand
+*FvwmForm-RunCommand: Button        quit "$[gt.Execute]" ^M
+*FvwmForm-RunCommand: Command       $(TERM?exec xterm -hold -T "$(Command)" -n "$(Command)" -e $(Command))
+*FvwmForm-RunCommand: Command       exec $(Command)
+*FvwmForm-RunCommand: Button        quit "$[gt.Cancel]"
+*FvwmForm-RunCommand: Command       Nop
+
+DestroyModuleConfig  FvwmForm-Logout *
+*FvwmForm-Logout: Font "xft:Sans:size=12:antialias=true"
+*FvwmForm-Logout: GrabServer
+*FvwmForm-Logout: WarpPointer
+*FvwmForm-Logout: Command     Beep
+*FvwmForm-Logout: Line        center
+*FvwmForm-Logout: Text        "Do you really want to logout?"
+*FvwmForm-Logout: Line        expand
+*FvwmForm-Logout: Button      quit "Logout" ^M
+*FvwmForm-Logout: Command     Quit
+*FvwmForm-Logout: Button      restart   "Restart" ^R
+*FvwmForm-Logout: Command     Restart
+*FvwmForm-Logout: Button      quit "Cancel" ^[
+*FvwmForm-Logout: Command     Nop
+*FvwmForm-Logout: Timeout     20 Quit "Automatic logout will occur in %% seconds."
+
+#***********************************************************************
+
+DestroyFunc FuncFvwmMenuDirectory
+AddToFunc FuncFvwmMenuDirectory
++ I PipeRead "fvwm-menu-directory -d '$0' -x audacious"
+
+# DestroyFunc FuncFvwmMenuHeadlines
+# AddToFunc   FuncFvwmMenuHeadlines
+# + I Read "$HOME/.fvwm/.fvwm-menu-headlines/$0.menu"
+
+DestroyFunc FuncFvwmMenuHeadlines
+AddToFunc   FuncFvwmMenuHeadlines
++ I PipeRead "fvwm-menu-headlines --site $0"
+#+ I Schedule 900000 DestroyMenu $0  # reset generated menu in 15 minutes
+
+DestroyFunc FuncResetHeadlines
+AddToFunc   FuncResetHeadlines
++ I DestroyMenu freshmeat
++ I DestroyMenu slashdot
+
+DestroyMenu MenuHeadlines
+AddToMenu   MenuHeadlines "Headlines" Title
++ MissingSubmenuFunction FuncFvwmMenuHeadlines
++ "Washington Times World"  Popup wtworld
++ "Slashdot"   Popup slashdot
++ "" Nop
++ "Reset all"  FuncResetHeadlines
+
+# from default configuration file
+#=======================================================================
+
+# Function: MoveClickX $0 $1 $2
+#
+# This function runs variable actions on different events
+# and is used with the mouse bindings to allow different
+# actions depending on if the mouse is clicked, double clicked
+# or moved. Use "Nop" for no action.
+#
+#   $0 - Action on Mouse Hold + Move
+#   $1 - Action on Mouse Click
+#   $2 - Action on Mouse DoubleClick
+#
+#  Example: Mouse 1 T A MoveClickX Move Raise Maximize
+#
+#  Click title bar to raise, double click to maximize,
+#  and click+move to move the window.
+DestroyFunc MoveClickX
+AddToFunc   MoveClickX
++ M $0
++ C $1
++ D $2
+
+# Function: ViewManPage $0
+#
+# This function loads the man page $0 in an terminal
+# and is used with the help menu.
+DestroyFunc ViewManPage
+AddToFunc   ViewManPage
++ I Exec exec $[infostore.terminal] -g 80x40 \
+  -n "Manual Page - $0" -T "Manual Page - $0" -e man "$0"
+  
+# Function: IconManClick
+#
+# This function is run from FvwmIconMan when the button is clicked.
+DestroyFunc IconManClick
+AddToFunc   IconManClick
++ I ThisWindow (Raised, !Shaded, !Iconic, CurrentPage) Iconify
++ I TestRc (Match) Break
++ I ThisWindow (!Raised) Raise
++ I ThisWindow (Shaded) WindowShade
++ I ThisWindow (Iconic) Iconify
++ I ThisWindow (AcceptsFocus) FlipFocus
+
+# Function: ToggleTitle
+#
+# This function will toggle if fvwm shows the TitleBar.
+DestroyFunc ToggleTitle
+AddToFunc   ToggleTitle
++ I ThisWindow (State 1) WindowStyle Title
++ I TestRc (Match) State 1 False
++ I TestRc (Match) Break
++ I WindowStyle !Title
++ I State 1 True
+
+# FvwmEvent
+#
+# FvwmEvent is a module that can run an action or function
+# on specific events. This instance changes which desk number
+# is highlighted when the desk is changed.
+DestroyModuleConfig EventNewDesk:*
+*EventNewDesk: PassID
+*EventNewDesk: new_desk ChangeDesk
+
+# Function: ChangeDesk
+#
+# This function is called by FvwmEvent every time the Desk is changed.
+DestroyFunc ChangeDesk
+AddToFunc   ChangeDesk
++ I SendToModule FvwmButtons ChangeButton desk0 Colorset 2
++ I SendToModule FvwmButtons ChangeButton desk1 Colorset 2
++ I SendToModule FvwmButtons ChangeButton desk2 Colorset 2
++ I SendToModule FvwmButtons ChangeButton desk3 Colorset 2
++ I SendToModule FvwmButtons ChangeButton desk$0 Colorset 11
+
+## Tiling functions
+
+DestroyFunc TileUpperLeft
+AddToFunc TileUpperLeft
++ I Resize 48 43
++ I AnimatedMove 1 1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc TileUpperRight
+AddToFunc TileUpperRight
++ I Resize 48 43
++ I AnimatedMove -1 1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc TileLowerRight
+AddToFunc TileLowerRight
++ I Resize 48 43
++ I AnimatedMove -1 -1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc TileLowerLeft
+AddToFunc TileLowerLeft
++ I Resize 48 43
++ I AnimatedMove 1 -1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc MaxTile
+AddToFunc MaxTile
++ I Maximize 100 100
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc HalfMaxLeft
+AddToFunc HalfMaxLeft
++ I Resize 48 95
++ I AnimatedMove 1 1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc HalfMaxRight
+AddToFunc HalfMaxRight
++ I Resize 48 95
++ I AnimatedMove -1 1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc MaxTop
+AddToFunc MaxTop
++ I Resize 60 44
++ I AnimatedMove 294px 4px
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc MaxBottom
+AddToFunc MaxBottom
++ I Resize 60 40
++ I AnimatedMove 294px -28px
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+## Obsolete - reference only
+##
+DestroyFunc MaxCenter
+AddToFunc MaxCenter
++ I Maximize 90 90
++ I Move 50-50w 50-50w
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc MaxULeft
+AddToFunc MaxULeft
++ I Maximize 50 50
++ I AnimatedMove +0 +0
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc MaxURight
+AddToFunc MaxURight
++ I Maximize 50 50
++ I AnimatedMove -0 +0
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc MaxLLeft
+AddToFunc MaxLLeft
++ I Maximize 50 50
++ I AnimatedMove +0 -0
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc MaxLRight
+AddToFunc MaxLRight
++ I Maximize 50 50
++ I AnimatedMove -0 -0
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc MaxLeftHalf
+AddToFunc MaxLeftHalf
++ I Maximize 48 98
++ I AnimatedMove +1 +1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc MaxRightHalf
+AddToFunc MaxRightHalf
++ I Maximize 48 98
++ I AnimatedMove -1 +1
++ I ThisWindow
++ I Focus
++ I Current Raise
