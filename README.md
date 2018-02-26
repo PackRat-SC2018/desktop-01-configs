@@ -1,6 +1,6 @@
 # desktop-01-configs
 
-linux configuration and dotfiles destop computer
+linux configuration and dotfiles destop computer typically running Void Linux - https://www.voidlinux.eu/
 
 These configuration files and scripts are provided as free software. You can redistribute and/or modify
 them under the terms of the GNU General Public License (License) as published by the Free Software Foundation; either
