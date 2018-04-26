@@ -560,7 +560,7 @@ image_backend="w3m"
 #       In ascii mode, distro ascii art will be used and in an image mode, your
 #       wallpaper will be used.
 # image_source="auto"
-image_source="/home/doug/.config/neofetch/11489.png"
+image_source="/home/doug/.config/neofetch/pyramid.png"
 
 # Ascii Options
 
@@ -645,7 +645,7 @@ crop_offset="center"
 # Flags:   --image_size
 #          --size
 # image_size="auto"
-image_size="20%"
+image_size="128px"
 
 # Ggap between image and text
 #
@@ -701,10 +701,10 @@ scrot_cmd="auto"
 # Screenshot Filename
 # What to name the screenshots
 #
-# Default: 'neofetch-$(date +%F-%I-%M-%S-${RANDOM}).png'
+# Default: 'neofetch-$(date +%F-%I-%M-%S-${Rcalendat.jpg'
 # Values:  'string'
 # Flag:    --scrot_name
-scrot_name="neofetch-$(date +%F-%I-%M-%S-${RANDOM}).png"
+scrot_name="neofetch-$(date +%F-%I-%M-%S-${Rcalendat.jpg"
 
 # Image upload host
 # Where to upload the image.

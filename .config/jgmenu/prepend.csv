@@ -1,6 +1,9 @@
-Web Browser,firefox,firefox
-Mail,thunderbird,thunderbird
 Terminal,urxvt,utilities-terminal
 Editor,subl3,accessories-text-editor
 File Manager,thunar,folder-open
+^sep()
+Web Browser,firefox,firefox
+Mail,thunderbird,thunderbird
+Gimp,gimp,gimp
+bookmarks,^pipe(/home/doug/bin/ff-bookmarks),web-browser
 ^sep()

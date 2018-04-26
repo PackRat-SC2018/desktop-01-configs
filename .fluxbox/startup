@@ -13,14 +13,16 @@ pkill -x sxhkd &
 # Change your keymap:
 xmodmap "$HOME/.Xmodmap"
 xrdb -l "$HOME/.Xresources"
-fbsetroot -solid "#333366" &
 numlockx &
+
+# prevent screen from going blank on idle
+# xset s off -dpms
 
 # Applications you want to run with fluxbox.
 # MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
 #
-# set wallpaper
-#(sleep 2s && fbsetbg -c $HOME/wallpaper/simplewall_tardis.jpg) &
+# set background and wallpaper
+fbsetroot -solid "#333366" &
 (sleep 2s && fbsetbg -c -r "$HOME/wallpaper/") &
 
 # 3rd party apps

@@ -72,6 +72,7 @@ volumemute = "amixer sset Master,0 toggle"
 writer = "libreoffice --writer"
 ssheet = "libreoffice --calc"
 calculator = "galculator"
+screenshot = "xfce4-screenshooter"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -382,13 +383,14 @@ globalkeys = awful.util.table.join(
       awful.client.focus.byidx(-1)
       if client.focus then client.focus:raise() end
   end),
-  awful.key({ }, "Print", function () awful.util.spawn("upload_screens scr") end),
+
+--  awful.key({ }, "Print", function () awful.util.spawn("upload_screens scr") end),
 
   -- Layout manipulation
   awful.key({ modkey,           }, "Tab", function () awful.client.swap.byidx(  1)    end),
   awful.key({ modkey, "Shift"   }, "Tab", function () awful.client.swap.byidx( -1)    end),
-  awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end),
-  awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end),
+--  awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end),
+--  awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end),
   awful.key({ modkey,           }, "u", awful.client.urgent.jumpto),
   -- not very useful
 --  awful.key({ modkey,           }, "Tab",
@@ -419,6 +421,7 @@ globalkeys = awful.util.table.join(
   awful.key({ modkey, "Control" }, "l",      function () awful.util.spawn(txteditor)   end),
   awful.key({ modkey, "Control" }, "g",      function () awful.util.spawn(art)         end),
   awful.key({ modkey, "Control" }, "o",      function () awful.util.spawn(writer)      end),
+  awful.key({ modkey, "Control" }, "Print",  function () awful.util.spawn (screenshot) end),
   awful.key({ modkey, "Control" }, "p",      function () awful.util.spawn(ssheet)      end),
   awful.key({ 0,                }, "Menu",   function () awful.util.spawn(filemgr)     end),
   awful.key({ altkey,           }, "F2",     function () awful.util.spawn(rmenu)       end),

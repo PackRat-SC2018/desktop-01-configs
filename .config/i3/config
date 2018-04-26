@@ -48,7 +48,8 @@ exec pkill -x sxhkd &
 # start polybar taskbar; comment out bar section if polybar is used
 # exec_always --no-startup-id "$HOME/.config/polybar/start-i3bar"
 
-exec hsetroot -add "#403729" -add "#b8a882" -add "#eae5ca" -gradient 15
+# start desktop conky - set own_window_type to override
+# exec_always conky -p4 -dc "$HOME/conky/conkyi3rc"
 
 exec xmodmap "$HOME/.Xmodmap"
 # exec xrdb -merge "$HOME/.Xresources"
@@ -59,7 +60,7 @@ exec numlockx on
 #exec std -q -o -f &
 
 # set background
-exec hsetroot -add "#403729" -add "#b8a882" -add "#eae5ca" -gradient 15
+exec xsetroot -solid rgb:03/03/03
 exec fbsetbg -c -r "$HOME/wallpaper/"
 
 #=============================================================================
@@ -72,9 +73,9 @@ bindsym $ALT+F1 exec st
 bindsym $ALT+F4 kill
 
 # start dmenu (a program launcher)
-bindsym $ALT+F2 exec dmenu_run -nb rgb:01/01/01 -nf rgb:B5/B5/B5 -sf rgb:F7/F7/CB -sb rgb:7F/82/99
-# bindsym $ALT+Shift+F2 exec pmenu.py --x 36 --y 36
-bindsym $mod+d exec rofi -show run window
+bindsym $mod+d exec dmenu_run -nb rgb:01/01/01 -nf rgb:B5/B5/B5 -sf rgb:F7/F7/FF -sb rgb:36/3C/88
+bindsym $ALT+F2 exec rofi -show run window
+bindsym $mod+x exec jgmenu_run
 
 # touchpad
 #bindsym $mod+Control+t exec "$HOME/bin/ktouchpad.sh"
@@ -138,6 +139,7 @@ for_window [class="Exit_Session"] floating enable
 for_window [class="Exit_Session"] border 2pixel
 for_window [class="Galculator"] floating enable
 for_window [class="Gsimplecal"] floating enable
+for_window [class="Yad"] floating enable
 
 # change focus
 #bindsym $mod+j focus left

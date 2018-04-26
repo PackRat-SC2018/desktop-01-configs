@@ -1,20 +1,20 @@
 # jgmenurc
 
-csv_cmd        = xdg
+#csv_cmd        = xdg
 
-at_pointer      = 1
+at_pointer      = 0
 stay_alive      = 0
 multi_window    = 1
 tint2_look      = 0
 
 menu_halign     = left
 menu_valign     = top
-menu_margin_x   = 4
-menu_margin_y   = 32
+menu_margin_x   = 6
+menu_margin_y   = 64
 
-#menu_width      = 200
-#menu_radius     = 0
-#menu_border     = 1
+menu_width      = 200
+menu_radius     = 0
+menu_border     = 1
 
 menu_padding_top    = 5
 menu_padding_right  = 2

@@ -1,6 +1,6 @@
 # jgmenurc
 
-csv_cmd        = xdg
+# csv_cmd        = xdg
 
 at_pointer      = 0
 stay_alive      = 0
@@ -9,7 +9,7 @@ tint2_look      = 0
 
 menu_halign     = left
 menu_valign     = top
-menu_margin_x   = 4
+menu_margin_x   = 24
 menu_margin_y   = 32
 
 menu_width      = 200
@@ -22,14 +22,15 @@ menu_padding_bottom = 5
 menu_padding_left   = 2
 
 item_height      = 30
-item_padding_x   = 8
-item_margin_y    = 5
+item_padding_x   = 4
+item_margin_x    = 2
+item_margin_y    = 2
 item_radius      = 0
 item_border      = 0
 sep_height       = 5
 
 icon_theme       = Vibrantly-Simple-Dark-Graphite
-# icon_theme       = Arc
+# icon_theme       = Obsidian-Sand-SemiLight
 icon_size        = 24
 font             = Ubuntu 12px
 

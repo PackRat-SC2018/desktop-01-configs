@@ -48,7 +48,7 @@
 [submenu] (Graphics)
       [exec] (Gimp) {gimp}
       [exec] (Geeqie) {geeqie}
-      [exec] (Xpdf) {xpdf}
+      [exec] (Qpdfview) {qpdfview}
       [exec] (LXappearance) {lxappearance}
       [exec] (Screenshot JPG) {import -window root -quality 100 ~/pictures/screen-import-$(date +%A_%s).jpg}
       [exec] (Screenshot PNG) {import -window root -quality 100 ~/pictures/screen-import-$(date +%A_%s).png}      

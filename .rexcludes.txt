@@ -41,3 +41,4 @@ Pictures
 .config/brasero
 .config/opera
 .config/xfce4
+.config/vivaldi

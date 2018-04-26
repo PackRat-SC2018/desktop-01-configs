@@ -39,8 +39,7 @@ theme.fg_minimize   = "#d6d6d6"
 theme.fg_tooltip    = "#1a1a1a"
 theme.fg_em         = "#d6d6d6"
 
-theme.border_width  = "1"
-theme.border_normal = "#000000"
+theme.border_normal = "#323232"
 theme.border_focus  = "#535d6c"
 theme.border_marked = "#91231c"
 theme.fg_widget_value = "#b0b0b0"
@@ -52,8 +51,9 @@ theme.fg_end_widget = "#1a1a1a"
 theme.bg_widget = "#2a2a2a"
 theme.border_widget = "#3F3F3F"
 
-theme.useless_gap   = dpi(2)
+theme.useless_gap   = dpi(0)
 theme.border_width  = dpi(2)
+-- theme.border_width  = "1" -- old syntax?
 
 -- There are other variable sets
 -- overriding the default one when

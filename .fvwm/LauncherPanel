@@ -54,7 +54,7 @@ DestroyModuleConfig EventNewDesk:*
 *FvwmFormDefault: ItemColorset 13
 
 DestroyModuleConfig ButtonLaunchers
-*ButtonLaunchers: Geometry 240x40+8+8
+*ButtonLaunchers: Geometry 240x40+4+4
 *ButtonLaunchers: Colorset 24
 *ButtonLaunchers: Columns 6
 *ButtonLaunchers: Rows 1
@@ -62,7 +62,7 @@ DestroyModuleConfig ButtonLaunchers
 *ButtonLaunchers: Font "xft:Sans:Regular:size=9:antialias=True"
 *ButtonLaunchers: (1x1, Title "", Icon "icons/apps/voidtr.png", Action `Exec jgmenu --config-file=/home/doug/.config/jgmenu/jgfvwmrc`)
 *ButtonLaunchers: (1x1, Title "", Icon "icons/apps/network-server.png", Action `Exec thunar`)
-*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/terminix.png", Action `Exec urxvt -g 128x32`)
+*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/terminix.png", Action `Exec uxterm`)
 *ButtonLaunchers: (1x1, Title "", Icon "icons/apps/sublime-text.png" Action `Exec subl3`)
 *ButtonLaunchers: (1x1, Title "", Icon "icons/apps/firefox32.png" Action `Exec firefox`)
 *ButtonLaunchers: (1x1, Title "", Icon "icons/apps/mail.png" Action `Exec thunderbird`)
@@ -108,7 +108,7 @@ DestroyModuleConfig DeskPanel:*
 # FvwmIconMan (list of running windows), and a clock.
 #
 DestroyModuleConfig RightPanel:*
-*RightPanel: Geometry 160x40-8+8
+*RightPanel: Geometry 160x40-4-4
 *RightPanel: Colorset 24
 *RightPanel: Rows 1
 *RightPanel: Columns 4

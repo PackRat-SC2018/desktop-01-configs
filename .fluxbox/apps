@@ -74,7 +74,7 @@
   [Alpha]	{255}
 [end]
 [app] (name=yad) (class=Void_Exit_Session)
-  [Position]	(UPPERLEFT)	{28% 46%}
+  [Position]	(CENTER)	{0 0}
   [Shaded]	{no}
   [Deco]	{0x67f}
   [Sticky]	{no}
@@ -255,12 +255,6 @@
   [Layer]	{8}
   [Alpha]	{255}
 [end]
-[group]  (workspace=[current])
- [app] (name=libreoffice) (class=libreoffice-writer)
- [app] (name=libreoffice) (class=libreoffice-calc)
-  [Deco]	{0x67f}
-  [Maximized]	{yes}
-[end]
 [app] (name=audacious) (class=Audacious)
   [Position]	(UPPERLEFT)	{5% 4%}
   [Shaded]	{no}
@@ -384,17 +378,6 @@
   [Position]	(UPPERLEFT)	{1% 1%}
   [Shaded]	{no}
   [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=gl) (class=mpv)
-  [Position]	(UPPERLEFT)	{2% 2%}
-  [Shaded]	{no}
-  [Deco]	{BORDER}
   [Sticky]	{no}
   [Minimized]	{no}
   [Maximized]	{no}
@@ -545,8 +528,43 @@
   [Alpha]	{255}
 [end]
 [app] (name=st-256color) (class=st-256color)
-  [Dimensions]	{70% 76%}
-  [Position]	(CENTER)	{0 0}
+  [Dimensions]	{80% 90%}
+  [Position]	(UPPERLEFT)	{10% 5%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Close]	{yes}
+  [Alpha]	{255}
+[end]
+[app] (name=Opera) (class=Opera)
+  [Maximized]	{yes}
+[end]
+[group]  (workspace=[current])
+ [app] (name=soffice) (class=Soffice)
+ [app] (name=libreoffice) (class=libreoffice-writer)
+ [app] (name=libreoffice) (class=libreoffice-calc)
+  [Deco]	{0x67f}
+  [Maximized]	{yes}
+[end]
+[app] (name=gl) (class=mpv)
+  [Dimensions]	{58% 65%}
+  [Position]	(UPPERLEFT)	{37% 33%}
+  [Shaded]	{no}
+  [Deco]	{BORDER}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=qpdfview) (class=qpdfview)
+  [Dimensions]	{68% 93%}
+  [Position]	(UPPERLEFT)	{16% 3%}
   [Shaded]	{no}
   [Deco]	{0x67f}
   [Sticky]	{no}

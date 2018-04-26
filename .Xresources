@@ -12,44 +12,43 @@ Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
 Xft.autohint: 0
 
-
-! colours  terminal.sexy.com
 ! special
-*.foreground:   #a8a19f
-*.background:   #1b1918
-*.cursorColor:  #a8a19f
+*.foreground:   #DEDEDE
+*.background:   #141413
+*.cursorColor:  #DEDEDE
 
 ! black
-*.color0:       #1b1918
-*.color8:       #766e6b
+*.color0:       #1e1f21
+*.color8:       #373b41
 
 ! red
-*.color1:       #f22c40
-*.color9:       #f22c40
+*.color1:       #a51c1c
+*.color9:       #cc6666
 
 ! green
-*.color2:       #5ab738
-*.color10:      #5ab738
+*.color2:       #279421
+*.color10:      #b5bd68
 
 ! yellow
-*.color3:       #d5911a
-*.color11:      #d5911a
+*.color3:       #de7e3b
+*.color11:      #f0d474
 
 ! blue
-*.color4:       #407ee7
-*.color12:      #407ee7
+*.color4:       #2b379d
+*.color12:      #81a2be
 
 ! magenta
-*.color5:       #6666ea
-*.color13:      #6666ea
+*.color5:       #80548f
+*.color13:      #b294bb
 
 ! cyan
-*.color6:       #00ad9c
-*.color14:      #00ad9c
+*.color6:       #4c8d85
+*.color14:      #8abeb7
 
 ! white
-*.color7:       #a8a19f
-*.color15:      #f1efee
+*.color7:       #666c72
+*.color15:      #dadddb
+
 
 ! XTerm
 !==============================================================================
@@ -108,12 +107,12 @@ UXTerm*metaSendsEscape: true
 URxvt*depth:		32
 !URxvt*background: rgba:0000/0000/0200/c800
 !URxvt*foreground: rgba:ffff/ffff/ffff/ffff
-URxvt*background: [80]#1b1918
-URxvt*fading:      50
+URxvt*background: [80]#141413
+URxvt*fading:     33 
 !URxvt*fadeColor:   rgba:0000/0000/0000/0000
-URxvt*fadeColor:	#1b1918
-URxvt*foreground: #a8a19f
-URxvt*cursorColor: #a8a19f
+URxvt*fadeColor:	[90]#1B1B1B
+URxvt*foreground: #D9D5D4
+URxvt*cursorColor: #D9D5D4
 
 URxvt*boldMode:   false
 URxvt*colorBDMode: true
@@ -121,7 +120,7 @@ URxvt*colorBD:     #FFFFFF
 URxvt.colorUL:     #E6B55C
 URxvt*underlineColor: #DBB86E
 URxvt.colorIT:     #686868
-URxvt.blurRadius:  3x3
+URxvt.blurRadius:  2x2
 
 URxvt.geometry:             80x24
 URxvt.internalBorder:		4

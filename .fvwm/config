@@ -15,7 +15,7 @@ DesktopName 3 3
 DesktopName 4 4
 
 # Margins LRTB
-EwmhBaseStruts 0 0 0 0
+EwmhBaseStruts 4 4 4 4
 
 #ignore capslock, numlock, scroll lock
 IgnoreModifiers L25
@@ -152,7 +152,7 @@ Colorset 16 fg #AFAFAF, bg #191919, RootTransparent, buffer, Tint #131313 40
 Colorset 17 fg #FFFFFF, bg #003C3C, RootTransparent, buffer, Tint #003C3C 40
 Colorset 18 fg #0B0B0B, bg #F6F6FF, RootTransparent, buffer, Tint #F6F6FF 40
 #Colorset 19 fg #101010, bg #232323, hi #636363, sh #131313, Plain, NoShape, RootTransparent, buffer, Tint #CCCCCC 40
-Colorset 19 fg #B4B4B4, bg #CFCFC9, hi #CFCFC9, sh #CFCFC9, Plain, NoShape, RootTransparent, buffer, Tint #CFCFC9 48
+Colorset 19 fg #B4B4B4, bg #CFCFC9, hi #CFCFC9, sh #CFCFC9, Plain, NoShape, RootTransparent, buffer, Tint #CFCFC9 60
 # main menu
 Colorset 20 fg #171717, bg #D6D6D0
 Colorset 21 fg #F8F8FF, bg #003C3C
@@ -174,12 +174,12 @@ Colorset 24 fg #171717, bg #D6D6D0, Plain, NoShape, hi #CFCFC9, sh #CFCFC9, Root
 #   6 - Minimize
 ###########
 DefaultFont "xft:Source Sans Pro:Semibold:size=11:antialias=True"
-Style * BorderWidth 2, HandleWidth 2
+Style * BorderWidth 3, HandleWidth 3
 Style * Colorset 1, HilightColorset 2
 Style * BorderColorset 1, HilightBorderColorset 2
-#BorderStyle Simple -- NoInset Flat
+BorderStyle Simple -- NoInset Flat
 #BorderStyle -- Flat
-BorderStyle Simple
+#BorderStyle Simple
 
 TitleStyle Centered Height 20 -- Flat
 ButtonStyle All -- Flat
@@ -206,7 +206,7 @@ Style Subl3 ResizeHintOverride, PositionPlacement Center
 Style Firefox ResizeHintOverride, PositionPlacement Center
 Style Thunderbird ResizeHintOverride, PositionPlacement Center
 Style *tray !Title, !Handles, !Borders, StaysOnBottom, WindowListSkip
-Style Tint2 !Title, !Handles, !Borders, ResizeHintOverride, StaysOnBottom, PositionPlacement 0 -0
+Style Tint2 !Title, !Handles, !Borders, ResizeHintOverride, StaysOnBottom, PositionPlacement 1456px 4px
 
 Style *XTerm	Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
 Style *xterm	Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
@@ -244,8 +244,8 @@ AddToFunc StartFunction
 
 # + I Test (Init) Exec exec "$HOME/.fvwm/launch-fvwm-polybar.sh"
 # + I Test (Restart) Exec exec "$HOME/.fvwm/launch-fvwm-polybar.sh"
-+ I Test (Init) Exec exec tint2
-+ I Test (Restart) Exec exec tint2
++ I Test (Init) Exec exec tint2 -c "$HOME/.config/tint2/tint2clockrc"
++ I Test (Restart) Exec exec tint2 -c "$HOME/.config/tint2/tint2clockrc"
 # + I Test (Init) Exec exec stalonetray
 # + I Test (Restart) Exec exec stalonetray
 

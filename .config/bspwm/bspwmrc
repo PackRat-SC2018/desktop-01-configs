@@ -59,6 +59,11 @@ bspc rule -a Xfce4-appfinder state=floating
 bspc rule -a Xfce4-panel state=floating
 bspc rule -a Thunderbird state=floating
 bspc rule -a Audacious state=floating
+bspc rule -a '*:libreoffice-writer' state=tiled
+bspc rule -a '*:libreoffice-calc' state=tiled
+bspc rule -a '*:libreoffice-startcenter' state=tiled
+bspc rule -a libreoffice-* state=tiled
+bspc rule -a Soffice state=tiled
 
 bspc config normal_border_color "#363636"
 bspc config active_border_color "#646464" 

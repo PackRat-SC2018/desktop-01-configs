@@ -15,6 +15,9 @@ alt + F2
 super + d
 	dmenu_run
 
+super + space
+   jgmenu_run
+
 alt + F3
 	uxterm
 

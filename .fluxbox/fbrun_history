@@ -3,7 +3,6 @@ gimp
 xfce4-termonal
 xfce4-terminal --drop-down
 skippy-xd
-xfce4-terminal
 yad --font --class FontDisplay
 yad --color --class ColorPicker
 galculator
@@ -16,19 +15,26 @@ connman --gtk
 connman-gtk
 xfce4-appfinder
 urxvt -docapp
-urxvt
-uxterm
-gcolor2
 geanny
 brasero
 jgmenu_run
-pcmanfm
-xterm
-lxappearance
 rofi-logout
 yad --fonts
-yad --font
-geany
-compton
-st
+sakura
+xfce4-terminal
+uxterm
+xterm
+lxappearance
+filezilla
 opera
+gcolor2
+urxvt -blr 4
+xfburn
+yad --font
+xboard
+xfce4-screenshooter
+compton
+pcmanfm
+st
+urxvt
+geany

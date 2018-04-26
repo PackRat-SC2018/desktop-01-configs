@@ -1,0 +1,6 @@
+^sep()
+Lock,slock,system-lock-screen
+Suspend,zzz,video-display
+# Reboot,sudo reboot,system-upgrade
+# Poweroff,sudo poweroff,system-shutdown
+Exit Session,void-logout,void-jgmenu.png
