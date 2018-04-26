@@ -8,6 +8,6 @@ Version 3 of the License or (at your option) any later version.
 
 https://www.gnu.org/licenses/lgpl.html
 
-These files are distributed in the hopr they will be useful,
+These files are distributed in the hope they will be useful,
 but Without ANY Warranty, and without even the implied warranty of
 MERCHANTABILITY or FITNESS for a PARTICULAR PURPOSE.
