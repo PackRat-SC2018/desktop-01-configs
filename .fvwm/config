@@ -4,15 +4,15 @@
 SetEnv fvwm_wallpaper $[HOME]/wallpaper
 ImagePath $[HOME]/.fvwm/icons:+
 
-DeskTopSize 1x1
-EwmhNumberOfDesktops 4
+#DeskTopSize 1x1
+#EwmhNumberOfDesktops 4
 
-# DeskTopSize 2x2
+DeskTopSize 3x3
 
-DesktopName 1 Main
-DesktopName 2 2
-DesktopName 3 3
-DesktopName 4 4
+DesktopName 0 1
+DesktopName 1 2
+DesktopName 2 3
+DesktopName 3 4
 
 # Margins LRTB
 EwmhBaseStruts 4 4 4 4
@@ -132,36 +132,45 @@ Style * MinOverlapPlacement
 #      12 - Module ActiveButton (Mouse Hover)
 #      13 - FvwmPager Active Page
 ###########
-Colorset 0  fg #FFFFFF, bg #003C3C, hi, sh, Plain, NoShape
-# Colorset 1  fg #000000, bg #8F9F8F, hi, sh, Plain, NoShape
-Colorset 1  fg #A6A6A6, bg #2F333B, hi, sh, Plain, NoShape
-Colorset 2  fg #E3E3E3, bg #003C3C, hi, sh, Plain, NoShape
-Colorset 3  fg #000000, bg #4D4D4D, hi #676767, sh #303030, Plain, NoShape
-Colorset 4  fg #000000, bg #2D2D2D, hi #474747, sh #101010, Plain, NoShape
-Colorset 5  fg #000000, bg #FFFFFF, hi, sh, Plain, NoShape
-Colorset 6  fg #FFFFFF, bg #2D2D2D, hi, sh, Plain, NoShape
-Colorset 7  fg #4D4D4D, bg #FFFFFF, hi, sh, Plain, NoShape
-Colorset 8  fg #FFFFFF, bg #003C3C, hi, sh, Plain, NoShape
-Colorset 10 fg #FFFFFF, bg #1F7070, hi #aaaaaa, sh #999999, Plain, NoShape
-Colorset 11 fg #FFFFFF, bg #1A6E99, hi #FFFFFF, sh #FFFFFF, Plain, NoShape
-Colorset 12 fg #ECECEC, bg #1A6E99, hi, sh, Plain, NoShape
-Colorset 13 fg #FFFFFF, bg #006C6C, hi, sh, Plain, NoShape
-Colorset 14 fg #FFFFFF, bg #111111, RootTransparent, buffer, Tint #131313 0
-Colorset 15 fg #010101, bg #D6D6D6
-Colorset 16 fg #AFAFAF, bg #191919, RootTransparent, buffer, Tint #131313 40
-Colorset 17 fg #FFFFFF, bg #003C3C, RootTransparent, buffer, Tint #003C3C 40
-Colorset 18 fg #0B0B0B, bg #F6F6FF, RootTransparent, buffer, Tint #F6F6FF 40
-#Colorset 19 fg #101010, bg #232323, hi #636363, sh #131313, Plain, NoShape, RootTransparent, buffer, Tint #CCCCCC 40
-Colorset 19 fg #B4B4B4, bg #CFCFC9, hi #CFCFC9, sh #CFCFC9, Plain, NoShape, RootTransparent, buffer, Tint #CFCFC9 60
-# main menu
-Colorset 20 fg #171717, bg #D6D6D0
-Colorset 21 fg #F8F8FF, bg #003C3C
-# Panel Colorsets
-# Colorset 22 fg #ffffff, bg #003c3c, hi #005c5c, sh #001c1c
-Colorset 22 fg #FFFFFF, bg #2F333B, Plain, NoShape
-Colorset 23 fg #FFFFFF, bg #5894DB, Plain, NoShape
-Colorset 24 fg #171717, bg #D6D6D0, Plain, NoShape, hi #CFCFC9, sh #CFCFC9, RootTransparent, buffer, Tint #CFCFC9 80
 
+Colorset 1  fg #A6A6A6, bg #2F333B, hi, sh, Plain, NoShape
+
+# main menu
+Colorset 2  fg #070707, bg #D3D3D3, hi #3E3E3E, sh #3E3E3E, Plain, NoShape
+Colorset 3  fg #E5E5E5, bg #4A587F, Plain, NoShape
+
+# Icons
+Colorset 4 fg #B4B4B4, bg #CFCFC9, hi #CFCFC9, sh #CFCFC9, Plain, NoShape, RootTransparent, buffer, Tint #CFCFC9 45
+
+# FvwmPager
+Colorset 5  fg #0C0C0C, bg #D5D5D5, RootTransparent, buffer, Tint #D5D5D5 45
+Colorset 6  fg #C2C2C2, bg #C2C2C2, RootTransparent, buffer, Tint #4A587F 45
+Colorset 7  fg #4D4D4D, bg #4D4D4D, hi, sh, Plain, NoShape, RootTransparent, buffer, Tint #9F9F9F 40
+Colorset 8  fg #003C3C, bg #003C3C, hi, sh, Plain, NoShape, RootTransparent, buffer, Tint #003C3C 40
+
+# FvwmIconMan
+Colorset 9 fg #FFFFFF, bg #111111, RootTransparent, buffer, Tint #131313 0
+Colorset 10 fg #070707, bg #E3E3E3, hi #AAAAAA, sh #EEEEEE, Plain, NoShape, RootTransparent, buffer, Tint #E3E3E3 80
+Colorset 11  fg #E5E5E5, bg #4A587F, Plain, NoShape, RootTransparent, buffer, Tint #4A587F 80
+Colorset 12  fg #E5E5E5, bg #003C3C, Plain, NoShape, RootTransparent, buffer, Tint #003C3C 80
+
+# Panels
+Colorset 13 fg #F3F3F3, bg #F1F1F1, RootTransparent, buffer, Tint #D5D5D5 45
+# Colorset 13 fg #F3F3F3, bg #D5D5D5
+Colorset 14 fg #0C0C0C, bg #E6E6E6, RootTransparent, buffer, Tint #E6E6E6 45
+
+# TaskBar
+Colorset 15 fg #6F6F6F, bg #6F6F6F, hi, sh, Plain, NoShape
+
+# Decors
+
+# AltDecor
+Colorset 15 fg #9A9A9A, bg #474747
+Colorset 16 fg #F8F8FF, bg #003C3C
+
+# 4DwmDecor
+Colorset 17 fg #CCCCCC, bg #3E3E3E
+Colorset 18 fg #0C0C0C, bg #A59F80
 
 #######
 # 6: Window Decor
@@ -173,13 +182,13 @@ Colorset 24 fg #171717, bg #D6D6D0, Plain, NoShape, hi #CFCFC9, sh #CFCFC9, Root
 #   4 - Maximize
 #   6 - Minimize
 ###########
-DefaultFont "xft:Source Sans Pro:Semibold:size=11:antialias=True"
+
+DefaultFont "xft:Source Sans Pro:Semibold:size=11:antialias=True:hintstyle=slight"
 Style * BorderWidth 3, HandleWidth 3
-Style * Colorset 1, HilightColorset 2
-Style * BorderColorset 1, HilightBorderColorset 2
+Style * Colorset 1, HilightColorset 3
+Style * BorderColorset 1, HilightBorderColorset 3
 BorderStyle Simple -- NoInset Flat
 #BorderStyle -- Flat
-#BorderStyle Simple
 
 TitleStyle Centered Height 20 -- Flat
 ButtonStyle All -- Flat
@@ -201,12 +210,15 @@ ButtonStyle 6 - MwmDecorMin
 Style Polybar !Title, !Handles, !Borders, CirculateSkip, WindowListSkip
 Style Void_Exit_Session ResizeHintOverride, PositionPlacement Center
 Style URxvt ResizeHintOverride, PositionPlacement Center
+Style *XTerm ResizeHintOverride, PositionPlacement Center
 Style Sakura ResizeHintOverride, PositionPlacement Center
 Style Subl3 ResizeHintOverride, PositionPlacement Center
 Style Firefox ResizeHintOverride, PositionPlacement Center
 Style Thunderbird ResizeHintOverride, PositionPlacement Center
 Style *tray !Title, !Handles, !Borders, StaysOnBottom, WindowListSkip
-Style Tint2 !Title, !Handles, !Borders, ResizeHintOverride, StaysOnBottom, PositionPlacement 1456px 4px
+Style Tint2 !Title, !Handles, !Borders, ResizeHintOverride, StaysOnBottom, PositionPlacement -0 -0
+Style Xfce4-panel !Title, !Handles, !Borders, StaysOnTop
+Style *Clock !Title, PositionPlacement -2 -2
 
 Style *XTerm	Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
 Style *xterm	Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
@@ -223,7 +235,7 @@ Read Keys
 Read Mouse
 Read Menu
 Read Panels
-Read LauncherPanel
+# Read 4DwmDecor
 
 DestroyFunc StartFunction
 AddToFunc StartFunction
@@ -233,21 +245,21 @@ AddToFunc StartFunction
 + I Module FvwmAnimate
 # + I Module FvwmRearrange
 # + I Module FvwmPerl
-# + I Module FvwmPager 0 3
-# + I Module FvwmIconMan FvwmIconMan02
-# + I Module FvwmButtons FvwmTaskBar
-+ I Module FvwmButtons RightPanel
+
++ I Module FvwmPager
 + I Module FvwmButtons ButtonLaunchers
+# + I Module FvwmIconMan FvwmIconMan
+# + I Module FvwmButtons FvwmTaskBar
+# + I Module FvwmButtons DeskPanel
 
-+ I exec exec xset s blank
-+ I exec exec xset b 33
++ I Exec exec xset s blank
++ I Exec exec xset b 33
++ I Exec exec numlockx on
 
-# + I Test (Init) Exec exec "$HOME/.fvwm/launch-fvwm-polybar.sh"
-# + I Test (Restart) Exec exec "$HOME/.fvwm/launch-fvwm-polybar.sh"
++ I Test (Init) Exec exec hsetroot -center /mnt/public/images/A10-1656.jpg
+
 + I Test (Init) Exec exec tint2 -c "$HOME/.config/tint2/tint2clockrc"
 + I Test (Restart) Exec exec tint2 -c "$HOME/.config/tint2/tint2clockrc"
-# + I Test (Init) Exec exec stalonetray
-# + I Test (Restart) Exec exec stalonetray
 
 DestroyFunc ExitFunction
 AddToFunc   ExitFunction

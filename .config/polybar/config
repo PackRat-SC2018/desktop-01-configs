@@ -150,9 +150,9 @@ inherit = bar/bottom
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
 monitor = VGA1
 
-modules-left = window_switch workspaces void-menu 
-modules-center = uptime memory coreuse load core0temp core1temp wired-network
-modules-right = date
+modules-left = jgmenu window_switch
+modules-center = fvwmtime
+modules-right = coreavg load
 
 ; All available modules (some require configuration in modules.conf)
 ; redshift github filesystem mpd wired-network wireless-network battery menu volume-bar bspwm

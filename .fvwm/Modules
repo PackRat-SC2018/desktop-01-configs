@@ -1,8 +1,32 @@
 # static modules
 Style FvwmIdent* !Title, WindowListSkip, HandleWidth 2, Borderwidth 2, !Button 1, !Button 4, !Button 6
-Style FvwmIconMan02* !Title, !Handles, !Borders, Sticky, WindowListSkip, CirculateSkip, StaysOnBottom, NeverFocus
+Style FvwmIconMan* !Title, !Handles, !Borders, Sticky, WindowListSkip, CirculateSkip, StaysOnBottom, NeverFocus
 Style FvwmButtons* !Title, !Handles, BorderWidth 1, CirculateSkip, Sticky, WindowListSkip, StaysOnTop, NeverFocus
-Style FvwmPager* !Title, HandleWidth 1, Borderwidth 1, Sticky, WindowListSkip, CirculateSkip, StaysOnBottom, NeverFocus
+Style FvwmPager* !Title, HandleWidth 2, Borderwidth 2, Sticky, WindowListSkip, CirculateSkip, StaysOnBottom, NeverFocus
+
+
+# Function: IconManClick
+#
+# This function is run from FvwmIconMan when the button is clicked.
+DestroyFunc IconManClick
+AddToFunc   IconManClick
++ I ThisWindow (Raised, !Shaded, !Iconic, CurrentPage) Iconify
++ I TestRc (Match) Break
++ I ThisWindow (!Raised) Raise
++ I ThisWindow (Shaded) WindowShade
++ I ThisWindow (Iconic) Iconify
++ I ThisWindow (AcceptsFocus) FlipFocus
+
+# Function: ToggleTitle
+#
+# This function will toggle if fvwm shows the TitleBar.
+DestroyFunc ToggleTitle
+AddToFunc   ToggleTitle
++ I ThisWindow (State 1) WindowStyle Title
++ I TestRc (Match) State 1 False
++ I TestRc (Match) Break
++ I WindowStyle !Title
++ I State 1 True
 
 DestroyModuleConfig FvwmIdent: *
 *FvwmIdentBack #191970
@@ -27,18 +51,14 @@ DestroyModuleConfig FvwmAnimate: *
 
 Style * StickyIcon
 Style * IconTitleRelief 0
-Style * IconBackgroundRelief 1
+Style * IconBackgroundRelief 0
 Style * IconBackgroundPadding 1
 Style * IconSize 56 56 160 160
 Style * IconFont "Shadow=0 0 SE:xft:Monospace:style=regular:pixelsize=12:antialias=true:hinting=slight"
-Style * IconBackgroundColorset 19
-Style * IconTitleColorset 19
-Style * HilightIconTitleColorset 19
+Style * IconBackgroundColorset 4
+Style * IconTitleColorset 4
+Style * HilightIconTitleColorset 4
 Style * Icon unknown1.xpm
-
-# comment out if iconbox needed; then select IconBox location
-# Style * !Icon
-Style * !IconTitle
 
 # top left
 # Style "*" IconBox 4 4 400 288, IconGrid 20 20, IconFill left top
@@ -54,26 +74,32 @@ Style * !IconTitle
 # Style * IconBox 1250 48 1360 640, IconGrid 24 24, IconFill left top
 #
 # bottom left
-Style * IconBox 8 832 800 896, IconGrid 24 24 , IconFill left top
+# Style * IconBox 8 832 800 896, IconGrid 24 24 , IconFill left top
 #
 # middle right
 # Style * Iconbox 1224 300 1360 600, IconGrid 36 36, IconFill left top
 #
 # middle left
-# Style * Iconbox 16 48 256 600, IconGrid 24 24, IconFill left top
+# Style * Iconbox 4 144 256 800, IconGrid 24 24, IconFill left top
 #
 # thumbnails
-# Style "*" Iconbox 2 680 688 762, IconGrid 8 8, IconFill left top
+Style "*" Iconbox 4 840 1400 898, IconGrid 8 8, IconFill left top
+
+# comment out if iconbox needed; then select IconBox location
+# Style * !Icon
+Style * !IconTitle
+
+
 #===================================================
 
 # fvwmpager
 DestroyModuleConfig FvwmPager: *
-*FvwmPager: DeskTopScale 25
-*FvwmPager: Geometry +2+60
+*FvwmPager: DeskTopScale 30
+*FvwmPager: Geometry -4+4
 *FvwmPager: WindowBorderWidth 0.3
-*FvwmPager: Colorset * 18
-*FvwmPager: HilightColorset * 17
-*FvwmPager: WindowColorsets 17 18
+*FvwmPager: Colorset * 5
+*FvwmPager: HilightColorset * 6
+*FvwmPager: WindowColorsets 7 8
 *FvwmPager: Font none
 #*FvwmPager: SmallFont "xft:Sans:style=Regular:pixelsize=9:antialias=True"
 *FvwmPager: Balloons
@@ -91,7 +117,7 @@ DestroyModuleConfig FvwmPager: *
 *FvwmPager: !MiniIcons
 *FvwmPager: MoveThreshold 5
 
-# FvwmIconMan02
+# FvwmIconMan
 #===========================================================
 
 DestroyMenu MenuIconOps
@@ -129,62 +155,64 @@ AddToFunc   IconManClick
 
 #=======================================================================
 
-DestroyModuleConfig FvwmIconMan02
-*FvwmIconMan02: Title ""    
-*FvwmIconMan02: NumManagers 1
-*FvwmIconMan02: ManagerGeometry 0x1+0-0
-*FvwmIconMan02: ButtonGeometry 148x24
-*FvwmIconMan02: MaxButtonWidthByColumns 1
-*FvwmIconMan02: MaxButtonWidth 148
-*FvwmIconMan02: Font "xft:Roboto:style=Regular:size=11:antialias=true:hinting=slight"
-*FvwmIconMan02: Format "%c: %i"
-*FvwmIconMan02: FollowFocus true
-*FvwmIconMan02: DontShow icon=Untitled resource=Untitled
-*FvwmIconMan02: Resolution desk
-*FvwmIconMan02: ShowOnlyIcons false
-*FvwmIconMan02: DrawIcons flase
-*FvwmIconMan02: ShowOnlyFocused false
-*FvwmIconMan02: ShowTransient false
-*FvwmIconMan02: Sort id
-*FvwmIconMan02: UseWinList true
-*FvwmIconMan02: ReliefThickness 0
-*FvwmIconMan02: Tips Always
-*FvwmIconMan02: TipsDelays 1000 300
-*FvwmIconMan02: TipsFont "Shadow=0 0 SE:xft:Monospace:style=regular:pixelsize=12:antialias=true:hinting=slight"
-# *FvwmIconMan02: TipsFont "xft:Envy Code R:style=regular:pixelsize=10"
-*FvwmIconMan02: TipsFormat "%i"
-*FvwmIconMan02: TipsBorderWidth 1
-*FvwmIconMan02: TipsColorset 3
-*FvwmIconMan02: TipsJustification center
+DestroyModuleConfig FvwmIconMan
+*FvwmIconMan: Title ""    
+*FvwmIconMan: NumManagers 1
+*FvwmIconMan: ManagerGeometry 0x1+0-0
+*FvwmIconMan: ButtonGeometry 160x28
+*FvwmIconMan: MaxButtonWidthByColumns 1
+*FvwmIconMan: MaxButtonWidth 160
+*FvwmIconMan: Font "xft:Roboto:style=Regular:size=11:antialias=true:hinting=slight"
+*FvwmIconMan: Format "%c: %i"
+*FvwmIconMan: FollowFocus true
+*FvwmIconMan: DontShow icon=Untitled resource=Untitled
+*FvwmIconMan: Resolution desk
+*FvwmIconMan: ShowOnlyIcons false
+*FvwmIconMan: DrawIcons flase
+*FvwmIconMan: ShowOnlyFocused false
+*FvwmIconMan: ShowTransient false
+*FvwmIconMan: Sort id
+*FvwmIconMan: UseWinList true
+*FvwmIconMan: ReliefThickness 0
+*FvwmIconMan: Tips Always
+*FvwmIconMan: TipsDelays 1000 300
+*FvwmIconMan: TipsFont "Shadow=0 0 SE:xft:Monospace:style=regular:pixelsize=12:antialias=true:hinting=slight"
+# *FvwmIconMan: TipsFont "xft:Envy Code R:style=regular:pixelsize=10"
+*FvwmIconMan: TipsFormat "%i"
+*FvwmIconMan: TipsBorderWidth 1
+*FvwmIconMan: TipsColorset 3
+*FvwmIconMan: TipsJustification center
 #======================================================================
-*FvwmIconMan02: IconButton flat
-*FvwmIconMan02: PlainButton flat
-*FvwmIconMan02: SelectButton flat
-*FvwmIconMan02: FocusButton flat
-*FvwmIconMan02: FocusAndSelectButton flat
+*FvwmIconMan: IconButton flat
+*FvwmIconMan: PlainButton flat
+*FvwmIconMan: SelectButton flat
+*FvwmIconMan: FocusButton flat
+*FvwmIconMan: FocusAndSelectButton flat
 
-*FvwmIconMan02: Colorset 14
-*FvwmIconMan02: IconColorset 16
-*FvwmIconMan02: PlainColorset 16
-*FvwmIconMan02: FocusColorset 17
-*FvwmIconMan02: SelectColorset 11
-*FvwmIconMan02: FocusAndSelectColorset 0
+*FvwmIconMan: Colorset 9
+*FvwmIconMan: IconColorset 10
+*FvwmIconMan: PlainColorset 10
 
-#*FvwmIconMan02: Background  #D1D0CC
-#*FvwmIconMan02: Foreground  #000000
-#*FvwmIconMan02: IconButton	up	#6B6B6B #D1D0CC
-#*FvwmIconMan02: PlainButton	up	#4E4E4E #D1D0CC
-#*FvwmIconMan02: SelectButton	up	#191A17 #D1D0CC
-#*FvwmIconMan02: FocusButton	up	#191A17 #B5B4B1
-#*FvwmIconMan02: FocusAndSelectButton	flat	#191A17 #B5B4B1
+*FvwmIconMan: FocusColorset 11
+*FvwmIconMan: SelectColorset 12
+*FvwmIconMan: FocusAndSelectColorset 12
+*FvwmIconMan: IconAndSelectColorset 12
 
-*FvwmIconMan02: Action    Mouse 1 N sendcommand "TaskRaiseFocus"
-*FvwmIconMan02: Action    Mouse 2 N sendcommand "WindowShade toggle"
-*FvwmIconMan02: Action    Mouse 3 N sendcommand "Focus", sendcommand "Iconify"
-*FvwmIconMan02: Action    Mouse 2 M SendCommand "Close"
+#*FvwmIconMan: Background  #D1D0CC
+#*FvwmIconMan: Foreground  #000000
+#*FvwmIconMan: IconButton	up	#6B6B6B #D1D0CC
+#*FvwmIconMan: PlainButton	up	#4E4E4E #D1D0CC
+#*FvwmIconMan: SelectButton	up	#191A17 #D1D0CC
+#*FvwmIconMan: FocusButton	up	#191A17 #B5B4B1
+#*FvwmIconMan: FocusAndSelectButton	flat	#191A17 #B5B4B1
 
-*FvwmIconMan02: Action Mouse 1 A sendcommand IconManClick
-*FvwmIconMan02: Action Mouse 2 A sendcommand Nop
-*FvwmIconMan02: Action Mouse 3 A sendcommand "Menu MenuIconOps"
+*FvwmIconMan: Action Mouse 1 N sendcommand "TaskRaiseFocus"
+*FvwmIconMan: Action Mouse 1 A sendcommand IconManClick
+
+*FvwmIconMan: Action Mouse 2 N sendcommand "WindowShade toggle"
+*FvwmIconMan: Action Mouse 2 M sendcommand Close
+
+*FvwmIconMan: Action Mouse 3 N sendcommand "Menu MenuIconOps"
+*FvwmIconMan: Action Mouse 3 M sendcommand ToggleTitle
 
 #=======================================================================

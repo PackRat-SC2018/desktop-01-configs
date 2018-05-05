@@ -1,19 +1,95 @@
-# Panel configurations
+# panels, taskbars - real and experimental
 
-# FvwmTaskBar styles
+Style ButtonLaunchers !Title, HandleWidth 1, BorderWidth 1, WindowListSkip, StaysOnBottom, Sticky
+# Style ButtonLaunchers !Title, !Handles, !Borders, WindowListSkip, StaysOnBottom, Sticky
+Style DeskPanel !Title, !Handles, !Borders, WindowListSkip, StaysOnBottom, Sticky
+Style RightPanel !Title, HandleWidth 2, BorderWidth 2, WindowListSkip, StaysOnBottom, Sticky
+Style FvwmTaskBar !Title, !Handles, !Borders, WindowListSkip, StaysOnBottom, Sticky
 
-Style FvwmTaskBar !Borders, !Title, WindowListSkip, StaysOnTop, Sticky
+# Function: ChangeDesk
+#
+# This function is called by FvwmEvent every time the Desk is changed.
+DestroyFunc ChangeDesk
+AddToFunc   ChangeDesk
++ I SendToModule FvwmButtons ChangeButton desk0 Colorset 24
++ I SendToModule FvwmButtons ChangeButton desk1 Colorset 24
++ I SendToModule FvwmButtons ChangeButton desk2 Colorset 24
++ I SendToModule FvwmButtons ChangeButton desk3 Colorset 24
++ I SendToModule FvwmButtons ChangeButton desk$0 Colorset 10
 
-# function for clicking on FvwmIconMan
+# FvwmEvent
+#
+# FvwmEvent is a module that can run an action or function
+# on specific events. This instance changes which desk number
+# is highlighted when the desk is changed.
+DestroyModuleConfig EventNewDesk:*
+*EventNewDesk: PassID
+*EventNewDesk: new_desk ChangeDesk
 
-DestroyFunc IconManClick
-AddToFunc   IconManClick
-+ I ThisWindow (Raised, !Shaded, !Iconic, CurrentPage) Iconify
-+ I TestRc (Match) Break
-+ I ThisWindow (!Raised) Raise
-+ I ThisWindow (Shaded) WindowShade
-+ I ThisWindow (Iconic) Iconify
-+ I ThisWindow (AcceptsFocus) FlipFocus
+# FvwmForm
+#
+# FvwmForm is a module that can be used to build a GUI
+# form. Used with fvwm-menu-desktop-config.fpl.
+# This sets the default colorsets.
+*FvwmFormDefault: Colorset 10
+*FvwmFormDefault: ItemColorset 13
+
+DestroyModuleConfig ButtonLaunchers
+*ButtonLaunchers: Geometry 300x48+4+4
+*ButtonLaunchers: Colorset 13
+*ButtonLaunchers: Columns 6
+*ButtonLaunchers: Rows 1
+*ButtonLaunchers: Frame 1
+*ButtonLaunchers: Font "xft:Sans:Regular:size=9:antialias=True"
+*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/voidtr.png", Action `Exec jgmenu --config-file=/home/doug/.config/jgmenu/jgmenufvwmrc`)
+*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/network-server.png", Action `Exec thunar`)
+*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/terminix.png", Action `Exec urxvt`)
+*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/sublime-text.png" Action `Exec subl3`)
+*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/firefox32.png" Action `Exec firefox`)
+*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/mail.png" Action `Exec thunderbird`)
+
+# FvwmButtons - DeskPanel
+#
+# FvwmButtons is a powerful module that can be used to build custom
+# panels and docks. This config uses FvwmButtons to build the DeskPanel.
+# The panel contains buttons to switch desks, FvwmPager, a system tray,
+# FvwmIconMan (list of running windows), and a clock.
+#
+# Note - To use the system tray you must have "stalonetray" installed.
+DestroyModuleConfig DeskPanel:*
+*DeskPanel: Geometry 120x36-4+4
+*DeskPanel: Colorset 13
+*DeskPanel: Rows 1
+*DeskPanel: Columns 4
+*DeskPanel: Frame 1
+*DeskPanel: Font "xft:IBM Plex Mono:Regular:size=12:antialias=True"
+*DeskPanel: (1x1, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 14, ActiveColorset 11, Frame 0)
+*DeskPanel: (1x1, Id desk1, Title "2", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 11, Frame 0)
+*DeskPanel: (1x1, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 11, Frame 0)
+*DeskPanel: (1x1, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 11, Frame 0)
+
+# default panels
+
+# FvwmButtons - RightPanel
+#
+# FvwmButtons is a powerful module that can be used to build custom
+# panels and docks. This config uses FvwmButtons to build the RightPanel.
+# The panel contains buttons to switch desks, FvwmPager, a system tray,
+# FvwmIconMan (list of running windows), and a clock.
+#
+DestroyModuleConfig RightPanel:*
+*RightPanel: Geometry 160x40-4-4
+*RightPanel: Colorset 24
+*RightPanel: Rows 1
+*RightPanel: Columns 4
+*RightPanel: Frame 1
+*RightPanel: Font "xft:Inconsolata LGC Markup:Bold:size=13:antialias=True:hintstyle=slight"
+*RightPanel: (1x1, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 24, ActiveColorset 12, Frame 1)
+*RightPanel: (1x1, Id desk1, Title "2", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 12, Frame 1)
+*RightPanel: (1x1, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 12, Frame 1)
+*RightPanel: (1x1, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 12, Frame 1)
+
+# Taskbar
 
 # FvwmIconMan for taskbar
 
@@ -23,75 +99,52 @@ DestroyModuleConfig TaskBarIcons: *
 *TaskBarIcons: UseWinList true
 *TaskBarIcons: Resolution global
 *TaskBarIcons: Tips needed
-*TaskBarIcons: Font "xft:Roboto:style=regular:size=11:antialias=True"
+*TaskBarIcons: Font "xft:IBM Plex Sans:style=regular:size=12:antialias=True:autohint=true"
 
 # Manager Size
-*TaskBarIcons: ButtonGeometry 156x28
-*TaskBarIcons: MaxButtonWidth 156
+*TaskBarIcons: ButtonGeometry 160x40
+*TaskBarIcons: MaxButtonWidth 160
 *TaskBarIcons: ManagerGeometry 1x1
 
 # Button Styles
 *TaskBarIcons: DrawIcons false
-*TaskBarIcons: ReliefThickness 0
+*TaskBarIcons: ReliefThickness 1
 *TaskBarIcons: Format "%t"
 *TaskBarIcons: PlainButton up
 *TaskBarIcons: IconButton up
 *TaskBarIcons: FocusButton up
 *TaskBarIcons: IconAndSelectButton up
 *TaskBarIcons: SelectButton up
-# *TaskBarIcons: Background #003c3c
-*TaskBarIcons: Background #2F333B
-*TaskBarIcons: Foreground #FFFFFF
-*TaskBarIcons: PlainColorset 22
-*TaskBarIcons: FocusColorset 23
-*TaskBarIcons: FocusAndSelectColorset 23
-*TaskBarIcons: SelectColorset 23
-*TaskBarIcons: IconAndSelectColorset 23
+#*TaskBarIcons: Background #e7e7e7
+#*TaskBarIcons: Foreground #e7e7e7
+*TaskBarIcons: Colorset 10
+*TaskBarIcons: PlainColorset 10
+*TaskBarIcons: IconColorset 10
+*TaskBarIcons: FocusColorset 11
+*TaskBarIcons: FocusAndSelectColorset 12
+*TaskBarIcons: SelectColorset 12
+*TaskBarIcons: IconAndSelectColorset 12
 
 # Button Actions
 *TaskBarIcons: Action Mouse 1 A sendcommand IconManClick
 *TaskBarIcons: Action Mouse 2 A sendcommand Nop
 *TaskBarIcons: Action Mouse 3 A sendcommand "Menu MenuIconOps Mouse 0 o100"
 
-# FvwmTaskbar
-
 DestroyModuleConfig FvwmTaskBar: *
-*FvwmTaskBar: Geometry 1600x28+0-0
-*FvwmTaskBar: Colorset 22
+*FvwmTaskBar: Geometry 1600x32+0-0
+*FvwmTaskBar: Colorset 10
 *FvwmTaskBar: Frame 0
-*FvwmTaskBar: Font "xft:Roboto Mono:style=regular:size=11:antialias=True"
+*FvwmTaskBar: Font "xft:Source Sans Pro:style=Semibold:size=11:antialias=True:autohint=true"
 *FvwmTaskBar: Rows 1
-*FvwmTaskBar: Columns 1600
+*FvwmTaskBar: Columns 50
 
-# Menu Button
-*FvwmTaskBar: (25x1, Frame 1, Icon "icons/apps/void.png", ActiveColorset 23, Action(Mouse 1) \
-               Menu MenuFvwmRoot Root 0 o100-24p )
-
-# Quick Launch Buttons
-*FvwmTaskBar: (34x1, Frame 1, Icon "icons/apps/terminal2.png", ActiveColorset 23, \
-              Action(Mouse 1) "Exec exec urxvt")
-*FvwmTaskBar: (34x1, Frame 1, Icon "icons/apps/gedit2.png", ActiveColorset 23, \
-               Action(Mouse 1) "Exec exec subl3")
-*FvwmTaskBar: (34x1, Frame 1, Icon "icons/apps/firefox2.png", ActiveColorset 23, \
-               Action(Mouse 1) "Exec exec firefox")
-*FvwmTaskBar: (34x1, Frame 1, Icon "icons/apps/thunderbird2.png", ActiveColorset 23, \
-               Action(Mouse 1) "Exec exec thunderbird")
-
-# Swallow FvwmIconMan TaskBarIcons
-*FvwmTaskBar: (1388x1, Frame 1, Left, Swallow TaskBarIcons 'Module FvwmIconMan TaskBarIcons')
-
-# Time Button with id TaskTime
-*FvwmTaskBar: (76x1, Frame 1, id "TaskTime", ActiveColorset 22, Title "Time")
-
-# start fvwmtaskbar
-
-# Run FvwmTaskBar
-# Module FvwmIconMan FvwmTaskBar
-
-# Set the time to the current time
-PipeRead 'echo "SendToModule FvwmButtons ChangeButton \
-TaskTime Title \"`date +%k%M`\""'
-
-# Schedule the time to update every 10 seconds
-Schedule Periodic 10000 PipeRead 'echo "SendToModule \
-FvwmButtons ChangeButton TaskTime Title \"`date +%k:%M`\""'
+ Menu Button
+#*FvwmTaskBar: (1x1, Frame 1, Icon "icons/apps/void.png", ActiveColorset 10, Action(Mouse 1) Menu MenuFvwmRoot Root 0 o100-24p )
+#*FvwmTaskBar: (1x1, Frame 1, Icon "icons/apps/void.png", ActiveColorset 10, Action(Mouse 1) `Exec jgmenu --config-file=/home/doug/.config/jgmenu/jgmenufvwmrc`)
+#*FvwmTaskBar: (1x1, Frame 1, Icon "icons/apps/terminal2.png", ActiveColorset 10, Action(Mouse 1) `Exec urxvt`)
+#*FvwmTaskBar: (1x1, Frame 1, Icon "icons/apps/gedit2.png", ActiveColorset 10, Action(Mouse 1) `Exec subl3`)
+#*FvwmTaskBar: (1x1, Frame 1, Icon "icons/apps/firefox2.png", ActiveColorset 10, Action(Mouse 1) `Exec firefox`)
+#*FvwmTaskBar: (1x1, Frame 1, Icon "icons/apps/thunderbird2.png", ActiveColorset 10, Action(Mouse 1) `Exec thunderbird`)
+#*FvwmTaskBar: (6x1, Frame 1, Left, Swallow ButtonLaunchers 'Module FvwmButtons ButtonLaunchers')
+*FvwmTaskBar: (50x1, Frame 0, Left, Swallow TaskBarIcons 'Module FvwmIconMan TaskBarIcons')
+# *FvwmTaskBar: (5x1, Frame 0, Left, Swallow DeskPanel 'Module FvwmButtons DeskPanel')

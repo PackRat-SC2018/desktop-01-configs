@@ -1,47 +1,63 @@
 # jgmenurc
 
-# csv_cmd        = xdg
+stay_alive           = 0
+#hide_on_startup     = 0
+csv_cmd              = pmenu
+tint2_look           = 1
+at_pointer           = 1
+terminal_exec        = urxvt
+terminal_args        = -e
+#monitor             = 0
 
-at_pointer      = 0
-stay_alive      = 0
-multi_window    = 1
-tint2_look      = 0
+menu_margin_x       = 12
+menu_margin_y       = 12
+menu_width           = 200
+menu_padding_top     = 4
+menu_padding_right   = 4
+menu_padding_bottom  = 4
+menu_padding_left    = 4
+menu_radius          = 4
+menu_border          = 1
+menu_halign          = left
+menu_valign          = top
+#sub_spacing         = 1
+#sub_padding_top     = -1
+#sub_padding_right   = -1
+#sub_padding_bottom  = -1
+#sub_padding_left    = -1
+sub_hover_action     = 1
 
-menu_halign     = left
-menu_valign     = top
-menu_margin_x   = 24
-menu_margin_y   = 32
+item_margin_x       = 4
+item_margin_y        = 4
+item_height          = 28
+item_padding_x       = 2
+item_radius          = 2
+item_border          = 1
+#item_halign         = left
 
-menu_width      = 200
-menu_radius     = 0
-menu_border     = 1
+sep_height          = 2
 
-menu_padding_top    = 5
-menu_padding_right  = 2
-menu_padding_bottom = 5
-menu_padding_left   = 2
+font                = San Francisco Display Regular 14px
+font_fallback       = xtg
+icon_size           = 0
+icon_text_spacing   = 6
+icon_theme          = Paper
+#icon_theme_fallback = xtg
 
-item_height      = 30
-item_padding_x   = 4
-item_margin_x    = 2
-item_margin_y    = 2
-item_radius      = 0
-item_border      = 0
-sep_height       = 5
+arrow_string        = 
+arrow_width         = 15
 
-icon_theme       = Vibrantly-Simple-Dark-Graphite
-# icon_theme       = Obsidian-Sand-SemiLight
-icon_size        = 24
-font             = Ubuntu 12px
+color_menu_bg       = #3D3C3B 80
+color_menu_fg       = #D4D4D4 80
+color_menu_border   = #3D3C3B 8
 
-sub_hover_action = 1
-terminal_exec    = urxvt
-terminal_args    = -e
+color_norm_bg       = #3D3C3B 00
+color_norm_fg       = #D4D4D4 100
 
-color_menu_bg    = #212121 95
-color_menu_fg    = #8fa1b3 100
-color_norm_bg    = #2b303b 0
-color_norm_fg    = #8fa1b3 100
-color_sel_bg     = #8fa1b3 60
-color_sel_fg     = #2b303b 100
-color_sep_fg     = #8fa1b3 40
+color_sel_bg        = #212120 90
+color_sel_fg        = #FEFEFE 100
+color_sel_border    = #3D3C3B 8
+
+color_sep_fg 		= #3E3E3E 30
+
+#csv_name_format = %n (%g)

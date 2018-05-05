@@ -1,10 +1,12 @@
 DestroyDecor AltDecor
 AddToDecor   AltDecor
 
-Style * !Title
-Style * BorderWidth 7, HandleWidth 7
-BorderStyle Simple Flat
+# Style * !Title
+Style * BorderWidth 1, HandleWidth 1
+BorderStyle Simple -- Flat
 # BorderStyle -- HiddenHandles !Inset
+Style * Colorset 15
+Style * HilightColorset 16
 
 #######
 # 6: Window Decor
@@ -16,13 +18,13 @@ BorderStyle Simple Flat
 #   4 - Maximize
 #   6 - Minimize
 ###########
-TitleStyle Centered Height 22 -- Flat
-ButtonStyle All -- Flat
+
+TitleStyle Centered Height 20 -- Raised
+ButtonStyle All -- Raised
 
 ButtonStyle 1 Vector 5 50x50@3 55x50@3 55x55@3 50x55@3 50x50@3
 ButtonStyle 2 Vector 4 40x40@3 60x60@3 65x35@4 40x60@3
-ButtonStyle 4 Vector 8 40x60@3 40x40@3 60x40@3 60x55@3 60x60@4 40x60@3 \
-                 40x45@4 60x45@3
+ButtonStyle 4 Vector 8 40x60@3 40x40@3 60x40@3 60x55@3 60x60@4 40x60@3 40x45@4 60x45@3
 ButtonStyle 6 Vector 5 60x60@3 60x50@3 40x50@3 40x60@3 55x60@3
 
 ButtonStyle All - Clear
@@ -30,4 +32,4 @@ ButtonStyle 1 - MwmDecorMenu
 ButtonStyle 4 - MwmDecorMax
 ButtonStyle 6 - MwmDecorMin
 
-UseDecor AltDecor
+# UseDecor AltDecor

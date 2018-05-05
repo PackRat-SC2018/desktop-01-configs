@@ -60,19 +60,29 @@ Silent Key Tab A M WindowList Root c c NoDeskSort, SelectOnRelease Meta_L
 
 
 # Scroll Pages
-#Key	Right	A	CM	Scroll +100 0
-#Key	Left	A	CM	Scroll -100 0
-#Key	Up	A	CM	Scroll +0 -100
-#Key	Down	A	CM	Scroll +0 +100
+Key	Right	A	CM	Scroll +100 0
+Key	Left	A	CM	Scroll -100 0
+Key	Up	A	CM	Scroll +0 -100
+Key	Down	A	CM	Scroll +0 +100
+
+Key	1	A	4	GotoPage 0 0
+Key	2	A	4	GotoPage 1 0
+Key	3	A	4	GotoPage 2 0
+Key	4	A	4	GotoPage 0 1
+Key	5	A	4	GotoPage 1 1
+Key	6	A	4	GotoPage 2 1
+Key	7	A	4	GotoPage 0 2
+Key	8	A	4	GotoPage 1 2
+Key	9	A	4	GotoPage 2 2
 
 # Scroll Desktops
-Key	Right	A	CM	GotoDesk	1 0
-Key	Left	A	CM	GotoDesk	-1 0
+#Key	Right	A	CM	GotoDesk	1 0
+#Key	Left	A	CM	GotoDesk	-1 0
 
-Key 1		A	4 GotoDesk 0 0
-Key 2		A	4 GotoDesk 0 1
-Key 3		A	4 GotoDesk 0 2
-Key 4		A	4 GotoDesk 0 3
+#Key 1		A	4 GotoDesk 0 0
+#Key 2		A	4 GotoDesk 0 1
+#Key 3		A	4 GotoDesk 0 2
+#Key 4		A	4 GotoDesk 0 3
 
 Key	q	A	4	Restart
 Key	q	A	S4	Exec exec session-exit

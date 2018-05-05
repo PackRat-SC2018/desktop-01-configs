@@ -22,7 +22,7 @@ print_info() {
     info "Icons" icons
 #    info "Terminal" term
 #    info "Terminal Font" term_font
-    info "CPU" cpu
+#    info "CPU" cpu
 #    info "GPU" gpu
     info "Memory" memory
 
@@ -560,7 +560,7 @@ image_backend="w3m"
 #       In ascii mode, distro ascii art will be used and in an image mode, your
 #       wallpaper will be used.
 # image_source="auto"
-image_source="/home/doug/.config/neofetch/pyramid.png"
+image_source="/home/doug/.config/neofetch/copter.jpg"
 
 # Ascii Options
 

@@ -5,7 +5,7 @@
 # terminal emulator
 # super + Return
 alt + F1
-	st
+      urxvt	
 
 # program launcher
 # super + space
@@ -25,7 +25,7 @@ super + ctrl + l
 	subl3
 
 Menu
-	pcmanfm
+	spacefm
 
 super + ctrl + g
 	gimp

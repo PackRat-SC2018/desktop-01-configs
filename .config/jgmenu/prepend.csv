@@ -5,5 +5,4 @@ File Manager,thunar,folder-open
 Web Browser,firefox,firefox
 Mail,thunderbird,thunderbird
 Gimp,gimp,gimp
-bookmarks,^pipe(/home/doug/bin/ff-bookmarks),web-browser
 ^sep()

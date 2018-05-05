@@ -399,6 +399,7 @@
   [Layer]	{8}
   [Alpha]	{255}
 [end]
+[group]  (workspace=[current])
 [app] (name=urxvt) (class=URxvt)
   [Dimensions]	{63% 68%}
   [Position]	(UPPERLEFT)	{18% 16%}
@@ -527,19 +528,6 @@
   [Layer]	{8}
   [Alpha]	{255}
 [end]
-[app] (name=st-256color) (class=st-256color)
-  [Dimensions]	{80% 90%}
-  [Position]	(UPPERLEFT)	{10% 5%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Close]	{yes}
-  [Alpha]	{255}
-[end]
 [app] (name=Opera) (class=Opera)
   [Maximized]	{yes}
 [end]
@@ -565,6 +553,17 @@
 [app] (name=qpdfview) (class=qpdfview)
   [Dimensions]	{68% 93%}
   [Position]	(UPPERLEFT)	{16% 3%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=st-256color) (class=st-256color)
+  [Position]	(CENTER)	{0 0}
   [Shaded]	{no}
   [Deco]	{0x67f}
   [Sticky]	{no}

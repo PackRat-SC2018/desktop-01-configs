@@ -209,7 +209,7 @@ AddToFunc   AppThumbnail
 + I PipeRead "echo SetEnv Icon-$[w.id] `fns-find-icon -i $[w.id]`"
 + I PipeRead 'test ! -d "${FVWM_USERDIR}/temp" && mkdir "${FVWM_USERDIR}/temp"'
 + I ThisWindow (!Shaded, Iconifiable, !Iconic) PipeRead \
-    "sleep 0.001; xwd -silent -id $[w.id] | convert -scale 100x56! -frame 1x1 \
+    "sleep 0.001; xwd -silent -id $[w.id] | convert -scale 96x54! -frame 1x1 \
     -mattecolor black -quality 0 xwd:- png:$[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png \
     && echo WindowStyle IconOverride, Icon $[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png \
     || echo Nop"

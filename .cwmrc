@@ -1,0 +1,153 @@
+# .cwmrc created 1-11-2018
+#
+borderwidth 2
+
+fontname "Inconsolata LGC:size=11:antialias=true:hintstyle=slight"
+color activeborder "#1B662F"
+color inactiveborder "#202020"
+color groupborder "#008000"
+
+# menu
+color menubg "#292929"
+color font "#FCFCFC"
+color selfont "#1A2233"
+color menufg "#FCFCFC"
+
+color urgencyborder #A52A2A
+color ungroupborder "#1E90FF"
+
+ignore XMMS
+ignore xwi
+ignore xapm
+ignore xclock
+ignore tint2
+ignore conky
+ignore i3status
+ignore dzen2
+ignore lemonbar
+ignore polybar
+
+# command name path
+#   Every name entry is shown in the application menu.	 When
+#   selected, the defined path is executed with execve(2).
+
+command Terminal st
+command Editor geany
+command "File Manager" thunar
+command Firefox firefox
+command Thunderbird thunderbird
+command Gimp gimp
+
+# gap top bottom left right
+gap 24 0 0 0
+
+
+moveamount 5
+
+snapdist 0
+
+sticky no
+
+
+# unbind-key key
+#	     Unbind function bound to key.  A special key keyword “all” can be
+#	     used to unbind all keys.
+
+#     unbind-mouse button
+#	     Unbind function bound to button.  A special button keyword “all”
+#	     can be used to unbind all buttons.
+
+unbind-key all
+
+command term st
+command lock slock
+                           
+# BIND FUNCTION LIST
+bind-key 4-q        restart
+bind-key S4-e       quit
+bind-key S4-q       "rofi-logout"
+bind-key M-F1       terminal
+bind-key M-F2       "rofi -show"
+bind-key MS-l       lock
+bind-key M-space    menu-window
+bind-key SM-space   menu-window-hidden
+# bind-key CS4-space  menu-cmd
+# bind-key          menu-group		      Launch group search menu.
+# bind-key 4-space    menu-exec
+bind-key 4-space    "jgrootmenu"	      
+#     menu-exec-wm	      Launch “exec WindowManager” menu.
+#     menu-ssh		      Launch “ssh” menu.
+#     group-toggle-[n]	      Toggle visibility of group n, where n is 1-9.
+#     group-only-[n]	      Show only group n, where n is 1-9, hiding other groups.
+#     group-toggle-all	      Toggle visibility of all groups.
+#     window-group	      Toggle group membership of current window.
+#     window-movetogroup-[n]   Hide current window from display and move to
+#			      group n, where n is 1-9.
+bind-key 4-Tab     group-cycle
+bind-key S4-Tab    group-rcycle
+bind-key M-Tab     window-cycle
+bind-key SM-Tab    window-rcycle
+bind-key CM-Tab    window-cycle-ingroup
+bind-key CSM-Tab   window-rcycle-ingroup
+bind-key M-F4      window-delete
+bind-key M-F7      window-hide
+bind-key M-F6      window-lower
+bind-key SM-F6     window-raise
+#     window-menu-label	      Label current window.
+#     window-freeze	      Freeze current window geometry.
+#     window-stick	      Stick current window to all groups (same as assigning to nogroup).
+bind-key M-F11     window-fullscreen
+bind-key M-F10     window-maximize
+bind-key S4-v      window-vmaximize
+bind-key S4-h      window-hmaximize
+bind-key CM-h      window-htile
+bind-key CM-v      window-vtile
+
+#     window-move	      Move current window.
+#     window-resize	      Resize current window.
+bind-key SM-Up      window-move-up
+bind-key SM-Down    window-move-down
+bind-key SM-Right   window-move-right
+bind-key SM-Left    window-move-left
+bind-key CSM-Up     window-move-up-big
+bind-key CSM-Down   window-move-down-big
+bind-key CSM-Left   window-move-right-big
+bind-key CSM-Right  window-move-left-big
+bind-key 4S-Up      window-resize-up
+bind-key 4S-Down    window-resize-down
+bind-key 4S-Right   window-resize-right
+bind-key 4S-Left    window-resize-left
+bind-key CS4-Up     window-resize-up-big
+bind-key CS4-Down   window-resize-down-big
+bind-key CS4-Right  window-resize-right-big
+bind-key CS4-Left   window-resize-left-big
+#     pointer-move-up	      Move pointer moveamount pixels up.
+#     pointer-move-down	      Move pointer moveamount pixels down.
+#     pointer-move-right	      Move pointer moveamount pixels right.
+#     pointer-move-left	      Move pointer moveamount pixels left.
+#     pointer-move-up-big      Move pointer 10 times moveamount pixels up.
+#     pointer-move-down-big    Move pointer 10 times moveamount pixels down.
+#     pointer-move-right-big   Move pointer 10 times moveamount pixels right.
+#     pointer-move-left-big    Move pointer 10 times moveamount pixels left.
+
+# Apps
+bind-key M-F3       "sakura"
+bind-key C4-l       "geany"
+bind-key C4-g       "gimp"
+bind-key C4-p       "libreoffice --calc"
+bind-key C4-o       "libreoffice --writer"
+bind-key Menu       "thunar"
+bind-key 4-F13      "thunderbird"
+bind-key XF86HomePage    "firefox"
+bind-key XF86AudioRaiseVolume    "amixer -q sset Master 5%+ unmute"
+bind-key XF86AudioLowerVolume    "amixer -q sset Master 5%- unmute"
+bind-key XF86AudioMute    "amixer sset Master,0 toggle"
+
+# Mouse bindings
+unbind-mouse M-1
+unbind-mouse M-2
+unbind-mouse M-3
+
+bind-mouse M-1          window-move
+bind-mouse M-2          window-lower
+bind-mouse M-3          window-resize

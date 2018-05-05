@@ -20,11 +20,6 @@ brasero
 jgmenu_run
 rofi-logout
 yad --fonts
-sakura
-xfce4-terminal
-uxterm
-xterm
-lxappearance
 filezilla
 opera
 gcolor2
@@ -33,8 +28,13 @@ xfburn
 yad --font
 xboard
 xfce4-screenshooter
-compton
 pcmanfm
-st
-urxvt
 geany
+uxterm
+urxvt
+xterm
+lxappearance
+st
+compton
+xfce4-terminal
+sakura

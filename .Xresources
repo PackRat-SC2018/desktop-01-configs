@@ -52,16 +52,14 @@ Xft.autohint: 0
 
 ! XTerm
 !==============================================================================
+XTerm.termName:           xterm-256color
 XTerm*geometry:           128x32
 XTerm*loginShell:         false
-XTerm*font:               -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
-XTerm*boldFont:           -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
-!XTerm*font:                xft:Ttyp0:style=Regular:size=14:antialias=false:autohint=true:hinting=slight
-!XTerm*boldFont:            xft:Ttyp0:style=Regular:size=14:antialias=false:autohint=true:hinting=slight
-!XTerm.faceName:           Ttyp0 Bold
-!XTerm*faceSize:           14
+!XTerm*font:               -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
+!XTerm*boldFont:           -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
+XTerm*faceName:           Hack:size=11:antialias=false:autohint=true
 XTerm*dynamicColors:      true
-!XTerm*utf8:               2
+XTerm*utf8:               1
 XTerm*eightBitInput:      true
 XTerm*saveLines:          2048
 XTerm*scrollTtyKeypress:  true
@@ -74,19 +72,18 @@ XTerm*toolBar:            false
 XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 ! for emacs
 XTerm*metaSendsEscape: true
+!XTerm*iconName:    /usr/share/pixmaps/terminal.png
 
 ! UXTerm
 !======================================================================================
+UXTerm.termName:           xterm-256color
 UXTerm*geometry:           80x24
 UXTerm*loginShell:         false
-UXTerm*font:               -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
-UXTerm*boldFont:           -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
-!UXTerm*font:                xft:Perfect DOS VGA 437:style=Regular:size=12:antialias=false:autohint=true:hinting=slight
-!UXTerm*boldFont:            xft:Perfect DOS VGA 437:style=Regular:size=12:antialias=false:autohint=true:hinting=slight
-!UXTerm.faceName:           Ttyp0 Regular
-!UXTerm*faceSize:           12
+!UXTerm*font:               -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
+!UXTerm*boldFont:           -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
+UXTerm*faceName:            Perfect DOS VGA:size=11:antialias=false:autohint=true
 UXTerm*dynamicColors:      true
-UXTerm*utf8:               2
+UXTerm*utf8:               1
 UXTerm*eightBitInput:      true
 UXTerm*saveLines:          2048
 UXTerm*scrollTtyKeypress:  true
@@ -99,6 +96,7 @@ UXTerm*toolBar:            false
 UXTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 ! for emacs
 UXTerm*metaSendsEscape: true
+!UXTerm*iconName:    /usr/share/pixmaps/terminal.png
 
 ! URxvt
 !==============================================================================
