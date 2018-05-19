@@ -6,39 +6,39 @@
 # ID 1
 rounded = 0
 border_width = 0
-background_color = #212121 100
-border_color = #2E2E2E 100
+background_color = #232323 92
+border_color = #2E2E2E 92
 
 # Background definitions
 # ID 2
 rounded = 1
 border_width = 1
-background_color = #2A2A2A 100
-border_color = #2A2A2A 100
+background_color = #2A2A2A 92
+border_color = #2A2A2A 92
 
 # ID 3
 rounded = 1
 border_width = 1
-background_color = #3D3D3D 100
-border_color = #3D3D3D 100
+background_color = #9F9F9F 12
+border_color = #9F9F9F 12
 
 # ID 4
 rounded = 1
 border_width = 1
-background_color = #5C5C58 100
+background_color = #5C5C58 92
 border_color = #636363 80
 
 # ID 5
 rounded = 1
 border_width = 1
-background_color = #A43949 100
-border_color = #000000 100
+background_color = #A43949 92
+border_color = #000000 92
 
 # ID 6
 rounded = 1
 border_width = 1
-background_color = #E0E0D5 100
-border_color = #050314 100
+background_color = #E0E0D5 92
+border_color = #050314 92
 
 # separators define all used
 separator=new
@@ -85,7 +85,8 @@ separator_padding = 2 0
 
 # buttons P
 button = new
-button_icon = /home/doug/.config/tint2/voiddark.png
+#button_icon = /home/doug/.config/tint2/voiddark.png
+button_icon = /usr/share/icons/void-tr.png
 #button_text =
 button_tooltip = Application Menu
 #button_font =
@@ -94,9 +95,9 @@ button_background_id = 0
 button_centered = 1
 button_padding = 1 1 2
 button_max_icon_size = 64
-button_lclick_command = pmenu.py
+button_lclick_command = jgmenu --config-file=/home/doug/.config/jgmenu/jgmenutint2rc
 # button_mclick_command = text
-button_rclick_command = session-exit
+button_rclick_command = void-logout
 #button_uwheel_command = text
 #button_dwheel_command = text
 
@@ -122,7 +123,7 @@ strut_policy = follow_size
 # Taskbar
 taskbar_mode = multi_desktop
 taskbar_padding = 1 1 2
-taskbar_background_id = 2
+taskbar_background_id = 0
 taskbar_active_background_id = 3
 
 # Tasks
@@ -189,14 +190,14 @@ mouse_scroll_up = toggle
 mouse_scroll_down = iconify
 
 # Battery
-battery = 1
-battery_hide = never
-battery_low_status = 25
-battery_low_cmd = notify-send "battery low"
-battery_full_cmd = notify-send "battery full"
-bat1_font = Office Code Pro Regular 11
-bat2_font = Sans Regular 0
-battery_font_color = #FFFFFF 100
+#battery = 1
+#battery_hide = never
+#battery_low_status = 25
+#battery_low_cmd = notify-send "battery low"
+#battery_full_cmd = notify-send "battery full"
+#bat1_font = Office Code Pro Regular 11
+#bat2_font = Sans Regular 0
+#battery_font_color = #FFFFFF 100
 #
 #==============================================#
 #

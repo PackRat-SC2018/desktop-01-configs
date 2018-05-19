@@ -1,40 +1,14 @@
-rofi -show run
-gimp
-xfce4-termonal
-xfce4-terminal --drop-down
-skippy-xd
-yad --font --class FontDisplay
-yad --color --class ColorPicker
-galculator
-xfontsel
-mpv --player-operation-mode=pseudo-gui
-brave
-yad --color
-libreoffice --impress
-connman --gtk
-connman-gtk
-xfce4-appfinder
-urxvt -docapp
-geanny
-brasero
-jgmenu_run
-rofi-logout
-yad --fonts
-filezilla
-opera
-gcolor2
-urxvt -blr 4
-xfburn
-yad --font
-xboard
-xfce4-screenshooter
-pcmanfm
-geany
-uxterm
-urxvt
-xterm
-lxappearance
-st
-compton
-xfce4-terminal
+firefox
+thunderbird
+subl3
+thunar
 sakura
+xterm
+urxvt
+geany
+pcmanfm
+lxappearance
+yad --font
+yad --color
+tint2
+compton

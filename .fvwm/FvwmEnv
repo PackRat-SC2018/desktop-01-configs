@@ -1,0 +1,96 @@
+# Margins LRTB
+EwmhBaseStruts 4 4 4 4
+
+#ignore capslock, numlock, scroll lock
+IgnoreModifiers L25
+
+Emulate FVWM
+# Emulate Mwm
+DefaultLayers 0 4 6
+EWMHUseStackingOrderHints
+EWMHIconicStateWorkaround
+ClickTime 350
+EdgeScroll 0 0
+EdgeThickness 0
+EdgeResistance 800 20
+EdgeCommand Left nop
+# OpaqueMoveSize -1
+OpaqueMoveSize 7
+SnapAttraction 3 All
+SnapGrid 2 2
+XorValue 55555
+HideGeometryWindow Move, Resize
+BugOpts FlickeringMoveWorkaround True
+SetAnimation  10  -.01 0 .01 .03 .08 .18 .3 .45 .6 .75 .85 .90 .94 .97 .99 1.0
+BusyCursor DynamicMenu True, Read True
+
+# Focus Style
+# Style * SloppyFocus
+# Style * MouseFocusClickRaises
+# Style * FocusFollowsMouse
+Style * ClickToFocus
+
+ColorMapFocus  FollowsMouse
+
+Style * ResizeOpaque
+Style emacs ResizeOutline
+
+## Cursor styles
+
+# clean style
+CursorStyle root left_ptr
+CursorStyle default left_ptr 
+CursorStyle position left_ptr
+CursorStyle sys left_ptr 
+CursorStyle menu left_ptr
+CursorStyle title left_ptr
+CursorStyle resize fleur
+CursorStyle stroke cross
+CursorStyle select draped_box
+CursorStyle destroy pirate	#000000 white
+
+# not so clean
+#CursorStyle ROOT		left_ptr		#000000	white
+#CursorStyle TITLE		top_left_arrow		#000000	white
+#CursorStyle DEFAULT		top_left_arrow		#000000	white
+#CursorStyle SYS			hand2			#000000	white
+#CursorStyle MENU		top_left_arrow		#000000	white
+#CursorStyle POSITION		top_left_corner		#000000	white
+#CursorStyle MOVE		fleur			#000000	white
+#CursorStyle RESIZE		sizing			#000000	white
+#CursorStyle WAIT		watch			#000000	white
+#CursorStyle SELECT		crosshair		#000000	white
+#CursorStyle DESTROY		pirate			#000000	white
+#CursorStyle TOP			top_side		#000000	white
+#CursorStyle RIGHT		right_side		#000000	white
+#CursorStyle BOTTOM		bottom_side		#000000	white
+#CursorStyle LEFT		left_side		#000000	white
+#CursorStyle TOP_LEFT		top_left_corner		#000000	white
+#CursorStyle TOP_RIGHT		top_right_corner	#000000	white
+#CursorStyle BOTTOM_LEFT		bottom_left_corner	#000000	white
+#CursorStyle BOTTOM_RIGHT	bottom_right_corner	#000000	white
+#CursorStyle TOP_EDGE		top_side		#000000	white
+#CursorStyle RIGHT_EDGE		right_side		#000000	white
+#CursorStyle BOTTOM_EDGE		bottom_side		#000000	white
+#CursorStyle LEFT_EDGE		left_side		#000000	white
+#CursorStyle STROKE		plus			#000000	white
+
+Style * IndexedWindowName
+Style * TileCascadePlacement
+Style * DecorateTransient
+Style * WindowShadeSteps 20, WindowShadeScrolls
+Style * FPGrabFocus
+Style * FPReleaseFocus
+Style * FPGrabFocusTransient
+Style * FPReleaseFocusTransient
+Style * !AllowMaximizeFixedSize
+Style * IndexedIconName
+Style * HintOverride
+Style * ResizeHintOverride
+Style * MWMFunctions
+Style * MWMDecor
+Style * HintOverride
+Style * OLDecor
+Style * FvwmButtons, FvwmBorder
+Style * !UsePPosition
+Style * MinOverlapPlacement

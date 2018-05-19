@@ -19,30 +19,24 @@
       [exec] (Run) {dmenu_run}
       [exec] (Menu) {rofi -show}
 [separator]
+      [exec] (Terminal) {urxvt}
       [exec] (Sakura) {sakura}
       [exec] (Tmux Session) {xterm -e tmux}
-[submenu] (Terminals)
-      [exec] (Sakura) {sakura}
-      [exec] (Sakura Tabbed) {sakura -n 3}
-      [exec] (XTerm) {xterm}
-      [exec] (UXTerm) {uxterm}
-      [exec] (Simple Terminal) {st}
-      [exec] (URxvt) {urxvt}
-      [exec] (URxvt Tabbed) {urxvt -pe tabbed} 
-      [exec] (URxvt - transparent) {urxvt -depth 32 -bg [60]#060606 -fg "#E6E6E6" -blr 5x5}
-[end]]
       [exec] (Sublime) {wmctrl -a subl3 || subl3}
-      [exec] (Geany) {wmctrl -a geany || geany}
       [exec] (File Manager) {thunar}
 [separator]      
       [exec] (Firefox) {wmctrl -a firefox || firefox}
       [exec] (Thunderbird) {wmctrl -a thunderbird || thunderbird}
       [exec] (FileZilla) {filezilla}
+      [exec] (Transmission) {transmission-gtk}
       [exec] (HexChat) {hexchat}
 [separator]
 [submenu] (Office)
       [exec] (Writer) {libreoffice --writer}
       [exec] (Calc) {libreoffice --calc}
+      [exec] (Impress) {libreoffice --Impress}
+      [exec] (Draw) {libreoffice --draw}
+      [exec] (Math) {libreoffice --math}
       [exec] (Xcalc) {xcalc}
 [end]
 [submenu] (Graphics)
@@ -55,7 +49,6 @@
 [end]
 [submenu] (Media)
       [exec] (Audacious) {audacious}
-      [exec] (Vlc) {vlc}
       [exec] (mpv) {mpv --player-operation-mode=pseudo-gui}
       [exec] (Asunder) {asunder}
       [exec] (Xfburn) {xfburn}

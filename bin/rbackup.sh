@@ -6,7 +6,7 @@
 #config
 OPT="-arPh"
 SRC="/home/doug/"
-DEST="/mnt/Willow/bandit/"
+DEST="/mnt/willow/backups/"
 NAME="BANDIT-01"
 SPACE="."
 DATE=`date "+%F_%s"`

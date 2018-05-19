@@ -1,100 +1,70 @@
-Read AltDecor
-Read AltDecor
-killodule fvwmpager
-killmodule fvwmpager
+Read Functions
+Read Mouse
+Read Mouse
+Module FvwmButtons ButtonLaunchers
+Module FvwmButtons ButtonLaunchers
+Module FvwmButtons ButtonLaunchers
+Module FvwmButtons ButtonLaunchers
+Read FvwmEnv
+Style * OLDecor
+Style * ResizeOpaque
+Style * emacs ResizeOutline
+Style emacs ResizeOutline
+Read FvwmEnv
+Read DeskTopId
+Module FvwmButtons DeskTopId
+Read DeskTopId
+KillModule FvwmButtons DeskTopId
+KillModule FvwmButtons LeftPanel
+Module FvwmButtons DeskTopId
+KillModule FvwmButtons DeskTopId
+Read DeskTopId
+Module FvwmButtons DeskTopId
+KillModule FvwmButtons DeskTopId
+Read DeskTopId
+Module FvwmButtons DeskTopId
+Module FvwmPager 0 3
+Module FvwmPager
+Style FvwmPager Sticky !Title
+KillModule FvwmPager
+Module FvwmPager
+Module FvwmPager
+KillModule FvwmPager
+Module FvwmPager
+Module FvwmPager
+KillModule FvwmPager
+Module FvwmPager *
 KillModule FvwmPager
 Module FvwmPager 0 3
 KillModule FvwmPager
 Module FvwmPager 0 3
+KillModule FvwmPager 0 3
+KillModule FvwmPager
 Module FvwmPager 0 3
 Module FvwmPager 0 3
 Module FvwmPager 0 3
-Module FvwmIconMan
 Module FvwmPager 0 3
-Module FvwmIconMan
 Module FvwmPager 0 3
-Module FvwmIconMan
-Module FvwmIconMan
+Module FvwmPager 0 3
+cd /usr/share/fvwm
+FvwmScript FvwmScript-DateTime
+FvwmScript FvwmScript-DateTime -geometry -2+2
+FvwmScript FvwmScript-DateTime
+FvwmScript FvwmScript-DateTime
+FvwmScript FvwmScript-DateTime
+FvwmScript FvwmScript-DateTime
+Style "*" MWMBorder, MWMButtons, MWMFunctions, MWMDecor, HintOverride
+Style MWMBorder
+Read 4DwmDecor
 Read AltDecor
-Read AltDecor
-Read AltDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
+BorderStyle --Flat
 BorderStyle Flat
-Emulate Mwm
-Emulate Mwm
-Read 4DwmDecor
-Titlestyle Raised
-+Titlestyle Raised
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
-Read 4DwmDecor
+BorderStyle Simple -- Flat
+Read AltDecor
 Read 4DwmDecor
 Read AltDecor
-Read FvwmDecor
-Read FvwmDecor
-Read FvwmDecor
-Read FvwmDecor
-Read defaultcolor
-Read defaultcolor
-Module FvwmButtons FvwmTaskBar
-Module FvwmButtons FvwmTaskBar
-Module FvwmButtons FvwmTaskBar
-Module FvwmButtons FvwmTaskBar
-Module FvwmButtons FvwmTaskBar
-Module FvwmButtons FvwmTaskBar
-Module FvwmPager 0 3
-GotoPage -1 -1
-GotoPage -0 0
-GotoPage -0 -0
-GotoPage -1 1
-GotoPage 2 1
-GotoPage 3 1
-GotoPage +1p 
-GotoPage +1p 0p
-GotoPage 2 0
-GotoPage 1 2
-GotoPage 0 1
-GotoPage 0 0
-GotoPage 0 1
-GotoPage 1 0
-GotoPage 2 0
-GotoPage 0 1
-GotoPage 0 2
-GotoPage 1 1
-GotoPage 1 2
-GotoPage 2 1
-GotoPage 1 2
-Read Keys
+Read AltDecor
+Read AltDecor
+Read AltDecor
+Read AltDecor
+Read AltDecor

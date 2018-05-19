@@ -33,5 +33,3 @@ XMB
 XPM
 
 ------------------------------------------
-Keys: Invalid key/modifier on line 117): XF86AudioPrev :Exec playerctl previous
-Keys: Invalid key/modifier on line 118): XF86AudioNext :Exec playerctl next

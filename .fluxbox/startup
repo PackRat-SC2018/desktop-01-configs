@@ -4,31 +4,21 @@
 #
 # Lines starting with a '#' are ignored.
 
-# kill apps from other wm
-pkill -x conky &
-pkill -x polybar &
-pkill -x i3status &
-pkill -x sxhkd &
-
 # Change your keymap:
 xmodmap "$HOME/.Xmodmap"
 xrdb -l "$HOME/.Xresources"
-numlockx &
-
-# prevent screen from going blank on idle
-# xset s off -dpms
+fbsetroot -solid "#333366" &
+numlockx on
 
 # Applications you want to run with fluxbox.
 # MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
 #
-# set background and wallpaper
-fbsetroot -solid "#333366" &
+# set wallpaper
+#(sleep 2s && fbsetbg -c $HOME/wallpaper/falcon.jpg) &
 (sleep 2s && fbsetbg -c -r "$HOME/wallpaper/") &
 
 # 3rd party apps
 # (sleep 2s && conky -dc $HOME/.conky10fboxrc) &
-# (sleep 2s && wicd-gtk --tray) &
-# (sleep 2s && nm-applet) &
 # (sleep 2s && connman-gtk --tray) &
 (sleep 2s && polybar fluxbox-bar) &
 

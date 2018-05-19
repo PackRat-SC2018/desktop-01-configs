@@ -1,4 +1,4 @@
 ^sep()
 Lock,slock,system-lock-screen
 Suspend,zzz,video-display
-Exit Session,void-logout,/usr/share/void-artwork/void-transparent.png
+Exit Session,void-logout,exit

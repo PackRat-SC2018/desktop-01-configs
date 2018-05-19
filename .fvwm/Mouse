@@ -29,8 +29,8 @@
 # but you can change that if it annoys you.
 #################
 
-SetEnv fvwm_thumbx 100
-SetEnv fvwm_thumby 56
+SetEnv fvwm_thumbx 107
+SetEnv fvwm_thumby 60
 
 #####
 # Name:     Thumbnail
@@ -48,7 +48,7 @@ AddToFunc IconThumb
 + I Raise
 + I PipeRead "xwd -silent -id $[w.id] | convert -scale '$[fvwm_thumbx]x$[fvwm_thumby]!' -frame 1x1 \
     -mattecolor black -quality 0 xwd:- png:$[HOME]/.fvwm/icon.tmp.$[w.id].png \
-    && echo WindowStyle IconOverride, Icon $[HOME]/.fvwm/icon.tmp.$[w.id].png, StaysOnBottom \
+    && echo WindowStyle IconOverride, Icon $[HOME]/.fvwm/icon.tmp.$[w.id].png \
     || echo Nop"
 + I Iconify
 
@@ -165,51 +165,89 @@ AddToFunc   4dwmRestoreDesktop
 + I All (CurrentPage, Iconic, State 1) Iconify off
 + I All (CurrentPage, State 1) ThisWindow State 1 False
 
-########## default mouse bindings:
+# define iconbox
 
-#		root window:
-Mouse 1 R       A       Menu MenuFvwmRoot Nop
-Mouse 2 R       A       Menu WindowOptionsMenu Nop
-Mouse 3 R       A       WindowList
+#======FvwmIconBox specs [l t r b]===============#
 
-#		buttons
-# mouse 1
-Mouse 1	1	A	Menu WindowOptionsMenu Close
-Mouse 1	3	A	WindowShade
-Mouse 1	2	A	Close
-Mouse 1 4	A	FvwmMaximize
-# Mouse 1	6	A	Iconify
-# Mouse 1 6	A	IconThumb
-Mouse 1		6	A	AppThumbnail
+Style * StickyIcon
+Style * IconTitleRelief 0
+Style * IconBackgroundRelief 0
+Style * IconBackgroundPadding 1
+Style * IconSize 56 56 160 160
+Style * IconFont "Shadow=0 0 SE:xft:Monospace:style=regular:pixelsize=12:antialias=true:hinting=slight"
+Style * IconBackgroundColorset 4
+Style * IconTitleColorset 4
+Style * HilightIconTitleColorset 4
+Style * Icon unknown1.xpm
 
-# mouse 2
-Mouse 2	1	A	Menu WindowOptionsMenu Close
-Mouse 2	3	A	Destroy
-Mouse 2	2	A	Close
-Mouse 2	4	A	FvwmVMaximize
-Mouse 2	6	A	Iconify
+# top left
+# Style "*" IconBox 4 4 400 288, IconGrid 20 20, IconFill left top
+# Style "*" IconBox 8 64 800 128, IconGrid 24 24, IconFill left top
+#
+# top center
+# Style * IconBox 512 8 1066 256, IconGrid 24 24, IconFill left top
+#
+# bottom center
+# Style * IconBox 400 836 1200 899, IconGrid 24 24, IconFill left top
+#
+# top right
+# Style * IconBox 1250 48 1360 640, IconGrid 24 24, IconFill left top
+#
+# bottom left
+# Style * IconBox 8 832 800 896, IconGrid 24 24 , IconFill left top
+#
+# middle right
+# Style * Iconbox 1224 300 1360 600, IconGrid 36 36, IconFill left top
+#
+# middle left
+# Style * Iconbox 4 144 256 800, IconGrid 24 24, IconFill left top
+#
+# thumbnails
+Style "*" Iconbox 400 834 1400 898, IconGrid 8 8, IconFill left top
 
-# mouse 3
-Mouse 3	1	A	Menu WindowOptionsMenu Close
-Mouse 3	3	A	FvwmIdent
-Mouse 3	2	A	Destroy
-Mouse 3	4	A	FvwmHMaximize
-Mouse 3	6	A	Iconify
+# comment out if iconbox needed; then select IconBox location
+# Style * !Icon
+Style * !IconTitle
 
-#		window
-#Mouse 1	FS	A	ResizeOrRaise
-#Mouse 1	T	A	Move-Raise-Shade
-Mouse 1 T   A   MoveClickX Move Raise Maximize
-# Mouse 1 FS  A   ResizeOrRaise
-Mouse 1	I	A	DeiconifyAndRearrange
-Mouse 2	I	A	MoveClickX Move "Iconify off"
-Mouse 3 I	A	Close
-Mouse 2 T	A	WindowShade
-Mouse 3 TSIF	A	RaiseLower
+# Window Buttons: [1 3 5 7 9  TTTTT  0 8 6 4 2]
+#   1 - Open the WindowOps menu.
+#   2 - Close on single click, Destory on double click.
+#   4 - Maximize (right/middle button will only maximize vertical/horizontal)
+#   6 - Iconify (minimize)
+Mouse 1 1 A Menu MenuWindowOps
+Mouse 1 2 A MoveClickX Nop Close Destroy
+Mouse 1 4 A Maximize 100 100
+Mouse 2 4 A Maximize 0 100
+Mouse 3 4 A Maximize 100 0
+# Mouse 1 6 A Iconify
+# Mouse 1 6 A IconThumb
+Mouse 1 6 A AppThumbnail
 
-# fluxbox style
-Mouse 1	W	M	Move-Raise-Shade
-Mouse 1 W	MS	RaiseLower
-Mouse 3	FS	M	ResizeOrRaise
+#   TitleBar: Click to Raise, Move, Double Click to Maximize
+#             Mouse Wheel Up/Down to WindowShade On/Off
+#   Borders: Click to raise, Move to Resize
+#   Root Window: Left Click - Main Menu
+#                Right Click - WindowOps Menu
+#                Middle Click - Window List Menu
+#   Right click TitleBar/Borders for WindowOps Menu
+Mouse 1	T    A MoveClickX Move Raise Maximize
+Mouse 4	T    A MoveClickX Nop Raise "WindowShade True"
+Mouse 5	T    A MoveClickX Nop Raise "WindowShade False"
+Mouse 3	T    A Menu MenuWindowOps
+
+Mouse 1	R    A Menu MenuFvwmRoot
+Mouse 2	R    A WindowList
+Mouse 3	R    A Menu MenuWindowOpsLong
+
+# Mouse 1	I  A MoveClickX Move Iconify Nop
+Mouse 1	I	A  DeiconifyAndRearrange
+Mouse 2 I   A  Menu MenuIconOps
+Mouse 3 I   A  MoveClickX Move Nop Destroy
+
+Mouse 1	FS   A MoveClickX Resize Raise Nop
+Mouse 1 W    M MoveClickX Move Raise Nop
+Mouse 3 W    M MoveClickX Resize Raise Nop
+
+Mouse 3 T M RaiseLowerX Nop Lower Nop
 
 # EOF

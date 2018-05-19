@@ -1,12 +1,15 @@
 DestroyDecor AltDecor
 AddToDecor   AltDecor
 
-# Style * !Title
-Style * BorderWidth 1, HandleWidth 1
-BorderStyle Simple -- Flat
-# BorderStyle -- HiddenHandles !Inset
-Style * Colorset 15
-Style * HilightColorset 16
+Colorset 18 fg #EFF1F5, bg #2B303B, hi, sh, Plain, NoShape
+Colorset 19 fg #81A2BE, bg #2B303B, hi, sh, Plain, NoShape
+Colorset 20 fg #FFFFFF, bg #20739E, hi #2891C7, sh #175270, Plain, NoShape
+
+Style * Colorset 19
+Style * HilightColorset 20
+Style * BorderWidth 3, HandleWidth 3
+BorderStyle Simple -- Flat, HiddenHandles, !Inset
+Style * BorderColorset 18, HilightBorderColorset 20
 
 #######
 # 6: Window Decor
@@ -31,5 +34,11 @@ ButtonStyle All - Clear
 ButtonStyle 1 - MwmDecorMenu
 ButtonStyle 4 - MwmDecorMax
 ButtonStyle 6 - MwmDecorMin
+
+MenuStyle * MenuColorset 18, ActiveColorset 19, GreyedColorset 18, TitleColorset 18
+MenuStyle * Hilight3DOff, HilightBack, HilightTitleBack, SeparatorsLong
+MenuStyle * TrianglesSolid, TrianglesUseFore
+MenuStyle * ItemFormat "%|%3.1i%5.3l%5.3>%|"
+MenuStyle * Font "xft:Roboto:Bold:size=10:antialias=True"
 
 # UseDecor AltDecor

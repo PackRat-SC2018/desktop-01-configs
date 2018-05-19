@@ -176,14 +176,14 @@ DesktopSize 2x2
 #
 # Set EdgeScroll 0 0 and/or EdgeResistance -1 to disable.
 EdgeScroll 100 100
-EdgeResistance 450
+EdgeResistance 800
 EdgeThickness 1
 Style * EdgeMoveDelay 350, EdgeMoveResistance 350
 
 # EwmhBaseStruts [left] [right] [top] [bottom]
 # Reserves space along the edge(s) of the Screen that will not
 # be covered when maximizing or placing windows.
-EwmhBaseStruts 0 120 0 0
+EwmhBaseStruts 4 4 4 4
 
 # This sets the ClickTime and MoveThreshold used to determine
 # Double Clicks, Hold and Move for the mouse.
@@ -219,8 +219,7 @@ Style * WindowShadeScrolls, WindowShadeSteps 10
 IgnoreModifiers L25
 
 # Decor Styles
-Style * BorderWidth 5, HandleWidth 5, MWMButtons, \
-	FvwmBorder, FirmBorder, UseDecor FvwmDecor
+Style * BorderWidth 5, HandleWidth 5, MWMButtons, FvwmBorder, FirmBorder, UseDecor FvwmDecor
 Style * Colorset 1, HilightColorset 2
 Style * BorderColorset 3, HilightBorderColorset 4
 
@@ -229,7 +228,8 @@ Style * BorderColorset 3, HilightBorderColorset 4
 Style * !Icon
 
 # Window Specific Styles
-Style RightPanel !Title, !Borders, !Handles, Sticky, WindowListSkip, NeverFocus
+Style RightPanel !Title, !Borders, !Handles, Sticky, WindowListSkip, NeverFocus, StaysOnBottom, Sticky
+Style LeftPanel !Title, BorderWidth 3, HandleWidth 3, Sticky, WindowListSkip, NeverFocus, StaysOnBottom, Sticky
 Style ConfirmQuit !Title, PositionPlacement Center, WindowListSkip, Layer 6
 Style FvwmIdent WindowListSkip
 
@@ -639,3 +639,23 @@ DestroyModuleConfig EventNewDesk:*
 # This sets the default colorsets.
 *FvwmFormDefault: Colorset 10
 *FvwmFormDefault: ItemColorset 13
+
+Read LeftPanel
+
+# Start Function
+#
+# The start function is run right after fvwm is done reading
+# the config file. This function run after each restart
+# so using Test (Init) or Test (Restart) can further control
+# actions that are run during the first time run (Init) or
+# actions that are run after a restart.
+DestroyFunc StartFunction
+AddToFunc   StartFunction
++ I Test (Init, f $[FVWM_USERDIR]/.BGdefault) \
+    Exec exec fvwm-root $[FVWM_USERDIR]/.BGdefault
++ I TestRc (NoMatch) Exec exec fvwm-root \
+    $[FVWM_DATADIR]/default-config/images/background/bg1.png
++ I Test (Init) Module FvwmBanner
+# + I Module FvwmButtons RightPanel
++ I Module FvwmButtons LeftPanel
++ I Module FvwmEvent EventNewDesk
