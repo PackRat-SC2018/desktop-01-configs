@@ -772,3 +772,12 @@ AddToFunc   StartFunction
 # + I Module FvwmPager *
 + I Module FvwmScript FvwmScript-DateTime
 + I Module FvwmEvent EventNewDesk
+
+DestroyFunc ExitFunction
+AddToFunc   ExitFunction
++ I Exec exec killall -q conky
++ I Exec exec killall -q xclock
++ I Exec exec killall -q stalonetray
++ I Exec exec killall -q polybar
++ I Exec exec killall -q tint2
++ I Test (!ToRestart) Exec exec rm -f $[HOME]/.fvwm/icon.tmp.*
