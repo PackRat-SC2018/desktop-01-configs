@@ -42,8 +42,8 @@ font_fallback       = xtg
 icon_size           = 24
 icon_text_spacing   = 6
 ;icon_theme          = Vibrantly-Simple-Dark-Graphite
-;icon_theme          = Papirus-Grey
-icon_theme          = DarK
+icon_theme          = Suru-Gray
+;icon_theme          = DarK
 icon_theme_fallback = xtg
 
 arrow_string        = 

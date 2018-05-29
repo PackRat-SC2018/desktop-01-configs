@@ -73,9 +73,9 @@ monitor = VGA1
 
 wm-restack = bspwm
 
-modules-left = bspwm jgmenu
+modules-left = jgmenu bspwm
 modules-center = 
-modules-right = uptime coreavg load CoreTemps wired-network bspwm-date
+modules-right = uptime coreavg load memory wired-network bspwm-date
 
 ; All available modules (some require configuration in modules.conf)
 ; redshift github filesystem mpd wired-network wireless-network battery menu volume-bar bspwm
@@ -99,10 +99,11 @@ inherit = bar/master
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
 monitor = VGA1
 
-modules-left = jgmenu window_switch
-modules-center = uptime coreavg load core0temp core1temp wired-network
+modules-left = jgmenu
+modules-center = uptime coreavg load memory wired-network
 modules-right = date
 
+; core0temp core1temp
 ; All available modules (some require configuration in modules.conf)
 ; redshift github filesystem mpd wired-network wireless-network battery menu volume-bar bspwm
 ; pkg keyboard memory temperature coreuse network clock volume i3-workspaces workspaces window_switch
