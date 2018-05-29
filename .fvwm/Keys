@@ -119,7 +119,7 @@ Key	l	A	C4	Exec exec $[infostore.editor]
 Key	g	A	C4	Exec exec gimp
 Key	p	A	C4	Exec exec libreoffice --calc
 Key	o	A	C4	Exec exec libreoffice --writer
-# key d   A   4   Exec exec rofi -show
+key d   A   4   Exec exec rofi -show
 key x   A   4   Exec exec jgmenu_run
 Key	Print	A	C4	Exec exec "$HOME/bin/scrot_delay.sh"
 Key	Pause	A	C4	Exec exec "$HOME/bin/ConkyFvwm.sh"

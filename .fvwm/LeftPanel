@@ -59,7 +59,7 @@ DestroyModuleConfig ButtonLaunchers
 Style DeskTopId !Title, BorderWidth 3, HandleWidth 3, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom, Sticky
 
 DestroyModuleConfig DeskTopId:*
-*DeskTopId: Geometry 192x48-2-2
+*DeskTopId: Geometry 192x48-2+2
 *DeskTopId: Colorset 14
 *DeskTopId: Rows 1
 *DeskTopId: Columns 4

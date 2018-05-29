@@ -1,7 +1,7 @@
 Style DeskTopId !Title, BorderWidth 3, HandleWidth 3, Sticky, WindowListSkip, NeverFocus, StaysOnBottom, Sticky
 
 DestroyModuleConfig DeskTopId:*
-*DeskTopId: Geometry 192x48-0-0
+*DeskTopId: Geometry 192x48-0+0
 *DeskTopId: Colorset 10
 *DeskTopId: Rows $[vp.height]
 *DeskTopId: Columns 120

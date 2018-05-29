@@ -293,7 +293,7 @@ Style Subl3 ResizeHintOverride, PositionPlacement Center
 Style Firefox ResizeHintOverride, PositionPlacement Center
 Style Thunderbird ResizeHintOverride, PositionPlacement Center
 Style *tray !Title, !Handles, !Borders, StaysOnBottom, WindowListSkip
-Style Tint2 !Title, !Handles, !Borders, ResizeHintOverride, StaysOnBottom, PositionPlacement -0 -0
+Style Tint2 !Title, !Handles, !Borders, ResizeHintOverride, StaysOnBottom, PositionPlacement -4px -2px
 Style Xfce4-panel !Title, !Handles, !Borders, StaysOnTop
 Style *Clock !Title, PositionPlacement -2 -2
 Style Bl-exit Sticky, CirculateSkip, WindowListSkip, PositionPlacement Center
@@ -770,8 +770,11 @@ AddToFunc   StartFunction
 + I Module FvwmButtons DeskTopId
 + I Module FvwmButtons ButtonLaunchers
 # + I Module FvwmPager *
-+ I Module FvwmScript FvwmScript-DateTime
+# + I Module FvwmScript FvwmScript-DateTime
 + I Module FvwmEvent EventNewDesk
+
++ I Test (Init) Exec exec tint2 -c "$HOME/.config/tint2/tint2clockrc"
++ I Test (Restart) Exec exec tint2 -c "$HOME/.config/tint2/tint2clockrc"
 
 DestroyFunc ExitFunction
 AddToFunc   ExitFunction
