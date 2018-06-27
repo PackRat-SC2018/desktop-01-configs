@@ -1,0 +1,54 @@
+WindowTitle {DateTime}
+WindowSize  156 56
+Font "xft:Inconsolata:style=Regular:size=12" 
+
+Init
+ Begin
+  Set $Time = (GetOutput {exec date "+%k:%M"} 1 -1)
+  Set $Date = (GetOutput {exec date "+%a %e %b"} 1 -1)
+
+  ChangeTitle 1 $Time
+  ChangeTitle 2 $Date
+End
+
+PeriodicTasks
+ Begin 
+  If (RemainderOfDiv (GetTime) 15)==0 Then
+  Begin
+   Set $Time = (GetOutput {exec date "+%k:%M"} 1 -1)
+   Set $Date = (GetOutput {exec date "+%a %e %b"} 1 -1)
+
+   ChangeTitle 1 $Time
+   ChangeTitle 2 $Date
+  End
+End
+
+Widget 1
+Property
+ Position 0 0
+ Size 156 30
+ Font "xft:Inconsolata:style=Regular:size=18"
+ Type ItemDraw
+ Flags NoReliefString
+ Title {}
+Main
+ Case message of
+  SingleClic :
+  Begin
+  End
+End
+
+Widget 2
+Property
+ Position 0 30
+ Size 156 26
+ Font "xft:Inconsolata:style=Regular:size=12"
+ Type ItemDraw
+ Flags NoReliefString
+ Title {}
+Main
+ Case message of
+  SingleClic :
+  Begin
+  End
+End

@@ -1,14 +1,20 @@
 firefox
 thunderbird
 subl3
-thunar
-sakura
-xterm
 urxvt
-geany
-pcmanfm
 lxappearance
 yad --font
 yad --color
 tint2
+uxterm
+xterm
+geany
+emacs
+st
+spacefm
+pcmanfm
+thunar
 compton
+sakura
+xfce4-terminal
+xfce4-terminal --drop-down

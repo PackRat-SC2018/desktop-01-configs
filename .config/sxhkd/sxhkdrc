@@ -25,7 +25,7 @@ super + ctrl + l
 	subl3
 
 Menu
-	spacefm
+	pcmanfm
 
 super + ctrl + g
 	gimp
@@ -100,7 +100,7 @@ super + y
 	bspc query -N -n focused.automatic && bspc node -n last.!automatic || bspc node last.leaf -n focused
 
 # swap the current node and the biggest node
-super + g
+super + Return 
 	bspc node -s biggest
 
 #

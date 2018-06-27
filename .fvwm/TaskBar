@@ -1,0 +1,79 @@
+Style TaskBarIcons !Title, !Handles, !Borders, WindowListSkip, CirculateSkip, StaysOnBottom, NeverFocus, Sticky
+Style FvwmTaskBar !Title, !Borders, !Handels, WindowListSkip, CirculateSkip, StaysOnBottom, NeverFocus, Sticky
+
+DestroyModuleConfig TaskBarIcons:*
+*TaskBarIcons: NumManagers        1
+*TaskBarIcons: Title              ""
+*TaskBarIcons: Resolution         global
+#*TaskBarIcons: Background         #2B303B
+#*TaskBarIcons: Foreground         #2B303B
+*TaskBarIcons: Colorset            21
+*TaskBarIcons: Font               "xft:Roboto:style=Regular:size=10:antialias=True"
+*TaskBarIcons: ButtonGeometry     176x30
+*TaskBarIcons: MaxButtonWidth     176
+*TaskBarIcons: Format             "%c: %i"
+# *TaskBarIcons: ManagerGeometry    0x1+0-0
+*TaskBarIcons: ManagerGeometry    1x1
+*TaskBarIcons: DrawIcons          False
+*TaskBarIcons: UseWinList         True
+*TaskBarIcons: DontShow           Conky, XClock
+*TaskBarIcons: ReliefThickness    1
+*TaskBarIcons: PlainButton        flat
+*TaskBarIcons: FocusButton        raisededge
+*TaskBarIcons: IconButton         flat
+*TaskBarIcons: FocusAndSelectButton    raisededge
+*TaskBarIcons: SelectButton            raisededge
+*TaskBarIcons: FocusColorset           11
+*TaskBarIcons: PlainColorset           21
+*TaskBarIcons: IconColorset            21
+*TaskBarIcons: FocusAndSelectColorset  6
+*TaskBarIcons: SelectColorset          6
+*TaskBarIcons: Shape                   true
+*TaskBarIcons: Action Mouse 0 A ret
+*TaskBarIcons: Action Mouse 1 A sendcommand IconManClick
+*TaskBarIcons: Action Mouse 3 A sendcommand "Menu MenuIconOps"
+*TaskBarIcons: Tips needed
+*TaskBarIcons: TipsDelays 500 100
+*TaskBarIcons: TipsColorset 12
+*TaskBarIcons: TipsBorderWidth 1
+*TaskBarIcons: TipsPlacement updown
+*TaskBarIcons: TipsJustification left
+*TaskBarIcons: TipsOffsets 2 4
+*TaskBarIcons: TipsFont "xft:ubuntu:style=light:size=11:antialias=true"
+*TaskBarIcons: Sort id
+
+DestroyModuleConfig FvwmTaskBar:*
+*FvwmTaskBar: Geometry $[vp.width]x30+0-0
+*FvwmTaskBar: Colorset 21
+*FvwmTaskBar: Rows 1
+*FvwmTaskBar: Columns 32
+*FvwmTaskBar: Frame 0
+*FvwmTaskBar: Font "xft:Sans:Bold:size=10:antialias=True"
+*FvwmTaskBar: (1x1, Title "", Icon "icons/apps/24/cat004.png", Action `Exec jgmenu --config-file=/home/doug/.config/jgmenu/jgfvwmrc`)
+*FvwmTaskBar: (30x1, Top, Swallow FvwmIconMan 'Module FvwmIconMan TaskBarIcons', Frame 0)
+*FvwmTaskBar: (1x1, Swallow(NoClose,UseOld) xclock 'Exec exec xclock -fg "#CCCCCC" -bg "#2B303B" -digital -brief -twentyfour -face "roboto mono:size=11" -update 30 -padding 6', Frame 0)
+
+# FvwmButtons - PagerPanel
+#
+# FvwmButtons is a powerful module that can be used to build custom
+# panels and docks. This config uses FvwmButtons to build the PagerPanel.
+# The panel contains buttons to switch desks, FvwmPager, a system tray,
+# FvwmIconMan (list of running windows), and a clock.
+#
+# Note - To use the system tray you must have "stalonetray" installed.
+DestroyModuleConfig PagerPanel:*
+*PagerPanel: Geometry 156x220-4+4
+*PagerPanel: Colorset 22
+*PagerPanel: Rows 32
+*PagerPanel: Columns 120
+*PagerPanel: Frame 1
+*PagerPanel: Font "xft:Roboto:Bold:size=9:antialias=True"
+*PagerPanel: (120x6, Swallow DateTime 'Module FvwmScript $[FVWM_USERDIR]/scripts/FvwmScript-Clock', Frame 0)
+*PagerPanel: (120x10, Swallow FvwmPager 'Module FvwmPager *', Frame 0)
+*PagerPanel: (30x3, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 11, ActiveColorset 12, Frame 0)
+*PagerPanel: (30x3, Id desk1, Title "2", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 12, Frame 0)
+*PagerPanel: (30x3, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 12, Frame 0)
+*PagerPanel: (30x3, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 12, Frame 0)
+*PagerPanel: (120x4, Swallow(NoClose,UseOld) stalonetray 'Exec exec stalonetray --config "/home/doug/.stalonetrayrc"', Frame 0)
+# Test (x stalonetray) *PagerPanel: (120x3, Swallow(NoClose,UseOld) stalonetray 'Exec exec stalonetray --config "/home/doug/.stalonetrayrc"', Frame 0)
+

@@ -1,38 +1,3 @@
-# static modules
-Style FvwmIdent* !Title, WindowListSkip, HandleWidth 2, Borderwidth 2, !Button 1, !Button 4, !Button 6
-Style FvwmIconMan* !Title, !Handles, !Borders, Sticky, WindowListSkip, CirculateSkip, StaysOnBottom, NeverFocus
-Style FvwmButtons* !Title, !Handles, BorderWidth 1, CirculateSkip, Sticky, WindowListSkip, StaysOnTop, NeverFocus
-Style FvwmPager* !Title, HandleWidth 2, Borderwidth 2, Sticky, WindowListSkip, CirculateSkip, StaysOnBottom, NeverFocus
-
-
-# Function: IconManClick
-#
-# This function is run from FvwmIconMan when the button is clicked.
-DestroyFunc IconManClick
-AddToFunc   IconManClick
-+ I ThisWindow (Raised, !Shaded, !Iconic, CurrentPage) Iconify
-+ I TestRc (Match) Break
-+ I ThisWindow (!Raised) Raise
-+ I ThisWindow (Shaded) WindowShade
-+ I ThisWindow (Iconic) Iconify
-+ I ThisWindow (AcceptsFocus) FlipFocus
-
-# Function: ToggleTitle
-#
-# This function will toggle if fvwm shows the TitleBar.
-DestroyFunc ToggleTitle
-AddToFunc   ToggleTitle
-+ I ThisWindow (State 1) WindowStyle Title
-+ I TestRc (Match) State 1 False
-+ I TestRc (Match) Break
-+ I WindowStyle !Title
-+ I State 1 True
-
-DestroyModuleConfig FvwmIdent: *
-*FvwmIdentBack #191970
-*FvwmIdentFore #FFB600
-*FvwmIdent: Font "xft:sans:pixelsize=10:antialias=true:hinting=slight"
-
 DestroyModuleConfig FvwmAnimate: *
 *FvwmAnimate: Effect Flip
 *FvwmAnimate: Delay 1
@@ -40,25 +5,22 @@ DestroyModuleConfig FvwmAnimate: *
 *FvwmAnimate: Twist 1
 *FvwmAnimate: Width 2
 
-# DestroyModuleConfig FvwmEvent: *
-#*FvwmEvent: Cmd Function
-#*FvwmEvent: new_page CurrentPageFocusFunc
-#*FvwmEvent: new_desk CurrentPageFocusFunc
-#*FvwmEvent: destroy_window CurrentPageFocusFunc
-#*FvwmEvent: focus_change MarkWindowAsActiveFunc
-
 #======FvwmIconBox specs [l t r b]===============#
 
 Style * StickyIcon
 Style * IconTitleRelief 0
-Style * IconBackgroundRelief 0
+Style * IconBackgroundRelief 1
 Style * IconBackgroundPadding 1
-Style * IconSize 56 56 160 160
-Style * IconFont "Shadow=0 0 SE:xft:Monospace:style=regular:pixelsize=12:antialias=true:hinting=slight"
-Style * IconBackgroundColorset 4
-Style * IconTitleColorset 4
-Style * HilightIconTitleColorset 4
+Style * IconSize 64 64 160 160
+Style * IconFont "Shadow=0 0 SE:xft:Monospace:style=regular:pixelsize=8:antialias=true:hinting=slight"
+Style * IconBackgroundColorset 24
+Style * IconTitleColorset 24
+Style * HilightIconTitleColorset 24
 Style * Icon unknown1.xpm
+
+# comment out if iconbox needed; then select IconBox location
+# Style * !Icon
+Style * !IconTitle
 
 # top left
 # Style "*" IconBox 4 4 400 288, IconGrid 20 20, IconFill left top
@@ -74,145 +36,135 @@ Style * Icon unknown1.xpm
 # Style * IconBox 1250 48 1360 640, IconGrid 24 24, IconFill left top
 #
 # bottom left
-# Style * IconBox 8 832 800 896, IconGrid 24 24 , IconFill left top
+Style * IconBox 8 1008 640 1080, IconGrid 16 16 , IconFill left top
 #
 # middle right
 # Style * Iconbox 1224 300 1360 600, IconGrid 36 36, IconFill left top
 #
 # middle left
-# Style * Iconbox 4 144 256 800, IconGrid 24 24, IconFill left top
+# Style * Iconbox 16 48 256 600, IconGrid 24 24, IconFill left top
 #
 # thumbnails
-Style "*" Iconbox 4 840 1400 898, IconGrid 8 8, IconFill left top
-
-# comment out if iconbox needed; then select IconBox location
-# Style * !Icon
-Style * !IconTitle
-
-
+# Style "*" Iconbox 2 680 688 762, IconGrid 8 8, IconFill left top
 #===================================================
 
-# fvwmpager
-DestroyModuleConfig FvwmPager: *
-*FvwmPager: DeskTopScale 30
-*FvwmPager: Geometry -4+4
-*FvwmPager: WindowBorderWidth 0.3
-*FvwmPager: Colorset * 5
-*FvwmPager: HilightColorset * 6
-*FvwmPager: WindowColorsets 7 8
-*FvwmPager: Font none
-#*FvwmPager: SmallFont "xft:Sans:style=Regular:pixelsize=9:antialias=True"
-*FvwmPager: Balloons
-*FvwmPager: BalloonColorset * 5
-# *FvwmPager: BalloonFont "xft:Sans:style=Regular:pixelsize=8:antialias=True"
-*FvwmPager: BalloonFont "Shadow=0 0 SE:xft:123:style=regular:pixelsize=10:antialias=true:hinting=slight"
-*FvwmPager: BalloonYOffset +2
-*FvwmPager: BalloonBorderWidth 0
-*FvwmPager: BalloonFore #1F1F1F
-*FvwmPager: BalloonBack #E5E5E5
-*FvwmPager: UseSkipList
-# *FvwmPager: SolidSeparators
-# *FvwmPager: NoSeparators
-*FvwmPager: ShapeLabels
-*FvwmPager: !MiniIcons
-*FvwmPager: MoveThreshold 5
+## Tiling functions
 
-# FvwmIconMan
-#===========================================================
+DestroyFunc TileUpperLeft
+AddToFunc TileUpperLeft
++ I Resize 48 43
++ I AnimatedMove 1 1
++ I ThisWindow
++ I Focus
++ I Current Raise
 
-DestroyMenu MenuIconOps
-AddToMenu   MenuIconOps
-+ "(De)Iconify"         Iconify
-+ "(Un)Maximize"        Maximize
-+ "(Un)Shade"           WindowShade
-+ "(Un)Sticky"		Stick
-+ "(No)TitleBar"	Pick (CirculateHit) ToggleTitle
-+ "Send To Desk"        Popup MenuSendToDesk
-+ "" Nop
-+ "Close"               Close
-+ "Destroy"             Destroy
-+ "" Nop
-+ "Raise"		Raise
-+ "Lower"		Lower
-+ "" Nop
-+ "StaysOnTop"          Pick (CirculateHit) Layer 0 6
-+ "StaysPut"            Pick (CirculateHit) Layer 0 4
-+ "StaysOnBottom"       Pick (CirculateHit) Layer 0 2
-+ "" Nop
-+ "Identify"            Module FvwmIdent
+DestroyFunc TileUpperRight
+AddToFunc TileUpperRight
++ I Resize 48 43
++ I AnimatedMove -1 1
++ I ThisWindow
++ I Focus
++ I Current Raise
 
-# Function: IconManClick
+DestroyFunc TileLowerRight
+AddToFunc TileLowerRight
++ I Resize 48 43
++ I AnimatedMove -1 -1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc TileLowerLeft
+AddToFunc TileLowerLeft
++ I Resize 48 43
++ I AnimatedMove 1 -1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc MaxTile
+AddToFunc MaxTile
++ I Maximize 100 100
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc HalfMaxLeft
+AddToFunc HalfMaxLeft
++ I Resize 48 95
++ I AnimatedMove 1 1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc HalfMaxRight
+AddToFunc HalfMaxRight
++ I Resize 48 95
++ I AnimatedMove -1 1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc MaxTop
+AddToFunc MaxTop
++ I Resize 60 44
++ I AnimatedMove 294px 4px
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc MaxBottom
+AddToFunc MaxBottom
++ I Resize 60 40
++ I AnimatedMove 294px -28px
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+# Function: Window Tiling
 #
-# This function is run from FvwmIconMan when the button is clicked.
-DestroyFunc IconManClick
-AddToFunc   IconManClick
-+ I ThisWindow (Raised, !Shaded, !Iconic, CurrentPage) Iconify
-+ I TestRc (Match) Break
-+ I ThisWindow (!Raised) Raise
-+ I ThisWindow (Shaded) WindowShade
-+ I ThisWindow (Iconic) Iconify
-+ I ThisWindow (AcceptsFocus) FlipFocus
+# This function tiles active windows with specified keybindings.
+DestroyFunc TileLeft
+AddToFunc TileLeft
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 100
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move +0 +0
 
-#=======================================================================
+DestroyFunc TileRight
+AddToFunc TileRight
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 100
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move -0 +0
 
-DestroyModuleConfig FvwmIconMan
-*FvwmIconMan: Title ""    
-*FvwmIconMan: NumManagers 1
-*FvwmIconMan: ManagerGeometry 0x1+0-0
-*FvwmIconMan: ButtonGeometry 160x28
-*FvwmIconMan: MaxButtonWidthByColumns 1
-*FvwmIconMan: MaxButtonWidth 160
-*FvwmIconMan: Font "xft:Roboto:style=Regular:size=11:antialias=true:hinting=slight"
-*FvwmIconMan: Format "%c: %i"
-*FvwmIconMan: FollowFocus true
-*FvwmIconMan: DontShow icon=Untitled resource=Untitled
-*FvwmIconMan: Resolution desk
-*FvwmIconMan: ShowOnlyIcons false
-*FvwmIconMan: DrawIcons flase
-*FvwmIconMan: ShowOnlyFocused false
-*FvwmIconMan: ShowTransient false
-*FvwmIconMan: Sort id
-*FvwmIconMan: UseWinList true
-*FvwmIconMan: ReliefThickness 0
-*FvwmIconMan: Tips Always
-*FvwmIconMan: TipsDelays 1000 300
-*FvwmIconMan: TipsFont "Shadow=0 0 SE:xft:Monospace:style=regular:pixelsize=12:antialias=true:hinting=slight"
-# *FvwmIconMan: TipsFont "xft:Envy Code R:style=regular:pixelsize=10"
-*FvwmIconMan: TipsFormat "%i"
-*FvwmIconMan: TipsBorderWidth 1
-*FvwmIconMan: TipsColorset 3
-*FvwmIconMan: TipsJustification center
-#======================================================================
-*FvwmIconMan: IconButton flat
-*FvwmIconMan: PlainButton flat
-*FvwmIconMan: SelectButton flat
-*FvwmIconMan: FocusButton flat
-*FvwmIconMan: FocusAndSelectButton flat
+DestroyFunc TileTop
+AddToFunc TileTop
++ I ThisWindow (!Shaded, !Iconic) Maximize 100 50
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move +0 +0
 
-*FvwmIconMan: Colorset 9
-*FvwmIconMan: IconColorset 10
-*FvwmIconMan: PlainColorset 10
+DestroyFunc TileBottom
+AddToFunc TileBottom
++ I ThisWindow (!Shaded, !Iconic) Maximize 100 50
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move +0 -0
 
-*FvwmIconMan: FocusColorset 11
-*FvwmIconMan: SelectColorset 12
-*FvwmIconMan: FocusAndSelectColorset 12
-*FvwmIconMan: IconAndSelectColorset 12
+DestroyFunc TileTopLeft
+AddToFunc TileTopLeft
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 50
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move +0 +0
 
-#*FvwmIconMan: Background  #D1D0CC
-#*FvwmIconMan: Foreground  #000000
-#*FvwmIconMan: IconButton	up	#6B6B6B #D1D0CC
-#*FvwmIconMan: PlainButton	up	#4E4E4E #D1D0CC
-#*FvwmIconMan: SelectButton	up	#191A17 #D1D0CC
-#*FvwmIconMan: FocusButton	up	#191A17 #B5B4B1
-#*FvwmIconMan: FocusAndSelectButton	flat	#191A17 #B5B4B1
+DestroyFunc TileTopRight
+AddToFunc TileTopRight
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 50
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move -0 +0
 
-*FvwmIconMan: Action Mouse 1 N sendcommand "TaskRaiseFocus"
-*FvwmIconMan: Action Mouse 1 A sendcommand IconManClick
+DestroyFunc TileBottomLeft
+AddToFunc TileBottomLeft
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 50
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move +0 -0
 
-*FvwmIconMan: Action Mouse 2 N sendcommand "WindowShade toggle"
-*FvwmIconMan: Action Mouse 2 M sendcommand Close
+DestroyFunc TileBottomRight
+AddToFunc TileBottomRight
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 50
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move -0 -0
 
-*FvwmIconMan: Action Mouse 3 N sendcommand "Menu MenuIconOps"
-*FvwmIconMan: Action Mouse 3 M sendcommand ToggleTitle
-
-#=======================================================================
+DestroyFunc MoveToCenter
+AddToFunc MoveToCenter
++ I ThisWindow (!Shaded, !Iconic) Maximize 80 60
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move 50-50w 50-50w

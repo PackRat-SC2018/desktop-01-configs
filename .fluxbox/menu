@@ -20,10 +20,16 @@
       [exec] (Menu) {rofi -show}
 [separator]
       [exec] (Terminal) {urxvt}
-      [exec] (Sakura) {sakura}
-      [exec] (Tmux Session) {xterm -e tmux}
       [exec] (Sublime) {wmctrl -a subl3 || subl3}
       [exec] (File Manager) {thunar}
+[submenu] (Terminals)
+      [exec] (Xfce4-terminal) {xfce4-terminal}
+      [exec] (Simple Terminal) {st}
+      [exec] (UXTerm) {uxterm}
+      [exec] (XTerm) {xterm}
+      [exec] (URxvt) {urxvt}
+      [exec] (Tmux) {urxvt -e tmux}
+[end]
 [separator]      
       [exec] (Firefox) {wmctrl -a firefox || firefox}
       [exec] (Thunderbird) {wmctrl -a thunderbird || thunderbird}

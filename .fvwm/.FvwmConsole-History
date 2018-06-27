@@ -1,70 +1,100 @@
-Read Functions
-Read Mouse
-Read Mouse
-Module FvwmButtons ButtonLaunchers
-Module FvwmButtons ButtonLaunchers
-Module FvwmButtons ButtonLaunchers
-Module FvwmButtons ButtonLaunchers
-Read FvwmEnv
-Style * OLDecor
-Style * ResizeOpaque
-Style * emacs ResizeOutline
-Style emacs ResizeOutline
-Read FvwmEnv
-Read DeskTopId
-Module FvwmButtons DeskTopId
-Read DeskTopId
-KillModule FvwmButtons DeskTopId
-KillModule FvwmButtons LeftPanel
-Module FvwmButtons DeskTopId
-KillModule FvwmButtons DeskTopId
-Read DeskTopId
-Module FvwmButtons DeskTopId
-KillModule FvwmButtons DeskTopId
-Read DeskTopId
-Module FvwmButtons DeskTopId
-Module FvwmPager 0 3
-Module FvwmPager
-Style FvwmPager Sticky !Title
-KillModule FvwmPager
-Module FvwmPager
-Module FvwmPager
-KillModule FvwmPager
-Module FvwmPager
-Module FvwmPager
-KillModule FvwmPager
-Module FvwmPager *
-KillModule FvwmPager
-Module FvwmPager 0 3
-KillModule FvwmPager
-Module FvwmPager 0 3
-KillModule FvwmPager 0 3
-KillModule FvwmPager
-Module FvwmPager 0 3
-Module FvwmPager 0 3
-Module FvwmPager 0 3
-Module FvwmPager 0 3
-Module FvwmPager 0 3
-Module FvwmPager 0 3
-cd /usr/share/fvwm
-FvwmScript FvwmScript-DateTime
-FvwmScript FvwmScript-DateTime -geometry -2+2
-FvwmScript FvwmScript-DateTime
-FvwmScript FvwmScript-DateTime
-FvwmScript FvwmScript-DateTime
-FvwmScript FvwmScript-DateTime
-Style "*" MWMBorder, MWMButtons, MWMFunctions, MWMDecor, HintOverride
-Style MWMBorder
-Read 4DwmDecor
-Read AltDecor
-BorderStyle --Flat
-BorderStyle Flat
-BorderStyle Simple -- Flat
-Read AltDecor
-Read 4DwmDecor
-Read AltDecor
-Read AltDecor
-Read AltDecor
-Read AltDecor
-Read AltDecor
-Read AltDecor
+Module FvwmIconMan TaskBarIcons
+KillModule FvwmIconMan TaskBarIcons
+Read TaskBar
+Module FvwmIconMan TaskBarIcons
+KillModule FvwmIconMan TaskBarIcons
+Read TaskBar
+Module FvwmIconMan TaskBarIcons
+KillModule FvwmIconMan TaskBarIcons
+Read TaskBar
+Module FvwmIconMan TaskBarIcons
+KillModule FvwmIconMan TaskBarIcons
+Read TaskBar
+Module FvwmIconMan TaskBarIcons
+KillModule FvwmIconMan TaskBarIcons
+Read TaskBar
+Module FvwmIconMan TaskBarIcons
+KillModule FvwmIconMan TaskBarIcons
+Read TaskBar
+Module FvwmIconMan TaskBarIcons
+Read TaskBar
+Module FvwmIconMan TaskBarIcons
+Read TaskBar
+KillModule FvwmIconMan TaskBarIcon
+KillModule FvwmIconMan TaskBarIcons
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+Read TaskBar
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+Read TaskBar
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+Read TaskBar
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+Read TaskBar
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+Read TaskBar
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+Read TaskBar
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+Read TaskBar
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmIconMan TaskBarIcons
+Module FvwmButtons FvwmTaskBar
+Module FvwmScript FvwmScript-Time
+KillModule FvwmScript FvwmScript-Time
+Module FvwmScript FvwmScript-Time
+KillModule FvwmScript FvwmScript-Time
+Module FvwmScript FvwmScript-Time
+Module FvwmScript FvwmScript-Time
+KillModule FvwmScript FvwmScript-Time
+KillModule FvwmScript FvwmScript-Time
+Module FvwmScript FvwmScript-Time
+KillModule FvwmScript FvwmScript-Time
+KillModule FvwmScript FvwmScript-Time
+Module FvwmScript FvwmScript-Time
+KillModule FvwmScript FvwmScript-Time
+Module FvwmScript FvwmScript-Time
+KillModule FvwmScript FvwmScript-Time
+Module FvwmScript FvwmScript-Time -geometry -0-0
+KillModule FvwmScript FvwmScript-Time -geometry -0-0
+KillModule FvwmScript FvwmScript-Time --geometry -0-0
+Module FvwmScript FvwmScript-Time --geometry -0-0
+KillModule FvwmScript FvwmScript-Time --geometry -0-0
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock +0+0
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock +0+0
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock

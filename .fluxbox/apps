@@ -11,7 +11,8 @@
   [Layer]	{8}
   [Alpha]	{255}
 [end]
-[app] (name=urxvt) (class=URxvt)
+[group]  (workspace=[current])
+ [app] (name=urxvt) (class=URxvt)
   [Dimensions]	{51% 59%}
   [Position]	(CENTER)	{0 0}
   [Shaded]	{no}
@@ -25,9 +26,6 @@
 [end]
 [app] (name=connman-gtk) (class=Connman-gtk)
   [Position]	(UPPERLEFT)	{7% 10%}
-[end]
-[app] (name=xterm) (class=XTerm)
-  [Dimensions]	{72% 70%}
 [end]
 [app] (name=pcmanfm) (class=Pcmanfm)
   [Dimensions]	{74% 84%}
@@ -301,4 +299,164 @@
   [Fullscreen]	{no}
   [Layer]	{8}
   [Alpha]	{255}
+[end]
+[app] (name=xterm) (class=XTerm)
+  [Dimensions]	{52% 64%}
+  [Position]	(UPPERLEFT)	{6% 6%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=asunder) (class=Asunder)
+  [Dimensions]	{61% 78%}
+  [Position]	(UPPERLEFT)	{4% 5%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Alpha]	{255}
+[end]
+[transient] (name=asunder) (class=Asunder)
+  [Dimensions]	{22% 21%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=geany) (class=Geany) (role=GtkFileChooserDialog)
+  [Position]	(UPPERLEFT)	{24% 11%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=audacious) (class=Audacious)
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=xcalc) (class=XCalc)
+  [Dimensions]	{20% 52%}
+  [Deco]	{0x67f}
+[end]
+[app] (name=st-256color) (class=st-256color)
+  [Dimensions]	{62% 72%}
+  [Position]	(UPPERLEFT)	{19% 14%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=gl) (class=mpv)
+  [Dimensions]	{64% 70%}
+  [Position]	(UPPERLEFT)	{32% 27%}
+  [Shaded]	{no}
+  [Deco]	{BORDER}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=xfce4-terminal) (class=Xfce4-terminal) (role=xfce4-terminal-dropdown)
+  [Dimensions]	{80% 53%}
+  [Position]	(UPPERLEFT)	{10% 1%}
+  [Shaded]	{no}
+  [Deco]	{0x5e0}
+  [Sticky]	{yes}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=xfce4-terminal) (class=Xfce4-terminal)
+  [Dimensions]	{47% 55%}
+  [Position]	(CENTER)	{0 0}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=gimp) (class=Gimp) (role=gimp-image-window-1)
+  [Workspace]	{1}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Minimized]	{no}
+  [Maximized]	{yes}
+  [Fullscreen]	{no}
+  [Jump]	{yes}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=hexchat) (class=Hexchat) (role=servlist)
+  [Position]	(UPPERLEFT)	{10% 8%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=hexchat) (class=Hexchat) (role=prefs)
+  [Position]	(UPPERLEFT)	{31% 20%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=transmission-gtk) (class=Transmission-gtk) (role=tr-main)
+  [Position]	(UPPERLEFT)	{25% 19%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=filezilla) (class=Filezilla)
+  [Position]	(UPPERLEFT)	{8% 14%}
+  [Deco]	{0x7e5}
+[end]
+[app] (name=filezilla) (class=Filezilla)
+  [Deco]	{0x67f}
+  [Maximized]	{yes}
+[end]
+[app] (name=hexchat) (class=Hexchat)
+  [Position]	(UPPERLEFT)	{41% 39%}
+  [Deco]	{0x67f}
 [end]

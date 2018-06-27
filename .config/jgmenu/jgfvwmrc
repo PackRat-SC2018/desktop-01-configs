@@ -10,7 +10,7 @@ terminal_args        = -e
 #monitor             = 0
 
 menu_margin_x       = 8
-menu_margin_y       = 64
+menu_margin_y       = 40
 menu_width           = 200
 menu_padding_top     = 2
 menu_padding_right   = 2
@@ -41,22 +41,22 @@ font                = Sans Regular 12px
 font_fallback       = xtg
 icon_size           = 24
 icon_text_spacing   = 6
-icon_theme          = Vibrantly-Simple
+icon_theme          = Vibrantly-Simple-Dark
 #icon_theme          = DarK
 #icon_theme_fallback = xtg
 
 arrow_string        = 
 arrow_width         = 15
 
-color_menu_bg       = #F4F4F4 80
-color_menu_fg       = #030303 80
+color_menu_bg       = #2B303B 90
+color_menu_fg       = #d3d3d3 80
 color_menu_border   = #030303 8
 
-color_norm_bg       = #F4F4F4 0
-color_norm_fg       = #030303 100
+color_norm_bg       = #2B303B 0
+color_norm_fg       = #d3d3d3 100
 
-color_sel_bg        = #1a6e99 50
-color_sel_fg        = #F7F7F7 100
+color_sel_bg        = #1A6E99 50
+color_sel_fg        = #ffffff 100
 color_sel_border    = #030303 8
 
 color_sep_fg 		= #555555 30

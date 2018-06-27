@@ -9,6 +9,17 @@ xsetroot -solid "#406380" &
 xrdb -l $HOME/.Xresources &
 xmodmap $HOME/.Xmodmap &
 
+# display timeout and sleep
+xset s 3600 3600
+xset dpms 3600 3700 4000
+
+# keyboard repeat rate
+xset r rate 400 50
+kbdrate -d 400 -r 50
+
+# 1/1 mouse acceleration
+xset m 1/1
+
 # wallpaper
 #fbsetbg -c -r $HOME/wallpaper/ &
 nitrogen --restore &

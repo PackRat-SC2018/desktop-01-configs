@@ -41,4 +41,4 @@ MenuStyle * TrianglesSolid, TrianglesUseFore
 MenuStyle * ItemFormat "%|%3.1i%5.3l%5.3>%|"
 MenuStyle * Font "xft:Roboto:Bold:size=10:antialias=True"
 
-# UseDecor AltDecor
+UseDecor AltDecor
