@@ -9,41 +9,41 @@ Xft.rgba: rgb
 !Xft.autohint: 0
 
 ! special
-*.foreground:   #EDEDED
-*.background:   #0F0F0F
-*.cursorColor:  #EDEDED
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
 
 ! black
-*.color0:       #000000
-*.color8:       #4d4d4d
+*.color0:       #282a2e
+*.color8:       #373b41
 
 ! red
-*.color1:       #cc0403
-*.color9:       #800C0A
+*.color1:       #a54242
+*.color9:       #cc6666
 
 ! green
-*.color2:       #19cb00
-*.color10:      #23fd00
+*.color2:       #8c9440
+*.color10:      #b5bd68
 
 ! yellow
-*.color3:       #cecb00
-*.color11:      #fffd00
+*.color3:       #de935f
+*.color11:      #f0c674
 
 ! blue
-*.color4:       #001cd1
-*.color12:      #0026ff
+*.color4:       #3F729D
+*.color12:      #3D83BE
 
 ! magenta
-*.color5:       #cb1ed1
-*.color13:      #fd28ff
+*.color5:       #85678f
+*.color13:      #b294bb
 
 ! cyan
-*.color6:       #0dcdcd
-*.color14:      #14ffff
+*.color6:       #5e8d87
+*.color14:      #8abeb7
 
 ! white
-*.color7:       #e5e5e5
-*.color15:      #ffffff
+*.color7:       #707880
+*.color15:      #c5c8c6
 
 ! URxvt -----------------------------------------------------------------------
 URxvt*termName:          rxvt-256color
@@ -55,10 +55,10 @@ URxvt*transparent:       false
 URxvt*depth:             32
 URxvt.background:        [90]#0F0F0F
 
-URxvt.font:              xft:Hack:Regular:size=11:antialias=true:autohint=true
-URxvt.boldFont:          xft:Hack:Regular:size=11:antialias=true:autohint=true
-!URxvt.font:              xft:IBM Plex Mono:medium:size=11:antialias=false
-!URxvt.boldFont:          xft:IBM Plex Mono:medium:size=11:antialias=false
+!URxvt.font:              xft:Hack:Regular:size=11:antialias=true:autohint=true
+!URxvt.boldFont:          xft:Hack:Regular:size=11:antialias=true:autohint=true
+URxvt.font:              xft:Liberation Mono:Regular:size=11:antialias=true:autohint=true
+URxvt.boldFont:          xft:Liberation Mono:Regular:size=11:antialias=true:autohint=true
 URxvt.letterSpace: 1
 
 *antialias:              true
@@ -81,7 +81,7 @@ UXTerm*faceName:            xft:Hack:regular:size=11:antialias=false:autohint=tr
 UXTerm*utf8:                1
 !UXTerm*font:               -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
 !UXTerm*boldFont:           -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
-UXTerm*background:         #171717
+UXTerm*background:         #000000
 UXTerm*foreground:         #E5E5E5
 UXTerm*cursorColor:        #E5E5E5
 UXTerm*scrollBar:          false

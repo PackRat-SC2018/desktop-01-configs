@@ -1,0 +1,61 @@
+T 1528998176 19*	Now talking on 22#voidlinux
+T 1528998176 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
+T 1528998176 22*	Topic for 22#voidlinux set by 26xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (24Mon Apr 18 10:21:32 2016)
+T 1528998802 24*	mamapitufo has quit (Quit: .,.,)
+T 1528998829 23*	mamapitufo (~mamapituf@cpc73676-dals20-2-0-cust90.20-2.cable.virginm.net23) has joined
+T 1528998913 23*	teatime07 (~teatime07@unaffiliated/teatime0723) has joined
+T 1528998960 18<quinq18>	Well, that was not the issue indeed.
+T 1528999001 23*	jjk96 (~jjk96@ftth-213-134-232-052.solcon.nl23) has joined
+T 1528999030 24*	mamapitufo has quit (Read error: Connection reset by peer)
+T 1528999057 23*	mamapitufo (~mamapituf@cpc73676-dals20-2-0-cust90.20-2.cable.virginm.net23) has joined
+T 1528999137 18<Piraty18>	:D :D rm /bin/sh ; ln -s /bin/bash /bin/sh  https://www.preining.info/blog/2018/06/microsofts-failed-attempt-on-debian-packaging/
+T 1528999195 18<bug200018>	the hell
+T 1528999250 24*	totalmongobaer_ has quit (Remote host closed the connection)
+T 1528999387 18<quinq18>	yeah ^^
+T 1528999441 24*	steinex has quit (Quit: upgrade)
+T 1528999441 18<quinq18>	Also, strangely, the author seems more disturbed by them arbitrarily removing /usr/bin/R than replacing the system shell
+T 1529001592 19*	Now talking on 22#voidlinux
+T 1529001592 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
+T 1529001592 22*	Topic for 22#voidlinux set by 26xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (24Mon Apr 18 10:21:32 2016)
+T 1529001853 18<Nilium18>	I'd be curious why someone wouldn't immediately go "this is a bad idea" when writing the preinstall script.
+T 1529001858 18<Nilium18>	Like what's the commit message that lead to that
+T 1529001957 24*	OlgaV has quit (Ping timeout: 240 seconds)
+T 1529002013 18<quinq18>	Nilium, that's because you don't think like a Microsoft developer
+T 1529002053 18<dTal18>	dear god, imagine the hassle if you actually installed that thing
+T 1529002056 18<Nilium18>	I think like someone who's 5 SAN away from shouting at his computer because packer is a thing that exists
+T 1529002068 18<dTal18>	I think this is a good sign that packaging needs a serious rethink
+T 1529002082 18<dTal18>	arbitrary shell scripts in packages should be abolished
+T 1529002101 18<dTal18>	Nix/Guix have the right idea
+T 1529002177 24*	well_laid_lawn has quit (Ping timeout: 256 seconds)
+T 1529002269 FiSHLiM plugin unloaded
+T 1529002347 19*	Now talking on 22#voidlinux
+T 1529002347 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
+T 1529002347 22*	Topic for 22#voidlinux set by 26xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (24Mon Apr 18 10:21:32 2016)
+T 1529002384 FiSHLiM plugin unloaded
+T 1529022141 19*	Now talking on 22#voidlinux
+T 1529022141 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
+T 1529022141 22*	Topic for 22#voidlinux set by 26xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (24Mon Apr 18 10:21:32 2016)
+T 1529022308 24*	kageru has quit (Ping timeout: 276 seconds)
+T 1529022578 24*	shardz has quit ()
+T 1529022604 FiSHLiM plugin unloaded
+T 1529081253 19*	Now talking on 22#voidlinux
+T 1529081253 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
+T 1529081253 22*	Topic for 22#voidlinux set by 26xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (24Mon Apr 18 10:21:32 2016)
+T 1529081345 24*	autrimpo has quit (Quit: WeeChat 2.1)
+T 1529081433 23*	autrimpo (~autrimpo@host-37-191-206-2.lynet.no23) has joined
+T 1529081457 18<blawiz18>	hmm could be
+T 1529081467 FiSHLiM plugin unloaded
+T 1529081492 19*	Now talking on 22#voidlinux
+T 1529081492 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
+T 1529081492 22*	Topic for 22#voidlinux set by 26xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (24Mon Apr 18 10:21:32 2016)
+T 1529081513 FiSHLiM plugin unloaded
+T 1529084639 19*	Now talking on 22#voidlinux
+T 1529084639 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
+T 1529084639 22*	Topic for 22#voidlinux set by 26xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (24Mon Apr 18 10:21:32 2016)
+T 1529084690 23*	zimmer__Elite (~zimmer@94.197.120.216.threembb.co.uk23) has joined
+T 1529084831 24*	zimmer_elite has quit (Ping timeout: 256 seconds)
+T 1529085469 23*	Shinryuu (~gdsptuwtd@mobile-access-bcee29-217.dhcp.inet.fi23) has joined
+T 1529085664 23*	ToffeeYogurtPots (~ToffeeYog@gateway/tor-sasl/toffeeyogurtpots23) has joined
+T 1529086254 23*	wink (fhtagn@porkchop.art-core.org23) has joined
+T 1529086583 23*	gspe (~gspe@dynamic-adsl-94-34-150-220.clienti.tiscali.it23) has joined
+T 1529087227 FiSHLiM plugin unloaded

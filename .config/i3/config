@@ -9,11 +9,28 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+exec pkill -x conky
+exec pkill -x polybar
+exec pkill -x i3status
+exec pkill -x sxhkd
+
 exec xmodmap "$HOME/.Xmodmap"
 exec xrdb -l "$HOME/.Xresources"
-exec numlockx on
-exec xsetroot -solid darkblue
-exec nitrogen --restore
+exec numlockx on &
+exec xsetroot -solid darkblue &
+
+# display timeout and sleep
+exec xset s 3600 3600
+exec xset dpms 3600 3700 4000
+
+# keyboard repeat rate
+exec xset r rate 400 50
+exec kbdrate -d 400 -r 50
+
+# 1/1 mouse acceleration
+exec xset m 1/1
+
+exec nitrogen --restore &
 
 set $mod Mod4
 set $alt Mod1
@@ -22,6 +39,14 @@ default_orientation horizontal
 workspace_layout tabbed
 new_window 1pixel
 focus_follows_mouse no
+
+# default_border normal|none|pixel
+default_border pixel 1
+#default_floating_border normal|none|pixel
+default_floating_border pixel 1
+
+# hide_edge_borders none|vertical|horizontal|both|smart
+hide_edge_borders both
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -40,10 +65,10 @@ font pango: Roboto Mono 11
 # font, it doesn’t scale on retina/hidpi displays.
 
 # window colours:		border		background	text
-client.focused			#9C9869		#9C9869 	#E8E8E8
+client.focused			#917E57   #917E57 	  #FAFAFA
 client.focused_inactive		#877A70		#877A70		#BBBBBB
-client.unfocused		#414547		#4F5457		#D1D1D1
-client.urgent			#91444D		#91444D		#403F3E
+client.unfocused		#242422		#242422		#DADADA
+client.urgent			  #91444D		#91444D		#403F3E
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $alt
@@ -57,11 +82,12 @@ bindsym $alt+F1 exec urxvt
 bindsym $alt+F4 kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec "rofi -combi -modi drun,run,window -show combi -display-drun 'Programs: ' -display-window 'Running: '"
 bindsym $alt+F2 exec rofi -show
 bindsym $mod+x exec jgmenu_run
 
@@ -169,16 +195,16 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+f floating toggle
+bindsym $mod+f floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+p focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+#bindsym $mod+c focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -258,13 +284,14 @@ bindsym $mod+r mode "resize"
 bar {
         position top
         workspace_buttons yes
-        status_command i3status -c /home/doug/.config/i3status/configi3
+        # status_command i3status -c /home/doug/.config/i3status/configi3
+        status_command /home/doug/.config/i3/conky-i3.sh
    colors {
-          background #2F2F2F
-          statusline #D3D3D3
-          active_workspace	#2F2F2F	#2F2F2F	#CDCDCD
-          focused_workspace	#9c9869 #9c9869 #E8E8E8
-          inactive_workspace	#2F2F2F	#2F2F2F	#CDCDCD
+          background #191911
+          statusline #DADADA
+          active_workspace	#242422	#242422	#DADADA
+          focused_workspace #917E57 #917E57 #FAFAFA
+          inactive_workspace	#242422	#242422	#CDCDCD
           urgent_workspace	#D84758	#D84758	#F0F0EB
      }
 }

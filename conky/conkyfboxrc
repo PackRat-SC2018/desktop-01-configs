@@ -71,8 +71,8 @@ conky.config = {
 	color8 = '#FFD700',-- - gold
 	color9 = '#F00F16',-- - reddish
 	
-	minimum_width = 1600, minimum_height = 18,
-	maximum_width = 1600,
+	minimum_width = 1920, minimum_height = 18,
+	maximum_width = 1920,
 	alignment = 'top_middle',
 	gap_x = 0,
 	gap_y = 0,
@@ -87,8 +87,11 @@ conky.config = {
 };
 
 conky.text = [[
-${voffset 1}${goto 128}Uptime:${offset 8}${uptime_short}\
-${goto 460}CPU:${offset 8}${if_match ${cpu}<=50}${color7}${else}${if_match ${cpu}<=70}${color8}${else}${if_match ${cpu}>70}${color9}${endif}${endif}${endif}${cpu cpu0}%${color}${offset 24}${loadavg 1}${offset 10}${loadavg 2}${offset 10}${loadavg 3}\
-${goto 860}MEM:${offset 8}${if_match ${memperc}<=50}${color7}${else}${if_match ${memperc}<=70}${color8}${else}${if_match ${memperc}>70}${color9}${endif}${endif}${endif}${memperc}%${color}\
-${goto 1180}Net:${offset 24}Up:${offset 10}${upspeedf enp2s0}${offset 40}Down:${offset 10}${downspeedf enp2s0}${color}
+${voffset 1}${goto 24}Uptime:${offset 8}${uptime_short}${offset 18} \
+${goto 512}CPU:${offset 8}${if_match ${cpu}<=50}${color7}${else}${if_match ${cpu}<=70}${color8}${else}${if_match ${cpu}>70}${color9}${endif}${endif}${endif}${cpu cpu0}%${color}${offset 24}${loadavg 1}${offset 10}${loadavg 2}${offset 10}${loadavg 3}\
+${goto 750}Core1:${offset 8}${if_match ${hwmon 1 temp 2}<=50}${color7}${else}${if_match ${hwmon 1 temp 2}<=70}${color8}${else}${if_match ${hwmon 1 temp 2}>70}${color9}${endif}${endif}${endif}${hwmon 1 temp 2}${offset 2}°C${color} \
+${goto 892}Core2:${offset 8}${if_match ${hwmon 1 temp 3}<=50}${color7}${else}${if_match ${hwmon 1 temp 3}<=70}${color8}${else}${if_match ${hwmon 1 temp 3}>70}${color9}${endif}${endif}${endif}${hwmon 1 temp 3}${offset 2}°C${color} \
+${goto 1032}MEM:${offset 8}${if_match ${memperc}<=50}${color7}${else}${if_match ${memperc}<=70}${color8}${else}${if_match ${memperc}>70}${color9}${endif}${endif}${endif}${memperc}%${color}\
+${goto 1172}Net:${offset 24}Up:${offset 10}${upspeedf enp2s0}${offset 40}Down:${offset 10}${downspeedf enp2s0}${color} \
+${alignr 24}${time %A  %e  %B}
 ]];

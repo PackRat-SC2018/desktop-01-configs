@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=jgmenu
+Comment=
+Exec=jgmenu --config-file=/home/doug/.config/jgmenu/jgfvwmrc
+Icon=/home/doug/.fvwm/icons/apps/void-tr.png
+Path=
+Terminal=false
+StartupNotify=false

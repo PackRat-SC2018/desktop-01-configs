@@ -1,38 +1,3 @@
-Module FvwmIconMan TaskBarIcons
-KillModule FvwmIconMan TaskBarIcons
-Read TaskBar
-Module FvwmIconMan TaskBarIcons
-KillModule FvwmIconMan TaskBarIcons
-Read TaskBar
-Module FvwmIconMan TaskBarIcons
-KillModule FvwmIconMan TaskBarIcons
-Read TaskBar
-Module FvwmIconMan TaskBarIcons
-KillModule FvwmIconMan TaskBarIcons
-Read TaskBar
-Module FvwmIconMan TaskBarIcons
-KillModule FvwmIconMan TaskBarIcons
-Read TaskBar
-Module FvwmIconMan TaskBarIcons
-KillModule FvwmIconMan TaskBarIcons
-Read TaskBar
-Module FvwmIconMan TaskBarIcons
-Read TaskBar
-Module FvwmIconMan TaskBarIcons
-Read TaskBar
-KillModule FvwmIconMan TaskBarIcon
-KillModule FvwmIconMan TaskBarIcons
-Module FvwmButtons FvwmTaskBar
-KillModule FvwmButtons FvwmTaskBar
-Read TaskBar
-Module FvwmButtons FvwmTaskBar
-KillModule FvwmButtons FvwmTaskBar
-Read TaskBar
-Module FvwmButtons FvwmTaskBar
-KillModule FvwmButtons FvwmTaskBar
-Read TaskBar
-Module FvwmButtons FvwmTaskBar
-KillModule FvwmButtons FvwmTaskBar
 Read TaskBar
 Module FvwmButtons FvwmTaskBar
 KillModule FvwmButtons FvwmTaskBar
@@ -98,3 +63,38 @@ Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
 Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
 Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
 Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+Module FvwmButtons ButtonLaunchers
+KillModule FvwmButtons ButtonLaunchers
+Module FvwmButtons ButtonLaunchers
+Module FvwmButtons ButtonLaunchers
+Module FvwmButtons ButtonLaunchers
+Module FvwmButtons FvwmTaskBar
+killModule FvwmButtons FvwmTaskBar
+read irix.config
+Style * HiddenHandles
+BorderStyle * HiddenHandles
+BorderStyle HiddenHandles
+BorderStyle Active -- HiddenHandles NoInset
+MenuStyle Mwm
+Emulate Win
+Emulate Fvwm
+Emulate Mwm
+Style * FvwmButtons
+Style * FvwmBorder
+Style * MwmBorder
+Style * FvwmBorder
+BorderStyle Simple -- NoInset Flat
+BorderStyle Simple -- Flat
+BorderStyle Simple -- Flat
+BorderStyle Flat
+BorderStyle --Flat
+BorderStyle NoInset
+BorderStyle --NoInset
+BorderStyle --Flat
+BorderStyle Simple -- Flat
+BorderStyle --Flat
+BorderStyle -- Flat
+BorderStyle -- NoInset
+BorderStyle -- NoInset
+BorderStyle -- NoInset Flat
+Module FvwmButtons PagerPanel

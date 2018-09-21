@@ -24,7 +24,8 @@ path="$1"            # Full path of the selected file
 width="$2"           # Width of the preview pane (number of fitting characters)
 height="$3"          # Height of the preview pane (number of fitting characters)
 cached="$4"          # Path that should be used to cache image previews
-preview_images="$5"  # "True" if image previews are enabled, "False" otherwise.
+# preview_images="$5"  # "True" if image previews are enabled, "False" otherwise.
+preview_images="True"
 
 maxln=200    # Stop after $maxln lines.  Can be used like ls | head -n $maxln
 

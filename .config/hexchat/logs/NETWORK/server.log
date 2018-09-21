@@ -1,0 +1,310 @@
+**** BEGIN LOGGING AT Thu Jun 14 13:42:38 2018
+
+Jun 14 13:42:38 FiSHLiM plugin loaded
+Jun 14 13:42:38 Checksum plugin loaded
+Jun 14 13:42:38 Sysinfo plugin loaded
+**** BEGIN LOGGING AT Thu Jun 14 14:39:33 2018
+
+Jun 14 14:39:33 FiSHLiM plugin loaded
+Jun 14 14:39:33 Checksum plugin loaded
+Jun 14 14:39:33 Sysinfo plugin loaded
+Jun 14 14:39:33 *	Looking up chat.freenode.net
+Jun 14 14:39:33 *	Connecting to chat.freenode.net (82.96.96.11:6697)
+Jun 14 14:39:34 *	* Certification info:
+Jun 14 14:39:34 *	  Subject:
+Jun 14 14:39:34 *	    CN=kornbluth.freenode.net
+Jun 14 14:39:34 *	  Issuer:
+Jun 14 14:39:34 *	    C=US
+Jun 14 14:39:34 *	    O=Let's Encrypt
+Jun 14 14:39:34 *	    CN=Let's Encrypt Authority X3
+Jun 14 14:39:34 *	  Public key algorithm: rsaEncryption (4096 bits)
+Jun 14 14:39:34 *	  Sign algorithm sha256WithRSAEncryption
+Jun 14 14:39:34 *	  Valid since Apr 23 05:02:46 2018 GM to Jul 22 05:02:46 2018 GM
+Jun 14 14:39:34 *	* Cipher info:
+Jun 14 14:39:34 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Jun 14 14:39:34 *	Connected. Now logging in.
+Jun 14 14:39:34 *	*** Looking up your hostname...
+Jun 14 14:39:34 *	*** Checking Ident
+Jun 14 14:39:34 *	*** Couldn't look up your hostname
+Jun 14 14:39:43 *	*** No Ident response
+Jun 14 14:39:43 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Jun 14 14:39:43 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+Jun 14 14:39:43 *	doug is already in use. Retrying with doug_...
+Jun 14 14:39:44 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Thu Jun 14 14:39:44 2018
+
+**** BEGIN LOGGING AT Thu Jun 14 14:52:07 2018
+
+Jun 14 14:52:07 FiSHLiM plugin loaded
+Jun 14 14:52:07 Checksum plugin loaded
+Jun 14 14:52:07 Sysinfo plugin loaded
+Jun 14 14:52:07 *	Looking up chat.freenode.net
+Jun 14 14:52:07 *	Connecting to chat.freenode.net (162.213.39.42:6697)
+Jun 14 14:52:08 *	* Certification info:
+Jun 14 14:52:08 *	  Subject:
+Jun 14 14:52:08 *	    CN=weber.freenode.net
+Jun 14 14:52:08 *	  Issuer:
+Jun 14 14:52:08 *	    C=US
+Jun 14 14:52:08 *	    O=Let's Encrypt
+Jun 14 14:52:08 *	    CN=Let's Encrypt Authority X3
+Jun 14 14:52:08 *	  Public key algorithm: rsaEncryption (4096 bits)
+Jun 14 14:52:08 *	  Sign algorithm sha256WithRSAEncryption
+Jun 14 14:52:08 *	  Valid since Apr 16 05:01:25 2018 GM to Jul 15 05:01:25 2018 GM
+Jun 14 14:52:08 *	* Cipher info:
+Jun 14 14:52:08 *	  Version: TLSv1/SSLv3, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Jun 14 14:52:08 *	Connected. Now logging in.
+Jun 14 14:52:08 *	*** Looking up your hostname...
+Jun 14 14:52:08 *	*** Checking Ident
+Jun 14 14:52:09 *	*** Couldn't look up your hostname
+Jun 14 14:52:17 *	*** No Ident response
+Jun 14 14:52:17 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Jun 14 14:52:17 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+Jun 14 14:52:17 *	doug is already in use. Retrying with doug_...
+Jun 14 14:52:17 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Thu Jun 14 14:52:18 2018
+
+**** BEGIN LOGGING AT Thu Jun 14 20:22:04 2018
+
+Jun 14 20:22:04 FiSHLiM plugin loaded
+Jun 14 20:22:04 Checksum plugin loaded
+Jun 14 20:22:04 Sysinfo plugin loaded
+Jun 14 20:22:04 *	Looking up chat.freenode.net
+Jun 14 20:22:04 *	Connecting to chat.freenode.net (162.213.39.42:6697)
+Jun 14 20:22:05 *	* Certification info:
+Jun 14 20:22:05 *	  Subject:
+Jun 14 20:22:05 *	    CN=weber.freenode.net
+Jun 14 20:22:05 *	  Issuer:
+Jun 14 20:22:05 *	    C=US
+Jun 14 20:22:05 *	    O=Let's Encrypt
+Jun 14 20:22:05 *	    CN=Let's Encrypt Authority X3
+Jun 14 20:22:05 *	  Public key algorithm: rsaEncryption (4096 bits)
+Jun 14 20:22:05 *	  Sign algorithm sha256WithRSAEncryption
+Jun 14 20:22:05 *	  Valid since Apr 16 05:01:25 2018 GM to Jul 15 05:01:25 2018 GM
+Jun 14 20:22:05 *	* Cipher info:
+Jun 14 20:22:05 *	  Version: TLSv1/SSLv3, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Jun 14 20:22:05 *	Connected. Now logging in.
+Jun 14 20:22:05 *	*** Looking up your hostname...
+Jun 14 20:22:05 *	*** Checking Ident
+Jun 14 20:22:05 *	*** Couldn't look up your hostname
+Jun 14 20:22:13 *	*** No Ident response
+Jun 14 20:22:13 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Jun 14 20:22:13 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+Jun 14 20:22:13 *	doug is already in use. Retrying with doug_...
+Jun 14 20:22:13 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Thu Jun 14 20:22:13 2018
+
+**** BEGIN LOGGING AT Fri Jun 15 12:47:12 2018
+
+Jun 15 12:47:12 FiSHLiM plugin loaded
+Jun 15 12:47:12 Checksum plugin loaded
+Jun 15 12:47:12 Sysinfo plugin loaded
+Jun 15 12:47:12 *	Looking up chat.freenode.net
+Jun 15 12:47:12 *	Connecting to chat.freenode.net (195.154.200.232:6697)
+Jun 15 12:47:13 *	* Certification info:
+Jun 15 12:47:13 *	  Subject:
+Jun 15 12:47:13 *	    CN=barjavel.freenode.net
+Jun 15 12:47:13 *	  Issuer:
+Jun 15 12:47:13 *	    C=US
+Jun 15 12:47:13 *	    O=Let's Encrypt
+Jun 15 12:47:13 *	    CN=Let's Encrypt Authority X3
+Jun 15 12:47:13 *	  Public key algorithm: rsaEncryption (4096 bits)
+Jun 15 12:47:13 *	  Sign algorithm sha256WithRSAEncryption
+Jun 15 12:47:13 *	  Valid since Jun 11 05:01:00 2018 GM to Sep  9 05:01:00 2018 GM
+Jun 15 12:47:13 *	* Cipher info:
+Jun 15 12:47:13 *	  Version: TLSv1/SSLv3, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Jun 15 12:47:13 *	Connected. Now logging in.
+Jun 15 12:47:13 *	*** Looking up your hostname...
+Jun 15 12:47:13 *	*** Checking Ident
+Jun 15 12:47:13 *	*** Couldn't look up your hostname
+Jun 15 12:47:23 *	*** No Ident response
+Jun 15 12:47:23 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Jun 15 12:47:23 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+Jun 15 12:47:23 *	doug is already in use. Retrying with doug_...
+Jun 15 12:47:23 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Fri Jun 15 12:47:24 2018
+
+**** BEGIN LOGGING AT Fri Jun 15 12:51:15 2018
+
+Jun 15 12:51:15 FiSHLiM plugin loaded
+Jun 15 12:51:15 Checksum plugin loaded
+Jun 15 12:51:15 Sysinfo plugin loaded
+Jun 15 12:51:15 *	Looking up chat.freenode.net
+Jun 15 12:51:15 *	Connecting to chat.freenode.net (139.162.227.51:6697)
+Jun 15 12:51:16 *	* Certification info:
+Jun 15 12:51:16 *	  Subject:
+Jun 15 12:51:16 *	    CN=niven.freenode.net
+Jun 15 12:51:16 *	  Issuer:
+Jun 15 12:51:16 *	    C=US
+Jun 15 12:51:16 *	    O=Let's Encrypt
+Jun 15 12:51:16 *	    CN=Let's Encrypt Authority X3
+Jun 15 12:51:16 *	  Public key algorithm: rsaEncryption (4096 bits)
+Jun 15 12:51:16 *	  Sign algorithm sha256WithRSAEncryption
+Jun 15 12:51:16 *	  Valid since May 28 05:01:48 2018 GM to Aug 26 05:01:48 2018 GM
+Jun 15 12:51:16 *	* Cipher info:
+Jun 15 12:51:16 *	  Version: TLSv1/SSLv3, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Jun 15 12:51:16 *	Connected. Now logging in.
+Jun 15 12:51:16 *	*** Looking up your hostname...
+Jun 15 12:51:16 *	*** Checking Ident
+Jun 15 12:51:16 *	*** Couldn't look up your hostname
+Jun 15 12:51:23 *	*** No Ident response
+Jun 15 12:51:23 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Jun 15 12:51:23 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+Jun 15 12:51:23 *	doug is already in use. Retrying with doug_...
+Jun 15 12:51:23 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Fri Jun 15 12:51:24 2018
+
+**** BEGIN LOGGING AT Fri Jun 15 13:29:06 2018
+
+Jun 15 13:29:06 FiSHLiM plugin loaded
+Jun 15 13:29:06 Checksum plugin loaded
+Jun 15 13:29:06 Sysinfo plugin loaded
+Jun 15 13:29:06 *	Looking up chat.freenode.net
+Jun 15 13:29:06 *	Connecting to chat.freenode.net (173.230.128.213:6697)
+Jun 15 13:29:07 *	* Certification info:
+Jun 15 13:29:07 *	  Subject:
+Jun 15 13:29:07 *	    CN=moon.freenode.net
+Jun 15 13:29:07 *	  Issuer:
+Jun 15 13:29:07 *	    C=US
+Jun 15 13:29:07 *	    O=Let's Encrypt
+Jun 15 13:29:07 *	    CN=Let's Encrypt Authority X3
+Jun 15 13:29:07 *	  Public key algorithm: rsaEncryption (4096 bits)
+Jun 15 13:29:07 *	  Sign algorithm sha256WithRSAEncryption
+Jun 15 13:29:07 *	  Valid since Apr 30 05:02:40 2018 GM to Jul 29 05:02:40 2018 GM
+Jun 15 13:29:07 *	* Cipher info:
+Jun 15 13:29:07 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Jun 15 13:29:07 *	Connected. Now logging in.
+Jun 15 13:29:07 *	*** Looking up your hostname...
+Jun 15 13:29:07 *	*** Checking Ident
+Jun 15 13:29:07 *	*** Couldn't look up your hostname
+Jun 15 13:29:16 *	*** No Ident response
+Jun 15 13:29:16 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Jun 15 13:29:16 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+Jun 15 13:29:16 *	doug is already in use. Retrying with doug_...
+Jun 15 13:29:16 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Fri Jun 15 13:29:16 2018
+
+**** BEGIN LOGGING AT Fri Jun 15 13:43:40 2018
+
+Jun 15 13:43:40 FiSHLiM plugin loaded
+Jun 15 13:43:40 Checksum plugin loaded
+Jun 15 13:43:40 Sysinfo plugin loaded
+Jun 15 13:43:40 *	Looking up chat.freenode.net
+Jun 15 13:43:40 *	Connecting to chat.freenode.net (130.185.232.126:6697)
+Jun 15 13:43:42 *	* Certification info:
+Jun 15 13:43:42 *	  Subject:
+Jun 15 13:43:42 *	    CN=hitchcock.freenode.net
+Jun 15 13:43:42 *	  Issuer:
+Jun 15 13:43:42 *	    C=US
+Jun 15 13:43:42 *	    O=Let's Encrypt
+Jun 15 13:43:42 *	    CN=Let's Encrypt Authority X3
+Jun 15 13:43:42 *	  Public key algorithm: rsaEncryption (4096 bits)
+Jun 15 13:43:42 *	  Sign algorithm sha256WithRSAEncryption
+Jun 15 13:43:42 *	  Valid since Apr 16 05:02:15 2018 GM to Jul 15 05:02:15 2018 GM
+Jun 15 13:43:42 *	* Cipher info:
+Jun 15 13:43:42 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Jun 15 13:43:42 *	Connected. Now logging in.
+Jun 15 13:43:42 *	*** Looking up your hostname...
+Jun 15 13:43:42 *	*** Checking Ident
+Jun 15 13:43:42 *	*** Couldn't look up your hostname
+Jun 15 13:43:46 *	*** No Ident response
+Jun 15 13:43:47 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Jun 15 13:43:47 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+Jun 15 13:43:47 *	doug is already in use. Retrying with doug_...
+Jun 15 13:43:47 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Fri Jun 15 13:43:47 2018
+
+**** BEGIN LOGGING AT Sun Jun 17 16:02:48 2018
+
+Jun 17 16:02:48 FiSHLiM plugin loaded
+Jun 17 16:02:48 Checksum plugin loaded
+Jun 17 16:02:48 Sysinfo plugin loaded
+Jun 17 16:02:48 *	Looking up chat.freenode.net
+Jun 17 16:02:48 *	Connecting to chat.freenode.net (173.230.128.213:6697)
+Jun 17 16:02:49 *	* Certification info:
+Jun 17 16:02:49 *	  Subject:
+Jun 17 16:02:49 *	    CN=moon.freenode.net
+Jun 17 16:02:49 *	  Issuer:
+Jun 17 16:02:49 *	    C=US
+Jun 17 16:02:49 *	    O=Let's Encrypt
+Jun 17 16:02:49 *	    CN=Let's Encrypt Authority X3
+Jun 17 16:02:49 *	  Public key algorithm: rsaEncryption (4096 bits)
+Jun 17 16:02:49 *	  Sign algorithm sha256WithRSAEncryption
+Jun 17 16:02:49 *	  Valid since Apr 30 05:02:40 2018 GM to Jul 29 05:02:40 2018 GM
+Jun 17 16:02:49 *	* Cipher info:
+Jun 17 16:02:49 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Jun 17 16:02:49 *	Connected. Now logging in.
+Jun 17 16:02:49 *	*** Looking up your hostname...
+Jun 17 16:02:49 *	*** Checking Ident
+Jun 17 16:02:49 *	*** Couldn't look up your hostname
+Jun 17 16:02:57 *	*** No Ident response
+Jun 17 16:02:57 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Jun 17 16:02:57 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+Jun 17 16:02:57 *	doug is already in use. Retrying with doug_...
+Jun 17 16:02:57 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Sun Jun 17 16:02:57 2018
+
+**** BEGIN LOGGING AT Tue Jun 19 21:19:28 2018
+
+Jun 19 21:19:28 FiSHLiM plugin loaded
+Jun 19 21:19:28 Checksum plugin loaded
+Jun 19 21:19:28 Sysinfo plugin loaded
+**** BEGIN LOGGING AT Fri Jun 22 14:37:43 2018
+
+Jun 22 14:37:43 FiSHLiM plugin loaded
+Jun 22 14:37:43 Checksum plugin loaded
+Jun 22 14:37:43 Sysinfo plugin loaded
+Jun 22 14:37:43 *	Looking up irc.oftc.net
+Jun 22 14:37:44 *	Connecting to irc.geo.oftc.net (64.62.190.36:6697)
+Jun 22 14:37:45 *	* Certification info:
+Jun 22 14:37:45 *	  Subject:
+Jun 22 14:37:45 *	    CN=charm.oftc.net
+Jun 22 14:37:45 *	  Issuer:
+Jun 22 14:37:45 *	    C=US
+Jun 22 14:37:45 *	    O=Let's Encrypt
+Jun 22 14:37:45 *	    CN=Let's Encrypt Authority X3
+Jun 22 14:37:45 *	  Public key algorithm: rsaEncryption (2048 bits)
+Jun 22 14:37:45 *	  Sign algorithm sha256WithRSAEncryption
+Jun 22 14:37:45 *	  Valid since May  7 16:54:48 2018 GM to Aug  5 16:54:48 2018 GM
+Jun 22 14:37:45 *	* Cipher info:
+Jun 22 14:37:45 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Jun 22 14:37:45 *	Connected. Now logging in.
+Jun 22 14:37:45 *	*** Looking up your hostname...
+Jun 22 14:37:45 *	*** Checking Ident
+Jun 22 14:37:45 *	*** Couldn't look up your hostname
+Jun 22 14:37:56 *	*** No Ident response
+Jun 22 14:37:56 *	Capabilities supported: multi-prefix
+Jun 22 14:37:56 *	Capabilities requested: multi-prefix 
+Jun 22 14:37:56 *	Capabilities acknowledged: multi-prefix
+Jun 22 14:37:56 *	*** Connected securely via TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384-256
+**** ENDING LOGGING AT Fri Jun 22 14:37:56 2018
+
+**** BEGIN LOGGING AT Sat Aug 11 09:04:12 2018
+
+Aug 11 09:04:12 FiSHLiM plugin loaded
+Aug 11 09:04:12 Checksum plugin loaded
+Aug 11 09:04:12 Sysinfo plugin loaded
+Aug 11 09:04:12 *	Looking up irc.oftc.net
+Aug 11 09:04:12 *	Connecting to irc.geo.oftc.net (207.192.72.99:6697)
+Aug 11 09:04:13 *	* Certification info:
+Aug 11 09:04:13 *	  Subject:
+Aug 11 09:04:13 *	    CN=weber.oftc.net
+Aug 11 09:04:13 *	  Issuer:
+Aug 11 09:04:13 *	    C=US
+Aug 11 09:04:13 *	    O=Let's Encrypt
+Aug 11 09:04:13 *	    CN=Let's Encrypt Authority X3
+Aug 11 09:04:13 *	  Public key algorithm: rsaEncryption (2048 bits)
+Aug 11 09:04:13 *	  Sign algorithm sha256WithRSAEncryption
+Aug 11 09:04:13 *	  Valid since Jul 22 08:52:07 2018 GM to Oct 20 08:52:07 2018 GM
+Aug 11 09:04:13 *	* Cipher info:
+Aug 11 09:04:13 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Aug 11 09:04:13 *	Connected. Now logging in.
+Aug 11 09:04:13 *	*** Looking up your hostname...
+Aug 11 09:04:13 *	*** Checking Ident
+Aug 11 09:04:13 *	*** Found your hostname
+Aug 11 09:04:24 *	*** No Ident response
+Aug 11 09:04:24 *	Capabilities supported: multi-prefix
+Aug 11 09:04:24 *	Capabilities requested: multi-prefix 
+Aug 11 09:04:24 *	Capabilities acknowledged: multi-prefix
+Aug 11 09:04:24 *	*** Connected securely via TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384-256
+**** ENDING LOGGING AT Sat Aug 11 09:04:24 2018
+

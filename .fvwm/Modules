@@ -23,7 +23,7 @@ Style * Icon unknown1.xpm
 Style * !IconTitle
 
 # top left
-# Style "*" IconBox 4 4 400 288, IconGrid 20 20, IconFill left top
+Style "*" IconBox 4 4 400 288, IconGrid 20 20, IconFill left top
 # Style "*" IconBox 8 64 800 128, IconGrid 24 24, IconFill left top
 #
 # top center
@@ -36,7 +36,7 @@ Style * !IconTitle
 # Style * IconBox 1250 48 1360 640, IconGrid 24 24, IconFill left top
 #
 # bottom left
-Style * IconBox 8 1008 640 1080, IconGrid 16 16 , IconFill left top
+# Style * IconBox 8 1008 640 1080, IconGrid 16 16 , IconFill left top
 #
 # middle right
 # Style * Iconbox 1224 300 1360 600, IconGrid 36 36, IconFill left top

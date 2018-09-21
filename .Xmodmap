@@ -11,3 +11,5 @@ keysym Alt_R = F13
 keysym Control_R = F14
 !
 ! keysym 0xffec = F15
+!
+! EOF

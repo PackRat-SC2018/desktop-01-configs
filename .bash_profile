@@ -13,7 +13,7 @@ then
     export PATH=${PATH}:$HOME/bin:/$HOME/conky:./
 fi
 
-export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'subl3'; else echo 'nano'; fi)"
+export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'subl3'; else echo 'vim'; fi)"
 
 if [ -n "$DISPLAY" ]; then
     export BROWSER=firefox

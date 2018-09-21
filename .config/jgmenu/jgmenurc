@@ -8,11 +8,12 @@ at_pointer           = 0
 terminal_exec        = urxvt
 terminal_args        = -e
 #monitor             = 0
+#columns              = 1
 
 menu_margin_x       = 8
 menu_margin_y       = 28
-menu_width           = 200
-menu_padding_top     = 2
+menu_width           = 160
+menu_padding_top     = 40
 menu_padding_right   = 2
 menu_padding_bottom  = 2
 menu_padding_left    = 2
@@ -60,6 +61,6 @@ color_sel_bg        = #313131 90
 color_sel_fg        = #FEFEFE 100
 color_sel_border    = #313131 8
 
-color_sep_fg 		= #3E3E3E 30
+color_sep_fg 		= #656565 30
 
 #csv_name_format = %n (%g)

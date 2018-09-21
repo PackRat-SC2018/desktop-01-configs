@@ -1,0 +1,32 @@
+[Default Applications]
+x-scheme-handler/mailto=userapp-Thunderbird-JZSPIZ.desktop
+message/rfc822=userapp-Thunderbird-JZSPIZ.desktop
+x-scheme-handler/news=userapp-Thunderbird-JZSPIZ.desktop
+x-scheme-handler/snews=userapp-Thunderbird-JZSPIZ.desktop
+x-scheme-handler/nntp=userapp-Thunderbird-JZSPIZ.desktop
+application/pdf=qpdfview.desktop
+
+[Added Associations]
+x-scheme-handler/mailto=userapp-Thunderbird-JZSPIZ.desktop;
+message/rfc822=userapp-Thunderbird-JZSPIZ.desktop;
+x-scheme-handler/news=userapp-Thunderbird-JZSPIZ.desktop;
+x-scheme-handler/snews=userapp-Thunderbird-JZSPIZ.desktop;
+x-scheme-handler/nntp=userapp-Thunderbird-JZSPIZ.desktop;
+text/plain=sublime_text.desktop;leafpad.desktop;geany.desktop;
+image/png=geeqie.desktop;gimp.desktop;
+image/jpeg=geeqie.desktop;gimp.desktop;viewnior.desktop;
+text/x-lua=geany.desktop;
+text/x-matlab=sublime_text.desktop;geany.desktop;
+application/x-shellscript=sublime_text.desktop;geany.desktop;
+application/vnd.oasis.opendocument.text=libreoffice-writer.desktop;
+text/html=firefox.desktop;
+application/x-theme=sublime_text.desktop;
+audio/x-wav=mpv.desktop;
+audio/mpeg=mpv.desktop;
+application/zip=xarchiver.desktop;
+application/xml=sublime_text.desktop;
+application/vnd.rar=xarchiver.desktop;
+application/x-compressed-tar=xarchiver.desktop;
+application/x-xz-compressed-tar=xarchiver.desktop;
+video/mp4=mpv.desktop;
+application/pdf=org.pwmt.zathura-pdf-poppler.desktop;gimp.desktop;libreoffice-draw.desktop;qpdfview.desktop;

@@ -16,8 +16,9 @@ fbsetroot -solid "#333366" &
 numlockx on
 
 # display timeout and sleep
-xset s 3600 3600
-xset dpms 3600 3700 4000
+# xset s 3600 3600
+# xset dpms 3600 3700 4000
+xset s 1200 -dpms
 
 # keyboard repeat rate
 xset r rate 400 50
@@ -35,6 +36,7 @@ xset m 1/1
 
 # 3rd party apps
 # (sleep 2s && conky -dc $HOME/.conky10fboxrc) &
+# conky -p 2 -dc /home/doug/conky/conkyfboxrc &
 # (sleep 2s && connman-gtk --tray) &
 (sleep 2s && polybar fluxbox-bar) &
 

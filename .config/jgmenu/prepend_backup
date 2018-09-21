@@ -1,0 +1,10 @@
+Terminal,urxvt,utilities-terminal
+Editor,subl3,accessories-text-editor
+File Manager,thunar,folder-open
+Web Browser,firefox,firefox
+Mail,thunderbird,thunderbird
+Gimp,gimp,gimp
+Lock,slock,system-lock-screen
+Suspend,zzz,video-display
+Exit Session,void-logout,exit
+^sep()

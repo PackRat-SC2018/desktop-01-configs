@@ -253,7 +253,7 @@
   [Alpha]	{255}
 [end]
 [app] (name=yad) (class=calendar)
-  [Dimensions]	{23% 37%}
+  [Dimensions]	{21% 31%}
   [Position]	(UPPERLEFT)	{74% 4%}
   [Shaded]	{no}
   [Deco]	{0x66f}
@@ -354,8 +354,16 @@
   [Alpha]	{255}
 [end]
 [app] (name=xcalc) (class=XCalc)
-  [Dimensions]	{20% 52%}
+  [Dimensions]	{18% 45%}
+  [Position]	(UPPERLEFT)	{73% 5%}
+  [Shaded]	{no}
   [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
 [end]
 [app] (name=st-256color) (class=st-256color)
   [Dimensions]	{62% 72%}
@@ -459,4 +467,139 @@
 [app] (name=hexchat) (class=Hexchat)
   [Position]	(UPPERLEFT)	{41% 39%}
   [Deco]	{0x67f}
+[end]
+[app] (name=Msgcompose) (class=Thunderbird) (role=Msgcompose)
+  [Position]	(UPPERLEFT)	{8% 7%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=leafpad) (class=Leafpad)
+  [Dimensions]	{76% 83%}
+  [Position]	(UPPERLEFT)	{12% 8%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=gpartedbin) (class=GParted)
+  [Dimensions]	{80% 90%}
+  [Position]	(UPPERLEFT)	{10% 5%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=file-png) (class=Gimp-2.10) (role=file-png)
+  [Position]	(UPPERLEFT)	{5% 10%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=gimp-2.10) (class=Gimp-2.10) (role=gimp-file-export)
+  [Dimensions]	{54% 64%}
+  [Position]	(UPPERLEFT)	{23% 18%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=gimp-2.10) (class=Gimp-2.10) (role=gimp-image-window-1)
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Maximized]	{yes}
+  [Layer]	{8}
+[end]
+[transient] (name=gimp-2.10) (class=Gimp-2.10) (role=gimp-message-dialog)
+  [Dimensions]	{21% 32%}
+  [Position]	(UPPERLEFT)	{39% 34%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=gimp-2.10) (class=Gimp-2.10) (role=gimp-message-dialog)
+  [Position]	(UPPERLEFT)	{41% 17%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=Places) (class=Basilisk) (role=Organizer)
+  [Dimensions]	{36% 51%}
+  [Position]	(UPPERLEFT)	{32% 24%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=Navigator) (class=Basilisk) (role=browser)
+  [Deco]	{0x67f}
+  [Maximized]	{yes}
+[end]
+[app] (name=qpdfview) (class=qpdfview)
+  [Dimensions]	{80% 90%}
+  [Position]	(UPPERLEFT)	{10% 5%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=thunderbird) (class=Thunderbird) (role=GtkFileChooserDialog)
+  [Position]	(UPPERLEFT)	{3% 4%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=zathura) (class=Zathura)
+  [Position]	(UPPERLEFT)	{22% 12%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
 [end]

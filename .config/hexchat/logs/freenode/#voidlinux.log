@@ -1,0 +1,87 @@
+**** BEGIN LOGGING AT Thu Jun 14 13:42:56 2018
+
+Jun 14 13:42:56 *	Now talking on #voidlinux
+Jun 14 13:42:56 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
+Jun 14 13:42:56 *	Topic for #voidlinux set by xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (Mon Apr 18 10:21:32 2016)
+Jun 14 13:53:22 *	mamapitufo has quit (Quit: .,.,)
+Jun 14 13:53:49 *	mamapitufo (~mamapituf@cpc73676-dals20-2-0-cust90.20-2.cable.virginm.net) has joined
+Jun 14 13:55:13 *	teatime07 (~teatime07@unaffiliated/teatime07) has joined
+Jun 14 13:56:00 <quinq>	Well, that was not the issue indeed.
+Jun 14 13:56:41 *	jjk96 (~jjk96@ftth-213-134-232-052.solcon.nl) has joined
+Jun 14 13:57:10 *	mamapitufo has quit (Read error: Connection reset by peer)
+Jun 14 13:57:37 *	mamapitufo (~mamapituf@cpc73676-dals20-2-0-cust90.20-2.cable.virginm.net) has joined
+Jun 14 13:58:57 <Piraty>	:D :D rm /bin/sh ; ln -s /bin/bash /bin/sh  https://www.preining.info/blog/2018/06/microsofts-failed-attempt-on-debian-packaging/
+Jun 14 13:59:55 <bug2000>	the hell
+Jun 14 14:00:50 *	totalmongobaer_ has quit (Remote host closed the connection)
+Jun 14 14:03:07 <quinq>	yeah ^^
+Jun 14 14:04:01 *	steinex has quit (Quit: upgrade)
+Jun 14 14:04:01 <quinq>	Also, strangely, the author seems more disturbed by them arbitrarily removing /usr/bin/R than replacing the system shell
+**** BEGIN LOGGING AT Thu Jun 14 14:39:52 2018
+
+Jun 14 14:39:52 *	Now talking on #voidlinux
+Jun 14 14:39:52 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
+Jun 14 14:39:52 *	Topic for #voidlinux set by xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (Mon Apr 18 10:21:32 2016)
+Jun 14 14:44:13 <Nilium>	I'd be curious why someone wouldn't immediately go "this is a bad idea" when writing the preinstall script.
+Jun 14 14:44:18 <Nilium>	Like what's the commit message that lead to that
+Jun 14 14:45:57 *	OlgaV has quit (Ping timeout: 240 seconds)
+Jun 14 14:46:53 <quinq>	Nilium, that's because you don't think like a Microsoft developer
+Jun 14 14:47:33 <dTal>	dear god, imagine the hassle if you actually installed that thing
+Jun 14 14:47:36 <Nilium>	I think like someone who's 5 SAN away from shouting at his computer because packer is a thing that exists
+Jun 14 14:47:48 <dTal>	I think this is a good sign that packaging needs a serious rethink
+Jun 14 14:48:02 <dTal>	arbitrary shell scripts in packages should be abolished
+Jun 14 14:48:21 <dTal>	Nix/Guix have the right idea
+Jun 14 14:49:37 *	well_laid_lawn has quit (Ping timeout: 256 seconds)
+Jun 14 14:51:09 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Thu Jun 14 14:51:09 2018
+
+**** BEGIN LOGGING AT Thu Jun 14 14:52:27 2018
+
+Jun 14 14:52:27 *	Now talking on #voidlinux
+Jun 14 14:52:27 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
+Jun 14 14:52:27 *	Topic for #voidlinux set by xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (Mon Apr 18 10:21:32 2016)
+Jun 14 14:53:04 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Thu Jun 14 14:53:04 2018
+
+**** BEGIN LOGGING AT Thu Jun 14 20:22:21 2018
+
+Jun 14 20:22:21 *	Now talking on #voidlinux
+Jun 14 20:22:21 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
+Jun 14 20:22:21 *	Topic for #voidlinux set by xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (Mon Apr 18 10:21:32 2016)
+Jun 14 20:25:08 *	kageru has quit (Ping timeout: 276 seconds)
+Jun 14 20:29:38 *	shardz has quit ()
+Jun 14 20:30:04 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Thu Jun 14 20:30:04 2018
+
+**** BEGIN LOGGING AT Fri Jun 15 12:47:33 2018
+
+Jun 15 12:47:33 *	Now talking on #voidlinux
+Jun 15 12:47:33 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
+Jun 15 12:47:33 *	Topic for #voidlinux set by xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (Mon Apr 18 10:21:32 2016)
+Jun 15 12:49:05 *	autrimpo has quit (Quit: WeeChat 2.1)
+Jun 15 12:50:33 *	autrimpo (~autrimpo@host-37-191-206-2.lynet.no) has joined
+Jun 15 12:50:57 <blawiz>	hmm could be
+Jun 15 12:51:07 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Fri Jun 15 12:51:07 2018
+
+**** BEGIN LOGGING AT Fri Jun 15 12:51:32 2018
+
+Jun 15 12:51:32 *	Now talking on #voidlinux
+Jun 15 12:51:32 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
+Jun 15 12:51:32 *	Topic for #voidlinux set by xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (Mon Apr 18 10:21:32 2016)
+Jun 15 12:51:53 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Fri Jun 15 12:51:53 2018
+
+**** BEGIN LOGGING AT Fri Jun 15 13:43:59 2018
+
+Jun 15 13:43:59 *	Now talking on #voidlinux
+Jun 15 13:43:59 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
+Jun 15 13:43:59 *	Topic for #voidlinux set by xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (Mon Apr 18 10:21:32 2016)
+Jun 15 13:44:50 *	zimmer__Elite (~zimmer@94.197.120.216.threembb.co.uk) has joined
+Jun 15 13:47:11 *	zimmer_elite has quit (Ping timeout: 256 seconds)
+Jun 15 13:57:49 *	Shinryuu (~gdsptuwtd@mobile-access-bcee29-217.dhcp.inet.fi) has joined
+Jun 15 14:01:04 *	ToffeeYogurtPots (~ToffeeYog@gateway/tor-sasl/toffeeyogurtpots) has joined
+Jun 15 14:10:54 *	wink (fhtagn@porkchop.art-core.org) has joined
+Jun 15 14:16:23 *	gspe (~gspe@dynamic-adsl-94-34-150-220.clienti.tiscali.it) has joined
+Jun 15 14:27:07 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Fri Jun 15 14:27:07 2018
+

@@ -10,7 +10,7 @@ terminal_args        = -e
 #monitor             = 0
 
 menu_margin_x       = 8
-menu_margin_y       = 40
+menu_margin_y       = 36
 menu_width           = 200
 menu_padding_top     = 2
 menu_padding_right   = 2
@@ -41,7 +41,7 @@ font                = Sans Regular 12px
 font_fallback       = xtg
 icon_size           = 24
 icon_text_spacing   = 6
-icon_theme          = Vibrantly-Simple-Dark
+icon_theme          = Papirus
 #icon_theme          = DarK
 #icon_theme_fallback = xtg
 

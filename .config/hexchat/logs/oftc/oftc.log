@@ -1,0 +1,199 @@
+**** BEGIN LOGGING AT Tue Jun 19 21:19:30 2018
+
+Jun 19 21:19:30 *	*** Looking up your hostname...
+Jun 19 21:19:30 *	*** Checking Ident
+Jun 19 21:19:30 *	*** Couldn't look up your hostname
+Jun 19 21:19:40 *	*** No Ident response
+Jun 19 21:19:40 *	Capabilities supported: multi-prefix
+Jun 19 21:19:40 *	Capabilities requested: multi-prefix 
+Jun 19 21:19:41 *	Capabilities acknowledged: multi-prefix
+Jun 19 21:19:41 *	*** Connected securely via TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384-256
+**** ENDING LOGGING AT Tue Jun 19 21:19:41 2018
+
+**** BEGIN LOGGING AT Tue Jun 19 21:19:41 2018
+
+Jun 19 21:19:41 *	Welcome to the OFTC Internet Relay Chat Network PackRat
+Jun 19 21:19:41 *	Your host is weber.oftc.net[207.192.72.99/6697], running version hybrid-7.2.2+oftc1.7.3
+Jun 19 21:19:41 *	This server was created Mar  7 2018 at 21:34:02
+Jun 19 21:19:41 *	weber.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+Jun 19 21:19:41 *	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+Jun 19 21:19:41 *	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+Jun 19 21:19:41 *	9J5AAA2MH :your unique ID
+Jun 19 21:19:41 *	There are 31 users and 13303 invisible on 19 servers
+Jun 19 21:19:41 *	19 :IRC Operators online
+Jun 19 21:19:41 *	42 :unknown connection(s)
+Jun 19 21:19:41 *	2539 :channels formed
+Jun 19 21:19:41 *	I have 914 clients and 1 servers
+Jun 19 21:19:41 *	Current local users: 914  Max: 1035
+Jun 19 21:19:41 *	Current global users: 13334  Max: 13877
+Jun 19 21:19:41 *	Highest connection count: 1036 (1035 clients) (36728 connections received)
+Jun 19 21:19:41 *	- weber.oftc.net Message of the Day - 
+Jun 19 21:19:41 *	-   O
+Jun 19 21:19:41 *	-    \   The Open and Free
+Jun 19 21:19:41 *	-     O
+Jun 19 21:19:41 *	-    /|  Technology Community
+Jun 19 21:19:41 *	- O-O O
+Jun 19 21:19:41 *	- 
+Jun 19 21:19:41 *	- Welcome to OFTC's IRC network.
+Jun 19 21:19:41 *	- 
+Jun 19 21:19:41 *	- The Open and Free Technology Community was founded at the
+Jun 19 21:19:41 *	- end of 2001 by a group of experienced members of the Open
+Jun 19 21:19:41 *	- Source and Free Software communities; it is aimed at
+Jun 19 21:19:41 *	- providing these communities with better communication,
+Jun 19 21:19:41 *	- development, and support infrastructure. Our goal is to
+Jun 19 21:19:41 *	- provide stable services to members of the community in any
+Jun 19 21:19:41 *	- part of the world, while listening closely to their needs
+Jun 19 21:19:41 *	- and desires.
+Jun 19 21:19:41 *	- 
+Jun 19 21:19:41 *	- We are not a general purpose chat platform, but a topical
+Jun 19 21:19:41 *	- network intent on providing the open source and free
+Jun 19 21:19:41 *	- software communities a means to cooperate and communicate.
+Jun 19 21:19:41 *	- As such, illegal and off-topic activity, such as warez
+Jun 19 21:19:41 *	- trading, may result in being barred from access.
+Jun 19 21:19:41 *	- 
+Jun 19 21:19:41 *	- OFTC honors your privacy. To operate the network, we store
+Jun 19 21:19:41 *	- and process information about IRC connections, nicknames,
+Jun 19 21:19:41 *	- and channels. Our Privacy Policy explains what we do with
+Jun 19 21:19:41 *	- that data, and what your rights are. By connecting, you
+Jun 19 21:19:41 *	- accept these terms: https://www.oftc.net/Privacy_Policy/
+Jun 19 21:19:41 *	- 
+Jun 19 21:19:41 *	- For more information on OFTC, please visit https://www.oftc.net/.
+Jun 19 21:19:41 *	- 
+Jun 19 21:19:41 *	- If you require assistance, stop by in channel #oftc, or email
+Jun 19 21:19:41 *	- support@oftc.net with details.
+Jun 19 21:19:41 *	- 
+Jun 19 21:19:41 *	- Thanks and enjoy your stay,
+Jun 19 21:19:41 *	- 
+Jun 19 21:19:41 *	-         The OFTC team
+Jun 19 21:19:41 *	End of /MOTD command.
+Jun 19 21:19:41 *	PackRat sets mode +i on PackRat
+**** ENDING LOGGING AT Tue Jun 19 21:21:08 2018
+
+**** BEGIN LOGGING AT Tue Jun 19 21:21:08 2018
+
+Jun 19 21:35:48 Sysinfo plugin unloaded
+Jun 19 21:35:48 Checksum plugin unloaded
+**** ENDING LOGGING AT Tue Jun 19 21:35:48 2018
+
+**** BEGIN LOGGING AT Fri Jun 22 14:37:56 2018
+
+Jun 22 14:37:56 *	Welcome to the OFTC Internet Relay Chat Network PackRat
+Jun 22 14:37:56 *	Your host is charm.oftc.net[64.62.190.36/6697], running version hybrid-7.2.2+oftc1.7.3
+Jun 22 14:37:56 *	This server was created Mar  7 2018 at 21:33:54
+Jun 22 14:37:56 *	charm.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+Jun 22 14:37:56 *	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+Jun 22 14:37:56 *	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS ELIST=CMNTU SAFELIST AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+Jun 22 14:37:56 *	4JHAAAA85 :your unique ID
+Jun 22 14:37:56 *	There are 28 users and 13545 invisible on 19 servers
+Jun 22 14:37:56 *	18 :IRC Operators online
+Jun 22 14:37:56 *	33 :unknown connection(s)
+Jun 22 14:37:56 *	2561 :channels formed
+Jun 22 14:37:56 *	I have 233 clients and 1 servers
+Jun 22 14:37:56 *	Current local users: 233  Max: 235
+Jun 22 14:37:56 *	Current global users: 13573  Max: 13736
+Jun 22 14:37:56 *	Highest connection count: 236 (235 clients) (1256 connections received)
+Jun 22 14:37:56 *	- charm.oftc.net Message of the Day - 
+Jun 22 14:37:56 *	-   O
+Jun 22 14:37:56 *	-    \   The Open and Free
+Jun 22 14:37:56 *	-     O
+Jun 22 14:37:56 *	-    /|  Technology Community
+Jun 22 14:37:56 *	- O-O O
+Jun 22 14:37:56 *	- 
+Jun 22 14:37:56 *	- Welcome to OFTC's IRC network.
+Jun 22 14:37:56 *	- 
+Jun 22 14:37:56 *	- The Open and Free Technology Community was founded at the
+Jun 22 14:37:56 *	- end of 2001 by a group of experienced members of the Open
+Jun 22 14:37:56 *	- Source and Free Software communities; it is aimed at
+Jun 22 14:37:56 *	- providing these communities with better communication,
+Jun 22 14:37:56 *	- development, and support infrastructure. Our goal is to
+Jun 22 14:37:56 *	- provide stable services to members of the community in any
+Jun 22 14:37:56 *	- part of the world, while listening closely to their needs
+Jun 22 14:37:56 *	- and desires.
+Jun 22 14:37:56 *	- 
+Jun 22 14:37:56 *	- We are not a general purpose chat platform, but a topical
+Jun 22 14:37:56 *	- network intent on providing the open source and free
+Jun 22 14:37:56 *	- software communities a means to cooperate and communicate.
+Jun 22 14:37:56 *	- As such, illegal and off-topic activity, such as warez
+Jun 22 14:37:56 *	- trading, may result in being barred from access.
+Jun 22 14:37:56 *	- 
+Jun 22 14:37:56 *	- OFTC honors your privacy. To operate the network, we store
+Jun 22 14:37:56 *	- and process information about IRC connections, nicknames,
+Jun 22 14:37:56 *	- and channels. Our Privacy Policy explains what we do with
+Jun 22 14:37:56 *	- that data, and what your rights are. By connecting, you
+Jun 22 14:37:56 *	- accept these terms: https://www.oftc.net/Privacy_Policy/
+Jun 22 14:37:56 *	- 
+Jun 22 14:37:56 *	- For more information on OFTC, please visit https://www.oftc.net/.
+Jun 22 14:37:56 *	- 
+Jun 22 14:37:56 *	- If you require assistance, stop by in channel #oftc, or email
+Jun 22 14:37:56 *	- support@oftc.net with details.
+Jun 22 14:37:56 *	- 
+Jun 22 14:37:56 *	- Thanks and enjoy your stay,
+Jun 22 14:37:56 *	- 
+Jun 22 14:37:56 *	-         The OFTC team
+Jun 22 14:37:56 *	End of /MOTD command.
+Jun 22 14:37:56 *	PackRat sets mode +i on PackRat
+Jun 22 15:21:11 Sysinfo plugin unloaded
+Jun 22 15:21:11 Checksum plugin unloaded
+**** ENDING LOGGING AT Fri Jun 22 15:21:11 2018
+
+**** BEGIN LOGGING AT Sat Aug 11 09:04:24 2018
+
+Aug 11 09:04:24 *	Welcome to the OFTC Internet Relay Chat Network PackRat
+Aug 11 09:04:24 *	Your host is weber.oftc.net[207.192.72.99/6697], running version hybrid-7.2.2+oftc1.7.3
+Aug 11 09:04:24 *	This server was created Jun 23 2018 at 19:18:56
+Aug 11 09:04:24 *	weber.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+Aug 11 09:04:24 *	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+Aug 11 09:04:24 *	CHANLIMIT=#:90 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+Aug 11 09:04:24 *	9J5AAA8JU :your unique ID
+Aug 11 09:04:24 *	There are 31 users and 13104 invisible on 20 servers
+Aug 11 09:04:24 *	23 :IRC Operators online
+Aug 11 09:04:24 *	1 :unknown connection(s)
+Aug 11 09:04:24 *	2524 :channels formed
+Aug 11 09:04:24 *	I have 938 clients and 1 servers
+Aug 11 09:04:24 *	Current local users: 938  Max: 1083
+Aug 11 09:04:24 *	Current global users: 13135  Max: 13699
+Aug 11 09:04:24 *	Highest connection count: 1084 (1083 clients) (44409 connections received)
+Aug 11 09:04:24 *	- weber.oftc.net Message of the Day - 
+Aug 11 09:04:24 *	-   O
+Aug 11 09:04:24 *	-    \   The Open and Free
+Aug 11 09:04:24 *	-     O
+Aug 11 09:04:24 *	-    /|  Technology Community
+Aug 11 09:04:24 *	- O-O O
+Aug 11 09:04:24 *	- 
+Aug 11 09:04:24 *	- Welcome to OFTC's IRC network.
+Aug 11 09:04:24 *	- 
+Aug 11 09:04:24 *	- The Open and Free Technology Community was founded at the
+Aug 11 09:04:24 *	- end of 2001 by a group of experienced members of the Open
+Aug 11 09:04:24 *	- Source and Free Software communities; it is aimed at
+Aug 11 09:04:24 *	- providing these communities with better communication,
+Aug 11 09:04:24 *	- development, and support infrastructure. Our goal is to
+Aug 11 09:04:24 *	- provide stable services to members of the community in any
+Aug 11 09:04:24 *	- part of the world, while listening closely to their needs
+Aug 11 09:04:24 *	- and desires.
+Aug 11 09:04:24 *	- 
+Aug 11 09:04:24 *	- We are not a general purpose chat platform, but a topical
+Aug 11 09:04:24 *	- network intent on providing the open source and free
+Aug 11 09:04:24 *	- software communities a means to cooperate and communicate.
+Aug 11 09:04:24 *	- As such, illegal and off-topic activity, such as warez
+Aug 11 09:04:24 *	- trading, may result in being barred from access.
+Aug 11 09:04:24 *	- 
+Aug 11 09:04:24 *	- OFTC honors your privacy. To operate the network, we store
+Aug 11 09:04:24 *	- and process information about IRC connections, nicknames,
+Aug 11 09:04:24 *	- and channels. Our Privacy Policy explains what we do with
+Aug 11 09:04:24 *	- that data, and what your rights are. By connecting, you
+Aug 11 09:04:24 *	- accept these terms: https://www.oftc.net/Privacy_Policy/
+Aug 11 09:04:24 *	- 
+Aug 11 09:04:24 *	- For more information on OFTC, please visit https://www.oftc.net/.
+Aug 11 09:04:24 *	- 
+Aug 11 09:04:24 *	- If you require assistance, stop by in channel #oftc, or email
+Aug 11 09:04:24 *	- support@oftc.net with details.
+Aug 11 09:04:24 *	- 
+Aug 11 09:04:24 *	- Thanks and enjoy your stay,
+Aug 11 09:04:24 *	- 
+Aug 11 09:04:24 *	-         The OFTC team
+Aug 11 09:04:24 *	End of /MOTD command.
+Aug 11 09:04:24 *	PackRat sets mode +i on PackRat
+Aug 11 09:04:40 Sysinfo plugin unloaded
+Aug 11 09:04:40 Checksum plugin unloaded
+**** ENDING LOGGING AT Sat Aug 11 09:04:40 2018
+

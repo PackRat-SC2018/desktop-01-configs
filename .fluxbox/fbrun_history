@@ -2,19 +2,22 @@ firefox
 thunderbird
 subl3
 urxvt
-lxappearance
 yad --font
 yad --color
-tint2
-uxterm
 xterm
-geany
 emacs
 st
 spacefm
 pcmanfm
 thunar
-compton
 sakura
 xfce4-terminal
 xfce4-terminal --drop-down
+vivaldi
+basilisk
+lxterminal
+geany
+tint2
+uxterm
+lxappearance
+compton

@@ -1,0 +1,21 @@
+
+[alsa]
+mixer-element=Master
+
+[audacious]
+record=FALSE
+
+[audgui]
+close_dialog_open=FALSE
+filebrowser_win=820,331,880,536
+filesel_path=/mnt/public/music/Cowboy Junkies - Black Eyed Man
+
+[gtkui]
+column_widths=10,275,175,10,143,175,10,100,39,10,275,275,275,10,275
+player_height=635
+player_width=982
+player_x=46
+player_y=55
+
+[gtkui-layout]
+item_count=0

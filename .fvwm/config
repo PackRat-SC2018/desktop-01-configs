@@ -220,6 +220,8 @@ AddToFunc 	PrevWindow
 # 2: Styles #
 #############
 
+Emulate Fvwm
+
 # Desktops and Pages
 #
 # Fvwm has both Virtual Desktops and Pages. Each Desktop is built from
@@ -252,7 +254,7 @@ Style * EdgeMoveDelay 500, EdgeMoveResistance 1000
 # EwmhBaseStruts [left] [right] [top] [bottom]
 # Reserves space along the edge(s) of the Screen that will not
 # be covered when maximizing or placing windows.
-EwmhBaseStruts 6 6 6 6
+EwmhBaseStruts 6 6 6 36
 
 # This sets the ClickTime and MoveThreshold used to determine
 # Double Clicks, Hold and Move for the mouse.
@@ -305,30 +307,31 @@ CursorStyle destroy pirate	#000000 white
 #      14 - FvwmIconMan Iconified Button
 ###########
 Colorset 0  fg #F7F7FF, bg #313131, hi #414141, sh #212121, Plain, NoShape
-Colorset 1  fg #030303, bg #EFEFEF, hi #F2F2F2, sh #CCCCCC	, Plain, NoShape
-Colorset 2  fg #ffffff, bg #003c3c, hi #003c3c, sh #003c3c, Plain, NoShape
+Colorset 1  fg #030303, bg #EFEFEF, hi #F2F2F2, sh #CFCFCF	, Plain, NoShape
+Colorset 2  fg #FFFFFF, bg #003c3c, hi #003c3c, sh #003c3c, Plain, NoShape
 Colorset 3  fg black, bg #4d4d4d, hi #676767, sh #303030, Plain, NoShape
 Colorset 4  fg black, bg #2d2d2d, hi #474747, sh #101010, Plain, NoShape
 Colorset 5  fg #DDDDDD, bg #242424, hi #3F3F3F, sh #171717, Plain, NoShape
-Colorset 6  fg #ffffff, bg #1a6e99, hi, sh, Plain, NoShape
-Colorset 7  fg grey30, bg #ffffff, hi, sh, Plain, NoShape
-Colorset 8  fg #ffffff, bg #3E3E3E, hi, sh, Plain, NoShape
-Colorset 10 fg #ffffff, bg #3B535E, hi #3B535E, sh #30444D, Plain, NoShape
-Colorset 11 fg #ffffff, bg #1a6e99, hi #3B535E, sh #30444D, Plain, NoShape
-Colorset 12 fg #1F1F1F, bg #DCDCDC, hi #E3E3E3, sh #CCCCCC, Plain, NoShape
-Colorset 13 fg #ffffff, bg #00536C, hi #00536C, sh #00536C, Plain, NoShape
-Colorset 14 fg #999999, bg #2B303B, hi #aaaaaa, sh #999999, Plain, NoShape
-
-Colorset 15 fg #EFF1F5, bg #2B303B, hi, sh, Plain, NoShape
-Colorset 16 fg #999999, bg #2B303B, hi, sh, Plain, NoShape
-Colorset 17 fg #D3D3D3, bg #8F271D, hi #6B1D16, sh #6B1D16, Plain, NoShape
-Colorset 18 fg #D3D3D3, bg #2B303B, hi #aaaaaa, sh #999999, Plain, NoShape
-Colorset 19 fg #D3D3D3, bg #5E5E5E, hi #606060, sh #3a3a3a, Plain, NoShape, RootTransparent, buffer, Tint #2b303b 60
+Colorset 6  fg #FFFFFF, bg #1A6E99, hi, sh, Plain, NoShape
+Colorset 7  fg #4D4D4D, bg #FFFFFF, hi, sh, Plain, NoShape
+Colorset 8  fg #FFFFFF, bg #3E3E3E, hi, sh, Plain, NoShape
+Colorset 10 fg #FFFFFF, bg #3B535E, hi #3B535E, sh #30444D, Plain, NoShape
+Colorset 11 fg #FFFFFF, bg #306580, hi #306580, sh #306580, Plain, NoShape
+Colorset 12 fg #1F1F1F, bg #DCDCDC, hi #E3E3E3, sh #CFCFCF, Plain, NoShape
+Colorset 13 fg #FFFFFF, bg #00536C, hi #00536C, sh #00536C, Plain, NoShape
+Colorset 14 fg #999999, bg #2F333B, hi #aaaaaa, sh #999999, Plain, NoShape
+Colorset 15 fg #EFF1F5, bg #2F333B, hi, sh, Plain, NoShape
+Colorset 16 fg #999999, bg #2F333B, hi, sh, Plain, NoShape
+Colorset 17 fg #D3D3D3, bg #A53A3A, hi, sh, Plain, NoShape
+Colorset 18 fg #D3D3D3, bg #2F333B, hi #aaaaaa, sh #999999, Plain, NoShape
+Colorset 19 fg #D3D3D3, bg #5E5E5E, hi #606060, sh #3a3a3a, Plain, NoShape, RootTransparent, buffer, Tint #2F333B 80
 Colorset 20 fg #F5F5F5, bg #424242, hi #606060, sh #3a3a3a, Plain, NoShape, RootTransparent, buffer, Tint #424242 90
-Colorset 21 fg #CCCCCC, bg #2B303B, hi, sh, Plain, NoShape, RootTransparent, buffer, Tint #2B303B 90
-Colorset 22 fg #AAAAAA, bg #5E5E5E, hi #606060, sh #3a3a3a, Plain, NoShape, RootTransparent, buffer, Tint #2b303b 80
-Colorset 23 fg #ffffff, bg #667780, hi #3B535E, sh #30444D, Plain, NoShape
-Colorset 24 fg #D3D3D3, bg #2b303b, hi #202020, sh #202020, Plain, NoShape, RootTransparent, Buffer, Tint #2b303b 60
+# Colorset 21 fg #CFCFCF, bg #2F333B, hi, sh, Plain, NoShape, RootTransparent, buffer, Tint #2F333B 90
+Colorset 21 fg #CFCFCF, bg #2F333B, hi #4A4F59, sh #4A4F59, Plain, NoShape
+Colorset 22 fg #999999, bg #494949, hi #535353, sh #414141, Plain, NoShape, RootTransparent, buffer, Tint #2F333B 90
+Colorset 23 fg #FFFFFF, bg #667780, hi #3B535E, sh #30444D, Plain, NoShape
+Colorset 24 fg #D3D3D3, bg #2F333B, hi #202020, sh #202020, Plain, NoShape, RootTransparent, Buffer, Tint #2F333B 90
+Colorset 25 fg #CFCFCF, bg #4F5457, hi #4A4F59, sh #4A4F59, Plain, NoShape
 
 # Default Font
 DefaultFont "xft:Sans:Bold:size=9:antialias=True"
@@ -346,21 +349,27 @@ Style * DecorateTransient, StackTransientParent
 Style * !FPGrabFocusTransient, FPReleaseFocusTransient
 
 # WindowShade
-Style * WindowShadeScrolls, WindowShadeSteps 10
+Style * WindowShadeScrolls, WindowShadeSteps 30
 
 # Ignore Numlock and other modifiers for bindings
 # See http://fvwm.org/documentation/faq/#why-do-numlock-capslock-and-scrolllock-interfere-with-clicktofocus-andor-my-mouse-bindings
 IgnoreModifiers L25
 
 # Decor Styles
-#Style * BorderWidth 2, HandleWidth 2, MWMButtons, FvwmBorder, FirmBorder
+#Style * BorderWidth 5, HandleWidth 5, MwmButtons, MwmBorder, FirmBorder
 #Style * Colorset 1, HilightColorset 2
 #Style * BorderColorset 3, HilightBorderColorset 4
 
-Style * BorderWidth 2, HandleWidth 2, MWMButtons, FvwmBorder, FirmBorder
-Style * Colorset 16, HilightColorset 17
-Style * BorderColorset 15, HilightBorderColorset 17
-BorderStyle --Flat, HiddenHandles, !Inset
+Style * BorderWidth 5, HandleWidth 5, FvwmButtons, FvwmBorder, FirmBorder
+Style * Colorset 11, HilightColorset 17
+Style * BorderColorset 11, HilightBorderColorset 17
+
+#BorderStyle Simple
+#BorderStyle Active -- NoInset HiddenHandles
+#BorderStyle Inactive -- HiddenHandles NoInset
+BorderStyle Active -- NoInset
+BorderStyle Inactive -- NoInset
+
 
 # Window Specific Styles
 Style RightPanel !Title, !Borders, !Handles, Sticky, WindowListSkip, NeverFocus, StaysOnBottom, CirculateSkip
@@ -379,7 +388,7 @@ Style Subl3 ResizeHintOverride, PositionPlacement Center
 Style Firefox ResizeHintOverride, PositionPlacement Center
 Style Thunderbird ResizeHintOverride, PositionPlacement Center
 Style *tray !Title, !Handles, !Borders, StaysOnBottom, WindowListSkip
-Style Tint2 !Title, !Handles, !Borders, ResizeHintOverride, StaysOnBottom, PositionPlacement -2px 2px
+Style Tint2 !Title, !Handles, !Borders, ResizeHintOverride, StaysOnBottom, PositionPlacement 0 -0
 Style Xfce4-panel !Title, !Handles, !Borders, StaysOnTop
 Style *Clock !Title, PositionPlacement -2 -2
 Style Bl-exit Sticky, CirculateSkip, WindowListSkip, PositionPlacement Center
@@ -745,7 +754,7 @@ DestroyModuleConfig FvwmIconMan:*
 *FvwmIconMan: UseWinList true
 *FvwmIconMan: ButtonGeometry 120x24
 *FvwmIconMan: ManagerGeometry 1x1
-*FvwmIconMan: Background #2B303B
+*FvwmIconMan: Background #2F333B
 *FvwmIconMan: Foreground #999999
 *FvwmIconMan: PlainColorset 14
 *FvwmIconMan: FocusColorset 11
@@ -781,36 +790,6 @@ DestroyModuleConfig EventNewDesk:*
 *FvwmFormDefault: Colorset 10
 *FvwmFormDefault: ItemColorset 13
 
-Style ButtonLaunchers !Title, HandleWidth 1, BorderWidth 1, WindowListSkip, CirculateSkip, StaysOnBottom, NeverFocus, Sticky
-Style DeskTopId !Title, BorderWidth 1, HandleWidth 1, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom, Sticky
-
-DestroyModuleConfig ButtonLaunchers
-*ButtonLaunchers: Geometry 300x30+0-0
-*ButtonLaunchers: Colorset 21
-*ButtonLaunchers: Columns 6
-*ButtonLaunchers: Rows 1
-*ButtonLaunchers: Frame 1
-*ButtonLaunchers: Font "xft:Sans:Regular:size=9:antialias=True"
-*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/24/computer-laptop.svg", Action `Exec jgmenu --config-file=/home/doug/.config/jgmenu/jgfvwmrc`)
-*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/24/network-server.svg", Action `Exec thunar`)
-*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/24/terminal.svg", Action `Exec urxvt`)
-*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/24/editor.svg" Action `Exec subl3`)
-*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/24/firefox.svg" Action `Exec firefox`)
-*ButtonLaunchers: (1x1, Title "", Icon "icons/apps/24/thunderbird.svg" Action `Exec thunderbird`)
-
-DestroyModuleConfig DeskTopId:*
-*DeskTopId: Geometry 144x30-0-0
-*DeskTopId: Colorset 19
-*DeskTopId: Rows 1
-*DeskTopId: Columns 4
-*DeskTopId: Frame 1
-*DeskTopId: Font "xft:Roboto Mono:style=Regular:size=11:antialias=true"
-#*DeskTopId: (10x20, Frame 0)
-*DeskTopId: (1x1, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 11, ActiveColorset 12, Frame 0)
-*DeskTopId: (1x1, Id desk1, Title "2", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 12, Frame 0)
-*DeskTopId: (1x1, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 12, Frame 0)
-*DeskTopId: (1x1, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 12, Frame 0)
-
 Read Modules
 Read Bindings
 Read TaskBar
@@ -831,9 +810,12 @@ AddToFunc   StartFunction
 + I Module FvwmEvent EventNewDesk
 # + I Module FvwmButtons ButtonLaunchers
 + I Module FvwmButtons PagerPanel
-# + I Module FvwmButtons FvwmTaskBar
++ I Module FvwmButtons FvwmTaskBar
 
 # + I Test (Init) Exec exec fbsetbg -c -r "$HOME/wallpaper/"
+#+ I Test (Init) Exec exec xfsettingsd &
+#+ I Test (Init) Exec exec xfce4-panel
+#+ I Test (Restart) Exec exec xfce4-panel
 
 DestroyFunc ExitFunction
 AddToFunc   ExitFunction
@@ -842,4 +824,6 @@ AddToFunc   ExitFunction
 + I Exec exec killall -q stalonetray
 + I Exec exec killall -q polybar
 + I Exec exec killall -q tint2
++ I Exec exec killall -q xfce4-panel
 + I Test (!ToRestart) Exec exec rm -f $[HOME]/.fvwm/icon.tmp.*
++ I Test (!ToRestart) Exec exec rm -f $[FVWM_USERDIR]/temp/*icon*
