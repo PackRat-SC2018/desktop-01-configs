@@ -1,23 +1,4 @@
-firefox
-thunderbird
-subl3
-urxvt
-yad --font
-yad --color
-xterm
-emacs
 st
-spacefm
-pcmanfm
-thunar
-sakura
-xfce4-terminal
-xfce4-terminal --drop-down
-vivaldi
-basilisk
-lxterminal
-geany
-tint2
-uxterm
-lxappearance
-compton
+rofi-logout
+urxvt
+xterm

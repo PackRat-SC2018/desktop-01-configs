@@ -24,15 +24,15 @@ xset s 3600 3600
 xset dpms 3600 3700 4000
 
 # keyboard repeat rate
-#xset r rate 400 50
-#kbdrate -d 400 -r 50
+xset r rate 400 50
+kbdrate -d 400 -r 50
 
 # do NOT put commands below the exec lines
 case $session in
-    fluxbox)    exec dbus-launch --sh-syntax --exit-with-session /usr/bin/startfluxbox ;;
-    i3)         exec dbus-launch --sh-syntax --exit-with-session i3 ;;
-    #fvwm)       exec ck-launch-session dbus-launch --sh-syntax --exit-with-session /usr/local/bin/startfvwm ;;
-    #spectrwm)   exec ck-launch-session dbus-launch --sh-syntax --exit-with-session /usr/local/bin/startspectrwm ;;
-    dwm)        exec dbus-launch --sh-syntax --exit-with-session /usr/local/bin/startdwm ;;
+    fluxbox)    exec ck-launch-session dbus-launch --sh-syntax --exit-with-session /usr/bin/startfluxbox ;;
+    i3)         exec ck-launch-session dbus-launch --sh-syntax --exit-with-session i3 ;;
+    fvwm)       exec ck-launch-session dbus-launch --sh-syntax --exit-with-session /usr/local/bin/startfvwm ;;
+    spectrwm)   exec ck-launch-session dbus-launch --sh-syntax --exit-with-session /usr/local/bin/startspectrwm ;;
+    kde)        exec ck-launch-session dbus-launch --sh-syntax --exit-with-session /usr/bin/startkde ;;
     *)          exec "$session" # Unknown, try running it
 esac

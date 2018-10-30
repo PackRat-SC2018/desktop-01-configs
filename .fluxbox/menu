@@ -18,15 +18,16 @@
 [encoding] {UTF-8}
       [exec] (Run) {rofi -show}
 [separator]
-      [exec] (Terminal) {urxvt}
+      [exec] (Terminal) {uxterm}
       [exec] (Sublime) {wmctrl -a subl3 || subl3}
-      [exec] (File Manager) {thunar}
+      [exec] (File Manager) {pcmanfm}
 [submenu] (Terminals)
-      [exec] (Xfce4-terminal) {xfce4-terminal}
-      [exec] (Simple Terminal) {st}
       [exec] (UXTerm) {uxterm}
       [exec] (XTerm) {xterm}
+      [exec] (Simple Terminal) {st}
+      [exec] (Sakura) {sakura}
       [exec] (URxvt) {urxvt}
+      [exec] (Konsole) {konsole}
       [exec] (Tmux) {urxvt -e tmux}
 [end]
 [separator]      
