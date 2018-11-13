@@ -211,8 +211,13 @@
   [Alpha]	{255}
 [end]
 [app] (name=gimp-2.10) (class=Gimp-2.10) (role=gimp-image-window-1)
+  [Shaded]	{no}
   [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
   [Maximized]	{yes}
+  [Fullscreen]	{no}
+  [Alpha]	{255}
 [end]
 [transient] (name=gimp-2.10) (class=Gimp-2.10) (role=gimp-file-open)
   [Position]	(UPPERLEFT)	{19% 11%}
@@ -239,7 +244,7 @@
   [Dimensions]	{39% 65%}
   [Position]	(UPPERLEFT)	{31% 17%}
   [Shaded]	{no}
-  [Deco]	{NORMAL}
+  [Deco]	{0x67f}
   [Sticky]	{no}
   [Minimized]	{no}
   [Maximized]	{no}
@@ -251,7 +256,7 @@
   [Dimensions]	{36% 35%}
   [Position]	(UPPERLEFT)	{61% 59%}
   [Shaded]	{no}
-  [Deco]	{NORMAL}
+  [Deco]	{0x67f}
   [Sticky]	{no}
   [Minimized]	{no}
   [Maximized]	{no}
@@ -263,7 +268,7 @@
   [Dimensions]	{26% 32%}
   [Position]	(UPPERLEFT)	{67% 47%}
   [Shaded]	{no}
-  [Deco]	{NORMAL}
+  [Deco]	{0x67f}
   [Sticky]	{no}
   [Minimized]	{no}
   [Maximized]	{no}
@@ -273,6 +278,250 @@
 [end]
 [transient] (name=pcmanfm) (class=Pcmanfm)
   [Position]	(UPPERLEFT)	{38% 32%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=sublime_text) (class=Sublime_text)
+  [Dimensions]	{80% 88%}
+  [Position]	(UPPERLEFT)	{10% 6%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=file-jpeg) (class=Gimp-2.10) (role=file-jpeg)
+  [Position]	(UPPERLEFT)	{18% 15%}
+  [Shaded]	{no}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=gimp) (class=Gimp) (role=gimp-image-new)
+  [Dimensions]	{21% 31%}
+  [Position]	(UPPERLEFT)	{16% 7%}
+  [Shaded]	{no}
+  [Deco]	{0x5ff}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=gimp) (class=Gimp) (role=gimp-image-window-1)
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{yes}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=gimp) (class=Gimp) (role=gimp-file-open)
+  [Dimensions]	{45% 58%}
+  [Position]	(UPPERLEFT)	{19% 11%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=file-png) (class=Gimp) (role=file-png)
+  [Dimensions]	{16% 51%}
+  [Position]	(UPPERLEFT)	{41% 6%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=Navigator) (class=Basilisk) (role=browser)
+  [Deco]	{0x67f}
+  [Maximized]	{yes}
+[end]
+[transient] (name=file-jpeg) (class=Gimp) (role=file-jpeg)
+  [Position]	(UPPERLEFT)	{20% 8%}
+  [Shaded]	{no}
+  [Deco]	{0x5ff}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=gimp-2.10) (class=Gimp-2.10) (role=gimp-image-color-profile-import)
+  [Dimensions]	{37% 36%}
+  [Position]	(UPPERLEFT)	{31% 32%}
+  [Shaded]	{no}
+  [Deco]	{0x5ff}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=file-png) (class=Gimp-2.10) (role=file-png)
+  [Dimensions]	{16% 51%}
+  [Position]	(UPPERLEFT)	{21% 7%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=leafpad) (class=Leafpad)
+  [Dimensions]	{80% 90%}
+  [Position]	(UPPERLEFT)	{10% 5%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=soffice) (class=Soffice)
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{yes}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=guvcview) (class=Guvcview)
+  [Dimensions]	{50% 77%}
+  [Position]	(UPPERLEFT)	{1% 2%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=audacious) (class=Audacious)
+  [Dimensions]	{46% 66%}
+  [Position]	(UPPERLEFT)	{4% 4%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=xfburn) (class=Xfburn)
+  [Dimensions]	{45% 71%}
+  [Position]	(UPPERLEFT)	{1% 2%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=xfburn) (class=Xfburn)
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Layer]	{8}
+[end]
+[app] (name=gl) (class=mpv)
+  [Dimensions]	{58% 64%}
+  [Position]	(UPPERLEFT)	{40% 34%}
+  [Shaded]	{no}
+  [Deco]	{BORDER}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=hexchat) (class=Hexchat) (role=servlist)
+  [Position]	(UPPERLEFT)	{7% 5%}
+  [Deco]	{0x67f}
+[end]
+[app] (name=hexchat) (class=Hexchat)
+  [Dimensions]	{80% 90%}
+  [Position]	(UPPERLEFT)	{10% 5%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=hexchat) (class=Hexchat)
+  [Position]	(UPPERLEFT)	{37% 43%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=soffice) (class=Soffice)
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{yes}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=soffice) (class=Soffice)
+  [Dimensions]	{42% 61%}
+  [Position]	(UPPERLEFT)	{29% 19%}
+  [Shaded]	{no}
+  [Deco]	{NORMAL}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=Places) (class=Firefox) (role=Organizer)
+  [Dimensions]	{80% 90%}
+  [Position]	(UPPERLEFT)	{10% 5%}
   [Shaded]	{no}
   [Deco]	{NORMAL}
   [Sticky]	{no}

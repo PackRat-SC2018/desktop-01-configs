@@ -18,7 +18,7 @@
 [encoding] {UTF-8}
       [exec] (Run) {rofi -show}
 [separator]
-      [exec] (Terminal) {uxterm}
+      [exec] (Terminal) {urxvt}
       [exec] (Sublime) {wmctrl -a subl3 || subl3}
       [exec] (File Manager) {pcmanfm}
 [submenu] (Terminals)
@@ -27,7 +27,6 @@
       [exec] (Simple Terminal) {st}
       [exec] (Sakura) {sakura}
       [exec] (URxvt) {urxvt}
-      [exec] (Konsole) {konsole}
       [exec] (Tmux) {urxvt -e tmux}
 [end]
 [separator]      
@@ -40,7 +39,7 @@
 [submenu] (Office)
       [exec] (Writer) {libreoffice --writer}
       [exec] (Calc) {libreoffice --calc}
-      [exec] (Impress) {libreoffice --Impress}
+      [exec] (Impress) {libreoffice --impress}
       [exec] (Draw) {libreoffice --draw}
       [exec] (Math) {libreoffice --math}
       [exec] (Xcalc) {xcalc}

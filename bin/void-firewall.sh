@@ -70,3 +70,4 @@ iptables -A INPUT -p tcp -m tcp --dport 20048 -j ACCEPT
 iptables -A INPUT -p udp -m udp --dport 111 -j ACCEPT
 iptables -A INPUT -p udp -m udp --dport 2049 -j ACCEPT
 iptables -A INPUT -p udp -m udp --dport 20048 -j ACCEPT
+

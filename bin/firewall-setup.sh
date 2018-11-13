@@ -122,7 +122,7 @@ iptables -A INPUT -d 127.0.0.0/8 ! -i lo -j REJECT --reject-with icmp-port-unrea
 # a home network, enter in the IP's of the machines on the 
 # network below.
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-iptables -A INPUT -s 192.168.35.0/24 -d 0/0 -p all -j ACCEPT
+iptables -A INPUT -s 192.168.25.0/24 -d 0/0 -p all -j ACCEPT
 #iptables -A INPUT -s 192.168.73.0/24 -d 0/0 -p all -j ACCEPT
 #iptables -A INPUT -s 10.10.10.0/24 -d 0/0 -p all -j ACCEPT
 #iptables -A INPUT -s 10.1.1.52 -d 0/0 -p all -j ACCEPT

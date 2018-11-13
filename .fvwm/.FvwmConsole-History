@@ -1,100 +1,100 @@
+KillModule FvwmIconMan
+Read colorsets
+Read panels
+Module FvwmIconMan
+KillModule FvwmIconMan
+Read colorsets
+Module FvwmIconMan
+KillModule FvwmIconMan
+Read colorsets
+Read panels
+Module FvwmIconMan
+Module FvwmIconMan
+KillModule FvwmIconMan
+Read panels
+Module FvwmIconMan
+KillModule FvwmIconMan
 Read TaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmIconMan
+Module FvwmIconMan
+Module FvwmIconMan
+read testfile
 Module FvwmButtons FvwmTaskBar
 KillModule FvwmButtons FvwmTaskBar
-Read TaskBar
+read testfile
+Module FvwmButtons FvwmTaskBar
+read testfile
+KillModule FvwmButtons FvwmTaskBar
+read testfile
 Module FvwmButtons FvwmTaskBar
 KillModule FvwmButtons FvwmTaskBar
-Read TaskBar
+read testfile
+Module FvwmButtons FvwmTaskBar
+read testfile
 Module FvwmButtons FvwmTaskBar
 KillModule FvwmButtons FvwmTaskBar
-Read TaskBar
+read testfile
 Module FvwmButtons FvwmTaskBar
-KillModule FvwmIconMan TaskBarIcons
+KillModule FvwmButtons FvwmTaskBar
+read testfile
 Module FvwmButtons FvwmTaskBar
-Module FvwmScript FvwmScript-Time
-KillModule FvwmScript FvwmScript-Time
-Module FvwmScript FvwmScript-Time
-KillModule FvwmScript FvwmScript-Time
-Module FvwmScript FvwmScript-Time
-Module FvwmScript FvwmScript-Time
-KillModule FvwmScript FvwmScript-Time
-KillModule FvwmScript FvwmScript-Time
-Module FvwmScript FvwmScript-Time
-KillModule FvwmScript FvwmScript-Time
-KillModule FvwmScript FvwmScript-Time
-Module FvwmScript FvwmScript-Time
-KillModule FvwmScript FvwmScript-Time
-Module FvwmScript FvwmScript-Time
-KillModule FvwmScript FvwmScript-Time
-Module FvwmScript FvwmScript-Time -geometry -0-0
-KillModule FvwmScript FvwmScript-Time -geometry -0-0
-KillModule FvwmScript FvwmScript-Time --geometry -0-0
-Module FvwmScript FvwmScript-Time --geometry -0-0
-KillModule FvwmScript FvwmScript-Time --geometry -0-0
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock +0+0
-KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock +0+0
-KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
-Module FvwmButtons ButtonLaunchers
-KillModule FvwmButtons ButtonLaunchers
-Module FvwmButtons ButtonLaunchers
-Module FvwmButtons ButtonLaunchers
-Module FvwmButtons ButtonLaunchers
+read testfile
 Module FvwmButtons FvwmTaskBar
-killModule FvwmButtons FvwmTaskBar
-read irix.config
-Style * HiddenHandles
-BorderStyle * HiddenHandles
-BorderStyle HiddenHandles
-BorderStyle Active -- HiddenHandles NoInset
-MenuStyle Mwm
-Emulate Win
-Emulate Fvwm
-Emulate Mwm
-Style * FvwmButtons
-Style * FvwmBorder
-Style * MwmBorder
-Style * FvwmBorder
+read testfile
+Module FvwmButtons FvwmTaskBar
+read testfile
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+read testfile
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+read panels
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+read panels
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+read panels
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+read panels
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+read panels
+Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTaskBar
+Module FvwmPager
+KillModule FvwmPager
+Module FvwmPager 0 3 -geom +500+2
+KillModule FvwmPager
+Module FvwmPager 0 3 --geometry +500+2
+KillModule FvwmPager
+Module FvwmScript BarClock
+KillModule FvwmScript BarClock
+KillModule FvwmScript BarClock
+Module FvwmScript BarClock
+KillModule FvwmScript BarClock
+Module FvwmScript BarClock
+KillModule FvwmScript BarClock
+Module FvwmScript BarClock
+Module FvwmScript BarClock
+KillModule FvwmScript BarClock
+Module FvwmScript BarClock
+KillModule FvwmScript BarClock
+Module FvwmScript BarClock
+KillModule FvwmScript BarClock
+Module FvwmScript BarClock
+KillModule FvwmScript BarClock
+Module FvwmScript BarClock
+KillModule FvwmScript BarClock
 BorderStyle Simple -- NoInset Flat
-BorderStyle Simple -- Flat
-BorderStyle Simple -- Flat
-BorderStyle Flat
-BorderStyle --Flat
-BorderStyle NoInset
-BorderStyle --NoInset
-BorderStyle --Flat
-BorderStyle Simple -- Flat
-BorderStyle --Flat
-BorderStyle -- Flat
-BorderStyle -- NoInset
-BorderStyle -- NoInset
-BorderStyle -- NoInset Flat
-Module FvwmButtons PagerPanel
+Read RoosterDecor

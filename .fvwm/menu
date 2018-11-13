@@ -1,0 +1,169 @@
+#######
+# Menus
+###########
+MenuStyle * MenuColorset 1, ActiveColorset 2, GreyedColorset 3, TitleColorset 4
+MenuStyle * Hilight3DOff, HilightBack, HilightTitleBack, SeparatorsLong
+MenuStyle * TrianglesSolid, TrianglesUseFore
+MenuStyle * ItemFormat "%|%3.1i%5.3l%5.3>%|"
+MenuStyle * Font "xft:Roboto:Medium:size=11:antialias=True"
+MenuStyle * VerticalItemSpacing 4 4 , VerticalTitleSpacing 4 4, VerticalMargins 1 1
+MenuStyle * Animation, AutomaticHotkeysOff, DoubleClickTime
+MenuStyle * BorderWidth 1, SidePic, SideColor
+MenuStyle * PopupDelayed, PopupDelay 200, PopdownDelayed, PopdownDelay 150
+MenuStyle * PopupOffset 4 100, TitleWarpOff
+
+# Root Menu
+#
+# The root menu will PopUp with a click in the root
+# window or using alt-f1 (or menu).
+DestroyMenu MenuFvwmRoot
+AddToMenu   MenuFvwmRoot "Fvwm" Title
++ "Run:"    Module FvwmForm FvwmForm-RunCommand
++ "" Nop
++ "Programs" Popup MenuPrograms
+# + "XDG &Menu%icons/apps.png%" Popup XDGMenu
++ "Terminal" Exec exec $[infostore.terminal]
++ "" Nop
++ "Fvwm&Console" Module FvwmConsole -terminal $[infostore.terminal]
++ "&Wallpapers" Popup BGMenu
++ "M&an Pages" Popup MenuFvwmManPages
+# + "Copy Config" FvwmScript FvwmScript-ConfirmCopyConfig
++ "" Nop
++ "Re&fresh" Refresh
++ "&Restart" Restart
++ "&Quit" Module FvwmScript FvwmScript-ConfirmQuit
+
+# Generate XDGMenu
+# PipeRead "fvwm-menu-desktop -e"
+
+# Programs Menu
+#
+# This test for some common programs and adds them to the menu.
+# When adding programs you don't need to use the Test (x foo)
+# lines as this is only to help make this menu portable.
+DestroyMenu MenuPrograms
+AddToMenu   MenuPrograms "Programs" Title
+Test (x urxvt) + "URxvt" Exec exec urxvt
+Test (x subl3) + "Sublime" Exec exec subl3
+Test (x pcmanfm) + "File Manager" Exec exec pcmanfm
++ "" Nop
+Test (x firefox) + "Firefox" Exec exec firefox
+Test (x thunderbird) + "Thunderbird" Exec exec thunderbird
+Test (x gimp) + "Gimp" Exec exec gimp
+Test (x audacious) + "Audacious" Exec exec audacious
+
+# Background Menu
+#
+# Backgrounds are located in ~/.fvwm/images/background/
+# Menu icons are located in ~/.fvwm/images/bgicons/
+DestroyMenu BGMenu
+AddToMenu   BGMenu "Wallpapers" Title
++ "Floral%bgicons/bg1.png%" SetBG bg1.png
++ "Circles%bgicons/bg2.png%" SetBG bg2.png
++ "Space%bgicons/bg3.png%" SetBG bg3.png
+
+# Window Operations Menus
+DestroyMenu MenuWindowOps
+AddToMenu   MenuWindowOps
++ "Move"      Move
++ "Resize"    Resize
++ "Iconify"   Iconify
++ "Maximize"  Maximize
++ "Shade"     WindowShade
++ "Stick"     Stick
++ "" Nop
++ "Close"     Close
++ "More..."   Menu MenuWindowOpsLong This 0 0
+
+DestroyMenu MenuWindowOpsLong
+AddToMenu   MenuWindowOpsLong
++ "Move"                Move
++ "Resize"              Resize
++ "(De)Iconify"         Iconify
++ "(Un)Maximize"        Maximize
++ "(Un)Shade"           WindowShade
++ "(Un)Sticky"		Stick
++ "(No)TitleBar"	Pick (CirculateHit) ToggleTitle
++ "Send To"             Popup MenuSendTo
++ "" Nop
++ "Close"               Close
++ "Destroy"             Destroy
++ "" Nop
++ "Raise"		Raise
++ "Lower"		Lower
++ "" Nop
++ "StaysOnTop"          Pick (CirculateHit) Layer 0 6
++ "StaysPut"            Pick (CirculateHit) Layer 0 4
++ "StaysOnBottom"       Pick (CirculateHit) Layer 0 2
++ "" Nop
++ "Identify"            Module FvwmIdent
+
+DestroyMenu MenuIconOps
+AddToMenu   MenuIconOps
++ "(De)Iconify"         Iconify
++ "(Un)Maximize"        Maximize
++ "(Un)Shade"           WindowShade
++ "(Un)Sticky"		Stick
++ "(No)TitleBar"	Pick (CirculateHit) ToggleTitle
++ "Send To"             Popup MenuSendTo
++ "" Nop
++ "Close"               Close
++ "Destroy"             Destroy
++ "" Nop
++ "Raise"		Raise
++ "Lower"		Lower
++ "" Nop
++ "StaysOnTop"          Pick (CirculateHit) Layer 0 6
++ "StaysPut"            Pick (CirculateHit) Layer 0 4
++ "StaysOnBottom"       Pick (CirculateHit) Layer 0 2
++ "" Nop
++ "Identify"            Module FvwmIdent
+
+DestroyMenu MenuSendTo
+AddToMenu MenuSendTo
++ "Current" MoveToCurrent
++ "Page" PopUp MenuSendToPage
++ "Desk" PopUp MenuSendToDesk
+
+DestroyMenu MenuSendToDesk
+AddToMenu   MenuSendToDesk
++ "Desk 0"	MoveToDesk 0 0
++ "Desk 1"	MoveToDesk 0 1
++ "Desk 2"	MoveToDesk 0 2
++ "Desk 3"	MoveToDesk 0 3
+
+DestroyMenu MenuSendToPage
+AddToMenu   MenuSendToPage
++ "Page (0,0)"	MoveToPage 0 0
++ "Page (0,1)"	MoveToPage 0 1
++ "Page (1,0)"	MoveToPage 1 0
++ "Page (1,1)"	MoveToPage 1 1
+
+
+# Fvwm Man Pages (Help) Menu
+DestroyMenu MenuFvwmManPages
+AddToMenu   MenuFvwmManPages "Help" Title
++ "fvwm"                ViewManPage fvwm
++ "FvwmAnimate"         ViewManPage FvwmAnimate
++ "FvwmAuto"            ViewManPage FvwmAuto
++ "FvwmBacker"          ViewManPage FvwmBacker
++ "FvwmBanner"          ViewManPage FvwmBanner
++ "FvwmButtons"         ViewManPage FvwmButtons
++ "FvwmCommand"         ViewManPage FvwmCommand
++ "FvwmConsole"         ViewManPage FvwmConsole
++ "FvwmEvent"           ViewManPage FvwmEvent
++ "FvwmForm"            ViewManPage FvwmForm
++ "FvwmIconMan"         ViewManPage FvwmIconMan
++ "FvwmIdent"           ViewManPage FvwmIdent
++ "FvwmPager"           ViewManPage FvwmPager
++ "FvwmPerl"            ViewManPage FvwmPerl
++ "FvwmProxy"           ViewManPage FvwmProxy
++ "FvwmRearrange"       ViewManPage FvwmRearrange
++ "FvwmScript"          ViewManPage FvwmScript
++ "" Nop
++ "fvwm-root"	        ViewManPage fvwm-root
++ "fvwm-menu-desktop"   ViewManPage fvwm-menu-desktop
++ "fvwm-menu-directory" ViewManPage fvwm-menu-directory
++ "fvwm-menu-headlines" ViewManPage fvwm-menu-headlines
++ "fvwm-menu-xlock"     ViewManPage fvwm-menu-xlock
++ "fvwm-config"         ViewManPage fvwm-config

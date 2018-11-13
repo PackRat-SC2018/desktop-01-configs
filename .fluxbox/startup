@@ -7,13 +7,11 @@
 # Change your keymap:
 xmodmap "$HOME/.Xmodmap"
 xrdb -l "$HOME/.Xresources"
-fbsetroot -solid "#333366" &
 
-# Applications you want to run with fluxbox.
-# MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
-#
-# set wallpaper
-#(sleep 2s && fbsetbg -c $HOME/wallpaper/falcon.jpg) &
+numlockx on &
+
+# background and wallpaper
+fbsetroot -solid "#333366" &
 (sleep 2s && fbsetbg -c -r "$HOME/wallpaper/") &
 
 # 3rd party apps

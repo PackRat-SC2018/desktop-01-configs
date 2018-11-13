@@ -14,17 +14,17 @@ TEXT
 
 [
 
-	{ "full_text" : "  Up:  ${uptime_short}  " , "color" : "\#CDCDCD" },
+	{ "full_text" : "Up:  ${uptime_short}  " , "color" : "\#CDCDCD" },
 	
-	{ "full_text" : "  CPU:  ${cpu}%    ${loadavg}  " , "color" :
+	{ "full_text" : "CPU:  ${cpu}%    ${loadavg}  " , "color" :
 		${if_match ${cpu}>33}"\#FF2828"${else}"\#CDCDCD"${endif} },
 	
-	{ "full_text" : "  MEM:  ${memperc}%  " , "color" :
+	{ "full_text" : "MEM:  ${memperc}%  " , "color" :
 		${if_match ${memperc}>=50}"\#FF2828"${else}${if_match ${memperc}>=25}"\#E0DC8C"${else}"\#CDCDCD"${endif}${endif} },
 
-	{ "full_text" : "  NET (U/D):  ${upspeed enp2s0}    ${downspeed enp2s0}  " , "color" :
+	{ "full_text" : "NET (U/D):  ${upspeed enp2s0}    ${downspeed enp2s0}  " , "color" :
 		${if_match ${downspeedf enp2s0}<=500}"\#CDCDCD"${else}"\#00CCB1"${endif} },
 
-	{ "full_text" : "  ${time %a %e %b  %k:%M}  " , "color" : "\#CDCDCD" }
+	{ "full_text" : "${time %a %e %b  %k:%M}  " , "color" : "\#CDCDCD" }
 
 ],

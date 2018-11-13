@@ -1,0 +1,43 @@
+Colorset 0  fg #FFFFFF, bg #242424, hi #242424, sh #242424, Plain, NoShape
+
+# menu
+Colorset 1  fg #8A8E99, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape
+Colorset 2  fg #E7E7E7, bg #106DAA, hi #106DAA, sh #106DAA, Plain, NoShape
+Colorset 3  fg #AFAFAF, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape
+Colorset 4  fg #E7E7E7, bg #28465C, hi #28465C, sh #28465C, Plain, NoShape
+
+# window decs
+Colorset 5  fg #8A8E99, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape
+Colorset 6  fg #E7E7E7, bg #32588A, hi #28465C, sh #28465C, Plain, NoShape
+
+# IconBox
+Colorset 7 fg #D3D3D3, bg #2F333B, hi #202020, sh #202020, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 40
+
+Colorset 8 fg #ffffff, bg #3B535E, hi #3B535E, sh #30444D, Plain, NoShape
+Colorset 9 fg #ffffff, bg #1a6e99, hi #3B535E, sh #30444D, Plain, NoShape
+Colorset 10 fg #8A8E99, bg #1F2326, hi #1F2326, sh #1F2326	, Plain, NoShape
+
+# panels
+Colorset 11 fg #C9CDD6, bg #223145, hi #00536C, sh #00536C, Plain, NoShape
+Colorset 12 fg #8A8E99, bg #1F2326, hi #1F2326, sh #1F2326	, Plain, NoShape
+Colorset 13 fg #C9CDD6, bg #1F2326, hi #00536C, sh #00536C, Plain, NoShape
+Colorset 14 fg yellow, bg blue, hi #00536C, sh #00536C, Plain, NoShape
+
+# FvwmPager
+Colorset 15 fg #8A8E99, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape
+Colorset 16 fg #1D1D1D, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 40
+Colorset 17 fg #E7E7E7, bg #28465C, hi #28465C, sh #28465C, Plain, NoShape, RootTransparent, Buffer, Tint #28465C 33
+Colorset 18 fg #CCCCCC, bg darkblue, Plain, NoShape, RootTransparent, Buffer, Tint darkblue 50
+Colorset 19 fg fg #E7E7E7, bg #28465C, hi #28465C, sh #28465C, Plain, NoShape, RootTransparent, Buffer, Tint #28465C 33
+Colorset 20 fg #E7E7E7, bg #106DAA, hi #106DAA, sh #106DAA, Plain, NoShape, RootTransparent, Buffer, Tint #106DAA 55
+Colorset 21 fg #BABFCF, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 33
+
+# Fvwm-Script - transparent clock
+Colorset 22 fg #C9CDD6, bg #1F2326, hi #00536C, sh #00536C, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 0
+
+# DeskTopID FvwmIconMan
+Colorset 23 fg #8A8E99, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape
+Colorset 24 fg #CCD1DE, bg #32588A, hi #1F2326, sh #1F2326, Plain, NoShape
+Colorset 25 fg #FFFFFF, bg #367EB3, hi #1F2326, sh #1F2326, Plain, NoShape
+Colorset 26 fg #8A8E99, bg #2E3438, hi #1F2326, sh #1F2326, Plain, NoShape
+Colorset 27 fg #D5D5D5, bg #242424, hi #1F2326, sh #1F2326, Plain, NoShape

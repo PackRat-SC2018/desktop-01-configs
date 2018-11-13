@@ -1,140 +1,23 @@
-;=====================================================
-;     Settings & Colors
-;=====================================================
+;; polybar configuration file
+;; 09-28-2018
+;;
 
-[colors]
-black = #E60F0F0F
-white = #F0F0F0
-red = #C75050
-yellow = #C7C750
-orange = #C79150
-blue = #546699
-green = #549954
-gray = #BFBFBF
-dimgray = #838383
-purple = #E6A451AD
-cyan = #6EF6FF
-pink = #E85D75
-background = #E6202020
-foreground = #DCDCDC
-border = #BF151515
-urgent = #E61739
+;; file includes
 
-[settings]
-throttle-output        = 5
-throttle-output-for    = 10
-throttle-input-for     = 30
-compositing-background = source
-compositing-foreground = source
-compositing-overline   = source
-compositing-underline  = source
-compositing-border     = source
-screenchange-reload    = true
+[section/base]
+include-file = /home/doug/.config/polybar/master.conf
+include-file = /home/doug/.config/polybar/modules.conf
 
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-
-;=====================================================
-;    Master Bar
-;=====================================================
-
-[bar/master]
-
-font-0 = "Inconsolata LGC Markup:style=regular:size=11:antialias=true:autohint=true;2"
-font-1 = "Monospace:size=11:bold:antialias=true;2"
-font-2 = "DejaVu Sans:size=11:antialias=true:autohint=true;2"
-font-3 = "Monofur Nerd Font:size=9:antialias=false;2"
-;font-4 = "MaterialIcons:size=11:antialias=false;3"
-;font-5 = "Icomoon:size=11:antialias=false;2"
-
-
-width              = 100%
-height             = 24
-border-size        = 0
-border-top-size    = 0
-border-bottom-size = 0
-radius             = 0
-bottom             = false
-line-size          = 2
-override-redirect  = false
-
-offset-x = 0
-offset-y = 0
-fixed-center = true
-
-border-color = ${colors.border}
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-module-margin = 2
-padding-right = 1
-padding-left = 1
-;separator = :
-
-;click-right = rofi -show
-; click-left = jgmenu_run
-click-middle = pkill -x -SIGUSR1 polybar
-;scroll-up =
-;scroll-down = 
-;double-click-left = 
-;double-click-middle = 
-;double-click-right = 
-
-[global/wm]
-; Adjust the _NET_WM_STRUT_PARTIAL top value
-;   Used for top aligned bars
-margin-bottom = 0
-
-; Adjust the _NET_WM_STRUT_PARTIAL bottom value
-;   Used for bottom aligned bars
-margin-top = 0
-
-;=====================================================
-;     Bspwm Bars
-;=====================================================
-
-[bar/bspwm-bar]
-inherit = bar/master
-
-; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = HDMI1
-
-wm-restack = bspwm
-
-modules-left = jgmenu bspwm
-modules-center = 
-modules-right = uptime coreavg load core0temp core1temp memory wired-network bspwm-date
-
-; All available modules (some require configuration in modules.conf)
-; redshift github filesystem mpd wired-network wireless-network battery menu volume-bar bspwm
-; pkg keyboard memory temperature coreuse network clock volume i3-workspaces workspaces window_switch
-
-
-;;;;;; Tray is commented out ;;;;;;;;
-;tray-position = right
-;tray-padding = 10
-;tray-background = ${colors.background}
-;tray-offset-x = 20%
-
-;=====================================================
-;     fluxbox Bars
-;=====================================================
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; fluxbox
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [bar/fluxbox-bar]
 inherit = bar/master
 
-; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = HDMI1
-
 modules-left = jgmenu
 modules-center = uptime coreavg load core0temp core1temp memory wired-network
 modules-right = date
-
-; core0temp core1temp
-; All available modules (some require configuration in modules.conf)
-; redshift github filesystem mpd wired-network wireless-network battery menu volume-bar bspwm
-; pkg keyboard memory temperature coreuse network clock volume i3-workspaces workspaces window_switch
-; workspaces void-menu
 
 ;;;;;; Tray is commented out ;;;;;;;;
 ;tray-position = center
@@ -142,703 +25,199 @@ modules-right = date
 ;tray-background = ${colors.background}
 ;tray-offset-x = 20%
 
-;;========== Modules =============;;
-
-;;;;;;;;;;;;;;;
-;;   menu  ;;
-;;;;;;;;;;;;;;;
-[module/jgmenu]
-type          = custom/script
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}
-label         = %output%
-label-padding = 2
-interval      = 10
-exec          = echo ""
-;click-left    = jgmenu_run xdg | jgmenu --simple
-click-left    = jgmenu_run
-;click-right   = exo-open $HOME/.config/jgmenu/jgmenurc
-
-;;;;;;;;;;;;;;;;;;;;
-;;Bspwm Workspaces;;
-;;;;;;;;;;;;;;;;;;;;
-[module/bspwm]
-type = internal/bspwm
-pin-workspaces = true
-inline-mode = false
-enable-click = true
-enable-scroll = false
-reverse-scroll = false
-fuzzy-match = true
-; ws-icon-[0-9]+ = label;icon
-; Note that the label needs to correspond with the bspwm workspace name
-;ws-icon-0 = code;♚
-;ws-icon-1 = office;♛
-;ws-icon-2 = graphics;♜
-;ws-icon-3 = mail;♝
-;ws-icon-4 = web;♞
-;ws-icon-default = ♟
-
-;ws-icon-0 = [ 1 ]
-;ws-icon-0 = 2
-;ws-icon-0 = 3
-;ws-icon-0 = 4
-
-format = <label-state> <label-mode>
-label-monitor = %name%
-label-dimmed-foreground = ${colors.foreground}
-;label-dimmed-underline = ${bar/top.background}
-label-dimmed-focused-background = ${colors.blue}
-label-focused = %icon% %name%
-label-focused-foreground = ${colors.blue}
-label-focused-background = ${colors.background}
-;label-focused-underline = ${colors.blue}
-label-occupied = %icon% %name%
-;label-occupied-underline = ${colors.purple}
-label-urgent = %icon% %name%
-label-urgent-foreground = ${colors.urgent}
-;label-urgent-underline = ${colors.urgent}
-label-empty = %icon% %name%
-label-empty-foreground = ${colors.dimgray}
-label-empty-background = ${colors.background}
-
-; The following labels will be used to indicate the layout/mode
-; for the focused workspace. Requires <label-mode>
-label-monocle =
-label-tiled =
-label-fullscreen =
-label-floating =
-label-pseudotiled = P
-label-locked =
-label-locked-foreground = ${colors.yellow}
-label-sticky =
-label-sticky-foreground = ${colors.purple}
-label-private =
-label-private-foreground = ${colors.urgent}
-
-;;;;;;;;;;;;;;;;;;;;;;;;
-;; Openbox Workspaces ;;
-;;;;;;;;;;;;;;;;;;;;;;;;
-[module/workspaces]
-type = internal/xworkspaces
-; false for awesome window manager true for other wm.
-pin-workspaces = false
-enable-click = true
-enable-scroll = true
-format-padding = 0
-icon-0 = 1;
-icon-1 = 2;
-icon-2 = 3;
-icon-3 = 4;
-icon-4 = 5;
-icon-5 = 6;
-icon-6 = 7;
-icon-7 = 8;
-icon-8 = 9;
-icon-9 = 10;
-icon-default =
-format = <label-state>
-label-active = " %name% "
-label-active-foreground = ${colors.foreground}
-label-active-background = ${colors.background}
-label-active-underline = ${colors.wsbackground}
-label-occupied = " %name% "
-lable-occupied-background = ${colors.background}
-label-occupied-foreground = ${colors.foreground}
-label-occupied-underline = ${colors.wsbackground}
-label-urgent = " %name% "
-label-urgent-foreground = ${colors.urgent}
-label-urgent-underline = ${colors.urgent}
-label-empty = " %name% "
-label-empty-background = ${colors.background}
-label-empty-foreground = ${colors.foreground}
-label-empty-underline = ${colors.background}
-
-;;;;;;;;;
-;; CPU ;;
-;;;;;;;;;
-[module/coreuse]
-type = internal/cpu
-
-; Seconds to sleep between updates
-; Default: 1
-interval = 0.5
-
-; Available tags:
-;   <label> (default)
-;   <bar-load>
-;   <ramp-load>
-;   <ramp-coreload>
-format = <label> <ramp-coreload>
-
-format-padding = 0
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}
-
-; Available tokens:
-;   %percentage% (default) - total cpu load
-;   %percentage-cores% - load percentage for each core
-;   %percentage-core[1-9]% - load percentage for specific core
-label = %percentage-cores%
-
-ramp-coreload-0 = 
-ramp-coreload-0-foreground = ${colors.foreground}
-ramp-coreload-1 = 
-ramp-coreload-1-foreground = ${colors.foreground}
-ramp-coreload-2 = 
-ramp-coreload-2-foreground = ${colors.green}
-ramp-coreload-3 = 
-ramp-coreload-3-foreground = ${colors.green}
-ramp-coreload-4 = 
-ramp-coreload-4-foreground = ${colors.yellow}
-ramp-coreload-5 = 
-ramp-coreload-5-foreground = ${colors.yellow}
-ramp-coreload-6 = 
-ramp-coreload-6-foreground = ${colors.pink}
-ramp-coreload-7 = 
-ramp-coreload-7-foreground = ${colors.urgent}
-
-ramp-load-0 = 
-ramp-load-0-foreground = ${colors.foreground}
-ramp-load-1 = 
-ramp-load-1-foreground = ${colors.foreground}
-ramp-load-2 = 
-ramp-load-2-foreground = ${colors.green}
-ramp-load-3 = 
-ramp-load-3-foreground = ${colors.green}
-ramp-load-4 = 
-ramp-load-4-foreground = ${colors.yellow}
-ramp-load-5 = 
-ramp-load-5-foreground = ${colors.yellow}
-ramp-load-6 = 
-ramp-load-6-foreground = ${colors.pink}
-ramp-load-7 = 
-ramp-load-7-foreground = ${colors.urgent}
-
-;;;;;;;;;;;;;;;;;
-;; Single Core ;;
-;;;;;;;;;;;;;;;;;
-[module/coreavg]
-type = internal/cpu
-
-; Seconds to sleep between updates
-; Default: 1
-interval = 0.5
-
-; Available tags:
-;   <label> (default)
-;   <bar-load>
-;   <ramp-load>
-;   <ramp-coreload>
-format = "<label>  <bar-load>"
-;format = "<label>"
-
-format-padding = 0
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}
-
-; Available tokens:
-;   %percentage% (default) - total cpu load
-;   %percentage-cores% - load percentage for each core
-;   %percentage-core[1-9]% - load percentage for specific core
-label = CPU: %percentage%%
-
-ramp-coreload-0 = 
-ramp-coreload-0-foreground = ${colors.foreground}
-ramp-coreload-1 = 
-ramp-coreload-1-foreground = ${colors.foreground}
-ramp-coreload-2 = 
-ramp-coreload-2-foreground = ${colors.green}
-ramp-coreload-3 = 
-ramp-coreload-3-foreground = ${colors.green}
-ramp-coreload-4 = 
-ramp-coreload-4-foreground = ${colors.yellow}
-ramp-coreload-5 = 
-ramp-coreload-5-foreground = ${colors.yellow}
-ramp-coreload-6 = 
-ramp-coreload-6-foreground = ${colors.pink}
-ramp-coreload-7 = 
-ramp-coreload-7-foreground = ${colors.urgent}
-
-ramp-load-0 = 
-ramp-load-0-foreground = ${colors.foreground}
-ramp-load-1 = 
-ramp-load-1-foreground = ${colors.foreground}
-ramp-load-2 = 
-ramp-load-2-foreground = ${colors.green}
-ramp-load-3 = 
-ramp-load-3-foreground = ${colors.green}
-ramp-load-4 = 
-ramp-load-4-foreground = ${colors.yellow}
-ramp-load-5 = 
-ramp-load-5-foreground = ${colors.yellow}
-ramp-load-6 = 
-ramp-load-6-foreground = ${colors.pink}
-ramp-load-7 = 
-ramp-load-7-foreground = ${colors.urgent}
-
-; Only applies if <bar-used> is used
-bar-load-indicator =
-bar-load-width = 6
-bar-load-foreground-0 = #576657
-bar-load-foreground-1 = #576657
-bar-load-foreground-2 = ${colors.green}
-bar-load-foreground-3 = ${colors.yellow}
-bar-load-foreground-4 = ${colors.red}
-bar-load-fill = ▐
-bar-load-empty = ▐
-bar-load-empty-foreground = #444444
-
-[module/CoreTemps]
-type = custom/script
-exec = ~/bin/Coretemp
-interval = 10
-;format-prefix = "  "
-;format-prefix-foreground = ${colors.foreground}
-;format-prefix-background = ${colors.background}
-;label-background = ${colors.background}
-
-;;;;;;;;;;;;;;;;;
-;; TEMPERATURE ;;
-;;;;;;;;;;;;;;;;;
-[module/temperature]
-type = internal/temperature
-interval = 3
-thermal-zone = 0
-warn-temperature = 70
-
-;format = <ramp> <label>
-format = <label>
-format-padding = 1
-label = %{A1:termite --exec='watch sensors' & disown:} %temperature-c%%{A}
-
-ramp-0 = "  "
-ramp-0-foreground = ${colors.foreground}
-ramp-1 = "  "
-ramp-1-foreground = ${colors.green}
-ramp-2 = "  "
-ramp-3-foreground = ${colors.pink}
-ramp-3 = "  "
-ramp-4-foreground = ${colors.red}
-ramp-4 = "  "
-ramp-5-foreground = ${colors.urgent}
-
-format-warn = <label-warn>
-label-warn = " %temperature-c%"
-label-warn-padding = 1
-label-warn-foreground = ${colors.urgent}
-
-;;;;;;;;;;;;;;;
-;; Core Temp ;;
-;;;;;;;;;;;;;;;
-
-[module/core0temp]
-type = internal/temperature
-
-; Seconds to sleep between updates
-; Default: 1
-interval = 3.0
-
-; Thermal zone to use
-; To list all the zone types, run 
-; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
-; Default: 0
-thermal-zone = 1
-
-; Full path of temperature sysfs path
-; Use `sensors` to find preferred temperature source, then run
-; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
-; to find path to desired file
-; Default reverts to thermal zone setting
-; hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp2_input
-
-; Threshold temperature to display warning label
-; Default: 80
-warn-temperature = 80
-
-ramp-0 = ""
-ramp-0-foreground = ${colors.foreground}
-ramp-1 = ""
-ramp-1-foreground = ${colors.foreground}
-ramp-2 = ""
-ramp-3-foreground = #576657
-ramp-3 = ""
-ramp-4-foreground = #576657
-ramp-4 = ""
-ramp-5-foreground = ${colors.green}
-ramp-5 = ""
-ramp-6-foreground = ${colors.yellow}
-ramp-6 = ""
-ramp-7-foreground = ${colors.yellow}
-ramp-7 = ""
-ramp-8-foreground = ${colors.red}
-ramp-8 = ""
-ramp-9-foreground = ${colors.urgent}
-ramp-9 = ""
-
-format = "<ramp> <label>"
-;format = "<label>"
-format-padding = 1
-label = %{A1:sakura -x 'watch sensors' & disown:} %temperature-c%%{A}
-
-format-warn = <label-warn>
-label-warn = "  %temperature-c% "
-label-warn-padding = 1
-label-warn-foreground = ${colors.urgent}
-
-[module/core1temp]
-type = internal/temperature
-
-; Seconds to sleep between updates
-; Default: 1
-interval = 3.0
-
-; Thermal zone to use
-; To list all the zone types, run 
-; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
-; Default: 0
-thermal-zone = 1
-
-; Full path of temperature sysfs path
-; Use `sensors` to find preferred temperature source, then run
-; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
-; to find path to desired file
-; Default reverts to thermal zone setting
-; hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp3_input
-
-; Threshold temperature to display warning label
-; Default: 80
-warn-temperature = 80
-
-ramp-0 = ""
-ramp-0-foreground = ${colors.foreground}
-ramp-1 = ""
-ramp-1-foreground = ${colors.foreground}
-ramp-2 = ""
-ramp-3-foreground = #576657
-ramp-3 = ""
-ramp-4-foreground = #576657
-ramp-4 = ""
-ramp-5-foreground = ${colors.green}
-ramp-5 = ""
-ramp-6-foreground = ${colors.yellow}
-ramp-6 = ""
-ramp-7-foreground = ${colors.yellow}
-ramp-7 = ""
-ramp-8-foreground = ${colors.red}
-ramp-8 = ""
-ramp-9-foreground = ${colors.urgent}
-ramp-9 = ""
-
-format = "<ramp> <label>"
-;format = "<label>"
-format-padding = 1
-label = %{A1:sakura -x 'watch sensors' & disown:} %temperature-c%%{A}
-
-format-warn = <label-warn>
-label-warn = "  %temperature-c% "
-label-warn-padding = 1
-label-warn-foreground = ${colors.urgent}
-
-[module/load]
-type = custom/script
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}
-;exec-if = load
-exec = /home/doug/bin/Loadavg
-;format-prefix =
-;format-prefix-foreground = ${colors.foreground}
-;format-prefix-background = ${colors.background}
-
-
-;;;;;;;;;
-;; MEM ;;
-;;;;;;;;;
-[module/memory]
-type = internal/memory
-
-; Seconds to sleep between updates
-; Default: 1
-interval = 3
-
-; Available tags:
-;   <label> (default)
-;   <bar-used>
-;   <bar-free>
-;   <ramp-used>
-;   <ramp-free>
-format = <label> <bar-used>
-;format = <label>
-
-; Available tokens:
-;   %percentage_used% (default)
-;   %percentage_free%
-;   %gb_used%
-;   %gb_free%
-;   %gb_total%
-;   %mb_used%
-;   %mb_free%
-;   %mb_total%
-;   %percentage_swap_used%
-;   %percentage_swap_free%
-;   %mb_swap_total%
-;   %mb_swap_free%
-;   %mb_swap_used%
-;   %gb_swap_total%
-;   %gb_swap_free%
-;   %gb_swap_used%
-
-label = " RAM: %percentage_used%% "
-
-; Only applies if <bar-used> is used
-bar-used-indicator =
-bar-used-width = 6
-bar-used-foreground-0 = #576657
-bar-used-foreground-1 = #576657
-bar-used-foreground-2 = ${colors.green}
-bar-used-foreground-3 = ${colors.yellow}
-bar-used-foreground-4 = ${colors.red}
-bar-used-fill = ▐
-bar-used-empty = ▐
-bar-used-empty-foreground = #444444
-
-; Only applies if <ramp-used> is used
-ramp-used-0 = ▁
-ramp-used-1 = ▂
-ramp-used-2 = ▃
-ramp-used-3 = ▄
-ramp-used-4 = ▅
-ramp-used-5 = ▆
-ramp-used-6 = ▇
-ramp-used-7 = █
-
-; Only applies if <ramp-free> is used
-ramp-free-0 = ▁
-ramp-free-1 = ▂
-ramp-free-2 = ▃
-ramp-free-3 = ▄
-ramp-free-4 = ▅
-ramp-free-5 = ▆
-ramp-free-6 = ▇
-ramp-free-7 = █
-
-;;;;;;;;;;
-;; WIFI ;;
-;;;;;;;;;;
-[module/wireless-network]
-type = internal/network
-interface = wlp1s0
-
-format-connected = <ramp-signal>  <label-connected>
-format-packetloss = <animation-packetloss>
-label-connected = "%signal%%"
-
-ramp-signal-0 = 
-ramp-signal-0-foreground = #F03051
-ramp-signal-1 = 
-ramp-signal-1-foreground = #F07127
-ramp-signal-2 = 
-ramp-signal-2-foreground = #F9CE56
-ramp-signal-3 = 
-ramp-signal-3-foreground = ${colors.purple}
-ramp-signal-4 = 
-ramp-signal-4-foreground = ${colors.purple}
-ramp-signal-5 = 
-ramp-signal-5-foreground = ${colors.purple}
-
-animation-packetloss-0 = ⚠
-animation-packetloss-0-foreground = #ffa64c
-animation-packetloss-1 = 
-animation-packetloss-1-foreground = #000000
-animation-packetloss-framerate = 500
-
-[module/wired-network]
-type = internal/network
-interface = enp2s0
-
-; Seconds to sleep between updates
-; Default: 1
-interval = 3.0
-
-; Test connectivity every Nth update
-; A value of 0 disables the feature
-; NOTE: Experimental (needs more testing)
-; Default: 0
-;ping-interval = 3
-
-; @deprecated: Define min width using token specifiers (%downspeed:min% and %upspeed:min%)
-; Minimum output width of upload/download rate
-; Default: 3
-; udspeed-minwidth = 5
-
-; Accumulate values from all interfaces
-; when querying for up/downspeed rate
-; Default: false
-accumulate-stats = true
-
-; Consider an `UNKNOWN` interface state as up.
-; Some devices have an unknown state, even when they're running
-; Default: false
-unknown-as-up = true
-
-; Available tags:
-;   <label-connected> (default)
-;   <ramp-signal>
-format-connected = "NET: <label-connected>"
-
-; Available tags:
-;   <label-disconnected> (default)
-format-disconnected = <label-disconnected>
-
-; Available tags:
-;   <label-connected> (default)
-;   <label-packetloss>
-;   <animation-packetloss>
-format-packetloss = <animation-packetloss> <label-connected>
-
-; Available tokens:
-;   %ifname%    [wireless+wired]
-;   %local_ip%  [wireless+wired]
-;   %essid%     [wireless]
-;   %signal%    [wireless]
-;   %upspeed%   [wireless+wired]
-;   %downspeed% [wireless+wired]
-;   %linkspeed% [wired]
-; Default: %ifname% %local_ip%
-; `module/wired-network.%downspeed:min:max%
-; label-connected = %essid% %downspeed:9%
-label-connected = %upspeed:8:12% %downspeed:8:12%
-label-connected-foreground = ${colors.foreground}
-label-connected-background = ${colors.background}
-
-; Available tokens:
-;   %ifname%    [wireless+wired]
-; Default: (none)
-label-disconnected = "%ifname% down"
-label-disconnected-foreground = ${colors.urgent}
-
-; Available tokens:
-;   %ifname%    [wireless+wired]
-;   %local_ip%  [wireless+wired]
-;   %essid%     [wireless]
-;   %signal%    [wireless]
-;   %linkspeed% [wired]
-; Default: (none)
-;label-packetloss = %essid%
-;label-packetloss-foreground = #eefafafa
-
-; Only applies if <ramp-signal> is used
-;ramp-signal-0 = 
-;ramp-signal-1 = 
-;ramp-signal-2 = 
-;ramp-signal-3 = 
-;ramp-signal-4 = 
-;ramp-signal-5 = 
-
-; Only applies if <ramp-signal> is used
-ramp-signal-0 = 😱
-ramp-signal-1 = 😠
-ramp-signal-2 = 😒
-ramp-signal-3 = 😊
-ramp-signal-4 = 😃
-ramp-signal-5 = 😈
-
-; Only applies if <animation-packetloss> is used
-animation-packetloss-0 = ⚠
-animation-packetloss-0-foreground = #ffa64c
-animation-packetloss-1 = 📶
-animation-packetloss-1-foreground = #000000
-; Framerate in milliseconds
-animation-packetloss-framerate = 500
-
-
-[module/uptime]
-type = custom/script
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}
-;exec-if = uptime
-exec = /home/doug/bin/Uptime
-format-prefix = " UP: "
-format-prefix-foreground = ${colors.foreground}
-format-prefix-background = ${colors.background}
-
-;;;;;;;;;;;
-;; Clock ;;
-;;;;;;;;;;;
-
-[module/clock]
-type = internal/date
-; 
-format = <label>
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}
-lebel-padding = 1
-interval = 5
-time = %k:%M
-label = %{A1:gsimplecal & disown:} %{A3:yad --name Calendar --class FvwmCal --title Calendar --posx -50 --posy 50 --width 300 --calendar:}%time%%{A}%{A}
-
-[module/date]
-type = internal/date
-
-; Seconds to sleep between updates
-interval = 15.0
-
-; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
-; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = %A %e %B
-
-; Optional time format
-time = %k:%M
-
-; if `date-alt` or `time-alt` is defined, clicking
-; the module will toggle between formats
-date-alt = %k:%M
-time-alt = %F
-
-; Available tags:
-;   <label> (default)
-format = <label>
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}
-
-; Available tokens:
-;   %date%
-;   %time%
-; Default: %date%
-label = %date%
-;label-font = 3
-label-foreground = ${colors.foreground}
-
-[module/bspwm-date]
-type = internal/date
-
-; Seconds to sleep between updates
-interval = 15.0
-
-; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
-; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = %a %e %b
-
-; Optional time format
-time = %k:%M
-
-; if `date-alt` or `time-alt` is defined, clicking
-; the module will toggle between formats
-date-alt = %k:%M
-time-alt = %F
-
-; Available tags:
-;   <label> (default)
-format = <label>
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}
-
-; Available tokens:
-;   %date%
-;   %time%
-; Default: %date%
-label = %date% %time%
-;label-font = 3
-label-foreground = ${colors.foreground}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; openbox
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[bar/obxbar]
+inherit = bar/master
+
+modules-left = jgmenu workspaces
+modules-center = uptime coreavg load core0temp core1temp memory wired-network
+modules-right = date
+
+; Position of the system tray window
+; If empty or undefined, tray support will be disabled
+; NOTE: A center aligned tray will cover center aligned modules
+;
+; Available positions:
+;   left
+;   center
+;   right
+;;tray-position = right
+
+; If true, the bar will not shift its
+; contents when the tray changes
+;;tray-detached = false
+
+; Tray icon max size
+;;tray-maxsize = 16
+
+; Enable pseudo transparency
+; Will automatically be enabled if a fully transparent
+; background color is defined using `tray-background`
+;;tray-transparent = false
+
+; Background color for the tray container
+; By default the tray container will use the bar
+; background color.
+; Note: 32 bit alpha blending is not supported.
+;;tray-background = ${colors.background}
+
+; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
+;;tray-offset-x = 0
+;;tray-offset-y = 0
+
+; Pad the sides of each tray icon
+;;tray-padding = 1
+
+; Scale factor for tray clients
+;;tray-scale = 1.0
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; i3 bar
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[bar/i3-bar]
+inherit = bar/master
+
+modules-left = jgmenu i3 
+;modules-center = uptime coreavg load core0temp memory battery wireless-network
+modules-center = uptime coreavg load memory battery wireless-network
+modules-right = clock
+
+; Position of the system tray window
+; If empty or undefined, tray support will be disabled
+; NOTE: A center aligned tray will cover center aligned modules
+;
+; Available positions:
+;   left
+;   center
+;   right
+tray-position = right
+
+; If true, the bar will not shift its
+; contents when the tray changes
+tray-detached = false
+
+; Tray icon max size
+tray-maxsize = 16
+
+; Enable pseudo transparency
+; Will automatically be enabled if a fully transparent
+; background color is defined using `tray-background`
+tray-transparent = false
+
+; Background color for the tray container
+; By default the tray container will use the bar
+; background color.
+; Note: 32 bit alpha blending is not supported.
+tray-background = ${colors.background}
+
+; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
+tray-offset-x = 0
+tray-offset-y = 0
+
+; Pad the sides of each tray icon
+tray-padding = 1
+
+; Scale factor for tray clients
+tray-scale = 1.0
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; bspwm
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[bar/bspwm-bar]
+inherit = bar/master
+
+modules-left = jgmenu workspaces
+modules-center = uptime coreavg load core0temp memory battery wireless-network 
+modules-right = clock
+
+; Position of the system tray window
+; If empty or undefined, tray support will be disabled
+; NOTE: A center aligned tray will cover center aligned modules
+;
+; Available positions:
+;   left
+;   center
+;   right
+tray-position = right
+
+; If true, the bar will not shift its
+; contents when the tray changes
+tray-detached = false
+
+; Tray icon max size
+tray-maxsize = 16
+
+; Enable pseudo transparency
+; Will automatically be enabled if a fully transparent
+; background color is defined using `tray-background`
+tray-transparent = false
+
+; Background color for the tray container
+; By default the tray container will use the bar
+; background color.
+; Note: 32 bit alpha blending is not supported.
+tray-background = ${colors.background}
+
+; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
+tray-offset-x = 0
+tray-offset-y = 0
+
+; Pad the sides of each tray icon
+tray-padding = 1
+
+; Scale factor for tray clients
+tray-scale = 1.0
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; fvwm
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[bar/fvwmbar]
+inherit = bar/master
+
+modules-left = jgmenu ewmh
+modules-center = uptime coreavg load core0temp core1temp memory wired-network
+modules-right = date
+
+; Position of the system tray window
+; If empty or undefined, tray support will be disabled
+; NOTE: A center aligned tray will cover center aligned modules
+;
+; Available positions:
+;   left
+;   center
+;   right
+;;tray-position = right
+
+; If true, the bar will not shift its
+; contents when the tray changes
+;;tray-detached = false
+
+; Tray icon max size
+;;tray-maxsize = 16
+
+; Enable pseudo transparency
+; Will automatically be enabled if a fully transparent
+; background color is defined using `tray-background`
+;;tray-transparent = false
+
+; Background color for the tray container
+; By default the tray container will use the bar
+; background color.
+; Note: 32 bit alpha blending is not supported.
+;;tray-background = ${colors.background}
+
+; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
+;;tray-offset-x = 0
+;;tray-offset-y = 0
+
+; Pad the sides of each tray icon
+;;tray-padding = 1
+
+; Scale factor for tray clients
+;;tray-scale = 1.0

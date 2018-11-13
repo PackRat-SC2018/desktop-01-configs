@@ -1,4 +1,0 @@
-Style * BorderWidth 5, !Handles
-Style * Colorset 1, HilightColorset 2
-#Style * BorderColorset 3, HilightBorderColorset 4
-BorderStyle Simple -- NoInset Flat

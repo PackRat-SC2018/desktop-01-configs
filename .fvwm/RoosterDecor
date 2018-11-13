@@ -1,0 +1,27 @@
+#######
+# 6: Window Decor
+#
+# Buttons Locations: [1 3 5 7 9  TTTTT  0 8 6 4 2]
+#
+#   1 - WindowOps Menu
+#   2 - Close
+#   4 - Maximize
+#   6 - Minimize
+###########
+TitleStyle LeftJustified Height 28 -- Flat
+ButtonStyle All -- Flat 
+ButtonStyle All ToggledActiveDown Vector 5 33x35@3 61x35@3 61x57@3 33x57@3 33x35@3 -- Flat
+ButtonStyle All ToggledInactive Vector 5 47x47@3 57x53@3 53x53@3 \
+                53x47@3 47x47@3 -- Flat
+ButtonStyle All Inactive Vector 5 47x47@3 57x53@3 53x53@3 53x47@3 \
+                47x47@3 -- Flat
+AddButtonStyle 1 Active Vector 8 45x45@3 55x45@3 55x55@3 45x55@3 45x45@3 \
+                 55x55@3 55x45@3 45x55@3
+AddButtonStyle 2 Active Vector 4 35x35@3 57x57@3 57x35@4 35x57@3
+AddButtonStyle 4 Active Vector 5 33x35@3 61x35@3 61x57@3 33x57@3 33x35@3
+AddButtonStyle 4 ToggledActiveUp Vector 5 33x35@3 61x35@3 61x57@3 33x57@3 33x35@3
+AddButtonStyle 6 Active Vector 2 35x45@3 67x45@3
+ButtonStyle All - Clear
+ButtonStyle 1 - MwmDecorMenu
+ButtonStyle 4 - MwmDecorMax
+ButtonStyle 6 - MwmDecorMin
