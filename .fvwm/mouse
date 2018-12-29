@@ -39,5 +39,5 @@ Mouse 3 I    A Menu MenuIconOps
 
 Mouse 1 R    4 Exec exec jgmenu --config-file="$HOME/.config/jgmenu/jgmouserc"
 
-Mouse 1 W   M RaiseMoveX Move
+Mouse 1 W   M Move
 Mouse 3 W   M Resize

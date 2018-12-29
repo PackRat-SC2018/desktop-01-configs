@@ -14,7 +14,7 @@ terminal_args        = -e
 
 menu_margin_x        = 4
 menu_margin_y        = 40
-menu_width           = 200
+menu_width           = 120
 #menu_height_min     = 0
 #menu_height_max     = 0
 #menu_height_mode    = static
@@ -46,12 +46,11 @@ sep_height           = 5
 #sep_halign          = left
 #sep_markup          =
 
-font                 = Ubuntu 12px
-#font_fallback       = xtg
-icon_size            = 24
-#icon_text_spacing   = 10
-#icon_theme          =
-#icon_theme_fallback = xtg
+font                = FiraSans 11
+icon_theme          = Vibrantly-Simple-Dark
+font_fallback       = xtg
+icon_size           = 24
+icon_text_spacing   = 10
 
 #arrow_string        = ▸
 #arrow_width         = 15

@@ -1,46 +1,74 @@
 # jgmenurc
 
-csv_cmd        = xdg
+stay_alive           = 0
+#hide_on_startup     = 0
+csv_cmd              = pmenu
+tint2_look           = 1
+at_pointer           = 0
+terminal_exec        = xterm
+terminal_args        = -e
+#monitor             = 0
+#hover_delay	     = 100
+#hide_back_items     = 1
+#columns             = 1
+#tabs	             = 120
 
-at_pointer      = 0
-stay_alive      = 0
-multi_window    = 1
-tint2_look      = 1
+menu_margin_x        = 8
+menu_margin_y        = 40
+menu_width           = 200
+#menu_height_min     = 0
+#menu_height_max     = 0
+#menu_height_mode    = static
+menu_padding_left    = 2
+menu_padding_right   = 2
+menu_padding_top     = 4
+menu_padding_bottom  = 4
+menu_radius          = 1
+menu_border          = 1
+menu_halign          = left
+menu_valign          = bottom
 
-# menu_halign     = left
-# menu_valign     = top
-# menu_margin_x   = 4
-# menu_margin_y   = 32
+#sub_spacing         = 1
+#sub_padding_top     = auto
+#sub_padding_right   = auto
+#sub_padding_bottom  = auto
+#sub_padding_left    = auto
+sub_hover_action     = 1
 
-#menu_width      = 200
-#menu_radius     = 0
-#menu_border     = 1
+#item_margin_x       = 3
+item_margin_y        = 5
+item_height          = 30
+item_padding_x       = 8
+item_radius          = 0
+item_border          = 0
+#item_halign         = left
 
-menu_padding_top    = 5
-menu_padding_right  = 2
-menu_padding_bottom = 5
-menu_padding_left   = 2
+sep_height           = 5
+#sep_halign          = left
+#sep_markup          =
 
-item_height      = 30
-item_padding_x   = 8
-item_margin_y    = 5
-item_radius      = 0
-item_border      = 0
-sep_height       = 5
+font                 = FiraSans 11
+font_fallback        = xtg
+icon_size            = 24
+icon_text_spacing    = 10
+icon_theme           = Vibrantly-Simple-NonMono-Dark
+#icon_theme_fallback = Vibrantly-Simple
 
-icon_theme       = Vibrantly-Simple-Dark-Graphite
-# icon_theme       = Arc
-icon_size        = 24
-font             = Ubuntu 12px
+arrow_string        = ▸
+arrow_width         = 15
 
-sub_hover_action = 1
-terminal_exec    = urxvt
-terminal_args    = -e
+color_menu_bg        = #202021 95
+color_menu_border    = #4A4857 30
 
-color_menu_bg    = #212121 95
-color_menu_fg    = #8fa1b3 100
-color_norm_bg    = #2b303b 0
-color_norm_fg    = #8fa1b3 100
-color_sel_bg     = #8fa1b3 60
-color_sel_fg     = #2b303b 100
-color_sep_fg     = #8fa1b3 40
+color_norm_bg        = #202021 0
+color_norm_fg        = #D7D7D7 100
+
+color_sel_bg         = #948FB3 60
+color_sel_fg         = #FAFAFA 100
+#color_sel_border    = #4A4857 8
+
+color_sep_fg         = #8fa1b3 40
+
+#csv_name_format     = %n (%g)
+#csv_single_window   = 0
+#csv_no_dirs         = 0

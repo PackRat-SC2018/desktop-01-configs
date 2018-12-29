@@ -221,3 +221,20 @@ modules-right = date
 
 ; Scale factor for tray clients
 ;;tray-scale = 1.0
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; awesome
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[bar/awesome-bar]
+inherit = bar/master
+
+modules-left = jgmenu awesome-ws
+modules-center = uptime coreavg load core0temp core1temp memory wired-network
+modules-right = clock
+
+;;;;;; Tray is commented out ;;;;;;;;
+;tray-position = center
+;tray-padding = 10
+;tray-background = ${colors.background}
+;tray-offset-x = 20%

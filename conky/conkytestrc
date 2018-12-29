@@ -1,0 +1,97 @@
+conky.config = {
+--#############################################
+-- Settings
+--#############################################
+	background = true,
+	use_xft = true,
+--	font = 'Allerta:Regular:size=11',
+	font = 'Fira Code:Retina:size=11',	
+	xftalpha = 1.0,
+	update_interval = 1.0,
+--	update_interval_on_battery = 30.0,
+	total_run_times = 0,
+
+	own_window = true,
+	own_window_colour = '#171717',
+	own_window_transparent = false,
+--	own_window_type = 'dock',
+--	own_window_type = 'panel' ,
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_class = 'ConkyFB',
+	own_window_title = 'ConkyFB',
+--#############################################
+-- Compositing tips:
+-- Conky can play strangely when used with
+-- different compositors. I have found the
+-- following to work well, but your mileage
+-- may vary. Comment/uncomment to suit.
+--#############################################
+--#
+	-- own_window_argb_visual = true,
+	-- own_window_argb_value = 2,
+
+--# xcompmgr
+-- own_window_argb_visual yes
+-- own_window_argb_value 120
+
+--# cairo-compmgr
+--own_window_type desktop
+--own_window_argb_visual yes
+--#############################################
+
+	no_buffers = true,
+	uppercase = true,
+	cpu_avg_samples = 2,
+	override_utf8_locale = true,
+	short_units = true,
+	imlib_cache_size = 0,
+	pad_percents = 1,
+	max_user_text = 3200,
+	text_buffer_size = 1024,
+	if_up_strictness = 'address',
+	double_buffer = true,
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+	border_inner_margin = 1,
+	border_outer_margin = 1,
+
+	default_color = '#DECB9F',
+	default_shade_color = '#000000',
+	default_outline_color = '#828282',
+	color0 = '#FFFFFF',
+	color1 = '#000000',
+	color2 = '#FF0000',-- - red
+	color3 = '#FFFF00',-- - yellow
+	color4 = '#0000FF',-- - blue
+	color5 = '#00FF00',-- - green
+	color6 = '#FFA500',-- - orange
+	color7 = '#00CDCD',-- - cyan3
+	color8 = '#FFD700',-- - gold
+	color9 = '#F00F16',-- - reddish
+	
+	minimum_width = 1920, minimum_height = 20,
+	maximum_width = 1920,
+	alignment = 'top_middle',
+	gap_x = 0,
+	gap_y = 40,
+
+-- -- doesn't seem to work when docked in the slit --#
+	-- lua_load = '~/conky/transbg.lua',
+	-- lua_draw_hook_pre = 'draw_bg 4 0 0 0 0 0x171717 0.66',
+
+-- ${goto 200}Core1:${offset 8}${if_match ${hwmon 1 temp 2}<=50}${color7}${else}${if_match ${hwmon 1 temp 2}<=70}${color8}${else}${if_match ${hwmon 1 temp 2}>70}${color9}${endif}${endif}${endif}${hwmon 1 temp 2}${offset 2}°C${color}\
+-- ${goto 350}Core2:${offset 8}${if_match ${hwmon 1 temp 3}<=50}${color7}${else}${if_match ${hwmon 1 temp 3}<=70}${color8}${else}${if_match ${hwmon 1 temp 3}>70}${color9}${endif}${endif}${endif}${hwmon 1 temp 3}${offset 2}°C${color}\
+
+};
+
+conky.text = [[
+${voffset 1}${goto 24}Uptime:${offset 8}${uptime_short}${offset 18} \
+${goto 512}CPU:${offset 8}${if_match ${cpu}<=50}${color7}${else}${if_match ${cpu}<=70}${color8}${else}${if_match ${cpu}>70}${color9}${endif}${endif}${endif}${cpu cpu0}%${color}${offset 24}${loadavg 1}${offset 10}${loadavg 2}${offset 10}${loadavg 3}\
+${goto 750}Core1:${offset 8}${if_match ${hwmon 1 temp 2}<=50}${color7}${else}${if_match ${hwmon 1 temp 2}<=70}${color8}${else}${if_match ${hwmon 1 temp 2}>70}${color9}${endif}${endif}${endif}${hwmon 1 temp 2}${offset 2}°C${color} \
+${goto 892}Core2:${offset 8}${if_match ${hwmon 1 temp 3}<=50}${color7}${else}${if_match ${hwmon 1 temp 3}<=70}${color8}${else}${if_match ${hwmon 1 temp 3}>70}${color9}${endif}${endif}${endif}${hwmon 1 temp 3}${offset 2}°C${color} \
+${goto 1032}MEM:${offset 8}${if_match ${memperc}<=50}${color7}${else}${if_match ${memperc}<=70}${color8}${else}${if_match ${memperc}>70}${color9}${endif}${endif}${endif}${memperc}%${color}
+${alignc}Net:${offset 24}Up:${offset 10}${upspeedf enp2s0}${offset 40}Down:${offset 10}${downspeedf enp2s0}${color} \
+${time %A  %e  %B}
+]];

@@ -1,48 +1,3 @@
-KillModule FvwmIconMan
-Read colorsets
-Read panels
-Module FvwmIconMan
-KillModule FvwmIconMan
-Read colorsets
-Module FvwmIconMan
-KillModule FvwmIconMan
-Read colorsets
-Read panels
-Module FvwmIconMan
-Module FvwmIconMan
-KillModule FvwmIconMan
-Read panels
-Module FvwmIconMan
-KillModule FvwmIconMan
-Read TaskBar
-Module FvwmButtons FvwmTaskBar
-Module FvwmIconMan
-Module FvwmIconMan
-Module FvwmIconMan
-read testfile
-Module FvwmButtons FvwmTaskBar
-KillModule FvwmButtons FvwmTaskBar
-read testfile
-Module FvwmButtons FvwmTaskBar
-read testfile
-KillModule FvwmButtons FvwmTaskBar
-read testfile
-Module FvwmButtons FvwmTaskBar
-KillModule FvwmButtons FvwmTaskBar
-read testfile
-Module FvwmButtons FvwmTaskBar
-read testfile
-Module FvwmButtons FvwmTaskBar
-KillModule FvwmButtons FvwmTaskBar
-read testfile
-Module FvwmButtons FvwmTaskBar
-KillModule FvwmButtons FvwmTaskBar
-read testfile
-Module FvwmButtons FvwmTaskBar
-read testfile
-Module FvwmButtons FvwmTaskBar
-read testfile
-Module FvwmButtons FvwmTaskBar
 read testfile
 Module FvwmButtons FvwmTaskBar
 Module FvwmButtons FvwmTaskBar
@@ -98,3 +53,48 @@ Module FvwmScript BarClock
 KillModule FvwmScript BarClock
 BorderStyle Simple -- NoInset Flat
 Read RoosterDecor
+fvwm-menu-desktop -e
+/usr/bin/fvwm-menu-desktop -e
+Read NodecorTile
+Read NodecorTile
+Read NodecorTile
+Read NodecorTile
+Read NodecorTile
+Read NodecorTile
+Read NodecorTile
+Read NodecorTile
+Current Schedule 1000 $[w.id] WindowShade
+Current Schedule 1000 $[w.id] WindowShade
+Current Schedule 10 $[w.id] WindowShade
+Current Schedule 10 $[w.id] WindowShade
+read colorsets
+Read testmodules
+KillModule FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTintBar
+KillModule FvwmButtons FvwmTintBar
+Read testmodules
+Module FvwmButtons FvwmTintBar
+KillModule FvwmButtons FvwmTintBar
+Read testmodules
+Module FvwmButtons FvwmTintBar
+KillModule FvwmButtons FvwmTintBar
+Read testmodules
+Module FvwmButtons FvwmTintBar
+KillModule FvwmButtons FvwmTintBar
+Read testmodules
+Module FvwmButtons FvwmTintBar
+Read testmodules
+Module FvwmButtons FvwmTintBar
+KillModule FvwmButtons FvwmTintBar
+KillModule FvwmButtons FvwmTaskBar
+Read testmodules
+KillModule FvwmButtons FvwmTintBar
+Module FvwmButtons FvwmTintBar
+Module FvwmPager 0 3
+Module FvwmPager 0 3
+Module FvwmPager 0 3
+Module FvwmPager 0 3
+Module FvwmPager 0 3
+Module FvwmPager 0 3
+KillModule FvwmButtons FvwmTaskBar
+Module FvwmButtons FvwmTintBar

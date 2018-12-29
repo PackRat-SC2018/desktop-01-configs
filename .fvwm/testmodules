@@ -1,0 +1,10 @@
+Style FvwmTintBar !Title, BorderWidth 1, HandleWidth 1, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom
+
+DestroyModuleConfig FvwmTintBar:*
+*FvwmTintBar: Geometry $[vp.width]x28+0-0
+*FvwmTintBar: Colorset 28
+*FvwmTintBar: Rows 1
+*FvwmTintBar: Columns 109
+*FvwmTintBar: Frame 1
+*FvwmTintBar: Font "xft:Fira Sans:Medium:size=11:antialias=True:hinhstyle=slight"
+*FvwmTintBar: (109x1, Swallow(NoClose,UseOld) tint2 "Exec exec tint2", Frame 0)

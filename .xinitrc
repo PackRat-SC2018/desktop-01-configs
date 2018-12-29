@@ -20,7 +20,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # display timeout and sleep
-xset s 3600 3600
+xset s 600 600
 xset dpms 3600 3700 4000
 
 # keyboard repeat rate
@@ -31,8 +31,9 @@ xset dpms 3600 3700 4000
 case $session in
     fluxbox)    exec dbus-launch --sh-syntax --exit-with-session /usr/bin/startfluxbox ;;
     i3)         exec dbus-launch --sh-syntax --exit-with-session i3 ;;
-    #fvwm)       exec ck-launch-session dbus-launch --sh-syntax --exit-with-session /usr/local/bin/startfvwm ;;
-    #spectrwm)   exec ck-launch-session dbus-launch --sh-syntax --exit-with-session /usr/local/bin/startspectrwm ;;
+    fvwm)       exec dbus-launch --sh-syntax --exit-with-session /usr/local/bin/startfvwm ;;
     dwm)        exec dbus-launch --sh-syntax --exit-with-session /usr/local/bin/startdwm ;;
+    spectrwm)   exec dbus-launch --sh-syntax --exit-with-session /usr/local/bin/startspectrwm ;;
+    awesome)    exec dbus-launch --sh-syntax --exit-with-session /usr/bin/awesome ;;
     *)          exec "$session" # Unknown, try running it
 esac

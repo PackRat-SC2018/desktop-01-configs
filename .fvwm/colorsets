@@ -41,3 +41,6 @@ Colorset 24 fg #CCD1DE, bg #32588A, hi #1F2326, sh #1F2326, Plain, NoShape
 Colorset 25 fg #FFFFFF, bg #367EB3, hi #1F2326, sh #1F2326, Plain, NoShape
 Colorset 26 fg #8A8E99, bg #2E3438, hi #1F2326, sh #1F2326, Plain, NoShape
 Colorset 27 fg #D5D5D5, bg #242424, hi #1F2326, sh #1F2326, Plain, NoShape
+
+# experimental
+Colorset 28 fg #E4E4E4, bg #1C1C1C, hi #1C1C1C, sh #1C1C1C, Plain, NoShape, RootTransparent, Buffer, Tint #1C1C1C 4

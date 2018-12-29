@@ -122,7 +122,7 @@ iptables -A INPUT -d 127.0.0.0/8 ! -i lo -j REJECT --reject-with icmp-port-unrea
 # a home network, enter in the IP's of the machines on the 
 # network below.
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-iptables -A INPUT -s 192.168.25.0/24 -d 0/0 -p all -j ACCEPT
+iptables -A INPUT -s 192.168.35.0/24 -d 0/0 -p all -j ACCEPT
 #iptables -A INPUT -s 192.168.73.0/24 -d 0/0 -p all -j ACCEPT
 #iptables -A INPUT -s 10.10.10.0/24 -d 0/0 -p all -j ACCEPT
 #iptables -A INPUT -s 10.1.1.52 -d 0/0 -p all -j ACCEPT
@@ -150,7 +150,7 @@ iptables -A INPUT -p icmp -j firewall
 # simply edit the IP's below and uncomment the line. If youw wish to 
 # enable SSH access from anywhere, uncomment the second line only. 
 #iptables -A INPUT -i enp2s0 -s 10.1.1.1 -d 0/0 -p tcp --dport 22 -j ACCEPT
-#iptables -A INPUT -i enp2s0 -s 0/0 -d 0/0 -p tcp --dport 22 -j ACCEPT
+iptables -A INPUT -i enp2s0 -s 0/0 -d 0/0 -p tcp --dport 2410 -j ACCEPT
 
 # If you are running a Web Server, uncomment the next line to open
 # up port 80 on your machine.
@@ -169,14 +169,20 @@ iptables -A INPUT -p udp -m udp --dport 2049 -j ACCEPT
 iptables -A INPUT -p udp -m udp --dport 20048 -j ACCEPT
 
 # vsftp rules
-iptables -A INPUT  -p tcp -m tcp --dport 21 -m conntrack --ctstate ESTABLISHED,NEW -j ACCEPT -m comment --comment "Allow ftp connections on port 21"
-iptables -A OUTPUT -p tcp -m tcp --dport 21 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT -m comment --comment "Allow ftp connections on port 21"
+iptables -A INPUT  -p tcp -m tcp --dport 2412 -m conntrack --ctstate ESTABLISHED,NEW -j ACCEPT -m comment --comment "Allow ftp connections on port 2412"
+iptables -A OUTPUT -p tcp -m tcp --dport 2412 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT -m comment --comment "Allow ftp connections on port 2412"
 
-iptables -A INPUT  -p tcp -m tcp --dport 20 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT -m comment --comment "Allow ftp connections on port 20"
-iptables -A OUTPUT -p tcp -m tcp --dport 20 -m conntrack --ctstate ESTABLISHED -j ACCEPT -m comment --comment "Allow ftp connections on port 20"
+#iptables -A INPUT  -p tcp -m tcp --dport 20 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT -m comment --comment "Allow ftp connections on port 20"
+#iptables -A OUTPUT -p tcp -m tcp --dport 20 -m conntrack --ctstate ESTABLISHED -j ACCEPT -m comment --comment "Allow ftp connections on port 20"
 
 iptables -A INPUT  -p tcp -m tcp --sport 1024: --dport 1024: -m conntrack --ctstate ESTABLISHED -j ACCEPT -m comment --comment "Allow passive inbound connections"
 iptables -A OUTPUT -p tcp -m tcp --sport 1024: --dport 1024: -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT -m comment --comment "Allow passive inbound connections"
+
+iptables -A INPUT  -p tcp -m tcp --sport 5000: --dport 5000: -m conntrack --ctstate ESTABLISHED -j ACCEPT -m comment --comment "Allow passive inbound connections"
+iptables -A OUTPUT -p tcp -m tcp --sport 5000: --dport 5000: -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT -m comment --comment "Allow passive inbound connections"
+
+iptables -A INPUT  -p tcp -m tcp --sport 5003: --dport 5003: -m conntrack --ctstate ESTABLISHED -j ACCEPT -m comment --comment "Allow passive inbound connections"
+iptables -A OUTPUT -p tcp -m tcp --sport 5003: --dport 5003: -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT -m comment --comment "Allow passive inbound connections"
 
 # Lets do some basic state-matching. This allows us 
 # to accept related and established connections, so

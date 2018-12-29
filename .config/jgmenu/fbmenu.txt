@@ -1,0 +1,52 @@
+# custom menu
+#
+@icon,,5,10,48,48,0,left,top,,,/home/doug/temp/fb-icon.png
+# @rect,,58,14,130,40,3,left,top,#aaaaaa 15,#000000 0,content
+# @search,,58,14,130,40,3,left,top,#aaaaaa 90,#222222 3,Type to search...
+^sep()
+Terminal,uxterm,utilities-terminal
+Editor,subl3,text-editor
+File manager,pcmanfm,system-file-manager
+Browser,firefox,firefox
+Mail,thunderbird,thunderbird
+^sep()
+
+# sub-menus
+
+Internet,^checkout(Internet),applications-internet
+Graphics,^checkout(Graphics),applications-graphics
+Media,^checkout(Media),applications-multimedia
+Settings,^checkout(Settings),applications-utilities
+# ^pipe(jgmenu_run ob --cmd=bl-place-pipemenu)
+^pipe(/usr/bin/fvwm-menu-headlines)
+
+# end sub-menus
+
+^sep()
+Lock Screen,slock,system-lock-screen
+Reboot,`sudo reboot`,system-reboot
+Shutdown,void-logout,system-log-out
+Menu,^pipe(jgmenu_run pmenu),utilities-terminal
+
+# sub-menu-definitions
+
+^tag(Internet)
+Hexchat,hexchat
+Filezilla,filezilla
+Transmission,transmission-gtk
+
+^tag(Graphics)
+Gimp,gimp
+Geeqie,geeqie
+Screenshot,xfce4-screenshooter
+
+^tag(Media)
+Audacious,audacious
+Asunder,asunder
+Mpv,mpv --player-operation-mode=pseudo-gui
+Guvcview,guvcview
+
+^tag(Settings)
+Network,connman-gtk
+Wallpaper,nitrogen
+Appearance,lxappearance

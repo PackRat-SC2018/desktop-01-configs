@@ -130,14 +130,18 @@ SAVEHIST=1000
 #------------------------------
 # Variables
 #------------------------------
-export BROWSER="firefox"
-export EDITOR="emacs"
+export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'subl3'; else echo 'vim'; fi)"
+export VISUAL="$(if [[ -n $DISPLAY ]]; then echo 'subl3'; else echo 'vim'; fi)"
+
+if [ -n "$DISPLAY" ]; then
+    export BROWSER=firefox
+else 
+    export BROWSER=w3m
+fi
 
 typeset -U path
 # path=(~/bin /other/things/in/path $path[@])
 path=(~/bin ~/conky $path[@])
-
-# export PATH="${PATH}:${HOME}/bin:${HOME}/conky"
 
 #-----------------------------
 # Dircolors

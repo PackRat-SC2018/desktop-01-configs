@@ -30,10 +30,10 @@ markup=none
 
 # Uptime
 [uptime]
-label=UP
+label=UP:
 align=center
 interval=15
-min_width=100
+min_width=120
 separator=false
 command=Uptime
 
@@ -42,17 +42,17 @@ command=Uptime
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
 [cpu_usage]
-label=CPU
+label=CPU:
 align=center
 interval=3
 #min_width=CPU: 100.00%
-min_width=100
+min_width=120
 separator=false
 
 [load_average]
 interval=3
 align=center
-min_width=144
+min_width=120
 separator=false
 
 #[coretemp]
@@ -61,6 +61,29 @@ separator=false
 #min_width=144
 #separator=false
 #command=Coretemp
+
+[core0temp]
+#label=CORE0
+interval=3
+align=center
+min_width=72
+separator=false
+command=sensors | awk '/Core 0/{gsub("+","");print $3}'
+
+[core1temp]
+#label=CORE1
+interval=3
+align=center
+min_width=72
+separator=false
+command=sensors | awk '/Core 1/{gsub("+","");print $3}'
+
+#[pkgtemp]
+#interval=3
+#align=center
+#min_width=100
+#separator=false
+#command=sensors | awk '/Package/{gsub("+","");print $4}'
 
 # Memory usage
 #
@@ -73,11 +96,11 @@ align=center
 #interval=3
 
 [memperc]
-label=MEM
+label=MEM:
 align=center
 separator=false
 #min_width=144
-min_width=MEM: 100
+min_width=100
 interval=3
 command=Memperc
 
@@ -97,7 +120,7 @@ command=Memperc
 #separator=false
 
 [bandwidth]
-label=Net
+label=Net:
 align=center
 instance=enp2s0
 min_width=160

@@ -5,24 +5,25 @@ stay_alive           = 0
 csv_cmd              = pmenu
 tint2_look           = 0
 at_pointer           = 0
-terminal_exec        = uxterm
+terminal_exec        = xterm
 terminal_args        = -e
 #monitor             = 0
 #hover_delay	     = 100
 #hide_back_items     = 1
 #columns             = 1
+#tabs	             = 120
 
-menu_margin_x        = 16
+menu_margin_x        = 4
 menu_margin_y        = 32
 menu_width           = 200
 #menu_height_min     = 0
 #menu_height_max     = 0
 #menu_height_mode    = static
-menu_padding_top     = 4
-menu_padding_right   = 2
-menu_padding_bottom  = 4
 menu_padding_left    = 2
-menu_radius          = 0
+menu_padding_right   = 2
+menu_padding_top     = 4
+menu_padding_bottom  = 4
+menu_radius          = 1
 menu_border          = 1
 menu_halign          = left
 menu_valign          = top
@@ -46,24 +47,24 @@ sep_height           = 5
 #sep_halign          = left
 #sep_markup          =
 
-font                 = Ubuntu 12px
-#font_fallback       = xtg
+font                 = FiraSans 11
+font_fallback        = xtg
 icon_size            = 24
-#icon_text_spacing   = 10
-#icon_theme          =
-#icon_theme_fallback = xtg
+icon_text_spacing    = 10
+icon_theme           = Vibrantly-Simple-NonMono-Dark
+#icon_theme_fallback = Vibrantly-Simple
 
-#arrow_string        = ▸
-#arrow_width         = 15
+arrow_string        = ▸
+arrow_width         = 15
 
-color_menu_bg        = #2b303b 100
-#color_menu_border   = #eeeeee 8
+color_menu_bg        = #242526 90
+color_menu_border    = #484F57 30
 
-color_norm_bg        = #2b303b 0
-color_norm_fg        = #8fa1b3 100
+color_norm_bg        = #242526 0
+color_norm_fg        = #B3AB8F 100
 
-color_sel_bg         = #8fa1b3 60
-color_sel_fg         = #2b303b 100
+color_sel_bg         = #B3AB8F 60
+color_sel_fg         = #E6E3DD 100
 #color_sel_border    = #eeeeee 8
 
 color_sep_fg         = #8fa1b3 40

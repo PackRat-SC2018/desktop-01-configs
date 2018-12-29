@@ -45,18 +45,40 @@
       [exec] (Xcalc) {xcalc}
 [end]
 [submenu] (Graphics)
+[submenu] (Wallpaper)
+      [wallpapers] (~/wallpaper) {fbsetbg}
+[end]
       [exec] (Gimp) {gimp}
       [exec] (Geeqie) {geeqie}
-      [exec] (Qpdfview) {qpdfview}
+      [exec] (Zathura) {zathura %U}
       [exec] (LXappearance) {lxappearance}
       [exec] (Screenshot JPG) {import -window root -quality 100 ~/pictures/screen-import-$(date +%A_%s).jpg}
       [exec] (Screenshot PNG) {import -window root -quality 100 ~/pictures/screen-import-$(date +%A_%s).png}      
 [end]
 [submenu] (Media)
+[submenu] (Music)
+      [submenu] (Cowboy Junkies)
+            [wallpapers] (~/playlists/Cowboy Junkies) {audacious -p}
+      [end]
+      [submenu] (Dire Straits)
+            [wallpapers] (~/playlists/Dire Straits) {audacious -p}
+      [end]
+      [submenu] (John Hiatt)
+            [wallpapers] (~/playlists/John Hiatt) {audacious -p}
+      [end]
+      [submenu] (Big Country)
+            [wallpapers] (~/playlists/Big Country) {audacious -p}
+      [end]
+      [wallpapers] (~/playlists) {audacious -p}
+[end]
+[submenu] (Video)
+      [wallpapers] (/mnt/public/video) {mpv --player-operation-mode=pseudo-gui}
+[end]
       [exec] (Audacious) {audacious}
       [exec] (mpv) {mpv --player-operation-mode=pseudo-gui}
       [exec] (Asunder) {asunder}
       [exec] (Xfburn) {xfburn}
+      [exec] (Guvcview) {guvcview}
 [end]
 [separator]
 [submenu] (Fluxbox menu)

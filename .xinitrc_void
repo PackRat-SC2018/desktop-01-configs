@@ -17,9 +17,12 @@ fi
 # ...or the Window Manager of your choice
 
 # exec /usr/bin/startfluxbox
+# exec /usr/bin/i3
+# exec /usr/bin/awesome
 
-# uncomment for automounting
-# exec dbus-launch --exit-with-session i3
+# auto mount removeable drives
 exec dbus-launch --sh-syntax --exit-with-session /usr/bin/startfluxbox
+# exec dbus-launch --sh-syntax --exit-with-session /usr/bin/i3
+# exec dbus-launch --sh-syntax --exit-with-session /usr/bin/awesome
 
 exit 0

@@ -5,9 +5,10 @@
 
 alias ls='ls --color=auto'
 # PS1='[\u@\h \W]\$ '
-export PS1='\[\033[0;36m\] ┌ ─ [\l] ─ \[\033[1;34m\][\w]\n \[\033[0;36m\]└ ─ > \[\033[0;37m\]$ \[\e[m\]'
+export PS1='\[\033[0;36m\] ┌ ─ [\l] ─ \[\033[1;34m\][\w]\n \[\033[0;36m\]└ ─ > \[\033[0;37m\]$ \[\033[0;37m\]'
 
 # user added
+
 shopt -s histappend
 shopt -s cmdhist
 shopt -s histverify
@@ -61,3 +62,4 @@ export LESS_TERMCAP_ZW=$(tput rsupm)
 #fi
 
 # export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'geany'; else echo 'nano'; fi)"
+

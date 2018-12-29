@@ -20,12 +20,17 @@ DestroyMenu MenuFvwmRoot
 AddToMenu   MenuFvwmRoot "Fvwm" Title
 + "Run:"    Module FvwmForm FvwmForm-RunCommand
 + "" Nop
-+ "Programs" Popup MenuPrograms
-# + "XDG &Menu%icons/apps.png%" Popup XDGMenu
 + "Terminal" Exec exec $[infostore.terminal]
++ "Editor" Exec exec $[infostore.editor]
+Test (x pcmanfm) + "File Manager" Exec exec pcmanfm
++ "Firefox" Exec exec $[infostore.browser]
++ "" Nop
++ "Programs"     Popup MenuPrograms
++ "Preferences"  Popup MenuFvwmPref
++ "Applications" Popup XDGMenu
+# + "Places" Popup FvwmPlaces
 + "" Nop
 + "Fvwm&Console" Module FvwmConsole -terminal $[infostore.terminal]
-+ "&Wallpapers" Popup BGMenu
 + "M&an Pages" Popup MenuFvwmManPages
 # + "Copy Config" FvwmScript FvwmScript-ConfirmCopyConfig
 + "" Nop
@@ -34,7 +39,12 @@ AddToMenu   MenuFvwmRoot "Fvwm" Title
 + "&Quit" Module FvwmScript FvwmScript-ConfirmQuit
 
 # Generate XDGMenu
-# PipeRead "fvwm-menu-desktop -e"
+PipeRead "fvwm-menu-desktop -e"
+
+# directories menu
+AddToFunc FuncFvwmMenuDirectory
++ I PipeRead "fvwm-menu-directory -d '$0' --command-app audacious"
+
 
 # Programs Menu
 #
@@ -51,13 +61,14 @@ Test (x firefox) + "Firefox" Exec exec firefox
 Test (x thunderbird) + "Thunderbird" Exec exec thunderbird
 Test (x gimp) + "Gimp" Exec exec gimp
 Test (x audacious) + "Audacious" Exec exec audacious
+Test (x hexchat) + "Hexchat" Exec exec hexchat
 
 # Background Menu
 #
 # Backgrounds are located in ~/.fvwm/images/background/
 # Menu icons are located in ~/.fvwm/images/bgicons/
 DestroyMenu BGMenu
-AddToMenu   BGMenu "Wallpapers" Title
+AddToMenu   BGMenu "Backgrounds" Title
 + "Floral%bgicons/bg1.png%" SetBG bg1.png
 + "Circles%bgicons/bg2.png%" SetBG bg2.png
 + "Space%bgicons/bg3.png%" SetBG bg3.png
@@ -167,3 +178,37 @@ AddToMenu   MenuFvwmManPages "Help" Title
 + "fvwm-menu-headlines" ViewManPage fvwm-menu-headlines
 + "fvwm-menu-xlock"     ViewManPage fvwm-menu-xlock
 + "fvwm-config"         ViewManPage fvwm-config
+
+#DestroyMenu MenuFvwmConfig
+#AddToMenu MenuFvwmConfig
+#+ MissingSubmenuFunction WallpaperBrowser
+#+ %widget_buttons.png%"Configure FvwmForm" Module FvwmForm FvwmForm-Form
+#+ %cursor.png%"Configure Cursor" Module FvwmForm FvwmForm-RootCursor
+#+ %television.png%"Screensaver Settings" Exec exec xscreensaver-demo
+#+ %hardware_mouse.png%"Mouse Settings" Module FvwmScript FvwmScript-PointerSetup
+#+ %hardware_keyboard.png%"Keyboard Settings" Module FvwmScript FvwmScript-KeyboardSetup
+#+ %audio.png%"Configure Bell" Module FvwmScript FvwmScript-BellSetup
+#+ %tool_wrench.png%"General Settings" Module FvwmScript FvwmScript-BaseConfig
+#+ %tools.png%"Edit fvwm2rc..." Exec exec gvim -geom 139x56 $[FVWM_USERDIR]/.fvwm2rc
+#+ %plug.png%"Fvwm Modules" Popup MenuFvwmModules
+#+ %graphics_convert_polaroid.png%"Browse Wallpaper" Popup $[fvwm_wallpaper_dir]
+#+ %document_view.png%"$Revision: 1.43 $" Title
+#+ %book_help_baloon.png%"Fvwm Information..." Exec exec xmessage "$(fvwm --version)"
+#+ %computer_x11.png%"X Information..." Exec exec xmessage "$(xdpyinfo)"
+
+SetEnv fvwm_wallpaper_dir /home/doug/wallpaper
+
+DestroyMenu MenuFvwmPref
+AddToMenu MenuFvwmPref "Preferences" Title
++ MissingSubmenuFunction WallpaperBrowser
++ "Browse Wallpaper" Popup $[fvwm_wallpaper_dir]
++ "&Backgrounds" Popup BGMenu
++ "" Nop
+Test (x nitrogen) + "Nitrogen" Exec exec nitrogen
+Test (x feh) + "Feh" Exec exec feh ~/wallpaper -g 640x360 --scale-down
+Test (x lxappearance) + "LXappearance" Exec exec lxappearance
+
+DestroyMenu FvwmPlaces
+AddToMenu FvwmPlaces MissingSubmenuFunction FuncFvwmMenuDirectory
++ "Home Directory"  Popup $[HOME]
++ "Music Directory" Popup $[HOME]/playlists

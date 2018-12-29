@@ -1,12 +1,18 @@
 rofi-logout
-xterm
 basilisk
 st
 guvcview
 urxvt
-compton
 audacious
 xfburn
 lefpad
+slock
+yad --color
+yad --font
+leafpad
+asunder
 gcolor2
+xterm
 tint2
+compton
+sakura

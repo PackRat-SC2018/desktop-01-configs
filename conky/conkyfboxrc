@@ -5,7 +5,7 @@ conky.config = {
 	background = true,
 	use_xft = true,
 --	font = 'Allerta:Regular:size=11',
-	font = 'Ubuntu:Semibold:size=10',	
+	font = 'Fira Code:Retina:size=11',	
 	xftalpha = 1.0,
 	update_interval = 1.0,
 --	update_interval_on_battery = 30.0,
@@ -71,7 +71,7 @@ conky.config = {
 	color8 = '#FFD700',-- - gold
 	color9 = '#F00F16',-- - reddish
 	
-	minimum_width = 1920, minimum_height = 18,
+	minimum_width = 1920, minimum_height = 20,
 	maximum_width = 1920,
 	alignment = 'top_middle',
 	gap_x = 0,

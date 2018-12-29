@@ -33,7 +33,7 @@ EdgeThickness 1
 # EwmhBaseStruts [left] [right] [top] [bottom]
 # Reserves space along the edge(s) of the Screen that will not
 # be covered when maximizing or placing windows.
-EwmhBaseStruts 6 6 6 36
+EwmhBaseStruts 0 0 0 30
 
 # This sets the ClickTime and MoveThreshold used to determine
 # Double Clicks, Hold and Move for the mouse.
@@ -45,6 +45,25 @@ MoveThreshold 3
 # Style * SloppyFocus, MouseFocusClickRaises
 Style * ClickToFocus, MouseFocusClickRaises
 ColorMapFocus  FollowsMouse
+
+# Window Placement
+Style * MinOverlapPlacement, GrabFocusOn, !UsePPosition
+
+# Transient Windows (such as open file windows)
+Style * DecorateTransient, StackTransientParent
+Style * FPGrabFocusTransient, FPReleaseFocusTransient
+
+# Sets all windows to OpaqueMove (vs a wired frame) and  windows will
+# snap to each other and the edge of the screen.
+OpaqueMoveSize unlimited
+Style * ResizeOpaque, SnapAttraction 2 SameType ScreenAll, SnapGrid
+
+# WindowShade
+Style * WindowShadeScrolls, WindowShadeSteps 30
+
+# Ignore Numlock and other modifiers for bindings
+# See http://fvwm.org/documentation/faq/#why-do-numlock-capslock-and-scrolllock-interfere-with-clicktofocus-andor-my-mouse-bindings
+IgnoreModifiers L25
 
 # Desktops and Pages
 #
@@ -105,25 +124,6 @@ CursorStyle RIGHT_EDGE      right_side              black    white
 CursorStyle BOTTOM_EDGE     bottom_side             black    white
 CursorStyle LEFT_EDGE       left_side               black    white
 CursorStyle STROKE          plus                    black    white
-
-# Window Placement
-Style * MinOverlapPlacement, GrabFocusOn, !UsePPosition
-
-# Sets all windows to OpaqueMove (vs a wired frame) and  windows will
-# snap to each other and the edge of the screen.
-OpaqueMoveSize unlimited
-Style * ResizeOpaque, SnapAttraction 2 SameType ScreenAll, SnapGrid
-
-# Transient Windows (such as open file windows)
-Style * DecorateTransient, StackTransientParent
-Style * !FPGrabFocusTransient, FPReleaseFocusTransient
-
-# WindowShade
-Style * WindowShadeScrolls, WindowShadeSteps 30
-
-# Ignore Numlock and other modifiers for bindings
-# See http://fvwm.org/documentation/faq/#why-do-numlock-capslock-and-scrolllock-interfere-with-clicktofocus-andor-my-mouse-bindings
-IgnoreModifiers L25
 
 # Default Font
 DefaultFont "xft:Noto Sans:regular:size=11:antialias=True:hintstyle=slight"
@@ -194,6 +194,8 @@ DestroyModuleConfig FvwmScript:*
 
 #======FvwmIconBox specs [l t r b]===============#
 
+SetEnv fvwm_icon_size 56
+
 Style * StickyIcon
 Style * IconTitleRelief 0
 Style * IconBackgroundRelief 1
@@ -255,11 +257,12 @@ Style Thunderbird ResizeHintOverride, PositionPlacement Center
 Style *tray !Title, !Handles, !Borders, StaysOnBottom, WindowListSkip, CirculateSkip
 Style Tint2 !Title, !Handles, !Borders, ResizeHintOverride, StaysOnBottom, WindowListSkip, CirculateSkip, PositionPlacement -2px 2px
 Style Xfce4-panel !Title, !Handles, !Borders, StaysOnTop, WindowListSkip, CirculateSkip
-Style *Clock !Title, PositionPlacement -2 -2
 Style Bl-exit Sticky, CirculateSkip, WindowListSkip, PositionPlacement Center
 Style FvwmScript-Clock* !Title, !Borders, !Handles, Sticky, WindowListSkip, NeverFocus, StaysOnBottom, CirculateSkip, PositionPlacement -2px 2px
 Style FvwmScript-ConfirmQuit* BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, StaysOnTop, CirculateSkip, PositionPlacement Center
 Style FvwmForm-RunCommand* BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, StaysOnTop, CirculateSkip, PositionPlacement Center
+Style fbox_cal* BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, StaysOnTop, CirculateSkip, PositionPlacement -10px -36px
+Style *Clock !Title, NeverFocus, PositionPlacement -5px -36px
 
 Read colorsets
 Read functions
@@ -282,8 +285,12 @@ AddToFunc   StartFunction
 + I Module FvwmEvent EventNewDesk
 + I Module FvwmButtons FvwmTaskBar
 
-# nitrogen
-+ I Test (Init) Exec sleep 2; exec nitrogen --restore
+# + I exec exec xset s blank
+# + I exec exec xset b 33
+
+# Wallpaper
+# + I Test (Init) Exec sleep 2; exec nitrogen --restore
++ I Test (Init) Exec sleep 2; exec $HOME/.fehbg
 
 + I Test (Init) Exec sleep 3; exec $HOME/bin/ConkyFvwm.sh
 + I Test (Restart) Exec exec $HOME/bin/ConkyFvwm.sh

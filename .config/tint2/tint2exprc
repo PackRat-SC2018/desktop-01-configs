@@ -94,8 +94,7 @@ execp_font_color = #B38C5D 100
 execp_background_id = 0
 execp_centered = 1
 execp_padding = 12 0 0
-execp_command = /home/doug/bin/psuinfo -Cucat -N
-# execp_command = python /home/doug/build/tint2-executors/cpu-fan-mem.py -CgStfMDu -N
+execp_command = psuinfo -Cucak -N -S3
 execp_interval = 3
 execp_rclick_command = urxvt -e htop --sort-key PERCENT_CPU
 

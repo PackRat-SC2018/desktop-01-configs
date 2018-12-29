@@ -1,15 +1,6 @@
-!xmodmap to change keyboard
-!by default nothing to do here
-!move along
+! .Xmodmap file
+! by default this file does nothing
 !
-! user changes 05-26-2013
-!
-! for debian and other USA distros
-!keysym Alt_R = XF86Launch0
-!keysym Control_R = XF86Launch1
-keysym Alt_R = F13
-keysym Control_R = F14
-!
-! keysym 0xffec = F15
-!
-! EOF
+!uncomment to  change right alt ctrl key to function keys
+!keysym Alt_R = F13
+!keysym Control_R = F14

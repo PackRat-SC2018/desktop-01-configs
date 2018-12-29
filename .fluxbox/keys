@@ -22,7 +22,7 @@ Mod1 space :HideMenus
 # OnToolbar Mouse4 :PrevWindow {static groups} (iconhidden=no)
 # OnToolbar Mouse5 :NextWindow {static groups} (iconhidden=no)
 # OnToolbar Mouse2 :Exec gsimplecal
-OnToolbar Mouse2 :Exec zenity --width 360 --class="fbox_cal" --title="Fbox_Calendar" --calendar --text ""
+OnToolbar Mouse2 :Exec yad --width 360 --class="fbox_cal" --title="Fbox_Calendar" --skip-taskbar --calendar --text ""
 
 # alt + left/right click to move/resize a window
 OnWindow Mod1 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
@@ -83,15 +83,16 @@ Mod4 Shift Tab :PrevTab
 
 # open a terminal
 Mod1 F1 :Exec urxvt
+Mod1 F3 :Exec uxterm
+Mod1 Shift Return :Exec st
 
-# open a dialog to run programs
+# open a run dialog/menu
 Mod1 F2 :Exec fbrun
 Mod4 d :Exec rofi -show
-# Mod4 d :Exec rofi -combi -modi drun,run,window -show combi -display-drun 'Programs: ' -display-window 'Running: '
 Mod4 x :Exec jgmenu_run
+XF86Favorites :Exec jgmenu_run
 
 # current window commands
-Mod1 F3 :Exec uxterm
 Mod1 F4 :Close
 Mod1 Shift F5 :MacroCmd {ResizeTo 80% 90%} {MoveTo 0 0 Center}
 Mod1 F5 :MoveTo 0 0 CENTER
@@ -118,8 +119,8 @@ XF86AudioNext :Exec next
 Menu :Exec pcmanfm
 XF86HomePage :Exec wmctrl -a firefox || firefox
 XF86Mail :Exec wmctrl -a thunderbird || thunderbird
-XF86Tools :Exec urxvt -e tmux
-XF86Calculator :Exec Exec wmctrl -a xcalc || xcalc
+XF86Tools :Exec xterm -e tmux
+XF86Calculator :Exec Exec wmctrl -a galculator || galculator
 Control Mod4 l :Exec wmctrl -a subl3 || subl3
 Control Mod4 g :Exec wmctrl -a gimp || gimp
 Control Mod4 p :Exec wmctrl -a libreoffice --calc || libreoffice --calc

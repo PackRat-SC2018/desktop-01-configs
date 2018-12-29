@@ -1,16 +1,18 @@
 decorations none
-geometry 5x1
+geometry 7x1
+background "#1F2326"
+# background "#aaaaaa"
 icon_size 24
 slot_size 26
-max_geometry 5x1
+max_geometry 8x1
 parent_bg false
-transparent true
-tint_color "#2F333B"
-tint_level 255
+transparent false
+tint_color "#2b303b"
+tint_level 0
 icon_gravity SE
 no_shrink true
 skip_taskbar true
 window_layer bottom
-window_strut bottom
-window_type utility
-
+window_strut none
+window_type normal
+sticky true

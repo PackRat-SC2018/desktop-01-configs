@@ -1,0 +1,30 @@
+out_to_x no
+own_window no
+out_to_console yes
+background no
+max_text_width 0
+update_interval 1.0
+total_run_times 0
+short_units yes
+cpu_avg_samples 4
+use_spacer none
+
+TEXT
+# JSON for i3bar #
+
+[
+
+	{ "full_text" : "Up:  ${uptime_short}  " , "color" : "\#CDCDCD" },
+	
+	{ "full_text" : "CPU:  ${cpu}%    ${loadavg}  " , "color" :
+		${if_match ${cpu}>=40}"\#FF2828"${else}"\#CDCDCD"${endif} },
+	
+	{ "full_text" : "MEM:  ${memperc}%  " , "color" :
+		${if_match ${memperc}>=40}"\#FF2828"${else}${if_match ${memperc}>=25}"\#E0DC8C"${else}"\#CDCDCD"${endif}${endif} },
+
+	{ "full_text" : "NET (U/D):  ${upspeed enp2s0}    ${downspeed enp2s0}  " , "color" :
+		${if_match ${downspeedf enp2s0}<=500}"\#CDCDCD"${else}"\#00CCB1"${endif} },
+
+	{ "full_text" : "${time %a %e %b  %k:%M}  " , "color" : "\#CDCDCD" }
+
+],

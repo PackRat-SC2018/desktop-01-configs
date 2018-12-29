@@ -66,22 +66,6 @@ AddToFunc   SetBG
 + I Exec exec ln -fs $[FVWM_DATADIR]/default-config/images/background/$0 \
     $[FVWM_USERDIR]/.BGdefault
 
- # Function: SetWall $0
-#
-# SetBG is used with the background menu to set the background
-# image and configure it to be loaded the next time fvwm is run.
-# Note, hsetroot -tile can't use .jpeg or resize images. Use something
-# like display, feh, etc.
-DestroyFunc SetWall
-AddToFunc   SetWall
-+ I Test (f $[FVWM_USERDIR]/images/background/$0) Exec exec hsetroot -tile $[FVWM_USERDIR]/images/background/$0
-+ I TestRc (Match) Exec exec ln -fs images/background/$0 $[FVWM_USERDIR]/.BGdefault
-+ I TestRc (Match) Break
-+ I Test (!f $[FVWM_DATADIR]/default-config/images/background/$0) Break
-+ I Exec exec hsetroot -tile $[FVWM_DATADIR]/default-config/images/background/$0
-+ I Exec exec ln -fs $[FVWM_DATADIR]/default-config/images/background/$0 $[FVWM_USERDIR]/.BGdefault
-
-
 # Function: IconManClick
 #
 # This function is run from FvwmIconMan when the button is clicked.
@@ -152,28 +136,36 @@ AddToFunc FuncFvwmPrevWindow
 
 SetEnv DIR Next
 
-DestroyFunc SwitchWindow
-AddToFunc SwitchWindow
-+ I $[DIR] (CurrentPage, !Iconic, !Sticky) FvwmRaiseAndFocus
-+ I Deschedule 134000
-+ I PipeRead `[ "$[DIR]" == "Prev" ] && \
-	echo 'SetEnv NDIR Next' || \
-	echo 'SetEnv NDIR Prev'`
-+ I Schedule 700 134000 SetEnv DIR $[NDIR]
-
-DestroyFunc 	NextWindow
+DestroyFunc NextWindow
 AddToFunc 	NextWindow
 + I ScanForWindow NorthEast NorthWest (CurrentPage, !Iconic, AcceptsFocus) FlipFocus
 + I Current Raise
 + I Current WarpToWindow 5 5
 
-DestroyFunc 	PrevWindow
+DestroyFunc PrevWindow
 AddToFunc 	PrevWindow
 + I ScanForWindow SouthEast SouthWest (CurrentPage, !Iconic, AcceptsFocus) FlipFocus
 + I Current Raise
 + I Current WarpToWindow 5 5
 
 ## Tiling functions
+
+DestroyFunc CenterWindow
+AddToFunc   CenterWindow
++ I ThisWindow Piperead "echo Move \
+    $(( $[vp.width]/2-$[w.width]/2 ))p \
+    $(( $[vp.height]/2-$[w.height]/2 ))p"
+
+DestroyFunc ResizeCenter
+AddToFunc ResizeCenter
++ I Resize $*
++ I ThisWindow WindowStyle CenterPlacement
++ I UpdateStyles
+
+DestroyFunc FvwmCenterWindow
+AddToFunc FVwmCenterWindow
++ I Resize 60 60
++ I Move 50-50w 50-50w
 
 DestroyFunc TileUpperLeft
 AddToFunc TileUpperLeft
@@ -291,27 +283,50 @@ AddToFunc TileBottomRight
 
 DestroyFunc MoveToCenter
 AddToFunc MoveToCenter
-+ I ThisWindow (!Shaded, !Iconic) Maximize 80 60
++ I ThisWindow (!Shaded, !Iconic) Maximize 80 80
 + I ThisWindow (Maximized, !Shaded, !Iconic) Move 50-50w 50-50w
 
 #-----------------------------------------------------------------------
 # Wallpaper Browser by Taviso.
 #-----------------------------------------------------------------------
+
+#DestroyFunc FvwmWallpaper
+#AddToFunc   FvwmWallpaper
+#+ I PipeRead 'test ! -d "${FVWM_USERDIR}/wallpapers" && mkdir "${FVWM_USERDIR}/wallpapers"; \
+#    test ! -d "${FVWM_USERDIR}/wallpapers/.thumbs" && mkdir "${FVWM_USERDIR}/wallpapers/.thumbs"; \
+#    for i in "$0/"*; do \
+#        test -f "${FVWM_USERDIR}/wallpapers/.thumbs/${i##*/}" -a "${i}" -ot "${FVWM_USERDIR}/wallpapers/.thumbs/${i##*/}" || { \
+#                convert -quality 0 -sample 42 "${i}" "png:${FVWM_USERDIR}/wallpapers/.thumbs/${i##*/}" 2>/dev/null \
+#                    || continue; \
+#            }; \
+#    done; \
+#    fvwm-menu-directory --icon-title menu/folder-open.xpm --icon-file __PIXMAP__ --links \
+#    --icon-dir menu/folder.xpm \
+#    --dir "$0" --command-file="FuncNewWallpaper \\"%f\\"" \
+#    --exec-t="^xv -wait 2 *" --func-name WallpaperBrowser | sed \
+#    "s#__PIXMAP__\\(.*\\)\\\"\\(.*/\\)\\(.*\\)\\\"#\\$[FVWM_USERDIR]/wallpapers/.thumbs/\\3\\1\\2\\3#g"'
+
+#####
+# Example: http://dev.gentoo.org/~taviso/screenshots/may04a-fvwm.png
+# 
+# Remember, fvwm-root only works with png and xpm, if you use lots of jpg, try changing this
+# to Esetroot, or similar.
+#
+# If you have xv installed, clicking the title will start a slide show.
+###############
 DestroyFunc WallpaperBrowser
-AddToFunc   WallpaperBrowser
-+ I PipeRead 'test ! -d "${FVWM_USERDIR}/wallpapers" && mkdir "${FVWM_USERDIR}/wallpapers"; \
-    test ! -d "${FVWM_USERDIR}/wallpapers/.thumbs" && mkdir "${FVWM_USERDIR}/wallpapers/.thumbs"; \
+AddToFunc WallpaperBrowser I PipeRead 'test ! -d "$0/.thumbs" && mkdir "$0/.thumbs"; \
     for i in "$0/"*; do \
-        test -f "${FVWM_USERDIR}/wallpapers/.thumbs/${i##*/}" -a "${i}" -ot "${FVWM_USERDIR}/wallpapers/.thumbs/${i##*/}" || { \
-                convert -quality 0 -sample 42 "${i}" "png:${FVWM_USERDIR}/wallpapers/.thumbs/${i##*/}" 2>/dev/null \
+        test -f "$0/.thumbs/${i##*/}" \
+            -a "${i}" -ot "$0/.thumbs/${i##*/}" || { \
+                convert -quality 0 -scale 42 "${i}" "png:$0/.thumbs/${i##*/}" 2>/dev/null \
                     || continue; \
             }; \
     done; \
-    fvwm-menu-directory --icon-title menu/folder-open.xpm --icon-file __PIXMAP__ --links \
-    --icon-dir menu/folder.xpm \
-    --dir "$0" --command-file="FuncNewWallpaper \\"%f\\"" \
-    --exec-t="^xv -wait 2 *" --func-name WallpaperBrowser | sed \
-    "s#__PIXMAP__\\(.*\\)\\\"\\(.*/\\)\\(.*\\)\\\"#\\$[FVWM_USERDIR]/wallpapers/.thumbs/\\3\\1\\2\\3#g"'
+    fvwm-menu-directory --icon-title folder_view.png --icon-file __PIXMAP__ \
+    --icon-dir folder_paper_closed.png --dir "$0" --exec-file "^feh --bg-center" \
+    --exec-t="^xv -wait 2 *" | sed -e "s#FuncFvwmMenuDirectory#WallpaperBrowser#g" \
+    -e "s#__PIXMAP__\\(.*\\)\\\"\\(.*/\\)\\(.*\\)\\\"#\\2.thumbs/\\3\\1\\2\\3#g"'
 
 #-----------------------------------------------------------------------
 # switch background from FvwmBacker to chosen wallpaper picture
@@ -388,3 +403,50 @@ DestroyModuleConfig  FvwmForm-RunCommand: *
 *FvwmForm-RunCommand: Command       exec $(Command)
 *FvwmForm-RunCommand: Button        quit "$[gt.Cancel]"
 *FvwmForm-RunCommand: Command       Nop
+
+# To force that all pending changes are applied immediately, use the
+# UpdateStyles, Refresh or RefreshWindow commands.
+
+DestroyFunc NodecorBottomLeft
+AddToFunc NodecorBottomLeft
++ I ToggleTitle
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 50
++ I ThisWindow Schedule 10 Move +0 -0
+
+DestroyFunc NodecorBottomRight
+AddToFunc NodecorBottomRight
++ I ToggleTitle
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 50
++ I ThisWindow Schedule 10 Move -0 -0
+# + I ThisWindow (Maximized, !Shaded, !Iconic) Move -0 -0
+
+DestroyFunc NodecorUpperLeft
+AddToFunc NodecorUpperLeft
++ I ToggleTitle
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 50
++ I ThisWindow Schedule 10 Move +0 +0
+
+DestroyFunc NodecorUpperRight
+AddToFunc NodecorUpperRight
++ I ToggleTitle
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 50
++ I ThisWindow Schedule 10 Move -0 +0
+
+DestroyFunc NodecorMaxLeft
+AddToFunc NodecorMaxLeft
++ I ToggleTitle
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 100
++ I ThisWindow Schedule 20 Move +0 +0
+
+DestroyFunc NodecorMaxRight
+AddToFunc NodecorMaxRight
++ I ToggleTitle
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 100
++ I ThisWindow Schedule 20 Move -0 +0
+
+Key KP_1    A   4S  NodecorBottomLeft
+Key KP_3    A   4S  NodecorBottomRight
+Key KP_7    A   4S  NodecorUpperLeft
+Key KP_9    A   4S  NodecorUpperRight
+Key KP_4    A   4S  NodecorMaxLeft
+Key KP_6    A   4S  NodecorMaxRight

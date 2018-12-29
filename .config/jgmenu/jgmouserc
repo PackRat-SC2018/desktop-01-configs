@@ -46,25 +46,25 @@ sep_height           = 5
 #sep_halign          = left
 #sep_markup          =
 
-font                 = Ubuntu 12px
-#font_fallback       = xtg
+font                 = FiraSans 11
+font_fallback        = Sans 11
 icon_size            = 24
-#icon_text_spacing   = 10
-#icon_theme          =
-#icon_theme_fallback = xtg
+icon_text_spacing    = 10
+icon_theme           = Paper
+icon_theme_fallback  = Adwaita
 
-#arrow_string        = ▸
-#arrow_width         = 15
+arrow_string         = ▸
+arrow_width          = 15
 
 color_menu_bg        = #2b303b 100
-#color_menu_border   = #eeeeee 8
+color_menu_border    = #1e1e1e 8
 
 color_norm_bg        = #2b303b 0
 color_norm_fg        = #8fa1b3 100
 
 color_sel_bg         = #8fa1b3 60
 color_sel_fg         = #2b303b 100
-#color_sel_border    = #eeeeee 8
+color_sel_border     = #1e1e1e 8
 
 color_sep_fg         = #8fa1b3 40
 
