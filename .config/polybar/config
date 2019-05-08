@@ -16,7 +16,7 @@ include-file = /home/doug/.config/polybar/modules.conf
 inherit = bar/master
 
 modules-left = jgmenu
-modules-center = uptime coreavg load core0temp core1temp memory wired-network
+modules-center = uptime coreavg load temp0 temp1 memory wired-network
 modules-right = date
 
 ;;;;;; Tray is commented out ;;;;;;;;
@@ -82,8 +82,7 @@ modules-right = date
 inherit = bar/master
 
 modules-left = jgmenu i3 
-;modules-center = uptime coreavg load core0temp memory battery wireless-network
-modules-center = uptime coreavg load memory battery wireless-network
+modules-center = uptime coreavg load core0temp core1temp memory wired-network
 modules-right = clock
 
 ; Position of the system tray window
@@ -102,11 +101,6 @@ tray-detached = false
 
 ; Tray icon max size
 tray-maxsize = 16
-
-; Enable pseudo transparency
-; Will automatically be enabled if a fully transparent
-; background color is defined using `tray-background`
-tray-transparent = false
 
 ; Background color for the tray container
 ; By default the tray container will use the bar
@@ -132,7 +126,7 @@ tray-scale = 1.0
 inherit = bar/master
 
 modules-left = jgmenu workspaces
-modules-center = uptime coreavg load core0temp memory battery wireless-network 
+modules-center = uptime coreavg load core0temp core1temp memory wired-network
 modules-right = clock
 
 ; Position of the system tray window
@@ -151,11 +145,6 @@ tray-detached = false
 
 ; Tray icon max size
 tray-maxsize = 16
-
-; Enable pseudo transparency
-; Will automatically be enabled if a fully transparent
-; background color is defined using `tray-background`
-tray-transparent = false
 
 ; Background color for the tray container
 ; By default the tray container will use the bar
@@ -234,7 +223,7 @@ modules-center = uptime coreavg load core0temp core1temp memory wired-network
 modules-right = clock
 
 ;;;;;; Tray is commented out ;;;;;;;;
-;tray-position = center
-;tray-padding = 10
-;tray-background = ${colors.background}
-;tray-offset-x = 20%
+tray-position = right
+tray-padding = 10
+tray-background = ${colors.background}
+tray-offset-x = 20%

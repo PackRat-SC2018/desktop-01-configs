@@ -7,8 +7,8 @@ Key	Space	A	CM	Menu WindowOptionsMenu Close
 
 #Key	r	A	CM	RaiseToTop
 #Key	l	A	CM	LowerToBottom
-Key	F1	A	M	Exec exec urxvt
-Key	F2	A	M	Exec exec rofi -show
+Key	F1	A	M	Exec exec uxterm
+Key	F2	A	M	Exec exec rofi -show run
 Key	F3	A	M	Exec exec st
 Key	F4	A	M	Close
 Key	F5	A	M	Move 50-50w 50-50w
@@ -71,21 +71,21 @@ Key	Tab	A	MS	FuncFvwmPrevWindow
 # Silent Key Tab A M WindowList Root c c NoDeskSort, SelectOnRelease Meta_L
 
 # Scroll Pages
-#Key	Right	A	CM	Scroll +100 0
-#Key	Left	A	CM	Scroll -100 0
-#Key	Up	A	CM	Scroll +0 -100
-#Key	Down	A	CM	Scroll +0 +100
+Key	Right	A	C4	Scroll +100 0
+Key	Left	A	C4	Scroll -100 0
+Key	Up		A	C4	Scroll +0 -100
+Key	Down	A	C4	Scroll +0 +100
 
 # 3x3
-#Key	KP_1	A	4	GotoPage 0 0
-#Key	KP_2	A	4	GotoPage 1 0
-#Key	KP_3	A	4	GotoPage 2 0
-#Key	KP_4	A	4	GotoPage 0 1
-#Key	KP_5	A	4	GotoPage 1 1
-#Key	KP_6	A	4	GotoPage 2 1
-#Key	KP_7	A	4	GotoPage 0 2
-#Key	KP_8	A	4	GotoPage 1 2
-#Key	KP_9	A	4	GotoPage 2 2
+Key	KP_7	A	S4	GotoPage 0 0
+Key	KP_8	A	S4	GotoPage 1 0
+Key	KP_9	A	S4	GotoPage 2 0
+Key	KP_4	A	S4	GotoPage 0 1
+Key	KP_5	A	S4	GotoPage 1 1
+Key	KP_6	A	S4	GotoPage 2 1
+Key	KP_1	A	S4	GotoPage 0 2
+Key	KP_2	A	S4	GotoPage 1 2
+Key	KP_3	A	S4	GotoPage 2 2
 
 # 2x2
 #Key	KP_1	A	S4	GotoPage 0 0
@@ -129,8 +129,8 @@ Key	l	A	C4	Exec exec $[infostore.editor]
 Key	g	A	C4	Exec exec gimp
 Key	p	A	C4	Exec exec libreoffice --calc
 Key	o	A	C4	Exec exec libreoffice --writer
-key p   A   4   Exec exec rofi -show
-key x   A   4   Exec exec jgmenu_run
+key p   A   4   Exec exec rofi -show run
+# key p   A   4   Exec exec jgmenu_run
 
 Key	Print	A	C4	Exec exec "$HOME/bin/scrnshot"
 Key	Pause	A	C4	Exec exec "$HOME/bin/ConkyFvwm.sh"

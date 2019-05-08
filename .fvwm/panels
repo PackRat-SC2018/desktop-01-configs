@@ -1,11 +1,9 @@
 # panels and taskbars
 
 Style FvwmPager* !Title, BorderWidth 1, HandleWidth 1, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom
-Style DeskTopID  !Title, !Borders, !Handles, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom
 Style RightPanel !Title, !Borders, !Handles, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom
 Style PagerPanel !Title, BorderWidth 3, HandleWidth 3, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom
 Style FvwmIconMan !Title, BorderWidth 1, HandleWidth 1, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom
-Style FvwmPager !Title, BorderWidth 1, HandleWidth 1, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom
 
 # FvwmEvent
 #
@@ -25,15 +23,15 @@ AddToFunc   ChangeDesk
 + I SendToModule FvwmButtons ChangeButton desk1 Colorset 23
 + I SendToModule FvwmButtons ChangeButton desk2 Colorset 23
 + I SendToModule FvwmButtons ChangeButton desk3 Colorset 23
-+ I SendToModule FvwmButtons ChangeButton desk$0 Colorset 24
++ I SendToModule FvwmButtons ChangeButton desk$0 Colorset 22
 
 # FvwmPager
 #
 # This module displays the location of the windows on the various Pages
 # and Desks. This is setup to show only the Pages on the current Desk.
 DestroyModuleConfig FvwmPager:*
-*FvwmPager: DeskTopScale 30
-*FvwmPager: Geometry +832+4
+*FvwmPager: DeskTopScale 28
+*FvwmPager: Geometry +824+4
 *FvwmPager: NoStartIconic
 *FvwmPager: Font None
 #*FvwmPager: Font "xft:sans:regular:size=11:antialias=true:"
@@ -42,10 +40,10 @@ DestroyModuleConfig FvwmPager:*
 *FvwmPager: Colorset * 16
 *FvwmPager: HilightColorset * 17
 *FvwmPager: BalloonColorset * 18
-#*FvwmPager: WindowColorsets 19 20
-*FvwmPager: WindowColorsets 16 17
-*FvwmPager: !Balloons
-# *FvwmPager: Balloons
+*FvwmPager: WindowColorsets 19 20
+# *FvwmPager: WindowColorsets 16 17
+# *FvwmPager: !Balloons
+*FvwmPager: Balloons
 *FvwmPager: BalloonFont "xft:Sans:regular:size=10:antialias=True"
 *FvwmPager: BallonYOffset +2
 *FvwmPager: BalloonColorset 27
@@ -63,7 +61,7 @@ DestroyModuleConfig FvwmIconMan:*
 *FvwmIconMan: UseWinList true
 *FvwmIconMan: ButtonGeometry 144x30
 *FvwmIconMan: MaxButtonWidth 144
-*FvwmIconMan: ManagerGeometry 0x1+500-0
+*FvwmIconMan: ManagerGeometry 0x1+0-0
 #*FvwmIconMan: Background #003c3c
 #*FvwmIconMan: Foreground #ffffff
 *FvwmIconMan: Colorset 23
@@ -73,6 +71,7 @@ DestroyModuleConfig FvwmIconMan:*
 *FvwmIconMan: FocusAndSelectColorset 25
 *FvwmIconMan: SelectColorset 25
 *FvwmIconMan: IconAndSelectColorset 25
+*FvwmIconMan: FocusButton up
 *FvwmIconMan: DrawIcons false
 *FvwmIconMan: ReliefThickness 1
 *FvwmIconMan: Format "%c: %i: %t:"
@@ -130,32 +129,18 @@ DestroyModuleConfig PagerPanel:*
 *PagerPanel: (25x20, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 2, Frame 0)
 *PagerPanel: (25x20, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 2, Frame 0)
 *PagerPanel: (100x80, Swallow FvwmPager 'Module FvwmPager *', Frame 1)
-*PagerPanel: (100x40, Swallow DateTime 'Module FvwmScript $[FVWM_USERDIR]/FvwmScript-Clock', Frame 1)
-
-DestroyModuleConfig DeskTopId:*
-*DeskTopId: Geometry 112x28+0-0
-*DeskTopId: Colorset 5
-*DeskTopId: Rows 1
-*DeskTopId: Columns 4
-*DeskTopId: Frame 1
-*DeskTopId: Font "xft:Fira Code:style=Regular:size=11:antialias=true:hintstyle=slight"
-#*DeskTopId: (10x20, Frame 0)
-*DeskTopId: (1x1, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 24, ActiveColorset 25, Frame 0)
-*DeskTopId: (1x1, Id desk1, Title "2", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 25, Frame 0)
-*DeskTopId: (1x1, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 25, Frame 0)
-*DeskTopId: (1x1, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 25, Frame 0)
+*PagerPanel: (4x3, Swallow DateTime 'Module FvwmScript $[FVWM_USERDIR]/scripts/Kalende/Kalende', Frame 0)
 
 Style FvwmTaskBar !Title, BorderWidth 1, HandleWidth 1, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom
 Style TaskBarIcons !Title, !Borders, !Handles, WindowListSkip, CirculateSkip, StaysOnBottom, NeverFocus, Sticky
-
 
 DestroyModuleConfig TaskBarIcons:*
 *TaskBarIcons: NumManagers        1
 *TaskBarIcons: Title              ""
 *TaskBarIcons: Resolution         global
 *TaskBarIcons: Font               "xft:Fira Sans:style=Regular:size=11:antialias=True"
-*TaskBarIcons: ButtonGeometry     160x28
-*TaskBarIcons: MaxButtonWidth     160
+*TaskBarIcons: ButtonGeometry     192x28
+*TaskBarIcons: MaxButtonWidth     192
 *TaskBarIcons: Format             "%c: %i"
 # *TaskBarIcons: ManagerGeometry    0x1+0-0
 *TaskBarIcons: ManagerGeometry    1x1
@@ -163,24 +148,24 @@ DestroyModuleConfig TaskBarIcons:*
 *TaskBarIcons: UseWinList         True
 *TaskBarIcons: DontShow           Conky, XClock
 *TaskBarIcons: ReliefThickness    1
-*TaskBarIcons: PlainButton        flat
+*TaskBarIcons: PlainButton        raisededge
+*TaskBarIcons: IconButton         raisededge
 *TaskBarIcons: FocusButton        raisededge
-*TaskBarIcons: IconButton         flat
 *TaskBarIcons: FocusAndSelectButton    raisededge
 *TaskBarIcons: SelectButton            raisededge
 #*TaskBarIcons: Background         #2B303B
 #*TaskBarIcons: Foreground         #2B303B
-*TaskBarIcons: Colorset                 23
-*TaskBarIcons: FocusColorset            24
-*TaskBarIcons: PlainColorset            23
-*TaskBarIcons: IconColorset             23
-*TaskBarIcons: SelectColorset           25
-*TaskBarIcons: FocusAndSelectColorset   25
-*TaskBarIcons: IconAndSelectColorset    25
+*TaskBarIcons: Colorset                 5
+*TaskBarIcons: PlainColorset            5
+*TaskBarIcons: IconColorset             5
+*TaskBarIcons: FocusColorset            6
+*TaskBarIcons: FocusAndSelectColorset   6
+*TaskBarIcons: SelectColorset           4
+*TaskBarIcons: IconAndSelectColorset    4
 *TaskBarIcons: Shape                    true
 *TaskBarIcons: Tips needed
 *TaskBarIcons: TipsDelays 500 100
-*TaskBarIcons: TipsColorset 12
+*TaskBarIcons: TipsColorset 14
 *TaskBarIcons: TipsBorderWidth 1
 *TaskBarIcons: TipsPlacement updown
 *TaskBarIcons: TipsJustification left
@@ -202,19 +187,74 @@ DestroyModuleConfig FvwmTaskBar:*
 *FvwmTaskBar: (2x1, Title "Fvwm", Icon "", Action `Exec jgmenu --config-file="$HOME/.config/jgmenu/jgfvwmrc"`)
 *FvwmTaskBar: (45x1, Top, Swallow FvwmIconMan 'Module FvwmIconMan TaskBarIcons', Frame 0)
 *FvwmTaskBar: (6x1, Swallow(NoClose,UseOld) stalonetray 'Exec exec stalonetray --config "$HOME/.stalonetrayrc"', Frame 0)
-*FvwmTaskBar: (1x1, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 24, ActiveColorset 25, Frame 0)
-*FvwmTaskBar: (1x1, Id desk1, Title "2", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 25, Frame 0)
-*FvwmTaskBar: (1x1, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 25, Frame 0)
-*FvwmTaskBar: (1x1, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 25, Frame 0)
-*FvwmTaskBar: (3x1, Swallow DateTime 'Module FvwmScript $[FVWM_USERDIR]/BarClock', Action `Exec yad --width 360 --class="fbox_cal" --title="Fbox_Calendar" --calendar --text ""`, Frame 1)
+*FvwmTaskBar: (1x1, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 6, ActiveColorset 4, Frame 0)
+*FvwmTaskBar: (1x1, Id desk1, Title "2", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 4, Frame 0)
+*FvwmTaskBar: (1x1, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 4, Frame 0)
+*FvwmTaskBar: (1x1, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 4, Frame 0)
+*FvwmTaskBar: (3x1, Swallow DateTime 'Module FvwmScript $[FVWM_USERDIR]/BarClock', Action (Mouse 3) `Exec exec yad --width 360 --posx -200 --posy -200 --class="fbox_cal" --title="Fbox_Calendar" --calendar --text ""`, Frame 1)
 
+# tint2 panel
 Style FvwmTintBar !Title, BorderWidth 1, HandleWidth 1, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom
 
 DestroyModuleConfig FvwmTintBar:*
-*FvwmTintBar: Geometry $[vp.width]x28+0-0
-*FvwmTintBar: Colorset 28
+*FvwmTintBar: Geometry $[vp.width]x30+0-0
+*FvwmTintBar: Colorset 5
 *FvwmTintBar: Rows 1
-*FvwmTintBar: Columns 109
+*FvwmTintBar: Columns 10
 *FvwmTintBar: Frame 1
 *FvwmTintBar: Font "xft:Fira Sans:Medium:size=11:antialias=True:hinhstyle=slight"
-*FvwmTintBar: (109x1, Swallow(NoClose,UseOld) tint2 "Exec exec tint2", Frame 0)
+Test (x tint2) *FvwmTintBar: (10x1, Swallow(NoClose,UseOld) tint2 `Exec exec tint2 -c ~/.config/tint2/tint2fvwmrc`, Frame 0)
+
+# pager and desktop id
+SetEnv DeskWidth  180
+SetEnv DeskHeight 120
+
+Style PagerBlock !Title, BorderWidth 1, HandleWidth 1, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom
+
+# FvwmButtons - PagerBlock
+#
+# FvwmButtons is a powerful module that can be used to build custom
+# panels and docks. This config uses FvwmButtons to build the PagerBlock.
+# The panel contains buttons to switch desks, FvwmPager
+#
+DestroyModuleConfig PagerBlock:*
+*PagerBlock: Geometry $[DeskWidth]x$[DeskHeight]-8+4
+*PagerBlock: Colorset 23
+*PagerBlock: Rows $[DeskHeight]
+*PagerBlock: Columns 36
+*PagerBlock: Frame 0
+*PagerBlock: Font "xft:Sans:Bold:size=10:antialias=True"
+*PagerBlock: (9x20, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 22, ActiveColorset 23, Frame 1)
+*PagerBlock: (9x20, Id desk1, Title "2", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 23, Frame 1)
+*PagerBlock: (9x20, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 23, Frame 1)
+*PagerBlock: (9x20, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 23, Frame 1)
+*PagerBlock: (36x100, Swallow FvwmPager 'Module FvwmPager *', Frame 0)
+
+Style DeskTopId !Title, !Borders, !Handles, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom
+
+DestroyModuleConfig DeskTopId:*
+*DeskTopId: Geometry 120x30-4+4
+*DeskTopId: Colorset 23
+*DeskTopId: Rows 1
+*DeskTopId: Columns 4
+*DeskTopId: Frame 1
+*DeskTopId: Font "xft:Fira Code:style=Regular:size=11:antialias=true:hintstyle=slight"
+*DeskTopId: (1x1, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 22, ActiveColorset 23, Frame 0)
+*DeskTopId: (1x1, Id desk1, Title "2", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 23, Frame 0)
+*DeskTopId: (1x1, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 23, Frame 0)
+*DeskTopId: (1x1, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 23, Frame 0)
+
+Style TaskPanel !Title, BorderWidth 1, HandleWidth 1, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom
+
+DestroyModuleConfig TaskPanel:*
+*TaskPanel: Geometry $[vp.width]x28+0-0
+*TaskPanel: Colorset 5
+*TaskPanel: Rows 1
+*TaskPanel: Columns 20
+*TaskPanel: Frame 1
+*TaskPanel: Font "xft:Fira Sans:Medium:size=11:antialias=True:hinhstyle=slight"
+# *TaskPanel: (2x1, Title "", Icon "$[FVWM_USERDIR]/icons/fvwm-small.png", Action `Exec jgmenu --config-file=/home/doug/.config/jgmenu/jgfvwmrc`)
+*TaskPanel: (1x1, Title "Fvwm", Icon "", Action `Exec jgmenu --config-file="$HOME/.config/jgmenu/jgfvwmrc"`)
+*TaskPanel: (16x1, Top, Swallow FvwmIconMan 'Module FvwmIconMan TaskBarIcons', Frame 0)
+*TaskPanel: (2x1, Swallow(NoClose,UseOld) stalonetray 'Exec exec stalonetray --config "$HOME/.stalonetrayrc"', Frame 0)
+*TaskPanel: (1x1, Swallow DateTime 'Module FvwmScript $[FVWM_USERDIR]/BarClock', Action Mouse 3 A `Exec yad --width 360 --class="fbox_cal" --title="Fbox_Calendar" --calendar --text ""`, Frame 1)

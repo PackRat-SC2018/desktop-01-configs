@@ -1,6 +1,7 @@
 WindowTitle {DateTime}
-WindowSize  80 24
-Font "xft:Fira Code:style=Retina:size=12" 
+WindowSize  80 28
+Font "xft:Fira Code:style=Retina:size=12"
+Colorset 5
 
 Init
  Begin

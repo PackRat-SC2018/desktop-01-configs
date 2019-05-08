@@ -3,12 +3,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-# PS1='[\u@\h \W]\$ '
-export PS1='\[\033[0;36m\] ┌ ─ [\l] ─ \[\033[1;34m\][\w]\n \[\033[0;36m\]└ ─ > \[\033[0;37m\]$ \[\033[0;37m\]'
-
-# user added
-
 shopt -s histappend
 shopt -s cmdhist
 shopt -s histverify
@@ -52,14 +46,6 @@ export LESS_TERMCAP_ZV=$(tput rsubm)
 export LESS_TERMCAP_ZO=$(tput ssupm)
 export LESS_TERMCAP_ZW=$(tput rsupm)
 
-# PATH=$PATH:$HOME/bin:$HOME/conky:./
-
-# If user ID is greater than or equal to 1000 & if ~/bin exists and is a directory & if ~/bin is not already in your $PATH
-# then export ~/bin to your $PATH.
-#if [[ $UID -ge 1000 && -d $HOME/bin && -z $(echo $PATH | grep -o $HOME/bin) ]]
-#then
-#    export PATH=$HOME/bin:$HOME/conky:${PATH}
-#fi
-
-# export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'geany'; else echo 'nano'; fi)"
-
+# prompt
+# PS1='[\u@\h \W]\$ '
+export PS1='\[\033[0;36m\] ┌ ─ [\l] ─ \[\033[1;34m\][\w]\n \[\033[0;36m\]└ ─ > \[\033[0;37m\]$ \[\033[0;37m\]'

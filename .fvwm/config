@@ -9,20 +9,20 @@
 #
 # The following is used in various menus and also sets the terminal
 # that FvwmConsole uses. Change this to your terminal of choice
-InfoStoreAdd terminal urxvt
+InfoStoreAdd terminal uxterm
 InfoStoreAdd browser firefox
 InfoStoreAdd mail thunderbird
-InfoStoreAdd filemgr pcmanfm
+InfoStoreAdd filemgr thunar
 InfoStoreAdd editor subl3
 
 # Set EdgeScroll 0 0 and/or EdgeResistance -1 to disable.
-#EdgeScroll 100 100
-#EdgeResistance 1000
-#EdgeThickness 1
-#Style * EdgeMoveDelay 500, EdgeMoveResistance 1000
+# EdgeScroll 100 100
+# EdgeResistance 1000
+# Style * EdgeMoveDelay 500, EdgeMoveResistance 1000
 
 # Disable EdgeScrolling but make it possible
 # to move windows over the screen edge
+EdgeScroll 0 0
 EdgeResistance -1
 Style * EdgeMoveDelay 250
 Style * EdgeMoveResistance 20
@@ -33,7 +33,7 @@ EdgeThickness 1
 # EwmhBaseStruts [left] [right] [top] [bottom]
 # Reserves space along the edge(s) of the Screen that will not
 # be covered when maximizing or placing windows.
-EwmhBaseStruts 0 0 0 30
+EwmhBaseStruts 0 0 0 32
 
 # This sets the ClickTime and MoveThreshold used to determine
 # Double Clicks, Hold and Move for the mouse.
@@ -55,7 +55,8 @@ Style * FPGrabFocusTransient, FPReleaseFocusTransient
 
 # Sets all windows to OpaqueMove (vs a wired frame) and  windows will
 # snap to each other and the edge of the screen.
-OpaqueMoveSize unlimited
+# OpaqueMoveSize unlimited
+OpaqueMoveSize 0
 Style * ResizeOpaque, SnapAttraction 2 SameType ScreenAll, SnapGrid
 
 # WindowShade
@@ -77,14 +78,18 @@ IgnoreModifiers L25
 #   |   |   |
 #   +---+---+
 #
+
+# DeskTopSize 1x1
+# EwmhNumberOfDesktops 4
+
+DesktopSize 3x3
+
 DesktopName 0 1
 DesktopName 1 2
 DesktopName 2 3
 DesktopName 3 4
 
-# DesktopSize 3x3
-DeskTopSize 1x1
-EwmhNumberOfDesktops 4
+
 
 ## Cursor styles
 
@@ -126,14 +131,14 @@ CursorStyle LEFT_EDGE       left_side               black    white
 CursorStyle STROKE          plus                    black    white
 
 # Default Font
-DefaultFont "xft:Noto Sans:regular:size=11:antialias=True:hintstyle=slight"
+DefaultFont "xft:IBM Plex Sans:regular:size=11:antialias=True:hintstyle=slight"
 
-Style * BorderWidth 3, HandleWidth 3, FvwmButtons, FvwmBorder, FirmBorder
+Style * BorderWidth 3, HandleWidth 3, MwmButtons, MwmBorder, FirmBorder
 Style * Colorset 5, HilightColorset 6
 Style * BorderColorset 5, HilightBorderColorset 6
 BorderStyle * Simple -- NoInset Flat
 
-TitleStyle Centered Height 22 -- Flat
+TitleStyle Centered Height 20 -- Flat
 
 #ButtonStyle All ActiveUp Vector 5 15x15@4 15x85@3 85x85@3 85x15@3 15x15@3 -- Flat
 #ButtonStyle All ToggledActiveUp Vector 5 15x15@4 15x85@3 85x85@3 85x15@3 15x15@3 -- Flat
@@ -164,33 +169,6 @@ ButtonStyle All - Clear
 ButtonStyle 1 - MwmDecorMenu
 ButtonStyle 4 - MwmDecorMax
 ButtonStyle 6 - MwmDecorMin
-
-DestroyModuleConfig FvwmAnimate: *
-*FvwmAnimate: Effect Flip
-*FvwmAnimate: Delay 1
-*FvwmAnimate: Iterations 30
-*FvwmAnimate: Twist 1
-*FvwmAnimate: Width 2
-
-# FvwmEvent
-#
-# FvwmEvent is a module that can run an action or function
-# on specific events. This instance changes which desk number
-# is highlighted when the desk is changed.
-DestroyModuleConfig EventNewDesk:*
-*EventNewDesk: PassID
-*EventNewDesk: new_desk ChangeDesk
-
-# FvwmForm
-#
-# FvwmForm is a module that can be used to build a GUI
-# form. Used with fvwm-menu-desktop-config.fpl.
-# This sets the default colorsets.
-*FvwmFormDefault: Colorset 10
-*FvwmFormDefault: ItemColorset 13
-
-DestroyModuleConfig FvwmScript:*
-*FvwmScript: DefaultColorset 5
 
 #======FvwmIconBox specs [l t r b]===============#
 
@@ -234,9 +212,14 @@ Style * !IconTitle
 # Style * Iconbox 16 48 256 600, IconGrid 24 24, IconFill left top
 #
 # thumbnails
-# Style "*" Iconbox 96 1000 1728 1072, IconGrid 16 16, IconFill left top
-# Style "*" Iconbox 96 4 1728 144, IconGrid 16 16, IconFill left top
-Style "*" Iconbox 4 4 200 600, IconGrid 16 16, IconFill left top
+Style "*" Iconbox 4 4 288 540, IconGrid 12 12, IconFill left top
+# Style "*" Iconbox 4 540 288 1044, IconGrid 16 16, IconFill left bottom
+# Style "*" Iconbox 4 4 136 900, IconGrid 16 16, IconFill left top
+
+DestroyModuleConfig FvwmIdent:*
+*FvwmIdent: Colorset 2
+*FvwmIdent: Font "Shadow=0 0 SE:xft:Source Sans Pro:style=regular:size=10:antialias=true:hinting=slight"
+
 
 # Application styles
 #
@@ -255,14 +238,18 @@ Style Subl3 ResizeHintOverride, PositionPlacement Center
 Style Firefox ResizeHintOverride, PositionPlacement Center
 Style Thunderbird ResizeHintOverride, PositionPlacement Center
 Style *tray !Title, !Handles, !Borders, StaysOnBottom, WindowListSkip, CirculateSkip
-Style Tint2 !Title, !Handles, !Borders, ResizeHintOverride, StaysOnBottom, WindowListSkip, CirculateSkip, PositionPlacement -2px 2px
+Style Tint2 !Title, !Handles, !Borders, ResizeHintOverride, StaysOnBottom, WindowListSkip, CirculateSkip, PositionPlacement 0 -0
 Style Xfce4-panel !Title, !Handles, !Borders, StaysOnTop, WindowListSkip, CirculateSkip
 Style Bl-exit Sticky, CirculateSkip, WindowListSkip, PositionPlacement Center
 Style FvwmScript-Clock* !Title, !Borders, !Handles, Sticky, WindowListSkip, NeverFocus, StaysOnBottom, CirculateSkip, PositionPlacement -2px 2px
-Style FvwmScript-ConfirmQuit* BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, StaysOnTop, CirculateSkip, PositionPlacement Center
+Style FvwmScript-Quit BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, StaysOnTop, CirculateSkip, PositionPlacement Center
+Style FvwmScript-ConfirmQuit BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, StaysOnTop, CirculateSkip, PositionPlacement Center
 Style FvwmForm-RunCommand* BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, StaysOnTop, CirculateSkip, PositionPlacement Center
 Style fbox_cal* BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, StaysOnTop, CirculateSkip, PositionPlacement -10px -36px
 Style *Clock !Title, NeverFocus, PositionPlacement -5px -36px
+Style Vivaldi* !Title, ResizeHintOverride, PositionPlacement Center
+Style Chrono* !Title, BorderWidth 1, HandleWidth 1, Sticky, StaysOnBottom, CirculateSkip, PositionPlacement 800px 4px
+Style Kalende* !Title, BorderWidth 1, HandleWidth 1, Sticky, StaysOnBottom, CirculateSkip, PositionPlacement 800px 110px
 
 Read colorsets
 Read functions
@@ -281,29 +268,39 @@ Read menu
 
 DestroyFunc StartFunction
 AddToFunc   StartFunction
-# + I Module FvwmPager 0 3
-+ I Module FvwmEvent EventNewDesk
-+ I Module FvwmButtons FvwmTaskBar
 
-# + I exec exec xset s blank
++ I Module FvwmEvent EventNewDesk
+# + I Module FvwmPager 0 3
+# + I Module FvwmIconMan
+
+# + I Module FvwmButtons PagerBlock
+# + I Module FvwmButtons TaskPanel
+
+# + I Module FvwmButtons DeskTopId
++ I Module FvwmButtons PagerBlock
+# + I Module FvwmButtons FvwmTaskBar
++ I Module FvwmButtons FvwmTintBar
+
+# + I exec exec xset s 3600 3600
 # + I exec exec xset b 33
 
 # Wallpaper
-# + I Test (Init) Exec sleep 2; exec nitrogen --restore
-+ I Test (Init) Exec sleep 2; exec $HOME/.fehbg
+# + I Test (Init) Exec exec hsetroot -solid #3232AA
+# + I Test (init) Exec sleep 2; exec fbsetbg -c -r $[FVWM_USERDIR]/wallpaper/
++ I Test (init) Exec sleep 2; exec fbsetbg -c -r $HOME/wallpaper/
 
-+ I Test (Init) Exec sleep 3; exec $HOME/bin/ConkyFvwm.sh
-+ I Test (Restart) Exec exec $HOME/bin/ConkyFvwm.sh
+# + I Test (init) Exec exec xfce4-panel
 
+# + I Test (Init) Exec sleep 3; exec $HOME/bin/ConkyFvwm.sh
+# + I Test (Restart) Exec exec $HOME/bin/ConkyFvwm.sh
 
 DestroyFunc ExitFunction
 AddToFunc   ExitFunction
++ I Test (!ToRestart) Exec exec rm -f $[HOME]/.fvwm/icon.tmp.*
++ I Test (!ToRestart) Exec exec rm -f $[FVWM_USERDIR]/temp/*icon*
 + I Exec exec killall -q conky
 + I Exec exec killall -q xclock
 + I Exec exec killall -q stalonetray
-+ I Exec exec killall -q polybar
-+ I Exec exec killall -q tint2
-+ I Exec exec killall -q xfce4-panel
-+ I Test (!ToRestart) Exec exec rm -f $[HOME]/.fvwm/icon.tmp.*
-+ I Test (!ToRestart) Exec exec rm -f $[FVWM_USERDIR]/temp/*icon*
-
+# + I Exec exec killall -q polybar
+# + I Exec exec killall -q tint2
+# + I Exec exec killall -q xfce4-panel

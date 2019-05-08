@@ -14,16 +14,19 @@ function run {
 #pgrep polybar &>/dev/null; [ $? = 0 ] && killall polybar &
 #pgrep slstatus &>/dev/null; [ $? = 0 ] && killall i3status &
 
-killall -q compton
-killall -q conky
-killall -q slstatus
+killall -q compton &
+killall -q slstatus &
+
+killall -q conky &
+while pgrep -x conky >/dev/null; do sleep 1; done
+
 
 # standard environment
 xmodmap "$HOME/.Xmodmap" &
 xrdb -l "$HOME/.Xresources" &
 xsetroot -solid "#2B2F72" &
 
-numlockx on
+numlockx on &
 
 # battery monitor
 # juiced -d
@@ -33,11 +36,12 @@ numlockx on
 pkill -x polybar &
 
 # Wait until the processes have been shut down
-#while pgrep -x polybar >/dev/null; do sleep 1; done
+# while pgrep -x polybar >/dev/null; do sleep 1; done
 
-#(sleep 2s && polybar awesome-bar) &
+# (sleep 2s && polybar awesome-bar) &
 
 # nitrogen --restore &
-"$HOME/.fehbg" &
+# "/home/doug/.fehbg" &
+fbsetbg -c -r "$HOME/wallpaper/" &
 
-# (sleep 2s && tint2) &
+exit 0;

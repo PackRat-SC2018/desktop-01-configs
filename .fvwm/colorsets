@@ -1,46 +1,36 @@
-Colorset 0  fg #FFFFFF, bg #242424, hi #242424, sh #242424, Plain, NoShape
+# colorsets
+Colorset 0 fg #F0F0F0, bg #1F1F1F, hi #1F1F1F, sh #1F1F1F, Plain, NoShape
+Colorset 1 fg #1F1F1F, bg #F0F0F0, hi #F0F0F0, sh #F0F0F0, Plain, NoShape
+Colorset 2 fg #E9E9E9, bg #172B4D, hi #0B3680, sh #0B3680, Plain, NoShape
 
-# menu
-Colorset 1  fg #8A8E99, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape
-Colorset 2  fg #E7E7E7, bg #106DAA, hi #106DAA, sh #106DAA, Plain, NoShape
-Colorset 3  fg #AFAFAF, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape
-Colorset 4  fg #E7E7E7, bg #28465C, hi #28465C, sh #28465C, Plain, NoShape
-
-# window decs
-Colorset 5  fg #8A8E99, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape
-Colorset 6  fg #E7E7E7, bg #32588A, hi #28465C, sh #28465C, Plain, NoShape
+# Menu and Window Decor
+Colorset 3  fg #DCDCDC, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape
+Colorset 4  fg #DCDCDC, bg #494949, hi #494949, sh #494949, Plain, NoShape
+Colorset 5  fg #DCDCDC, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape
+Colorset 6  fg #DCDCDC, bg #80334D, hi #80334D, sh #80334D, Plain, NoShape
+# Colorset 6 fg #dfdfdf, bg #33805B, hi #33805B, sh #33805B, Plain, NoShape
 
 # IconBox
-Colorset 7 fg #D3D3D3, bg #2F333B, hi #202020, sh #202020, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 40
-
-Colorset 8 fg #ffffff, bg #3B535E, hi #3B535E, sh #30444D, Plain, NoShape
-Colorset 9 fg #ffffff, bg #1a6e99, hi #3B535E, sh #30444D, Plain, NoShape
-Colorset 10 fg #8A8E99, bg #1F2326, hi #1F2326, sh #1F2326	, Plain, NoShape
+Colorset 7 fg #D3D3D3, bg #2F333B, hi #202020, sh #202020, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 20
+Colorset 8 fg #E5E5E5, bg #3B535E, hi #3B535E, sh #30444D, Plain, NoShape
+Colorset 9 fg #E5E5E5, bg #1a6e99, hi #3B535E, sh #30444D, Plain, NoShape
+Colorset 10 fg #C0C0C0, bg #1F2326, hi #1F2326, sh #1F2326	, Plain, NoShape
 
 # panels
 Colorset 11 fg #C9CDD6, bg #223145, hi #00536C, sh #00536C, Plain, NoShape
-Colorset 12 fg #8A8E99, bg #1F2326, hi #1F2326, sh #1F2326	, Plain, NoShape
+Colorset 12 fg #C0C0C0, bg #1F2326, hi #1F2326, sh #1F2326	, Plain, NoShape
 Colorset 13 fg #C9CDD6, bg #1F2326, hi #00536C, sh #00536C, Plain, NoShape
-Colorset 14 fg yellow, bg blue, hi #00536C, sh #00536C, Plain, NoShape
+Colorset 14 fg #101011, bg #CFCFCF, hi #0c0c0c, sh #0c0c0c, Plain, NoShape
+Colorset 15 fg #C0C0C0, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape
 
 # FvwmPager
-Colorset 15 fg #8A8E99, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape
-Colorset 16 fg #1D1D1D, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 40
-Colorset 17 fg #E7E7E7, bg #28465C, hi #28465C, sh #28465C, Plain, NoShape, RootTransparent, Buffer, Tint #28465C 33
+Colorset 16 fg #1D1D1D, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 55
+Colorset 17 fg #DEDEDD, bg #28465C, hi #28465C, sh #28465C, Plain, NoShape, RootTransparent, Buffer, Tint #28465C 75
 Colorset 18 fg #CCCCCC, bg darkblue, Plain, NoShape, RootTransparent, Buffer, Tint darkblue 50
-Colorset 19 fg fg #E7E7E7, bg #28465C, hi #28465C, sh #28465C, Plain, NoShape, RootTransparent, Buffer, Tint #28465C 33
-Colorset 20 fg #E7E7E7, bg #106DAA, hi #106DAA, sh #106DAA, Plain, NoShape, RootTransparent, Buffer, Tint #106DAA 55
-Colorset 21 fg #BABFCF, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 33
+Colorset 19 fg #DEDEDD, bg #28465C, hi #28465C, sh #28465C, Plain, NoShape, RootTransparent, Buffer, Tint #28465C 75
+Colorset 20 fg #DEDEDD, bg #106DAA, hi #106DAA, sh #106DAA, Plain, NoShape, RootTransparent, Buffer, Tint #106DAA 75
+Colorset 21 fg #BABFCF, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 75
 
-# Fvwm-Script - transparent clock
-Colorset 22 fg #C9CDD6, bg #1F2326, hi #00536C, sh #00536C, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 0
-
-# DeskTopID FvwmIconMan
-Colorset 23 fg #8A8E99, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape
-Colorset 24 fg #CCD1DE, bg #32588A, hi #1F2326, sh #1F2326, Plain, NoShape
-Colorset 25 fg #FFFFFF, bg #367EB3, hi #1F2326, sh #1F2326, Plain, NoShape
-Colorset 26 fg #8A8E99, bg #2E3438, hi #1F2326, sh #1F2326, Plain, NoShape
-Colorset 27 fg #D5D5D5, bg #242424, hi #1F2326, sh #1F2326, Plain, NoShape
-
-# experimental
-Colorset 28 fg #E4E4E4, bg #1C1C1C, hi #1C1C1C, sh #1C1C1C, Plain, NoShape, RootTransparent, Buffer, Tint #1C1C1C 4
+# desktop id
+Colorset 22 fg #DCDCDC, bg #80334D, hi #80334D, sh #80334D, Plain, NoShape, RootTransparent, Buffer, Tint #80334D 90
+Colorset 23 fg #DCDCDC, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 75

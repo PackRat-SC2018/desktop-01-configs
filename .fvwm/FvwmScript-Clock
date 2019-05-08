@@ -1,6 +1,6 @@
 WindowTitle {DateTime}
-WindowSize  200 60
-Font "xft:Noto Sans:style=Regular:size=12" 
+WindowSize  160 60
+Font "xft:Sans:style=Regular:size=10" 
 
 Init
  Begin
@@ -26,8 +26,8 @@ End
 Widget 1
 Property
  Position 0 0
- Size 200 30
- Font "xft:Noto Mono:style=Regular:size=16"
+ Size 160 40
+ Font "xft:Sans:style=Regular:size=12"
  Type ItemDraw
  Flags NoReliefString
  Title {}
@@ -40,9 +40,9 @@ End
 
 Widget 2
 Property
- Position 0 30
- Size 200 30
- Font "xft:Noto Mono:style=Regular:size=11"
+ Position 0 40
+ Size 160 20
+ Font "xft:Sans:style=Regular:size=10"
  Type ItemDraw
  Flags NoReliefString
  Title {}

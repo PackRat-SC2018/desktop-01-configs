@@ -20,7 +20,7 @@ local vicious = require("vicious")
 -- vicious.register(widget, wtype, format, interval, warg)
 
 memwidget = wibox.widget.textbox()
-    memwidget.width, memwidget.align, memwidget.font = 100, "center", "Fira Code Retina 10"
+    memwidget.width, memwidget.align, memwidget.font = 100, "center", "SF Mono 10"
     vicious.cache(vicious.widgets.mem)
     vicious.register(memwidget, vicious.widgets.mem, "MEM: $1%", 3)
 
@@ -32,20 +32,20 @@ memwidget = wibox.widget.textbox()
 --    vicious.register(cpuwidget, vicious.widgets.cpu, "$1", 3)
 
 cpuwidget = wibox.widget.textbox()
-    cpuwidget.width, cpuwidget.align, cpuwidget.font = 100, "center", "Fira Code Retina 10"
+    cpuwidget.width, cpuwidget.align, cpuwidget.font = 100, "center", "SF Mono 10"
     vicious.cache(vicious.widgets.cpu)
     vicious.register(cpuwidget, vicious.widgets.cpu, "CPU: $1%", 3)
 
 uptimewidget = wibox.widget.textbox()
-    uptimewidget.width, uptimewidget.align, uptimewidget.font = 100, "center", "Fira Code Retina 10"
+    uptimewidget.width, uptimewidget.align, uptimewidget.font = 100, "center", "SF Mono 10"
     vicious.register(uptimewidget, vicious.widgets.uptime, "UP: $1  $2:$3", 30)
 
 loadwidget = wibox.widget.textbox()
-    loadwidget.width, loadwidget.align, loadwidget.font = 100, "center", "Fira Code Retina 10"
+    loadwidget.width, loadwidget.align, loadwidget.font = 100, "center", "SF Mono 10"
     vicious.register(loadwidget, vicious.widgets.uptime, "$4  $5  $6", 3)
 
 netwidget = wibox.widget.textbox()
-    netwidget.width, netwidget.align, netwidget.font = 100, "center", "Fira Code Retina 10"
+    netwidget.width, netwidget.align, netwidget.font = 100, "center", "SF Mono 10"
     vicious.cache(vicious.widgets.net)
     vicious.register(netwidget, vicious.widgets.net, "NET: ${enp2s0 up_kb} kb/s ${enp2s0 down_kb} kb/s", 3)
 
@@ -85,10 +85,10 @@ end
 -- beautiful.init(gears.filesystem.get_themes_dir() .. "patagonia/theme.lua")
 
 -- for themes in $HOME/.config/awesome/themes - 
-beautiful.init(awful.util.getdir("config") .. "/themes/patagonia/theme.lua")
+beautiful.init(awful.util.getdir("config") .. "/themes/moonstone/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt"
+terminal = "xterm"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 browser = "firefox"
@@ -106,8 +106,8 @@ screenshot = "xfce4-screenshooter"
 appmenu = "rofi -show run"
 guimenu = "jgmenu_run"
 deskmenu = "jgmenu --config-file=~/.config/jgmenu/jgmouserc"
-Xterminal = "uxterm"
-Sterminal = "st"
+-- Xterminal = "uxterm"
+sterminal = "st"
 ExitSession = "rofi-logout"
 
 -- Default modkey.
@@ -118,30 +118,31 @@ ExitSession = "rofi-logout"
 modkey = "Mod4"
 altkey = "Mod1"
 
---{{{ Layout Table and tags
+--{{{ Layout Table and tags layouts numbered 1,2,3, ..... n top to bottom
 
 awful.layout.layouts = {
     awful.layout.suit.tile,
+    awful.layout.suit.tile.left,
     awful.layout.suit.fair,
     awful.layout.suit.fair.horizontal,
     awful.layout.suit.magnifier,
     awful.layout.suit.max,
-    awful.layout.suit.floating,
     awful.layout.suit.max.fullscreen,
-    awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.spiral,
-    awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
+    awful.layout.suit.floating,
+    -- awful.layout.suit.spiral.dwindle,
+    -- awful.layout.suit.spiral,
+    -- awful.layout.suit.tile.bottom,
+    -- awful.layout.suit.tile.top,
     -- awful.layout.suit.corner.nw,
     -- awful.layout.suit.corner.ne,
     -- awful.layout.suit.corner.sw,
     -- awful.layout.suit.corner.se,
 }
 
+-- each tag gets it's own layout
 tags = {
         names  = { " 1 ", " 2 ", " 3 ", " 4 "},
-        layout = { awful.layout.layouts[1], awful.layout.layouts[2], awful.layout.layouts[5], awful.layout.layouts[6]}
+        layout = { awful.layout.layouts[1], awful.layout.layouts[3], awful.layout.layouts[6], awful.layout.layouts[8]}
 }
  
  for s = 1, screen.count() do
@@ -421,11 +422,11 @@ globalkeys = gears.table.join(
         {description = "go back", group = "client"}),
 
     -- Standard program
-    awful.key({ modkey,           }, "Return", function () awful.spawn(Xterminal) end,
+    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ altkey,           }, "F1", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
-    awful.key({ altkey,           }, "F3", function () awful.spawn(Sterminal) end,
+    awful.key({ altkey,           }, "F3", function () awful.spawn(sterminal) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ altkey,           }, "F2", function () awful.spawn(appmenu) end,
               {description = "open a menu", group = "launcher"}),
@@ -464,13 +465,13 @@ globalkeys = gears.table.join(
               {description = "increase master width factor", group = "layout"}),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
               {description = "decrease master width factor", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true) end,
+    awful.key({ modkey,   },         "i",     function () awful.tag.incnmaster( 1, nil, true) end,
               {description = "increase the number of master clients", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1, nil, true) end,
+    awful.key({ modkey,   },         "d",     function () awful.tag.incnmaster(-1, nil, true) end,
               {description = "decrease the number of master clients", group = "layout"}),
-    awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1, nil, true)    end,
+    awful.key({ modkey, "Control" }, "i",     function () awful.tag.incncol( 1, nil, true)    end,
               {description = "increase the number of columns", group = "layout"}),
-    awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
+    awful.key({ modkey, "Control" }, "d",     function () awful.tag.incncol(-1, nil, true)    end,
               {description = "decrease the number of columns", group = "layout"}),
     awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
@@ -633,7 +634,7 @@ awful.rules.rules = {
     -- Floating clients.
     { rule_any = {
         instance = {
-          "DTA",  -- Firefox addon DownThemAll.
+          -- "DTA",  -- Firefox addon DownThemAll.
           "copyq",  -- Includes session name in class.
         },
         class = {
@@ -644,10 +645,12 @@ awful.rules.rules = {
           "yad_color",
           "yad_cal",
           "yad_font",
+          "WmanExit",
           "Gcolor2",
           "Audacious",
           "XCalc",
           "Galculator",
+          "xfce4-screenshooter",
           "MessageWin",  -- kalarm.
           "Sxiv",
           "Wpa_gui",
@@ -673,9 +676,20 @@ awful.rules.rules = {
     -- { rule = { class = "Firefox" },
     --   properties = { screen = 1, tag = "2" } },
 
-    -- Set polybar as dock.
+    -- Set some panels as docks.
      { rule = { class = "Polybar" },
        properties = { type = "dock", border_width = 0 } },
+
+     { rule = { class = "Tint2" },
+       properties = { type = "dock", border_width = 0,
+                      awful.placement.bottom_left(client.focus)
+     } },
+
+     { rule = { class = "Xfce4-panel" },
+       properties = { type = "dock", border_width = 0 } },
+
+    { rule = { class = "Tint2" },
+       properties = { type= "dock", border_width = 0, placement = awful.placement.bottom } },
 
 }
 -- }}}

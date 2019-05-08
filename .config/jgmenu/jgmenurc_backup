@@ -12,8 +12,8 @@ terminal_args        = -e
 #hide_back_items     = 1
 #columns             = 1
 
-menu_margin_x        = 16
-menu_margin_y        = 32
+menu_margin_x        = 8
+menu_margin_y        = 30
 menu_width           = 200
 #menu_height_min     = 0
 #menu_height_max     = 0
@@ -22,7 +22,7 @@ menu_padding_top     = 4
 menu_padding_right   = 2
 menu_padding_bottom  = 4
 menu_padding_left    = 2
-menu_radius          = 0
+menu_radius          = 2
 menu_border          = 1
 menu_halign          = left
 menu_valign          = top
@@ -38,7 +38,7 @@ sub_hover_action     = 1
 item_margin_y        = 5
 item_height          = 30
 item_padding_x       = 8
-item_radius          = 0
+item_radius          = 2
 item_border          = 0
 #item_halign         = left
 
@@ -48,26 +48,27 @@ sep_height           = 5
 
 font                 = FiraSans 11
 font_fallback        = Sans 11
-icon_size            = 24
+icon_size            = 0
 icon_text_spacing    = 10
-icon_theme           = Paper
+icon_theme           = Newaita-dark
 icon_theme_fallback  = Adwaita
 
 arrow_string         = ▸
-arrow_width          = 15
+arrow_width          = 18
 
-color_menu_bg        = #2b303b 100
-color_menu_border    = #1e1e1e 8
+color_menu_bg        = #1E2021 100
+color_menu_border    = #191919 8
 
-color_norm_bg        = #2b303b 0
-color_norm_fg        = #8fa1b3 100
+color_norm_bg        = #1E2021 0
+color_norm_fg        = #DADBDE 100
 
-color_sel_bg         = #8fa1b3 60
-color_sel_fg         = #2b303b 100
-color_sel_border     = #1e1e1e 8
+color_sel_bg         = #53514D 75
+color_sel_fg         = #DADBDE 100
+color_sel_border     = #191919 8
 
-color_sep_fg         = #8fa1b3 40
+color_sep_fg         = #99ACBF 40
 
 #csv_name_format     = %n (%g)
-#csv_single_window   = 0
-#csv_no_dirs         = 0
+csv_name_format     = %n\n<span size="x-small">%g</span>
+csv_single_window   = 0
+csv_no_dirs         = 0

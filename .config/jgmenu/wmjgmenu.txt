@@ -1,0 +1,111 @@
+Terminal,uxterm
+Editor,subl3
+File Manager,thunar
+Browser,firefox
+Mail,Thunderbird
+^sep()
+
+# submenus
+Internet,^checkout(internet)
+Graphics,^checkout(graphics)
+Media,^checkout(media)
+Office,^checkout(office)
+Settings,^checkout(settings)
+^sep()
+Bookmarks,^checkout(bookmarks)
+^sep()
+Exit,void-logout
+
+# menus
+^tag(internet)
+Firefox,firefox
+Qutebrowser,qutebrowser
+Thunderbird,thunderbird
+Hexchat,hexchat
+Transmission,transmission-gtk
+
+
+^tag(graphics)
+Gimp,gimp
+Geeqie,geeqie
+Gcolor2,gcolor2
+Feh,feh ~/wallpaper -g 640x360 --scale-down
+
+^tag(media)
+Audacious,audacious
+Asunder,asunder
+Vlc,vlc
+Guvcview,guvcview
+Xfburn,xfburn
+
+^tag(office)
+Spreadsheet,libreoffice --calc
+Document,libreoffice --writer
+Presentation,libreoffice --impress
+Drawing,libreoffice --draw
+Pdf,zathura %U
+Calculator,galculator
+
+^tag(settings)
+Wallpaper,feh ~/wallpaper -g 640x360 --scale-down
+Appearance,lxappearance
+Screenshot,xfce4-screenshooter
+Compton,compton
+
+^tag(bookmarks)
+Forums,^checkout(Forums)
+News,^checkout(News)
+Eye Candy,^checkout(Candy)
+HowTo,^checkout(HowTo)
+
+^tag(Forums)
+ArchLabs,qutebrowser --target tab https://forum.archlabslinux.com/
+Arch Linux,qutebrowser --target tab https://bbs.archlinux.org/index.php
+BunsenLabs,qutebrowser --target tab https://forums.bunsenlabs.org/index.php
+Void Linux,qutebrowser --target tab https://voidlinux.org/
+Vsido,qutebrowser --target tab https://vsido.org/index.php
+Linux Questions,qutebrowser --target tab https://www.linuxquestions.org/
+
+^tag(News)
+OAN,qutebrowser --target tab https://www.oann.com/
+Drudge Report,qutebrowser --target tab https://www.drudgereport.com/
+Fox,qutebrowser --target tab https://www.foxnews.com/
+Wash. Times,qutebrowser --target tab https://www.washingtontimes.com/
+Reuters,qutebrowser --target tab https://www.reuters.com/news/world
+News Au,qutebrowser --target tab https://www.news.com.au/
+BBC,qutebrowser --target tab https://www.bbc.com/news
+^sep()
+American Thinker,qutebrowser --target tab https://www.americanthinker.com/
+Breitbart,qutebrowser --target tab https://www.breitbart.com/
+Last Refuge,qutebrowser --target tab https://theconservativetreehouse.com/
+Politico,qutebrowser --target tab https://www.politico.com/
+^sep()
+MLB,qutebrowser --target tab https:///www.mlb.com
+NFL,qutebrowser --target tab https://www.nfl.com
+Sporting News,qutebrowser --target tab http://www.sportingnews.com/
+^sep()
+AccuWeather,qutebrowser --target tab https://www.accuweather.com/en/us/aiken-sc/29803/weather-forecast/12672_pc
+NWS,qutebrowser --target tab https://forecast.weather.gov/MapClick.php?lat=33.5113&lon=-81.7269#.XBa7baFOmhc
+
+^tag(Candy)
+Wallhaven,qutebrowser --target tab https://alpha.wallhaven.cc/
+Soc. Wall,qutebrowser --target tab https://www.socwall.com/
+Wallpaper Craft,qutebrowser --target tab https://wallpaperscraft.com/
+Wallpapers Wide,qutebrowser --target tab http://wallpaperswide.com/
+^sep()
+Font Squirrel,qutebrowser --target tab https://www.fontsquirrel.com/
+Font Library,qutebrowser --target tab https://fontlibrary.org/en
+^sep()
+Gnome-look,qutebrowser --target tab https://www.gnome-look.org/
+Box-look,qutebrowser --target tab https://www.box-look.org/
+^sep()
+Scrot.moe,qutebrowser --target tab https://www.scrot.moe/
+
+^tag(HowTo)
+ArchWiki,qutebrowser --target tab https://wiki.archlinux.org/
+Jgmenu,qutebrowser --target tab https://github.com/johanmalm/jgmenu
+Polybar,qutebrowser --target tab https://github.com/jaagr/polybar/wiki
+Tint2,qutebrowser --target tab https://gitlab.com/o9000/tint2/blob/master/doc/tint2.md
+i3,qutebrowser --target tab https://i3wm.org/docs/
+
+

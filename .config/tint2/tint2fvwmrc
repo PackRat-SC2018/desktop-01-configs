@@ -6,110 +6,124 @@
 # ID 1
 rounded = 0
 border_width = 0
-background_color = #212121 100
-border_color = #2E2E2E 100
+border_sides = T
+background_color = #202021 95
+border_color = #4B6EB3 60
 
-# Background definitions
+# urgent background
 # ID 2
 rounded = 1
 border_width = 1
-background_color = #2A2A2A 100
-border_color = #2A2A2A 100
+background_color = #A43949 95
+border_color = #000000 60
 
+# tooltip background
 # ID 3
-rounded = 1
+rounded = 4
 border_width = 1
-background_color = #3D3D3D 100
-border_color = #3D3D3D 100
+background_color = #F1F1F1 95
+border_color = #F3F3F3 60
 
 # ID 4
-rounded = 1
-border_width = 1
-background_color = #5C5C58 100
-border_color = #636363 80
+rounded = 0
+border_width = 0
+background_color = #464646 50
+border_color = #F3F3F3 15
 
+# separators
 # ID 5
-rounded = 1
-border_width = 1
-background_color = #A43949 100
-border_color = #000000 100
-
-# ID 6
-rounded = 1
-border_width = 1
-background_color = #E0E0D5 100
-border_color = #050314 100
+rounded = 0
+border_width = 0
+background_color = #121212 80
+border_color = #F3F3F3 15
 
 # separators define all used
 separator=new
 separator_background_id = 0
-separator_color = 0
-separator_style = empty
+separator_color = #131313 50
+separator_style = line
 separator_size = 1
-separator_padding = 2 0
+separator_padding = 2 1
 
 separator=new
 separator_background_id = 0
-separator_color = 0
-separator_style = empty
+separator_color = #131313 50
+separator_style = line
 separator_size = 1
-separator_padding = 2 0
+separator_padding = 2 1
 
 separator=new
 separator_background_id = 0
-separator_color = 0
-separator_style = empty
+separator_color = #131313 50
+separator_style = line
 separator_size = 1
-separator_padding = 2 0
+separator_padding = 2 1
 
-separator=new
-separator_background_id = 0
-separator_color = 0
-separator_style = empty
-separator_size = 1
-separator_padding = 2 0
+# executor sysinfo
+execp = new
+execp_font = Office Code Pro Regular 11
+execp_font_color = #DFDFDF 100
+execp_background_id = 0
+execp_centered = 1
+execp_padding = 8 0 0
+# execp_command = psuinfo -Cukcta -N -S3
+execp_command = psuinfo -Cukca -N -S5
+# execp_command = psuinfo -Cua -N -S3
+execp_interval = 3
+execp_rclick_command = urxvt -e htop --sort-key PERCENT_CPU
 
-separator=new
-separator_background_id = 0
-separator_color = 0
-separator_style = empty
-separator_size = 1
-separator_padding = 2 0
+# executor load
+execp = new
+execp_font = Office Code Pro Regular 11
+execp_font_color = #DFDFDF 100
+execp_background_id = 0
+execp_centered = 1
+execp_padding = 8 0 0
+execp_command = awk '{print $1" "$2" "$3}' < /proc/loadavg
+execp_interval = 3
+execp_rclick_command = urxvt -e htop --sort-key PERCENT_CPU
 
-separator=new
-separator_background_id = 0
-separator_color = 0
-separator_style = empty
-separator_size = 1
-separator_padding = 2 0
+# executor sysinfo
+execp = new
+execp_font = Office Code Pro Regular 11
+execp_font_color = #DFDFDF 100
+execp_background_id = 0
+execp_centered = 1
+execp_padding = 8 0 0
+# execp_command = psuinfo -Cukcta -N -S3
+execp_command = psuinfo -Cck -N -S3
+execp_interval = 3
+execp_rclick_command = urxvt -e htop --sort-key PERCENT_CPU
 
 # buttons P
 button = new
-button_icon = /home/doug/.config/tint2/voiddark.png
+button_icon = /home/doug/.config/tint2/void-trlogo.png
+#button_icon = void_logo.svg
 #button_text =
 button_tooltip = Application Menu
 #button_font =
 button_font_color = #FFFFFF 100
 button_background_id = 0
 button_centered = 1
-button_padding = 1 1 2
+button_padding = 4 1 1
 button_max_icon_size = 64
-button_lclick_command = jgmenu --config-file=/home/doug/.config/jgmenu/jgtint2rc
+button_lclick_command = jgmenu --config-file="/home/doug/.config/jgmenu/jgtintrc"
+# button_lclick_command = jgmenu_run
 # button_mclick_command = text
 button_rclick_command = session-exit
 #button_uwheel_command = text
 #button_dwheel_command = text
 
 # Panel
-panel_items = :P:T:S:C:
+panel_items = PFEEFSC
 panel_monitor = all
 panel_position = bottom center horizontal
-panel_size = 0 30
+panel_size = 0 28
 panel_margin = 0 0
-panel_padding = 1 3 3
+panel_padding = 0 0 0
 panel_dock = 0
 wm_menu = 1
-panel_layer = top
+panel_layer = normal
 panel_background_id = 1
 
 # Panel Autohide
@@ -117,34 +131,33 @@ autohide = 0
 autohide_show_timeout = 0.7
 autohide_hide_timeout = 1.5
 autohide_height = 2
-strut_policy = follow_size
+## strut_policy = follow_size/minimum/none
+strut_policy = none
 
 # Taskbar
 taskbar_mode = multi_desktop
-taskbar_padding = 1 1 2
-taskbar_background_id = 2
-taskbar_active_background_id = 3
+taskbar_padding = 1 1 12
+taskbar_background_id = 0
+taskbar_active_background_id = 4
 
 # Tasks
 urgent_nb_of_blink = 7
 task_icon = 1
 task_text = 0
 task_centered = 1
-task_maximum_size = 30 30
-task_padding = 4 0
+task_maximum_size = 32 32
+task_padding = 1 1 2
 task_background_id = 0
 task_iconified_background_id = 0
-task_active_background_id = 4
-task_urgent_background_id = 5
+task_active_background_id = 0
+task_urgent_background_id = 2
 task_tooltip = 1
-task_thumbnail = 1
-task_thumbnail_size = 200
 
 # Task Icons
-task_icon_asb = 75 0 0
+task_icon_asb = 100 0 0
 task_active_icon_asb = 100 0 0
 task_urgent_icon_asb = 100 0 0
-task_iconified_icon_asb = 75 0 0
+task_iconified_icon_asb = 70 0 0
 
 # Fonts
 task_font = Roboto Regular 10
@@ -156,10 +169,10 @@ font_shadow = 0
 
 # System Tray
 systray = 1
-systray_padding = 0 0 2
+systray_padding = 1 0 4
 systray_sort = ascending
 systray_background_id = 0
-systray_icon_size = 18
+systray_icon_size = 24
 systray_icon_asb = 100 0 0
 
 # Clock
@@ -167,11 +180,11 @@ time1_format = %k:%M
 time1_font = Office Code Pro Regular 11
 time2_format =
 time2_font =
-clock_font_color = #ECECEC 100
+clock_font_color = #DFDFDF 100
 clock_tooltip = 
-clock_padding = 0 0
+clock_padding = 12 0
 clock_background_id = 0
-clock_rclick_command = yad --calendar --title=Calendar --skip-taskbar --width=256 --height=256 --posx=-100 --posy=-100 --class=Yad_Calendar --timeout=60 --timeout-indicator=bottom --text ""
+clock_rclick_command = yad --class="fbox_cal" --title="Fbox_Calendar" --width 320 --posx -200 --posy -200 --calendar --text ""
 time1_timezone = :US/Eastern
 time2_timezone = 
 
@@ -179,7 +192,7 @@ time2_timezone =
 tooltip_padding = 2 2
 tooltip_show_timeout = 0.8
 tooltip_hide_timeout = 0.3
-tooltip_background_id = 6
+tooltip_background_id = 3
 tooltip_font = Monospace 11
 tooltip_font_color = #050314 100
 

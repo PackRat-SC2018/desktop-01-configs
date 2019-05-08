@@ -1,100 +1,100 @@
-read testfile
+Module FvwmScript /home/doug/.fvwm/scripts/Kalende/Kalende
+Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
+Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
+Module FvwmScript /home/doug/.fvwm/scripts/Kalende/Kalende
+Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
+Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
+Module FvwmScript /home/doug/.fvwm/scripts/Kalende/Kalende
+Module FvwmScript /home/doug/.fvwm/scripts/Kalende/Kalende
+Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
+KillModule FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
+Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
+KillModule FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
+Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
+KillModule FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
+Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
+KillModule FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
+Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
+Read DeskTopChrono
+Module FvwmButtons DeskTopChrono
+KillModule FvwmButtons DeskTopChrono
+Read DeskTopChrono
+Module FvwmButtons DeskTopChrono
+Read DeskTopChrono
+Module FvwmButtons DeskTopChrono
+Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
+Module FvwmScript /home/doug/.fvwm/scripts/Kalende/Kalende
+Module FvwmScript FvwnScript-Date
+Module FvwmScript FvwnScript-Clock
+KillModule FvwmScript FvwnScript-Clock
+Module FvwmScript $[FVWM_USERDIR]/FvwnScript-Clock
+Module FvwmScript $[FVWM_USERDIR]/FvwmScript-Clock
+KillModule FvwmScript $[FVWM_USERDIR]/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/FvwmScript-Date
+KillModule FvwmScript /home/doug/.fvwm/FvwmScript-Date
+Module FvwmScript /home/doug/.fvwm/FvwmScript-Date
+KillModule FvwmScript /home/doug/.fvwm/FvwmScript-Date
+Module FvwmScript /home/doug/.fvwm/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/FvwmScript-Cal
+Module FvwmScript-Quit
+Module /home/doug/.fvwm/FvwmScript-Quit
+Module FvwmScript /home/doug/.fvwm/FvwmScript-Quit
+Module FvwmScript /home/doug/.fvwm/FvwmScript-Quit
+Module FvwmScript /home/doug/.fvwm/FvwmScript-Quit
+Module FvwmScript /home/doug/.fvwm/FvwmScript-Quit
+Module FvwmScript /home/doug/.fvwm/FvwmScript-Quit
+KillModule FvwmScript /home/doug/.fvwm/FvwmScript-Quit
+KillModule FvwmScript /home/doug/.fvwm/FvwmScript-Quit
+Module FvwmScript /home/doug/.fvwm/FvwmScript-Quit
+Module FvwmScript FvwmScript-ConfirmQuit
+Module FvwmScript /home/doug/.fvwm/FvwmScript-ConfirmQuit
+KillModule FvwmScript /home/doug/.fvwm/FvwmScript-ConfirmQuit
+KillModule FvwmScript FvwmDate
+KillModule FvwmScript FvwmScript-Date
+KillModule FvwmScript /home/doug/.fvwm/FvwmScript-Date
+Module FvwmScript /home/doug/.fvwm/FvwmScript-Date
+Module FvwmScript FvwmScript-Date
+Module FvwmScript FvwmScript-Cal
+Module FvwmScript FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/FvwmScript-Cal
+Module FvwmScript /home/doug/.fvwm/FvwmScript-Clock
+KillModule FvwmButtons FvwmTintBar
 Module FvwmButtons FvwmTaskBar
+Module FvwmScript /home/doug/.fvwm/FvwmScript-Clock
+Module FvwmScript /home/doug/.fvwm/FvwmScript-Clock
+KillModule FvwmScript /home/doug/.fvwm/FvwmScript-Clock
+KillModule FvwmScript FvwmScript-DateTime
+Module FvwmScript FvwmScript-DateTime
+Module FvwmScript FvwmScript-DateTime
+Module FvwmScript FvwmScript-Clock
+KillModule FvwmScript FvwmScript-Clock
 Module FvwmButtons FvwmTaskBar
 KillModule FvwmButtons FvwmTaskBar
-read testfile
-Module FvwmButtons FvwmTaskBar
-Module FvwmButtons FvwmTaskBar
-Module FvwmButtons FvwmTaskBar
-Module FvwmButtons FvwmTaskBar
-Module FvwmButtons FvwmTaskBar
-Module FvwmButtons FvwmTaskBar
 Module FvwmButtons FvwmTaskBar
 KillModule FvwmButtons FvwmTaskBar
-read panels
-Module FvwmButtons FvwmTaskBar
-KillModule FvwmButtons FvwmTaskBar
-read panels
-Module FvwmButtons FvwmTaskBar
-KillModule FvwmButtons FvwmTaskBar
-read panels
-Module FvwmButtons FvwmTaskBar
-KillModule FvwmButtons FvwmTaskBar
-read panels
-Module FvwmButtons FvwmTaskBar
-KillModule FvwmButtons FvwmTaskBar
-read panels
-Module FvwmButtons FvwmTaskBar
-KillModule FvwmButtons FvwmTaskBar
-Module FvwmButtons FvwmTaskBar
+KillModule FvwmButtons Tint2Bar
+KillModule FvwmButtons FvwmTint2Bar
+KillModule FvwmButtons FvwmTintBar
+Module FvwmButtons FvwmTintBar
+Module FvwmScript FvwmScript-Cal
+Module FvwmScript FvwmScript-Clock
+Module FvwmScript FvwmScript-Date
+Module FvwmScript FvwmScript-DateTime
+Module FvwmScript FvwmScript-Quit
+Module FvwmScript FvwmScript-ConfirmQuit
+Module FvwmScript FvwmScript-ConfirmQuit
+Module FvwmScript FvwmScript-ConfirmQuit
+Module FvwmScript FvwmScript-Date
+Module FvwmScript FvwmScript-Clock
+KillModule FvwmScript FvwmScript-Clock
+KillModule FvwmScript FvwmScript-Clock
+KillModule FvwmScript FvwmScript-Clock
+Module FvwmScript FvwmScript-Clock
+Module FvwmScript FvwmScript-Date
+Module FvwmScript FvwmScript-Date
+Module FvwmScript FvwmScript-Quit
+Module FvwmScript FvwmScript-ConfirmQuit
+Module FvwmScript FvwmScript-Cal
 Module FvwmPager
 KillModule FvwmPager
-Module FvwmPager 0 3 -geom +500+2
-KillModule FvwmPager
-Module FvwmPager 0 3 --geometry +500+2
-KillModule FvwmPager
-Module FvwmScript BarClock
-KillModule FvwmScript BarClock
-KillModule FvwmScript BarClock
-Module FvwmScript BarClock
-KillModule FvwmScript BarClock
-Module FvwmScript BarClock
-KillModule FvwmScript BarClock
-Module FvwmScript BarClock
-Module FvwmScript BarClock
-KillModule FvwmScript BarClock
-Module FvwmScript BarClock
-KillModule FvwmScript BarClock
-Module FvwmScript BarClock
-KillModule FvwmScript BarClock
-Module FvwmScript BarClock
-KillModule FvwmScript BarClock
-Module FvwmScript BarClock
-KillModule FvwmScript BarClock
-BorderStyle Simple -- NoInset Flat
-Read RoosterDecor
-fvwm-menu-desktop -e
-/usr/bin/fvwm-menu-desktop -e
-Read NodecorTile
-Read NodecorTile
-Read NodecorTile
-Read NodecorTile
-Read NodecorTile
-Read NodecorTile
-Read NodecorTile
-Read NodecorTile
-Current Schedule 1000 $[w.id] WindowShade
-Current Schedule 1000 $[w.id] WindowShade
-Current Schedule 10 $[w.id] WindowShade
-Current Schedule 10 $[w.id] WindowShade
-read colorsets
-Read testmodules
-KillModule FvwmButtons FvwmTaskBar
-Module FvwmButtons FvwmTintBar
-KillModule FvwmButtons FvwmTintBar
-Read testmodules
-Module FvwmButtons FvwmTintBar
-KillModule FvwmButtons FvwmTintBar
-Read testmodules
-Module FvwmButtons FvwmTintBar
-KillModule FvwmButtons FvwmTintBar
-Read testmodules
-Module FvwmButtons FvwmTintBar
-KillModule FvwmButtons FvwmTintBar
-Read testmodules
-Module FvwmButtons FvwmTintBar
-Read testmodules
-Module FvwmButtons FvwmTintBar
-KillModule FvwmButtons FvwmTintBar
-KillModule FvwmButtons FvwmTaskBar
-Read testmodules
-KillModule FvwmButtons FvwmTintBar
-Module FvwmButtons FvwmTintBar
 Module FvwmPager 0 3
-Module FvwmPager 0 3
-Module FvwmPager 0 3
-Module FvwmPager 0 3
-Module FvwmPager 0 3
-Module FvwmPager 0 3
-KillModule FvwmButtons FvwmTaskBar
-Module FvwmButtons FvwmTintBar

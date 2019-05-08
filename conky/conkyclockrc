@@ -56,9 +56,9 @@ conky.config = {
 	border_inner_margin = 1,
 	border_outer_margin = 1,
 
-    default_color = '#8A7A57',
+    -- default_color = '#BDAC87',
 	-- default_color = '#DAC79C',
-	-- default_color = '#786A4C',
+	default_color = '#E6D1A4',
 	default_shade_color = '#000000',
 	default_outline_color = '#828282',
 	color0 = '#FFFFFF',
@@ -69,21 +69,21 @@ conky.config = {
 	color5 = '#00FF00',-- - green
 	color6 = '#FFA500',-- - orange
 	-- color7 = '#00CDCD',-- - cyan3
-	color7 = '#8A7A57',   -- - default color
+	color7 = '#E6D1A4',   -- - default color
 	color8 = '#FFD700',-- - gold
 	color9 = '#F00F16',-- - reddish
 	
-	minimum_width = 170, minimum_height = 0,
-	maximum_width = 170,
-	alignment = 'tr',
+	minimum_width = 160, minimum_height = 0,
+	maximum_width = 160,
+	alignment = 'mr',
 	gap_x = 16,
-	gap_y = 8,
+	gap_y = 0,
 
 };
 
 conky.text = [[
-${alignc}${font Fira Code:light:size=16}${time %R}${font}
-${voffset 6}${alignc}${time %a %e %b}
+${voffset 4}${alignc}${font Fira Code:light:size=16}${time %R}${font}
+${voffset 8}${alignc}${time %a %e %b}
 ${voffset 24}Uptime:${alignr}${uptime_short}
 ${voffset 16}CPU:${alignr}${if_match ${cpu}<=50}${color7}${else}${if_match ${cpu}<=70}${color8}${else}${if_match ${cpu}>70}${color9}${endif}${endif}${endif}${cpu cpu0}%${color}
 ${voffset 4}${alignr}${loadavg}

@@ -5,13 +5,16 @@
 # Lines starting with a '#' are ignored.
 
 # Change your keymap:
-xmodmap "$HOME/.Xmodmap"
-xrdb -l "$HOME/.Xresources"
+#xmodmap "$HOME/.Xmodmap"
+#xrdb -l "$HOME/.Xresources"
 
-numlockx on &
+#numlockx on &
+
+#xset s 3600 3600 &
+#xset b 33
+#xset dpms 3600 3700 4000
 
 # background and wallpaper
-fbsetroot -solid "#333366" &
 (sleep 2s && fbsetbg -c -r "$HOME/wallpaper/") &
 
 # 3rd party apps

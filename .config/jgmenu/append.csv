@@ -1,4 +1,4 @@
 ^sep()
 Lock Screen,slock,system-lock-screen
 Reboot,`sudo reboot`,system-reboot
-Shutdown,void-logout,system-log-out
+Exit Window Manager,void-logout,system-log-out

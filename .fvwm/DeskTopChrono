@@ -1,0 +1,11 @@
+Style DeskTopChrono !Title, BorderWidth 5, HandleWidth 5, Sticky, CirculateSkip, WindowListSkip, StaysOnBottom
+
+DestroyModuleConfig DeskTopChrono:*
+*DeskTopChrono: Geometry 320x200+800+4
+*DeskTopChrono: Colorset 23
+*DeskTopChrono: Rows 2
+*DeskTopChrono: Columns 1
+*DeskTopChrono: Frame 1
+*DeskTopChrono: Font "xft:Fira Code:style=Regular:size=11:antialias=true:hintstyle=slight"
+*DeskTopChrono: (1x1, Swallow Chrono 'Module FvwmScript $[FVWM_USERDIR]/scripts/Chrono/Chrono', Frame 1)
+*DesktopChrono: (1x1, Swallow Chrono 'Module FvwmScript $[FVWM_USERDIR]/scripts/Kalende/Kalende', Frame 1)

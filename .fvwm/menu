@@ -1,7 +1,7 @@
 #######
 # Menus
 ###########
-MenuStyle * MenuColorset 1, ActiveColorset 2, GreyedColorset 3, TitleColorset 4
+MenuStyle * MenuColorset 5, ActiveColorset 4, GreyedColorset 3, TitleColorset 4
 MenuStyle * Hilight3DOff, HilightBack, HilightTitleBack, SeparatorsLong
 MenuStyle * TrianglesSolid, TrianglesUseFore
 MenuStyle * ItemFormat "%|%3.1i%5.3l%5.3>%|"
@@ -22,7 +22,7 @@ AddToMenu   MenuFvwmRoot "Fvwm" Title
 + "" Nop
 + "Terminal" Exec exec $[infostore.terminal]
 + "Editor" Exec exec $[infostore.editor]
-Test (x pcmanfm) + "File Manager" Exec exec pcmanfm
+Test (x pcmanfm) + "File Manager" Exec exec $[infostore.filemgr]
 + "Firefox" Exec exec $[infostore.browser]
 + "" Nop
 + "Programs"     Popup MenuPrograms
@@ -30,13 +30,13 @@ Test (x pcmanfm) + "File Manager" Exec exec pcmanfm
 + "Applications" Popup XDGMenu
 # + "Places" Popup FvwmPlaces
 + "" Nop
-+ "Fvwm&Console" Module FvwmConsole -terminal $[infostore.terminal]
++ "Fvwm&Console" Module FvwmConsole -terminal $[infostore.terminal] -fg rgb:ee/ee/ee -bg rgb:17/2b/4d
 + "M&an Pages" Popup MenuFvwmManPages
 # + "Copy Config" FvwmScript FvwmScript-ConfirmCopyConfig
 + "" Nop
 + "Re&fresh" Refresh
 + "&Restart" Restart
-+ "&Quit" Module FvwmScript FvwmScript-ConfirmQuit
++ "&Quit" Module FvwmScript FvwmScript-Quit
 
 # Generate XDGMenu
 PipeRead "fvwm-menu-desktop -e"
@@ -196,7 +196,7 @@ AddToMenu   MenuFvwmManPages "Help" Title
 #+ %book_help_baloon.png%"Fvwm Information..." Exec exec xmessage "$(fvwm --version)"
 #+ %computer_x11.png%"X Information..." Exec exec xmessage "$(xdpyinfo)"
 
-SetEnv fvwm_wallpaper_dir /home/doug/wallpaper
+SetEnv fvwm_wallpaper_dir /home/doug/.fvwm/wallpapers
 
 DestroyMenu MenuFvwmPref
 AddToMenu MenuFvwmPref "Preferences" Title

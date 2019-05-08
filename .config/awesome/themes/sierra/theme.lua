@@ -1,6 +1,7 @@
 -------------------------------
---  "Zenburn" awesome theme  --
---    By Adrian C. (anrxc)   --
+--  "sierra" awesome theme  --
+--    By packrat   --
+--    01-30-2019   --
 -------------------------------
 
 local themes_path = require("gears.filesystem").get_themes_dir()
@@ -12,35 +13,39 @@ local theme = {}
 -- }}}
 
 -- {{{ Styles
-theme.font      = "Source Sans Pro 11"
+theme.font      = "Fira Sans 10"
 
 -- {{{ Colors
-theme.fg_normal  = "#DCDCCC"
-theme.fg_focus   = "#F0DFAF"
-theme.fg_urgent  = "#CC9393"
-theme.bg_normal  = "#3F3F3F"
-theme.bg_focus   = "#1E2320"
-theme.bg_urgent  = "#3F3F3F"
+theme.fg_normal  = "#D6D4D4"
+theme.fg_focus   = "#E3E1E1"
+theme.fg_urgent  = "#E3E1E1"
+theme.bg_normal  = "#21201F"
+theme.bg_focus   = "#A34B53"
+theme.bg_urgent  = "#D22635"
 theme.bg_systray = theme.bg_normal
+
+theme.tasklist_bg_focus = "#424242"
+
 -- }}}
 
 -- {{{ Borders
 theme.useless_gap   = dpi(0)
-theme.border_width  = dpi(2)
-theme.border_normal = "#3F3F3F"
-theme.border_focus  = "#6F6F6F"
+theme.border_width  = dpi(4)
+theme.border_normal = "#171717"
+theme.border_focus  = "#404040"
 theme.border_marked = "#CC9393"
 -- }}}
 
 -- {{{ Titlebars
-theme.titlebar_bg_focus  = "#3F3F3F"
-theme.titlebar_bg_normal = "#3F3F3F"
+theme.titlebar_bg_focus  = "#3E3E3E"
+theme.titlebar_bg_normal = "#3E3E3E"
 -- }}}
 
 -- There are other variable sets
 -- overriding the default one when
 -- defined, the sets are:
 -- [taglist|tasklist]_[bg|fg]_[focus|urgent|occupied|empty|volatile]
+-- tasklist_[bg|fg]_[focus|urgent]
 -- titlebar_[normal|focus]
 -- tooltip_[font|opacity|fg_color|bg_color|border_width|border_color]
 -- Example:
@@ -75,8 +80,8 @@ theme.menu_width  = dpi(144)
 
 -- {{{ Icons
 -- {{{ Taglist
-theme.taglist_squares_sel   = themes_path .. "zenburn/taglist/squarefz.png"
-theme.taglist_squares_unsel = themes_path .. "zenburn/taglist/squarez.png"
+theme.taglist_squares_sel   = themes_path .. "sierra/taglist/squarefz.png"
+theme.taglist_squares_unsel = themes_path .. "sierra/taglist/squarez.png"
 --theme.taglist_squares_resize = "false"
 -- }}}
 

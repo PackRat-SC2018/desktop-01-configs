@@ -1,18 +1,41 @@
 rofi-logout
 basilisk
-st
 guvcview
 urxvt
-audacious
 xfburn
 lefpad
 slock
 yad --color
 yad --font
-leafpad
 asunder
+xfontsel
+xcalc
+lilyterm
+tilix
+terminator
+thunar
+netsurf
+epiphany
+qutebrowser
+audacious
 gcolor2
+parole
+lxappearance
+st
+wman-logout.sh
+hexchat
+audaciouys
+leafpad
+gimp
+xfce4-screenshooter
 xterm
-tint2
-compton
+xfce4-terminal --drop-down
+smplayer
+vlc
 sakura
+pcmanfm
+xfce4-terminal
+xfce4-panel
+vivaldi
+compton
+tint2

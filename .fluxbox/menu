@@ -16,18 +16,20 @@
 #     session.menuFile: ~/.fluxbox/my-menu
 [begin] (Fluxbox-1.3.7)
 [encoding] {UTF-8}
-      [exec] (Run) {rofi -show}
+      [exec] (Run) {rofi -modi run,drun,window,combi -sidebar-mode -show run}
 [separator]
-      [exec] (Terminal) {urxvt}
+      [exec] (Terminal) {uxterm}
       [exec] (Sublime) {wmctrl -a subl3 || subl3}
-      [exec] (File Manager) {pcmanfm}
+      [exec] (File Manager) {thunar}
 [submenu] (Terminals)
       [exec] (UXTerm) {uxterm}
       [exec] (XTerm) {xterm}
       [exec] (Simple Terminal) {st}
-      [exec] (Sakura) {sakura}
       [exec] (URxvt) {urxvt}
       [exec] (Tmux) {urxvt -e tmux}
+      [exec] (Sakura) {sakura}
+      [exec] (Xfce4 Terminal) {xfce4-terminal}
+      [exec] (Xfce4 Terminal drop down) {xfce4-terminal --drop-down}
 [end]
 [separator]      
       [exec] (Firefox) {wmctrl -a firefox || firefox}
@@ -56,26 +58,8 @@
       [exec] (Screenshot PNG) {import -window root -quality 100 ~/pictures/screen-import-$(date +%A_%s).png}      
 [end]
 [submenu] (Media)
-[submenu] (Music)
-      [submenu] (Cowboy Junkies)
-            [wallpapers] (~/playlists/Cowboy Junkies) {audacious -p}
-      [end]
-      [submenu] (Dire Straits)
-            [wallpapers] (~/playlists/Dire Straits) {audacious -p}
-      [end]
-      [submenu] (John Hiatt)
-            [wallpapers] (~/playlists/John Hiatt) {audacious -p}
-      [end]
-      [submenu] (Big Country)
-            [wallpapers] (~/playlists/Big Country) {audacious -p}
-      [end]
-      [wallpapers] (~/playlists) {audacious -p}
-[end]
-[submenu] (Video)
-      [wallpapers] (/mnt/public/video) {mpv --player-operation-mode=pseudo-gui}
-[end]
       [exec] (Audacious) {audacious}
-      [exec] (mpv) {mpv --player-operation-mode=pseudo-gui}
+      [exec] (Gnome-mpv) {gnome-mpv}
       [exec] (Asunder) {asunder}
       [exec] (Xfburn) {xfburn}
       [exec] (Guvcview) {guvcview}

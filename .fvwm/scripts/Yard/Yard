@@ -1,0 +1,475 @@
+
+##########	Yard FVWM Script
+##########	Desktop icons
+##########	by sebaro
+##########
+##########	rev.2012-08-19
+
+WindowTitle {Yard}
+WindowSize 320 180
+WindowPosition 12 8
+
+##### Global Style
+Colorset 10
+Font "xft:DejaVu Sans:size=8:bold"
+
+Init
+Begin
+  ##### Settings
+  Set $homeDir = (GetOutput {echo $HOME} 1 -1) {/.fvwm/scripts/Yard/}
+  Set $iconDir = {/usr/share/icons}
+  Set $iconDirAlt = {/usr/share/icons/hicolor}
+  Set $iconTheme = {Oxygen}
+  Set $iconSize = {64}
+  Set $browser = {dolphin}
+
+  ### Item 1
+  Set $item1Type = {directory}
+  Set $item1Title = {Documents}
+  Set $item1Path = {/home/Documents}
+  Set $item1Icon = {}
+
+  ### Item 2
+  Set $item2Type = {directory}
+  Set $item2Title = {Videos}
+  Set $item2Path = {/home/Videos}
+  Set $item2Icon = {}
+
+  ### Item 3
+  Set $item3Type = {directory}
+  Set $item3Title = {Images}
+  Set $item3Path = {/home/Images}
+  Set $item3Icon = {}
+
+  ### Item 4
+  Set $item4Type = {application}
+  Set $item4Title = {YaRock}
+  Set $item4Path = {yarock}
+  Set $item4Icon = {}
+
+  ### Item 5
+  Set $item5Type = {application}
+  Set $item5Title = {K3B}
+  Set $item5Path = {k3b}
+  Set $item5Icon = {}
+
+  ### Item 6
+  Set $item6Type = {application}
+  Set $item6Title = {GwenView}
+  Set $item6Path = {gwenview}
+  Set $item6Icon = {}
+
+  ##### Widgets
+  Set $getThemeDir = {find "} $iconDir {" -maxdepth 1 -iname "} $iconTheme {"}
+  Set $iconThemeDir = (GetOutput $getThemeDir 1 -1)
+  Set $getDirPath = {find "} $iconThemeDir {" -maxdepth 2 | grep "} $iconSize {x} $iconSize {/places\|places/} $iconSize {"}
+  Set $dirPath = (GetOutput $getDirPath 1 -1) {/}
+  Set $getAppPath = {find "} $iconThemeDir {" -maxdepth 2 | grep "} $iconSize {x} $iconSize {/apps\|apps/} $iconSize {"}
+  Set $appPath = (GetOutput $getAppPath 1 -1) {/}
+  Set $appPathAlt = $iconDirAlt {/} $iconSize {x} $iconSize {/apps/}
+  Set $getActPath = {find "} $iconThemeDir {" -maxdepth 2 | grep "} $iconSize {x} $iconSize {/actions\|actions/} $iconSize {"}
+  Set $actPath = (GetOutput $getActPath 1 -1) {/}
+  Set $defDirIcon = $dirPath {folder.png}
+  Set $defAppIcon = $actPath {system-run.png}
+
+  ### Item 1
+  If $item1Icon == {} Then
+  Begin
+    Set $fileName = {echo } $item1Title { | tr [A-Z] [a-z]}
+    Set $fileName = (GetOutput $fileName 1 -1)
+    If $item1Type == {directory} Then
+    Begin
+      Set $getDirIconFileName = {icon=$(echo "} $fileName {" | sed -e "s/s$//g");ls "} $dirPath {" 2>/dev/null | grep "$icon[^-]"}
+      Set $dirIconFileName = (GetOutput $getDirIconFileName 1 -1)
+      If $dirIconFileName <> {} Then
+        Set $item1Icon = $dirPath $dirIconFileName
+      Else
+        Set $item1Icon = $defDirIcon
+    End
+    If $item1Type == {application} Then
+    Begin
+      Set $checkAppIcon = {ls "} $appPath {" 2>/dev/null | grep "} $fileName {"}
+      Set $appIconFileName = (GetOutput $checkAppIcon 1 -1)
+      If $appIconFileName <> {} Then
+        Set $item1Icon = $appPath $appIconFileName
+      Else
+      Begin
+        Set $checkAppIcon = {ls "} $appPathAlt {" 2>/dev/null | grep "} $fileName {"}
+        Set $appIconFileName = (GetOutput $checkAppIcon 1 -1)
+        If $appIconFileName <> {} Then
+          Set $item1Icon = $appPathAlt $appIconFileName
+        Else
+          Set $item1Icon = $defAppIcon
+      End
+    End
+  End
+  If $item1Type == {directory} Then
+    Set $item1Path = $browser { } $item1Path
+  ChangeIcon 1 $item1Icon
+  ChangeTitle 2 $item1Title
+
+  ### Item 2
+  If $item2Icon == {} Then
+  Begin
+    Set $fileName = {echo } $item2Title { | tr [A-Z] [a-z]}
+    Set $fileName = (GetOutput $fileName 1 -1)
+    If $item2Type == {directory} Then
+    Begin
+      Set $getDirIconFileName = {icon=$(echo "} $fileName {" | sed -e "s/s$//g");ls "} $dirPath {" 2>/dev/null | grep "$icon[^-]"}
+      Set $dirIconFileName = (GetOutput $getDirIconFileName 1 -1)
+      If $dirIconFileName <> {} Then
+        Set $item2Icon = $dirPath $dirIconFileName
+      Else
+        Set $item2Icon = $defDirIcon
+    End
+    If $item2Type == {application} Then
+    Begin
+      Set $checkAppIcon = {ls "} $appPath {" 2>/dev/null | grep "} $fileName {"}
+      Set $appIconFileName = (GetOutput $checkAppIcon 1 -1)
+      If $appIconFileName <> {} Then
+        Set $item2Icon = $appPath $appIconFileName
+      Else
+      Begin
+        Set $checkAppIcon = {ls "} $appPathAlt {" 2>/dev/null | grep "} $fileName {"}
+        Set $appIconFileName = (GetOutput $checkAppIcon 1 -1)
+        If $appIconFileName <> {} Then
+          Set $item2Icon = $appPathAlt $appIconFileName
+        Else
+          Set $item2Icon = $defAppIcon
+      End
+    End
+  End
+  If $item2Type == {directory} Then
+    Set $item2Path = $browser { } $item2Path
+  ChangeIcon 3 $item2Icon
+  ChangeTitle 4 $item2Title
+
+  ### Item 3
+  If $item3Icon == {} Then
+  Begin
+    Set $fileName = {echo } $item3Title { | tr [A-Z] [a-z]}
+    Set $fileName = (GetOutput $fileName 1 -1)
+    If $item3Type == {directory} Then
+    Begin
+      Set $getDirIconFileName = {icon=$(echo "} $fileName {" | sed -e "s/s$//g");ls "} $dirPath {" 2>/dev/null | grep "$icon[^-]"}
+      Set $dirIconFileName = (GetOutput $getDirIconFileName 1 -1)
+      If $dirIconFileName <> {} Then
+        Set $item3Icon = $dirPath $dirIconFileName
+      Else
+        Set $item3Icon = $defDirIcon
+    End
+    If $item3Type == {application} Then
+    Begin
+      Set $checkAppIcon = {ls "} $appPath {" 2>/dev/null | grep "} $fileName {"}
+      Set $appIconFileName = (GetOutput $checkAppIcon 1 -1)
+      If $appIconFileName <> {} Then
+        Set $item3Icon = $appPath $appIconFileName
+      Else
+      Begin
+        Set $checkAppIcon = {ls "} $appPathAlt {" 2>/dev/null | grep "} $fileName {"}
+        Set $appIconFileName = (GetOutput $checkAppIcon 1 -1)
+        If $appIconFileName <> {} Then
+          Set $item3Icon = $appPathAlt $appIconFileName
+        Else
+          Set $item3Icon = $defAppIcon
+      End
+    End
+  End
+  If $item3Type == {directory} Then
+    Set $item3Path = $browser { } $item3Path
+  ChangeIcon 5 $item3Icon
+  ChangeTitle 6 $item3Title
+
+  ### Item 4
+  If $item4Icon == {} Then
+  Begin
+    Set $fileName = {echo } $item4Title { | tr [A-Z] [a-z]}
+    Set $fileName = (GetOutput $fileName 1 -1)
+    If $item4Type == {directory} Then
+    Begin
+      Set $getDirIconFileName = {icon=$(echo "} $fileName {" | sed -e "s/s$//g");ls "} $dirPath {" 2>/dev/null | grep "$icon[^-]"}
+      Set $dirIconFileName = (GetOutput $getDirIconFileName 1 -1)
+      If $dirIconFileName <> {} Then
+        Set $item4Icon = $dirPath $dirIconFileName
+      Else
+        Set $item4Icon = $defDirIcon
+    End
+    If $item4Type == {application} Then
+    Begin
+      Set $checkAppIcon = {ls "} $appPath {" 2>/dev/null | grep "} $fileName {"}
+      Set $appIconFileName = (GetOutput $checkAppIcon 1 -1)
+      If $appIconFileName <> {} Then
+        Set $item4Icon = $appPath $appIconFileName
+      Else
+      Begin
+        Set $checkAppIcon = {ls "} $appPathAlt {" 2>/dev/null | grep "} $fileName {"}
+        Set $appIconFileName = (GetOutput $checkAppIcon 1 -1)
+        If $appIconFileName <> {} Then
+          Set $item4Icon = $appPathAlt $appIconFileName
+        Else
+          Set $item4Icon = $defAppIcon
+      End
+    End
+  End
+  If $item4Type == {directory} Then
+    Set $item4Path = $browser { } $item4Path
+  ChangeIcon 7 $item4Icon
+  ChangeTitle 8 $item4Title
+
+  ### Item 5
+  If $item5Icon == {} Then
+  Begin
+    Set $fileName = {echo } $item5Title { | tr [A-Z] [a-z]}
+    Set $fileName = (GetOutput $fileName 1 -1)
+    If $item5Type == {directory} Then
+    Begin
+      Set $getDirIconFileName = {icon=$(echo "} $fileName {" | sed -e "s/s$//g");ls "} $dirPath {" 2>/dev/null | grep "$icon[^-]"}
+      Set $dirIconFileName = (GetOutput $getDirIconFileName 1 -1)
+      If $dirIconFileName <> {} Then
+        Set $item5Icon = $dirPath $dirIconFileName
+      Else
+        Set $item5Icon = $defDirIcon
+    End
+    If $item5Type == {application} Then
+    Begin
+      Set $checkAppIcon = {ls "} $appPath {" 2>/dev/null | grep "} $fileName {"}
+      Set $appIconFileName = (GetOutput $checkAppIcon 1 -1)
+      If $appIconFileName <> {} Then
+        Set $item5Icon = $appPath $appIconFileName
+      Else
+      Begin
+        Set $checkAppIcon = {ls "} $appPathAlt {" 2>/dev/null | grep "} $fileName {"}
+        Set $appIconFileName = (GetOutput $checkAppIcon 1 -1)
+        If $appIconFileName <> {} Then
+          Set $item5Icon = $appPathAlt $appIconFileName
+        Else
+          Set $item5Icon = $defAppIcon
+      End
+    End
+  End
+  If $item5Type == {directory} Then
+    Set $item5Path = $browser { } $item5Path
+  ChangeIcon 9 $item5Icon
+  ChangeTitle 10 $item5Title
+
+  ### Item 6
+  If $item6Icon == {} Then
+  Begin
+    Set $fileName = {echo } $item6Title { | tr [A-Z] [a-z]}
+    Set $fileName = (GetOutput $fileName 1 -1)
+    If $item6Type == {directory} Then
+    Begin
+      Set $getDirIconFileName = {icon=$(echo "} $fileName {" | sed -e "s/s$//g");ls "} $dirPath {" 2>/dev/null | grep "$icon[^-]"}
+      Set $dirIconFileName = (GetOutput $getDirIconFileName 1 -1)
+      If $dirIconFileName <> {} Then
+        Set $item6Icon = $dirPath $dirIconFileName
+      Else
+        Set $item6Icon = $defDirIcon
+    End
+    If $item6Type == {application} Then
+    Begin
+      Set $checkAppIcon = {ls "} $appPath {" 2>/dev/null | grep "} $fileName {"}
+      Set $appIconFileName = (GetOutput $checkAppIcon 1 -1)
+      If $appIconFileName <> {} Then
+        Set $item6Icon = $appPath $appIconFileName
+      Else
+      Begin
+        Set $checkAppIcon = {ls "} $appPathAlt {" 2>/dev/null | grep "} $fileName {"}
+        Set $appIconFileName = (GetOutput $checkAppIcon 1 -1)
+        If $appIconFileName <> {} Then
+          Set $item6Icon = $appPathAlt $appIconFileName
+        Else
+          Set $item6Icon = $defAppIcon
+      End
+    End
+  End
+  If $item6Type == {directory} Then
+    Set $item6Path = $browser { } $item6Path
+  ChangeIcon 11 $item6Icon
+  ChangeTitle 12 $item6Title
+
+  Set $quitButton = $homeDir {icons/quit.png}
+  ChangeIcon 13 $quitButton
+End
+
+Widget		1
+Property
+  Type		ItemDraw
+  Size		64 64
+  Position		28 5
+  Flags		NoFocus NoReliefString
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Do {exec } $item1Path
+    End
+  End
+
+Widget		2
+Property
+  Type		ItemDraw
+  Size		100 15
+  Position		10 70
+  Flags		NoFocus NoReliefString
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Do {exec } $item1Path
+    End
+  End
+
+Widget		3
+Property
+  Type		ItemDraw
+  Size		64 64
+  Position		128 5
+  Flags		NoFocus NoReliefString
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Do {exec } $item2Path
+    End
+  End
+
+Widget		4
+Property
+  Type		ItemDraw
+  Size		100 15
+  Position		110 70
+  Flags		NoFocus NoReliefString
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Do {exec } $item2Path
+    End
+  End
+
+Widget		5
+Property
+  Type		ItemDraw
+  Size		64 64
+  Position		228 5
+  Flags		NoFocus NoReliefString
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Do {exec } $item3Path
+    End
+  End
+
+Widget		6
+Property
+  Type		ItemDraw
+  Size		100 15
+  Position		210 70
+  Flags		NoFocus NoReliefString
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Do {exec } $item3Path
+    End
+  End
+
+Widget		7
+Property
+  Type		ItemDraw
+  Size		64 64
+  Position		28 90
+  Flags		NoFocus NoReliefString
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Do {exec } $item4Path
+    End
+  End
+
+Widget		8
+Property
+  Type		ItemDraw
+  Size		100 15
+  Position		10 155
+  Flags		NoFocus NoReliefString
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Do {exec } $item4Path
+    End
+  End
+
+Widget		9
+Property
+  Type		ItemDraw
+  Size		64 64
+  Position		128 90
+  Flags		NoFocus NoReliefString
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Do {exec } $item5Path
+    End
+  End
+
+Widget		10
+Property
+  Type		ItemDraw
+  Size		100 15
+  Position		110 155
+  Flags		NoFocus NoReliefString
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Do {exec } $item5Path
+    End
+  End
+
+Widget		11
+Property
+  Type		ItemDraw
+  Size		64 64
+  Position		228 90
+  Flags		NoFocus NoReliefString
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Do {exec } $item6Path
+    End
+  End
+
+Widget		12
+Property
+  Type		ItemDraw
+  Size		100 15
+  Position		210 155
+  Flags		NoFocus NoReliefString
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Do {exec } $item6Path
+    End
+  End
+
+Widget		13
+Property
+  Type		ItemDraw
+  Size		16 16
+  Position		303 1
+  Flags		NoFocus NoReliefString
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Quit
+    End
+  End

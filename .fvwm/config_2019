@@ -1,0 +1,287 @@
+# fvwm config file
+#
+
+# InfoStoreAdd can be used to store variable data internal to fvwm.
+# The variable can then be used in the configuration as $[infostore.name].
+#
+# You can also use environment variables but for data internal to fvwm
+# use InfoStore variables instead.
+#
+# The following is used in various menus and also sets the terminal
+# that FvwmConsole uses. Change this to your terminal of choice
+InfoStoreAdd terminal uxterm
+InfoStoreAdd browser firefox
+InfoStoreAdd mail thunderbird
+InfoStoreAdd filemgr thunar
+InfoStoreAdd editor subl3
+
+# Set EdgeScroll 0 0 and/or EdgeResistance -1 to disable.
+# EdgeScroll 100 100
+# EdgeResistance 1000
+# Style * EdgeMoveDelay 500, EdgeMoveResistance 1000
+
+# Disable EdgeScrolling but make it possible
+# to move windows over the screen edge
+EdgeScroll 0 0
+EdgeResistance -1
+Style * EdgeMoveDelay 250
+Style * EdgeMoveResistance 20
+
+# Set thickness of the edge of the screen to 1
+EdgeThickness 1
+
+# EwmhBaseStruts [left] [right] [top] [bottom]
+# Reserves space along the edge(s) of the Screen that will not
+# be covered when maximizing or placing windows.
+EwmhBaseStruts 0 0 0 30
+
+# This sets the ClickTime and MoveThreshold used to determine
+# Double Clicks, Hold and Move for the mouse.
+ClickTime 250
+MoveThreshold 3
+
+# Sets the focus style to SloppyFocus and a mouse click
+# in a window will Raise it.
+# Style * SloppyFocus, MouseFocusClickRaises
+Style * ClickToFocus, MouseFocusClickRaises
+ColorMapFocus  FollowsMouse
+
+# Window Placement
+Style * MinOverlapPlacement, GrabFocusOn, !UsePPosition
+
+# Transient Windows (such as open file windows)
+Style * DecorateTransient, StackTransientParent
+Style * FPGrabFocusTransient, FPReleaseFocusTransient
+
+# Sets all windows to OpaqueMove (vs a wired frame) and  windows will
+# snap to each other and the edge of the screen.
+OpaqueMoveSize unlimited
+Style * ResizeOpaque, SnapAttraction 2 SameType ScreenAll, SnapGrid
+
+# WindowShade
+Style * WindowShadeScrolls, WindowShadeSteps 30
+
+# Ignore Numlock and other modifiers for bindings
+# See http://fvwm.org/documentation/faq/#why-do-numlock-capslock-and-scrolllock-interfere-with-clicktofocus-andor-my-mouse-bindings
+IgnoreModifiers L25
+
+# Desktops and Pages
+#
+# Fvwm has both Virtual Desktops and Pages. Each Desktop is built from
+# a grid of Pages. The following sets the name of four Desktops and then
+# divides each Desktop into a 2x2 grid of Pages that are positioned as
+#
+#   +---+---+
+#   |   |   |
+#   +---+---+
+#   |   |   |
+#   +---+---+
+#
+
+# DesktopSize 3x3
+
+# DesktopName 0 1
+# DesktopName 1 2
+# DesktopName 2 3
+# DesktopName 3 4
+
+DeskTopSize 1x1
+EwmhNumberOfDesktops 4
+
+## Cursor styles
+
+# clean style
+#CursorStyle root left_ptr
+#CursorStyle default left_ptr 
+#CursorStyle position left_ptr
+#CursorStyle sys left_ptr 
+#CursorStyle menu left_ptr
+#CursorStyle title left_ptr
+#CursorStyle resize fleur
+#CursorStyle stroke cross
+#CursorStyle select draped_box
+#CursorStyle destroy pirate	#000000 white
+
+CursorStyle ROOT            left_ptr                black    white
+CursorStyle TITLE           left_ptr                black    white
+CursorStyle DEFAULT         left_ptr                black    white
+CursorStyle SYS             hand2                   black    white
+CursorStyle MENU            left_ptr                black    white
+CursorStyle POSITION        top_left_corner         black    white
+CursorStyle MOVE            fleur                   black    white
+CursorStyle RESIZE          sizing                  black    white
+CursorStyle WAIT            watch                   black    white
+CursorStyle SELECT          crosshair               black    white
+CursorStyle DESTROY         pirate                  black    white
+CursorStyle TOP             top_side                black    white
+CursorStyle RIGHT           right_side              black    white
+CursorStyle BOTTOM          bottom_side             black    white
+CursorStyle LEFT            left_side               black    white
+CursorStyle TOP_LEFT        top_left_corner         black    white
+CursorStyle TOP_RIGHT       top_right_corner        black    white
+CursorStyle BOTTOM_LEFT     bottom_left_corner      black    white
+CursorStyle BOTTOM_RIGHT    bottom_right_corner     black    white
+CursorStyle TOP_EDGE        top_side                black    white
+CursorStyle RIGHT_EDGE      right_side              black    white
+CursorStyle BOTTOM_EDGE     bottom_side             black    white
+CursorStyle LEFT_EDGE       left_side               black    white
+CursorStyle STROKE          plus                    black    white
+
+# Default Font
+DefaultFont "xft:IBM Plex Sans:regular:size=11:antialias=True:hintstyle=slight"
+
+Style * BorderWidth 2, HandleWidth 2, MwmButtons, MwmBorder, FirmBorder
+Style * Colorset 5, HilightColorset 24
+Style * BorderColorset 5, HilightBorderColorset 24
+BorderStyle * Simple -- NoInset Flat
+
+TitleStyle Centered Height 22 -- Flat
+
+#ButtonStyle All ActiveUp Vector 5 15x15@4 15x85@3 85x85@3 85x15@3 15x15@3 -- Flat
+#ButtonStyle All ToggledActiveUp Vector 5 15x15@4 15x85@3 85x85@3 85x15@3 15x15@3 -- Flat
+#ButtonStyle All ActiveDown Vector 5 20x20@4 20x80@3 80x80@3 80x20@3 20x20@3 -- Flat
+#ButtonStyle All ToggledActiveDown Vector 5 20x20@4 20x80@3 80x80@3 80x20@3 20x20@3 -- Flat
+#ButtonStyle All ToggledInactive Vector 5 47x47@3 57x53@3 53x53@3 53x47@3 47x47@3 -- Flat
+#ButtonStyle All Inactive Vector 5 47x47@3 57x53@3 53x53@3 53x47@3 47x47@3 -- Flat
+#AddButtonStyle 1 Active Vector 5 45x45@3 55x45@3 55x55@3 45x55@3 45x45@3
+#AddButtonStyle 2 Active Vector 4 35x35@3 65x65@3 65x35@4 35x65@3
+#AddButtonStyle 4 Active Vector 8 30x70@3 30x30@3 70x30@3 70x70@3 30x70@3 30x50@4 50x50@3 50x70@3
+#AddButtonStyle 4 ToggledActiveUp Vector 8 30x70@3 30x30@3 70x30@3 70x70@3 30x70@3 50x30@4 50x50@3 70x50@3
+#AddButtonStyle 6 Active Vector 5 35x60@3 65x60@3 65x50@3 35x50@3 35x60@3
+#ButtonStyle All - Clear
+#ButtonStyle 1 - MwmDecorMenu
+#ButtonStyle 4 - MwmDecorMax
+#ButtonStyle 6 - MwmDecorMin
+
+ButtonStyle All -- Flat 
+ButtonStyle All ToggledActiveDown Vector 5 33x35@3 61x35@3 61x57@3 33x57@3 33x35@3 -- Flat
+ButtonStyle All ToggledInactive Vector 5 47x47@3 57x53@3 53x53@3 53x47@3 47x47@3 -- Flat
+ButtonStyle All Inactive Vector 5 47x47@3 57x53@3 53x53@3 53x47@3 47x47@3 -- Flat
+AddButtonStyle 1 Active Vector 8 45x45@3 55x45@3 55x55@3 45x55@3 45x45@3 55x55@3 55x45@3 45x55@3
+AddButtonStyle 2 Active Vector 4 35x35@3 57x57@3 57x35@4 35x57@3
+AddButtonStyle 4 Active Vector 5 33x35@3 61x35@3 61x57@3 33x57@3 33x35@3
+AddButtonStyle 4 ToggledActiveUp Vector 5 33x35@3 61x35@3 61x57@3 33x57@3 33x35@3
+AddButtonStyle 6 Active Vector 2 35x45@3 67x45@3
+ButtonStyle All - Clear
+ButtonStyle 1 - MwmDecorMenu
+ButtonStyle 4 - MwmDecorMax
+ButtonStyle 6 - MwmDecorMin
+
+#======FvwmIconBox specs [l t r b]===============#
+
+SetEnv fvwm_icon_size 56
+
+Style * StickyIcon
+Style * IconTitleRelief 0
+Style * IconBackgroundRelief 1
+Style * IconBackgroundPadding 1
+Style * IconSize 48 48 160 160
+Style * IconFont "Shadow=0 0 SE:xft:Monospace:style=regular:pixelsize=8:antialias=true:hinting=slight"
+Style * IconBackgroundColorset 7
+Style * IconTitleColorset 7
+Style * HilightIconTitleColorset 7
+Style * Icon unknown1.xpm
+
+# comment out if iconbox needed; then select IconBox location
+# Style * !Icon
+Style * !IconTitle
+
+# top left
+# Style "*" IconBox 4 4 400 288, IconGrid 20 20, IconFill left top
+# Style "*" IconBox 8 64 800 128, IconGrid 24 24, IconFill left top
+#
+# top center
+# Style * IconBox 512 8 1066 256, IconGrid 24 24, IconFill left top
+#
+# bottom center
+# Style * IconBox 400 836 1200 899, IconGrid 24 24, IconFill left top
+#
+# top right
+# Style * IconBox 1250 48 1360 640, IconGrid 24 24, IconFill left top
+#
+# bottom left
+# Style * IconBox 16 1020 640 1080, IconGrid 16 16 , IconFill left top
+#
+# middle right
+# Style * Iconbox 1224 300 1360 600, IconGrid 36 36, IconFill left top
+#
+# middle left
+# Style * Iconbox 16 48 256 600, IconGrid 24 24, IconFill left top
+#
+# thumbnails
+# Style "*" Iconbox 96 1000 1728 1072, IconGrid 16 16, IconFill left top
+# Style "*" Iconbox 96 4 1728 144, IconGrid 16 16, IconFill left top
+Style "*" Iconbox 4 4 136 900, IconGrid 16 16, IconFill left top
+
+# Application styles
+#
+Style *XTerm	Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
+Style *xterm	Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
+Style *Rxvt		Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
+Style *XCalc    Icon /usr/share/icons/gnome/48x48/apps/accessories-calculator.png
+Style *st-256color Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
+Style Polybar !Title, !Handles, !Borders, CirculateSkip, WindowListSkip, NeverFocus
+Style Void_Exit_Session ResizeHintOverride, PositionPlacement Center
+Style Void-logout ResizeHintOverride, PositionPlacement Center
+Style URxvt ResizeHintOverride, PositionPlacement Center
+Style *XTerm ResizeHintOverride, PositionPlacement Center
+Style Sakura ResizeHintOverride, PositionPlacement Center
+Style Subl3 ResizeHintOverride, PositionPlacement Center
+Style Firefox ResizeHintOverride, PositionPlacement Center
+Style Thunderbird ResizeHintOverride, PositionPlacement Center
+Style *tray !Title, !Handles, !Borders, StaysOnBottom, WindowListSkip, CirculateSkip
+Style Tint2 !Title, !Handles, !Borders, ResizeHintOverride, StaysOnBottom, WindowListSkip, CirculateSkip, PositionPlacement 0 -0
+Style Xfce4-panel !Title, !Handles, !Borders, StaysOnTop, WindowListSkip, CirculateSkip
+Style Bl-exit Sticky, CirculateSkip, WindowListSkip, PositionPlacement Center
+Style FvwmScript-Clock* !Title, !Borders, !Handles, Sticky, WindowListSkip, NeverFocus, StaysOnBottom, CirculateSkip, PositionPlacement -2px 2px
+Style FvwmScript-ConfirmQuit* BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, StaysOnTop, CirculateSkip, PositionPlacement Center
+Style FvwmForm-RunCommand* BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, StaysOnTop, CirculateSkip, PositionPlacement Center
+Style fbox_cal* BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, StaysOnTop, CirculateSkip, PositionPlacement -10px -36px
+Style *Clock !Title, NeverFocus, PositionPlacement -5px -36px
+
+Read colorsets
+Read functions
+Read panels
+Read keys
+Read mouse
+Read menu
+
+# Start Function
+#
+# The start function is run right after fvwm is done reading
+# the config file. This function run after each restart
+# so using Test (Init) or Test (Restart) can further control
+# actions that are run during the first time run (Init) or
+# actions that are run after a restart.
+
+DestroyFunc StartFunction
+AddToFunc   StartFunction
+
++ I Module FvwmEvent EventNewDesk
+# + I Module FvwmPager *
+# + I Module FvwmIconMan
+
++ I Module FvwmButtons FvwmTaskBar
+# + I Module FvwmButtons PagerBlock
+# + I Module FvwmButtons TaskPanel
+
+# + I exec exec xset s 3600 3600
+# + I exec exec xset b 33
+
+# Wallpaper
+# + I Test (Init) Exec exec hsetroot -solid #3232AA
+# + I Test (init) Exec sleep 2; exec fbsetbg -c -r "$FVWM_USERDIR/wallpapers/"
+
++ I Test (Init) Exec sleep 3; exec $HOME/bin/ConkyFvwm.sh
++ I Test (Restart) Exec exec $HOME/bin/ConkyFvwm.sh
+
+DestroyFunc ExitFunction
+AddToFunc   ExitFunction
++ I Test (!ToRestart) Exec exec rm -f $[HOME]/.fvwm/icon.tmp.*
++ I Test (!ToRestart) Exec exec rm -f $[FVWM_USERDIR]/temp/*icon*
++ I Exec exec killall -q conky
++ I Exec exec killall -q xclock
++ I Exec exec killall -q stalonetray
+# + I Exec exec killall -q polybar
+# + I Exec exec killall -q tint2
+# + I Exec exec killall -q xfce4-panel

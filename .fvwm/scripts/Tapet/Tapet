@@ -1,0 +1,214 @@
+
+##########	Tapet FVWM Script
+##########	Wallpaper changer
+##########	by sebaro
+##########
+##########	rev.2012-08-15
+
+WindowTitle {Tapet}
+WindowSize 320 120
+WindowPosition 12 531
+
+##### Global Style
+Colorset 10
+Font "xft:DejaVu Sans:size=8:bold"
+
+Init
+Begin
+  ##### Widgets Style
+  Set $warnColorset = {12}
+  Set $loadColorset = {13}
+
+  ##### Settings
+  Set $homeDir = (GetOutput {echo $HOME} 1 -1) {/.fvwm/scripts/Tapet/}
+  Set $wallsPath = (GetOutput {echo $HOME} 1 -1) {/.fvwm/artwork/wallpapers/}
+  Set $putTmp = {/dev/shm/}
+  Set $wallApp = {fvwm-root -r}
+  Set $autoBrowse = {true}
+  Set $autoSetWall = {false}
+  Set $autoTimeout = {60}
+
+ ##### Widgets
+  Set $noIcon = {}
+  Set $prevButton = $homeDir {icons/prev.png}
+  ChangeIcon 2 $prevButton
+  HideWidget 2
+  Set $nextButton = $homeDir {icons/next.png}
+  ChangeIcon 3 $nextButton
+  HideWidget 3
+  Set $quitButton = $homeDir {icons/quit.png}
+  ChangeIcon 4 $quitButton
+
+  ##### Tmp Data
+  Set $tmpWall = $putTmp {tapet_thumbnail.png}
+  Set $convertStatus = $putTmp {tapet_convert_status}
+  Do {exec echo "" > "} $convertStatus {"}
+
+  ##### Variables
+  Set $doRefresh = {true}
+  Set $setWall = {first}
+End
+
+PeriodicTasks
+Begin
+  ##### Browse & Convert Wallpapers
+  If $doRefresh == {true} Then
+  Begin
+    ## First Wallpaper
+    If $setWall == {first} Then
+    Begin
+      Set $countWalls= {ls "} $wallsPath {" | grep .png | wc -l}
+      Set $nrWalls = (GetOutput $countWalls 1 -1)
+      Set $getWalls = {ls "} $wallsPath {" | grep .png}
+      Set $currWall = 1
+      HideWidget 2
+      If $nrWalls == 0 Then
+      Begin
+        ChangeIcon 1 $noIcon
+        ChangeColorset 1 $warnColorset
+        ChangeTitle 1 {No Wallpapers!}
+      End
+      If $nrWalls > 1 Then
+        ShowWidget 3
+    End
+
+    ## Next Wallpaper
+    If $setWall == {next} Then
+    Begin
+     If $currWall == 1 Then
+       ShowWidget 2
+      Set $currWall = (Add $currWall 1)
+      If $currWall == $nrWalls Then
+        HideWidget 3
+    End
+
+    ## Previous Wallpaper
+    If $setWall == {prev} Then
+    Begin
+      If $currWall == $nrWalls Then
+        ShowWidget 3
+      Set $currWall = (Add $currWall -1)
+      If $currWall == 1 Then
+        HideWidget 2
+    End
+
+    ## Convert Wallpaper
+    If $nrWalls > 0 Then
+    Begin
+      ChangeIcon 1 $noIcon
+      ChangeColorset 1 $loadColorset
+      Set $loadMessage = {Loading Wallpaper (} $currWall {/} $nrWalls {)}
+      ChangeTitle 1 $loadMessage
+      Set $thisWall = $wallsPath (GetOutput $getWalls $currWall -1)
+      Do {exec convert -resize x100 "} $thisWall {" "} $tmpWall {" && echo "} $currWall {" > "} $convertStatus {" || echo "0" > "} $convertStatus {"}
+      Set $changeThumb = {true}
+      If $autoBrowse == {true} Then
+        Set $doAutoBrowse = {false}
+    End
+    Set $doRefresh = {false}
+  End
+
+  ##### Change Thumbnail
+  If $changeThumb == {true} Then
+  Begin
+    Set $getConvertStatus = {cat "} $convertStatus {"}
+    If (GetOutput $getConvertStatus 1 -1) == $currWall Then
+    Begin
+      Do {exec echo "" > "} $convertStatus {"}
+      ChangeIcon 1 $tmpWall
+      Set $changeThumb = {false}
+      If $autoBrowse == {true} Then
+      Begin
+        Set $doAutoBrowse = {true}
+        Set $timer = $autoTimeout
+      End
+      If $autoSetWall == {true} Then
+        Do {exec } $wallApp { "} $thisWall {"}
+    End
+    If (GetOutput $getConvertStatus 1 -1) == 0 Then
+    Begin
+      Do {exec echo "" > "} $convertStatus {"}
+      ChangeColorset 1 $warnColorset
+      ChangeTitle 1 {Thumbnail Failed!}
+      Set $changeThumb = {false}
+      If $autoBrowse == {true} Then
+      Begin
+        Set $doAutoBrowse = {true}
+        Set $timer = $autoTimeout
+      End
+    End
+  End
+
+  ##### Auto Browsing
+  If $doAutoBrowse == {true} Then
+  Begin
+    Set $timer = (Add $timer -1)
+    If $timer == 0 Then
+    Begin
+      If $currWall == $nrWalls Then
+        Set $setWall = {first}
+      Else
+        Set $setWall = {next}
+      Set $doAutoBrowse = {false}
+      Set $doRefresh = {true}
+    End
+  End
+End
+
+Widget		1
+Property
+  Type		ItemDraw
+  Size		200 100
+  Position		60 10
+  Flags		NoFocus NoReliefString Center
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Do {exec } $wallApp { "} $thisWall {"}
+    End
+  End
+
+Widget		2
+Property
+  Type		ItemDraw
+  Size		32 32
+  Position		10 45
+  Flags		NoFocus NoReliefString
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Set $setWall = {prev}
+      Set $doRefresh = {true}
+    End
+  End
+
+Widget		3
+Property
+  Type		ItemDraw
+  Size		32 32
+  Position		280 45
+  Flags		NoFocus NoReliefString
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Set $setWall = {next}
+      Set $doRefresh = {true}
+    End
+  End
+
+Widget		4
+Property
+  Type		ItemDraw
+  Size		16 16
+  Position		303 1
+  Flags		NoFocus NoReliefString
+Main
+  Case message of
+    SingleClic :
+    Begin
+      Quit
+    End
+  End
