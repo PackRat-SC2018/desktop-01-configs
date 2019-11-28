@@ -21,6 +21,8 @@
       [exec] (Terminal) {uxterm}
       [exec] (Sublime) {wmctrl -a subl3 || subl3}
       [exec] (File Manager) {thunar}
+      [exec] (Firefox) {firefox}
+[separator]
 [submenu] (Terminals)
       [exec] (UXTerm) {uxterm}
       [exec] (XTerm) {xterm}
@@ -31,13 +33,19 @@
       [exec] (Xfce4 Terminal) {xfce4-terminal}
       [exec] (Xfce4 Terminal drop down) {xfce4-terminal --drop-down}
 [end]
-[separator]      
+[submenu] (Editors)
+      [exec] (Geany) {wmctrl -a geany || geany}
+      [exec] (Emacs) {emacs}
+      [exec] (Mousepad) {mousepad}
+[end] 
+[submenu] (Network)     
       [exec] (Firefox) {wmctrl -a firefox || firefox}
       [exec] (Thunderbird) {wmctrl -a thunderbird || thunderbird}
       [exec] (FileZilla) {filezilla}
       [exec] (Transmission) {transmission-gtk}
       [exec] (HexChat) {hexchat}
-[separator]
+      [exec] (Connman) {cmst -m -i Adwaita}
+[end]
 [submenu] (Office)
       [exec] (Writer) {libreoffice --writer}
       [exec] (Calc) {libreoffice --calc}
@@ -47,21 +55,27 @@
       [exec] (Xcalc) {xcalc}
 [end]
 [submenu] (Graphics)
-[submenu] (Wallpaper)
-      [wallpapers] (~/wallpaper) {fbsetbg}
-[end]
+###[submenu] (Wallpaper)
+###      [wallpapers] (~/wallpaper) {fbsetbg}
+###[end]
       [exec] (Gimp) {gimp}
       [exec] (Geeqie) {geeqie}
-      [exec] (Zathura) {zathura %U}
+      [exec] (Wallpaper) {sxiv -t "$HOME/wallpaper"}
       [exec] (LXappearance) {lxappearance}
-      [exec] (Screenshot JPG) {import -window root -quality 100 ~/pictures/screen-import-$(date +%A_%s).jpg}
-      [exec] (Screenshot PNG) {import -window root -quality 100 ~/pictures/screen-import-$(date +%A_%s).png}      
+      ![exec] (Screenshot JPG) {import -window root -quality 100 ~/pictures/screen-import-$(date +%A_%s).jpg}
+      ![exec] (Screenshot PNG) {import -window root -quality 100 ~/pictures/screen-import-$(date +%A_%s).png}
+      [exec] (Screenshot JPG) {scrot -q 100 '%B_%s_$wx$h.jpg' -e 'mv $f ~/Pictures/'}
+      [exec] (Screenshot PNG) {scrot -q 100 '%B_%s_$wx$h.png' -e 'mv $f ~/Pictures/'}
+      [exec] (Screenshot PNG 5 sec.) {scrot -q 100 -cd 5 '%B_%s_$wx$h.png' -e 'mv $f ~/Pictures/'}
+      [exec] (Screenshot PNG select) {scrot -s -q 100 '%B_%s_$wx$h.png' -e 'mv $f ~/Pictures/'}
+      [exec] (Screenshot PNG multidisp) {scrot -m -q 100 '%B_%s_$wx$h.png' -e 'mv $f ~/Pictures/'}
+
 [end]
 [submenu] (Media)
       [exec] (Audacious) {audacious}
-      [exec] (Gnome-mpv) {gnome-mpv}
+      [exec] (Vlc) {vlc}
       [exec] (Asunder) {asunder}
-      [exec] (Xfburn) {xfburn}
+      [exec] (Brasero) {brasero}
       [exec] (Guvcview) {guvcview}
 [end]
 [separator]
@@ -81,7 +95,6 @@
       [separator]
       [exit] (Exit)
 [end]
-[separator]
       [reconfig] (Reload config)
       [restart] (Restart)
       [exec] (End Session) {void-logout}

@@ -3,19 +3,26 @@
 mixer-element=Master
 
 [audacious]
-record=FALSE
+leading_zero=TRUE
 
 [audgui]
-close_dialog_open=FALSE
-filebrowser_win=820,331,880,536
-filesel_path=/mnt/public/music/Cowboy Junkies - Black Eyed Man
+filebrowser_win=77,62,883,654
+filesel_path=/home/doug/Downloads/Cream/Wheels Of Fire
+playlist_export_win=322,254,780,585
+playlist_path=file:///mnt/public/music/Santana%20-%20Shaman
 
 [gtkui]
-column_widths=10,275,175,10,143,175,10,100,39,10,275,275,275,10,275
-player_height=635
-player_width=982
-player_x=46
-player_y=55
+column_widths=10,347,168,10,204,175,28,100,111,68,275,275,275,10,275
+player_height=656
+player_width=883
+player_x=1018
+player_y=358
+playlist_columns=track title queued length
+playlist_headers=FALSE
 
 [gtkui-layout]
-item_count=0
+item0_name=Playlist Manager
+item0_pos=-1,77,65,879,651
+item1_name=Blur Scope
+item1_pos=-1,77,66,879,647
+item_count=2

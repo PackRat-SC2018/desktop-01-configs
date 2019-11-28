@@ -1,87 +1,369 @@
-**** BEGIN LOGGING AT Thu Jun 14 13:42:56 2018
+**** BEGIN LOGGING AT Sat Nov  3 12:00:56 2018
 
-Jun 14 13:42:56 *	Now talking on #voidlinux
-Jun 14 13:42:56 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
-Jun 14 13:42:56 *	Topic for #voidlinux set by xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (Mon Apr 18 10:21:32 2016)
-Jun 14 13:53:22 *	mamapitufo has quit (Quit: .,.,)
-Jun 14 13:53:49 *	mamapitufo (~mamapituf@cpc73676-dals20-2-0-cust90.20-2.cable.virginm.net) has joined
-Jun 14 13:55:13 *	teatime07 (~teatime07@unaffiliated/teatime07) has joined
-Jun 14 13:56:00 <quinq>	Well, that was not the issue indeed.
-Jun 14 13:56:41 *	jjk96 (~jjk96@ftth-213-134-232-052.solcon.nl) has joined
-Jun 14 13:57:10 *	mamapitufo has quit (Read error: Connection reset by peer)
-Jun 14 13:57:37 *	mamapitufo (~mamapituf@cpc73676-dals20-2-0-cust90.20-2.cable.virginm.net) has joined
-Jun 14 13:58:57 <Piraty>	:D :D rm /bin/sh ; ln -s /bin/bash /bin/sh  https://www.preining.info/blog/2018/06/microsofts-failed-attempt-on-debian-packaging/
-Jun 14 13:59:55 <bug2000>	the hell
-Jun 14 14:00:50 *	totalmongobaer_ has quit (Remote host closed the connection)
-Jun 14 14:03:07 <quinq>	yeah ^^
-Jun 14 14:04:01 *	steinex has quit (Quit: upgrade)
-Jun 14 14:04:01 <quinq>	Also, strangely, the author seems more disturbed by them arbitrarily removing /usr/bin/R than replacing the system shell
-**** BEGIN LOGGING AT Thu Jun 14 14:39:52 2018
+Nov 03 12:00:56 *	Now talking on #voidlinux
+Nov 03 12:00:56 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+Nov 03 12:00:56 *	Topic for #voidlinux set by maldridge (Sat Sep  1 03:35:41 2018)
+Nov 03 12:04:02 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Sat Nov  3 12:04:02 2018
 
-Jun 14 14:39:52 *	Now talking on #voidlinux
-Jun 14 14:39:52 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
-Jun 14 14:39:52 *	Topic for #voidlinux set by xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (Mon Apr 18 10:21:32 2016)
-Jun 14 14:44:13 <Nilium>	I'd be curious why someone wouldn't immediately go "this is a bad idea" when writing the preinstall script.
-Jun 14 14:44:18 <Nilium>	Like what's the commit message that lead to that
-Jun 14 14:45:57 *	OlgaV has quit (Ping timeout: 240 seconds)
-Jun 14 14:46:53 <quinq>	Nilium, that's because you don't think like a Microsoft developer
-Jun 14 14:47:33 <dTal>	dear god, imagine the hassle if you actually installed that thing
-Jun 14 14:47:36 <Nilium>	I think like someone who's 5 SAN away from shouting at his computer because packer is a thing that exists
-Jun 14 14:47:48 <dTal>	I think this is a good sign that packaging needs a serious rethink
-Jun 14 14:48:02 <dTal>	arbitrary shell scripts in packages should be abolished
-Jun 14 14:48:21 <dTal>	Nix/Guix have the right idea
-Jun 14 14:49:37 *	well_laid_lawn has quit (Ping timeout: 256 seconds)
-Jun 14 14:51:09 FiSHLiM plugin unloaded
-**** ENDING LOGGING AT Thu Jun 14 14:51:09 2018
+**** BEGIN LOGGING AT Sat Nov  3 12:08:29 2018
 
-**** BEGIN LOGGING AT Thu Jun 14 14:52:27 2018
+Nov 03 12:08:29 *	Now talking on #voidlinux
+Nov 03 12:08:29 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+Nov 03 12:08:29 *	Topic for #voidlinux set by maldridge (Sat Sep  1 03:35:41 2018)
+Nov 03 12:15:35 *	mamapitufo (~mamapituf@cpc73676-dals20-2-0-cust90.20-2.cable.virginm.net) has joined
+Nov 03 12:28:09 <vejetaryenvampir>	You guys were know something about icecat. :) How can I prevent icecat to create the "Desktop" dir?
+Nov 03 12:30:27 *	Johnnynator has quit (Read error: Connection reset by peer)
+Nov 03 12:31:17 *	Johnnynator (~Johnnynat@p200300EC0BD720009C7055B5228E4F97.dip0.t-ipconnect.de) has joined
+Nov 03 12:36:03 *	n4dir (~n4dir@mue-88-130-56-244.dsl.tropolys.de) has joined
+Nov 03 12:37:56 *	Johnnynator has quit (Read error: Connection reset by peer)
+Nov 03 12:38:00 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Sat Nov  3 12:38:00 2018
 
-Jun 14 14:52:27 *	Now talking on #voidlinux
-Jun 14 14:52:27 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
-Jun 14 14:52:27 *	Topic for #voidlinux set by xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (Mon Apr 18 10:21:32 2016)
-Jun 14 14:53:04 FiSHLiM plugin unloaded
-**** ENDING LOGGING AT Thu Jun 14 14:53:04 2018
+**** BEGIN LOGGING AT Wed Nov  7 09:15:51 2018
 
-**** BEGIN LOGGING AT Thu Jun 14 20:22:21 2018
+Nov 07 09:15:51 *	Now talking on #voidlinux
+Nov 07 09:15:51 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+Nov 07 09:15:51 *	Topic for #voidlinux set by maldridge (Sat Sep  1 03:35:41 2018)
+Nov 07 09:16:10 *	unmy (~unmy@unaffiliated/unmy) has joined
+Nov 07 09:16:18 <Johnnynator[m]>	Yep. It is know that the forum is down
+Nov 07 09:16:46 <ArgyroNet>	Thanks, Johnnynator[m]
+Nov 07 09:17:06 <ArgyroNet>	Do you know anything about this image issue ?
+Nov 07 09:17:56 *	_kaminishi_ (~kaminishi@46.12.235.81.dsl.dyn.forthnet.gr) has joined
+Nov 07 09:19:09 <Johnnynator[m]>	Yep. The 2018 Isos are using a somewhat broken kernel, so they should be considered quite unstable.
+Nov 07 09:19:25 <Johnnynator[m]>	They just didn't come around yet to build some new images.
+Nov 07 09:20:20 *	kaminishi_ has quit (Ping timeout: 244 seconds)
+Nov 07 09:22:16 <ArgyroNet>	I understand.
+Nov 07 09:26:47 *	geekboy01 has quit (Quit: Leaving)
+Nov 07 09:27:21 *	geekboy01 (~geekboy01@75.106.203.242) has joined
+Nov 07 09:28:59 <coldpress>	duncaen: i didn't yet give you my thanks for diagnosing that it was a /boot partition error, so thanks for that!
+Nov 07 09:34:21 <ArgyroNet>	I'll try the xfce /current/ image then, bye and thanks.
+Nov 07 09:34:24 *	ArgyroNet has quit (Quit: Don't read me again, it tickles !)
+Nov 07 09:46:15 *	unmy has quit (Quit: unmy)
+Nov 07 09:49:26 *	fusion809 (~fusion809@2001:8003:f12a:6f00:329c:23ff:fee1:37a2) has joined
+Nov 07 09:52:05 *	untoreh has quit (Read error: Connection reset by peer)
+Nov 07 09:52:45 *	untoreh (~untoreh@87.19.74.112) has joined
+Nov 07 09:57:41 *	untoreh has quit (Read error: Connection reset by peer)
+Nov 07 09:58:34 *	untoreh (~untoreh@87.19.74.112) has joined
+Nov 07 09:58:39 *	untoreh has quit (Remote host closed the connection)
+Nov 07 09:58:52 *	NerdTheThird (~NerdTheTh@unaffiliated/nerdthethird) has joined
+Nov 07 09:59:51 *	untoreh (~untoreh@87.19.74.112) has joined
+Nov 07 10:01:42 *	untoreh has quit (Read error: Connection reset by peer)
+Nov 07 10:02:40 *	untoreh (~untoreh@87.19.74.112) has joined
+Nov 07 10:05:09 *	untoreh has quit (Remote host closed the connection)
+Nov 07 10:05:42 *	devvesa has quit (Ping timeout: 252 seconds)
+Nov 07 10:05:57 *	chinarulezzz (~chinarule@gateway/tor-sasl/chinarulezzz) has joined
+Nov 07 10:06:03 *	n4dir (~n4dir@i577BC8D1.versanet.de) has joined
+Nov 07 10:06:34 *	untoreh (~untoreh@87.19.74.112) has joined
+Nov 07 10:08:58 *	Phyrric (Phyrric@gateway/vpn/privateinternetaccess/phyrric) has joined
+Nov 07 10:09:00 *	Neel has quit (Ping timeout: 252 seconds)
+Nov 07 10:16:54 *	caioalonso (~caio@189.54.37.239) has joined
+Nov 07 10:18:05 <caioalonso>	I'm sure many people already came here and asked the same thing, but I couldn't find info anywhere: why is the forum down?
+Nov 07 10:20:33 <Phyrric>	errm, something derpd and the maintainer is mia. voidteam wants to talk to him before turning to alternatives
+Nov 07 10:21:25 <Phyrric>	in the meantime there r/voidlinux and here I guess
+Nov 07 10:21:43 *	NerdTheThird has quit (Quit: NerdTheThird)
+Nov 07 10:22:38 *	chinarulezzz has quit (Remote host closed the connection)
+Nov 07 10:23:07 *	chinarulezzz (~chinarule@gateway/tor-sasl/chinarulezzz) has joined
+Nov 07 10:25:59 <caioalonso>	Phyrric, oh god not again
+Nov 07 10:28:09 <caioalonso>	the bus factor strikes again
+Nov 07 10:29:36 *	coldpress has quit (Quit: WeeChat 2.3)
+Nov 07 10:32:29 <duncaen>	well no one of the core team wanted the forum
+Nov 07 10:34:37 *	VartiWork has quit (Quit: Page closed)
+Nov 07 10:35:41 *	akko has quit (Ping timeout: 256 seconds)
+Nov 07 10:35:57 *	cam-v (~camille@176-141-112-111.abo.bbox.fr) has joined
+Nov 07 10:36:08 <codedmart>	Does the core team manage the url? It is just the forum itself that is down?
+Nov 07 10:36:40 <Phyrric>	its a subdomain so I would assume so
+Nov 07 10:37:03 <codedmart>	Ah right I guess I could have looked at that :).
+Nov 07 10:37:34 *	akko (~gentoo@gateway/tor-sasl/akko) has joined
+Nov 07 10:37:34 <codedmart>	I would be happy to help with the forum when it is back. Maybe a few different people could have access incase one is out.
+Nov 07 10:38:06 <caioalonso>	and a backup routine
+Nov 07 10:40:43 <codedmart>	Yes
+Nov 07 10:43:50 *	Disconnected ()
+**** ENDING LOGGING AT Wed Nov  7 10:43:50 2018
 
-Jun 14 20:22:21 *	Now talking on #voidlinux
-Jun 14 20:22:21 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
-Jun 14 20:22:21 *	Topic for #voidlinux set by xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (Mon Apr 18 10:21:32 2016)
-Jun 14 20:25:08 *	kageru has quit (Ping timeout: 276 seconds)
-Jun 14 20:29:38 *	shardz has quit ()
-Jun 14 20:30:04 FiSHLiM plugin unloaded
-**** ENDING LOGGING AT Thu Jun 14 20:30:04 2018
+**** BEGIN LOGGING AT Fri Nov  9 18:12:48 2018
 
-**** BEGIN LOGGING AT Fri Jun 15 12:47:33 2018
+Nov 09 18:12:48 *	Now talking on #voidlinux
+Nov 09 18:12:48 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+Nov 09 18:12:48 *	Topic for #voidlinux set by maldridge (Sat Sep  1 03:35:41 2018)
+Nov 09 18:13:34 *	natemon has quit (Read error: Connection reset by peer)
+Nov 09 18:15:36 *	porky11 has quit (Quit: Leaving)
+Nov 09 18:16:25 <aedinius>	no they just only support forking which runit doesn't support for services
+Nov 09 18:16:28 <aedinius>	oh he's gone
+Nov 09 18:20:06 *	vervein (~vervein@5-49-241-78.hfc.dyn.abo.bbox.fr) has joined
+Nov 09 18:21:30 <vervein>	anyone experienced graphical glitches with qt5 programs on a WM when switching windows lately?
+Nov 09 18:21:51 <vervein>	like, only partial draw
+Nov 09 18:22:53 <aedinius>	which wm? using a compositor?
+Nov 09 18:23:11 *	\0xc0ffee has quit (Quit: pass out)
+Nov 09 18:23:27 <vervein>	dwm with compton
+Nov 09 18:23:32 *	\0xc0ffee (~chuck@freebsd/user/-0xc0ffee) has joined
+Nov 09 18:25:19 <vervein>	i'm uploading a video to show whats happening
+Nov 09 18:28:29 *	Phyrric has quit (Ping timeout: 268 seconds)
+Nov 09 18:29:15 *	jack_rabbit (~jack_rabb@2601:240:8001:1a60::2) has joined
+Nov 09 18:29:29 <vervein>	https://www.youtube.com/watch?v=zJbyKZ2Ku1U
+Nov 09 18:30:00 *	Phyrric (Phyrric@gateway/vpn/privateinternetaccess/phyrric) has joined
+Nov 09 18:31:50 <aedinius>	... it doesn't load
+Nov 09 18:32:46 <vervein>	refresh? maybe it is still processing... works on my end
+Nov 09 18:33:10 <aedinius>	I just get a (!)
+Nov 09 18:33:26 *	jack_rabbit has quit (Ping timeout: 250 seconds)
+Nov 09 18:34:35 <vervein>	i messed with the private settings sorry
+Nov 09 18:34:39 *	r00tobo has quit (Ping timeout: 268 seconds)
+Nov 09 18:34:52 <vervein>	should work now?
+Nov 09 18:34:57 <aedinius>	ah, yes it does
+Nov 09 18:35:16 <aedinius>	that is odd
+Nov 09 18:37:52 <vervein>	what could it be you think? I'm not sure what kind of keywords to look for with this issue, happened to me since a couple of days
+Nov 09 18:38:00 *	kageru has quit (Ping timeout: 252 seconds)
+Nov 09 18:39:35 *	coldpress has quit (Read error: Connection reset by peer)
+Nov 09 18:42:13 *	coldpress (~coldpress@bb119-74-92-122.singnet.com.sg) has joined
+Nov 09 18:44:00 <q66>	aedinius: you could probably work around it by having the service not execute the daemon itself but rather a wrapper script monitoring the daemon
+Nov 09 18:44:22 <aedinius>	That's an option, yeah.
+Nov 09 18:44:30 <q66>	that way you could give runit what it wants and have it be semi-reliable
+Nov 09 18:45:05 <q66>	just need to do an infinite loop and check for status and raise the appropriate signals as necessary
+Nov 09 18:45:56 <Nilium>	Think I've just about settled on getting a T480 for work now
+Nov 09 18:47:04 *	BlueKiwi (~abecko@90.178.175.214) has joined
+Nov 09 18:49:00 *	silverghost (~silver@112.65.161.211) has joined
+Nov 09 18:49:20 <aedinius>	One of those would be nice
+Nov 09 18:50:48 *	Selfsigned (~notacert@unaffiliated/selfsigned) has joined
+Nov 09 18:51:18 *	EF`` has quit (Ping timeout: 268 seconds)
+Nov 09 18:53:13 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Fri Nov  9 18:53:13 2018
 
-Jun 15 12:47:33 *	Now talking on #voidlinux
-Jun 15 12:47:33 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
-Jun 15 12:47:33 *	Topic for #voidlinux set by xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (Mon Apr 18 10:21:32 2016)
-Jun 15 12:49:05 *	autrimpo has quit (Quit: WeeChat 2.1)
-Jun 15 12:50:33 *	autrimpo (~autrimpo@host-37-191-206-2.lynet.no) has joined
-Jun 15 12:50:57 <blawiz>	hmm could be
-Jun 15 12:51:07 FiSHLiM plugin unloaded
-**** ENDING LOGGING AT Fri Jun 15 12:51:07 2018
+**** BEGIN LOGGING AT Sun Nov 25 18:45:19 2018
 
-**** BEGIN LOGGING AT Fri Jun 15 12:51:32 2018
+Nov 25 18:45:19 *	Now talking on #voidlinux
+Nov 25 18:45:19 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+Nov 25 18:45:19 *	Topic for #voidlinux set by maldridge (Mon Nov 12 23:13:20 2018)
+Nov 25 18:57:38 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Sun Nov 25 18:57:38 2018
 
-Jun 15 12:51:32 *	Now talking on #voidlinux
-Jun 15 12:51:32 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
-Jun 15 12:51:32 *	Topic for #voidlinux set by xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (Mon Apr 18 10:21:32 2016)
-Jun 15 12:51:53 FiSHLiM plugin unloaded
-**** ENDING LOGGING AT Fri Jun 15 12:51:53 2018
+**** BEGIN LOGGING AT Mon Nov 26 21:05:16 2018
 
-**** BEGIN LOGGING AT Fri Jun 15 13:43:59 2018
+Nov 26 21:05:16 *	Now talking on #voidlinux
+Nov 26 21:05:16 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+Nov 26 21:05:16 *	Topic for #voidlinux set by maldridge (Mon Nov 12 23:13:20 2018)
+Nov 26 21:06:38 *	porky11 has quit (Quit: Leaving)
+Nov 26 21:07:39 *	oro- (~oro@79-76-79-125.dynamic.dsl.as9105.com) has joined
+Nov 26 21:08:26 *	oro has quit (Ping timeout: 250 seconds)
+Nov 26 21:08:27 *	oro- is now known as oro
+Nov 26 21:08:49 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Mon Nov 26 21:08:49 2018
 
-Jun 15 13:43:59 *	Now talking on #voidlinux
-Jun 15 13:43:59 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.eu || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.eu/usage/xbps/ && http://www.voidlinux.eu/usage/runit || DONATE TO KEEP THIS GOING! BLINK BLINK
-Jun 15 13:43:59 *	Topic for #voidlinux set by xtraeme!~xtraeme@207.red-81-32-236.dynamicip.rima-tde.net (Mon Apr 18 10:21:32 2016)
-Jun 15 13:44:50 *	zimmer__Elite (~zimmer@94.197.120.216.threembb.co.uk) has joined
-Jun 15 13:47:11 *	zimmer_elite has quit (Ping timeout: 256 seconds)
-Jun 15 13:57:49 *	Shinryuu (~gdsptuwtd@mobile-access-bcee29-217.dhcp.inet.fi) has joined
-Jun 15 14:01:04 *	ToffeeYogurtPots (~ToffeeYog@gateway/tor-sasl/toffeeyogurtpots) has joined
-Jun 15 14:10:54 *	wink (fhtagn@porkchop.art-core.org) has joined
-Jun 15 14:16:23 *	gspe (~gspe@dynamic-adsl-94-34-150-220.clienti.tiscali.it) has joined
-Jun 15 14:27:07 FiSHLiM plugin unloaded
-**** ENDING LOGGING AT Fri Jun 15 14:27:07 2018
+**** BEGIN LOGGING AT Tue Nov 27 17:37:06 2018
+
+Nov 27 17:37:06 *	Now talking on #voidlinux
+Nov 27 17:37:06 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+Nov 27 17:37:06 *	Topic for #voidlinux set by maldridge (Mon Nov 12 23:13:20 2018)
+Nov 27 17:42:32 *	kyby64 (~kyby64@188.75.108.45) has joined
+Nov 27 17:44:29 *	_0bitcount has quit (Quit: Leaving)
+**** ENDING LOGGING AT Tue Nov 27 17:44:30 2018
+
+**** BEGIN LOGGING AT Tue Nov 27 18:01:59 2018
+
+Nov 27 18:01:59 *	Now talking on #voidlinux
+Nov 27 18:01:59 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+Nov 27 18:01:59 *	Topic for #voidlinux set by maldridge (Mon Nov 12 23:13:20 2018)
+Nov 27 18:02:13 <yshui>	aedinius, other distros certainly are
+Nov 27 18:03:41 <duncaen>	oh crypt thing
+Nov 27 18:04:21 <pardis>	atweiden-air: Do you have musl-devel installed? I wouldn't expect a live CD to come with it
+Nov 27 18:04:25 <duncaen>	its defined in unist.h
+Nov 27 18:04:30 <voidfan>	So LGPL doesn't require vlicense?
+Nov 27 18:04:35 <pardis>	You need -devel packages installed if you want to do development with a library
+Nov 27 18:05:02 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Tue Nov 27 18:05:02 2018
+
+**** BEGIN LOGGING AT Tue Nov 27 18:32:19 2018
+
+Nov 27 18:32:19 *	Now talking on #voidlinux
+Nov 27 18:32:19 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+Nov 27 18:32:19 *	Topic for #voidlinux set by maldridge (Mon Nov 12 23:13:20 2018)
+Nov 27 18:33:03 <jellyb>	anybody get alacritty working?
+Nov 27 18:33:08 <kempe>	jnbr: Yes, that seems to be the same issue
+Nov 27 18:33:42 <kempe>	I'll see about adding the details from my investigation to the issue
+Nov 27 18:33:57 *	ovrstorm (~ovrstorm@air.raid.io) has left ("WeeChat 2.3")
+Nov 27 18:34:50 *	userbr has quit (Quit: Leaving)
+Nov 27 18:35:05 <jnbr>	jellyb: yes
+Nov 27 18:35:21 <jellyb>	im getting a glx error
+Nov 27 18:39:02 <jnbr>	and you installed alacritty via xbps and your system is uptodate?
+Nov 27 18:39:29 *	exoire (~exoire@pool-100-6-83-90.pitbpa.fios.verizon.net) has joined
+Nov 27 18:43:39 <yshui>	I really wish the maintainers can say a little bit more than a "No" to my question
+Nov 27 18:43:56 <yshui>	but I understand, they probably get the same stupid question again and again all the time
+Nov 27 18:44:48 <jellyb>	yes to both
+Nov 27 18:46:00 <jnbr>	jellyb: which architecture and libc are you using?
+Nov 27 18:47:26 <jellyb>	x86_64, glibc
+Nov 27 18:47:41 *	Disconnected ()
+**** ENDING LOGGING AT Tue Nov 27 18:47:41 2018
+
+**** BEGIN LOGGING AT Tue Nov 27 20:19:01 2018
+
+Nov 27 20:19:01 *	Now talking on #voidlinux
+Nov 27 20:19:01 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+Nov 27 20:19:01 *	Topic for #voidlinux set by maldridge (Mon Nov 12 23:13:20 2018)
+Nov 27 20:19:13 <aedinius>	ciabbata_0: is that a problem
+Nov 27 20:19:45 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Tue Nov 27 20:19:45 2018
+
+**** BEGIN LOGGING AT Thu Dec  6 18:48:22 2018
+
+Dec 06 18:48:22 *	Now talking on #voidlinux
+Dec 06 18:48:22 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+Dec 06 18:48:22 *	Topic for #voidlinux set by maldridge (Mon Nov 12 23:13:20 2018)
+Dec 06 19:00:37 *	zachary12 (~zachary12@162.212.158.198) has joined
+Dec 06 19:02:13 *	anthepro has quit (Remote host closed the connection)
+Dec 06 19:09:45 *	malice (~malice@sheoth.eu) has joined
+Dec 06 19:09:45 *	vigia122 has quit (Read error: Connection reset by peer)
+Dec 06 19:11:01 <malice>	Finally unbanned from frenode, yay
+Dec 06 19:11:20 *	vitorhugomattos (~vitorhugo@189-104-176-111.user3g.veloxzone.com.br) has joined
+Dec 06 19:11:45 *	geekboy_01 has quit (Read error: Connection reset by peer)
+Dec 06 19:12:09 <saptech>	to install gtk3 and its development files, what is the install names?
+Dec 06 19:12:23 <saptech>	are*
+Dec 06 19:12:40 *	vitorhugomattos has quit (Read error: Connection reset by peer)
+Dec 06 19:13:21 *	vitorhugomattos (~vitorhugo@189-104-163-108.user3g.veloxzone.com.br) has joined
+Dec 06 19:13:48 *	stateless has quit (Ping timeout: 252 seconds)
+Dec 06 19:14:35 <Veyrdite>	gtk+3
+Dec 06 19:14:39 <Veyrdite>	Just to be confusing :)
+Dec 06 19:15:03 <Veyrdite>	(and gtk+3-devel)
+Dec 06 19:15:09 *	stateless (~sin@2001:8b0:ba6d:cdff:9076:59c5:eafb:5196) has joined
+Dec 06 19:17:43 <saptech>	Veyrdite, thanks
+Dec 06 19:18:03 <saptech>	wow, gtk+3-devel wants 67 files
+Dec 06 19:18:59 <jstnn>	Jesus. I guess that's not that surprising though.
+Dec 06 19:19:41 <saptech>	139mb of disk space...heh
+Dec 06 19:22:35 *	d_xor has quit (Remote host closed the connection)
+Dec 06 19:38:15 *	NerdTheThird has quit (Quit: sham1 sham1 ya, sham1 sham1 yam)
+Dec 06 19:41:39 <jstnn>	is there anything weird I need to do to get audio over HDMI working properly? The screen is hooked up and working, speaker-test plays it's pink noise over HDMI correctly, but audio from cmus or mpv or wherever else continues to come out of the laptop speakers
+Dec 06 19:42:26 <jstnn>	it's the last thing I need to get working before I can call this laptop "done", driving me nuts
+Dec 06 19:43:55 <jstnn>	xrandr --set audio on doesn't throw errors but doesn't make the sound go over there either
+Dec 06 19:47:17 <Veyrdite>	jstnn: Audio is handled either by alsa directly or via pulseaudio (if you have it installed)
+Dec 06 19:47:27 <Veyrdite>	For the plain alsa route: you need to tell mpv to use a different output device
+Dec 06 19:47:41 <Veyrdite>	eg on my laptop it's mpv --audio-device=alsa/hdmi
+Dec 06 19:47:52 <Veyrdite>	Alternatively you can edit .asoundrc to change the defaults for all applications
+Dec 06 19:47:57 <Veyrdite>	Overall it's not a great experience
+Dec 06 19:48:18 <Veyrdite>	Pulseaudio provide easier ways to solve this, but it adds latency and can cause other issues (in my experiences), so I personally avoid it.  Opinions vary.
+Dec 06 19:48:48 <Veyrdite>	Most user-friendly distros go the pulseaudio route and provide a GUI to redirecty audio.  Whether or not pulse does this automatically for you when you attach an HDMI cable depends on a lot of things.
+Dec 06 19:50:32 *	CcxWrk has quit (Ping timeout: 250 seconds)
+Dec 06 19:51:21 <jstnn>	I don't care if it does it automatically or not. I use this laptop on several different desks with different monitor setups so I have a handful of alias that do all the xrandr shit. I just plug it in and type 'tv' or 'office' or 'bedroom' or whatever and it goes. Ideally I'd just like to be able to add another command to a couple of those that says "hey send all the audio over there"
+Dec 06 19:51:35 <jstnn>	I have pulseaudio installed, I just followed the post-installation stuff on the wiki
+Dec 06 19:52:28 <jstnn>	pulseaudio, alsa-utils are installed
+Dec 06 19:57:45 <Veyrdite>	I've only ever used GUI tools for pulseaudio.  Not sure of the name, they come with DE's
+Dec 06 19:57:56 <Veyrdite>	Try the Arch Linux wiki pages on pulseaudio
+Dec 06 19:58:45 <jstnn>	Yeah I'm looking there now, would really prefer a cli solution since I'm not using a DE in the first place.
+Dec 06 19:59:15 <Veyrdite>	If you jettison pulseaudio: changing the default output device in .asoundrc (when you run your 'tv', 'office', etc commands) is the other option.
+Dec 06 19:59:17 <dTal>	pulseaudio is not CLI friendly
+Dec 06 20:01:19 <dTal>	it's from the modern school of development where command line programs are expected to mostly be called by other programs, and helpful messages and comfortable interfaces are optional
+Dec 06 20:01:38 <dTal>	exhibit a, try calling pactl with no arguments
+Dec 06 20:02:45 <dTal>	does it do something useful, like display status, version, a list of valid commands, or any other helpful hint? Hell no! just "No valid command specified"
+Dec 06 20:08:01 <jstnn>	fun
+Dec 06 20:08:36 <blackbeard420>	pulsemixer is a nice cli
+Dec 06 20:08:56 <jstnn>	Yeah the Archwiki had some promising stuff (I did identify the device and can play arbitrary sounds through it with aplay) but no dice other than that.
+Dec 06 20:10:06 *	Zucca has quit (Ping timeout: 246 seconds)
+Dec 06 20:10:56 <maxice8[m]>	dTal: the pactl exit sounds fair
+Dec 06 20:11:46 <Veyrdite>	dTal: Many cli tools are like that.  gcc, for instance.  Then there are the tools that do "bad things" to new players if they run them without args: cat, vim
+Dec 06 20:11:59 <Veyrdite>	As much as I dislike pulse, I don't think they're any different on that point
+Dec 06 20:12:38 *	golb_ has quit (Quit: Leaving)
+Dec 06 20:13:04 *	golb (~golb@36.84.225.144) has joined
+Dec 06 20:14:26 *	Disconnected ()
+**** ENDING LOGGING AT Thu Dec  6 20:14:26 2018
+
+**** BEGIN LOGGING AT Tue Dec 11 07:41:16 2018
+
+Dec 11 07:41:16 *	Now talking on #voidlinux
+Dec 11 07:41:16 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+Dec 11 07:41:16 *	Topic for #voidlinux set by maldridge (Mon Nov 12 23:13:20 2018)
+Dec 11 07:41:57 *	makaveli7 has quit (Remote host closed the connection)
+Dec 11 07:42:01 *	Nightah has quit (Quit: ZNC - https://znc.in)
+Dec 11 07:42:47 *	Nightah (~Nightah@unaffiliated/nightah) has joined
+Dec 11 07:47:58 *	INeedTechSupport has quit (Quit: Lost terminal)
+Dec 11 07:49:24 *	Neel (~OtakuSenp@unaffiliated/neel) has joined
+Dec 11 07:51:00 *	sidro (~sidro@82.137.13.15) has joined
+Dec 11 07:51:54 *	Nawab has quit (Ping timeout: 250 seconds)
+Dec 11 07:55:00 *	sidro has quit (Read error: Connection reset by peer)
+Dec 11 07:56:18 *	bodhis has quit (Ping timeout: 245 seconds)
+Dec 11 07:58:29 *	Neel has quit (Remote host closed the connection)
+Dec 11 07:58:48 *	Neel (~OtakuSenp@unaffiliated/neel) has joined
+Dec 11 08:08:01 <unmy>	anyone using: export CHROME_FLAGS="blablabla" to set up some stuff? because chromium ignoring that and Im not sure when it started doing it
+Dec 11 08:08:22 *	D630 has quit (Quit: quit)
+Dec 11 08:09:01 <unmy>	I think after some video acceleration patch in Void
+Dec 11 08:09:28 *	Acacia (~Acacia@unaffiliated/acacia) has joined
+Dec 11 08:13:18 <maxice8[m]>	yes
+Dec 11 08:13:24 <maxice8[m]>	see the /usr/bin/chromium wrapper
+Dec 11 08:13:32 <maxice8[m]>	guess we have to take into account user flags
+Dec 11 08:19:07 <adema>	also, i haven't had time to understand why, but since a few weeks, if i do not remove the ~/.local/chromium, it won't start
+Dec 11 08:19:32 <adema>	Well, process will actually start, but do nothing and hang in the background
+Dec 11 08:21:14 <unmy>	gpu rasterization without other tweaks was abble to hang my gpu
+Dec 11 08:22:12 *	Neel is now known as dx_ob
+Dec 11 08:32:32 <unmy>	maxice8[m], thanks I added to /usr/bin/chromium CHROME_FLAGS="$CHROME_FLAGS --enable-gpu-rasterization" and working fine now
+Dec 11 08:35:39 <maxice8[m]>	unmy:  should be after so the user can override it, a small oversight
+Dec 11 08:35:57 <maxice8[m]>	sadly bumping chromium is super costly
+Dec 11 08:38:36 <unmy>	ah ye true but still it can be overwriten if set this up by chrome://flags
+Dec 11 08:40:24 <unmy>	bumping to change simple shell file in package and block builders for half day :D
+Dec 11 08:42:19 *	bunn (~bun@95.179.149.154) has joined
+Dec 11 08:42:41 *	yo9fah has quit (Read error: Connection reset by peer)
+Dec 11 08:42:56 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Tue Dec 11 08:42:56 2018
+
+**** BEGIN LOGGING AT Wed Mar 13 15:49:08 2019
+
+Mar 13 15:49:08 *	Now talking on #voidlinux
+Mar 13 15:49:08 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+Mar 13 15:49:08 *	Topic for #voidlinux set by maldridge (Mon Nov 12 23:13:20 2018)
+Mar 13 15:50:07 *	akko (~gentoo@gateway/tor-sasl/akko) has joined
+Mar 13 15:53:48 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Wed Mar 13 15:53:48 2019
+
+**** BEGIN LOGGING AT Tue Mar 19 16:47:28 2019
+
+Mar 19 16:47:28 *	Now talking on #voidlinux
+Mar 19 16:47:28 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+Mar 19 16:47:28 *	Topic for #voidlinux set by maldridge (Mon Nov 12 23:13:20 2018)
+Mar 19 16:48:33 *	bi11y_ (~bi11y@128.107.241.162) has joined
+Mar 19 16:49:26 *	acreter (~peter@p200300D773CED1043C9DC5183CD048D9.dip0.t-ipconnect.de) has joined
+Mar 19 16:51:30 *	bi11y has quit (Ping timeout: 264 seconds)
+Mar 19 16:53:00 *	mobinmob (~mobinmob@2a02:587:7506:fa00:efc5:7156:e12c:1bc2) has joined
+Mar 19 16:57:20 *	autrimpo has quit (Quit: WeeChat 2.4)
+Mar 19 16:57:32 *	autrimpo (~autrimpo@2001:67c:1220:c1d0:f630:b9ff:fe9f:5170) has joined
+Mar 19 16:57:37 *	gdh has quit (Quit: Leaving)
+Mar 19 16:57:59 *	flotsam has quit (Quit: Leaving)
+Mar 19 17:04:11 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Tue Mar 19 17:04:11 2019
+
+**** BEGIN LOGGING AT Tue Mar 19 17:19:52 2019
+
+Mar 19 17:19:52 *	Now talking on #voidlinux
+Mar 19 17:19:52 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+Mar 19 17:19:52 *	Topic for #voidlinux set by maldridge (Mon Nov 12 23:13:20 2018)
+Mar 19 17:24:33 *	tune has quit (Ping timeout: 246 seconds)
+Mar 19 17:25:30 *	tune (~bard@63.228.59.248) has joined
+Mar 19 17:27:28 *	Acacia has quit (Remote host closed the connection)
+Mar 19 17:27:38 *	kageru has quit (Ping timeout: 252 seconds)
+Mar 19 17:30:58 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Tue Mar 19 17:30:58 2019
+
+**** BEGIN LOGGING AT Thu May 16 21:44:29 2019
+
+May 16 21:44:29 *	Now talking on #voidlinux
+May 16 21:44:29 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+May 16 21:44:29 *	Topic for #voidlinux set by maldridge (Mon Nov 12 23:13:20 2018)
+May 16 21:45:34 <nicolaus>	true
+May 16 21:45:38 <nicolaus>	the step number is hardcoded haha
+May 16 21:45:43 <nicolaus>	very dumb thing
+May 16 21:45:54 <nicolaus>	i'll try to see what I can do
+May 16 21:46:35 *	gyre (~gyre@c-67-161-8-248.hsd1.ca.comcast.net) has joined
+May 16 21:48:33 *	alexey-nemovff (~alexey-ne@2806:102e:12:72cb:b91e:3226:c17e:9420) has joined
+May 16 21:49:35 *	FreeFull has quit ()
+May 16 21:51:43 *	johnnyhostile has quit (Ping timeout: 245 seconds)
+May 16 21:52:02 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Thu May 16 21:52:02 2019
+
+**** BEGIN LOGGING AT Mon Nov  4 08:52:36 2019
+
+Nov 04 08:52:36 *	Now talking on #voidlinux
+Nov 04 08:52:36 *	Topic for #voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
+Nov 04 08:52:36 *	Topic for #voidlinux set by maldridge (Mon Nov 12 23:13:20 2018)
+Nov 04 08:56:18 *	aedinius[w] has quit (Remote host closed the connection)
+Nov 04 08:56:44 <TheAnachron>	every xth update my microsd cards wont show up :(
+Nov 04 08:57:09 *	aedinius[w] (ae2e03ae@unaffiliated/aedinius) has joined
+Nov 04 08:58:27 *	bilebucket has quit (Quit: WeeChat 2.6)
+Nov 04 09:03:22 *	TheAnachron has quit (Remote host closed the connection)
+Nov 04 09:03:48 *	TheAnachron (~TheAnachr@p200300CD072B0046ADB19FC7F4E6A6DD.dip0.t-ipconnect.de) has joined
+Nov 04 09:04:57 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Mon Nov  4 09:04:57 2019
 

@@ -1,4 +1,4 @@
-#Guvcview 2.0.5 config file
+#Guvcview 2.0.7 config file
 
 #video input width
 width=640
@@ -29,9 +29,9 @@ video_path=/home/doug
 #video sufix flag
 video_sufix=1
 #photo name
-photo_name=my_photo.jpg
+photo_name=my_photo7.png
 #photo path
-photo_path=/home/doug
+photo_path=/home/doug/temp
 #photo sufix flag
 photo_sufix=1
 #fps numerator (def. 1)

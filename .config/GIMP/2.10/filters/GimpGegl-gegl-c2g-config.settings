@@ -1,0 +1,10 @@
+# settings
+
+(GimpGegl-gegl-c2g-config "2019-09-14 16:43:17"
+    (time 1568493797)
+    (radius 300)
+    (samples 4)
+    (iterations 10)
+    (enhance-shadows no))
+
+# end of settings

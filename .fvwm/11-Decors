@@ -1,0 +1,596 @@
+## vim: syntax=fvwm
+##
+##    ╺┳┓┏━╸┏━╸┏━┓┏━┓┏━┓
+##     ┃┃┣╸ ┃  ┃ ┃┣┳┛┗━┓
+##    ╺┻┛┗━╸┗━╸┗━┛╹┗╸┗━┛
+##
+##    24 multipixmap decors - 3 decor types defined in 8 different colors.
+##
+##       color       type
+##    ┌────────┐    ┌────┐
+##    29  28  27    26  25
+
+##  Variables to store color block icons used by ColorMenu
+InfoStoreAdd icon_decorcolor0  %$./icons/0/decorcolor.png%
+InfoStoreAdd icon_decorcolor1  %$./icons/1/decorcolor.png%
+InfoStoreAdd icon_decorcolor2  %$./icons/2/decorcolor.png%
+InfoStoreAdd icon_decorcolor3  %$./icons/3/decorcolor.png%
+
+##  Window Button Locations [1--Title----642]
+Mouse 1 1 A -
+Mouse 1 6 A -
+Mouse 1 4 A -
+Mouse 1 2 A CloseWindow
+
+##  Border colorsets - inactive
+Colorset 100 fg #46758C, bg #46758C, hi #46758C, sh #46758C
+Colorset 101 fg #468C46, bg #468C46, hi #468C46, sh #468C46
+Colorset 102 fg #468C8C, bg #468C8C, hi #468C8C, sh #468C8C
+Colorset 103 fg #8C468C, bg #8C468C, hi #8C468C, sh #8C468C
+
+##  Border colorsets - active
+Colorset 108 fg #538BA6, bg #538BA6, hi #538BA6, sh #538BA6
+Colorset 109 fg #53A653, bg #53A653, hi #53A653, sh #53A653
+Colorset 110 fg #53A6A6, bg #53A6A6, hi #53A6A6, sh #53A6A6
+Colorset 111 fg #A653A6, bg #A653A6, hi #A653A6, sh #A653A6
+
+##  Title colorset - minimal decors
+Colorset 112 fg #000000
+
+##  Title colorset - plain decors - inactive
+Colorset 113 fg #CCCCCC, bg #46758C
+Colorset 114 fg #CCCCCC, bg #468C46
+Colorset 115 fg #CCCCCC, bg #468C8C
+Colorset 116 fg #CCCCCC, bg #8C468C
+
+##  Title colorset - plain decors - active
+Colorset 121 fg #CCCCCC, bg #538BA6
+Colorset 122 fg #CCCCCC, bg #53A653
+Colorset 123 fg #CCCCCC, bg #53A6A6
+Colorset 124 fg #CCCCCC, bg #A653A6
+
+##  Plain/0 : Blue : inactive
+DestroyDecor Decor0i
+AddToDecor   Decor0i
++ TitleStyle Centered Height 0 -- Flat
++ ButtonStyle All -- UseTitleStyle Flat
++ AddButtonStyle 1 MiniIcon
++ BorderStyle Simple -- Flat
+
+##  Plain/0 : Blue : active
+DestroyDecor Decor0a
+AddToDecor   Decor0a
++ TitleStyle Centered Height 0 -- Flat
++ ButtonStyle All -- UseTitleStyle Flat
++ AddButtonStyle 1 MiniIcon
++ BorderStyle Simple -- Flat
+
+##  Minimal.1/terminus16 : Blue : inactive
+DestroyDecor Decor2i
+AddToDecor   Decor2i
++ BorderStyle Simple -- HiddenHandles NoInset Flat
++ TitleStyle RightJustified Height 0
++ TitleStyle MultiPixmap \
+    LeftMain   TiledPixmap    $./icons/0/decor2i_leftmain.png, \
+    LeftOfText AdjustedPixmap $./icons/0/decor2i_leftoftext.png, \
+    UnderText  AdjustedPixmap $./icons/0/decor2i_undertext.png, \
+    RightMain  TiledPixmap    $./icons/0/decor2i_rightmain.png, \
+    RightEnd   AdjustedPixmap $./icons/0/decor2i_rightend.png
++ AddTitleStyle -- Flat
++ ButtonStyle 2 (Pixmap  $./icons/0/decor2i_button_close.png)
++ AddButtonStyle All -- UseTitleStyle Flat
+
+##  Minimal.1/terminus16 : Blue : active
+DestroyDecor Decor2a
+AddToDecor   Decor2a
++ BorderStyle Simple -- HiddenHandles NoInset Flat
++ TitleStyle RightJustified Height 0
++ TitleStyle MultiPixmap \
+    LeftMain   TiledPixmap    $./icons/0/decor2a_leftmain.png, \
+    LeftOfText AdjustedPixmap $./icons/0/decor2a_leftoftext.png, \
+    UnderText  AdjustedPixmap $./icons/0/decor2a_undertext.png, \
+    RightMain  TiledPixmap    $./icons/0/decor2a_rightmain.png, \
+    RightEnd   AdjustedPixmap $./icons/0/decor2a_rightend.png
++ AddTitleStyle -- Flat
++ ButtonStyle 2 (Pixmap  $./icons/0/decor2a_button_close.png)
++ AddButtonStyle All -- UseTitleStyle Flat
+
+##  Minimal.2/tamsyn20 : Blue : inactive
+DestroyDecor Decor3i
+AddToDecor   Decor3i
++ BorderStyle Simple -- HiddenHandles NoInset Flat
++ TitleStyle RightJustified Height 22
++ TitleStyle MultiPixmap \
+    LeftMain   TiledPixmap    $./icons/0/decor3i_leftmain.png, \
+    LeftOfText AdjustedPixmap $./icons/0/decor3i_leftoftext.png, \
+    UnderText  AdjustedPixmap $./icons/0/decor3i_undertext.png, \
+    RightMain  TiledPixmap    $./icons/0/decor3i_rightmain.png, \
+    RightEnd   AdjustedPixmap $./icons/0/decor3i_rightend.png
++ AddTitleStyle -- Flat
++ ButtonStyle 2 (Pixmap  $./icons/0/decor3i_button_close.png)
++ AddButtonStyle All -- UseTitleStyle Flat
+
+##  Minimal.2/tamsyn20 : Blue : active
+DestroyDecor Decor3a
+AddToDecor   Decor3a
++ BorderStyle Simple -- HiddenHandles NoInset Flat
++ TitleStyle RightJustified Height 22
++ TitleStyle MultiPixmap \
+    LeftMain   TiledPixmap    $./icons/0/decor3a_leftmain.png, \
+    LeftOfText AdjustedPixmap $./icons/0/decor3a_leftoftext.png, \
+    UnderText  AdjustedPixmap $./icons/0/decor3a_undertext.png, \
+    RightMain  TiledPixmap    $./icons/0/decor3a_rightmain.png, \
+    RightEnd   AdjustedPixmap $./icons/0/decor3a_rightend.png
++ AddTitleStyle -- Flat
++ ButtonStyle 2 (Pixmap  $./icons/0/decor3a_button_close.png)
++ AddButtonStyle All -- UseTitleStyle Flat
+
+##  Plain/0 : Green : inactive
+DestroyDecor Decor4i
+AddToDecor   Decor4i
++ TitleStyle Centered Height 0 -- Flat
++ ButtonStyle All -- UseTitleStyle Flat
++ AddButtonStyle 1 MiniIcon
++ BorderStyle Simple -- Flat
+
+##  Plain/0 : Green : active
+DestroyDecor Decor4a
+AddToDecor   Decor4a
++ TitleStyle Centered Height 0 -- Flat
++ ButtonStyle All -- UseTitleStyle Flat
++ AddButtonStyle 1 MiniIcon
++ BorderStyle Simple -- Flat
+
+##  Minimal.1/terminus16 : Green : inactive
+DestroyDecor Decor6i
+AddToDecor   Decor6i
++ BorderStyle Simple -- HiddenHandles NoInset Flat
++ TitleStyle RightJustified Height 0
++ TitleStyle MultiPixmap \
+    LeftMain   TiledPixmap    $./icons/1/decor2i_leftmain.png, \
+    LeftOfText AdjustedPixmap $./icons/1/decor2i_leftoftext.png, \
+    UnderText  AdjustedPixmap $./icons/1/decor2i_undertext.png, \
+    RightMain  TiledPixmap    $./icons/1/decor2i_rightmain.png, \
+    RightEnd   AdjustedPixmap $./icons/1/decor2i_rightend.png
++ AddTitleStyle -- Flat
++ ButtonStyle 2 (Pixmap  $./icons/1/decor2i_button_close.png)
++ AddButtonStyle All -- UseTitleStyle Flat
+
+##  Minimal.1/terminus16 : Green : active
+DestroyDecor Decor6a
+AddToDecor   Decor6a
++ BorderStyle Simple -- HiddenHandles NoInset Flat
++ TitleStyle RightJustified Height 0
++ TitleStyle MultiPixmap \
+    LeftMain   TiledPixmap    $./icons/1/decor2a_leftmain.png, \
+    LeftOfText AdjustedPixmap $./icons/1/decor2a_leftoftext.png, \
+    UnderText  AdjustedPixmap $./icons/1/decor2a_undertext.png, \
+    RightMain  TiledPixmap    $./icons/1/decor2a_rightmain.png, \
+    RightEnd   AdjustedPixmap $./icons/1/decor2a_rightend.png
++ AddTitleStyle -- Flat
++ ButtonStyle 2 (Pixmap  $./icons/1/decor2a_button_close.png)
++ AddButtonStyle All -- UseTitleStyle Flat
+
+##  Minimal.2/tamsyn20 : Green : inactive
+DestroyDecor Decor7i
+AddToDecor   Decor7i
++ BorderStyle Simple -- HiddenHandles NoInset Flat
++ TitleStyle RightJustified Height 22
++ TitleStyle MultiPixmap \
+    LeftMain   TiledPixmap    $./icons/1/decor3i_leftmain.png, \
+    LeftOfText AdjustedPixmap $./icons/1/decor3i_leftoftext.png, \
+    UnderText  AdjustedPixmap $./icons/1/decor3i_undertext.png, \
+    RightMain  TiledPixmap    $./icons/1/decor3i_rightmain.png, \
+    RightEnd   AdjustedPixmap $./icons/1/decor3i_rightend.png
++ AddTitleStyle -- Flat
++ ButtonStyle 2 (Pixmap  $./icons/1/decor3i_button_close.png)
++ AddButtonStyle All -- UseTitleStyle Flat
+
+##  Minimal.2/tamsyn20 : Green : active
+DestroyDecor Decor7a
+AddToDecor   Decor7a
++ BorderStyle Simple -- HiddenHandles NoInset Flat
++ TitleStyle RightJustified Height 22
++ TitleStyle MultiPixmap \
+    LeftMain   TiledPixmap    $./icons/1/decor3a_leftmain.png, \
+    LeftOfText AdjustedPixmap $./icons/1/decor3a_leftoftext.png, \
+    UnderText  AdjustedPixmap $./icons/1/decor3a_undertext.png, \
+    RightMain  TiledPixmap    $./icons/1/decor3a_rightmain.png, \
+    RightEnd   AdjustedPixmap $./icons/1/decor3a_rightend.png
++ AddTitleStyle -- Flat
++ ButtonStyle 2 (Pixmap  $./icons/1/decor3a_button_close.png)
++ AddButtonStyle All -- UseTitleStyle Flat
+
+##  Plain/0 : Teal : inactive
+DestroyDecor Decor8i
+AddToDecor   Decor8i
++ TitleStyle Centered Height 0 -- Flat
++ ButtonStyle All -- UseTitleStyle Flat
++ AddButtonStyle 1 MiniIcon
++ BorderStyle Simple -- Flat
+
+##  Plain/0 : Teal : active
+DestroyDecor Decor8a
+AddToDecor   Decor8a
++ TitleStyle Centered Height 0 -- Flat
++ ButtonStyle All -- UseTitleStyle Flat
++ AddButtonStyle 1 MiniIcon
++ BorderStyle Simple -- Flat
+
+##  Minimal.1/terminus16 : Teal : inactive
+DestroyDecor Decor10i
+AddToDecor   Decor10i
++ BorderStyle Simple -- HiddenHandles NoInset Flat
++ TitleStyle RightJustified Height 0
++ TitleStyle MultiPixmap \
+    LeftMain   TiledPixmap    $./icons/2/decor2i_leftmain.png, \
+    LeftOfText AdjustedPixmap $./icons/2/decor2i_leftoftext.png, \
+    UnderText  AdjustedPixmap $./icons/2/decor2i_undertext.png, \
+    RightMain  TiledPixmap    $./icons/2/decor2i_rightmain.png, \
+    RightEnd   AdjustedPixmap $./icons/2/decor2i_rightend.png
++ AddTitleStyle -- Flat
++ ButtonStyle 2 (Pixmap  $./icons/2/decor2i_button_close.png)
++ AddButtonStyle All -- UseTitleStyle Flat
+
+##  Minimal.1/terminus16 : Teal : active
+DestroyDecor Decor10a
+AddToDecor   Decor10a
++ BorderStyle Simple -- HiddenHandles NoInset Flat
++ TitleStyle RightJustified Height 0
++ TitleStyle MultiPixmap \
+    LeftMain   TiledPixmap    $./icons/2/decor2a_leftmain.png, \
+    LeftOfText AdjustedPixmap $./icons/2/decor2a_leftoftext.png, \
+    UnderText  AdjustedPixmap $./icons/2/decor2a_undertext.png, \
+    RightMain  TiledPixmap    $./icons/2/decor2a_rightmain.png, \
+    RightEnd   AdjustedPixmap $./icons/2/decor2a_rightend.png
++ AddTitleStyle -- Flat
++ ButtonStyle 2 (Pixmap  $./icons/2/decor2a_button_close.png)
++ AddButtonStyle All -- UseTitleStyle Flat
+
+##  Minimal.2/tamsyn20 : Teal : inactive
+DestroyDecor Decor11i
+AddToDecor   Decor11i
++ BorderStyle Simple -- HiddenHandles NoInset Flat
++ TitleStyle RightJustified Height 22
++ TitleStyle MultiPixmap \
+    LeftMain   TiledPixmap    $./icons/2/decor3i_leftmain.png, \
+    LeftOfText AdjustedPixmap $./icons/2/decor3i_leftoftext.png, \
+    UnderText  AdjustedPixmap $./icons/2/decor3i_undertext.png, \
+    RightMain  TiledPixmap    $./icons/2/decor3i_rightmain.png, \
+    RightEnd   AdjustedPixmap $./icons/2/decor3i_rightend.png
++ AddTitleStyle -- Flat
++ ButtonStyle 2 (Pixmap  $./icons/2/decor3i_button_close.png)
++ AddButtonStyle All -- UseTitleStyle Flat
+
+##  Minimal.2/tamsyn20 : Teal : active
+DestroyDecor Decor11a
+AddToDecor   Decor11a
++ BorderStyle Simple -- HiddenHandles NoInset Flat
++ TitleStyle RightJustified Height 22
++ TitleStyle MultiPixmap \
+    LeftMain   TiledPixmap    $./icons/2/decor3a_leftmain.png, \
+    LeftOfText AdjustedPixmap $./icons/2/decor3a_leftoftext.png, \
+    UnderText  AdjustedPixmap $./icons/2/decor3a_undertext.png, \
+    RightMain  TiledPixmap    $./icons/2/decor3a_rightmain.png, \
+    RightEnd   AdjustedPixmap $./icons/2/decor3a_rightend.png
++ AddTitleStyle -- Flat
++ ButtonStyle 2 (Pixmap  $./icons/2/decor3a_button_close.png)
++ AddButtonStyle All -- UseTitleStyle Flat
+
+##  Plain/0 : Purple : inactive
+DestroyDecor Decor12i
+AddToDecor   Decor12i
++ TitleStyle Centered Height 0 -- Flat
++ ButtonStyle All -- UseTitleStyle Flat
++ AddButtonStyle 1 MiniIcon
++ BorderStyle Simple -- Flat
+
+##  Plain/0 : Purple : active
+DestroyDecor Decor12a
+AddToDecor   Decor12a
++ TitleStyle Centered Height 0 -- Flat
++ ButtonStyle All -- UseTitleStyle Flat
++ AddButtonStyle 1 MiniIcon
++ BorderStyle Simple -- Flat
+
+##  Minimal.1/terminus16 : Purple : inactive
+DestroyDecor Decor14i
+AddToDecor   Decor14i
++ BorderStyle Simple -- HiddenHandles NoInset Flat
++ TitleStyle RightJustified Height 0
++ TitleStyle MultiPixmap \
+    LeftMain   TiledPixmap    $./icons/3/decor2i_leftmain.png, \
+    LeftOfText AdjustedPixmap $./icons/3/decor2i_leftoftext.png, \
+    UnderText  AdjustedPixmap $./icons/3/decor2i_undertext.png, \
+    RightMain  TiledPixmap    $./icons/3/decor2i_rightmain.png, \
+    RightEnd   AdjustedPixmap $./icons/3/decor2i_rightend.png
++ AddTitleStyle -- Flat
++ ButtonStyle 2 (Pixmap  $./icons/3/decor2i_button_close.png)
++ AddButtonStyle All -- UseTitleStyle Flat
+
+##  Minimal.1/terminus16 : Purple : active
+DestroyDecor Decor14a
+AddToDecor   Decor14a
++ BorderStyle Simple -- HiddenHandles NoInset Flat
++ TitleStyle RightJustified Height 0
++ TitleStyle MultiPixmap \
+    LeftMain   TiledPixmap    $./icons/3/decor2a_leftmain.png, \
+    LeftOfText AdjustedPixmap $./icons/3/decor2a_leftoftext.png, \
+    UnderText  AdjustedPixmap $./icons/3/decor2a_undertext.png, \
+    RightMain  TiledPixmap    $./icons/3/decor2a_rightmain.png, \
+    RightEnd   AdjustedPixmap $./icons/3/decor2a_rightend.png
++ AddTitleStyle -- Flat
++ ButtonStyle 2 (Pixmap  $./icons/3/decor2a_button_close.png)
++ AddButtonStyle All -- UseTitleStyle Flat
+
+##  Minimal.2/tamsyn20 : Purple : inactive
+DestroyDecor Decor15i
+AddToDecor   Decor15i
++ BorderStyle Simple -- HiddenHandles NoInset Flat
++ TitleStyle RightJustified Height 22
++ TitleStyle MultiPixmap \
+    LeftMain   TiledPixmap    $./icons/3/decor3i_leftmain.png, \
+    LeftOfText AdjustedPixmap $./icons/3/decor3i_leftoftext.png, \
+    UnderText  AdjustedPixmap $./icons/3/decor3i_undertext.png, \
+    RightMain  TiledPixmap    $./icons/3/decor3i_rightmain.png, \
+    RightEnd   AdjustedPixmap $./icons/3/decor3i_rightend.png
++ AddTitleStyle -- Flat
++ ButtonStyle 2 (Pixmap  $./icons/3/decor3i_button_close.png)
++ AddButtonStyle All -- UseTitleStyle Flat
+
+##  Minimal.2/tamsyn20 : Purple : active
+DestroyDecor Decor15a
+AddToDecor   Decor15a
++ BorderStyle Simple -- HiddenHandles NoInset Flat
++ TitleStyle RightJustified Height 22
++ TitleStyle MultiPixmap \
+    LeftMain   TiledPixmap    $./icons/3/decor3a_leftmain.png, \
+    LeftOfText AdjustedPixmap $./icons/3/decor3a_leftoftext.png, \
+    UnderText  AdjustedPixmap $./icons/3/decor3a_undertext.png, \
+    RightMain  TiledPixmap    $./icons/3/decor3a_rightmain.png, \
+    RightEnd   AdjustedPixmap $./icons/3/decor3a_rightend.png
++ AddTitleStyle -- Flat
++ ButtonStyle 2 (Pixmap  $./icons/3/decor3a_button_close.png)
++ AddButtonStyle All -- UseTitleStyle Flat
+
+##  Plain/0 : Blue : inactive
+DestroyStyle DecorStyle0i
+Style DecorStyle0i BorderColorset 100
+Style DecorStyle0i HilightBorderColorset 100
+Style DecorStyle0i Font terminus-bold-16
+Style DecorStyle0i !State 29,!State 28,!State 27,!State 26,!State 25
+Style DecorStyle0i Colorset 113
+Style DecorStyle0i HilightColorset 113
+Style DecorStyle0i !Button 2, !Button 4, !Button 6, Button 1
+
+##  Plain/0 : Blue : active
+DestroyStyle DecorStyle0a
+Style DecorStyle0a BorderColorset 108
+Style DecorStyle0a HilightBorderColorset 108
+Style DecorStyle0a Font terminus-bold-16
+Style DecorStyle0a !State 29,!State 28,!State 27,!State 26,!State 25
+Style DecorStyle0a Colorset 121
+Style DecorStyle0a HilightColorset 121
+Style DecorStyle0a !Button 2, !Button 4, !Button 6, Button 1
+
+##  Minimal.1/terminus16 : Blue : inactive
+DestroyStyle DecorStyle2i
+Style DecorStyle2i BorderColorset 100
+Style DecorStyle2i HilightBorderColorset 100
+Style DecorStyle2i Font terminus-bold-16
+Style DecorStyle2i !State 29,!State 28,!State 27,State 26,!State 25
+Style DecorStyle2i Colorset 112
+Style DecorStyle2i HilightColorset 112
+Style DecorStyle2i Button 2, !Button 4, !Button 6, !Button 1
+
+##  Minimal.1/terminus16 : Blue : active
+DestroyStyle DecorStyle2a
+Style DecorStyle2a BorderColorset 108
+Style DecorStyle2a HilightBorderColorset 108
+Style DecorStyle2a Font terminus-bold-16
+Style DecorStyle2a !State 29,!State 28,!State 27,State 26,!State 25
+Style DecorStyle2a Colorset 112
+Style DecorStyle2a HilightColorset 112
+Style DecorStyle2a Button 2, !Button 4, !Button 6, !Button 1
+
+##  Minimal.2/tamsyn20 : Blue : inactive
+DestroyStyle DecorStyle3i
+Style DecorStyle3i BorderColorset 100
+Style DecorStyle3i HilightBorderColorset 100
+Style DecorStyle3i Font -misc-tamsyn-bold-r-normal--20-145-100-100-c-100-iso8859-1
+Style DecorStyle3i !State 29,!State 28,!State 27,State 26,State 25
+Style DecorStyle3i Colorset 112
+Style DecorStyle3i HilightColorset 112
+Style DecorStyle3i Button 2, !Button 4, !Button 6, !Button 1
+
+##  Minimal.2/tamsyn20 : Blue : active
+DestroyStyle DecorStyle3a
+Style DecorStyle3a BorderColorset 108
+Style DecorStyle3a HilightBorderColorset 108
+Style DecorStyle3a Font -misc-tamsyn-bold-r-normal--20-145-100-100-c-100-iso8859-1
+Style DecorStyle3a !State 29,!State 28,!State 27,State 26,State 25
+Style DecorStyle3a Colorset 112
+Style DecorStyle3a HilightColorset 112
+Style DecorStyle3a Button 2, !Button 4, !Button 6, !Button 1
+
+##  Plain/0 : Green : inactive
+DestroyStyle DecorStyle4i
+Style DecorStyle4i BorderColorset 101
+Style DecorStyle4i HilightBorderColorset 101
+Style DecorStyle4i Font terminus-bold-16
+Style DecorStyle4i !State 29,!State 28,State 27,!State 26,!State 25
+Style DecorStyle4i Colorset 114
+Style DecorStyle4i HilightColorset 114
+Style DecorStyle4i !Button 2, !Button 4, !Button 6, Button 1
+
+##  Plain/0 : Green : active
+DestroyStyle DecorStyle4a
+Style DecorStyle4a BorderColorset 109
+Style DecorStyle4a HilightBorderColorset 109
+Style DecorStyle4a Font terminus-bold-16
+Style DecorStyle4a !State 29,!State 28,State 27,!State 26,!State 25
+Style DecorStyle4a Colorset 122
+Style DecorStyle4a HilightColorset 122
+Style DecorStyle4a !Button 2, !Button 4, !Button 6, Button 1
+
+##  Minimal.1/terminus16 : Green : inactive
+DestroyStyle DecorStyle6i
+Style DecorStyle6i BorderColorset 101
+Style DecorStyle6i HilightBorderColorset 101
+Style DecorStyle6i Font terminus-bold-16
+Style DecorStyle6i !State 29,!State 28,State 27,State 26,!State 25
+Style DecorStyle6i Colorset 112
+Style DecorStyle6i HilightColorset 112
+Style DecorStyle6i Button 2, !Button 4, !Button 6, !Button 1
+
+##  Minimal.1/terminus16 : Green : active
+DestroyStyle DecorStyle6a
+Style DecorStyle6a BorderColorset 109
+Style DecorStyle6a HilightBorderColorset 109
+Style DecorStyle6a Font terminus-bold-16
+Style DecorStyle6a !State 29,!State 28,State 27,State 26,!State 25
+Style DecorStyle6a Colorset 112
+Style DecorStyle6a HilightColorset 112
+Style DecorStyle6a Button 2, !Button 4, !Button 6, !Button 1
+
+##  Minimal.2/tamsyn20 : Green : inactive
+DestroyStyle DecorStyle7i
+Style DecorStyle7i BorderColorset 101
+Style DecorStyle7i HilightBorderColorset 101
+Style DecorStyle7i Font -misc-tamsyn-bold-r-normal--20-145-100-100-c-100-iso8859-1
+Style DecorStyle7i !State 29,!State 28,State 27,State 26,State 25
+Style DecorStyle7i Colorset 112
+Style DecorStyle7i HilightColorset 112
+Style DecorStyle7i Button 2, !Button 4, !Button 6, !Button 1
+
+##  Minimal.2/tamsyn20 : Green : active
+DestroyStyle DecorStyle7a
+Style DecorStyle7a BorderColorset 109
+Style DecorStyle7a HilightBorderColorset 109
+Style DecorStyle7a Font -misc-tamsyn-bold-r-normal--20-145-100-100-c-100-iso8859-1
+Style DecorStyle7a !State 29,!State 28,State 27,State 26,State 25
+Style DecorStyle7a Colorset 112
+Style DecorStyle7a HilightColorset 112
+Style DecorStyle7a Button 2, !Button 4, !Button 6, !Button 1
+
+##  Plain/0 : Teal : inactive
+DestroyStyle DecorStyle8i
+Style DecorStyle8i BorderColorset 102
+Style DecorStyle8i HilightBorderColorset 102
+Style DecorStyle8i Font terminus-bold-16
+Style DecorStyle8i !State 29,State 28,!State 27,!State 26,!State 25
+Style DecorStyle8i Colorset 115
+Style DecorStyle8i HilightColorset 115
+Style DecorStyle8i !Button 2, !Button 4, !Button 6, Button 1
+
+##  Plain/0 : Teal : active
+DestroyStyle DecorStyle8a
+Style DecorStyle8a BorderColorset 110
+Style DecorStyle8a HilightBorderColorset 110
+Style DecorStyle8a Font terminus-bold-16
+Style DecorStyle8a !State 29,State 28,!State 27,!State 26,!State 25
+Style DecorStyle8a Colorset 123
+Style DecorStyle8a HilightColorset 123
+Style DecorStyle8a !Button 2, !Button 4, !Button 6, Button 1
+
+##  Minimal.1/terminus16 : Teal : inactive
+DestroyStyle DecorStyle10i
+Style DecorStyle10i BorderColorset 102
+Style DecorStyle10i HilightBorderColorset 102
+Style DecorStyle10i Font terminus-bold-16
+Style DecorStyle10i !State 29,State 28,!State 27,State 26,!State 25
+Style DecorStyle10i Colorset 112
+Style DecorStyle10i HilightColorset 112
+Style DecorStyle10i Button 2, !Button 4, !Button 6, !Button 1
+
+##  Minimal.1/terminus16 : Teal : active
+DestroyStyle DecorStyle10a
+Style DecorStyle10a BorderColorset 110
+Style DecorStyle10a HilightBorderColorset 110
+Style DecorStyle10a Font terminus-bold-16
+Style DecorStyle10a !State 29,State 28,!State 27,State 26,!State 25
+Style DecorStyle10a Colorset 112
+Style DecorStyle10a HilightColorset 112
+Style DecorStyle10a Button 2, !Button 4, !Button 6, !Button 1
+
+##  Minimal.2/tamsyn20 : Teal : inactive
+DestroyStyle DecorStyle11i
+Style DecorStyle11i BorderColorset 102
+Style DecorStyle11i HilightBorderColorset 102
+Style DecorStyle11i Font -misc-tamsyn-bold-r-normal--20-145-100-100-c-100-iso8859-1
+Style DecorStyle11i !State 29,State 28,!State 27,State 26,State 25
+Style DecorStyle11i Colorset 112
+Style DecorStyle11i HilightColorset 112
+Style DecorStyle11i Button 2, !Button 4, !Button 6, !Button 1
+
+##  Minimal.2/tamsyn20 : Teal : active
+DestroyStyle DecorStyle11a
+Style DecorStyle11a BorderColorset 110
+Style DecorStyle11a HilightBorderColorset 110
+Style DecorStyle11a Font -misc-tamsyn-bold-r-normal--20-145-100-100-c-100-iso8859-1
+Style DecorStyle11a !State 29,State 28,!State 27,State 26,State 25
+Style DecorStyle11a Colorset 112
+Style DecorStyle11a HilightColorset 112
+Style DecorStyle11a Button 2, !Button 4, !Button 6, !Button 1
+
+##  Plain/0 : Purple : inactive
+DestroyStyle DecorStyle12i
+Style DecorStyle12i BorderColorset 103
+Style DecorStyle12i HilightBorderColorset 103
+Style DecorStyle12i Font terminus-bold-16
+Style DecorStyle12i !State 29,State 28,State 27,!State 26,!State 25
+Style DecorStyle12i Colorset 116
+Style DecorStyle12i HilightColorset 116
+Style DecorStyle12i !Button 2, !Button 4, !Button 6, Button 1
+
+##  Plain/0 : Purple : active
+DestroyStyle DecorStyle12a
+Style DecorStyle12a BorderColorset 111
+Style DecorStyle12a HilightBorderColorset 111
+Style DecorStyle12a Font terminus-bold-16
+Style DecorStyle12a !State 29,State 28,State 27,!State 26,!State 25
+Style DecorStyle12a Colorset 124
+Style DecorStyle12a HilightColorset 124
+Style DecorStyle12a !Button 2, !Button 4, !Button 6, Button 1
+
+##  Minimal.1/terminus16 : Purple : inactive
+DestroyStyle DecorStyle14i
+Style DecorStyle14i BorderColorset 103
+Style DecorStyle14i HilightBorderColorset 103
+Style DecorStyle14i Font terminus-bold-16
+Style DecorStyle14i !State 29,State 28,State 27,State 26,!State 25
+Style DecorStyle14i Colorset 112
+Style DecorStyle14i HilightColorset 112
+Style DecorStyle14i Button 2, !Button 4, !Button 6, !Button 1
+
+##  Minimal.1/terminus16 : Purple : active
+DestroyStyle DecorStyle14a
+Style DecorStyle14a BorderColorset 111
+Style DecorStyle14a HilightBorderColorset 111
+Style DecorStyle14a Font terminus-bold-16
+Style DecorStyle14a !State 29,State 28,State 27,State 26,!State 25
+Style DecorStyle14a Colorset 112
+Style DecorStyle14a HilightColorset 112
+Style DecorStyle14a Button 2, !Button 4, !Button 6, !Button 1
+
+##  Minimal.2/tamsyn20 : Purple : inactive
+DestroyStyle DecorStyle15i
+Style DecorStyle15i BorderColorset 103
+Style DecorStyle15i HilightBorderColorset 103
+Style DecorStyle15i Font -misc-tamsyn-bold-r-normal--20-145-100-100-c-100-iso8859-1
+Style DecorStyle15i !State 29,State 28,State 27,State 26,State 25
+Style DecorStyle15i Colorset 112
+Style DecorStyle15i HilightColorset 112
+Style DecorStyle15i Button 2, !Button 4, !Button 6, !Button 1
+
+##  Minimal.2/tamsyn20 : Purple : active
+DestroyStyle DecorStyle15a
+Style DecorStyle15a BorderColorset 111
+Style DecorStyle15a HilightBorderColorset 111
+Style DecorStyle15a Font -misc-tamsyn-bold-r-normal--20-145-100-100-c-100-iso8859-1
+Style DecorStyle15a !State 29,State 28,State 27,State 26,State 25
+Style DecorStyle15a Colorset 112
+Style DecorStyle15a HilightColorset 112
+Style DecorStyle15a Button 2, !Button 4, !Button 6, !Button 1
+
+

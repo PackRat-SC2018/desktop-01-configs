@@ -2,7 +2,6 @@
 
 (aspect-denominator 1080.000000)
 (aspect-numerator 1920.000000)
-(desired-fixed-size-height 0.000000)
-(desired-fixed-size-width 0.000000)
+(guide fifths)
 
 # end of gimp-crop-tool options

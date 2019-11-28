@@ -1,310 +1,1083 @@
-**** BEGIN LOGGING AT Thu Jun 14 13:42:38 2018
+**** BEGIN LOGGING AT Fri Nov  2 22:22:32 2018
 
-Jun 14 13:42:38 FiSHLiM plugin loaded
-Jun 14 13:42:38 Checksum plugin loaded
-Jun 14 13:42:38 Sysinfo plugin loaded
-**** BEGIN LOGGING AT Thu Jun 14 14:39:33 2018
+Nov 02 22:22:32 FiSHLiM plugin loaded
+Nov 02 22:22:32 Sysinfo plugin loaded
+Nov 02 22:22:32 Checksum plugin loaded
+**** BEGIN LOGGING AT Sat Nov  3 11:49:29 2018
 
-Jun 14 14:39:33 FiSHLiM plugin loaded
-Jun 14 14:39:33 Checksum plugin loaded
-Jun 14 14:39:33 Sysinfo plugin loaded
-Jun 14 14:39:33 *	Looking up chat.freenode.net
-Jun 14 14:39:33 *	Connecting to chat.freenode.net (82.96.96.11:6697)
-Jun 14 14:39:34 *	* Certification info:
-Jun 14 14:39:34 *	  Subject:
-Jun 14 14:39:34 *	    CN=kornbluth.freenode.net
-Jun 14 14:39:34 *	  Issuer:
-Jun 14 14:39:34 *	    C=US
-Jun 14 14:39:34 *	    O=Let's Encrypt
-Jun 14 14:39:34 *	    CN=Let's Encrypt Authority X3
-Jun 14 14:39:34 *	  Public key algorithm: rsaEncryption (4096 bits)
-Jun 14 14:39:34 *	  Sign algorithm sha256WithRSAEncryption
-Jun 14 14:39:34 *	  Valid since Apr 23 05:02:46 2018 GM to Jul 22 05:02:46 2018 GM
-Jun 14 14:39:34 *	* Cipher info:
-Jun 14 14:39:34 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
-Jun 14 14:39:34 *	Connected. Now logging in.
-Jun 14 14:39:34 *	*** Looking up your hostname...
-Jun 14 14:39:34 *	*** Checking Ident
-Jun 14 14:39:34 *	*** Couldn't look up your hostname
-Jun 14 14:39:43 *	*** No Ident response
-Jun 14 14:39:43 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
-Jun 14 14:39:43 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
-Jun 14 14:39:43 *	doug is already in use. Retrying with doug_...
-Jun 14 14:39:44 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
-**** ENDING LOGGING AT Thu Jun 14 14:39:44 2018
+Nov 03 11:49:29 FiSHLiM plugin loaded
+Nov 03 11:49:29 Sysinfo plugin loaded
+Nov 03 11:49:29 Checksum plugin loaded
+Nov 03 11:49:29 *	Looking up chat.freenode.net
+Nov 03 11:49:29 *	Connecting to chat.freenode.net (195.154.200.232:6697)
+Nov 03 11:49:30 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 11:49:30 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 11:49:30 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 03 11:49:30 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 11:49:30 *	* Subject: /CN=barjavel.freenode.net
+Nov 03 11:49:30 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 03 11:49:30 *	* Certification info:
+Nov 03 11:49:30 *	  Subject:
+Nov 03 11:49:30 *	    CN=barjavel.freenode.net
+Nov 03 11:49:30 *	  Issuer:
+Nov 03 11:49:30 *	    C=US
+Nov 03 11:49:30 *	    O=Let's Encrypt
+Nov 03 11:49:30 *	    CN=Let's Encrypt Authority X3
+Nov 03 11:49:30 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 03 11:49:30 *	  Sign algorithm sha256WithRSAEncryption
+Nov 03 11:49:30 *	  Valid since Oct 15 05:01:28 2018 GM to Jan 13 05:01:28 2019 GM
+Nov 03 11:49:30 *	* Cipher info:
+Nov 03 11:49:30 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 03 11:49:30 *	Connected. Now logging in.
+Nov 03 11:49:30 *	*** Looking up your hostname...
+Nov 03 11:49:30 *	*** Checking Ident
+Nov 03 11:49:30 *	*** Found your hostname
+Nov 03 11:49:37 *	*** No Ident response
+Nov 03 11:49:37 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Nov 03 11:49:37 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+Nov 03 11:49:37 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Sat Nov  3 11:49:37 2018
 
-**** BEGIN LOGGING AT Thu Jun 14 14:52:07 2018
+**** BEGIN LOGGING AT Sat Nov  3 11:53:48 2018
 
-Jun 14 14:52:07 FiSHLiM plugin loaded
-Jun 14 14:52:07 Checksum plugin loaded
-Jun 14 14:52:07 Sysinfo plugin loaded
-Jun 14 14:52:07 *	Looking up chat.freenode.net
-Jun 14 14:52:07 *	Connecting to chat.freenode.net (162.213.39.42:6697)
-Jun 14 14:52:08 *	* Certification info:
-Jun 14 14:52:08 *	  Subject:
-Jun 14 14:52:08 *	    CN=weber.freenode.net
-Jun 14 14:52:08 *	  Issuer:
-Jun 14 14:52:08 *	    C=US
-Jun 14 14:52:08 *	    O=Let's Encrypt
-Jun 14 14:52:08 *	    CN=Let's Encrypt Authority X3
-Jun 14 14:52:08 *	  Public key algorithm: rsaEncryption (4096 bits)
-Jun 14 14:52:08 *	  Sign algorithm sha256WithRSAEncryption
-Jun 14 14:52:08 *	  Valid since Apr 16 05:01:25 2018 GM to Jul 15 05:01:25 2018 GM
-Jun 14 14:52:08 *	* Cipher info:
-Jun 14 14:52:08 *	  Version: TLSv1/SSLv3, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
-Jun 14 14:52:08 *	Connected. Now logging in.
-Jun 14 14:52:08 *	*** Looking up your hostname...
-Jun 14 14:52:08 *	*** Checking Ident
-Jun 14 14:52:09 *	*** Couldn't look up your hostname
-Jun 14 14:52:17 *	*** No Ident response
-Jun 14 14:52:17 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
-Jun 14 14:52:17 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
-Jun 14 14:52:17 *	doug is already in use. Retrying with doug_...
-Jun 14 14:52:17 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
-**** ENDING LOGGING AT Thu Jun 14 14:52:18 2018
+Nov 03 11:53:48 FiSHLiM plugin loaded
+Nov 03 11:53:48 Sysinfo plugin loaded
+Nov 03 11:53:48 Checksum plugin loaded
+Nov 03 11:53:48 *	Looking up chat.freenode.net
+Nov 03 11:53:48 *	Connecting to chat.freenode.net (139.162.227.51:6697)
+Nov 03 11:53:49 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 11:53:49 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 11:53:49 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 03 11:53:49 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 11:53:49 *	* Subject: /CN=niven.freenode.net
+Nov 03 11:53:49 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 03 11:53:49 *	* Certification info:
+Nov 03 11:53:49 *	  Subject:
+Nov 03 11:53:49 *	    CN=niven.freenode.net
+Nov 03 11:53:49 *	  Issuer:
+Nov 03 11:53:49 *	    C=US
+Nov 03 11:53:49 *	    O=Let's Encrypt
+Nov 03 11:53:49 *	    CN=Let's Encrypt Authority X3
+Nov 03 11:53:49 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 03 11:53:49 *	  Sign algorithm sha256WithRSAEncryption
+Nov 03 11:53:49 *	  Valid since Oct  1 05:02:43 2018 GM to Dec 30 05:02:43 2018 GM
+Nov 03 11:53:49 *	* Cipher info:
+Nov 03 11:53:49 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 03 11:53:49 *	Connected. Now logging in.
+Nov 03 11:53:49 *	*** Looking up your hostname...
+Nov 03 11:53:49 *	*** Checking Ident
+Nov 03 11:53:49 *	*** Found your hostname
+Nov 03 11:53:57 *	*** No Ident response
+Nov 03 11:53:57 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Nov 03 11:53:57 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+Nov 03 11:53:57 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Sat Nov  3 11:53:58 2018
 
-**** BEGIN LOGGING AT Thu Jun 14 20:22:04 2018
+**** BEGIN LOGGING AT Sat Nov  3 11:57:24 2018
 
-Jun 14 20:22:04 FiSHLiM plugin loaded
-Jun 14 20:22:04 Checksum plugin loaded
-Jun 14 20:22:04 Sysinfo plugin loaded
-Jun 14 20:22:04 *	Looking up chat.freenode.net
-Jun 14 20:22:04 *	Connecting to chat.freenode.net (162.213.39.42:6697)
-Jun 14 20:22:05 *	* Certification info:
-Jun 14 20:22:05 *	  Subject:
-Jun 14 20:22:05 *	    CN=weber.freenode.net
-Jun 14 20:22:05 *	  Issuer:
-Jun 14 20:22:05 *	    C=US
-Jun 14 20:22:05 *	    O=Let's Encrypt
-Jun 14 20:22:05 *	    CN=Let's Encrypt Authority X3
-Jun 14 20:22:05 *	  Public key algorithm: rsaEncryption (4096 bits)
-Jun 14 20:22:05 *	  Sign algorithm sha256WithRSAEncryption
-Jun 14 20:22:05 *	  Valid since Apr 16 05:01:25 2018 GM to Jul 15 05:01:25 2018 GM
-Jun 14 20:22:05 *	* Cipher info:
-Jun 14 20:22:05 *	  Version: TLSv1/SSLv3, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
-Jun 14 20:22:05 *	Connected. Now logging in.
-Jun 14 20:22:05 *	*** Looking up your hostname...
-Jun 14 20:22:05 *	*** Checking Ident
-Jun 14 20:22:05 *	*** Couldn't look up your hostname
-Jun 14 20:22:13 *	*** No Ident response
-Jun 14 20:22:13 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
-Jun 14 20:22:13 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
-Jun 14 20:22:13 *	doug is already in use. Retrying with doug_...
-Jun 14 20:22:13 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
-**** ENDING LOGGING AT Thu Jun 14 20:22:13 2018
+Nov 03 11:57:24 FiSHLiM plugin loaded
+Nov 03 11:57:24 Sysinfo plugin loaded
+Nov 03 11:57:24 Checksum plugin loaded
+Nov 03 11:57:24 *	Looking up chat.freenode.net
+Nov 03 11:57:25 *	Connecting to chat.freenode.net (38.229.70.22:6697)
+Nov 03 11:57:25 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 11:57:25 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 11:57:25 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 03 11:57:25 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 11:57:25 *	* Subject: /CN=card.freenode.net
+Nov 03 11:57:25 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 03 11:57:25 *	* Certification info:
+Nov 03 11:57:25 *	  Subject:
+Nov 03 11:57:25 *	    CN=card.freenode.net
+Nov 03 11:57:25 *	  Issuer:
+Nov 03 11:57:25 *	    C=US
+Nov 03 11:57:25 *	    O=Let's Encrypt
+Nov 03 11:57:25 *	    CN=Let's Encrypt Authority X3
+Nov 03 11:57:25 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 03 11:57:25 *	  Sign algorithm sha256WithRSAEncryption
+Nov 03 11:57:25 *	  Valid since Sep 17 05:03:09 2018 GM to Dec 16 05:03:09 2018 GM
+Nov 03 11:57:25 *	* Cipher info:
+Nov 03 11:57:25 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 03 11:57:25 *	Connected. Now logging in.
+Nov 03 11:57:25 *	*** Looking up your hostname...
+Nov 03 11:57:25 *	*** Checking Ident
+Nov 03 11:57:25 *	*** Found your hostname
+Nov 03 11:57:30 Checksum plugin unloaded
+Nov 03 11:57:30 Sysinfo plugin unloaded
+Nov 03 11:57:30 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Sat Nov  3 11:57:30 2018
 
-**** BEGIN LOGGING AT Fri Jun 15 12:47:12 2018
+**** BEGIN LOGGING AT Sat Nov  3 11:58:16 2018
 
-Jun 15 12:47:12 FiSHLiM plugin loaded
-Jun 15 12:47:12 Checksum plugin loaded
-Jun 15 12:47:12 Sysinfo plugin loaded
-Jun 15 12:47:12 *	Looking up chat.freenode.net
-Jun 15 12:47:12 *	Connecting to chat.freenode.net (195.154.200.232:6697)
-Jun 15 12:47:13 *	* Certification info:
-Jun 15 12:47:13 *	  Subject:
-Jun 15 12:47:13 *	    CN=barjavel.freenode.net
-Jun 15 12:47:13 *	  Issuer:
-Jun 15 12:47:13 *	    C=US
-Jun 15 12:47:13 *	    O=Let's Encrypt
-Jun 15 12:47:13 *	    CN=Let's Encrypt Authority X3
-Jun 15 12:47:13 *	  Public key algorithm: rsaEncryption (4096 bits)
-Jun 15 12:47:13 *	  Sign algorithm sha256WithRSAEncryption
-Jun 15 12:47:13 *	  Valid since Jun 11 05:01:00 2018 GM to Sep  9 05:01:00 2018 GM
-Jun 15 12:47:13 *	* Cipher info:
-Jun 15 12:47:13 *	  Version: TLSv1/SSLv3, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
-Jun 15 12:47:13 *	Connected. Now logging in.
-Jun 15 12:47:13 *	*** Looking up your hostname...
-Jun 15 12:47:13 *	*** Checking Ident
-Jun 15 12:47:13 *	*** Couldn't look up your hostname
-Jun 15 12:47:23 *	*** No Ident response
-Jun 15 12:47:23 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
-Jun 15 12:47:23 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
-Jun 15 12:47:23 *	doug is already in use. Retrying with doug_...
-Jun 15 12:47:23 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
-**** ENDING LOGGING AT Fri Jun 15 12:47:24 2018
+Nov 03 11:58:16 FiSHLiM plugin loaded
+Nov 03 11:58:16 Sysinfo plugin loaded
+Nov 03 11:58:16 Checksum plugin loaded
+Nov 03 11:58:16 *	Looking up chat.freenode.net
+Nov 03 11:58:16 *	Connecting to chat.freenode.net (185.30.166.38:6697)
+Nov 03 11:58:17 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 11:58:17 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 11:58:17 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 03 11:58:17 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 11:58:17 *	* Subject: /CN=verne.freenode.net
+Nov 03 11:58:17 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 03 11:58:17 *	* Certification info:
+Nov 03 11:58:17 *	  Subject:
+Nov 03 11:58:17 *	    CN=verne.freenode.net
+Nov 03 11:58:17 *	  Issuer:
+Nov 03 11:58:17 *	    C=US
+Nov 03 11:58:17 *	    O=Let's Encrypt
+Nov 03 11:58:17 *	    CN=Let's Encrypt Authority X3
+Nov 03 11:58:17 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 03 11:58:17 *	  Sign algorithm sha256WithRSAEncryption
+Nov 03 11:58:17 *	  Valid since Oct 15 05:06:19 2018 GM to Jan 13 05:06:19 2019 GM
+Nov 03 11:58:17 *	* Cipher info:
+Nov 03 11:58:17 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 03 11:58:17 *	Connected. Now logging in.
+Nov 03 11:58:17 *	*** Looking up your hostname...
+Nov 03 11:58:17 *	*** Checking Ident
+Nov 03 11:58:17 *	*** Found your hostname
+Nov 03 11:58:25 *	*** No Ident response
+Nov 03 11:58:25 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Nov 03 11:58:25 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
+Nov 03 11:58:25 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
+**** ENDING LOGGING AT Sat Nov  3 11:58:25 2018
 
-**** BEGIN LOGGING AT Fri Jun 15 12:51:15 2018
+**** BEGIN LOGGING AT Sat Nov  3 12:04:08 2018
 
-Jun 15 12:51:15 FiSHLiM plugin loaded
-Jun 15 12:51:15 Checksum plugin loaded
-Jun 15 12:51:15 Sysinfo plugin loaded
-Jun 15 12:51:15 *	Looking up chat.freenode.net
-Jun 15 12:51:15 *	Connecting to chat.freenode.net (139.162.227.51:6697)
-Jun 15 12:51:16 *	* Certification info:
-Jun 15 12:51:16 *	  Subject:
-Jun 15 12:51:16 *	    CN=niven.freenode.net
-Jun 15 12:51:16 *	  Issuer:
-Jun 15 12:51:16 *	    C=US
-Jun 15 12:51:16 *	    O=Let's Encrypt
-Jun 15 12:51:16 *	    CN=Let's Encrypt Authority X3
-Jun 15 12:51:16 *	  Public key algorithm: rsaEncryption (4096 bits)
-Jun 15 12:51:16 *	  Sign algorithm sha256WithRSAEncryption
-Jun 15 12:51:16 *	  Valid since May 28 05:01:48 2018 GM to Aug 26 05:01:48 2018 GM
-Jun 15 12:51:16 *	* Cipher info:
-Jun 15 12:51:16 *	  Version: TLSv1/SSLv3, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
-Jun 15 12:51:16 *	Connected. Now logging in.
-Jun 15 12:51:16 *	*** Looking up your hostname...
-Jun 15 12:51:16 *	*** Checking Ident
-Jun 15 12:51:16 *	*** Couldn't look up your hostname
-Jun 15 12:51:23 *	*** No Ident response
-Jun 15 12:51:23 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
-Jun 15 12:51:23 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
-Jun 15 12:51:23 *	doug is already in use. Retrying with doug_...
-Jun 15 12:51:23 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
-**** ENDING LOGGING AT Fri Jun 15 12:51:24 2018
+Nov 03 12:04:08 FiSHLiM plugin loaded
+Nov 03 12:04:08 Sysinfo plugin loaded
+Nov 03 12:04:08 Checksum plugin loaded
+Nov 03 12:04:08 *	Looking up chat.freenode.net
+Nov 03 12:04:08 *	Connecting to chat.freenode.net (139.162.227.51:6697)
+Nov 03 12:04:08 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 12:04:08 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 12:04:08 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 03 12:04:08 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 12:04:08 *	* Subject: /CN=niven.freenode.net
+Nov 03 12:04:08 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 03 12:04:09 *	* Certification info:
+Nov 03 12:04:09 *	  Subject:
+Nov 03 12:04:09 *	    CN=niven.freenode.net
+Nov 03 12:04:09 *	  Issuer:
+Nov 03 12:04:09 *	    C=US
+Nov 03 12:04:09 *	    O=Let's Encrypt
+Nov 03 12:04:09 *	    CN=Let's Encrypt Authority X3
+Nov 03 12:04:09 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 03 12:04:09 *	  Sign algorithm sha256WithRSAEncryption
+Nov 03 12:04:09 *	  Valid since Oct  1 05:02:43 2018 GM to Dec 30 05:02:43 2018 GM
+Nov 03 12:04:09 *	* Cipher info:
+Nov 03 12:04:09 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 03 12:04:09 *	Connected. Now logging in.
+Nov 03 12:04:09 *	*** Looking up your hostname...
+Nov 03 12:04:09 *	*** Checking Ident
+Nov 03 12:04:09 *	*** Found your hostname
+Nov 03 12:04:17 *	*** No Ident response
+Nov 03 12:04:17 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Nov 03 12:04:17 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 03 12:04:18 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 03 12:04:18 *	Authenticating via SASL as doug (PLAIN)
+Nov 03 12:04:18 *	SASL authentication failed
+Nov 03 12:04:19 *	SASL authentication failed
+Nov 03 12:04:20 *	SASL authentication aborted
+**** ENDING LOGGING AT Sat Nov  3 12:04:20 2018
 
-**** BEGIN LOGGING AT Fri Jun 15 13:29:06 2018
+**** BEGIN LOGGING AT Sat Nov  3 12:06:02 2018
 
-Jun 15 13:29:06 FiSHLiM plugin loaded
-Jun 15 13:29:06 Checksum plugin loaded
-Jun 15 13:29:06 Sysinfo plugin loaded
-Jun 15 13:29:06 *	Looking up chat.freenode.net
-Jun 15 13:29:06 *	Connecting to chat.freenode.net (173.230.128.213:6697)
-Jun 15 13:29:07 *	* Certification info:
-Jun 15 13:29:07 *	  Subject:
-Jun 15 13:29:07 *	    CN=moon.freenode.net
-Jun 15 13:29:07 *	  Issuer:
-Jun 15 13:29:07 *	    C=US
-Jun 15 13:29:07 *	    O=Let's Encrypt
-Jun 15 13:29:07 *	    CN=Let's Encrypt Authority X3
-Jun 15 13:29:07 *	  Public key algorithm: rsaEncryption (4096 bits)
-Jun 15 13:29:07 *	  Sign algorithm sha256WithRSAEncryption
-Jun 15 13:29:07 *	  Valid since Apr 30 05:02:40 2018 GM to Jul 29 05:02:40 2018 GM
-Jun 15 13:29:07 *	* Cipher info:
-Jun 15 13:29:07 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
-Jun 15 13:29:07 *	Connected. Now logging in.
-Jun 15 13:29:07 *	*** Looking up your hostname...
-Jun 15 13:29:07 *	*** Checking Ident
-Jun 15 13:29:07 *	*** Couldn't look up your hostname
-Jun 15 13:29:16 *	*** No Ident response
-Jun 15 13:29:16 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
-Jun 15 13:29:16 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
-Jun 15 13:29:16 *	doug is already in use. Retrying with doug_...
-Jun 15 13:29:16 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
-**** ENDING LOGGING AT Fri Jun 15 13:29:16 2018
+Nov 03 12:06:02 FiSHLiM plugin loaded
+Nov 03 12:06:02 Sysinfo plugin loaded
+Nov 03 12:06:02 Checksum plugin loaded
+Nov 03 12:06:02 *	Looking up chat.freenode.net
+Nov 03 12:06:02 *	Connecting to chat.freenode.net (130.185.232.126:6697)
+Nov 03 12:06:03 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 12:06:03 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 12:06:03 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 03 12:06:03 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 03 12:06:03 *	* Subject: /CN=hitchcock.freenode.net
+Nov 03 12:06:03 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 03 12:06:04 *	* Certification info:
+Nov 03 12:06:04 *	  Subject:
+Nov 03 12:06:04 *	    CN=hitchcock.freenode.net
+Nov 03 12:06:04 *	  Issuer:
+Nov 03 12:06:04 *	    C=US
+Nov 03 12:06:04 *	    O=Let's Encrypt
+Nov 03 12:06:04 *	    CN=Let's Encrypt Authority X3
+Nov 03 12:06:04 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 03 12:06:04 *	  Sign algorithm sha256WithRSAEncryption
+Nov 03 12:06:04 *	  Valid since Oct 22 05:02:52 2018 GM to Jan 20 05:02:52 2019 GM
+Nov 03 12:06:04 *	* Cipher info:
+Nov 03 12:06:04 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 03 12:06:04 *	Connected. Now logging in.
+Nov 03 12:06:04 *	*** Looking up your hostname...
+Nov 03 12:06:04 *	*** Checking Ident
+Nov 03 12:06:04 *	*** Found your hostname
+Nov 03 12:06:13 *	*** No Ident response
+Nov 03 12:06:13 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Nov 03 12:06:13 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 03 12:06:13 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 03 12:06:14 *	Authenticating via SASL as doug (PLAIN)
+Nov 03 12:06:14 *	SASL authentication failed
+Nov 03 12:06:15 *	SASL authentication failed
+Nov 03 12:06:16 *	SASL authentication aborted
+**** ENDING LOGGING AT Sat Nov  3 12:06:16 2018
 
-**** BEGIN LOGGING AT Fri Jun 15 13:43:40 2018
+**** BEGIN LOGGING AT Wed Nov  7 09:15:09 2018
 
-Jun 15 13:43:40 FiSHLiM plugin loaded
-Jun 15 13:43:40 Checksum plugin loaded
-Jun 15 13:43:40 Sysinfo plugin loaded
-Jun 15 13:43:40 *	Looking up chat.freenode.net
-Jun 15 13:43:40 *	Connecting to chat.freenode.net (130.185.232.126:6697)
-Jun 15 13:43:42 *	* Certification info:
-Jun 15 13:43:42 *	  Subject:
-Jun 15 13:43:42 *	    CN=hitchcock.freenode.net
-Jun 15 13:43:42 *	  Issuer:
-Jun 15 13:43:42 *	    C=US
-Jun 15 13:43:42 *	    O=Let's Encrypt
-Jun 15 13:43:42 *	    CN=Let's Encrypt Authority X3
-Jun 15 13:43:42 *	  Public key algorithm: rsaEncryption (4096 bits)
-Jun 15 13:43:42 *	  Sign algorithm sha256WithRSAEncryption
-Jun 15 13:43:42 *	  Valid since Apr 16 05:02:15 2018 GM to Jul 15 05:02:15 2018 GM
-Jun 15 13:43:42 *	* Cipher info:
-Jun 15 13:43:42 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
-Jun 15 13:43:42 *	Connected. Now logging in.
-Jun 15 13:43:42 *	*** Looking up your hostname...
-Jun 15 13:43:42 *	*** Checking Ident
-Jun 15 13:43:42 *	*** Couldn't look up your hostname
-Jun 15 13:43:46 *	*** No Ident response
-Jun 15 13:43:47 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
-Jun 15 13:43:47 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
-Jun 15 13:43:47 *	doug is already in use. Retrying with doug_...
-Jun 15 13:43:47 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
-**** ENDING LOGGING AT Fri Jun 15 13:43:47 2018
+Nov 07 09:15:09 FiSHLiM plugin loaded
+Nov 07 09:15:09 Sysinfo plugin loaded
+Nov 07 09:15:09 Checksum plugin loaded
+Nov 07 09:15:09 *	Looking up chat.freenode.net
+Nov 07 09:15:09 *	Connecting to chat.freenode.net (130.239.18.119:6697)
+Nov 07 09:15:09 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 07 09:15:09 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 07 09:15:09 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 07 09:15:09 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 07 09:15:09 *	* Subject: /CN=leguin.freenode.net
+Nov 07 09:15:09 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 07 09:15:10 *	* Certification info:
+Nov 07 09:15:10 *	  Subject:
+Nov 07 09:15:10 *	    CN=leguin.freenode.net
+Nov 07 09:15:10 *	  Issuer:
+Nov 07 09:15:10 *	    C=US
+Nov 07 09:15:10 *	    O=Let's Encrypt
+Nov 07 09:15:10 *	    CN=Let's Encrypt Authority X3
+Nov 07 09:15:10 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 07 09:15:10 *	  Sign algorithm sha256WithRSAEncryption
+Nov 07 09:15:10 *	  Valid since Oct 15 05:02:41 2018 GM to Jan 13 05:02:41 2019 GM
+Nov 07 09:15:10 *	* Cipher info:
+Nov 07 09:15:10 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 07 09:15:10 *	Connected. Now logging in.
+Nov 07 09:15:10 *	*** Looking up your hostname...
+Nov 07 09:15:10 *	*** Checking Ident
+Nov 07 09:15:10 *	*** Found your hostname
+Nov 07 09:15:18 *	*** No Ident response
+Nov 07 09:15:18 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Nov 07 09:15:18 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 07 09:15:18 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 07 09:15:29 *	Authenticating via SASL as doug (PLAIN)
+Nov 07 09:15:29 *	SASL authentication failed
+Nov 07 09:15:30 *	SASL authentication aborted
+**** ENDING LOGGING AT Wed Nov  7 09:15:30 2018
 
-**** BEGIN LOGGING AT Sun Jun 17 16:02:48 2018
+**** BEGIN LOGGING AT Fri Nov  9 18:11:51 2018
 
-Jun 17 16:02:48 FiSHLiM plugin loaded
-Jun 17 16:02:48 Checksum plugin loaded
-Jun 17 16:02:48 Sysinfo plugin loaded
-Jun 17 16:02:48 *	Looking up chat.freenode.net
-Jun 17 16:02:48 *	Connecting to chat.freenode.net (173.230.128.213:6697)
-Jun 17 16:02:49 *	* Certification info:
-Jun 17 16:02:49 *	  Subject:
-Jun 17 16:02:49 *	    CN=moon.freenode.net
-Jun 17 16:02:49 *	  Issuer:
-Jun 17 16:02:49 *	    C=US
-Jun 17 16:02:49 *	    O=Let's Encrypt
-Jun 17 16:02:49 *	    CN=Let's Encrypt Authority X3
-Jun 17 16:02:49 *	  Public key algorithm: rsaEncryption (4096 bits)
-Jun 17 16:02:49 *	  Sign algorithm sha256WithRSAEncryption
-Jun 17 16:02:49 *	  Valid since Apr 30 05:02:40 2018 GM to Jul 29 05:02:40 2018 GM
-Jun 17 16:02:49 *	* Cipher info:
-Jun 17 16:02:49 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
-Jun 17 16:02:49 *	Connected. Now logging in.
-Jun 17 16:02:49 *	*** Looking up your hostname...
-Jun 17 16:02:49 *	*** Checking Ident
-Jun 17 16:02:49 *	*** Couldn't look up your hostname
-Jun 17 16:02:57 *	*** No Ident response
-Jun 17 16:02:57 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
-Jun 17 16:02:57 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix 
-Jun 17 16:02:57 *	doug is already in use. Retrying with doug_...
-Jun 17 16:02:57 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix 
-**** ENDING LOGGING AT Sun Jun 17 16:02:57 2018
+Nov 09 18:11:51 FiSHLiM plugin loaded
+Nov 09 18:11:51 Sysinfo plugin loaded
+Nov 09 18:11:51 Checksum plugin loaded
+Nov 09 18:11:51 *	Looking up chat.freenode.net
+Nov 09 18:11:51 *	Connecting to chat.freenode.net (94.125.182.252:6697)
+Nov 09 18:11:52 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 09 18:11:52 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 09 18:11:52 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 09 18:11:52 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 09 18:11:52 *	* Subject: /CN=adams.freenode.net
+Nov 09 18:11:52 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 09 18:11:52 *	* Certification info:
+Nov 09 18:11:52 *	  Subject:
+Nov 09 18:11:52 *	    CN=adams.freenode.net
+Nov 09 18:11:52 *	  Issuer:
+Nov 09 18:11:52 *	    C=US
+Nov 09 18:11:52 *	    O=Let's Encrypt
+Nov 09 18:11:52 *	    CN=Let's Encrypt Authority X3
+Nov 09 18:11:52 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 09 18:11:52 *	  Sign algorithm sha256WithRSAEncryption
+Nov 09 18:11:52 *	  Valid since Sep 17 05:08:43 2018 GM to Dec 16 05:08:43 2018 GM
+Nov 09 18:11:52 *	* Cipher info:
+Nov 09 18:11:52 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 09 18:11:52 *	Connected. Now logging in.
+Nov 09 18:11:52 *	*** Looking up your hostname...
+Nov 09 18:11:52 *	*** Checking Ident
+Nov 09 18:11:52 *	*** Found your hostname
+Nov 09 18:12:02 *	*** No Ident response
+Nov 09 18:12:02 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Nov 09 18:12:02 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 09 18:12:02 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 09 18:12:02 *	Authenticating via SASL as doug (PLAIN)
+Nov 09 18:12:03 *	SASL authentication failed
+Nov 09 18:12:04 *	SASL authentication failed
+Nov 09 18:12:05 *	SASL authentication aborted
+**** ENDING LOGGING AT Fri Nov  9 18:12:05 2018
 
-**** BEGIN LOGGING AT Tue Jun 19 21:19:28 2018
+**** BEGIN LOGGING AT Tue Nov 13 08:08:47 2018
 
-Jun 19 21:19:28 FiSHLiM plugin loaded
-Jun 19 21:19:28 Checksum plugin loaded
-Jun 19 21:19:28 Sysinfo plugin loaded
-**** BEGIN LOGGING AT Fri Jun 22 14:37:43 2018
+Nov 13 08:08:47 FiSHLiM plugin loaded
+Nov 13 08:08:47 Sysinfo plugin loaded
+Nov 13 08:08:47 Checksum plugin loaded
+Nov 13 08:08:47 *	Looking up chat.freenode.net
+Nov 13 08:08:47 *	Connecting to chat.freenode.net (104.200.152.162:6697)
+Nov 13 08:08:48 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 13 08:08:48 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 13 08:08:48 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 13 08:08:48 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 13 08:08:48 *	* Subject: /CN=asimov.freenode.net
+Nov 13 08:08:48 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 13 08:08:48 *	* Certification info:
+Nov 13 08:08:48 *	  Subject:
+Nov 13 08:08:48 *	    CN=asimov.freenode.net
+Nov 13 08:08:48 *	  Issuer:
+Nov 13 08:08:48 *	    C=US
+Nov 13 08:08:48 *	    O=Let's Encrypt
+Nov 13 08:08:48 *	    CN=Let's Encrypt Authority X3
+Nov 13 08:08:48 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 13 08:08:48 *	  Sign algorithm sha256WithRSAEncryption
+Nov 13 08:08:48 *	  Valid since Sep 17 05:10:09 2018 GM to Dec 16 05:10:09 2018 GM
+Nov 13 08:08:48 *	* Cipher info:
+Nov 13 08:08:48 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 13 08:08:48 *	Connected. Now logging in.
+Nov 13 08:08:48 *	*** Looking up your hostname...
+Nov 13 08:08:48 *	*** Checking Ident
+Nov 13 08:08:48 *	*** Found your hostname
+Nov 13 08:08:56 *	*** No Ident response
+Nov 13 08:08:56 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Nov 13 08:08:56 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 13 08:08:56 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 13 08:08:57 *	Authenticating via SASL as doug (PLAIN)
+Nov 13 08:08:57 *	SASL authentication failed
+Nov 13 08:08:57 *	SASL authentication failed
+Nov 13 08:08:58 Checksum plugin unloaded
+Nov 13 08:08:58 Sysinfo plugin unloaded
+Nov 13 08:08:58 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Tue Nov 13 08:08:58 2018
 
-Jun 22 14:37:43 FiSHLiM plugin loaded
-Jun 22 14:37:43 Checksum plugin loaded
-Jun 22 14:37:43 Sysinfo plugin loaded
-Jun 22 14:37:43 *	Looking up irc.oftc.net
-Jun 22 14:37:44 *	Connecting to irc.geo.oftc.net (64.62.190.36:6697)
-Jun 22 14:37:45 *	* Certification info:
-Jun 22 14:37:45 *	  Subject:
-Jun 22 14:37:45 *	    CN=charm.oftc.net
-Jun 22 14:37:45 *	  Issuer:
-Jun 22 14:37:45 *	    C=US
-Jun 22 14:37:45 *	    O=Let's Encrypt
-Jun 22 14:37:45 *	    CN=Let's Encrypt Authority X3
-Jun 22 14:37:45 *	  Public key algorithm: rsaEncryption (2048 bits)
-Jun 22 14:37:45 *	  Sign algorithm sha256WithRSAEncryption
-Jun 22 14:37:45 *	  Valid since May  7 16:54:48 2018 GM to Aug  5 16:54:48 2018 GM
-Jun 22 14:37:45 *	* Cipher info:
-Jun 22 14:37:45 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
-Jun 22 14:37:45 *	Connected. Now logging in.
-Jun 22 14:37:45 *	*** Looking up your hostname...
-Jun 22 14:37:45 *	*** Checking Ident
-Jun 22 14:37:45 *	*** Couldn't look up your hostname
-Jun 22 14:37:56 *	*** No Ident response
-Jun 22 14:37:56 *	Capabilities supported: multi-prefix
-Jun 22 14:37:56 *	Capabilities requested: multi-prefix 
-Jun 22 14:37:56 *	Capabilities acknowledged: multi-prefix
-Jun 22 14:37:56 *	*** Connected securely via TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384-256
-**** ENDING LOGGING AT Fri Jun 22 14:37:56 2018
+**** BEGIN LOGGING AT Sun Nov 25 18:42:38 2018
 
-**** BEGIN LOGGING AT Sat Aug 11 09:04:12 2018
+Nov 25 18:42:38 FiSHLiM plugin loaded
+Nov 25 18:42:38 Sysinfo plugin loaded
+Nov 25 18:42:38 Checksum plugin loaded
+Nov 25 18:42:38 *	Looking up chat.freenode.net
+Nov 25 18:42:38 *	Connecting to chat.freenode.net (107.182.226.199:6697)
+Nov 25 18:42:39 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 25 18:42:39 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 25 18:42:39 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 25 18:42:39 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 25 18:42:39 *	* Subject: /CN=livingstone.freenode.net
+Nov 25 18:42:39 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 25 18:42:39 *	* Certification info:
+Nov 25 18:42:39 *	  Subject:
+Nov 25 18:42:39 *	    CN=livingstone.freenode.net
+Nov 25 18:42:39 *	  Issuer:
+Nov 25 18:42:39 *	    C=US
+Nov 25 18:42:39 *	    O=Let's Encrypt
+Nov 25 18:42:39 *	    CN=Let's Encrypt Authority X3
+Nov 25 18:42:39 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 25 18:42:39 *	  Sign algorithm sha256WithRSAEncryption
+Nov 25 18:42:39 *	  Valid since Oct 22 05:05:19 2018 GM to Jan 20 05:05:19 2019 GM
+Nov 25 18:42:39 *	* Cipher info:
+Nov 25 18:42:39 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 25 18:42:39 *	Connected. Now logging in.
+Nov 25 18:42:39 *	*** Looking up your hostname...
+Nov 25 18:42:39 *	*** Checking Ident
+Nov 25 18:42:39 *	*** Found your hostname
+Nov 25 18:42:48 *	*** No Ident response
+Nov 25 18:42:48 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Nov 25 18:42:48 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 25 18:42:48 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 25 18:42:48 *	Authenticating via SASL as doug (PLAIN)
+Nov 25 18:42:48 *	SASL authentication failed
+Nov 25 18:42:49 *	SASL authentication failed
+Nov 25 18:42:50 *	SASL authentication aborted
+**** ENDING LOGGING AT Sun Nov 25 18:42:50 2018
 
-Aug 11 09:04:12 FiSHLiM plugin loaded
-Aug 11 09:04:12 Checksum plugin loaded
-Aug 11 09:04:12 Sysinfo plugin loaded
-Aug 11 09:04:12 *	Looking up irc.oftc.net
-Aug 11 09:04:12 *	Connecting to irc.geo.oftc.net (207.192.72.99:6697)
-Aug 11 09:04:13 *	* Certification info:
-Aug 11 09:04:13 *	  Subject:
-Aug 11 09:04:13 *	    CN=weber.oftc.net
-Aug 11 09:04:13 *	  Issuer:
-Aug 11 09:04:13 *	    C=US
-Aug 11 09:04:13 *	    O=Let's Encrypt
-Aug 11 09:04:13 *	    CN=Let's Encrypt Authority X3
-Aug 11 09:04:13 *	  Public key algorithm: rsaEncryption (2048 bits)
-Aug 11 09:04:13 *	  Sign algorithm sha256WithRSAEncryption
-Aug 11 09:04:13 *	  Valid since Jul 22 08:52:07 2018 GM to Oct 20 08:52:07 2018 GM
-Aug 11 09:04:13 *	* Cipher info:
-Aug 11 09:04:13 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
-Aug 11 09:04:13 *	Connected. Now logging in.
-Aug 11 09:04:13 *	*** Looking up your hostname...
-Aug 11 09:04:13 *	*** Checking Ident
-Aug 11 09:04:13 *	*** Found your hostname
-Aug 11 09:04:24 *	*** No Ident response
-Aug 11 09:04:24 *	Capabilities supported: multi-prefix
-Aug 11 09:04:24 *	Capabilities requested: multi-prefix 
-Aug 11 09:04:24 *	Capabilities acknowledged: multi-prefix
-Aug 11 09:04:24 *	*** Connected securely via TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384-256
-**** ENDING LOGGING AT Sat Aug 11 09:04:24 2018
+**** BEGIN LOGGING AT Sun Nov 25 18:44:33 2018
+
+Nov 25 18:44:33 FiSHLiM plugin loaded
+Nov 25 18:44:33 Sysinfo plugin loaded
+Nov 25 18:44:33 Checksum plugin loaded
+Nov 25 18:44:33 *	Looking up chat.freenode.net
+Nov 25 18:44:33 *	Connecting to chat.freenode.net (107.182.226.199:6697)
+Nov 25 18:44:34 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 25 18:44:34 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 25 18:44:34 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 25 18:44:34 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 25 18:44:34 *	* Subject: /CN=livingstone.freenode.net
+Nov 25 18:44:34 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 25 18:44:34 *	* Certification info:
+Nov 25 18:44:34 *	  Subject:
+Nov 25 18:44:34 *	    CN=livingstone.freenode.net
+Nov 25 18:44:34 *	  Issuer:
+Nov 25 18:44:34 *	    C=US
+Nov 25 18:44:34 *	    O=Let's Encrypt
+Nov 25 18:44:34 *	    CN=Let's Encrypt Authority X3
+Nov 25 18:44:34 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 25 18:44:34 *	  Sign algorithm sha256WithRSAEncryption
+Nov 25 18:44:34 *	  Valid since Oct 22 05:05:19 2018 GM to Jan 20 05:05:19 2019 GM
+Nov 25 18:44:34 *	* Cipher info:
+Nov 25 18:44:34 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 25 18:44:34 *	Connected. Now logging in.
+Nov 25 18:44:34 *	*** Looking up your hostname...
+Nov 25 18:44:34 *	*** Checking Ident
+Nov 25 18:44:34 *	*** Found your hostname
+Nov 25 18:44:43 *	*** No Ident response
+Nov 25 18:44:43 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Nov 25 18:44:43 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 25 18:44:43 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 25 18:44:43 *	Authenticating via SASL as doug (PLAIN)
+Nov 25 18:44:43 *	SASL authentication failed
+Nov 25 18:44:44 *	SASL authentication failed
+Nov 25 18:44:45 *	SASL authentication aborted
+**** ENDING LOGGING AT Sun Nov 25 18:44:45 2018
+
+**** BEGIN LOGGING AT Mon Nov 26 21:04:25 2018
+
+Nov 26 21:04:25 FiSHLiM plugin loaded
+Nov 26 21:04:25 Sysinfo plugin loaded
+Nov 26 21:04:25 Checksum plugin loaded
+Nov 26 21:04:25 *	Looking up chat.freenode.net
+Nov 26 21:04:26 *	Connecting to chat.freenode.net (149.56.134.238:6697)
+Nov 26 21:04:26 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 26 21:04:26 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 26 21:04:26 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 26 21:04:26 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 26 21:04:26 *	* Subject: /CN=cherryh.freenode.net
+Nov 26 21:04:26 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 26 21:04:27 *	* Certification info:
+Nov 26 21:04:27 *	  Subject:
+Nov 26 21:04:27 *	    CN=cherryh.freenode.net
+Nov 26 21:04:27 *	  Issuer:
+Nov 26 21:04:27 *	    C=US
+Nov 26 21:04:27 *	    O=Let's Encrypt
+Nov 26 21:04:27 *	    CN=Let's Encrypt Authority X3
+Nov 26 21:04:27 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 26 21:04:27 *	  Sign algorithm sha256WithRSAEncryption
+Nov 26 21:04:27 *	  Valid since Nov 19 05:12:03 2018 GM to Feb 17 05:12:03 2019 GM
+Nov 26 21:04:27 *	* Cipher info:
+Nov 26 21:04:27 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 26 21:04:27 *	Connected. Now logging in.
+Nov 26 21:04:27 *	*** Looking up your hostname...
+Nov 26 21:04:27 *	*** Checking Ident
+Nov 26 21:04:27 *	*** Found your hostname
+Nov 26 21:04:32 *	*** No Ident response
+Nov 26 21:04:32 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Nov 26 21:04:32 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 26 21:04:32 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 26 21:04:33 *	Authenticating via SASL as doug (PLAIN)
+Nov 26 21:04:33 *	SASL authentication failed
+Nov 26 21:04:34 *	SASL authentication failed
+Nov 26 21:04:35 *	SASL authentication aborted
+**** ENDING LOGGING AT Mon Nov 26 21:04:35 2018
+
+**** BEGIN LOGGING AT Tue Nov 27 17:36:09 2018
+
+Nov 27 17:36:09 FiSHLiM plugin loaded
+Nov 27 17:36:09 Sysinfo plugin loaded
+Nov 27 17:36:09 Checksum plugin loaded
+Nov 27 17:36:09 *	Looking up chat.freenode.net
+Nov 27 17:36:09 *	Connecting to chat.freenode.net (192.186.157.43:6697)
+Nov 27 17:36:09 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 27 17:36:09 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 27 17:36:09 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 27 17:36:09 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 27 17:36:09 *	* Subject: /CN=tepper.freenode.net
+Nov 27 17:36:09 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 27 17:36:10 *	* Certification info:
+Nov 27 17:36:10 *	  Subject:
+Nov 27 17:36:10 *	    CN=tepper.freenode.net
+Nov 27 17:36:10 *	  Issuer:
+Nov 27 17:36:10 *	    C=US
+Nov 27 17:36:10 *	    O=Let's Encrypt
+Nov 27 17:36:10 *	    CN=Let's Encrypt Authority X3
+Nov 27 17:36:10 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 27 17:36:10 *	  Sign algorithm sha256WithRSAEncryption
+Nov 27 17:36:10 *	  Valid since Nov 19 05:04:13 2018 GM to Feb 17 05:04:13 2019 GM
+Nov 27 17:36:10 *	* Cipher info:
+Nov 27 17:36:10 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 27 17:36:10 *	Connected. Now logging in.
+Nov 27 17:36:10 *	*** Looking up your hostname...
+Nov 27 17:36:10 *	*** Checking Ident
+Nov 27 17:36:10 *	*** Found your hostname
+Nov 27 17:36:17 *	*** No Ident response
+Nov 27 17:36:17 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Nov 27 17:36:17 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 27 17:36:17 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 27 17:36:18 *	Authenticating via SASL as doug (PLAIN)
+Nov 27 17:36:18 *	SASL authentication failed
+Nov 27 17:36:19 *	SASL authentication failed
+Nov 27 17:36:20 *	SASL authentication aborted
+**** ENDING LOGGING AT Tue Nov 27 17:36:20 2018
+
+**** BEGIN LOGGING AT Tue Nov 27 18:01:02 2018
+
+Nov 27 18:01:02 FiSHLiM plugin loaded
+Nov 27 18:01:02 Sysinfo plugin loaded
+Nov 27 18:01:02 Checksum plugin loaded
+Nov 27 18:01:02 *	Looking up chat.freenode.net
+Nov 27 18:01:02 *	Connecting to chat.freenode.net (107.182.226.199:6697)
+Nov 27 18:01:03 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 27 18:01:03 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 27 18:01:03 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 27 18:01:03 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 27 18:01:03 *	* Subject: /CN=livingstone.freenode.net
+Nov 27 18:01:03 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 27 18:01:03 *	* Certification info:
+Nov 27 18:01:03 *	  Subject:
+Nov 27 18:01:03 *	    CN=livingstone.freenode.net
+Nov 27 18:01:03 *	  Issuer:
+Nov 27 18:01:03 *	    C=US
+Nov 27 18:01:03 *	    O=Let's Encrypt
+Nov 27 18:01:03 *	    CN=Let's Encrypt Authority X3
+Nov 27 18:01:03 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 27 18:01:03 *	  Sign algorithm sha256WithRSAEncryption
+Nov 27 18:01:03 *	  Valid since Oct 22 05:05:19 2018 GM to Jan 20 05:05:19 2019 GM
+Nov 27 18:01:03 *	* Cipher info:
+Nov 27 18:01:03 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 27 18:01:03 *	Connected. Now logging in.
+Nov 27 18:01:03 *	*** Looking up your hostname...
+Nov 27 18:01:03 *	*** Checking Ident
+Nov 27 18:01:04 *	*** Found your hostname
+Nov 27 18:01:11 *	*** No Ident response
+Nov 27 18:01:11 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Nov 27 18:01:11 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 27 18:01:11 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 27 18:01:11 *	Authenticating via SASL as doug (PLAIN)
+Nov 27 18:01:11 *	SASL authentication failed
+Nov 27 18:01:12 *	SASL authentication failed
+Nov 27 18:01:13 *	SASL authentication aborted
+**** ENDING LOGGING AT Tue Nov 27 18:01:13 2018
+
+**** BEGIN LOGGING AT Tue Nov 27 18:31:45 2018
+
+Nov 27 18:31:45 FiSHLiM plugin loaded
+Nov 27 18:31:45 Sysinfo plugin loaded
+Nov 27 18:31:45 Checksum plugin loaded
+Nov 27 18:31:45 *	Looking up chat.freenode.net
+Nov 27 18:31:45 *	Connecting to chat.freenode.net (192.186.157.43:6697)
+Nov 27 18:31:45 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 27 18:31:45 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 27 18:31:45 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 27 18:31:45 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 27 18:31:45 *	* Subject: /CN=tepper.freenode.net
+Nov 27 18:31:45 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 27 18:31:46 *	* Certification info:
+Nov 27 18:31:46 *	  Subject:
+Nov 27 18:31:46 *	    CN=tepper.freenode.net
+Nov 27 18:31:46 *	  Issuer:
+Nov 27 18:31:46 *	    C=US
+Nov 27 18:31:46 *	    O=Let's Encrypt
+Nov 27 18:31:46 *	    CN=Let's Encrypt Authority X3
+Nov 27 18:31:46 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 27 18:31:46 *	  Sign algorithm sha256WithRSAEncryption
+Nov 27 18:31:46 *	  Valid since Nov 19 05:04:13 2018 GM to Feb 17 05:04:13 2019 GM
+Nov 27 18:31:46 *	* Cipher info:
+Nov 27 18:31:46 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 27 18:31:46 *	Connected. Now logging in.
+Nov 27 18:31:46 *	*** Looking up your hostname...
+Nov 27 18:31:46 *	*** Checking Ident
+Nov 27 18:31:46 *	*** Found your hostname
+Nov 27 18:31:52 *	*** No Ident response
+Nov 27 18:31:52 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Nov 27 18:31:52 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 27 18:31:52 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 27 18:31:52 *	Authenticating via SASL as doug (PLAIN)
+Nov 27 18:31:53 *	SASL authentication failed
+Nov 27 18:31:54 *	SASL authentication failed
+Nov 27 18:31:55 *	SASL authentication aborted
+**** ENDING LOGGING AT Tue Nov 27 18:31:55 2018
+
+**** BEGIN LOGGING AT Tue Nov 27 20:17:08 2018
+
+Nov 27 20:17:08 FiSHLiM plugin loaded
+Nov 27 20:17:08 Sysinfo plugin loaded
+Nov 27 20:17:08 Checksum plugin loaded
+Nov 27 20:17:08 *	Looking up chat.freenode.net
+Nov 27 20:17:08 *	Connecting to chat.freenode.net (130.239.18.119:6697)
+Nov 27 20:17:09 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 27 20:17:09 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 27 20:17:09 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 27 20:17:09 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 27 20:17:09 *	* Subject: /CN=leguin.freenode.net
+Nov 27 20:17:09 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 27 20:17:09 *	* Certification info:
+Nov 27 20:17:09 *	  Subject:
+Nov 27 20:17:09 *	    CN=leguin.freenode.net
+Nov 27 20:17:09 *	  Issuer:
+Nov 27 20:17:09 *	    C=US
+Nov 27 20:17:09 *	    O=Let's Encrypt
+Nov 27 20:17:09 *	    CN=Let's Encrypt Authority X3
+Nov 27 20:17:09 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 27 20:17:09 *	  Sign algorithm sha256WithRSAEncryption
+Nov 27 20:17:09 *	  Valid since Oct 15 05:02:41 2018 GM to Jan 13 05:02:41 2019 GM
+Nov 27 20:17:09 *	* Cipher info:
+Nov 27 20:17:09 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 27 20:17:09 *	Connected. Now logging in.
+Nov 27 20:17:09 *	*** Looking up your hostname...
+Nov 27 20:17:09 *	*** Checking Ident
+Nov 27 20:17:09 *	*** Found your hostname
+Nov 27 20:17:15 *	*** No Ident response
+Nov 27 20:17:15 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Nov 27 20:17:15 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 27 20:17:15 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Nov 27 20:17:15 *	Authenticating via SASL as doug (PLAIN)
+Nov 27 20:17:16 *	SASL authentication failed
+Nov 27 20:17:17 *	SASL authentication failed
+Nov 27 20:17:18 *	SASL authentication aborted
+**** ENDING LOGGING AT Tue Nov 27 20:17:18 2018
+
+**** BEGIN LOGGING AT Thu Dec  6 18:47:05 2018
+
+Dec 06 18:47:05 FiSHLiM plugin loaded
+Dec 06 18:47:05 Sysinfo plugin loaded
+Dec 06 18:47:05 Checksum plugin loaded
+Dec 06 18:47:05 *	Looking up chat.freenode.net
+Dec 06 18:47:05 *	Connecting to chat.freenode.net (130.185.232.126:6697)
+Dec 06 18:47:06 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 06 18:47:06 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 06 18:47:06 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Dec 06 18:47:06 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 06 18:47:06 *	* Subject: /CN=hitchcock.freenode.net
+Dec 06 18:47:06 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Dec 06 18:47:06 *	* Certification info:
+Dec 06 18:47:06 *	  Subject:
+Dec 06 18:47:06 *	    CN=hitchcock.freenode.net
+Dec 06 18:47:06 *	  Issuer:
+Dec 06 18:47:06 *	    C=US
+Dec 06 18:47:06 *	    O=Let's Encrypt
+Dec 06 18:47:06 *	    CN=Let's Encrypt Authority X3
+Dec 06 18:47:06 *	  Public key algorithm: rsaEncryption (4096 bits)
+Dec 06 18:47:06 *	  Sign algorithm sha256WithRSAEncryption
+Dec 06 18:47:06 *	  Valid since Oct 22 05:02:52 2018 GM to Jan 20 05:02:52 2019 GM
+Dec 06 18:47:06 *	* Cipher info:
+Dec 06 18:47:06 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Dec 06 18:47:06 *	Connected. Now logging in.
+Dec 06 18:47:06 *	*** Looking up your hostname...
+Dec 06 18:47:06 *	*** Checking Ident
+Dec 06 18:47:06 *	*** Found your hostname
+Dec 06 18:47:14 *	*** No Ident response
+Dec 06 18:47:14 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Dec 06 18:47:14 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Dec 06 18:47:14 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Dec 06 18:47:14 *	Authenticating via SASL as doug (PLAIN)
+Dec 06 18:47:14 *	SASL authentication failed
+Dec 06 18:47:15 *	SASL authentication failed
+Dec 06 18:47:16 *	SASL authentication aborted
+**** ENDING LOGGING AT Thu Dec  6 18:47:16 2018
+
+**** BEGIN LOGGING AT Tue Dec 11 07:40:50 2018
+
+Dec 11 07:40:50 FiSHLiM plugin loaded
+Dec 11 07:40:50 Sysinfo plugin loaded
+Dec 11 07:40:50 Checksum plugin loaded
+Dec 11 07:40:50 *	Looking up chat.freenode.net
+Dec 11 07:40:50 *	Connecting to chat.freenode.net (38.229.70.22:6697)
+Dec 11 07:40:50 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 11 07:40:50 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 11 07:40:50 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Dec 11 07:40:50 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 11 07:40:50 *	* Subject: /CN=card.freenode.net
+Dec 11 07:40:50 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Dec 11 07:40:51 *	* Certification info:
+Dec 11 07:40:51 *	  Subject:
+Dec 11 07:40:51 *	    CN=card.freenode.net
+Dec 11 07:40:51 *	  Issuer:
+Dec 11 07:40:51 *	    C=US
+Dec 11 07:40:51 *	    O=Let's Encrypt
+Dec 11 07:40:51 *	    CN=Let's Encrypt Authority X3
+Dec 11 07:40:51 *	  Public key algorithm: rsaEncryption (4096 bits)
+Dec 11 07:40:51 *	  Sign algorithm sha256WithRSAEncryption
+Dec 11 07:40:51 *	  Valid since Nov 19 05:02:58 2018 GM to Feb 17 05:02:58 2019 GM
+Dec 11 07:40:51 *	* Cipher info:
+Dec 11 07:40:51 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Dec 11 07:40:51 *	Connected. Now logging in.
+Dec 11 07:40:51 *	*** Looking up your hostname...
+Dec 11 07:40:51 *	*** Checking Ident
+Dec 11 07:40:51 *	*** Found your hostname
+Dec 11 07:40:56 *	*** No Ident response
+Dec 11 07:40:56 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Dec 11 07:40:56 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Dec 11 07:40:56 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Dec 11 07:40:57 *	Authenticating via SASL as doug (PLAIN)
+Dec 11 07:40:57 *	SASL authentication failed
+Dec 11 07:40:58 *	SASL authentication failed
+Dec 11 07:40:59 *	SASL authentication aborted
+**** ENDING LOGGING AT Tue Dec 11 07:40:59 2018
+
+**** BEGIN LOGGING AT Thu Feb 28 09:56:15 2019
+
+Feb 28 09:56:15 FiSHLiM plugin loaded
+Feb 28 09:56:15 Sysinfo plugin loaded
+Feb 28 09:56:15 Checksum plugin loaded
+Feb 28 09:56:15 *	Looking up chat.freenode.net
+Feb 28 09:56:15 *	Connecting to chat.freenode.net (107.182.226.199:6697)
+Feb 28 09:56:16 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Feb 28 09:56:16 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Feb 28 09:56:16 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Feb 28 09:56:16 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Feb 28 09:56:16 *	* Subject: /CN=livingstone.freenode.net
+Feb 28 09:56:16 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Feb 28 09:56:16 *	* Certification info:
+Feb 28 09:56:16 *	  Subject:
+Feb 28 09:56:16 *	    CN=livingstone.freenode.net
+Feb 28 09:56:16 *	  Issuer:
+Feb 28 09:56:16 *	    C=US
+Feb 28 09:56:16 *	    O=Let's Encrypt
+Feb 28 09:56:16 *	    CN=Let's Encrypt Authority X3
+Feb 28 09:56:16 *	  Public key algorithm: rsaEncryption (4096 bits)
+Feb 28 09:56:16 *	  Sign algorithm sha256WithRSAEncryption
+Feb 28 09:56:16 *	  Valid since Feb 25 05:08:23 2019 GM to May 26 05:08:23 2019 GM
+Feb 28 09:56:16 *	* Cipher info:
+Feb 28 09:56:16 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Feb 28 09:56:16 *	Connected. Now logging in.
+Feb 28 09:56:16 *	*** Looking up your hostname...
+Feb 28 09:56:16 *	*** Checking Ident
+Feb 28 09:56:19 *	*** Found your hostname
+Feb 28 09:56:23 *	*** No Ident response
+Feb 28 09:56:23 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Feb 28 09:56:23 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Feb 28 09:56:23 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Feb 28 09:56:24 *	Authenticating via SASL as doug (PLAIN)
+Feb 28 09:56:24 *	SASL authentication failed
+Feb 28 09:56:25 *	SASL authentication failed
+Feb 28 09:56:26 *	SASL authentication aborted
+**** ENDING LOGGING AT Thu Feb 28 09:56:26 2019
+
+**** BEGIN LOGGING AT Fri Mar  1 15:08:33 2019
+
+Mar 01 15:08:33 FiSHLiM plugin loaded
+Mar 01 15:08:33 Sysinfo plugin loaded
+Mar 01 15:08:33 Checksum plugin loaded
+Mar 01 15:08:33 *	Looking up chat.freenode.net
+Mar 01 15:08:33 *	Connecting to chat.freenode.net (195.154.200.232:6697)
+Mar 01 15:08:34 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 01 15:08:34 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 01 15:08:34 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Mar 01 15:08:34 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 01 15:08:34 *	* Subject: /CN=barjavel.freenode.net
+Mar 01 15:08:34 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Mar 01 15:08:34 *	* Certification info:
+Mar 01 15:08:34 *	  Subject:
+Mar 01 15:08:34 *	    CN=barjavel.freenode.net
+Mar 01 15:08:34 *	  Issuer:
+Mar 01 15:08:34 *	    C=US
+Mar 01 15:08:34 *	    O=Let's Encrypt
+Mar 01 15:08:34 *	    CN=Let's Encrypt Authority X3
+Mar 01 15:08:34 *	  Public key algorithm: rsaEncryption (4096 bits)
+Mar 01 15:08:34 *	  Sign algorithm sha256WithRSAEncryption
+Mar 01 15:08:34 *	  Valid since Feb 18 05:01:35 2019 GM to May 19 05:01:35 2019 GM
+Mar 01 15:08:34 *	* Cipher info:
+Mar 01 15:08:34 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Mar 01 15:08:34 *	Connected. Now logging in.
+Mar 01 15:08:34 *	*** Looking up your hostname...
+Mar 01 15:08:34 *	*** Checking Ident
+Mar 01 15:08:34 *	*** Found your hostname
+Mar 01 15:08:41 *	*** No Ident response
+Mar 01 15:08:41 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Mar 01 15:08:41 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Mar 01 15:08:41 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Mar 01 15:08:41 *	Authenticating via SASL as doug (PLAIN)
+Mar 01 15:08:42 *	SASL authentication failed
+Mar 01 15:08:43 *	SASL authentication failed
+Mar 01 15:08:44 *	SASL authentication aborted
+**** ENDING LOGGING AT Fri Mar  1 15:08:44 2019
+
+**** BEGIN LOGGING AT Wed Mar 13 15:47:04 2019
+
+Mar 13 15:47:04 FiSHLiM plugin loaded
+Mar 13 15:47:04 Sysinfo plugin loaded
+Mar 13 15:47:04 Checksum plugin loaded
+Mar 13 15:47:04 *	Looking up chat.freenode.net
+Mar 13 15:47:04 *	Connecting to chat.freenode.net (195.154.200.232:6697)
+Mar 13 15:47:05 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 13 15:47:05 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 13 15:47:05 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Mar 13 15:47:05 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 13 15:47:05 *	* Subject: /CN=barjavel.freenode.net
+Mar 13 15:47:05 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Mar 13 15:47:05 *	* Certification info:
+Mar 13 15:47:05 *	  Subject:
+Mar 13 15:47:05 *	    CN=barjavel.freenode.net
+Mar 13 15:47:05 *	  Issuer:
+Mar 13 15:47:05 *	    C=US
+Mar 13 15:47:05 *	    O=Let's Encrypt
+Mar 13 15:47:05 *	    CN=Let's Encrypt Authority X3
+Mar 13 15:47:05 *	  Public key algorithm: rsaEncryption (4096 bits)
+Mar 13 15:47:05 *	  Sign algorithm sha256WithRSAEncryption
+Mar 13 15:47:05 *	  Valid since Feb 18 05:01:35 2019 GM to May 19 05:01:35 2019 GM
+Mar 13 15:47:05 *	* Cipher info:
+Mar 13 15:47:05 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Mar 13 15:47:05 *	Connected. Now logging in.
+Mar 13 15:47:05 *	*** Looking up your hostname...
+Mar 13 15:47:05 *	*** Checking Ident
+Mar 13 15:47:05 *	*** Found your hostname
+Mar 13 15:47:13 *	*** No Ident response
+Mar 13 15:47:13 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Mar 13 15:47:13 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Mar 13 15:47:13 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Mar 13 15:47:13 *	Authenticating via SASL as doug (PLAIN)
+Mar 13 15:47:14 *	SASL authentication failed
+Mar 13 15:47:15 *	SASL authentication failed
+Mar 13 15:47:16 *	SASL authentication aborted
+**** ENDING LOGGING AT Wed Mar 13 15:47:16 2019
+
+**** BEGIN LOGGING AT Tue Mar 19 16:46:34 2019
+
+Mar 19 16:46:34 FiSHLiM plugin loaded
+Mar 19 16:46:34 Sysinfo plugin loaded
+Mar 19 16:46:34 Checksum plugin loaded
+Mar 19 16:46:34 *	Looking up chat.freenode.net
+Mar 19 16:46:34 *	Connecting to chat.freenode.net (185.30.166.37:6697)
+Mar 19 16:46:35 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 19 16:46:35 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 19 16:46:35 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Mar 19 16:46:35 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 19 16:46:35 *	* Subject: /CN=orwell.freenode.net
+Mar 19 16:46:35 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Mar 19 16:46:35 *	* Certification info:
+Mar 19 16:46:35 *	  Subject:
+Mar 19 16:46:35 *	    CN=orwell.freenode.net
+Mar 19 16:46:35 *	  Issuer:
+Mar 19 16:46:35 *	    C=US
+Mar 19 16:46:35 *	    O=Let's Encrypt
+Mar 19 16:46:35 *	    CN=Let's Encrypt Authority X3
+Mar 19 16:46:35 *	  Public key algorithm: rsaEncryption (4096 bits)
+Mar 19 16:46:35 *	  Sign algorithm sha256WithRSAEncryption
+Mar 19 16:46:35 *	  Valid since Feb 18 05:05:55 2019 GM to May 19 05:05:55 2019 GM
+Mar 19 16:46:35 *	* Cipher info:
+Mar 19 16:46:35 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Mar 19 16:46:35 *	Connected. Now logging in.
+Mar 19 16:46:35 *	*** Looking up your hostname...
+Mar 19 16:46:35 *	*** Checking Ident
+Mar 19 16:46:35 *	*** Found your hostname
+Mar 19 16:46:40 *	*** No Ident response
+Mar 19 16:46:40 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Mar 19 16:46:40 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Mar 19 16:46:40 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Mar 19 16:46:40 *	Authenticating via SASL as doug (PLAIN)
+Mar 19 16:46:40 *	SASL authentication failed
+Mar 19 16:46:42 *	SASL authentication failed
+Mar 19 16:46:42 *	SASL authentication aborted
+**** ENDING LOGGING AT Tue Mar 19 16:46:42 2019
+
+**** BEGIN LOGGING AT Tue Mar 19 17:06:15 2019
+
+Mar 19 17:06:15 FiSHLiM plugin loaded
+Mar 19 17:06:15 Sysinfo plugin loaded
+Mar 19 17:06:15 Checksum plugin loaded
+Mar 19 17:06:15 *	Looking up chat.freenode.net
+Mar 19 17:06:15 *	Connecting to chat.freenode.net (195.154.200.232:6697)
+Mar 19 17:06:15 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 19 17:06:15 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 19 17:06:15 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Mar 19 17:06:15 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 19 17:06:15 *	* Subject: /CN=barjavel.freenode.net
+Mar 19 17:06:15 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Mar 19 17:06:16 *	* Certification info:
+Mar 19 17:06:16 *	  Subject:
+Mar 19 17:06:16 *	    CN=barjavel.freenode.net
+Mar 19 17:06:16 *	  Issuer:
+Mar 19 17:06:16 *	    C=US
+Mar 19 17:06:16 *	    O=Let's Encrypt
+Mar 19 17:06:16 *	    CN=Let's Encrypt Authority X3
+Mar 19 17:06:16 *	  Public key algorithm: rsaEncryption (4096 bits)
+Mar 19 17:06:16 *	  Sign algorithm sha256WithRSAEncryption
+Mar 19 17:06:16 *	  Valid since Feb 18 05:01:35 2019 GM to May 19 05:01:35 2019 GM
+Mar 19 17:06:16 *	* Cipher info:
+Mar 19 17:06:16 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Mar 19 17:06:16 *	Connected. Now logging in.
+Mar 19 17:06:16 *	*** Looking up your hostname...
+Mar 19 17:06:16 *	*** Checking Ident
+Mar 19 17:06:16 *	*** Found your hostname
+Mar 19 17:06:23 *	*** No Ident response
+Mar 19 17:06:23 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Mar 19 17:06:23 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Mar 19 17:06:23 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Mar 19 17:06:23 *	Authenticating via SASL as doug (PLAIN)
+Mar 19 17:06:23 *	SASL authentication failed
+Mar 19 17:06:24 *	SASL authentication failed
+Mar 19 17:06:25 *	SASL authentication aborted
+**** ENDING LOGGING AT Tue Mar 19 17:06:25 2019
+
+**** BEGIN LOGGING AT Tue Mar 19 17:07:34 2019
+
+Mar 19 17:07:34 FiSHLiM plugin loaded
+Mar 19 17:07:34 Sysinfo plugin loaded
+Mar 19 17:07:34 Checksum plugin loaded
+Mar 19 17:07:34 *	Looking up chat.freenode.net
+Mar 19 17:07:34 *	Connecting to chat.freenode.net (104.200.152.162:6697)
+Mar 19 17:07:35 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 19 17:07:35 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 19 17:07:35 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Mar 19 17:07:35 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 19 17:07:35 *	* Subject: /CN=asimov.freenode.net
+Mar 19 17:07:35 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Mar 19 17:07:35 *	* Certification info:
+Mar 19 17:07:35 *	  Subject:
+Mar 19 17:07:35 *	    CN=asimov.freenode.net
+Mar 19 17:07:35 *	  Issuer:
+Mar 19 17:07:35 *	    C=US
+Mar 19 17:07:35 *	    O=Let's Encrypt
+Mar 19 17:07:35 *	    CN=Let's Encrypt Authority X3
+Mar 19 17:07:35 *	  Public key algorithm: rsaEncryption (4096 bits)
+Mar 19 17:07:35 *	  Sign algorithm sha256WithRSAEncryption
+Mar 19 17:07:35 *	  Valid since Jan 21 05:08:37 2019 GM to Apr 21 05:08:37 2019 GM
+Mar 19 17:07:35 *	* Cipher info:
+Mar 19 17:07:35 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Mar 19 17:07:35 *	Connected. Now logging in.
+Mar 19 17:07:35 *	*** Looking up your hostname...
+Mar 19 17:07:35 *	*** Checking Ident
+Mar 19 17:07:35 *	*** Found your hostname
+Mar 19 17:07:41 *	*** No Ident response
+Mar 19 17:07:41 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Mar 19 17:07:41 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Mar 19 17:07:41 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Mar 19 17:07:41 *	Authenticating via SASL as doug (PLAIN)
+Mar 19 17:07:42 *	SASL authentication failed
+Mar 19 17:07:42 *	SASL authentication failed
+Mar 19 17:07:43 *	SASL authentication aborted
+**** ENDING LOGGING AT Tue Mar 19 17:07:43 2019
+
+**** BEGIN LOGGING AT Tue Mar 19 17:19:20 2019
+
+Mar 19 17:19:20 FiSHLiM plugin loaded
+Mar 19 17:19:20 Sysinfo plugin loaded
+Mar 19 17:19:20 Checksum plugin loaded
+Mar 19 17:19:20 *	Looking up chat.freenode.net
+Mar 19 17:19:20 *	Connecting to chat.freenode.net (130.185.232.126:6697)
+Mar 19 17:19:21 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 19 17:19:21 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 19 17:19:21 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Mar 19 17:19:21 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 19 17:19:21 *	* Subject: /CN=hitchcock.freenode.net
+Mar 19 17:19:21 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Mar 19 17:19:21 *	* Certification info:
+Mar 19 17:19:21 *	  Subject:
+Mar 19 17:19:21 *	    CN=hitchcock.freenode.net
+Mar 19 17:19:21 *	  Issuer:
+Mar 19 17:19:21 *	    C=US
+Mar 19 17:19:21 *	    O=Let's Encrypt
+Mar 19 17:19:21 *	    CN=Let's Encrypt Authority X3
+Mar 19 17:19:21 *	  Public key algorithm: rsaEncryption (4096 bits)
+Mar 19 17:19:21 *	  Sign algorithm sha256WithRSAEncryption
+Mar 19 17:19:21 *	  Valid since Mar 18 05:01:32 2019 GM to Jun 16 05:01:32 2019 GM
+Mar 19 17:19:21 *	* Cipher info:
+Mar 19 17:19:21 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Mar 19 17:19:21 *	Connected. Now logging in.
+Mar 19 17:19:21 *	*** Looking up your hostname...
+Mar 19 17:19:21 *	*** Checking Ident
+Mar 19 17:19:21 *	*** Found your hostname
+Mar 19 17:19:28 *	*** No Ident response
+Mar 19 17:19:28 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Mar 19 17:19:28 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Mar 19 17:19:28 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Mar 19 17:19:29 *	Authenticating via SASL as doug (PLAIN)
+Mar 19 17:19:29 *	SASL authentication failed
+Mar 19 17:19:30 *	SASL authentication failed
+Mar 19 17:19:31 *	SASL authentication aborted
+**** ENDING LOGGING AT Tue Mar 19 17:19:31 2019
+
+**** BEGIN LOGGING AT Sat Mar 23 21:20:29 2019
+
+Mar 23 21:20:29 FiSHLiM plugin loaded
+Mar 23 21:20:29 Sysinfo plugin loaded
+Mar 23 21:20:29 Checksum plugin loaded
+**** BEGIN LOGGING AT Sat Mar 23 21:29:05 2019
+
+Mar 23 21:29:05 FiSHLiM plugin loaded
+Mar 23 21:29:05 Sysinfo plugin loaded
+Mar 23 21:29:05 Checksum plugin loaded
+Mar 23 21:29:05 *	Looking up irc.oftc.net
+Mar 23 21:29:05 *	Connecting to irc.geo.oftc.net (140.211.166.64:6697)
+Mar 23 21:29:06 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 23 21:29:06 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 23 21:29:06 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Mar 23 21:29:06 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 23 21:29:06 *	* Subject: /CN=larich.oftc.net
+Mar 23 21:29:06 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Mar 23 21:29:06 *	* Certification info:
+Mar 23 21:29:06 *	  Subject:
+Mar 23 21:29:06 *	    CN=larich.oftc.net
+Mar 23 21:29:06 *	  Issuer:
+Mar 23 21:29:06 *	    C=US
+Mar 23 21:29:06 *	    O=Let's Encrypt
+Mar 23 21:29:06 *	    CN=Let's Encrypt Authority X3
+Mar 23 21:29:06 *	  Public key algorithm: rsaEncryption (2048 bits)
+Mar 23 21:29:06 *	  Sign algorithm sha256WithRSAEncryption
+Mar 23 21:29:06 *	  Valid since Mar  8 10:39:59 2019 GM to Jun  6 10:39:59 2019 GM
+Mar 23 21:29:06 *	* Cipher info:
+Mar 23 21:29:06 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Mar 23 21:29:06 *	Connected. Now logging in.
+Mar 23 21:29:06 *	*** Looking up your hostname...
+Mar 23 21:29:06 *	*** Checking Ident
+Mar 23 21:29:06 *	*** Found your hostname
+Mar 23 21:29:17 *	*** No Ident response
+Mar 23 21:29:17 *	Capabilities supported: multi-prefix
+Mar 23 21:29:17 *	Capabilities requested: multi-prefix 
+Mar 23 21:29:17 *	Capabilities acknowledged: multi-prefix
+Mar 23 21:29:17 *	*** Connected securely via TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384-256
+**** ENDING LOGGING AT Sat Mar 23 21:29:17 2019
+
+**** BEGIN LOGGING AT Thu May 16 21:43:05 2019
+
+May 16 21:43:05 FiSHLiM plugin loaded
+May 16 21:43:05 Sysinfo plugin loaded
+May 16 21:43:05 Checksum plugin loaded
+May 16 21:43:05 *	Looking up chat.freenode.net
+May 16 21:43:05 *	Connecting to chat.freenode.net (38.229.70.22:6697)
+May 16 21:43:06 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+May 16 21:43:06 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+May 16 21:43:06 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+May 16 21:43:06 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+May 16 21:43:06 *	* Subject: /CN=card.freenode.net
+May 16 21:43:06 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+May 16 21:43:06 *	* Certification info:
+May 16 21:43:06 *	  Subject:
+May 16 21:43:06 *	    CN=card.freenode.net
+May 16 21:43:06 *	  Issuer:
+May 16 21:43:06 *	    C=US
+May 16 21:43:06 *	    O=Let's Encrypt
+May 16 21:43:06 *	    CN=Let's Encrypt Authority X3
+May 16 21:43:06 *	  Public key algorithm: rsaEncryption (4096 bits)
+May 16 21:43:06 *	  Sign algorithm sha256WithRSAEncryption
+May 16 21:43:06 *	  Valid since Apr  1 05:03:08 2019 GM to Jun 30 05:03:08 2019 GM
+May 16 21:43:06 *	* Cipher info:
+May 16 21:43:06 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+May 16 21:43:06 *	Connected. Now logging in.
+May 16 21:43:06 *	*** Looking up your hostname...
+May 16 21:43:06 *	*** Checking Ident
+May 16 21:43:06 *	*** Found your hostname
+May 16 21:43:12 *	*** No Ident response
+May 16 21:43:12 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+May 16 21:43:12 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+May 16 21:43:12 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+May 16 21:43:13 *	Authenticating via SASL as doug (PLAIN)
+May 16 21:43:13 *	SASL authentication failed
+May 16 21:43:13 *	SASL authentication failed
+May 16 21:43:14 *	SASL authentication aborted
+**** ENDING LOGGING AT Thu May 16 21:43:14 2019
+
+**** BEGIN LOGGING AT Mon Nov  4 08:50:33 2019
+
+Nov 04 08:50:33 FiSHLiM plugin loaded
+Nov 04 08:50:33 Sysinfo plugin loaded
+Nov 04 08:50:33 Checksum plugin loaded
+Nov 04 08:50:33 *	Looking up chat.freenode.net
+Nov 04 08:50:33 *	Connecting to chat.freenode.net (139.162.227.51:6697)
+Nov 04 08:50:34 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 04 08:50:34 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 04 08:50:34 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 04 08:50:34 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 04 08:50:34 *	* Subject: /CN=niven.freenode.net
+Nov 04 08:50:34 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 04 08:50:34 *	* Certification info:
+Nov 04 08:50:34 *	  Subject:
+Nov 04 08:50:34 *	    CN=niven.freenode.net
+Nov 04 08:50:34 *	  Issuer:
+Nov 04 08:50:34 *	    C=US
+Nov 04 08:50:34 *	    O=Let's Encrypt
+Nov 04 08:50:34 *	    CN=Let's Encrypt Authority X3
+Nov 04 08:50:34 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 04 08:50:34 *	  Sign algorithm sha256WithRSAEncryption
+Nov 04 08:50:34 *	  Valid since Oct 14 05:01:57 2019 GM to Jan 12 05:01:57 2020 GM
+Nov 04 08:50:34 *	* Cipher info:
+Nov 04 08:50:34 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 04 08:50:34 *	Connected. Now logging in.
+Nov 04 08:50:34 *	*** Looking up your hostname...
+Nov 04 08:50:34 *	*** Checking Ident
+Nov 04 08:50:34 *	*** Found your hostname
+Nov 04 08:50:43 *	*** No Ident response
+Nov 04 08:50:44 *	Capabilities supported: account-notify away-notify cap-notify chghost extended-join identify-msg multi-prefix sasl tls
+Nov 04 08:50:44 *	Capabilities requested: account-notify away-notify cap-notify chghost extended-join identify-msg multi-prefix sasl 
+Nov 04 08:50:44 *	Capabilities acknowledged: account-notify away-notify cap-notify chghost extended-join identify-msg multi-prefix sasl 
+Nov 04 08:50:44 *	Authenticating via SASL as doug (PLAIN)
+Nov 04 08:50:44 *	SASL authentication failed
+Nov 04 08:50:44 *	SASL authentication failed
+Nov 04 08:50:45 *	SASL authentication aborted
+**** ENDING LOGGING AT Mon Nov  4 08:50:45 2019
 

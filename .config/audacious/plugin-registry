@@ -1,6 +1,6 @@
 format 11
 transport /usr/lib/audacious/Transport/gio.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name GIO Plugin
@@ -14,7 +14,7 @@ scheme sftp
 scheme smb
 scheme mtp
 transport /usr/lib/audacious/Transport/mms.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name MMS Plugin
@@ -25,7 +25,7 @@ config 0
 enabled 1
 scheme mms
 transport /usr/lib/audacious/Transport/neon.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Neon HTTP/HTTPS Plugin
@@ -37,7 +37,7 @@ enabled 1
 scheme http
 scheme https
 playlist /usr/lib/audacious/Container/asx.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name ASXv1/ASXv2 Playlists
@@ -49,7 +49,7 @@ enabled 1
 ext asx
 saves 0
 playlist /usr/lib/audacious/Container/asx3.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name ASXv3 Playlists
@@ -61,7 +61,7 @@ enabled 1
 ext asx
 saves 1
 playlist /usr/lib/audacious/Container/audpl.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Audacious Playlists (audpl)
@@ -72,8 +72,20 @@ config 0
 enabled 1
 ext audpl
 saves 1
+playlist /usr/lib/audacious/Container/cue.so
+stamp 1568412412
+version 48
+flags 0
+name Cue Sheet Plugin
+domain audacious-plugins
+priority 0
+about 0
+config 0
+enabled 1
+ext cue
+saves 0
 playlist /usr/lib/audacious/Container/m3u.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name M3U Playlists
@@ -86,7 +98,7 @@ ext m3u
 ext m3u8
 saves 1
 playlist /usr/lib/audacious/Container/pls.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name PLS Playlists
@@ -98,7 +110,7 @@ enabled 1
 ext pls
 saves 1
 playlist /usr/lib/audacious/Container/xspf.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name XML Shareable Playlists (XSPF)
@@ -110,7 +122,7 @@ enabled 1
 ext xspf
 saves 1
 input /usr/lib/audacious/Input/xsf.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name 2SF Decoder
@@ -124,7 +136,7 @@ scheme mini2sf
 subtunes 0
 writes 0
 input /usr/lib/audacious/Input/aac-raw.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name AAC (Raw) Decoder
@@ -136,54 +148,8 @@ enabled 1
 scheme aac
 subtunes 0
 writes 0
-input /usr/lib/audacious/Input/adplug.so
-stamp 1530466218
-version 48
-flags 0
-name AdPlug (AdLib Player)
-domain audacious-plugins
-priority 0
-about 0
-config 0
-enabled 1
-scheme a2m
-scheme adl
-scheme amd
-scheme bam
-scheme cff
-scheme cmf
-scheme d00
-scheme dfm
-scheme dmo
-scheme dro
-scheme dtm
-scheme hsc
-scheme hsp
-scheme ins
-scheme jbm
-scheme ksm
-scheme laa
-scheme lds
-scheme m
-scheme mad
-scheme mkj
-scheme msc
-scheme rad
-scheme raw
-scheme rix
-scheme rol
-scheme s3m
-scheme sa2
-scheme sat
-scheme sci
-scheme sng
-scheme wlf
-scheme xad
-scheme xsm
-subtunes 0
-writes 0
 input /usr/lib/audacious/Input/amidi-plug.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name AMIDI-Plug (MIDI Player)
@@ -199,7 +165,7 @@ scheme rmid
 subtunes 0
 writes 0
 input /usr/lib/audacious/Input/cdaudio-ng.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Audio CD Plugin
@@ -212,7 +178,7 @@ mime cdda
 subtunes 2
 writes 0
 input /usr/lib/audacious/Input/console.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Game Console Music Decoder
@@ -235,7 +201,7 @@ scheme vgz
 subtunes 2
 writes 0
 input /usr/lib/audacious/Input/modplug.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name ModPlug (Module Player)
@@ -267,7 +233,7 @@ scheme ft2
 subtunes 2
 writes 0
 input /usr/lib/audacious/Input/madplug.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name MPG123 Plugin
@@ -283,7 +249,7 @@ scheme bmu
 subtunes 0
 writes 1
 input /usr/lib/audacious/Input/psf2.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name OpenPSF PSF1/PSF2 Decoder
@@ -301,7 +267,7 @@ scheme spx
 subtunes 0
 writes 0
 input /usr/lib/audacious/Input/metronom.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Tact Generator
@@ -314,7 +280,7 @@ mime tact
 subtunes 0
 writes 0
 input /usr/lib/audacious/Input/tonegen.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Tone Generator
@@ -327,7 +293,7 @@ mime tone
 subtunes 0
 writes 0
 input /usr/lib/audacious/Input/vtx.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name VTX Decoder
@@ -340,7 +306,7 @@ scheme vtx
 subtunes 0
 writes 0
 input /usr/lib/audacious/Input/wavpack.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name WavPack Decoder
@@ -353,7 +319,7 @@ scheme wv
 subtunes 0
 writes 1
 input /usr/lib/audacious/Input/flacng.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name FLAC Decoder
@@ -367,7 +333,7 @@ scheme fla
 subtunes 0
 writes 1
 input /usr/lib/audacious/Input/vorbis.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Ogg Vorbis Decoder
@@ -382,8 +348,22 @@ scheme oga
 ext application/ogg
 subtunes 0
 writes 1
+input /usr/lib/audacious/Input/sid.so
+stamp 1568412412
+version 48
+flags 0
+name SID Player
+domain audacious-plugins
+priority 5
+about 0
+config 1
+enabled 1
+scheme sid
+scheme psid
+subtunes 2
+writes 0
 input /usr/lib/audacious/Input/sndfile.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Sndfile Plugin
@@ -399,7 +379,7 @@ scheme wav
 subtunes 0
 writes 0
 input /usr/lib/audacious/Input/ffaudio.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name FFmpeg Plugin
@@ -420,6 +400,7 @@ scheme ape
 scheme dts
 scheme vqf
 scheme m4a
+scheme m4v
 scheme mp4
 scheme wav
 scheme ogg
@@ -432,7 +413,7 @@ ext application/ogg
 subtunes 0
 writes 1
 effect /usr/lib/audacious/Effect/bs2b.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Bauer Stereophonic-to-Binaural (BS2B)
@@ -442,7 +423,7 @@ about 0
 config 1
 enabled 0
 effect /usr/lib/audacious/Effect/crystalizer.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Crystalizer
@@ -452,7 +433,7 @@ about 0
 config 1
 enabled 1
 effect /usr/lib/audacious/Effect/compressor.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Dynamic Range Compressor
@@ -462,7 +443,7 @@ about 1
 config 1
 enabled 0
 effect /usr/lib/audacious/Effect/echo.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Echo
@@ -472,7 +453,7 @@ about 1
 config 1
 enabled 0
 effect /usr/lib/audacious/Effect/stereo.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Extra Stereo
@@ -482,7 +463,7 @@ about 1
 config 1
 enabled 0
 effect /usr/lib/audacious/Effect/ladspa.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name LADSPA Host
@@ -492,7 +473,7 @@ about 1
 config 1
 enabled 0
 effect /usr/lib/audacious/Effect/silence-removal.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Silence Removal
@@ -502,7 +483,7 @@ about 1
 config 1
 enabled 0
 effect /usr/lib/audacious/Effect/voice_removal.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Voice Removal
@@ -512,7 +493,7 @@ about 0
 config 0
 enabled 0
 effect /usr/lib/audacious/Effect/mixer.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Channel Mixer
@@ -522,7 +503,7 @@ about 1
 config 1
 enabled 0
 effect /usr/lib/audacious/Effect/sox-resampler.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name SoX Resampler
@@ -532,7 +513,7 @@ about 1
 config 1
 enabled 0
 effect /usr/lib/audacious/Effect/crossfade.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Crossfade
@@ -542,7 +523,7 @@ about 1
 config 1
 enabled 0
 output /usr/lib/audacious/Output/pulse_audio.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name PulseAudio Output
@@ -552,7 +533,7 @@ about 1
 config 0
 enabled 0
 output /usr/lib/audacious/Output/alsa.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name ALSA Output
@@ -562,7 +543,7 @@ about 1
 config 1
 enabled 1
 output /usr/lib/audacious/Output/oss4.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name OSS3 Output
@@ -572,7 +553,7 @@ about 1
 config 1
 enabled 0
 output /usr/lib/audacious/Output/filewriter.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name FileWriter Plugin
@@ -582,7 +563,7 @@ about 1
 config 1
 enabled 0
 output /usr/lib/audacious/Output/jack-ng.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name JACK Output
@@ -592,7 +573,7 @@ about 0
 config 1
 enabled 0
 vis /usr/lib/audacious/Visualization/blur_scope.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 1
 name Blur Scope
@@ -602,7 +583,7 @@ about 0
 config 1
 enabled 0
 vis /usr/lib/audacious/Visualization/gl-spectrum.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 1
 name OpenGL Spectrum Analyzer
@@ -612,7 +593,7 @@ about 1
 config 0
 enabled 0
 vis /usr/lib/audacious/Visualization/cairo-spectrum.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 1
 name Spectrum Analyzer
@@ -622,7 +603,7 @@ about 0
 config 0
 enabled 0
 general /usr/lib/audacious/General/alarm.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 1
 name Alarm
@@ -632,7 +613,7 @@ about 1
 config 1
 enabled 0
 general /usr/lib/audacious/General/albumart.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 1
 name Album Art
@@ -642,7 +623,7 @@ about 0
 config 0
 enabled 0
 general /usr/lib/audacious/General/aosd.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 1
 name AOSD (On-Screen Display)
@@ -652,7 +633,7 @@ about 1
 config 1
 enabled 0
 general /usr/lib/audacious/General/cd-menu-items.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Audio CD Menu Items
@@ -662,7 +643,7 @@ about 0
 config 0
 enabled 1
 general /usr/lib/audacious/General/delete-files.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Delete Files
@@ -672,7 +653,7 @@ about 0
 config 1
 enabled 0
 general /usr/lib/audacious/General/notify.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Desktop Notifications
@@ -680,9 +661,9 @@ domain audacious-plugins
 priority 0
 about 1
 config 1
-enabled 1
+enabled 0
 general /usr/lib/audacious/General/hotkey.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 1
 name Global Hotkeys
@@ -692,7 +673,7 @@ about 1
 config 1
 enabled 0
 general /usr/lib/audacious/General/lyricwiki.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 1
 name LyricWiki Plugin
@@ -702,7 +683,7 @@ about 0
 config 0
 enabled 0
 general /usr/lib/audacious/General/playlist-manager.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 1
 name Playlist Manager
@@ -712,7 +693,7 @@ about 0
 config 0
 enabled 0
 general /usr/lib/audacious/General/scrobbler.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Scrobbler 2.0
@@ -722,17 +703,17 @@ about 1
 config 1
 enabled 0
 general /usr/lib/audacious/General/search-tool.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 1
 name Search Tool
 domain audacious-plugins
 priority 0
 about 0
-config 0
+config 1
 enabled 0
 general /usr/lib/audacious/General/song_change.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 0
 name Song Change
@@ -742,7 +723,7 @@ about 0
 config 1
 enabled 0
 general /usr/lib/audacious/General/statusicon.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 1
 name Status Icon
@@ -752,7 +733,7 @@ about 1
 config 1
 enabled 1
 iface /usr/lib/audacious/General/gtkui.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 1
 name GTK Interface
@@ -762,7 +743,7 @@ about 0
 config 1
 enabled 1
 iface /usr/lib/audacious/General/skins.so
-stamp 1530466218
+stamp 1568412412
 version 48
 flags 1
 name Winamp Classic Interface

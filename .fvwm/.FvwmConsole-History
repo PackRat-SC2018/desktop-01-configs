@@ -1,100 +1,100 @@
-Module FvwmScript /home/doug/.fvwm/scripts/Kalende/Kalende
-Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
-Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
-Module FvwmScript /home/doug/.fvwm/scripts/Kalende/Kalende
-Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
-Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
-Module FvwmScript /home/doug/.fvwm/scripts/Kalende/Kalende
-Module FvwmScript /home/doug/.fvwm/scripts/Kalende/Kalende
-Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
-KillModule FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
-Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
-KillModule FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
-Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
-KillModule FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
-Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
-KillModule FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
-Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
-Read DeskTopChrono
-Module FvwmButtons DeskTopChrono
-KillModule FvwmButtons DeskTopChrono
-Read DeskTopChrono
-Module FvwmButtons DeskTopChrono
-Read DeskTopChrono
-Module FvwmButtons DeskTopChrono
-Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
-Module FvwmScript /home/doug/.fvwm/scripts/Kalende/Kalende
-Module FvwmScript FvwnScript-Date
-Module FvwmScript FvwnScript-Clock
-KillModule FvwmScript FvwnScript-Clock
-Module FvwmScript $[FVWM_USERDIR]/FvwnScript-Clock
-Module FvwmScript $[FVWM_USERDIR]/FvwmScript-Clock
-KillModule FvwmScript $[FVWM_USERDIR]/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/FvwmScript-Date
-KillModule FvwmScript /home/doug/.fvwm/FvwmScript-Date
-Module FvwmScript /home/doug/.fvwm/FvwmScript-Date
-KillModule FvwmScript /home/doug/.fvwm/FvwmScript-Date
-Module FvwmScript /home/doug/.fvwm/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/FvwmScript-Cal
-Module FvwmScript-Quit
-Module /home/doug/.fvwm/FvwmScript-Quit
-Module FvwmScript /home/doug/.fvwm/FvwmScript-Quit
-Module FvwmScript /home/doug/.fvwm/FvwmScript-Quit
-Module FvwmScript /home/doug/.fvwm/FvwmScript-Quit
-Module FvwmScript /home/doug/.fvwm/FvwmScript-Quit
-Module FvwmScript /home/doug/.fvwm/FvwmScript-Quit
-KillModule FvwmScript /home/doug/.fvwm/FvwmScript-Quit
-KillModule FvwmScript /home/doug/.fvwm/FvwmScript-Quit
-Module FvwmScript /home/doug/.fvwm/FvwmScript-Quit
-Module FvwmScript FvwmScript-ConfirmQuit
-Module FvwmScript /home/doug/.fvwm/FvwmScript-ConfirmQuit
-KillModule FvwmScript /home/doug/.fvwm/FvwmScript-ConfirmQuit
-KillModule FvwmScript FvwmDate
-KillModule FvwmScript FvwmScript-Date
-KillModule FvwmScript /home/doug/.fvwm/FvwmScript-Date
-Module FvwmScript /home/doug/.fvwm/FvwmScript-Date
-Module FvwmScript FvwmScript-Date
-Module FvwmScript FvwmScript-Cal
-Module FvwmScript FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/FvwmScript-Cal
-Module FvwmScript /home/doug/.fvwm/FvwmScript-Clock
-KillModule FvwmButtons FvwmTintBar
-Module FvwmButtons FvwmTaskBar
-Module FvwmScript /home/doug/.fvwm/FvwmScript-Clock
-Module FvwmScript /home/doug/.fvwm/FvwmScript-Clock
-KillModule FvwmScript /home/doug/.fvwm/FvwmScript-Clock
-KillModule FvwmScript FvwmScript-DateTime
-Module FvwmScript FvwmScript-DateTime
-Module FvwmScript FvwmScript-DateTime
-Module FvwmScript FvwmScript-Clock
-KillModule FvwmScript FvwmScript-Clock
-Module FvwmButtons FvwmTaskBar
+Read SkyDecor
+Read SkyDecor
+Read SkyDecor
+Read SkyDecor
+Read WindowDecor
 KillModule FvwmButtons FvwmTaskBar
-Module FvwmButtons FvwmTaskBar
+Module FvwmIconMan
 KillModule FvwmButtons FvwmTaskBar
-KillModule FvwmButtons Tint2Bar
-KillModule FvwmButtons FvwmTint2Bar
-KillModule FvwmButtons FvwmTintBar
-Module FvwmButtons FvwmTintBar
-Module FvwmScript FvwmScript-Cal
-Module FvwmScript FvwmScript-Clock
-Module FvwmScript FvwmScript-Date
-Module FvwmScript FvwmScript-DateTime
-Module FvwmScript FvwmScript-Quit
-Module FvwmScript FvwmScript-ConfirmQuit
-Module FvwmScript FvwmScript-ConfirmQuit
-Module FvwmScript FvwmScript-ConfirmQuit
-Module FvwmScript FvwmScript-Date
-Module FvwmScript FvwmScript-Clock
-KillModule FvwmScript FvwmScript-Clock
-KillModule FvwmScript FvwmScript-Clock
-KillModule FvwmScript FvwmScript-Clock
-Module FvwmScript FvwmScript-Clock
-Module FvwmScript FvwmScript-Date
-Module FvwmScript FvwmScript-Date
-Module FvwmScript FvwmScript-Quit
-Module FvwmScript FvwmScript-ConfirmQuit
-Module FvwmScript FvwmScript-Cal
-Module FvwmPager
-KillModule FvwmPager
-Module FvwmPager 0 3
+Module FvwmIconMan
+Read Functions
+Read Keys
+Read 11-Decors
+Read Decor0i
+Read 11-Decors
+Read Decor0i
+Read Decor2i
+Read Decor2i
+Style Decor2i
+Style Decor01
+Style * Decor01
+Style Decor01
+Read Decor0i
+TitleStyle Centered Height 0 -- Flat
+Style !Titles
+Style !Title
+Style * BorderWidth 3, HandleWidth 3
+Style * BorderWidth 5, HandleWidth 5
+Style * MWMBorder, FirmBorder, !Title
+Style *           UseDecor Decor0i, UseStyle DecorStyle0i
+Style *           UseDecor Decor0i, UseStyle DecorStyle0i
+Style * BorderWidth 3, HandleWidth 3
+Style * MWMBorder, FirmBorder, !Title
+Style *           UseDecor Decor0i, UseStyle DecorStyle0i
+Style *           UseDecor Decor0i, UseStyle DecorStyle0i
+Read BlueDecor
+Read BlueDecor
+Read BlueDecor
+Read BlueDecor
+Read BlueDecor
+Read BlueDecor
+Read BlueDecor
+Read BlueDecor
+Read BlueDecor
+Read BlueDecor
+Read BlueDecor
+Read BlueDecor
+Read BlueDecor
+Read BlueDecor
+Read BlueDecor
+Read BlueDecor
+Read IslandDecor
+Read IslandDecor
+Read IslandDecor
+Read IslandDecor
+Read IslandDecor
+Read IslandDecor
+Read IslandDecor
+Read IslandDecor
+Read IslandDecor
+Read IslandDecor
+Read IslandDecor
+Read IslandDecor
+Read SkyDecor
+Read VectorDecor
+Read SkyDecor
+Read SkyDecor
+Read WindowDecor
+Read SkyDecor
+Read DefaultDecor
+Read MidnightDecor
+Read MidnightDecor
+Read Decor0i
+Read MidnightDecor
+KillModule FvwmButtons FvwmTaskBar
+killall -q stalonetray &
+FvwmScript DateTime
+FvwmScript DateTime
+FvwmScript DateTime
+AddButtonStyle 1 ActiveDown (5 01x01@0 99x01@0 99x99@1 01x99@1 01x01@0)
+Read TestDecor
+Read TestDecor
+Read TestDecor
+Read TestDecor
+Read TestDecor
+Read TestDecor
+Read TestDecor
+Read TestDecor
+Read TestDecor
+Read TestDecor
+Read TestDecor
+Read TestDecor
+Read TestDecor
+Read TestDecor
+Read TestDecor
+Read TestDecor
+Read TestDecor
+Style * HilightColorset 25
+Style * Colorset 24
+Read TestDecor
+Read TestDecor

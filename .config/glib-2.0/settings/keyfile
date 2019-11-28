@@ -1,0 +1,43 @@
+[org/gtk/settings/file-chooser]
+window-position=(538, 105)
+window-size=(864, 765)
+date-format='regular'
+location-mode='path-bar'
+show-hidden=true
+show-size-column=true
+sidebar-width=153
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+
+[org/xfce/mousepad/preferences/window]
+menubar-visible=true
+
+[org/xfce/mousepad/preferences/view]
+match-braces=false
+word-wrap=false
+color-scheme='none'
+tab-width=8
+smart-home-end='disabled'
+show-right-margin=false
+show-line-numbers=true
+show-line-marks=false
+right-margin-position=80
+insert-spaces=false
+indent-width=-1
+indent-on-tab=true
+highlight-current-line=false
+show-line-endings=false
+show-whitespace=false
+font-name='Monospace'
+auto-indent=false
+
+[org/xfce/mousepad/state/window]
+width=1237
+height=864
+maximized=false
+fullscreen=false
+
+[org/gtk/settings/color-chooser]
+selected-color=(true, 0.025422222222222225, 0.025422222222222225, 0.026666666666666668, 1.0)
+custom-colors=[(0.025422222222222225, 0.025422222222222225, 0.026666666666666668, 1.0), (0.086274509803921567, 0.086274509803921567, 0.086274509803921567, 1.0), (0.85098039215686272, 0.85098039215686272, 0.85098039215686272, 1.0), (0.80000000000000004, 0.80000000000000004, 0.80000000000000004, 1.0)]

@@ -1,0 +1,20 @@
+# settings
+
+(GimpGegl-gegl-median-blur-config "2019-09-13 09:34:41"
+    (time 1568381681)
+    (neighborhood circle)
+    (radius 74)
+    (percentile 50.000000)
+    (alpha-percentile 50.000000)
+    (abyss-policy clamp)
+    (high-precision no))
+(GimpGegl-gegl-median-blur-config "2019-09-13 09:33:14"
+    (time 1568381594)
+    (neighborhood circle)
+    (radius 3)
+    (percentile 50.000000)
+    (alpha-percentile 50.000000)
+    (abyss-policy clamp)
+    (high-precision no))
+
+# end of settings

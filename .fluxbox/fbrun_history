@@ -1,15 +1,10 @@
 rofi-logout
 basilisk
 guvcview
-urxvt
 xfburn
 lefpad
-slock
 yad --color
 yad --font
-asunder
-xfontsel
-xcalc
 lilyterm
 tilix
 terminator
@@ -17,25 +12,42 @@ thunar
 netsurf
 epiphany
 qutebrowser
-audacious
-gcolor2
 parole
-lxappearance
-st
 wman-logout.sh
 hexchat
 audaciouys
 leafpad
 gimp
 xfce4-screenshooter
-xterm
 xfce4-terminal --drop-down
 smplayer
 vlc
-sakura
-pcmanfm
-xfce4-terminal
-xfce4-panel
-vivaldi
-compton
+lxappearance
+ConkyFvwm.sh
 tint2
+xfce4-panel
+urxvt -pe tabbed
+vivaldi
+sxiv -t ~/wallpaper
+spacefm
+qterminal
+roxterm
+xfe
+alacritty
+xfce4-terminal
+xterm
+uxterm
+asunder
+xcalc
+filezilla
+pcmanfm
+audacious
+sakura
+xfontsel
+compton
+st
+slock
+urxvt
+jgmenu_run
+gcolor2
+cmst -m -i Adwaita

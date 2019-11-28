@@ -29,7 +29,7 @@ modules-right = date
 ;; openbox
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-[bar/obxbar]
+[bar/openbox-bar]
 inherit = bar/master
 
 modules-left = jgmenu workspaces
@@ -125,9 +125,9 @@ tray-scale = 1.0
 [bar/bspwm-bar]
 inherit = bar/master
 
-modules-left = jgmenu workspaces
-modules-center = uptime coreavg load core0temp core1temp memory wired-network
-modules-right = clock
+modules-left = jgmenu bspwm
+; modules-center = uptime coreavg load core0temp core1temp memory wired-network
+modules-right = coreavg memory wired-network clock
 
 ; Position of the system tray window
 ; If empty or undefined, tray support will be disabled

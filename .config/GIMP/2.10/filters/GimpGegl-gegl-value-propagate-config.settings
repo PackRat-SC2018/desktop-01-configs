@@ -1,0 +1,17 @@
+# settings
+
+(GimpGegl-gegl-value-propagate-config "2019-09-13 09:36:43"
+    (time 1568381803)
+    (mode white)
+    (lower-threshold 0.011000)
+    (upper-threshold 1.000000)
+    (rate 1.000000)
+    (color (color-rgba 0.142086 0.159990 0.267413 1.000000))
+    (top yes)
+    (left yes)
+    (right yes)
+    (bottom yes)
+    (value yes)
+    (alpha yes))
+
+# end of settings

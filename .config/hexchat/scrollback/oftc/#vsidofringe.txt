@@ -1,0 +1,22 @@
+T 1553390532 19*	Now talking on 22#vsidofringe
+T 1553390532 22*	Topic for 22#vsidofringe is: VSIDO Controls OFTC
+T 1553390532 22*	Topic for 22#vsidofringe set by 26ChanServ!services@services.oftc.net (24Mon Feb 11 16:27:57 2019)
+T 1553390750 >18NickServ<	REGISTER VoidPass#9 dsd.nevada@gmail.com
+T 1553390750 -18NickServ-	Nickname PackRat-2019 has been registered successfully and is now yours to use.
+T 1553390750 -18NickServ-	See HELP SET for information on settings that you can set on your new
+T 1553390750 -18NickServ-	nickname.  If you change nickname or reconnect to the IRC network you will be
+T 1553390750 -18NickServ-	required to identify using the password you chose when you registered.  See
+T 1553390750 -18NickServ-	HELP IDENTIFY for more information on identifying your nickname.
+T 1553390750 -18NickServ-	 
+T 1553390750 -18NickServ-	To complete the registration, the nickname must be VERIFIED.  To verify
+T 1553390750 -18NickServ-	your nick, go to https://services.oftc.net/, log in with your NickServ
+T 1553390750 -18NickServ-	password, and follow the instructions there.  Note that we do not validate
+T 1553390750 -18NickServ-	the e-mail address.
+T 1553390865 >18NickServ<	checkverify
+T 1553390865 22*	26PackRat-2019 sets mode 24+R on 22PackRat-2019
+T 1553390865 -18NickServ-	Successfully set +R on your nick.
+T 1553390901 20*	Disconnected (20)
+T 1553391027 19*	Now talking on 22#vsidofringe
+T 1553391027 22*	Topic for 22#vsidofringe is: VSIDO Controls OFTC
+T 1553391027 22*	Topic for 22#vsidofringe set by 26ChanServ!services@services.oftc.net (24Mon Feb 11 16:27:57 2019)
+T 1553392776 FiSHLiM plugin unloaded

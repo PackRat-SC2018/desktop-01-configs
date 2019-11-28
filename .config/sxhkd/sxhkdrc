@@ -3,29 +3,31 @@
 #
 
 # terminal emulator
-# super + Return
+super + Return
+   urxvt
+
 alt + F1
-      urxvt	
+	st
 
 # program launcher
 # super + space
 alt + F2
-	rofi -show
+	rofi -show run
 
-super + d
+super + p
 	dmenu_run
 
 super + space
    jgmenu_run
 
-alt + F3
+super + shift + Return
 	uxterm
 
 super + ctrl + l
 	subl3
 
 Menu
-	pcmanfm
+	thunar
 
 super + ctrl + g
 	gimp
@@ -36,25 +38,32 @@ super + ctrl + p
 super + ctrl + o
 	libreoffice --writer
 
-#super + F14
 XF86HomePage
 	firefox
 
-#super + F13
 XF86Mail
 	thunderbird
 
 XF86Tools
-    opera
+	vivaldi
+
+XF86AudioPrev
+	mocp -r
+
+XF86AudioPlay
+	mocp -G
+
+XF86AudioNext
+	mocp -f
 
 super + ctrl + Print
 	xfce4-screenshooter
 
 XF86AudioRaiseVolume
-	amixer -q sset Master 5%+ unmute 
+	amixer -q sset PCM 5%+ unmute 
 
 XF86AudioLowerVolume
-	amixer -q sset Master 5%- unmute
+	amixer -q sset PCM 5%- unmute
 
 XF86AudioMute
 	amixer sset Master,0 toggle
@@ -133,20 +142,25 @@ super + ctrl + {x,y,z}
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+	bspc node -{f,s} {west,north,south,east}
+
+# swap nodes
+#super + {Up,Down,Right,Left}
+#	bspc node -s {north,south,east,west} --follow
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous node
-#super + {_,shift + }c
-#	bspc node -f {next,prev}
-alt + Tab
-	bspc node -f next
+alt + {_,shift + }Tab
+	bspc node -f {next,prev}
 
-alt + shift + Tab
-	bspc node -f prev
+#alt + Tab
+#	bspc node -f next
+
+#alt + shift + Tab
+#	bspc node -f prev
 
 # focus the next/previous desktop
 # super + bracket{left,right}

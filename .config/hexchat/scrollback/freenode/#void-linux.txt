@@ -1,0 +1,4 @@
+T 1543367866 19*	Now talking on 22#void-linux
+T 1543367866 22*	26leguin.freenode.net sets mode 24+n on 22#void-linux
+T 1543367866 22*	26leguin.freenode.net sets mode 24+s on 22#void-linux
+T 1543367871 20*	Disconnected (20)

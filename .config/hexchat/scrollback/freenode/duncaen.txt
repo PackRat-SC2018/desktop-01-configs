@@ -1,0 +1,5 @@
+T 1543358580 20<PackRat-2019>30	Not sure if you're the dev to talk to, but would it be possible to start a new forum for Void Linux at linuxquestions.org?
+T 1543358591 20<PackRat-2019>30	Seems simple enough - https://www.linuxquestions.org/questions/linux-distributions-5/why-is-there-no-forum-for-my-distro-513876/
+T 1543358615 20<PackRat-2019>30	no monetary cost, or responsibility to moderate.
+T 1543358654 20<PackRat-2019>30	I used linuxquestions a lot when I was using Slackware; always seemed like a valuable resource.
+T 1543358670 FiSHLiM plugin unloaded

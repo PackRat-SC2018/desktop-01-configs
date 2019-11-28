@@ -7,8 +7,8 @@
 # Backgrounds
 # Background 1: Panel
 rounded = 0
-border_width = 2
-border_sides = T
+border_width = 1
+border_sides = TB
 background_color = #D4D4D4 90
 border_color =  #2C2C2C 90
 background_color_hover = #D4D4D4 90
@@ -89,7 +89,8 @@ execp_font_color = #1F3140 100
 execp_background_id = 0
 execp_centered = 1
 execp_padding = 8 0 0
-execp_command =  psuinfo -Cucat -N
+# execp_command =  psuinfo -Cucatk -N
+execp_command =  psuinfo -Cucak -N -S4
 execp_interval = 3
 execp_lclick_command = urxvt -e htop -s PERCENT_CPU
 
@@ -115,7 +116,7 @@ button_background_id = 0
 button_centered = 1
 button_padding = 4 0 0
 button_max_icon_size = 64
-button_lclick_command = jgmenu --config-file=/home/doug/.config/jgmenu/obxmenurc
+button_lclick_command = jgmenu --config-file=/home/doug/.config/jgmenu/jglightmenurc
 # button_lclick_command = jgmenu_run
 # button_mclick_command = text
 button_rclick_command = /usr/local/bin/void-logout
@@ -145,8 +146,8 @@ separator_padding = 0 0
 
 #-------------------------------------
 # Panel
-panel_items = P:T:EE:C
-panel_size = 0 32
+panel_items = P:T:E:C
+panel_size = 0 36
 panel_margin = 0 0
 panel_padding = 4 0 0
 panel_background_id = 1

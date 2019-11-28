@@ -1,0 +1,30 @@
+# Application styles
+#
+Style *XTerm	Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
+Style *xterm	Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
+Style *Rxvt		Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
+Style *XCalc    Icon /usr/share/icons/gnome/48x48/apps/accessories-calculator.png
+Style *st-256color Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
+Style Polybar !Title, !Handles, !Borders, CirculateSkip, WindowListSkip, NeverFocus
+Style Void_Exit_Session ResizeHintOverride, PositionPlacement Center
+Style Void-logout ResizeHintOverride, PositionPlacement Center
+Style URxvt ResizeHintOverride, PositionPlacement Center
+Style *XTerm ResizeHintOverride, PositionPlacement Center
+Style Sakura ResizeHintOverride, PositionPlacement Center
+Style Subl3 ResizeHintOverride, PositionPlacement Center
+Style Firefox ResizeHintOverride, PositionPlacement Center
+Style Thunderbird ResizeHintOverride, PositionPlacement Center
+Style *tray !Title, !Handles, !Borders, StaysOnBottom, WindowListSkip, CirculateSkip
+Style Tint2 !Title, !Handles, !Borders, ResizeHintOverride, StaysOnBottom, WindowListSkip, CirculateSkip, PositionPlacement 0 -0
+Style Xfce4-panel !Title, !Handles, !Borders, StaysOnTop, WindowListSkip, CirculateSkip
+Style Bl-exit Sticky, CirculateSkip, WindowListSkip, PositionPlacement Center
+Style FvwmScript-Clock* !Title, !Borders, !Handles, Sticky, WindowListSkip, NeverFocus, StaysOnBottom, CirculateSkip, PositionPlacement -2px 2px
+Style FvwmScript-Quit BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, StaysOnTop, CirculateSkip, PositionPlacement 200px 200px
+Style FvwmScript-ConfirmQuit BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, StaysOnTop, CirculateSkip, PositionPlacement Center
+Style FvwmForm-RunCommand* BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, StaysOnTop, CirculateSkip, PositionPlacement Center
+Style fbox_cal* BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, StaysOnTop, CirculateSkip, PositionPlacement -10px -36px
+Style *Clock !Title, NeverFocus, PositionPlacement -5px -36px
+Style Vivaldi* !Title, ResizeHintOverride, PositionPlacement Center
+Style Chrono* !Title, BorderWidth 1, HandleWidth 1, Sticky, StaysOnBottom, CirculateSkip, PositionPlacement 800px 4px
+Style Kalende* !Title, BorderWidth 1, HandleWidth 1, Sticky, StaysOnBottom, CirculateSkip, PositionPlacement 800px 110px
+

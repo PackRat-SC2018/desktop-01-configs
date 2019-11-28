@@ -1,16 +1,6 @@
-[app] (name=fbrun)
-  [Position]	(CENTER)	{0 0}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Alpha]	{255}
-[end]
-[app] (name=subl3) (class=Subl3)
-  [Dimensions]	{80% 90%}
-  [Position]	(CENTER)	{0 0}
+[app] (name=fbrun) (class=FbRun)
+  [Dimensions]	{10% 4%}
+  [Position]	(UPPERLEFT)	{45% 48%}
   [Shaded]	{no}
   [Deco]	{0x67f}
   [Sticky]	{no}
@@ -18,624 +8,26 @@
   [Maximized]	{no}
   [Fullscreen]	{no}
   [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[group]  (workspace=[current])
- [app] (name=xterm) (class=UXTerm)
-  [Dimensions]	{49% 57%}
-  [Position]	(CENTER)	{0 0}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=void-logout) (class=Void-logout)
-  [Position]	(CENTER)	{0 0}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{2}
   [Alpha]	{255}
 [end]
 [group]  (workspace=[current])
  [app] (name=Navigator) (class=Firefox) (role=browser)
  [app] (name=Mail) (class=Thunderbird) (role=3pane)
-  [Deco]	{0x67f}
+  [Position]	(UPPERLEFT)	{1% 51%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
   [Sticky]	{no}
+  [Minimized]	{no}
   [Maximized]	{yes}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=Mail) (class=Thunderbird) (role=autoconfig)
-  [Position]	(UPPERLEFT)	{34% 30%}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-[end]
-[app] (name=Mail) (class=Thunderbird) (role=addressbook)
-  [Dimensions]	{62% 72%}
-  [Position]	(UPPERLEFT)	{19% 14%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=Mailnews) (class=Thunderbird) (role=customizeToolbar)
-  [Position]	(UPPERLEFT)	{31% 25%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
   [Fullscreen]	{no}
   [Layer]	{8}
   [Alpha]	{255}
 [end]
 [app] (name=Msgcompose) (class=Thunderbird) (role=Msgcompose)
-  [Dimensions]	{80% 90%}
-  [Position]	(UPPERLEFT)	{10% 5%}
+  [Dimensions]	{79% 85%}
+  [Position]	(UPPERLEFT)	{10% 7%}
   [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=pcmanfm) (class=Pcmanfm)
-  [Dimensions]	{70% 78%}
-  [Position]	(UPPERLEFT)	{4% 5%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=zenity) (class=fbox_cal)
-  [Position]	(UPPERLEFT)	{76% 66%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=xcalc) (class=XCalc)
-  [Dimensions]	{13% 39%}
-  [Position]	(UPPERLEFT)	{81% 9%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=galculator) (class=Galculator)
-  [Dimensions]	{33% 37%}
-  [Position]	(UPPERLEFT)	{53% 11%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=sakura) (class=Sakura)
-  [Dimensions]	{55% 63%}
-  [Position]	(UPPERLEFT)	{22% 19%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=lxappearance) (class=Lxappearance)
-  [Dimensions]	{43% 53%}
-  [Position]	(UPPERLEFT)	{13% 12%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=geeqie) (class=Geeqie) (role=geeqie)
-  [Dimensions]	{56% 71%}
-  [Position]	(UPPERLEFT)	{32% 20%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[group]  (workspace=[current])
- [app] (name=urxvt) (class=URxvt)
-  [Dimensions]	{58% 71%}
-  [Position]	(UPPERLEFT)	{21% 15%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[group]  (workspace=[current])
- [app] (name=st-256color) (class=st-256color)
-  [Dimensions]	{53% 61%}
-  [Position]	(UPPERLEFT)	{24% 19%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=Calendar) (class=Thunderbird) (role=EventDialog)
-  [Dimensions]	{39% 65%}
-  [Position]	(UPPERLEFT)	{31% 17%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=Calendar) (class=Thunderbird) (role=AlarmWindow)
-  [Dimensions]	{36% 35%}
-  [Position]	(UPPERLEFT)	{61% 59%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=Dialog) (class=Thunderbird)
-  [Dimensions]	{27% 63%}
-  [Position]	(UPPERLEFT)	{14% 7%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=pcmanfm) (class=Pcmanfm)
-  [Position]	(UPPERLEFT)	{38% 32%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=sublime_text) (class=Sublime_text)
-  [Dimensions]	{80% 88%}
-  [Position]	(UPPERLEFT)	{10% 6%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=leafpad) (class=Leafpad)
-  [Dimensions]	{80% 90%}
-  [Position]	(UPPERLEFT)	{10% 5%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=soffice) (class=Soffice)
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{yes}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=audacious) (class=Audacious)
-  [Dimensions]	{46% 66%}
-  [Position]	(UPPERLEFT)	{4% 4%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=xfburn) (class=Xfburn)
-  [Dimensions]	{45% 71%}
-  [Position]	(UPPERLEFT)	{1% 2%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=xfburn) (class=Xfburn)
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Layer]	{8}
-[end]
-[app] (name=gl) (class=mpv)
-  [Dimensions]	{57% 53%}
-  [Position]	(UPPERLEFT)	{40% 41%}
-  [Shaded]	{no}
-  [Deco]	{BORDER}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=hexchat) (class=Hexchat) (role=servlist)
-  [Position]	(UPPERLEFT)	{7% 5%}
-  [Deco]	{0x67f}
-[end]
-[app] (name=hexchat) (class=Hexchat)
-  [Dimensions]	{80% 90%}
-  [Position]	(UPPERLEFT)	{10% 5%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{yes}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=hexchat) (class=Hexchat)
-  [Position]	(UPPERLEFT)	{37% 43%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=soffice) (class=Soffice)
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{yes}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=soffice) (class=Soffice)
-  [Dimensions]	{42% 61%}
-  [Position]	(UPPERLEFT)	{29% 19%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=Places) (class=Firefox) (role=Organizer)
-  [Dimensions]	{80% 90%}
-  [Position]	(UPPERLEFT)	{10% 5%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=Mail) (class=Thunderbird) (role=Preferences)
-  [Dimensions]	{35% 68%}
-  [Position]	(UPPERLEFT)	{32% 16%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=gcolor2) (class=Gcolor2)
-  [Dimensions]	{29% 35%}
-  [Position]	(UPPERLEFT)	{70% 62%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=yad) (class=Yad)
-  [Dimensions]	{35% 33%}
-  [Position]	(UPPERLEFT)	{63% 60%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=yad) (class=fbox_cal)
-  [Dimensions]	{17% 30%}
-  [Position]	(UPPERLEFT)	{69% 54%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=yad-icon-browser) (class=Yad-icon-browser)
-  [Dimensions]	{33% 50%}
-  [Position]	(UPPERLEFT)	{3% 4%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=yad) (class=yad_font)
-  [Dimensions]	{32% 48%}
-  [Position]	(UPPERLEFT)	{2% 2%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=yad) (class=yad_color)
-  [Dimensions]	{28% 34%}
-  [Position]	(UPPERLEFT)	{66% 58%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=yad) (class=yad_cal)
-  [Dimensions]	{19% 30%}
-  [Position]	(UPPERLEFT)	{75% 3%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-[end]
-[app] (name=nitrogen) (class=Nitrogen)
-  [Dimensions]	{58% 76%}
-  [Position]	(UPPERLEFT)	{4% 9%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=transmission-gtk) (class=Transmission-gtk) (role=tr-main)
-  [Dimensions]	{58% 69%}
-  [Position]	(UPPERLEFT)	{21% 15%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=Dialog) (class=Firefox)
-  [Position]	(UPPERLEFT)	{68% 5%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=feh) (class=feh)
-  [Position]	(UPPERLEFT)	{59% 7%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=asunder) (class=Asunder)
-  [Dimensions]	{50% 84%}
-  [Position]	(UPPERLEFT)	{4% 4%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=asunder) (class=Asunder)
-  [Dimensions]	{20% 19%}
-  [Position]	(UPPERLEFT)	{40% 40%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=xterm) (class=XTerm)
-  [Position]	(CENTER)	{0% 0%}
-  [Shaded]	{no}
-  [Deco]	{BORDER}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{yes}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=guvcview) (class=Guvcview)
-  [Dimensions]	{42% 61%}
-  [Position]	(UPPERLEFT)	{1% 1%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=guvcview) (class=guvcview)
-  [Dimensions]	{33% 49%}
-  [Position]	(UPPERLEFT)	{53% 7%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=guvcview) (class=Guvcview) (role=GtkFileChooserDialog)
-  [Dimensions]	{51% 78%}
-  [Position]	(UPPERLEFT)	{24% 11%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=subl3) (class=Subl3) (role=GtkFileChooserDialog)
-  [Dimensions]	{59% 60%}
-  [Position]	(UPPERLEFT)	{20% 20%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=xfce4-screenshooter) (class=Xfce4-screenshooter)
-  [Dimensions]	{45% 51%}
-  [Position]	(UPPERLEFT)	{38% 33%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=Browser) (class=Firefox) (role=About)
-  [Position]	(UPPERLEFT)	{34% 32%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=Browser) (class=Firefox) (role=page-info)
-  [Dimensions]	{50% 75%}
-  [Position]	(UPPERLEFT)	{25% 12%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
+  [Deco]	{0x77f}
   [Sticky]	{no}
   [Minimized]	{no}
   [Maximized]	{no}
@@ -644,10 +36,10 @@
   [Alpha]	{255}
 [end]
 [app] (name=thunar) (class=Thunar)
-  [Dimensions]	{63% 77%}
-  [Position]	(UPPERLEFT)	{3% 4%}
+  [Dimensions]	{52% 74%}
+  [Position]	(UPPERLEFT)	{1% 1%}
   [Shaded]	{no}
-  [Deco]	{0x67f}
+  [Deco]	{0x77f}
   [Sticky]	{no}
   [Minimized]	{no}
   [Maximized]	{no}
@@ -655,23 +47,10 @@
   [Layer]	{8}
   [Alpha]	{255}
 [end]
-[app] (name=xfce4-terminal) (class=Xfce4-terminal) (role=xfce4-terminal-dropdown)
-  [Dimensions]	{60% 60%}
-  [Position]	(UPPERLEFT)	{20% 1%}
+[app] (name=audacious) (class=Audacious)
+  [Position]	(UPPERLEFT)	{53% 34%}
   [Shaded]	{no}
-  [Deco]	{BORDER}
-  [Sticky]	{yes}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=xfce4-terminal) (class=Xfce4-terminal)
-  [Dimensions]	{53% 65%}
-  [Position]	(CENTER)	{0 0}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
+  [Deco]	{0x77f}
   [Sticky]	{no}
   [Minimized]	{no}
   [Maximized]	{no}
@@ -679,11 +58,10 @@
   [Layer]	{8}
   [Alpha]	{255}
 [end]
-[app] (name=zathura) (class=Zathura)
-  [Dimensions]	{50% 81%}
-  [Position]	(UPPERLEFT)	{45% 10%}
+[app] (name=asunder) (class=Asunder)
+  [Position]	(UPPERLEFT)	{1% 1%}
   [Shaded]	{no}
-  [Deco]	{0x67f}
+  [Deco]	{0x77f}
   [Sticky]	{no}
   [Minimized]	{no}
   [Maximized]	{no}
@@ -691,11 +69,11 @@
   [Layer]	{8}
   [Alpha]	{255}
 [end]
-[app] (name=yad) (class=Ycal-X)
-  [Dimensions]	{17% 27%}
-  [Position]	(UPPERLEFT)	{77% 64%}
+[app] (name=galculator) (class=Galculator)
+  [Dimensions]	{33% 30%}
+  [Position]	(UPPERLEFT)	{66% 36%}
   [Shaded]	{no}
-  [Deco]	{0x67f}
+  [Deco]	{0x66f}
   [Sticky]	{no}
   [Minimized]	{no}
   [Maximized]	{no}
@@ -703,33 +81,31 @@
   [Layer]	{8}
   [Alpha]	{255}
 [end]
-[app] (name=gimp) (class=Gimp) (role=gimp-image-window-1)
-  [Workspace]	{1}
+[app] (name=xcalc) (class=XCalc)
+  [Position]	(UPPERLEFT)	{86% 1%}
   [Shaded]	{no}
-  [Deco]	{0x67f}
+  [Deco]	{0x66f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=filezilla) (class=Filezilla)
+  [Shaded]	{no}
+  [Deco]	{0x77f}
   [Sticky]	{no}
   [Minimized]	{no}
   [Maximized]	{yes}
   [Fullscreen]	{no}
-  [Jump]	{yes}
   [Layer]	{8}
   [Alpha]	{255}
 [end]
-[transient] (name=gimp) (class=Gimp) (role=gimp-image-scale)
-  [Position]	(UPPERLEFT)	{14% 13%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=gimp) (class=Gimp) (role=gimp-file-export)
+[app] (name=hexchat) (class=Hexchat) (role=servlist)
   [Position]	(UPPERLEFT)	{9% 7%}
   [Shaded]	{no}
-  [Deco]	{0x67f}
+  [Deco]	{0x77f}
   [Sticky]	{no}
   [Minimized]	{no}
   [Maximized]	{no}
@@ -737,132 +113,20 @@
   [Layer]	{8}
   [Alpha]	{255}
 [end]
-[transient] (name=file-png) (class=Gimp) (role=file-png)
-  [Position]	(UPPERLEFT)	{42% 24%}
+[app] (name=hexchat) (class=Hexchat)
   [Shaded]	{no}
-  [Deco]	{0x67f}
+  [Deco]	{0x77f}
   [Sticky]	{no}
   [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=script-fu) (class=Gimp) (role=gimp-script-fu)
-  [Position]	(UPPERLEFT)	{55% 14%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=gimp) (class=Gimp) (role=gimp-message-dialog)
-  [Position]	(UPPERLEFT)	{39% 37%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=file-svg) (class=Gimp) (role=gimp-file-svg)
-  [Position]	(UPPERLEFT)	{16% 13%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=gimp) (class=Gimp) (role=gimp-image-color-profile-import)
-  [Position]	(UPPERLEFT)	{15% 33%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=file-jpeg) (class=Gimp) (role=file-jpeg)
-  [Position]	(UPPERLEFT)	{17% 19%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=gimp) (class=Gimp) (role=gimp-file-save)
-  [Position]	(UPPERLEFT)	{6% 8%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=gimp) (class=Gimp) (role=gimp-toolbox-color-dialog)
-  [Position]	(UPPERLEFT)	{8% 24%}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[app] (name=gpartedbin) (class=GParted)
-  [Dimensions]	{80% 90%}
-  [Position]	(CENTER)	{0 0}
-  [Shaded]	{no}
-  [Deco]	{0x67f}
-  [Sticky]	{no}
-  [Minimized]	{no}
-  [Maximized]	{no}
-  [Fullscreen]	{no}
-  [Layer]	{8}
-  [Alpha]	{255}
-[end]
-[transient] (name=file-jpeg) (class=Gimp-2.10) (role=file-jpeg)
-  [Position]	(UPPERLEFT)	{27% 15%}
-  [Deco]	{0x67f}
-[end]
-[transient] (name=gimp-2.10) (class=Gimp-2.10) (role=gimp-file-export)
-  [Position]	(UPPERLEFT)	{9% 7%}
-  [Deco]	{0x67f}
-[end]
-[app] (name=gimp-2.10) (class=Gimp-2.10) (role=gimp-image-window-1)
-  [Deco]	{0x67f}
   [Maximized]	{yes}
   [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
 [end]
-[app] (name=gimp-2.10) (class=Gimp-2.10) (role=gimp-message-dialog)
-  [Position]	(UPPERLEFT)	{39% 14%}
-  [Deco]	{0x67f}
-[end]
-[app] (name=vivaldi-snapshot) (class=Vivaldi-snapshot) (role=browser)
-  [Deco]	{0x5e0}
-  [Maximized]	{yes}
-[end]
-[app] (name=gnome-mpv) (class=Gnome-mpv)
-  [Dimensions]	{51% 56%}
-  [Position]	(UPPERLEFT)	{46% 26%}
+[transient] (name=hexchat) (class=Hexchat)
+  [Position]	(UPPERLEFT)	{60% 13%}
   [Shaded]	{no}
-  [Deco]	{0x5e0}
+  [Deco]	{0x66f}
   [Sticky]	{no}
   [Minimized]	{no}
   [Maximized]	{no}
@@ -870,10 +134,11 @@
   [Layer]	{8}
   [Alpha]	{255}
 [end]
-[transient] (name=gimp) (class=Gimp) (role=gimp-file-open)
-  [Position]	(UPPERLEFT)	{9% 7%}
+[app] (name=geeqie) (class=Geeqie) (role=geeqie)
+  [Dimensions]	{66% 77%}
+  [Position]	(UPPERLEFT)	{33% 22%}
   [Shaded]	{no}
-  [Deco]	{NORMAL}
+  [Deco]	{0x77f}
   [Sticky]	{no}
   [Minimized]	{no}
   [Maximized]	{no}
@@ -881,10 +146,11 @@
   [Layer]	{8}
   [Alpha]	{255}
 [end]
-[transient] (name=file-png) (class=Gimp-2.10) (role=file-png)
-  [Position]	(UPPERLEFT)	{27% 36%}
+[app] (name=lxappearance) (class=Lxappearance)
+  [Dimensions]	{31% 44%}
+  [Position]	(UPPERLEFT)	{34% 28%}
   [Shaded]	{no}
-  [Deco]	{NORMAL}
+  [Deco]	{0x77f}
   [Sticky]	{no}
   [Minimized]	{no}
   [Maximized]	{no}
@@ -892,11 +158,10 @@
   [Layer]	{8}
   [Alpha]	{255}
 [end]
-[app] (name=smplayer) (class=smplayer)
-  [Dimensions]	{80% 90%}
-  [Position]	(UPPERLEFT)	{10% 5%}
+[app] (name=transmission-gtk) (class=Transmission-gtk) (role=tr-main)
+  [Position]	(UPPERLEFT)	{26% 1%}
   [Shaded]	{no}
-  [Deco]	{BORDER}
+  [Deco]	{0x77f}
   [Sticky]	{no}
   [Minimized]	{no}
   [Maximized]	{no}
@@ -908,7 +173,7 @@
   [Dimensions]	{80% 90%}
   [Position]	(UPPERLEFT)	{10% 5%}
   [Shaded]	{no}
-  [Deco]	{BORDER}
+  [Deco]	{0x77f}
   [Sticky]	{no}
   [Minimized]	{no}
   [Maximized]	{no}
@@ -916,6 +181,521 @@
   [Layer]	{8}
   [Alpha]	{255}
 [end]
-[app] (name=Opera) (class=Opera)
+[app] (name=guvcview) (class=Guvcview)
+  [Dimensions]	{57% 71%}
+  [Position]	(UPPERLEFT)	{1% 1%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=guvcview) (class=guvcview)
+  [Dimensions]	{33% 48%}
+  [Position]	(UPPERLEFT)	{66% 27%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=xfburn) (class=Xfburn)
+  [Dimensions]	{48% 48%}
+  [Position]	(UPPERLEFT)	{1% 1%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=soffice) (class=Soffice)
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
   [Maximized]	{yes}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=xfce4-screenshooter) (class=Xfce4-screenshooter)
+  [Position]	(UPPERLEFT)	{38% 35%}
+  [Shaded]	{no}
+  [Deco]	{0x66f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=gcolor2) (class=Gcolor2)
+  [Position]	(UPPERLEFT)	{71% 67%}
+  [Shaded]	{no}
+  [Deco]	{0x66f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=feh) (class=feh)
+  [Position]	(UPPERLEFT)	{1% 24%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=sxiv) (class=Sxiv)
+  [Position]	(UPPERLEFT)	{1% 21%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=yad) (class=fbox_cal)
+  [Position]	(UPPERLEFT)	{75% 68%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=orage) (class=Orage)
+  [Dimensions]	{17% 28%}
+  [Position]	(UPPERLEFT)	{82% 1%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{yes}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=yad) (class=yad_cal)
+  [Position]	(UPPERLEFT)	{80% 1%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=yad) (class=yad_color)
+  [Position]	(UPPERLEFT)	{78% 54%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=yad) (class=yad_font)
+  [Position]	(UPPERLEFT)	{75% 27%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=xarchiver) (class=Xarchiver)
+  [Dimensions]	{39% 67%}
+  [Position]	(UPPERLEFT)	{15% 8%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=vivaldi-snapshot) (class=Vivaldi-snapshot) (role=browser)
+  [Shaded]	{no}
+  [Minimized]	{no}
+  [Maximized]	{yes}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=gpartedbin) (class=GParted)
+  [Dimensions]	{60% 68%}
+  [Position]	(UPPERLEFT)	{21% 1%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=Dialog) (class=Thunderbird)
+  [Position]	(UPPERLEFT)	{68% 16%}
+  [Shaded]	{no}
+  [Deco]	{0x66f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[group]  (workspace=[current])
+ [app] (name=xterm) (class=UXTerm)
+  [Dimensions]	{52% 71%}
+  [Position]	(UPPERLEFT)	{7% 13%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[group]  (workspace=[current])
+ [app] (name=sakura) (class=Sakura)
+  [Position]	(UPPERLEFT)	{26% 18%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[group]  (workspace=[current])
+ [app] (name=xterm) (class=XTerm)
+  [Dimensions]	{47% 61%}
+  [Position]	(UPPERLEFT)	{1% 1%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[group]  (workspace=[current])
+ [app] (name=urxvt) (class=URxvt)
+  [Position]	(UPPERLEFT)	{5% 14%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[group]  (workspace=[current])
+ [app] (name=st-256color) (class=st-256color)
+  [Position]	(UPPERLEFT)	{29% 18%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=void-logout) (class=Void-logout)
+  [Position]	(UPPERLEFT)	{34% 45%}
+  [Shaded]	{no}
+  [Deco]	{0x66f}
+  [Hidden]	{yes}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{2}
+  [Alpha]	{255}
+[end]
+[app] (name=Calendar) (class=Thunderbird) (role=AlarmWindow)
+  [Position]	(UPPERLEFT)	{32% 33%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=Mail) (class=Thunderbird) (role=addressbook)
+  [Position]	(UPPERLEFT)	{20% 7%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=main.py) (class=Main.py) (role=GtkFileChooserDialog)
+  [Dimensions]	{45% 75%}
+  [Position]	(UPPERLEFT)	{36% 19%}
+  [Shaded]	{no}
+  [Deco]	{0x66f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=main.py) (class=Main.py) (role=toolbox)
+  [Dimensions]	{27% 65%}
+  [Position]	(UPPERLEFT)	{54% 7%}
+  [Shaded]	{no}
+  [Deco]	{0x66f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=main.py) (class=Main.py) (role=azote)
+  [Dimensions]	{54% 84%}
+  [Position]	(UPPERLEFT)	{6% 3%}
+  [Shaded]	{no}
+  [Deco]	{0x66f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=Places) (class=Firefox) (role=Organizer)
+  [Dimensions]	{60% 77%}
+  [Position]	(UPPERLEFT)	{20% 7%}
+  [Shaded]	{no}
+  [Deco]	{0x66f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=subl.*) (class=Subl.*) (role=GtkFileChooserDialog)
+  [Dimensions]	{45% 75%}
+  [Position]	(UPPERLEFT)	{28% 10%}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=subl.*) (class=Subl.*)
+  [Position]	(UPPERLEFT)	{39% 45%}
+  [Shaded]	{no}
+  [Deco]	{0x66f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=subl.*) (class=Subl.*)
+  [Dimensions]	{85% 97%}
+  [Position]	(CENTER)	{0 0}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=gimp.*) (class=Gimp.*) (role=gimp-image-window-1)
+  [Workspace]	{1}
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{yes}
+  [Fullscreen]	{no}
+  [Jump]	{yes}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=gimp.*) (class=Gimp.*) (role=gimp-file-open)
+  [Dimensions]	{49% 67%}
+  [Position]	(UPPERLEFT)	{26% 10%}
+  [Shaded]	{no}
+  [Deco]	{0x66f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=gimp.*) (class=Gimp.*) (role=gimp-file-export)
+  [Dimensions]	{49% 67%}
+  [Position]	(UPPERLEFT)	{26% 13%}
+  [Shaded]	{no}
+  [Deco]	{0x66f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=file-png) (class=Gimp.*) (role=file-png)
+  [Position]	(UPPERLEFT)	{43% 15%}
+  [Shaded]	{no}
+  [Deco]	{0x66f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=gimp.*) (class=Gimp.*) (role=gimp-file-save)
+  [Dimensions]	{49% 67%}
+  [Position]	(UPPERLEFT)	{26% 12%}
+  [Shaded]	{no}
+  [Deco]	{0x66f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=gimp.*) (class=Gimp.*) (role=gimp-image-scale)
+  [Dimensions]	{20% 36%}
+  [Position]	(UPPERLEFT)	{40% 32%}
+  [Shaded]	{no}
+  [Deco]	{0x66f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=gimp.*) (class=Gimp.*) (role=gimp-image-new)
+  [Position]	(UPPERLEFT)	{22% 13%}
+  [Shaded]	{no}
+  [Deco]	{0x66f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=gimp.*) (class=Gimp.*) (role=gimp-message-dialog)
+  [Position]	(UPPERLEFT)	{39% 36%}
+  [Shaded]	{no}
+  [Deco]	{0x66f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=emacs) (class=Emacs)
+  [Shaded]	{no}
+  [Deco]	{0x77f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{yes}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=thunar) (class=Thunar)
+  [Position]	(UPPERLEFT)	{37% 19%}
+  [Shaded]	{no}
+  [Deco]	{NORMAL}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=firefox) (class=Firefox) (role=GtkFileChooserDialog)
+  [Dimensions]	{45% 75%}
+  [Position]	(UPPERLEFT)	{28% 4%}
+  [Shaded]	{no}
+  [Deco]	{NORMAL}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[transient] (name=Dialog) (class=Firefox)
+  [Dimensions]	{24% 33%}
+  [Position]	(UPPERLEFT)	{38% 33%}
+  [Shaded]	{no}
+  [Deco]	{NORMAL}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=brasero) (class=Brasero)
+  [Dimensions]	{48% 48%}
+  [Position]	(UPPERLEFT)	{1% 1%}
+  [Shaded]	{no}
+  [Deco]	{0x67f}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Layer]	{8}
+  [Alpha]	{255}
 [end]

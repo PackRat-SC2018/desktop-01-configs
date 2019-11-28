@@ -6,6 +6,7 @@ configuration {
   case-sensitive: true;
   sidebar-mode: true;
   fixed-num-lines: false;
+  modi: "run,drun,window,combi";
   display-run: "Run";
   display-drun: "Apps";
   display-window: "Switch";
@@ -39,8 +40,8 @@ configuration {
 }
 #window {
   font:          "Source Sans Pro 12";
-  border:        6px;
-  border-radius: 3px;
+  border:        5px;
+  border-radius: 0px;
   border-color:  @window-border;
   width:         800px;
 }

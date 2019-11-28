@@ -1,6 +1,6 @@
 WindowTitle {Quit}
 WindowSize 400 265		# Taille
-WindowPosition 191 143		# Position
+WindowPosition 500 500		# Position
 #ForeColor	{black}
 #BackColor	{grey85}
 #ShadowColor	{grey55}

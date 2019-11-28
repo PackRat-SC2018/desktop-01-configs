@@ -1,20 +1,18 @@
 <?xml version="1.0"?>
-<FileZilla3 version="3.33.0" platform="*nix">
-	<Layout Builddate="2018-05-21" Buildtime="10:04:12">
+<FileZilla3 version="3.45.1" platform="*nix">
+	<Layout Builddate="2019-09-25" Buildtime="10:36:55">
 		<Resources>
-			<xrc file="certificate.xrc" date="1526897052" />
-			<xrc file="dialogs.xrc" date="1526897052" />
-			<xrc file="settings.xrc" date="1526897052" />
-			<xrc file="inputdialog.xrc" date="1526897052" />
-			<xrc file="sitemanager.xrc" date="1526897052" />
-			<xrc file="menus.xrc" date="1526897052" />
-			<xrc file="netconfwizard.xrc" date="1526897052" />
-			<xrc file="update.xrc" date="1526897052" />
-			<xrc file="storj.xrc" date="1526897052" />
+			<xrc file="inputdialog.xrc" date="1561743129" />
+			<xrc file="certificate.xrc" date="1569407815" />
+			<xrc file="settings.xrc" date="1569407815" />
+			<xrc file="dialogs.xrc" date="1569407815" />
+			<xrc file="sitemanager.xrc" date="1561743129" />
+			<xrc file="netconfwizard.xrc" date="1569407815" />
+			<xrc file="update.xrc" date="1561743129" />
+			<xrc file="storj.xrc" date="1569407815" />
 		</Resources>
 		<Language id="en_US" date="">
-			<Font font="Source Sans Pro 11" width="771" height="19" />
-			<Dialog name="Settings" width="653" />
+			<Font font="Noto Sans 10" width="796" height="19" />
 		</Language>
 	</Layout>
 </FileZilla3>

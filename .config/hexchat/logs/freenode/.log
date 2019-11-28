@@ -1,16 +1,22 @@
-**** BEGIN LOGGING AT Thu Jun 14 13:42:38 2018
+**** BEGIN LOGGING AT Fri Nov  2 22:22:32 2018
 
-Jun 14 13:42:38 *	Connecting to chat.freenode.net (195.154.200.232:6697)
-Jun 14 13:42:39 *	* Certification info:
-Jun 14 13:42:39 *	  Subject:
-Jun 14 13:42:39 *	    CN=barjavel.freenode.net
-Jun 14 13:42:39 *	  Issuer:
-Jun 14 13:42:39 *	    C=US
-Jun 14 13:42:39 *	    O=Let's Encrypt
-Jun 14 13:42:39 *	    CN=Let's Encrypt Authority X3
-Jun 14 13:42:39 *	  Public key algorithm: rsaEncryption (4096 bits)
-Jun 14 13:42:39 *	  Sign algorithm sha256WithRSAEncryption
-Jun 14 13:42:39 *	  Valid since Jun 11 05:01:00 2018 GM to Sep  9 05:01:00 2018 GM
-Jun 14 13:42:39 *	* Cipher info:
-Jun 14 13:42:39 *	  Version: TLSv1/SSLv3, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
-Jun 14 13:42:39 *	Connected. Now logging in.
+Nov 02 22:22:32 *	Connecting to chat.freenode.net (185.30.166.38:6697)
+Nov 02 22:22:33 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 02 22:22:33 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 02 22:22:33 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 02 22:22:33 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Nov 02 22:22:33 *	* Subject: /CN=verne.freenode.net
+Nov 02 22:22:33 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Nov 02 22:22:33 *	* Certification info:
+Nov 02 22:22:33 *	  Subject:
+Nov 02 22:22:33 *	    CN=verne.freenode.net
+Nov 02 22:22:33 *	  Issuer:
+Nov 02 22:22:33 *	    C=US
+Nov 02 22:22:33 *	    O=Let's Encrypt
+Nov 02 22:22:33 *	    CN=Let's Encrypt Authority X3
+Nov 02 22:22:33 *	  Public key algorithm: rsaEncryption (4096 bits)
+Nov 02 22:22:33 *	  Sign algorithm sha256WithRSAEncryption
+Nov 02 22:22:33 *	  Valid since Oct 15 05:06:19 2018 GM to Jan 13 05:06:19 2019 GM
+Nov 02 22:22:33 *	* Cipher info:
+Nov 02 22:22:33 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Nov 02 22:22:33 *	Connected. Now logging in.

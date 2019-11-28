@@ -9,6 +9,9 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+#exec killall -q sxhkd &
+exec pkill -x sxhkd &
+
 # Wallpaper
 # exec nitrogen --restore &
 # exec $HOME/.fehbg &
@@ -19,17 +22,20 @@ set $alt Mod1
 
 default_orientation horizontal
 workspace_layout tabbed
-new_window 1pixel
+# workspace_layout stacking
 focus_follows_mouse no
 
-#default_floating_border normal|none|pixel
-default_floating_border pixel 1
+# for i3-gaps
+#gaps inner 3
+#gaps outer 3
 
-# default_border normal|none|pixel
+# default_border normal/none/pixel
 default_border pixel 1
 
-# hide_edge_borders none|vertical|horizontal|both|smart
-hide_edge_borders smart
+# default_floating_border normal/none/pixel
+default_floating_border pixel 1
+
+hide_edge_borders both
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -48,17 +54,18 @@ font pango: Roboto Mono 10
 # font, it doesn’t scale on retina/hidpi displays.
 
 # window colours:         border    background  text
-client.focused            #313131   #917752     #DEDEE3
-client.unfocused          #313131   #313138     #DEDEE3
-client.focused_inactive   #313131   #9E8159     #DEDEE3
-client.urgent             #CC2955   #CC2955     #F4F4FA
+client.focused            #242424   #9E7449     #EAEAEA
+client.unfocused          #242424   #31393F     #EAEAEA
+client.focused_inactive   #242424   #3D4746     #EAEAEA
+client.urgent             #B11E26   #B11E26     #F7F7F7
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $alt
 
 # start a terminal
 bindsym $mod+Return exec uxterm
-bindsym $alt+F1 exec st
+bindsym $mod+Shift+Return exec sakura
+bindsym $alt+F1 exec urxvt
 
 # kill focused window
 # bindsym $mod+Shift+q kill
@@ -83,11 +90,15 @@ bindsym $mod+Control+g exec gimp
 bindsym $ALT+F3 exec st
 bindsym $ALT+Shift+F3 exec xterm -e tmux
 bindsym $mod+Control+Print exec "$HOME/bin/scrot_delay.sh"
-# bindsym $mod+Shift+w exec "cat ~/.config/jgmenu/wmjgmenu.txt | jgmenu --simple --icon-size=0"
+bindsym XF86Calculator exec galculator
 
-bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 5%+ unmute"
-bindsym XF86AudioLowerVolume exec "amixer -q sset Master 5%- unmute"
+bindsym XF86AudioRaiseVolume exec "amixer -q sset PCM  5%+ unmute"
+bindsym XF86AudioLowerVolume exec "amixer -q sset PCM 5%- unmute"
 bindsym XF86AudioMute exec "amixer sset Master,0 toggle"
+
+bindsym XF86AudioPrev exec "mocp -r"
+bindsym XF86AudioPlay exec "mocp -G"
+bindsym XF86AudioNext exec "mocp -f"
 
 bindsym $mod+Control+p exec "libreoffice --calc"
 bindsym $mod+Control+o exec "libreoffice --writer"
@@ -142,7 +153,7 @@ for_window [class="yad_cal"] floating enable
 for_window [class="yad_font"] floating enable
 for_window [class="xst-256color"] floating enable 2pixel
 for_window [class="WmanExit"] floating enable 2pixel
-
+for_window [class="feh"] floating enable normal
 
 # change focus
 bindsym $mod+j focus left
@@ -203,7 +214,6 @@ bindsym $mod+Shift+minus move scratchpad
 
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
-
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -321,14 +331,15 @@ bar {
         bindsym --release button3 Exec jgmenu_run
         bindsym --release button2 exec --no-startup-id import -window root -quality 100 ~/pictures/i3_screen-import-$(date +%A_%s).png
         # status_command $HOME/.config/i3/i3conkybar.sh
-        status_command i3blocks
+        # status_command i3blocks
+        status_command slstatus -s
         separator_symbol " "
         colors {
-          background    #1A1A1A
-          statusline    #CFCFD4
-          focused_workspace    #917752    #917752    #DEDEE3
-          active_workspace     #36364D    #36364D    #CFCFD4
-          inactive_workspace   #313138    #313138    #CFCFD4
-          urgent_workspace     #CC2955    #CC2955    #F4F4FA
+          background            #212221
+          statusline            #DADADA
+          focused_workspace     #9E7449     #9E7449     #EAEAEA
+          active_workspace      #31393F     #31393F     #DADADA
+          inactive_workspace    #3D4746     #3D4746     #DADADA
+          urgent_workspace      #B11E26     #B11E26     #F7F7F7
      }
 }

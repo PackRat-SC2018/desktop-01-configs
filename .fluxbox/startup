@@ -4,6 +4,9 @@
 #
 # Lines starting with a '#' are ignored.
 
+# kill sxhkd
+# pkill -x sxhkd &
+
 # Change your keymap:
 #xmodmap "$HOME/.Xmodmap"
 #xrdb -l "$HOME/.Xresources"
@@ -18,11 +21,12 @@
 (sleep 2s && fbsetbg -c -r "$HOME/wallpaper/") &
 
 # 3rd party apps
+(sleep 2s && $HOME/bin/ConkyFluxbox.sh) &
 # (sleep 2s && conky -dc $HOME/.conky10fboxrc) &
 # (sleep 2s && connman-gtk --tray) &
 
 # polybar
-(sleep 2s && "$HOME/bin/fluxbox-bar.sh")
+# (sleep 2s && "$HOME/bin/fluxbox-bar.sh")
 
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.

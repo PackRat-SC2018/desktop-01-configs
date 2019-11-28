@@ -1,0 +1,11 @@
+# settings
+
+(GimpGegl-gegl-spherize-config "2019-09-13 09:39:53"
+    (time 1568381993)
+    (mode radial)
+    (angle-of-view 18.000000)
+    (curvature 0.989000)
+    (amount 0.991000)
+    (sampler-type nohalo))
+
+# end of settings

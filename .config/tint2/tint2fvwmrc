@@ -43,21 +43,28 @@ separator_background_id = 0
 separator_color = #131313 50
 separator_style = line
 separator_size = 1
-separator_padding = 2 1
+separator_padding = 4 0
 
 separator=new
 separator_background_id = 0
 separator_color = #131313 50
 separator_style = line
 separator_size = 1
-separator_padding = 2 1
+separator_padding = 1 1
 
 separator=new
 separator_background_id = 0
 separator_color = #131313 50
 separator_style = line
 separator_size = 1
-separator_padding = 2 1
+separator_padding = 1 1
+
+separator=new
+separator_background_id = 0
+separator_color = #131313 50
+separator_style = line
+separator_size = 1
+separator_padding = 4 0
 
 # executor sysinfo
 execp = new
@@ -107,7 +114,7 @@ button_background_id = 0
 button_centered = 1
 button_padding = 4 1 1
 button_max_icon_size = 64
-button_lclick_command = jgmenu --config-file="/home/doug/.config/jgmenu/jgtintrc"
+button_lclick_command = jgmenu --config-file="/home/doug/.config/jgmenu/jgfvwmrc"
 # button_lclick_command = jgmenu_run
 # button_mclick_command = text
 button_rclick_command = session-exit
@@ -115,10 +122,10 @@ button_rclick_command = session-exit
 #button_dwheel_command = text
 
 # Panel
-panel_items = PFEEFSC
+panel_items = P:T:S:C:
 panel_monitor = all
 panel_position = bottom center horizontal
-panel_size = 0 28
+panel_size = 0 36
 panel_margin = 0 0
 panel_padding = 0 0 0
 panel_dock = 0

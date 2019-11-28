@@ -1,16 +1,22 @@
-**** BEGIN LOGGING AT Tue Jun 19 21:19:29 2018
+**** BEGIN LOGGING AT Sat Mar 23 21:20:31 2019
 
-Jun 19 21:19:29 *	Connecting to irc.geo.oftc.net (207.192.72.99:6697)
-Jun 19 21:19:30 *	* Certification info:
-Jun 19 21:19:30 *	  Subject:
-Jun 19 21:19:30 *	    CN=weber.oftc.net
-Jun 19 21:19:30 *	  Issuer:
-Jun 19 21:19:30 *	    C=US
-Jun 19 21:19:30 *	    O=Let's Encrypt
-Jun 19 21:19:30 *	    CN=Let's Encrypt Authority X3
-Jun 19 21:19:30 *	  Public key algorithm: rsaEncryption (2048 bits)
-Jun 19 21:19:30 *	  Sign algorithm sha256WithRSAEncryption
-Jun 19 21:19:30 *	  Valid since May  7 16:58:37 2018 GM to Aug  5 16:58:37 2018 GM
-Jun 19 21:19:30 *	* Cipher info:
-Jun 19 21:19:30 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
-Jun 19 21:19:30 *	Connected. Now logging in.
+Mar 23 21:20:31 *	Connecting to irc.geo.oftc.net (64.62.190.36:6697)
+Mar 23 21:20:32 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 23 21:20:32 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 23 21:20:32 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Mar 23 21:20:32 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Mar 23 21:20:32 *	* Subject: /CN=charm.oftc.net
+Mar 23 21:20:32 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Mar 23 21:20:32 *	* Certification info:
+Mar 23 21:20:32 *	  Subject:
+Mar 23 21:20:32 *	    CN=charm.oftc.net
+Mar 23 21:20:32 *	  Issuer:
+Mar 23 21:20:32 *	    C=US
+Mar 23 21:20:32 *	    O=Let's Encrypt
+Mar 23 21:20:32 *	    CN=Let's Encrypt Authority X3
+Mar 23 21:20:32 *	  Public key algorithm: rsaEncryption (2048 bits)
+Mar 23 21:20:32 *	  Sign algorithm sha256WithRSAEncryption
+Mar 23 21:20:32 *	  Valid since Mar  8 10:39:11 2019 GM to Jun  6 10:39:11 2019 GM
+Mar 23 21:20:32 *	* Cipher info:
+Mar 23 21:20:32 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Mar 23 21:20:32 *	Connected. Now logging in.

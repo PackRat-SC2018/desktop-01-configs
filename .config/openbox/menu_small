@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+	<menu id="root-menu" label="Openbox 3">
+		<separator label="Openbox" />
+		<item label="Run Application .....">
+			<action name="Execute">
+				<execute>rofi -show run</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="Terminal">
+			<action name="Execute">
+				<execute>sakura</execute>
+			</action>
+		</item>
+</openbox_menu>

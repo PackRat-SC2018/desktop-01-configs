@@ -1,0 +1,52 @@
+##  Border colorsets - inactive
+Colorset 100 fg #31383B, bg #31383B, hi #31383B, sh #31383B
+Colorset 101 fg #468C46, bg #468C46, hi #468C46, sh #468C46
+Colorset 102 fg #468C8C, bg #468C8C, hi #468C8C, sh #468C8C
+Colorset 103 fg #8C468C, bg #8C468C, hi #8C468C, sh #8C468C
+
+##  Border colorsets - active
+Colorset 108 fg #538BA6, bg #538BA6, hi #538BA6, sh #538BA6
+Colorset 109 fg #53A653, bg #53A653, hi #53A653, sh #53A653
+Colorset 110 fg #53A6A6, bg #53A6A6, hi #53A6A6, sh #53A6A6
+Colorset 111 fg #A653A6, bg #A653A6, hi #A653A6, sh #A653A6
+
+##  Title colorset - minimal decors
+Colorset 112 fg #000000
+
+##  Title colorset - plain decors - inactive
+Colorset 113 fg #CCCCCC, bg #46758C
+Colorset 114 fg #CCCCCC, bg #468C46
+Colorset 115 fg #CCCCCC, bg #468C8C
+Colorset 116 fg #CCCCCC, bg #8C468C
+
+##  Title colorset - plain decors - active
+Colorset 121 fg #CCCCCC, bg #538BA6
+Colorset 122 fg #CCCCCC, bg #53A653
+Colorset 123 fg #CCCCCC, bg #53A6A6
+Colorset 124 fg #CCCCCC, bg #A653A6
+
+##  Plain/0 : Blue : inactive
+DestroyDecor Decor0i
+AddToDecor   Decor0i
++ TitleStyle Centered Height 0 -- Flat
++ ButtonStyle All -- UseTitleStyle Flat
++ AddButtonStyle 1 MiniIcon
++ BorderStyle Simple -- Flat
+
+##  Plain/0 : Blue : inactive
+DestroyStyle DecorStyle0i
+Style DecorStyle0i BorderColorset 100
+Style DecorStyle0i HilightBorderColorset 110
+Style DecorStyle0i Font terminus-bold-16
+Style DecorStyle0i !State 29,!State 28,!State 27,!State 26,!State 25
+Style DecorStyle0i Colorset 113
+Style DecorStyle0i HilightColorset 113
+Style DecorStyle0i !Button 2, !Button 4, !Button 6, Button 1
+
+##  Styles shared by all decors...
+Style * BorderWidth 3, HandleWidth 3
+Style * MWMBorder, FirmBorder, !Title
+# Style * Borders, State $[infostore.state_borderedwindow]
+
+##  plain0 : blue
+Style *           UseDecor Decor0i, UseStyle DecorStyle0i

@@ -120,6 +120,10 @@ screen=
 
 rxvt-unicode-256color=
 
+linux=
+
+xterm=
+
 [Panels]
 show_mini_info=true
 kilobyte_si=false

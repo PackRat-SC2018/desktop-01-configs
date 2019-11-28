@@ -1,0 +1,42 @@
+# colorsets
+Colorset 0 fg #D6D6D6, bg #282961, hi #282961, sh #282961, Plain, NoShape
+Colorset 1 fg #1F1F1F, bg #E6E6E6, hi #E6E6E6, sh #E6E6E6, Plain, NoShape
+Colorset 2 fg #E6E6E6, bg #1F1F1F, hi #1F1F1F, sh #1F1F1F, Plain, NoShape
+
+# Menu and Window Decor
+Colorset 3 fg #D6D6D6, bg #1F2326, hi #2E3438, sh #1F2326, Plain, NoShape
+Colorset 4 fg #D6D6D6, bg #4E4E4E, hi, sh, Plain, NoShape
+Colorset 5 fg #D6D6D6, bg #2D3238, hi #394047, sh #1F2226, Plain, NoShape
+
+# Colorset 6 hilight for desktop id, match window decor
+Colorset 6 fg #D6D6D6, bg #805540, hi #CC9C84, sh #BD907B, Plain, NoShape
+
+# IconBox
+Colorset 7 fg #D3D3D3, bg #2F333B, hi #202020, sh #202020, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 20
+Colorset 8 fg #E6E6E6, bg #3B535E, hi #3B535E, sh #30444D, Plain, NoShape
+Colorset 9 fg #E6E6E6, bg #1a6e99, hi #3B535E, sh #30444D, Plain, NoShape
+Colorset 10 fg #C6C6C6, bg #1F2326, hi #1F2326, sh #1F2326	, Plain, NoShape
+
+# panels
+Colorset 11 fg #C9CDD6, bg #223145, hi #00536C, sh #00536C, Plain, NoShape
+Colorset 12 fg #C6C6C6, bg #1F2326, hi #1F2326, sh #1F2326	, Plain, NoShape
+Colorset 13 fg #C9CDD6, bg #1F2326, hi #00536C, sh #00536C, Plain, NoShape
+Colorset 14 fg #101011, bg #CFCFCF, hi #0c0c0c, sh #0c0c0c, Plain, NoShape
+Colorset 15 fg #C6C6C6, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape
+
+# FvwmPager
+Colorset 16 fg #1D1D1D, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 55
+Colorset 17 fg #D6D6D6, bg #28465C, hi #28465C, sh #28465C, Plain, NoShape, RootTransparent, Buffer, Tint #28465C 75
+Colorset 18 fg #CCCCCC, bg darkblue, Plain, NoShape, RootTransparent, Buffer, Tint darkblue 50
+Colorset 19 fg #D6D6D6, bg #28465C, hi #28465C, sh #28465C, Plain, NoShape, RootTransparent, Buffer, Tint #28465C 75
+Colorset 20 fg #D6D6D6, bg #106DAA, hi #106DAA, sh #106DAA, Plain, NoShape, RootTransparent, Buffer, Tint #106DAA 75
+Colorset 21 fg #BABABA, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 75
+
+# desktop id
+Colorset 22 fg #D6D6D6, bg #80334D, hi #80334D, sh #80334D, Plain, NoShape, RootTransparent, Buffer, Tint #80334D 90
+Colorset 23 fg #D6D6D6, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 75
+
+# Colorsets 24, 25, 26, 27 for alternative decor.
+
+# FvwmIconMan
+Colorset 28 fg #D6D6D6, bg #444B54, hi #535B66, sh #363B42, Plain, NoShape
