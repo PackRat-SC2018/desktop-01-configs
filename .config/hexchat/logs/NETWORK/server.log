@@ -1081,3 +1081,37 @@ Nov 04 08:50:44 *	SASL authentication failed
 Nov 04 08:50:45 *	SASL authentication aborted
 **** ENDING LOGGING AT Mon Nov  4 08:50:45 2019
 
+**** BEGIN LOGGING AT Tue Dec 10 17:43:04 2019
+
+Dec 10 17:43:04 FiSHLiM plugin loaded
+Dec 10 17:43:04 Sysinfo plugin loaded
+Dec 10 17:43:04 Checksum plugin loaded
+Dec 10 17:43:04 *	Looking up chat.freenode.net
+Dec 10 17:43:04 *	Connecting to chat.freenode.net (94.125.182.252:6697)
+Dec 10 17:43:05 *	* Subject: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 10 17:43:05 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 10 17:43:05 *	* Subject: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Dec 10 17:43:05 *	* Issuer: /O=Digital Signature Trust Co./CN=DST Root CA X3
+Dec 10 17:43:05 *	* Subject: /CN=adams.freenode.net
+Dec 10 17:43:05 *	* Issuer: /C=US/O=Let's Encrypt/CN=Let's Encrypt Authority X3
+Dec 10 17:43:05 *	* Certification info:
+Dec 10 17:43:05 *	  Subject:
+Dec 10 17:43:05 *	    CN=adams.freenode.net
+Dec 10 17:43:05 *	  Issuer:
+Dec 10 17:43:05 *	    C=US
+Dec 10 17:43:05 *	    O=Let's Encrypt
+Dec 10 17:43:05 *	    CN=Let's Encrypt Authority X3
+Dec 10 17:43:05 *	  Public key algorithm: rsaEncryption (4096 bits)
+Dec 10 17:43:05 *	  Sign algorithm sha256WithRSAEncryption
+Dec 10 17:43:05 *	  Valid since Nov 25 05:02:04 2019 GM to Feb 23 05:02:04 2020 GM
+Dec 10 17:43:05 *	* Cipher info:
+Dec 10 17:43:05 *	  Version: TLSv1/SSLv3, cipher ECDHE-RSA-AES256-GCM-SHA384 (256 bits)
+Dec 10 17:43:05 *	Connected. Now logging in.
+Dec 10 17:43:05 *	*** Looking up your hostname...
+Dec 10 17:43:05 *	*** Checking Ident
+Dec 10 17:43:05 *	*** Found your hostname
+Dec 10 17:43:11 Checksum plugin unloaded
+Dec 10 17:43:11 Sysinfo plugin unloaded
+Dec 10 17:43:11 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Tue Dec 10 17:43:11 2019
+

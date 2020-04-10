@@ -11,13 +11,13 @@
     (size 640 480))
 (session-info "toplevel"
     (factory-entry "gimp-single-image-window")
-    (position 0 0)
-    (size 1920 1028)
+    (position 4 4)
+    (size 1904 1008)
     (open-on-exit)
     (aux-info
         (left-docks-width "243")
         (right-docks-width "255")
-        (maximized "yes"))
+        (maximized "no"))
     (gimp-toolbox
         (side left)
         (book
@@ -65,7 +65,7 @@
                     (edit-active "true")
                     (current-data "FG to BG (RGB)"))))
         (book
-            (position 391)
+            (position 517)
             (current-page 0)
             (dockable "gimp-layer-list"
                 (tab-style automatic)
@@ -84,8 +84,8 @@
                     (show-button-bar "true"))))))
 (session-info "toplevel"
     (factory-entry "gimp-file-open-dialog")
-    (position 499 105)
-    (size 941 681))
+    (position 477 204)
+    (size 948 654))
 (session-info "toplevel"
     (factory-entry "gimp-operation-tool-dialog")
     (position 1075 52))
@@ -94,15 +94,15 @@
     (position 422 137))
 (session-info "toplevel"
     (factory-entry "gimp-toolbox-color-dialog")
-    (position 287 143))
+    (position 191 199))
 (session-info "toplevel"
     (factory-entry "gimp-file-export-dialog")
     (position 499 137)
-    (size 941 681))
+    (size 948 654))
 (session-info "toplevel"
     (factory-entry "gimp-file-save-dialog")
-    (position 507 126)
-    (size 941 681))
+    (position 499 126)
+    (size 941 680))
 (session-info "toplevel"
     (factory-entry "gimp-image-new-dialog")
     (position 422 137))

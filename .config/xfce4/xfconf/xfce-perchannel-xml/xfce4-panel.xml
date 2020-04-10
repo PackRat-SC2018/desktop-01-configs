@@ -37,6 +37,7 @@
       <property name="window-scrolling" type="bool" value="false"/>
       <property name="show-labels" type="bool" value="false"/>
       <property name="middle-click" type="uint" value="1"/>
+      <property name="switch-workspace-on-unminimize" type="bool" value="true"/>
     </property>
     <property name="plugin-4" type="string" value="separator">
       <property name="style" type="uint" value="0"/>

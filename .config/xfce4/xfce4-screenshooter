@@ -4,5 +4,5 @@ screenshot_dir=file:/home/doug/images
 action=1
 delay=6
 region=1
-show_mouse=1
+show_mouse=0
 

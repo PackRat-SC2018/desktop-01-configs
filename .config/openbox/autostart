@@ -21,9 +21,11 @@
 #################################################################################
 
 # set a wallpaper
-~/.fehbg &
+# ~/.fehbg &
+fbsetbg -c -r "$HOME/wallpaper/" &
 
-(sleep 2s && $HOME/bin/ConkyFluxbox.sh) &
+# Conky
+# (sleep 2s && $HOME/bin/ConkyFluxbox.sh) &
 
 # start a panel
-(sleep 2s && tint2) &
+$HOME/.config/openbox/start-tint2.sh

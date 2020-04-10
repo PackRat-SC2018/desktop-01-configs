@@ -4,10 +4,13 @@
 
 # terminal emulator
 super + Return
-   urxvt
+   st
+
+super + shift + Return
+	uxterm
 
 alt + F1
-	st
+	urxvt
 
 # program launcher
 # super + space
@@ -19,9 +22,6 @@ super + p
 
 super + space
    jgmenu_run
-
-super + shift + Return
-	uxterm
 
 super + ctrl + l
 	subl3
@@ -79,16 +79,18 @@ super + Escape
 # bspwm hotkeys
 #
 
-# quit bspwm normally
-#super + alt + Escape
+# restart / quit bspwm normally
+super + shift + r
+	bspc wm -r
+
+super + q
+	bspc wm -r
+
 super + shift + e
 	bspc quit
 
 super + shift + q
 	rofi-logout
-
-#XF86Tools
-#	session-exit
 
 # close and kill
 #super + {_,shift + }w
@@ -117,7 +119,7 @@ super + g
 #
 
 # set the window state
-#super + {t,shift + t,s,f}
+# super + {t,shift + t,s,f}
 #	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 super + t
@@ -145,22 +147,16 @@ super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,north,south,east}
 
 # swap nodes
-#super + {Up,Down,Right,Left}
-#	bspc node -s {north,south,east,west} --follow
+super + {Up,Down,Right,Left}
+	bspc node -s {north,south,east,west} --follow
 
 # focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
+# super + {p,b,comma,period}
+#	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous node
 alt + {_,shift + }Tab
 	bspc node -f {next,prev}
-
-#alt + Tab
-#	bspc node -f next
-
-#alt + shift + Tab
-#	bspc node -f prev
 
 # focus the next/previous desktop
 # super + bracket{left,right}

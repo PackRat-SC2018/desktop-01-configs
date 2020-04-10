@@ -5,7 +5,7 @@
 <userClassPath xsi:nil="true"/>
 <vmParameters xsi:nil="true"/>
 <jreLocations xsi:nil="true"/>
-<javaInfo xsi:nil="false" vendorUpdate="2019-02-13" autoSelect="true">
+<javaInfo xsi:nil="false" vendorUpdate="2019-07-26" autoSelect="true">
 <vendor>Oracle Corporation</vendor>
 <location>file:///usr/lib/jvm/openjdk-1.8.0_202/jre</location>
 <version>1.8.0_202</version>

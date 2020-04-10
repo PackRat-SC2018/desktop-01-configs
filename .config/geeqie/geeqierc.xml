@@ -336,17 +336,17 @@
         show_thumbnails = "true" 
         show_directory_date = "false" 
         home_path = "" 
-        last_path = "/home/doug/images" 
+        last_path = "/home/doug/temp" 
         startup_path = "0" 
         exit_on_close = "false" 
 
-        main_window.x = "634" 
-        main_window.y = "231" 
-        main_window.w = "1267" 
-        main_window.h = "783" 
+        main_window.x = "960" 
+        main_window.y = "816" 
+        main_window.w = "954" 
+        main_window.h = "258" 
         main_window.maximized = "false" 
         main_window.hdivider_pos = "387" 
-        main_window.vdivider_pos = "212" 
+        main_window.vdivider_pos = "136" 
 
         folder_window.vdivider_pos = "100" 
 

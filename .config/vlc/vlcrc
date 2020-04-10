@@ -1196,6 +1196,29 @@
 # Session email (string)
 #sout-standard-email=
 
+[stream_out_chromecast] # Chromecast stream output
+
+# ? (string)
+#sout-chromecast-ip=
+
+# ? (integer)
+#sout-chromecast-port=8009
+
+# ? (boolean)
+#sout-chromecast-video=1
+
+# HTTP port (integer)
+#sout-chromecast-http-port=8010
+
+# Performance warning (integer)
+#sout-chromecast-show-perf-warning=1
+
+# Enable Audio passthrough (boolean)
+#sout-chromecast-audio-passthrough=0
+
+# Conversion quality (integer)
+#sout-chromecast-conversion-quality=1
+
 [delay] # Delay a stream
 
 # Elementary Stream ID (integer)
@@ -2988,11 +3011,17 @@
 # Tone-mapping algorithm (integer)
 #tone-mapping=3
 
+# Desaturation strength (float)
+#desat-strength=0.750000
+
+# Desaturation exponent (float)
+#desat-exponent=1.500000
+
+# Desaturation base (float)
+#desat-base=0.180000
+
 # Tone-mapping parameter (float)
 #tone-mapping-param=0.000000
-
-# Tone-mapping desaturation coefficient (float)
-#tone-mapping-desat=0.500000
 
 # Highlight clipped pixels (boolean)
 #tone-mapping-warn=0

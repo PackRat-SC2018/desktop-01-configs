@@ -14,8 +14,8 @@ confirm_history_cleanup=true
 confirm_exit=false
 confirm_directory_hotlist_delete=false
 confirm_view_dir=false
-safe_delete=false
-safe_overwrite=false
+safe_delete=true
+safe_overwrite=true
 use_8th_bit_as_meta=false
 mouse_move_pages_viewer=true
 mouse_close_dialog=false
@@ -87,17 +87,17 @@ skin=darkfar
 filepos_max_saved_entries=1024
 
 [Layout]
-message_visible=1
-keybar_visible=1
-xterm_title=1
+message_visible=true
+keybar_visible=true
+xterm_title=true
 output_lines=0
-command_prompt=1
-menubar_visible=1
-free_space=1
-horizontal_split=0
-vertical_equal=1
-left_panel_size=106
-horizontal_equal=1
+command_prompt=true
+menubar_visible=true
+free_space=true
+horizontal_split=false
+vertical_equal=true
+left_panel_size=50
+horizontal_equal=true
 top_panel_size=1
 
 [Misc]
@@ -124,6 +124,8 @@ linux=
 
 xterm=
 
+rxvt-256color=
+
 [Panels]
 show_mini_info=true
 kilobyte_si=false
@@ -144,6 +146,8 @@ permission_mode=false
 torben_fj_mode=false
 quick_search_mode=2
 select_flags=6
+
+simple_swap=false
 
 [Panelize]
 Find *.orig after patching=find . -name \\*.orig -print

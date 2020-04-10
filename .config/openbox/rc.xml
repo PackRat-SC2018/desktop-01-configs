@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>kodiak</name>
+    <name>cafe</name>
     <titleLayout>ISLMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -123,10 +123,10 @@
     <number>4</number>
     <firstdesk>1</firstdesk>
     <names>
-      <name>One</name>
-      <name>Two</name>
-      <name>Three</name>
-      <name>Four</name>
+      <name>1</name>
+      <name>2</name>
+      <name>3</name>
+      <name>4</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -1352,7 +1352,7 @@
             <enabled>false</enabled>
             <name>jgmenu</name>
           </startupnotify>
-          <command>jgmenu --config-file=/home/doug/.config/jgmenu/jgmouserc</command>
+          <command>jgmenu --config-file=/home/doug/.config/jgmenu/jgmouseltrc</command>
         </action>
       </mousebind>
     </context>

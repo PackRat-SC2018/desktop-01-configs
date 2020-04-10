@@ -2,18 +2,18 @@
 
 [path_list]
 "/home/doug/Downloads"
-"/home"
-"/home/doug/.themes"
-"/home/doug/temp"
-"/mnt/public/images"
-"/home/doug/wallpaper"
-"/home/doug/Pictures"
-"/home/doug/pictures"
 "/home/doug"
+"/home/doug/pictures"
 "/home/doug/images"
+"/home/doug/images/2019-12-13"
+"/home/doug/pictures/2019-12-13"
+"/home/doug/Pictures"
+"/run/media/doug/SDHC-4G-00"
+"/mnt/public/images"
+"/home/doug/temp"
 
 [bookmarks]
-".[path]/tmp"
+".[path]/home/doug/temp"
 "Home[path]/home/doug"
 "Desktop[path]/home/doug/Desktop"
 "Collections[path]/home/doug/.local/share/geeqie/collections"

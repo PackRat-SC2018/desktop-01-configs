@@ -103,6 +103,42 @@
   <resource identifier="${gimp_dir}/brushes/20 Fire PS Brushes abr.Vol.11/20 Fire Brushes.abr" checksum="a6386c8ac051aa168d47c50211df7089">
   </resource>
 
+  <resource identifier="${gimp_dir}/brushes/Splatter- Brushes/ADR_12 High-Res Brushes.abr" checksum="581fadcefd960ddb421e68dfa4726c3c">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Splatter- Brushes/ADR_12 High-Res Brushes.abr" checksum="a7cc701a410f30530f4ca304a6731570">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Splatter- Brushes/ADR_12 High-Res Brushes.abr" checksum="35cca692b5130e01ae5d7dd19de3bd59">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Splatter- Brushes/ADR_12 High-Res Brushes.abr" checksum="b40dc365de4fd61cf7e378c26c25286e">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Splatter- Brushes/ADR_12 High-Res Brushes.abr" checksum="978e68736f55a8f303d0d614491deee0">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Splatter- Brushes/ADR_12 High-Res Brushes.abr" checksum="4286943b0183cb1803b132e149940b50">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Splatter- Brushes/ADR_12 High-Res Brushes.abr" checksum="42c88dd95730809d291e996da501cd7a">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Splatter- Brushes/ADR_12 High-Res Brushes.abr" checksum="e7aca2e736120a540b0e43d5b233a3b9">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Splatter- Brushes/ADR_12 High-Res Brushes.abr" checksum="2c4d16aa7506baf3fc21db4f635cfead">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Splatter- Brushes/ADR_12 High-Res Brushes.abr" checksum="5151cc65a6da977df7d801cac729c920">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Splatter- Brushes/ADR_12 High-Res Brushes.abr" checksum="23791c8ade65d73c62363f3409b7e278">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Splatter- Brushes/ADR_12 High-Res Brushes.abr" checksum="5c1189710cf350e87656f5c40487ec38">
+  </resource>
+
   <resource identifier="${gimp_data_dir}/brushes/Media/Acrylic-01.gih" checksum="9ec0779f4c84fb3d0844bcdb069c8e0a">
   </resource>
 
@@ -230,6 +266,51 @@
   </resource>
 
   <resource identifier="${gimp_data_dir}/brushes/Legacy/confetti.gbr" checksum="ba5a4759cb321b81e232bba3f33dce76">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Free Broken Glass Photoshop Brushes 2.abr" checksum="8d98f654bbcda737d9ac090a7bbfca8c">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Free Broken Glass Photoshop Brushes 2.abr" checksum="764c5c78fbe65dad104500e0471a7e19">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Free Broken Glass Photoshop Brushes 2.abr" checksum="07cc54dc91f3af39503e2ec1371ebea7">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Free Broken Glass Photoshop Brushes 2.abr" checksum="409d69d48ee6d92918bb12cf1ceb0e9e">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Free Broken Glass Photoshop Brushes 2.abr" checksum="1e5b0438718cb4a26b1ddb72950b90ce">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Free Broken Glass Photoshop Brushes 2.abr" checksum="5ec20dc07217b14fc138fe398e0520bc">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Free Broken Glass Photoshop Brushes 2.abr" checksum="5d6a7430bc806f4d575b83c494e27d65">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Free Broken Glass Photoshop Brushes 2.abr" checksum="076aeedc02fefd5dee4d11a38fad029e">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Free Broken Glass Photoshop Brushes 2.abr" checksum="8ad4134d654553247e6fadaa503baf41">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Free Broken Glass Photoshop Brushes 2.abr" checksum="4e6252139ad25e22580fd9418f08b19f">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Free Broken Glass Photoshop Brushes 2.abr" checksum="290fe3cc94486f5c8c901671ef1a67cc">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Free Broken Glass Photoshop Brushes 2.abr" checksum="5f09b7a48026a60ebd736d8bf61f07cf">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Free Broken Glass Photoshop Brushes 2.abr" checksum="445f2f48383b768dfbbe5f6de65dbe65">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Free Broken Glass Photoshop Brushes 2.abr" checksum="a6ef49adcc32dac7f94d8e576a37f6f8">
+  </resource>
+
+  <resource identifier="${gimp_dir}/brushes/Free Broken Glass Photoshop Brushes 2.abr" checksum="950cc75e3a4c93e85f4d2aa3fc946c6b">
   </resource>
 
   <resource identifier="${gimp_data_dir}/brushes/Fun/GEGL-goat.gih" checksum="7a80114d08663b04b3825b92db7e98c4">
@@ -1378,7 +1459,7 @@
   <resource identifier="${gimp_data_dir}/gradients/Yellow_Orange.ggr" checksum="428584726006e23e260baa2a7d79f295">
   </resource>
 
-  <resource identifier="gimp-palette-color-history" checksum="8cfdad2f7de44df67af5ede3319b27f8">
+  <resource identifier="gimp-palette-color-history" checksum="8fab2895374e52794fc4b9fbcf059215">
   </resource>
 
   <resource identifier="${gimp_data_dir}/palettes/Bears.gpl" checksum="e82e818c20ac12bdd21049924ea2d1e7">
@@ -1606,7 +1687,13 @@
   <resource identifier="Cantarell" checksum="(null)">
   </resource>
 
+  <resource identifier="Cantarell" checksum="(null)">
+  </resource>
+
   <resource identifier="Cantarell Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Cantarell Light" checksum="(null)">
   </resource>
 
   <resource identifier="Cantarell Light" checksum="(null)">
@@ -1615,7 +1702,19 @@
   <resource identifier="Cantarell Thin" checksum="(null)">
   </resource>
 
+  <resource identifier="Cantarell Thin" checksum="(null)">
+  </resource>
+
   <resource identifier="Cantarell Ultra-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Cantarell Ultra-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Cascadia Code" checksum="(null)">
+  </resource>
+
+  <resource identifier="Cascadia Mono" checksum="(null)">
   </resource>
 
   <resource identifier="Century Schoolbook L Bold" checksum="(null)">
@@ -1982,6 +2081,42 @@
   </resource>
 
   <resource identifier="Hack Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack NF" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack NF Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack NF Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack NF Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Mono" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Mono Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Mono Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Nerd Font Mono Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Helvetica" checksum="(null)">
@@ -2773,6 +2908,30 @@
   <resource identifier="Iosevka Ultra-Light Oblique" checksum="(null)">
   </resource>
 
+  <resource identifier="JetBrains Mono" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono ExtraBold, Ultra-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono ExtraBold, Ultra-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Medium, Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="JetBrains Mono Medium, Medium Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Lato" checksum="(null)">
   </resource>
 
@@ -2801,6 +2960,15 @@
   </resource>
 
   <resource identifier="Lato weight=255 Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Linux Biolinum O" checksum="(null)">
+  </resource>
+
+  <resource identifier="Linux Biolinum O Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Linux Biolinum O Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Lucida Bold" checksum="(null)">
@@ -2861,6 +3029,132 @@
   </resource>
 
   <resource identifier="Luxi Serif Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG L" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG L Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG L Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG L DZ" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG L DZ Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG L DZ Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG L DZ Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG L Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG M" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG M Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG M Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG M DZ" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG M DZ Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG M DZ Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG M DZ Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG M Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG S" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG S Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG S Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG S DZ" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG S DZ Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG S DZ Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG S DZ Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG S Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGL NF" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGL Nerd Font" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGL Nerd Font Mono" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGLDZ NF" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGLDZ Nerd Font" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGLDZ Nerd Font Mono" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGM NF" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGM Nerd Font" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGM Nerd Font Mono" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGMDZ NF" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGMDZ Nerd Font" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGMDZ Nerd Font Mono" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGS NF" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGS Nerd Font" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGS Nerd Font Mono" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGSDZ NF" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGSDZ Nerd Font" checksum="(null)">
+  </resource>
+
+  <resource identifier="MesloLGSDZ Nerd Font Mono" checksum="(null)">
   </resource>
 
   <resource identifier="Monofur Nerd Font" checksum="(null)">
@@ -4015,12 +4309,6 @@
   <resource identifier="Public Sans Heavy" checksum="(null)">
   </resource>
 
-  <resource identifier="Public Sans Heavy" checksum="(null)">
-  </resource>
-
-  <resource identifier="Public Sans Heavy Italic" checksum="(null)">
-  </resource>
-
   <resource identifier="Public Sans Heavy Italic" checksum="(null)">
   </resource>
 
@@ -4030,31 +4318,13 @@
   <resource identifier="Public Sans Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Public Sans Light" checksum="(null)">
-  </resource>
-
-  <resource identifier="Public Sans Light Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Public Sans Medium" checksum="(null)">
-  </resource>
-
   <resource identifier="Public Sans Medium" checksum="(null)">
   </resource>
 
   <resource identifier="Public Sans Medium Italic" checksum="(null)">
   </resource>
 
-  <resource identifier="Public Sans Medium Italic" checksum="(null)">
-  </resource>
-
   <resource identifier="Public Sans Semi-Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Public Sans Semi-Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Public Sans Semi-Bold Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Public Sans Semi-Bold Italic" checksum="(null)">
@@ -4075,12 +4345,6 @@
   <resource identifier="Public Sans Ultra-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Public Sans Ultra-Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Public Sans Ultra-Bold Italic" checksum="(null)">
-  </resource>
-
   <resource identifier="Public Sans Ultra-Bold Italic" checksum="(null)">
   </resource>
 
@@ -4088,18 +4352,6 @@
   </resource>
 
   <resource identifier="Public Sans Ultra-Light Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Public Sans weight=255" checksum="(null)">
-  </resource>
-
-  <resource identifier="Public Sans weight=255" checksum="(null)">
-  </resource>
-
-  <resource identifier="Public Sans weight=255 Italic" checksum="(null)">
-  </resource>
-
-  <resource identifier="Public Sans weight=255 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Roboto" checksum="(null)">

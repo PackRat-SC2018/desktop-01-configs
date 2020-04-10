@@ -1,6 +1,6 @@
 # GIMP gimp-text-tool options
 
-(foreground (color-rgb 0.203922 0.254902 0.290196))
+(foreground (color-rgb 0.56078433990478516 0.56078433990478516 0.56078433990478516))
 (palette "Color History")
 (font "SF Pro Display Semi-Bold")
 (box-mode fixed)
