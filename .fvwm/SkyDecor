@@ -1,19 +1,19 @@
 DestroyDecor SkyDecor
 AddToDecor   SkyDecor
 
-DefaultFont "xft:Fira Sans:regular:size=11:antialias=True:hintstyle=slight"
+DefaultFont "xft:Fira Sans:regular:size=11:antialias=True:autohint=true"
 
-Colorset 24 fg #C6C6C6, bg #323232, hi #323232, sh #323232, Plain, NoShape
-Colorset 25 fg #D6D6D6, bg #254669, hi #2C537D, sh #1C344F, Plain, NoShape
-Colorset 26 fg #232323, bg #232323, hi #252525, sh #212121, Plain, NoShape
-Colorset 27 fg #333333, bg #333333, hi #353535, sh #313131, Plain, NoShape
+Colorset 22 fg #C6C6C6, bg #282828, hi #2C2C2C, sh #212121, Plain, NoShape
+Colorset 23 fg #D6D6D6, bg #254669, hi #325D8C, sh #1C2C3D, Plain, NoShape
+Colorset 24 fg #282828, bg #282828, hi #252525, sh #212121, Plain, NoShape
+Colorset 25 fg #254669, bg #254669, hi red, sh green, Plain, NoShape
 
-Style * Colorset 24
-Style * HilightColorset 25
+Style * Colorset 22
+Style * HilightColorset 23
 Style * BorderWidth 1, HandleWidth 1
 BorderStyle Active -- Flat HiddenHandles NoInset
 BorderStyle Inactive -- Flat HiddenHandles NoInset
-Style * BorderColorset 26, HilightBorderColorset 26
+Style * BorderColorset 24, HilightBorderColorset 25
 
 #######
 # 6: Window Decor

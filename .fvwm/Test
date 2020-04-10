@@ -1,0 +1,38 @@
+Style FvwmTestBar* !Title, BorderWidth 3, HandleWidth 3, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom, !Iconifiable
+
+DestroyModuleConfig FvwmTestBar:*
+*FvwmTestBar: Geometry 200x200+2+250
+*FvwmTestBar: Colorset 0
+*FvwmTestBar: Rows 1
+*FvwmTestBar: Columns 1
+*FvwmTestBar: Frame 1
+*FvwmTestBar: Font "Shadow=0 0 SE:xft:Fira Sans:Regular:size=10:antialias=True:hintstyle=slight"
+#*FvwmTestBar: (1x1, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 11, ActiveColorset 12, Frame 1)
+#*FvwmTestBar: (1x1, Id desk1, Title "2", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 12, Frame 1)
+#*FvwmTestBar: (1x1, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 12, Frame 1)
+#*FvwmTestBar: (1x1, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 12, Frame 1)
+*FvwmTestBar: (1x1, Swallow FvwmPager 'Module FvwmPager *', Frame 1)
+
+# FvwmButtons - FvwmPagerPanel
+#
+# FvwmButtons is a powerful module that can be used to build custom
+# panels and docks. This config uses FvwmButtons to build the FvwmPagerPanel.
+# The panel contains buttons to switch desks, FvwmPager, a system tray,
+# FvwmIconMan (list of running windows), and a clock.
+#
+# Note - To use the system tray you must have "stalonetray" installed.
+DestroyModuleConfig FvwmPagerPanel:*
+*FvwmPagerPanel: Geometry 170x128+2+2
+*FvwmPagerPanel: Colorset 10
+*FvwmPagerPanel: Rows 180
+*FvwmPagerPanel: Columns 100
+*FvwmPagerPanel: Frame 0
+*FvwmPagerPanel: Font "xft:Fira Sans:regular:size=10:antialias=True"
+# *FvwmPagerPanel: (120x45, Icon "fvwm-logo-small.png", Frame 0)
+*FvwmPagerPanel: (25x20, Id desk0, Title "0", Action (Mouse 1) GotoDesk 0 1, Colorset 11, ActiveColorset 12, Frame 1)
+*FvwmPagerPanel: (25x20, Id desk1, Title "1", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 12, Frame 1)
+*FvwmPagerPanel: (25x20, Id desk2, Title "2", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 12, Frame 1)
+*FvwmPagerPanel: (25x20, Id desk3, Title "3", Action (Mouse 1) GotoDesk 0 4, ActiveColorset 12, Frame 1)
+#*FvwmPagerPanel: (5x80, Frame 0)
+*FvwmPagerPanel: (100x80, Swallow FvwmPager 'Module FvwmPager *', Frame 1)
+#*FvwmPagerPanel: (5x80, Frame 0)

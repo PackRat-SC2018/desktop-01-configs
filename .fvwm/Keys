@@ -1,17 +1,487 @@
-# fvwm keys file 10-07-2013
-#=============================#
+###########
+# 1: Functions
+#
+# Fvwm can use custom functions for various tasks.
+# The syntax for defining a function named FunctionName is:
+#
+#   DestroyFunc FunctionName
+#   AddToFunc FunctionName
+#   + I [Action to do Immediately]
+#   + C [Action to do on a Mouse Click]
+#   + D [Action to do on a Mouse Double Click]
+#   + H [Action to do on a Mouse Hold]
+#   + M [Action to do on a Mouse Motion]
+###########
 
-Key	Space	A	4	Menu MenuFvwmRoot Nop
-Key	Space	A	CM	Menu WindowOptionsMenu Close
+# Mouse Bindings Functions
+DestroyFunc RaiseMoveX
+AddToFunc RaiseMoveX
++ I Raise
++ M $0
++ D $1
 
-# Scroll Desktops
-Key	Right	A	CM	GotoDesk	1 0
-Key	Left	A	CM	GotoDesk	-1 0
+DestroyFunc RaiseMove
+AddToFunc RaiseMove
++ I Raise
++ M $0
 
-Key 1		A	4 GotoDesk 0 0
-Key 2		A	4 GotoDesk 0 1
-Key 3		A	4 GotoDesk 0 2
-Key 4		A	4 GotoDesk 0 3
+DestroyFunc MoveToCurrent
+AddToFunc MoveToCurrent
++ I ThisWindow MoveToPage
++ I ThisWindow MoveToDesk
+
+AddToFunc DeiconifyAndRearrange
++ C Iconify off
++ C All (CurrentPage, Iconic) PlaceAgain Icon
+
+AddToFunc IconFunc
++ C DeiconifyAndRearrange
++ M Raise
++ M Move
++ D DeiconifyAndRearrange
+
+# Function: ViewManPage $0
+#
+# This function loads the man page $0 in an terminal
+# and is used with the help menu.
+DestroyFunc ViewManPage
+AddToFunc   ViewManPage
++ I Exec exec $[infostore.terminal] -g 80x40 -n "Manual Page - $0" -T "Manual Page - $0" -e man "$0"
+
+# Function: SetBG $0
+#
+# SetBG is used with the background menu to set the background
+# image and configure it to be loaded the next time fvwm is run.
+# Note, fvwm-root can't use .jpeg or resize images. Use something
+# like display, feh, etc.
+DestroyFunc SetBG
+AddToFunc   SetBG
++ I Test (f $[FVWM_USERDIR]/images/background/$0) \
+    Exec exec fvwm-root $[FVWM_USERDIR]/images/background/$0
++ I TestRc (Match) Exec exec ln -fs images/background/$0 \
+    $[FVWM_USERDIR]/.BGdefault
++ I TestRc (Match) Break
++ I Test (!f $[FVWM_DATADIR]/default-config/images/background/$0) Break
++ I Exec exec fvwm-root $[FVWM_DATADIR]/default-config/images/background/$0
++ I Exec exec ln -fs $[FVWM_DATADIR]/default-config/images/background/$0 \
+    $[FVWM_USERDIR]/.BGdefault
+
+# Function: IconManClick
+#
+# This function is run from FvwmIconMan when the button is clicked.
+DestroyFunc IconManClick
+AddToFunc   IconManClick
++ I ThisWindow (Raised, !Shaded, !Iconic, CurrentPage) Iconify
++ I TestRc (Match) Break
++ I ThisWindow WindowShade off
++ I ThisWindow Iconify off
++ I ThisWindow Raise
++ I ThisWindow (AcceptsFocus) FlipFocus
+
+# Function: ThumbnailClick
+#
+# This function is run from FvwmIconMan when the button is clicked.
+DestroyFunc ThumbnailClick
+AddToFunc   ThumbnailClick
++ I ThisWindow (Raised, !Shaded, !Iconic, CurrentPage) Thumbnail
++ I TestRc (Match) Break
++ I ThisWindow WindowShade off
++ I ThisWindow Iconify off
++ I ThisWindow Raise
++ I ThisWindow (AcceptsFocus) FlipFocus
+
+# Function: ToggleTitle
+#
+# This function will toggle if fvwm shows the TitleBar.
+DestroyFunc ToggleTitle
+AddToFunc   ToggleTitle
++ I ThisWindow (State 1) WindowStyle Title
++ I TestRc (Match) State 1 False
++ I TestRc (Match) Break
++ I WindowStyle !Title
++ I State 1 True
+
+DestroyFunc ShowDesktop
+AddToFunc   ShowDesktop
++ I All (CurrentPage, Iconic, State 1) RestoreDesktop
++ I TestRc (Match) Break
++ I All (CurrentPage, !Iconic, !State 1) ThisWindow State 1 True
++ I All (CurrentPage, !Iconic, State 1) Iconify
+
+DestroyFunc RaiseToTop
+AddToFunc RaiseToTop
+           + I Layer 0 ontop
+           + I Raise
+
+DestroyFunc LowerToBottom
+AddToFunc LowerToBottom
+           + I Layer 0 0
+           + I Lower
+
+# Move Window
+DestroyFunc MoveRight
+AddToFunc   MoveRight
++ I AnimatedMove w+20p keep
+
+DestroyFunc MoveLeft
+AddToFunc MoveLeft
++ I AnimatedMove w+-20p keep
+
+DestroyFunc MoveUp
+AddToFunc MoveUp
++ I AnimatedMove keep w+-20p
+
+DestroyFunc MoveDown
+AddToFunc MoveDown
++ I AnimatedMove keep w+20p
+
+DestroyFunc ShrinkEast
+AddToFunc ShrinkEast
++ I PipeRead "echo Resize $(($[cw.width] - 15))p keep"
+
+DestroyFunc GrowEast
+AddToFunc GrowEast
++ I PipeRead "echo Resize $(($[cw.width] + 15))p keep"
+
+DestroyFunc ShrinkSouth
+AddToFunc ShrinkSouth
++ I PipeRead "echo Resize keep $(($[cw.height] - 15))p"
+
+DestroyFunc GrowSouth
+AddToFunc GrowSouth
++ I PipeRead "echo Resize keep $(($[cw.height] + 15))p"
+
+# Alt-Tab Window Switching two methods ================================#
+
+DestroyFunc FuncFvwmNextWindow
+AddToFunc FuncFvwmNextWindow
++ I Next (CurrentPage, !Iconic, AcceptsFocus) FlipFocus NoWarp
++ I Current Raise
+
+DestroyFunc FuncFvwmPrevWindow
+AddToFunc FuncFvwmPrevWindow
++ I Prev (CurrentPage, !Iconic, AcceptsFocus) Focus NoWarp
++ I Current Raise
+
+# ==================================
+SetEnv DIR Next
+
+DestroyFunc NextWindow
+AddToFunc 	NextWindow
++ I ScanForWindow NorthEast NorthWest (CurrentPage, !Iconic, AcceptsFocus) FlipFocus
++ I Current Raise
++ I Current WarpToWindow 5 5
+
+DestroyFunc PrevWindow
+AddToFunc 	PrevWindow
++ I ScanForWindow SouthEast SouthWest (CurrentPage, !Iconic, AcceptsFocus) FlipFocus
++ I Current Raise
++ I Current WarpToWindow 5 5
+# ============================================
+
+DestroyFunc CenterWindow
+AddToFunc   CenterWindow
++ I ThisWindow Piperead "echo Move \
+    $(( $[vp.width]/2-$[w.width]/2 ))p \
+    $(( $[vp.height]/2-$[w.height]/2 ))p"
+
+DestroyFunc ResizeCenter
+AddToFunc ResizeCenter
++ I Resize $*
++ I ThisWindow WindowStyle CenterPlacement
++ I UpdateStyles
+
+DestroyFunc FvwmCenterWindow
+AddToFunc FVwmCenterWindow
++ I Resize 70 80
++ I Move 50-50w 50-50w
+
+## Tiling functions
+
+DestroyFunc TileUpperLeft
+AddToFunc TileUpperLeft
++ I Resize 48 43
++ I AnimatedMove 1 1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc TileUpperRight
+AddToFunc TileUpperRight
++ I Resize 48 43
++ I AnimatedMove -1 1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc TileLowerRight
+AddToFunc TileLowerRight
++ I Resize 48 43
++ I AnimatedMove -1 -1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc TileLowerLeft
+AddToFunc TileLowerLeft
++ I Resize 48 43
++ I AnimatedMove 1 -1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc MaxTile
+AddToFunc MaxTile
++ I Maximize 100 100
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc HalfMaxLeft
+AddToFunc HalfMaxLeft
++ I Resize 48 95
++ I AnimatedMove 1 1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc HalfMaxRight
+AddToFunc HalfMaxRight
++ I Resize 48 95
++ I AnimatedMove -1 1
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc MaxTop
+AddToFunc MaxTop
++ I Resize 60 44
++ I AnimatedMove 294px 4px
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+DestroyFunc MaxBottom
+AddToFunc MaxBottom
++ I Resize 60 40
++ I AnimatedMove 294px -28px
++ I ThisWindow
++ I Focus
++ I Current Raise
+
+# Function: Window Tiling
+#
+# This function tiles active windows with specified keybindings.
+DestroyFunc TileLeft
+AddToFunc TileLeft
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 100
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move +0 +0
+
+DestroyFunc TileRight
+AddToFunc TileRight
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 100
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move -0 +0
+
+DestroyFunc TileTop
+AddToFunc TileTop
++ I ThisWindow (!Shaded, !Iconic) Maximize 100 50
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move +0 +0
+
+DestroyFunc TileBottom
+AddToFunc TileBottom
++ I ThisWindow (!Shaded, !Iconic) Maximize 100 50
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move +0 -0
+
+DestroyFunc TileTopLeft
+AddToFunc TileTopLeft
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 50
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move +0 +0
+
+DestroyFunc TileTopRight
+AddToFunc TileTopRight
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 50
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move -0 +0
+
+DestroyFunc TileBottomLeft
+AddToFunc TileBottomLeft
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 50
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move +0 -0
+
+DestroyFunc TileBottomRight
+AddToFunc TileBottomRight
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 50
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move -0 -0
+
+DestroyFunc MoveToCenter
+AddToFunc MoveToCenter
++ I ThisWindow (!Shaded, !Iconic) Maximize 80 80
++ I ThisWindow (Maximized, !Shaded, !Iconic) Move 50-50w 50-50w
+
+#-----------------------------------------------------------------------
+# Wallpaper Browser by Taviso.
+#-----------------------------------------------------------------------
+
+#DestroyFunc FvwmWallpaper
+#AddToFunc   FvwmWallpaper
+#+ I PipeRead 'test ! -d "${FVWM_USERDIR}/wallpapers" && mkdir "${FVWM_USERDIR}/wallpapers"; \
+#    test ! -d "${FVWM_USERDIR}/wallpapers/.thumbs" && mkdir "${FVWM_USERDIR}/wallpapers/.thumbs"; \
+#    for i in "$0/"*; do \
+#        test -f "${FVWM_USERDIR}/wallpapers/.thumbs/${i##*/}" -a "${i}" -ot "${FVWM_USERDIR}/wallpapers/.thumbs/${i##*/}" || { \
+#                convert -quality 0 -sample 42 "${i}" "png:${FVWM_USERDIR}/wallpapers/.thumbs/${i##*/}" 2>/dev/null \
+#                    || continue; \
+#            }; \
+#    done; \
+#    fvwm-menu-directory --icon-title menu/folder-open.xpm --icon-file __PIXMAP__ --links \
+#    --icon-dir menu/folder.xpm \
+#    --dir "$0" --command-file="FuncNewWallpaper \\"%f\\"" \
+#    --exec-t="^xv -wait 2 *" --func-name WallpaperBrowser | sed \
+#    "s#__PIXMAP__\\(.*\\)\\\"\\(.*/\\)\\(.*\\)\\\"#\\$[FVWM_USERDIR]/wallpapers/.thumbs/\\3\\1\\2\\3#g"'
+
+#####
+# Example: http://dev.gentoo.org/~taviso/screenshots/may04a-fvwm.png
+# 
+# Remember, fvwm-root only works with png and xpm, if you use lots of jpg, try changing this
+# to Esetroot, or similar.
+#
+# If you have xv installed, clicking the title will start a slide show.
+###############
+DestroyFunc WallpaperBrowser
+AddToFunc WallpaperBrowser
++ I PipeRead 'test ! -d "$0/.thumbs" && mkdir "$0/.thumbs"; \
+    for i in "$0/"*; do \
+        test -f "$0/.thumbs/${i##*/}" \
+            -a "${i}" -ot "$0/.thumbs/${i##*/}" || { \
+                convert -quality 0 -scale 42 "${i}" "png:$0/.thumbs/${i##*/}" 2>/dev/null \
+                    || continue; \
+            }; \
+    done; \
+    fvwm-menu-directory --icon-title folder_view.png --icon-file __PIXMAP__ \
+    --icon-dir folder_paper_closed.png --dir "$0" --exec-file "^hsetroot -center" \
+    --exec-t="^xv -wait 2 *" | sed -e "s#FuncFvwmMenuDirectory#WallpaperBrowser#g" \
+    -e "s#__PIXMAP__\\(.*\\)\\\"\\(.*/\\)\\(.*\\)\\\"#\\2.thumbs/\\3\\1\\2\\3#g"'
+
+#-----------------------------------------------------------------------
+# switch background from FvwmBacker to chosen wallpaper picture
+#-----------------------------------------------------------------------
+DestroyFunc FuncNewWallpaper
+AddToFunc   FuncNewWallpaper
++ I PipeRead 'ln -sf $* $[FVWM_USERDIR]/.wallpaper'
++ I Exec exec feh --bg-scale $[infostore.fvwm_wallpaper]
++ I KillModule FvwmBacker
+
+#-----------------------------------------------------------------------
+# delete wallpaper link and activate FvwmBacker
+#-----------------------------------------------------------------------
+DestroyFunc FuncDelWallpaperlink
+AddToFunc   FuncDelWallpaperlink
++ I PipeRead 'rm -f $[infostore.fvwm_wallpaper]'
++ I Module FvwmBacker
+
+
+#-----------------------------------------------------------------------
+# replacement for iconify. Creates a small thumb with little app icon
+# on the upper right and the name of the app at the bottom
+#-----------------------------------------------------------------------
+DestroyFunc Thumbnail
+AddToFunc   Thumbnail
++ I Raise
++ I ThisWindow (!Iconic) PipeRead "echo SetEnv app_name `xprop -id $[w.id] WM_CLASS |cut -d',' -f2 |cut -d'\"' -f2`"
++ I PipeRead "echo SetEnv Icon-$[w.id] `fns-find-icon -i $[w.id]`"
++ I PipeRead 'test ! -d "${FVWM_USERDIR}/temp" && mkdir "${FVWM_USERDIR}/temp"'
++ I ThisWindow (!Shaded, Iconifiable, !Iconic) PipeRead \
+    "sleep 0.001; xwd -silent -id $[w.id] | convert -scale 128x72! -frame 1x1 \
+    -mattecolor black -quality 0 xwd:- png:$[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png \
+    && echo WindowStyle IconOverride, Icon $[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png \
+    || echo Nop"
++ I TestRc (Match) Test (f $[Icon-$[w.id]], f $[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png) PipeRead \
+    "convert $[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png \\\( $[Icon-$[w.id]] -scale 24x24 \\\) \
+    -gravity northeast -geometry +10+10 -compose multiply -composite \
+    -fill white -undercolor '#00000080' -gravity south -annotate +0+5 \" $[app_name] \" \
+    $[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png; echo Nop"
++ I Iconify
+
+#-----------------------------------------------------------------------
+# replacement for deiconify.
+#-----------------------------------------------------------------------
+DestroyFunc DeThumbnail
+AddToFunc   DeThumbnail
++ I Test (i $[Icon-$[w.id]]) WindowStyle Icon $[Icon-$[w.id]]
++ I TestRc (NoMatch) WindowStyle NoIconOverride, Icon
++ I Exec rm -f $[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png
++ I All (Iconic, CurrentPage) PlaceAgain icon
++ I PipeRead 'if [ -O $[Icon-$[w.id]] ]; then rm -f $[Icon-$[w.id]];fi'
++ I UnsetEnv Icon-$[w.id]
++ I UnsetEnv app_name
+
+#***********************************************************************
+# 7.5.1 RunCommand Window
+#***********************************************************************
+DestroyModuleConfig  FvwmForm-RunCommand: *
+*FvwmForm-RunCommand: WarpPointer
+# *FvwmForm-RunCommand: Font 8x13
+*FvwmForm-RunCommand: Font "xft:Noto Sans:regular:size=11:antialias=True:hintstyle=slight"
+*FvwmForm-RunCommand: Title         "$[gt.Run Command]"
+*FvwmForm-RunCommand: Line          center
+*FvwmForm-RunCommand: Text          "$[gt.Run Command]"
+*FvwmForm-RunCommand: Line          left
+*FvwmForm-RunCommand: Text          "$[gt.Command:]"
+*FvwmForm-RunCommand: Input         Command 30 ""
+*FvwmForm-RunCommand: Line          center
+*FvwmForm-RunCommand: Selection     cmd multiple
+*FvwmForm-RunCommand: Choice        TERM    TERM     off      "$[gt.Run in Terminal]"
+*FvwmForm-RunCommand: Line          expand
+*FvwmForm-RunCommand: Button        quit "$[gt.Execute]" ^M
+*FvwmForm-RunCommand: Command       $(TERM?exec xterm -hold -T "$(Command)" -n "$(Command)" -e $(Command))
+*FvwmForm-RunCommand: Command       exec $(Command)
+*FvwmForm-RunCommand: Button        quit "$[gt.Cancel]"
+*FvwmForm-RunCommand: Command       Nop
+
+# To force that all pending changes are applied immediately, use the
+# UpdateStyles, Refresh or RefreshWindow commands.
+
+DestroyFunc NodecorBottomLeft
+AddToFunc NodecorBottomLeft
++ I ToggleTitle
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 50
++ I ThisWindow Schedule 10 Move +0 -0
+
+DestroyFunc NodecorBottomRight
+AddToFunc NodecorBottomRight
++ I ToggleTitle
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 50
++ I ThisWindow Schedule 10 Move -0 -0
+# + I ThisWindow (Maximized, !Shaded, !Iconic) Move -0 -0
+
+DestroyFunc NodecorUpperLeft
+AddToFunc NodecorUpperLeft
++ I ToggleTitle
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 50
++ I ThisWindow Schedule 10 Move +0 +0
+
+DestroyFunc NodecorUpperRight
+AddToFunc NodecorUpperRight
++ I ToggleTitle
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 50
++ I ThisWindow Schedule 10 Move -0 +0
+
+DestroyFunc NodecorMaxLeft
+AddToFunc NodecorMaxLeft
++ I ToggleTitle
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 100
++ I ThisWindow Schedule 20 Move +0 +0
+
+DestroyFunc NodecorMaxRight
+AddToFunc NodecorMaxRight
++ I ToggleTitle
++ I ThisWindow (!Shaded, !Iconic) Maximize 50 100
++ I ThisWindow Schedule 20 Move -0 +0
+
+Key KP_1    A   4S  NodecorBottomLeft
+Key KP_3    A   4S  NodecorBottomRight
+Key KP_7    A   4S  NodecorUpperLeft
+Key KP_9    A   4S  NodecorUpperRight
+Key KP_4    A   4S  NodecorMaxLeft
+Key KP_6    A   4S  NodecorMaxRight
 
 # typical alt-tab window switching behaviors
 # fluxbox style
@@ -21,27 +491,23 @@ Key	Tab	A	MS	FuncFvwmPrevWindow
 # openbox/xfce style
 # Silent Key Tab A M WindowList Root c c NoDeskSort, SelectOnRelease Meta_L
 
+Key	Space	A	4	Menu MenuFvwmRoot Nop
+Key	Space	A	CM	Menu MenuWindowOps Close
+
 Key	r	A	SM	RaiseToTop
 Key	l	A	SM	LowerToBottom
 
 Key	F4	A	M	Close
 Key	F5	A	M	Move 50-50w 50-50w
 Key	F5	A	MS	FvwmCenterWindow
-# Key	F6	A	M	Iconify
-Key	F6	A	M	Thumbnail
+Key	F6	A	M	Iconify
+# Key	F6	A	M	Thumbnail
 Key	F6	A	MS	RaiseLower
 Key	F7	A	M	Maximize 0 100
 Key	F8	A	M	Maximize 100 0
 Key	F9	A	M	Destroy
 Key	F10	A	M	Maximize 100 100
-# Key F10  A  M   ThisWindow Schedule 300 ToggleMaximize animate
 Key F11  A  M   Maximize Fullscreen
-# Key  F11  A   M  ThisWindow Schedule 200 NearMaximizeAnimated
-
-#Key	F1	A	SM	AnimatedMove +0 +0
-#Key	F2	A	SM	AnimatedMove -0 +0
-#Key	F3	A	SM	AnimatedMove +0 -0
-#Key	F4	A	SM	AnimatedMove -0 -0
 Key F7	A   SM  Move
 Key F8  A   SM  Resize
 
@@ -55,61 +521,36 @@ Key	Left	A	S4	ShrinkEast
 Key	Up	    A	S4	ShrinkSouth
 Key	Down	A	S4	GrowSouth
 Key T       A   S4  ToggleTitle
-# Key d       A   S4  ShowDesktop
+Key d       A   S4  ShowDesktop
 
 # Tiling and Window movement with number pad
 #
-Key	KP_7	A	MS	TileTopLeft
-Key	KP_9	A	MS	TileTopRight
-Key	KP_1	A	MS	TileBottomLeft
-Key	KP_3	A	MS	TileBottomRight
-Key KP_5    A   MS  Maximize
-Key KP_4    A   MS  TileLeft
-Key KP_6    A   MS  TileRight
-Key KP_8    A   MS  TileTop
-Key KP_2    A   MS  TileBottom
-Key KP_0    A   MS  MoveToCenter
+Key	KP_7	A	4S	TileTopLeft
+Key	KP_9	A	4S	TileTopRight
+Key	KP_1	A	4S	TileBottomLeft
+Key	KP_3	A	4S	TileBottomRight
+Key KP_5    A   4S  Maximize
+Key KP_4    A   4S  TileLeft
+Key KP_6    A   4S  TileRight
+Key KP_8    A   4S  TileTop
+Key KP_2    A   4S  TileBottom
+Key KP_0    A   4S  MoveToCenter
 
-# window placement based on number key pad
-#
-Key	KP_1	A	S4  AnimatedMove +0 -0
-Key KP_2    A   S4  Move 50-50w -0
-Key	KP_3	A	S4  AnimatedMove -0 -0
-Key KP_4    A   S4  Move +0 50-50w
-Key KP_5    A   S4  Move 50-50w 50-50w
-Key KP_6    A   S4  Move -0 50-50w
-Key	KP_7	A   S4  AnimatedMove +0 +0
-Key	KP_8	A   S4  AnimatedMove 50-50w +0
-Key	KP_9	A	S4  AnimatedMove -0 +0
-
-# Scroll Pages
-#Key	Right	A	C4	Scroll +100 0
-#Key	Left	A	C4	Scroll -100 0
-#Key	Up		A	C4	Scroll +0 -100
-#Key	Down	A	C4	Scroll +0 +100
-
-# 3x3
-#Key	KP_7	A	S4	GotoPage 0 0
-#Key	KP_8	A	S4	GotoPage 1 0
-#Key	KP_9	A	S4	GotoPage 2 0
-#Key	KP_4	A	S4	GotoPage 0 1
-#Key	KP_5	A	S4	GotoPage 1 1
-#Key	KP_6	A	S4	GotoPage 2 1
-#Key	KP_1	A	S4	GotoPage 0 2
-#Key	KP_2	A	S4	GotoPage 1 2
-#Key	KP_3	A	S4	GotoPage 2 2
-
-# 2x2
-#Key	KP_1	A	S4	GotoPage 0 0
-#Key	KP_2	A	S4	GotoPage 1 0
-#Key	KP_3	A	S4	GotoPage 0 1
-#Key	KP_4	A	S4	GotoPage 1 1
+Key	KP_1	A	MS  AnimatedMove +0 -0
+Key KP_2	A   MS  Move 50-50w -0
+Key KP_3	A	MS  AnimatedMove -0 -0
+Key KP_4	A   MS  Move +0 50-50w
+Key KP_5	A   MS  Move 50-50w 50-50w
+Key KP_6	A   MS  Move -0 50-50w
+Key	KP_7	A   MS  AnimatedMove +0 +0
+Key	KP_8	A   MS  AnimatedMove 50-50w +0
+Key	KP_9	A	MS  AnimatedMove -0 +0
 
 # ================
 # Applications
 # ================
 
-Key	F1      A  M    Exec exec uxterm
+Key	F1      A  M    Exec exec $[infostore.terminal]
 Key	F2	    A  M    Exec exec rofi -show run
 Key	Return	A  S4   Exec exec st
 Key Return  A  4    Exec exec uxterm
@@ -118,7 +559,6 @@ Key	Menu				A	A	Exec exec $[infostore.filemgr]
 Key	XF86HomePage		A	A	Exec exec $[infostore.browser]
 Key	XF86Mail			A	A	Exec exec $[infostore.mail]
 Key XF86Calculator		A	A	Exec exec galculator
-Key XF86Tools			A   A   Exec exec jgmenu_run
 
 ## alsa
 Key	XF86AudioMute			A	A	Exec exec amixer set Master toggle -q &
@@ -152,7 +592,8 @@ Key	b	A	C4	Exec exec "$HOME/bin/ConkyTao.sh"
 #Key XF86MonBrightnessUp		A	4	Exec xbacklight -set 100
 
 Key	q	A	4	Restart
-Key	q	A	S4	Exec exec void-logout
+# Key	q	A	S4	Exec exec void-logout
+Key	q	A	S4	Exec exec rofi-logout
 
 # from man page
 Key Tab A 4 WindowList

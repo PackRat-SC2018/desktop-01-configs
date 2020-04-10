@@ -54,7 +54,7 @@ iptables -t nat -A POSTROUTING -o enp2s0 -j MASQUERADE
 iptables -A FORWARD -i enp2s0 -m state --state NEW,INVALID -j DROP
 
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-iptables -A INPUT -s 192.168.35.0/24 -d 0/0 -p all -j ACCEPT
+iptables -A INPUT -s 192.168.57.0/24 -d 0/0 -p all -j ACCEPT
 
 iptables -A INPUT -p tcp --tcp-flags ALL FIN,URG,PSH -j badflags
 iptables -A INPUT -p tcp --tcp-flags ALL ALL -j badflags

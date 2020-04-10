@@ -1,3 +1,32 @@
+######
+# 6: Window Decor
+#
+# Buttons Locations: [1 3 5 7 9  TTTTT  0 8 6 4 2]
+#
+#   1 - WindowOps Menu
+#   2 - Close
+#   4 - Maximize
+#   6 - Minimize
+###########
+
+DestroyDecor VectorDecor
+AddToDecor   VectorDecor
+
+# DefaultFont "xft:Fira Sans:regular:size=10:antialias=True:hintstyle=slight"
+
+TitleStyle Centered Height 20 -- Raised
+
+Style * Colorset 1
+Style * HilightColorset 2
+Style * BorderColorset 1, HilightBorderColorset 2
+Style * BorderWidth 3, HandleWidth 3, MWMButtons, MWMBorder, FirmBorder
+BorderStyle Active -- Flat HiddenHandles NoInset
+BorderStyle Inactive -- Flat HiddenHandles NoInset
+#BorderStyle Active -- Flat
+#BorderStyle Inactive -- Flat
+
+ButtonStyle All -- Raised
+
 # vector button decor
 ButtonStyle All ActiveUp Vector 5 40x25@1 60x25@1 60x75@0 40x75@0 40x25@1 -- Raised
 

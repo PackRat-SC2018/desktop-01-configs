@@ -21,7 +21,7 @@
 (sleep 2s && fbsetbg -c -r "$HOME/wallpaper/") &
 
 # 3rd party apps
-(sleep 2s && $HOME/bin/ConkyFluxbox.sh) &
+# (sleep 2s && $HOME/bin/ConkyFluxbox.sh) &
 # (sleep 2s && conky -dc $HOME/.conky10fboxrc) &
 # (sleep 2s && connman-gtk --tray) &
 

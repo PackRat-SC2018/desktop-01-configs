@@ -1,6 +1,7 @@
 WindowTitle {ConfirmQuit}
 WindowSize  300 80
-Font "xft:Sans:style=Bold:size=10"
+Colorset 29
+Font "xft:Fira Sans:Regular:size=11:antialias=True:hintstyle=slight"
 Init
  Begin
  End

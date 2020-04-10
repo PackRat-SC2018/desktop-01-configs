@@ -1,20 +1,12 @@
 WindowTitle {Quit}
 WindowSize 400 265		# Taille
-WindowPosition 500 500		# Position
-#ForeColor	{black}
-#BackColor	{grey85}
-#ShadowColor	{grey55}
-#HilightColor	{grey100}
-ForeColor {black}
-BackColor {grey85}
-ShadowColor {grey55}
-HilightColor  {grey100}
-#Font		-adobe-helvetica-bold-r-*-*-12-*
-Font "xft:Sans:style=regular:size=10"
+WindowPosition 960 540		# Position
+Font "xft:Fira Sans:Regular:size=11:antialias=True:hintstyle=slight"
+Colorset 29
 
 Init
  Begin
-  WarpPointer 1
+  # WarpPointer 1
   Set $ToDo = Logout
   ChangeValue 6 1
   ChangeValue 7 0
@@ -55,7 +47,7 @@ Property
  Flags NoReliefString NoFocus
  Type ItemDraw
  Value 0
- Font "xft:Sans:style=Bold:size=10"
+ Font "xft:Fira Sans:Regular:size=11:antialias=True:hintstyle=slight"
 Main
  Case message of
   SingleClic :
@@ -90,13 +82,13 @@ Main
      If $ToDo == Reboot Then
       Begin
       Do {Exec sync}
-      Do {Exec sudo /usr/bin/reboot}
+      Do {Exec sudo reboot}
       Quit
       End
      Else
       Begin
       Do {Exec sync}
-      Do {Exec sudo /usr/bin/poweroff}
+      Do {Exec sudo poweroff}
       Quit
       End
      End

@@ -1,100 +1,100 @@
-Read SkyDecor
-Read SkyDecor
-Read SkyDecor
-Read SkyDecor
-Read WindowDecor
-KillModule FvwmButtons FvwmTaskBar
-Module FvwmIconMan
-KillModule FvwmButtons FvwmTaskBar
-Module FvwmIconMan
-Read Functions
-Read Keys
-Read 11-Decors
-Read Decor0i
-Read 11-Decors
-Read Decor0i
-Read Decor2i
-Read Decor2i
-Style Decor2i
-Style Decor01
-Style * Decor01
-Style Decor01
-Read Decor0i
-TitleStyle Centered Height 0 -- Flat
-Style !Titles
-Style !Title
-Style * BorderWidth 3, HandleWidth 3
-Style * BorderWidth 5, HandleWidth 5
-Style * MWMBorder, FirmBorder, !Title
-Style *           UseDecor Decor0i, UseStyle DecorStyle0i
-Style *           UseDecor Decor0i, UseStyle DecorStyle0i
-Style * BorderWidth 3, HandleWidth 3
-Style * MWMBorder, FirmBorder, !Title
-Style *           UseDecor Decor0i, UseStyle DecorStyle0i
-Style *           UseDecor Decor0i, UseStyle DecorStyle0i
-Read BlueDecor
-Read BlueDecor
-Read BlueDecor
-Read BlueDecor
-Read BlueDecor
-Read BlueDecor
-Read BlueDecor
-Read BlueDecor
-Read BlueDecor
-Read BlueDecor
-Read BlueDecor
-Read BlueDecor
-Read BlueDecor
-Read BlueDecor
-Read BlueDecor
-Read BlueDecor
-Read IslandDecor
-Read IslandDecor
-Read IslandDecor
-Read IslandDecor
-Read IslandDecor
-Read IslandDecor
-Read IslandDecor
-Read IslandDecor
-Read IslandDecor
-Read IslandDecor
-Read IslandDecor
-Read IslandDecor
-Read SkyDecor
-Read VectorDecor
-Read SkyDecor
-Read SkyDecor
-Read WindowDecor
-Read SkyDecor
-Read DefaultDecor
-Read MidnightDecor
-Read MidnightDecor
-Read Decor0i
-Read MidnightDecor
-KillModule FvwmButtons FvwmTaskBar
-killall -q stalonetray &
-FvwmScript DateTime
-FvwmScript DateTime
-FvwmScript DateTime
-AddButtonStyle 1 ActiveDown (5 01x01@0 99x01@0 99x99@1 01x99@1 01x01@0)
-Read TestDecor
-Read TestDecor
-Read TestDecor
-Read TestDecor
-Read TestDecor
-Read TestDecor
-Read TestDecor
-Read TestDecor
-Read TestDecor
-Read TestDecor
-Read TestDecor
-Read TestDecor
-Read TestDecor
-Read TestDecor
-Read TestDecor
-Read TestDecor
-Read TestDecor
-Style * HilightColorset 25
-Style * Colorset 24
-Read TestDecor
-Read TestDecor
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Clock
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-ConfirmQuit
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-ConfirmQuit
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Date
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-DateTime
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-DayDate
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-DayDate
+KillModule FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Quit
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Quit
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Date
+Module FvwmScript /home/doug/.fvwm/scripts/Kalende/Kalende
+Module FvwmScript /home/doug/.fvwm/scripts/Chrono/Chrono
+Module FvwmScript /home/doug/.fvwm/scripts/Kalende/Kalende
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Quit
+Module FvwmScript /home/doug/.fvwm/scripts/FvwmScript-Date
+Read Test
+Module FvwmButtons FvwmTestBar
+KillModule FvwmButtons FvwmTestBar
+Read Test
+Module FvwmButtons FvwmTestBar
+KillModule FvwmButtons FvwmTestBar
+Read Test
+Module FvwmButtons FvwmTestBar
+KillModule FvwmButtons FvwmTestBar
+Read Test
+Module FvwmButtons FvwmTestBar
+Read Test
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+Read Test
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+Read Test
+Module FvwmButtons FvwmPagerPanel
+Read Test
+KillModule FvwmButtons FvwmPagerPanel
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+Read Test
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+Read Test
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+Read Test
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+Read Test
+Module FvwmButtons FvwmTestBar
+KillModule FvwmButtons FvwmTestBar
+Read Test
+Module FvwmButtons FvwmTestBar
+KillModule FvwmButtons FvwmTestBar
+Read Test
+Module FvwmButtons FvwmTestBar
+KillModule FvwmButtons FvwmTestBar
+Read Test
+Module FvwmButtons FvwmTestBar
+KillModule FvwmButtons FvwmTestBar
+Read Test
+Module FvwmButtons FvwmPagerBar
+Read Test
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+KillModule FvwmPager
+Read Test
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+Read Test
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+Read Test
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+Read Test
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+Read Test
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+Read Test
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+Read Test
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+Read Test
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+Read Test
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+Read Test
+Module FvwmButtons FvwmPagerPanel
+KillModule FvwmButtons FvwmPagerPanel
+Read Test
+Module FvwmButtons FvwmPagerPanel
+Module FvwmButtons FvwmPagerPanel
+Module FvwmScript $[FVWM_USERDIR]/scripts/Kalende/Kalende

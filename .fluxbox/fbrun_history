@@ -1,10 +1,8 @@
-rofi-logout
 basilisk
 guvcview
 xfburn
 lefpad
 yad --color
-yad --font
 lilyterm
 tilix
 terminator
@@ -19,7 +17,6 @@ audaciouys
 leafpad
 gimp
 xfce4-screenshooter
-xfce4-terminal --drop-down
 smplayer
 vlc
 lxappearance
@@ -34,20 +31,28 @@ qterminal
 roxterm
 xfe
 alacritty
-xfce4-terminal
 xterm
 uxterm
 asunder
 xcalc
 filezilla
-pcmanfm
 audacious
-sakura
 xfontsel
 compton
 st
 slock
+cmst -m -i Adwaita
+rofi-logout
+pcmanfm
+lxpanel
+azote
 urxvt
 jgmenu_run
+picom
+yad --font
 gcolor2
-cmst -m -i Adwaita
+picom -b
+xfce4-terminal --drop-down
+xfce4-terminal
+fluxbox-bar.sh
+sakura

@@ -27,7 +27,7 @@ conky.config = {
 --#############################################
 --#
 	-- own_window_argb_visual = true,
-	-- own_window_argb_value = 2,
+	-- own_window_argb_value = 25,
 
 --# xcompmgr
 -- own_window_argb_visual yes
@@ -75,19 +75,13 @@ conky.config = {
 	
 	minimum_width = 160, minimum_height = 0,
 	maximum_width = 160,
-	alignment = 'mr',
-	gap_x = 16,
-	gap_y = 0,
+	alignment = 'tr',
+	gap_x = 4,
+	gap_y = 4,
 
 };
 
 conky.text = [[
 ${voffset 4}${alignc}${font Fira Code:light:size=16}${time %R}${font}
-${voffset 8}${alignc}${time %a %e %b}
-${voffset 24}Uptime:${alignr}${uptime_short}
-${voffset 16}CPU:${alignr}${if_match ${cpu}<=50}${color7}${else}${if_match ${cpu}<=70}${color8}${else}${if_match ${cpu}>70}${color9}${endif}${endif}${endif}${cpu cpu0}%${color}
-${voffset 4}${alignr}${loadavg}
-${voffset 16}Mem:${alignr}${if_match ${memperc}<=50}${color7}${else}${if_match ${memperc}<=70}${color8}${else}${if_match ${memperc}>70}${color9}${endif}${endif}${endif}${memperc}%${color}
-${voffset 16}Net:${alignr}${upspeedf enp2s0} kb/s
-${voffset 4}${alignr}${downspeedf enp2s0} kb/s
+${voffset 6}${alignc}${time %a %e %b}
 ]];

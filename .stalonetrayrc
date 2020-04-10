@@ -1,13 +1,15 @@
 decorations none
-geometry 7x1
-background "#1F2326"
-# background "#aaaaaa"
+geometry 10x1-2-2
+# geometry 6x1
+background "#2D3238"
+# background "#C3C3BB"
 icon_size 24
-slot_size 26
-max_geometry 8x1
+slot_size 32
+max_geometry 10x1
 parent_bg false
-transparent false
-tint_color "#2b303b"
+transparent true
+tint_color "#FFFFFF"
+# tint_color "#31363B"
 tint_level 0
 icon_gravity SE
 no_shrink true
@@ -16,3 +18,4 @@ window_layer bottom
 window_strut none
 window_type normal
 sticky true
+

@@ -16,12 +16,14 @@
 #     session.menuFile: ~/.fluxbox/my-menu
 [begin] (Fluxbox-1.3.7)
 [encoding] {UTF-8}
-      [exec] (Run) {rofi -modi run,drun,window,combi -sidebar-mode -show run}
+      [exec] (Run ...) {rofi -modi run,drun,window,combi -sidebar-mode -show run}
 [separator]
       [exec] (Terminal) {uxterm}
       [exec] (Sublime) {wmctrl -a subl3 || subl3}
       [exec] (File Manager) {thunar}
-      [exec] (Firefox) {firefox}
+      [exec] (Firefox) {wmctrl -a firefox || firefox}
+      [exec] (Thunderbird) {wmctrl -a thunderbird || thunderbird}
+      [exec] (Gimp) {gimp}
 [separator]
 [submenu] (Terminals)
       [exec] (UXTerm) {uxterm}
@@ -29,7 +31,7 @@
       [exec] (Simple Terminal) {st}
       [exec] (URxvt) {urxvt}
       [exec] (Tmux) {urxvt -e tmux}
-      [exec] (Sakura) {sakura}
+      [exec] (Sakura) {sakura -c 100 -r 34}
       [exec] (Xfce4 Terminal) {xfce4-terminal}
       [exec] (Xfce4 Terminal drop down) {xfce4-terminal --drop-down}
 [end]
@@ -61,6 +63,7 @@
       [exec] (Gimp) {gimp}
       [exec] (Geeqie) {geeqie}
       [exec] (Wallpaper) {sxiv -t "$HOME/wallpaper"}
+      [exec] (Wallpaper - tiled) {fbsetbg -t -r /mnt/public/images/tiles/}
       [exec] (LXappearance) {lxappearance}
       ![exec] (Screenshot JPG) {import -window root -quality 100 ~/pictures/screen-import-$(date +%A_%s).jpg}
       ![exec] (Screenshot PNG) {import -window root -quality 100 ~/pictures/screen-import-$(date +%A_%s).png}

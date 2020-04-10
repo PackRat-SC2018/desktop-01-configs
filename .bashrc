@@ -1,7 +1,21 @@
 # .bashrc
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# [[ $- != *i* ]] && return
+
+# Place your readable configs in /etc/bash/bashrc.d/*.sh 
+
+if [[ $- != *i* ]] ; then
+	# Shell is non-interactive.  Be done now!
+	return
+fi
+
+if [ -d /etc/bash/bashrc.d/ ]; then
+	for f in /etc/bash/bashrc.d/*.sh; do
+		[ -r "$f" ] && . "$f"
+	done
+	unset f
+fi
 
 shopt -s histappend
 shopt -s cmdhist
@@ -29,6 +43,10 @@ if [ -f $HOME/.bash_aliases ] ; then
 . $HOME/.bash_aliases
 fi
 
+if [ -f $HOME/.shell_aliases ] ; then
+. $HOME/.shell_aliases
+fi
+
 # colored man pages
 export PAGER="less"
 
@@ -49,3 +67,14 @@ export LESS_TERMCAP_ZW=$(tput rsupm)
 # prompt
 # PS1='[\u@\h \W]\$ '
 export PS1='\[\033[0;36m\] ┌ ─ [\l] ─ \[\033[1;34m\][\w]\n \[\033[0;36m\]└ ─ > \[\033[0;37m\]$ \[\033[0;37m\]'
+
+# set editor
+export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'subl3'; else echo 'jmacs'; fi)"
+export VISUAL="$(if [[ -n $DISPLAY ]]; then echo 'subl3'; else echo 'jmacs'; fi)"
+
+if [ -n "$DISPLAY" ]; then
+    export BROWSER=firefox
+else 
+    export BROWSER=w3m
+fi
+

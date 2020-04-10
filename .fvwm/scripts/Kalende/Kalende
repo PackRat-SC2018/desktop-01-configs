@@ -10,13 +10,13 @@ WindowSize 320 160
 WindowPosition 385 40
 
 ##### Global Style
-Colorset 23
-Font "xft:Fira Code:size=10:retina"
+Colorset 28
+Font "xft:Fira Sans:Regular:size=11:antialias=True:hintstyle=slight"
 
 Init
 Begin
   ##### Widgets Style
-  Set $titleFont = {xft:Fira Code:size=12:retina}
+  Set $titleFont = {"xft:Fira Sans:Regular:size=11:antialias=True:hintstyle=slight"}
   Set $dayNameBgColor = {#cccccc}
   Set $dayNrBgColor = {#eeeeee}
   Set $dayCurrBgColor = {#A4CDF9}
@@ -285,8 +285,8 @@ Main
 Widget		2
 Property
   Type		ItemDraw
-  Size		140 20
-  Position		45 10
+  Size		60 20
+  Position		75 10
   Flags		NoFocus NoReliefString Right
 Main
   Case message of
@@ -299,8 +299,8 @@ Main
 Widget		3
 Property
   Type		ItemDraw
-  Size		100 20
-  Position		190 10
+  Size		60 20
+  Position		150 10
   Flags		NoFocus NoReliefString Left
 Main
   Case message of

@@ -1,42 +1,148 @@
-# colorsets
-Colorset 0 fg #D6D6D6, bg #282961, hi #282961, sh #282961, Plain, NoShape
-Colorset 1 fg #1F1F1F, bg #E6E6E6, hi #E6E6E6, sh #E6E6E6, Plain, NoShape
-Colorset 2 fg #E6E6E6, bg #1F1F1F, hi #1F1F1F, sh #1F1F1F, Plain, NoShape
-
-# Menu and Window Decor
-Colorset 3 fg #D6D6D6, bg #1F2326, hi #2E3438, sh #1F2326, Plain, NoShape
-Colorset 4 fg #D6D6D6, bg #4E4E4E, hi, sh, Plain, NoShape
-Colorset 5 fg #D6D6D6, bg #2D3238, hi #394047, sh #1F2226, Plain, NoShape
-
-# Colorset 6 hilight for desktop id, match window decor
-Colorset 6 fg #D6D6D6, bg #805540, hi #CC9C84, sh #BD907B, Plain, NoShape
-
-# IconBox
-Colorset 7 fg #D3D3D3, bg #2F333B, hi #202020, sh #202020, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 20
-Colorset 8 fg #E6E6E6, bg #3B535E, hi #3B535E, sh #30444D, Plain, NoShape
-Colorset 9 fg #E6E6E6, bg #1a6e99, hi #3B535E, sh #30444D, Plain, NoShape
-Colorset 10 fg #C6C6C6, bg #1F2326, hi #1F2326, sh #1F2326	, Plain, NoShape
-
-# panels
-Colorset 11 fg #C9CDD6, bg #223145, hi #00536C, sh #00536C, Plain, NoShape
-Colorset 12 fg #C6C6C6, bg #1F2326, hi #1F2326, sh #1F2326	, Plain, NoShape
-Colorset 13 fg #C9CDD6, bg #1F2326, hi #00536C, sh #00536C, Plain, NoShape
-Colorset 14 fg #101011, bg #CFCFCF, hi #0c0c0c, sh #0c0c0c, Plain, NoShape
-Colorset 15 fg #C6C6C6, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape
+#######
+# 3: Colorsets
+#
+# Colorsets can be used to configure the color of the various
+# parts of fvwm such as window decor, menus, modules, etc.
+#
+# Colorset Convention
+#
+#   0 - Default
+#   1 - Inactive Windows
+#   2 - Active Window
+#   3 - Inactive Windows Borders
+#   4 - Active Windows Borders
+#   5 - Menu - Inactive Item
+#   6 - Menu - Active Item
+#   7 - Menu - Grayed Item
+#   8 - Menu - Title
+#   9 - Reserved
+#  10+ Modules
+#      10 - Module Default
+#      11 - Module Hilight
+#      12 - Module ActiveButton (Mouse Hover)
+#      13 - FvwmPager Active Page
+#      14 - FvwmIconMan Iconified Button
+###########
+Colorset 0  fg #0F0F0F, bg #CCCCCC, hi, sh, Plain, NoShape
+Colorset 1  fg #D9D9D9, bg #262926, hi, sh, Plain, NoShape
+Colorset 2  fg #D9D9D9, bg #406387, hi, sh, Plain, NoShape
+Colorset 3  fg #0F0F0F, bg #272727, hi #323232, sh #101010, Plain, NoShape
+Colorset 4  fg #0F0F0F, bg #272727, hi #323232, sh #101010, Plain, NoShape
+Colorset 5  fg #000000, bg #D9D9D9, hi, sh, Plain, NoShape
+Colorset 6  fg #D9D9D9, bg #2d2d2d, hi, sh, Plain, NoShape
+Colorset 7  fg grey30, bg #D9D9D9, hi, sh, Plain, NoShape
+Colorset 8  fg #D9D9D9, bg #003c3c, hi, sh, Plain, NoShape
+Colorset 10 fg #D9D9D9, bg #31363B, hi #404040, sh #202020, Plain, NoShape Plain, NoShape
+Colorset 11 fg #D9D9D9, bg #5C7EA1, hi #404040, sh #202020, Plain, NoShape
+Colorset 12 fg #D9D9D9, bg #599FC2, hi #404040, sh #202020, Plain, NoShape
+Colorset 13 fg #D9D9D9, bg #006c6c, hi, sh, Plain, NoShape
+Colorset 14 fg #0E0E0E, bg #D2D7E3, hi, sh, Plain, NoShape
 
 # FvwmPager
-Colorset 16 fg #1D1D1D, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 55
-Colorset 17 fg #D6D6D6, bg #28465C, hi #28465C, sh #28465C, Plain, NoShape, RootTransparent, Buffer, Tint #28465C 75
-Colorset 18 fg #CCCCCC, bg darkblue, Plain, NoShape, RootTransparent, Buffer, Tint darkblue 50
-Colorset 19 fg #D6D6D6, bg #28465C, hi #28465C, sh #28465C, Plain, NoShape, RootTransparent, Buffer, Tint #28465C 75
-Colorset 20 fg #D6D6D6, bg #106DAA, hi #106DAA, sh #106DAA, Plain, NoShape, RootTransparent, Buffer, Tint #106DAA 75
-Colorset 21 fg #BABABA, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 75
+Colorset 15 fg #555555, bg #31363B, hi #aaaaaa, sh #999999, Plain, NoShape
+Colorset 16 fg #6D767A, bg #6D767A, hi #aaaaaa, sh #999999, Plain, NoShape
 
-# desktop id
-Colorset 22 fg #D6D6D6, bg #80334D, hi #80334D, sh #80334D, Plain, NoShape, RootTransparent, Buffer, Tint #80334D 90
-Colorset 23 fg #D6D6D6, bg #1F2326, hi #1F2326, sh #1F2326, Plain, NoShape, RootTransparent, Buffer, Tint #1F2326 75
+# Root Menu
+Colorset 17 fg #D9D9D9, bg #31363B, hi, sh, Plain, NoShape
+Colorset 18 fg #D9D9D9, bg #5C7EA1, hi, sh, Plain, NoShape
+Colorset 19 fg #505050, bg #31363B, hi, sh, Plain, NoShape
 
-# Colorsets 24, 25, 26, 27 for alternative decor.
+# IconBox
+Colorset 20 fg #0F0F0F, bg #262926, hi #3E3E3E, sh #1E1E1E, Plain NoShape, RootTransparent, Buffer, Tint #1A1B1C 80
 
-# FvwmIconMan
-Colorset 28 fg #D6D6D6, bg #444B54, hi #535B66, sh #363B42, Plain, NoShape
+# FvwmScript - exit scripts
+Colorset 21 fg #ECD14A, bg #232649, hi, sh, Plain, NoShape
+
+# FvwmTaskBar
+Colorset 22 fg #D9D9D9, bg #31363B, hi #404040, sh #202020, Plain, NoShape
+Colorset 23 fg #D9D9D9, bg #5C7EA1, hi #404040, sh #202020, Plain, NoShape
+
+# Cursor and Application Styles
+
+#############
+# 2: Styles #
+#############
+
+# Cursor and Application Styles
+
+## Cursor styles
+##
+# lean style
+#CursorStyle root left_ptr
+#CursorStyle default left_ptr 
+#CursorStyle position left_ptr
+#CursorStyle sys left_ptr 
+#CursorStyle menu left_ptr
+#CursorStyle title left_ptr
+#CursorStyle resize fleur
+#CursorStyle stroke cross
+#CursorStyle select draped_box
+#CursorStyle destroy pirate	#000000 white
+
+# detailed style
+CursorStyle ROOT            left_ptr                black    white
+CursorStyle TITLE           left_ptr                black    white
+CursorStyle DEFAULT         left_ptr                black    white
+CursorStyle SYS             hand2                   black    white
+CursorStyle MENU            left_ptr                black    white
+CursorStyle POSITION        top_left_corner         black    white
+CursorStyle MOVE            fleur                   black    white
+CursorStyle RESIZE          sizing                  black    white
+CursorStyle WAIT            watch                   black    white
+CursorStyle SELECT          crosshair               black    white
+CursorStyle DESTROY         pirate                  black    white
+CursorStyle TOP             top_side                black    white
+CursorStyle RIGHT           right_side              black    white
+CursorStyle BOTTOM          bottom_side             black    white
+CursorStyle LEFT            left_side               black    white
+CursorStyle TOP_LEFT        top_left_corner         black    white
+CursorStyle TOP_RIGHT       top_right_corner        black    white
+CursorStyle BOTTOM_LEFT     bottom_left_corner      black    white
+CursorStyle BOTTOM_RIGHT    bottom_right_corner     black    white
+CursorStyle TOP_EDGE        top_side                black    white
+CursorStyle RIGHT_EDGE      right_side              black    white
+CursorStyle BOTTOM_EDGE     bottom_side             black    white
+CursorStyle LEFT_EDGE       left_side               black    white
+CursorStyle STROKE          plus                    black    white
+
+# Application styles
+#
+Style *XTerm	Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
+Style *xterm	Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
+Style *Rxvt		Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
+Style *XCalc    Icon /usr/share/icons/gnome/48x48/apps/accessories-calculator.png
+Style *st-256color Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
+Style URxvt ResizeHintOverride, PositionPlacement Center
+Style *XTerm ResizeHintOverride, PositionPlacement Center
+Style Sakura ResizeHintOverride, PositionPlacement Center
+
+Style Polybar !Title, !Handles, !Borders, CirculateSkip, WindowListSkip, NeverFocus
+Style Xfce4-panel !Title, !Handles, !Borders, StaysOnTop, WindowListSkip, CirculateSkip
+Style Tint2 !Title, !Handles, !Borders, ResizeHintOverride, StaysOnBottom, WindowListSkip, CirculateSkip, PositionPlacement 0 -0
+Style *tray !Title, !Handles, !Borders, StaysOnBottom, WindowListSkip, CirculateSkip
+
+Style Void_Exit_Session ResizeHintOverride, PositionPlacement Center
+Style Void-logout ResizeHintOverride, PositionPlacement Center
+
+Style Subl3 ResizeHintOverride, PositionPlacement Center
+Style Firefox* ResizeHintOverride, PositionPlacement Center, StartsOnDesk 0
+Style Thunderbird* ResizeHintOverride, PositionPlacement Center, StartsOnDesk 0
+Style Gimp* ResizeHintOverride, PositionPlacement Center, StartsOnDesk 0, StartsOnPage 1 0
+Style Audacious* ResizeHintOverride, PositionPlacement Center, StartsOnDesk 0, StartsOnPage 3 2
+Style Vlc* ResizeHintOverride, PositionPlacement Center, StartsOnDesk 0, StartsOnPage 3 2
+
+Style FvwmForm-RunCommand* BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, StaysOnTop, CirculateSkip, PositionPlacement Center
+
+Style *Clock !Title, BorderWidth 1, HandleWidth 3, Sticky, StaysOnBottom, WindowListSkip, CirculateSkip, !Iconifiable
+Style Dclock !Title, BorderWidth 1, HandleWidth 3, Sticky, StaysOnBottom, WindowListSkip, CirculateSkip, NeverFocus, !Iconifiable
+
+Style FvwmScript-Quit !Title, BorderWidth 3, HandleWidth 3, Sticky, WindowListSkip, CirculateSkip, !Iconifiable, PositionPlacement Center
+Style FvwmScript-ConfirmQuit BorderWidth 3, HandleWidth 3, Sticky, WindowListSkip, CirculateSkip, !Iconifiable, PositionPlacement Center
+Style Kalende* BorderWidth 3, HandleWidth 3, Sticky, WindowListSkip, NeverFocus, CirculateSkip, !Iconifiable, PositionPlacement 1440px 56px
+
+# Style FvwmScript* BorderWidth 1, HandleWidth 3, Sticky, WindowListSkip, CirculateSkip
+# Style Chrono* !Title, BorderWidth 3, HandleWidth 3, Sticky, WindowListSkip, NeverFocus, CirculateSkip, !Iconifiable, PositionPlacement 1587px 400px
+
+# Style DayDate* !Title, BorderWidth 3, HandleWidth 3, Sticky, WindowListSkip, NeverFocus, CirculateSkip, !Iconifiable, PositionPlacement -1px 112px
+# Style Quit* BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, CirculateSkip, !Iconifiable, PositionPlacement Center
+

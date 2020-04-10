@@ -9,8 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-#exec killall -q sxhkd &
-exec pkill -x sxhkd &
+exec killall -q sxhkd &
 
 # Wallpaper
 # exec nitrogen --restore &
@@ -22,25 +21,18 @@ set $alt Mod1
 
 default_orientation horizontal
 workspace_layout tabbed
-# workspace_layout stacking
 focus_follows_mouse no
-
-# for i3-gaps
-#gaps inner 3
-#gaps outer 3
+hide_edge_borders smart
 
 # default_border normal/none/pixel
-default_border pixel 1
+default_border pixel 3
 
 # default_floating_border normal/none/pixel
-default_floating_border pixel 1
+default_floating_border pixel 2
 
-hide_edge_borders both
-
+# Container fonts
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-# font pango:monospace 8
-font pango: Roboto Mono 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -53,11 +45,13 @@ font pango: Roboto Mono 10
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+font pango: Roboto Regular 10, Roboto Regular 10
+
 # window colours:         border    background  text
-client.focused            #242424   #9E7449     #EAEAEA
-client.unfocused          #242424   #31393F     #EAEAEA
-client.focused_inactive   #242424   #3D4746     #EAEAEA
-client.urgent             #B11E26   #B11E26     #F7F7F7
+client.focused            #32363B   #32363B     #EAEAEA
+client.unfocused          #1D1E1F   #1D1E1F     #B7B7B7
+client.focused_inactive   #2D3033   #2D3033     #B7B7B7
+client.urgent             #B11E26   #B11E26     #EAEAEA
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $alt
@@ -103,57 +97,33 @@ bindsym XF86AudioNext exec "mocp -f"
 bindsym $mod+Control+p exec "libreoffice --calc"
 bindsym $mod+Control+o exec "libreoffice --writer"
 
-# assign [class="Navigator"] 2
-for_window [class="Navigator"] border 1pixel
-# assign [class="Firefox"] 2
-for_window [class="Waterfox"] border 1pixel
-for_window [class="Firefox"] border 1pixel
-assign [class="Chromium"] 2
-for_window [class="Chromium"] border 1pixel
-# assign [class="Thunderbird"] 2
-for_window [class="Thunderbird"] border 1pixel
-assign [class="Gimp"] 3
-for_window [class="Gimp"] border normal
-assign [class="Gnome-mplayer"] 4
-for_window [class="Gnome-mplayer"] floating enable
-for_window [class="Audacious"] floating enable
+# floating windows 2px border
 for_window [class="XFontsel"] floating enable
 for_window [title="Event Tester"] floating enable
 for_window [class="Gcolor2"] floating enable
-#for_window [class="UXTerm"] floating enable
-#for_window [class="UXTerm"] border 1pixel
-#for_window [class="XTerm"] border 1pixel
-#for_window [class="XTerm"] floating enable
 for_window [class="XCalc"] floating enable
-for_window [class="XCalc"] border 1pixel
 for_window [class="XFontSel"] floating enable
-for_window [class="XFontSel"] border 1pixel
-for_window [class="Event Tester"] floating enable
-for_window [class="Event Tester"] border 1pixel
-for_window [class="Gxine"] floating enable
-for_window [class="Gxine"] border 1pixel
-for_window [class="Vlc"] border 1pixel
-for_window [class="Vlc"] floating enable
-for_window [class="Sakura"] border 1pixel
-for_window [class="Sakura"] floating enable
-for_window [class="Vsido-exit"] border 1pixel
-for_window [class="Vsido-exit"] floating enable
-for_window [class="void-logout"] border 1pixel
-for_window [class="void-logout"] floating enable
-for_window [class="Wman-exit"] border 1pixel
+for_window [class="Void-logout"] floating enable
 for_window [class="Wman-exit"] floating enable
-for_window [class="Asunder"] floating enable
 for_window [class="Exit_Session"] floating enable
-for_window [class="Exit_Session"] border 2pixel
 for_window [class="Galculator"] floating enable
 for_window [class="Gsimplecal"] floating enable
 for_window [class="Yad"] floating enable
 for_window [class="yad_color"] floating enable
 for_window [class="yad_cal"] floating enable
 for_window [class="yad_font"] floating enable
-for_window [class="xst-256color"] floating enable 2pixel
-for_window [class="WmanExit"] floating enable 2pixel
-for_window [class="feh"] floating enable normal
+for_window [class="WmanExit"] floating enable
+for_window [class="feh"] floating enable
+for_window [class="Sxiv"] floating enable
+for_window [class="Audacious"] floating enable
+for_window [class="Asunder"] floating enable
+for_window [class="Lxappearance"] floating enable
+
+# application settings
+assign [class="Gimp"] 4
+assign [class="Audacious"] 10
+assign [class="Asunder"] 10
+assign [class="vlc"] 10
 
 # change focus
 bindsym $mod+j focus left
@@ -262,7 +232,7 @@ bindsym $mod+0 workspace $ws10
 #bindsym $mod+Shift+8 workspace $ws18
 #bindsym $mod+Shift+9 workspace $ws19
 #bindsym $mod+Shift+0 workspace $ws20
-# bindsym $mod+Control+0 workspace $ws100
+#bindsym $mod+Control+0 workspace $ws100
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -328,18 +298,19 @@ bar {
         position top
         workspace_buttons yes
         tray_output primary
-        bindsym --release button3 Exec jgmenu_run
+        bindsym --release button3 Exec jgmenu --config-file=/home/doug/.config/jgmenu/jgbarmenurc
         bindsym --release button2 exec --no-startup-id import -window root -quality 100 ~/pictures/i3_screen-import-$(date +%A_%s).png
+        font pango: Roboto Mono Regular 10
         # status_command $HOME/.config/i3/i3conkybar.sh
         # status_command i3blocks
         status_command slstatus -s
         separator_symbol " "
         colors {
-          background            #212221
-          statusline            #DADADA
-          focused_workspace     #9E7449     #9E7449     #EAEAEA
-          active_workspace      #31393F     #31393F     #DADADA
-          inactive_workspace    #3D4746     #3D4746     #DADADA
-          urgent_workspace      #B11E26     #B11E26     #F7F7F7
+          background            #131414
+          statusline            #B7B7B7
+          focused_workspace     #32363B     #32363B     #EAEAEA
+          active_workspace      #32363B     #32363B     #B7B7B7
+          inactive_workspace    #131414     #131414     #B7B7B7
+          urgent_workspace      #D92B2B     #D92B2B     #EAEAEA
      }
 }

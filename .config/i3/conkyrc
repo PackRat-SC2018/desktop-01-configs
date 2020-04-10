@@ -1,16 +1,20 @@
-out_to_x no
-own_window no
-out_to_console yes
-background no
-max_text_width 0
-update_interval 1.0
-total_run_times 0
-short_units yes
-cpu_avg_samples 4
-use_spacer none
+conky.config = {
+	out_to_console = true,
+	out_to_x = false,
+	background = false,
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+	no_buffers = true,
+	out_to_stderr = false,
+	update_interval = 1.0,
+	uppercase = false,
+	use_spacer = 'none',
 
-TEXT
-# JSON for i3bar #
+};
+
+-- # JSON for i3bar #
+
+conky.text = [[
 
 [
 
@@ -28,3 +32,5 @@ TEXT
 	{ "full_text" : "${time %a %e %b  %k:%M}  " , "color" : "\#CDCDCD" }
 
 ],
+
+]];

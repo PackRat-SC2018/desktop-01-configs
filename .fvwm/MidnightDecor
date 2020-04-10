@@ -12,25 +12,27 @@
 DestroyDecor MidnightDecor
 AddToDecor   MidnightDecor
 
-DefaultFont "xft:Fira Sans:regular:size=11:antialias=True:hintstyle=slight"
+DefaultFont "xft:Linux Biolinum O:regular:size=11:antialias=True:hintstyle=slight"
 
-Colorset 24 fg #C6C6C6, bg #323232, hi #323232, sh #323232, Plain, NoShape
-Colorset 25 fg #DADADA, bg #254669, hi #2C537D, sh #1C344F, Plain, NoShape
-Colorset 26 fg #232323, bg #232323, hi #252525, sh #212121, Plain, NoShape
-Colorset 27 fg #333333, bg #333333, hi #353535, sh #313131, Plain, NoShape
-
-Style * Colorset 24
-Style * HilightColorset 25
-Style * BorderWidth 1, HandleWidth 1
-BorderStyle Active -- Flat HiddenHandles NoInset
-BorderStyle Inactive -- Flat HiddenHandles NoInset
-Style * BorderColorset 26, HilightBorderColorset 26
+Colorset 24 fg #DDDDDD, bg #202326, hi #272A2E, sh #1A1C1F, Plain, NoShape
+Colorset 25 fg #DDDDDD, bg #3A4E5C, hi #3F5C70, sh #283B47, Plain, NoShape
+Colorset 26 fg #202326, bg #202326, hi #303840, sh #17181A, Plain, NoShape
+Colorset 27 fg #3A4E5C, bg #3A4E5C, hi #3F5C70, sh #283B47, Plain, NoShape
 
 TitleStyle Centered Height 20 -- Flat
 
+Style * Colorset 24
+Style * HilightColorset 25
+Style * BorderColorset 26, HilightBorderColorset 27
+Style * BorderWidth 5, HandleWidth 5, MWMButtons, MWMBorder, FirmBorder
+#BorderStyle Active -- Flat HiddenHandles NoInset
+#BorderStyle Inactive -- Flat HiddenHandles NoInset
+#BorderStyle Active -- Flat
+#BorderStyle Inactive -- Flat
+
 ButtonStyle All -- Flat
 
-ButtonStyle All Inactive Vector 5 40x25@1 60x25@1 60x75@0 40x75@0 40x25@1
+# ButtonStyle All Inactive Vector 5 40x25@1 60x25@1 60x75@0 40x75@0 40x25@1
 
 AddButtonStyle 1 Active Vector 5 45x45@3 55x45@3 55x55@3 45x55@3 45x45@3
 AddButtonStyle 2 Active Vector 4 35x35@3 65x65@3 65x35@4 35x65@3
@@ -39,6 +41,14 @@ AddButtonStyle 4 Active Vector 8 30x70@3 30x30@3 70x30@3 70x70@3 30x70@3 \
 AddButtonStyle 4 ToggledActiveUp Vector 8 30x70@3 30x30@3 70x30@3 70x70@3 \
                  30x70@3 50x30@4 50x50@3 70x50@3
 AddButtonStyle 6 Active Vector 5 35x60@3 65x60@3 65x50@3 35x50@3 35x60@3
+
+AddButtonStyle 1 Inactive Vector 5 45x45@3 55x45@3 55x55@3 45x55@3 45x45@3
+AddButtonStyle 2 Inactive Vector 4 35x35@3 65x65@3 65x35@4 35x65@3
+AddButtonStyle 4 Inactive Vector 8 30x70@3 30x30@3 70x30@3 70x70@3 30x70@3 \
+                 30x50@4 50x50@3 50x70@3
+AddButtonStyle 4 ToggledActiveUp Vector 8 30x70@3 30x30@3 70x30@3 70x70@3 \
+                 30x70@3 50x30@4 50x50@3 70x50@3
+AddButtonStyle 6 Inactive Vector 5 35x60@3 65x60@3 65x50@3 35x50@3 35x60@3
 
 ButtonStyle All - Clear
 ButtonStyle 1 - MwmDecorMenu

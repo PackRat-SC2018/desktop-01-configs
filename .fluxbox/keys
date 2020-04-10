@@ -85,7 +85,7 @@ Mod4 Shift Tab :PrevTab
 # open a terminal
 Mod1 F1 :Exec uxterm
 Mod4 Return :Exec sakura -c 100 -r 34
-Mod4 Shift Return :Exec xterm
+Mod4 Shift Return :Exec urxvt
 
 # open a run dialog/menu
 Mod1 F2 :Exec fbrun

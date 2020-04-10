@@ -14,8 +14,8 @@ conky.config = {
 	own_window_colour = '#0F0F0F',
 	own_window_transparent = true,
 	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
-        own_window_class = 'Conkytao',
-        own_window_title = 'Conkytao',
+	own_window_class = 'conky',
+	own_window_title = 'conky',
 --#############################################
 -- Compositing tips:
 -- Conky can play strangely when used with

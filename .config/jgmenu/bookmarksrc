@@ -1,0 +1,43 @@
+# Applications,^checkout(apps)
+Forums,^checkout(forums)
+News,^checkout(news)
+Sports,^checkout(sports)
+#^sep()
+#Log Off,killall `wmctrl -m | awk '/Name/ {print tolower($2)}'`,system-log-out
+#Lock Screen,slock,system-lock-screen
+#Sleep,`zzz`,system-lock-screen
+#Reboot,`sudo reboot`,system-reboot
+#Shutdown,`sudo poweroff`,system-log-out
+
+^tag(apps)
+Gimp,gimp,gimp
+Wallpaper,sxiv -t "$HOME/wallpaper
+Screenshot,scrot -q 100 '%B_%s_$wx$h.png' -e 'mv $f ~/Pictures/'
+Screenshot (5 sec),scrot -q 100 -cd 5 '%B_%s_$wx$h.png' -e 'mv $f ~/Pictures/'
+^sep()
+Audacious,audacious,audacious
+Asunder,asunder,asunder
+Guvcview,guvcview,
+Vlc,vlc,vlc
+^sep()
+Spreadsheet,libreoffice --calc
+Document,libreoffice --writer
+
+
+^tag(forums)
+Void Linux,firefox https://www.reddit.com/r/voidlinux/
+ArchLabs,firefox https://forum.archlabslinux.com/
+BunsenLabs,firefox https://forums.bunsenlabs.org/index.php
+ArchWiki,firefox https://wiki.archlinux.org/
+
+^tag(news)
+One America News,firefox https://www.oann.com/
+Fox News,firefox https://www.foxnews.com/
+Reuters,firefox https://www.reuters.com/news/world
+Treehouse,firefox https://theconservativetreehouse.com/
+
+^tag(sports)
+Baseball,firefox https://www.mlb.com/
+Football,firefox https://www.nfl.com/
+ESPN,firefox https://www.espn.com/
+

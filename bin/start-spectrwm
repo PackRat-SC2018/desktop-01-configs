@@ -1,0 +1,15 @@
+#!/bin/sh
+
+#xsetroot -solid rgb:2C/2C/22 &
+#xrdb -l "$HOME/.Xresources" &
+#xmodmap "$HOME/.Xmodmap" &
+#numlockx on &
+
+#(sleep 2s && "$HOME/.fehbg") &
+# (sleep 2s && fbsetbg -c -r "$HOME/wallpaper/") &
+(sleep 2s && fbsetbg -c -r "/mnt/public/images/textures/") &
+
+exec spectrwm
+
+exit 0;
+

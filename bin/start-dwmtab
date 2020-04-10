@@ -1,0 +1,23 @@
+#!/bin/sh
+
+#xrdb -l "$HOME/.Xresources"
+#xmodmap "$HOME/.Xmodmap"
+#xsetroot -solid darkblue &
+
+#numlockx on &
+
+#(sleep 2s && nitrogen --restore) &
+#(sleep 2s && "$HOME/.fehbg") &
+#(sleep 2s && fbsetbg -c -r "$HOME/wallpaper/") &
+#fbsetbg -t -r "/mnt/public/images/tiles/" &
+(sleep 2s && fbsetbg -c -r "/mnt/public/images/textures/") &
+
+# (sleep 2s && conky | while read LINE; do xsetroot -name "$LINE"; done) &
+# (sleep 2s && slstatus | while read LINE; do xsetroot -name "$LINE"; done) &
+
+slstatus &
+
+exec dwm_tab
+
+exit 0;
+

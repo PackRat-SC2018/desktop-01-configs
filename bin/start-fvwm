@@ -1,0 +1,28 @@
+#!/bin/sh
+
+#killall -q polybar &
+#killall -q tint2 &
+
+#xrdb -l "$HOME/.Xresources"
+#xmodmap "$HOME/.Xmodmap"
+#xset s 3600 3600
+#xset b 33
+
+#numlockx on &
+
+#xsetroot -solid rgb:38/38/63 &
+# hsetroot -center "$HOME/wallpaper/night_dunes.jpg" &
+
+# conky before nitrogen wallpaper
+# (sleep 2s && "$HOME/bin/ConkyFvwm.sh") &
+
+# system tray
+# (sleep 1s && trayer --edge bottom --align right --margin 4 --widthtype request --heighttype pixel --height 28 \
+#	--SetDockType false --SetPartialStrut false --transparent true --tint 0xffffff --alpha 255) &
+#
+# (sleep 1s && stalonetray) &
+
+exec fvwm
+
+exit 0;
+
