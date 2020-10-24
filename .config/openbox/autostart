@@ -15,17 +15,7 @@
 # If you want to use XFCE config tools...
 #
 #xfce-mcs-manager &
-#
-# most autostart applications, settings started from ~/.profile and ~/.Xprofile
-#
-#################################################################################
 
-# set a wallpaper
-# ~/.fehbg &
-fbsetbg -c -r "$HOME/wallpaper/" &
+# ~/bin/openbox-bar.sh &
 
-# Conky
-# (sleep 2s && $HOME/bin/ConkyFluxbox.sh) &
-
-# start a panel
-$HOME/.config/openbox/start-tint2.sh
+tint2 &

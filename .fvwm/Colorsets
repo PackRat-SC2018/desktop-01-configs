@@ -23,28 +23,29 @@
 #      13 - FvwmPager Active Page
 #      14 - FvwmIconMan Iconified Button
 ###########
-Colorset 0  fg #0F0F0F, bg #CCCCCC, hi, sh, Plain, NoShape
-Colorset 1  fg #D9D9D9, bg #262926, hi, sh, Plain, NoShape
-Colorset 2  fg #D9D9D9, bg #406387, hi, sh, Plain, NoShape
+Colorset 0  fg #0F0F0F, bg #E9E9E9, hi, sh, Plain, NoShape
+Colorset 1  fg #D9D9D9, bg #2F2E2D, hi #474747, sh #171717, Plain, NoShape
+Colorset 2  fg #D9D9D9, bg #324E59, hi #497180, sh #1D2D33, Plain, NoShape
 Colorset 3  fg #0F0F0F, bg #272727, hi #323232, sh #101010, Plain, NoShape
 Colorset 4  fg #0F0F0F, bg #272727, hi #323232, sh #101010, Plain, NoShape
 Colorset 5  fg #000000, bg #D9D9D9, hi, sh, Plain, NoShape
 Colorset 6  fg #D9D9D9, bg #2d2d2d, hi, sh, Plain, NoShape
 Colorset 7  fg grey30, bg #D9D9D9, hi, sh, Plain, NoShape
 Colorset 8  fg #D9D9D9, bg #003c3c, hi, sh, Plain, NoShape
-Colorset 10 fg #D9D9D9, bg #31363B, hi #404040, sh #202020, Plain, NoShape Plain, NoShape
-Colorset 11 fg #D9D9D9, bg #5C7EA1, hi #404040, sh #202020, Plain, NoShape
-Colorset 12 fg #D9D9D9, bg #599FC2, hi #404040, sh #202020, Plain, NoShape
-Colorset 13 fg #D9D9D9, bg #006c6c, hi, sh, Plain, NoShape
+Colorset 10 fg #D9D9D9, bg #31363B, hi #404040, sh #202020, Plain, NoShape
+Colorset 11 fg #D9D9D9, bg #969799, hi #bbbbbb, sh #777777, NoShape
+# Colorset 11 fg #D9D9D9, bg #993C48, hi #4e4e4e, sh #2e2e2e, Plain, NoShape
+Colorset 12 fg #D9D9D9, bg #C34464, hi #404040, sh #202020, Plain, NoShape
+Colorset 13 fg #D9D9D9, bg #006C6C, hi, sh, Plain, NoShape
 Colorset 14 fg #0E0E0E, bg #D2D7E3, hi, sh, Plain, NoShape
 
 # FvwmPager
-Colorset 15 fg #555555, bg #31363B, hi #aaaaaa, sh #999999, Plain, NoShape
-Colorset 16 fg #6D767A, bg #6D767A, hi #aaaaaa, sh #999999, Plain, NoShape
+Colorset 15 fg #4c4c4c, bg #353B42 hi #4c4c4c, sh #2c2c2c, Plain, NoShape
+Colorset 16 fg #4c4c4c, bg #595F66, hi #aaaaaa, sh #999999, Plain, NoShape
 
 # Root Menu
 Colorset 17 fg #D9D9D9, bg #31363B, hi, sh, Plain, NoShape
-Colorset 18 fg #D9D9D9, bg #5C7EA1, hi, sh, Plain, NoShape
+Colorset 18 fg #D9D9D9, bg #171315, hi, sh, Plain, NoShape
 Colorset 19 fg #505050, bg #31363B, hi, sh, Plain, NoShape
 
 # IconBox
@@ -56,6 +57,9 @@ Colorset 21 fg #ECD14A, bg #232649, hi, sh, Plain, NoShape
 # FvwmTaskBar
 Colorset 22 fg #D9D9D9, bg #31363B, hi #404040, sh #202020, Plain, NoShape
 Colorset 23 fg #D9D9D9, bg #5C7EA1, hi #404040, sh #202020, Plain, NoShape
+
+Colorset 24 fg #D9D9D9, bg #993C48, hi #4e4e4e, sh #2e2e2e, Plain, NoShape
+Colorset 25 fg #D9D9D9, bg #545759, hi #404040, sh #202020, Plain, NoShape
 
 # Cursor and Application Styles
 
@@ -115,6 +119,7 @@ Style *st-256color Icon /usr/share/icons/gnome/48x48/apps/utilities-terminal.png
 Style URxvt ResizeHintOverride, PositionPlacement Center
 Style *XTerm ResizeHintOverride, PositionPlacement Center
 Style Sakura ResizeHintOverride, PositionPlacement Center
+Style Mate-terminal ResizeHintOverride, PositionPlacement Center
 
 Style Polybar !Title, !Handles, !Borders, CirculateSkip, WindowListSkip, NeverFocus
 Style Xfce4-panel !Title, !Handles, !Borders, StaysOnTop, WindowListSkip, CirculateSkip

@@ -1,0 +1,136 @@
+#######
+# 5: Mouse and Key bindings
+#
+# Contexts:
+#     R = Root Window                 rrrrrrrrrrrrrrrrrrrrrr
+#     W = Application Window          rIrrrr<---------^rrrrr
+#     F = Frame Corners               rrrrrr[13TTTT642]rrrrr
+#     S = Frame Sides                 rIrrrr[wwwwwwwww]rrrrr
+#     T = Title Bar                   rrrrrr[wwwwwwwww]rrrrr
+#     I = Icon                        rIrrrrv_________>rrrrr
+#                                     rrrrrrrrrrrrrrrrrrrrrr
+#
+#     Numbers are buttons: [1 3 5 7 9  TTTTT  0 8 6 4 2]
+#
+# Modifiers: (A)ny, (C)ontrol, (S)hift, (M)eta, (N)othing
+#
+# Format: Key <X>  <Context> <Modifier> <Action>
+#         Mouse <X> <Context> <Modifier> <Action>
+####################
+
+#-----------------------------------------------------------------------
+# replacement for iconify. Creates a small thumb with little app icon
+# on the upper right and the name of the app at the bottom
+#-----------------------------------------------------------------------
+DestroyFunc Thumbnail
+AddToFunc   Thumbnail
++ I Raise
++ I ThisWindow (!Iconic) PipeRead "echo SetEnv app_name `xprop -id $[w.id] WM_CLASS |cut -d',' -f2 |cut -d'\"' -f2`"
++ I PipeRead "echo SetEnv Icon-$[w.id] `fns-find-icon -i $[w.id]`"
++ I PipeRead 'test ! -d "${FVWM_USERDIR}/temp" && mkdir "${FVWM_USERDIR}/temp"'
++ I ThisWindow (!Shaded, Iconifiable, !Iconic) PipeRead \
+    "sleep 0.001; xwd -silent -id $[w.id] | convert -scale 120x68! -frame 1x1 \
+    -mattecolor black -quality 0 xwd:- png:$[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png \
+    && echo WindowStyle IconOverride, Icon $[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png \
+    || echo Nop"
++ I TestRc (Match) Test (f $[Icon-$[w.id]], f $[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png) PipeRead \
+    "convert $[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png \\\( $[Icon-$[w.id]] -scale 24x24 \\\) \
+    -gravity northeast -geometry +10+10 -compose multiply -composite \
+    -fill white -undercolor '#00000080' -gravity south -annotate +0+5 \" $[app_name] \" \
+    $[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png; echo Nop"
++ I Iconify
+
+#-----------------------------------------------------------------------
+# replacement for deiconify.
+#-----------------------------------------------------------------------
+DestroyFunc DeThumbnail
+AddToFunc   DeThumbnail
++ I Test (i $[Icon-$[w.id]]) WindowStyle Icon $[Icon-$[w.id]]
++ I TestRc (NoMatch) WindowStyle NoIconOverride, Icon
++ I Exec rm -f $[FVWM_USERDIR]/temp/icon.tmp.$[w.id].png
++ I All (Iconic, CurrentPage) PlaceAgain icon
++ I PipeRead 'if [ -O $[Icon-$[w.id]] ]; then rm -f $[Icon-$[w.id]];fi'
++ I UnsetEnv Icon-$[w.id]
++ I UnsetEnv app_name
+
+# Function: ThumbnailClick
+#
+# This function is run from FvwmIconMan when the button is clicked.
+DestroyFunc ThumbnailClick
+AddToFunc   ThumbnailClick
++ I ThisWindow (Raised, !Shaded, !Iconic, CurrentPage) Thumbnail
++ I TestRc (Match) Break
++ I ThisWindow WindowShade off
++ I ThisWindow Iconify off
++ I ThisWindow Raise
++ I ThisWindow (AcceptsFocus) FlipFocus
+
+
+# Alt-F1 or Menu to load the root menu and Alt-Tab for a WindowList.
+# Ctrl-F1/F2/F3/F4 will switch between the Virtual Desktops.
+# Super_R (windows key) will launch a terminal.
+#
+# Silent supresses any errors (such as keyboards with no Menu key).
+#Silent Key F1 A M Menu MenuFvwmRoot
+#Silent Key Menu A A Menu MenuFvwmRoot
+#Silent Key Tab A 4 WindowList Root c c NoDeskSort, SelectOnRelease Meta_L
+#Silent Key F1 A C GotoDesk 0 0
+#Silent Key F2 A C GotoDesk 0 1
+#Silent Key F3 A C GotoDesk 0 2
+#Silent Key F4 A C GotoDesk 0 3
+#Silent Key Super_R A A Exec exec $[infostore.terminal]
+
+# Window Buttons: [1 3 5 7 9  TTTTT  0 8 6 4 2]
+#   1 - Open the WindowOps menu.
+#   2 - Close on single click, Destory on double click.
+#   4 - Maximize (right/middle button will only maximize vertical/horizontal)
+#   6 - Iconify (minimize)
+##Mouse 1 1 A Menu MenuWindowOps Delete
+##Mouse 1 2 A Close
+##Mouse 1 4 A Maximize 100 100
+##Mouse 2 4 A Maximize 0 100
+##Mouse 3 4 A Maximize 100 0
+##Mouse 1 6 A Iconify
+
+# Window Buttons: [1 3 5 7 9  TTTTT  0 8 6 4 2]
+Mouse 1 1 A Menu MenuWindowOps Delete
+Mouse 1 2 A Close
+Mouse 1 4 A Maximize 100 100
+Mouse 1 6 A Iconify
+
+Mouse 2 4 A Maximize 0 100
+
+Mouse 3 1 A Destroy
+Mouse 3 4 A Maximize 100 0
+
+
+#   TitleBar: Click to Raise, Move, Double Click to Maximize
+#             Mouse Wheel Up/Down to WindowShade On/Off
+#   Borders: Click to raise, Move to Resize
+#   Root Window: Left Click - Main Menu
+#                Right Click - WindowOps Menu
+#                Middle Click - Window List Menu
+#   Right click TitleBar/Borders for WindowOps Menu
+Mouse 1	T    A RaiseMoveX Move Maximize
+Mouse 1	FS   A RaiseMove Resize
+Mouse 4	T    A WindowShade True
+Mouse 5	T    A WindowShade False
+Mouse 1	R    A Menu MenuFvwmRoot
+Mouse 2	R    A WindowList
+Mouse 3	R    A Menu MenuWindowOpsLong
+# Mouse 1	I    A RaiseMoveX Move "Iconify off"
+Mouse 1 I    A DeiconifyAndRearrange
+Mouse 3	T    A Menu MenuWindowOps
+Mouse 3 I    A Menu MenuIconOps
+
+Mouse 1	R    4 Exec exec jgmenu --config-file="$HOME/.config/jgmenu/jgmouserc"
+
+##  Drag move window with motion + alt + lclick inside window|titlebar.
+DestroyFunc  ClickDragMove
+AddToFunc    ClickDragMove
++ I DebugEcho ClickDragMove
++ M ThisWindow (AcceptsFocus) Move
+
+Mouse 1 TW  M ClickDragMove
+Mouse 3 W   M ResizeCenter
+Mouse 2 W   M Destroy

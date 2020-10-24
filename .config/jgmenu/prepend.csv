@@ -3,5 +3,6 @@ Editor,subl3,text-editor
 File manager,thunar,system-file-manager
 Browser,firefox,firefox
 Mail,thunderbird,thunderbird
+Gimp,gimp,gimp
 ^sep()
 

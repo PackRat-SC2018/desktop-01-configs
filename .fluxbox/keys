@@ -84,8 +84,8 @@ Mod4 Shift Tab :PrevTab
 
 # open a terminal
 Mod1 F1 :Exec uxterm
-Mod4 Return :Exec sakura -c 100 -r 34
-Mod4 Shift Return :Exec urxvt
+Mod4 Return :Exec st
+Mod4 Shift Return :Exec kitty
 
 # open a run dialog/menu
 Mod1 F2 :Exec fbrun
@@ -135,10 +135,15 @@ Control Mod4 g :Exec wmctrl -a gimp || gimp
 Control Mod4 p :Exec wmctrl -a libreoffice --calc || libreoffice --calc
 Control Mod4 o :Exec wmctrl -a libreoffice --writer || libreoffice --writer
 Mod4 q :Restart
-Mod4 Shift q :Exec /usr/local/bin/void-logout
+Mod4 Shift q :Exec /usr/local/bin/rofi-logout
 
 # Control Mod4 Print :Exec import -window root -quality 100 ~/pictures/screen-import-$(date +%F_%s).png
-Control Mod4 Print :Exec scrot -q 100 '%B_%s_$wx$h.png' -e 'mv $f ~/Pictures/'
+# Control Mod4 Print :Exec scrot -q 100 '%B_%s_$wx$h.png' -e 'mv $f ~/Pictures/'
+! Screenshot
+Control Print :Exec maim | xclip -selection clipboard -t image/png
+Control Mod4 Print :Exec maim ~/Pictures/$(date +%F_%s).png
+
+! Conky
 Control Mod4 Pause :Exec /home/doug/bin/ConkyFluxbox.sh
 Control Mod4 b :Exec /home/doug/bin/ConkyTao.sh
 

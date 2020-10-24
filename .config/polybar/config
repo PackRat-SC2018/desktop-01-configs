@@ -21,22 +21,28 @@ modules-left = jgmenu workspaces
 modules-center =
 modules-right = uptime coreavg loadavg core0temp core1temp memory wired-network date
 
-;;;;;; Tray is commented out ;;;;;;;;
-;tray-position = center
-;tray-padding = 10
-;tray-background = ${colors.background}
-;tray-offset-x = 20%
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; openbox
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [bar/openbox-bar]
 inherit = bar/master
 
-modules-left = appmenu obx-desktops
-modules-center =
-modules-right = sysup coregraph sysload temp01 temp02 ramgraph lan-network chronos
+modules-left = jgmenu workspaces
+modules-center = uptime coreavg memory wired-network
+modules-right =  date
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; fvwm
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[bar/fvwm-bar]
+inherit = bar/master
+
+modules-left = jgmenu workspaces
+; modules-center =
+; modules-right = sysup coregraph sysload ramgraph lan-network chronos
+modules-right = uptime coreavg loadavg core0temp core1temp memory wired-network clock
 
 ; Position of the system tray window
 ; If empty or undefined, tray support will be disabled
@@ -96,6 +102,7 @@ modules-right = uptime coreavg memory battery wired-network bit-rate clock
 ;   left
 ;   center
 ;   right
+;   none
 tray-position = right
 
 ; If true, the bar will not shift its
@@ -105,23 +112,24 @@ tray-detached = false
 ; Tray icon max size
 tray-maxsize = 16
 
+; DEPRECATED! Since 3.3.0 the tray always uses pseudo-transparency
 ; Enable pseudo transparency
 ; Will automatically be enabled if a fully transparent
 ; background color is defined using `tray-background`
 tray-transparent = false
 
-; Background color for the tray container
+; Background color for the tray container 
+; ARGB color (e.g. #f00, #ff992a, #ddff1023)
 ; By default the tray container will use the bar
 ; background color.
-; Note: 32 bit alpha blending is not supported.
-tray-background = ${colors.background}
+tray-background = ${root.background}
 
 ; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 tray-offset-x = 0
 tray-offset-y = 0
 
 ; Pad the sides of each tray icon
-tray-padding = 1
+tray-padding = 0
 
 ; Scale factor for tray clients
 tray-scale = 1.0
@@ -135,7 +143,8 @@ inherit = bar/master
 
 modules-left = appmenu bspwm
 modules-center = 
-modules-right = sysup coregraph sysload temp01 temp02 ramgraph lan-network chronos
+; modules-right = sysup coregraph sysload temp01 temp02 ramgraph lan-network chronos
+modules-right = coregraph ramgraph lan-network chronos
 
 ; Position of the system tray window
 ; If empty or undefined, tray support will be disabled
@@ -145,6 +154,7 @@ modules-right = sysup coregraph sysload temp01 temp02 ramgraph lan-network chron
 ;   left
 ;   center
 ;   right
+;   none
 tray-position = right
 
 ; If true, the bar will not shift its
@@ -154,38 +164,39 @@ tray-detached = false
 ; Tray icon max size
 tray-maxsize = 16
 
+; DEPRECATED! Since 3.3.0 the tray always uses pseudo-transparency
 ; Enable pseudo transparency
 ; Will automatically be enabled if a fully transparent
 ; background color is defined using `tray-background`
-; tray-transparent = false
+tray-transparent = false
 
-; Background color for the tray container
+; Background color for the tray container 
+; ARGB color (e.g. #f00, #ff992a, #ddff1023)
 ; By default the tray container will use the bar
 ; background color.
-; Note: 32 bit alpha blending is not supported.
-tray-background = ${colors.background}
+tray-background = ${root.background}
 
 ; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 tray-offset-x = 0
 tray-offset-y = 0
 
 ; Pad the sides of each tray icon
-tray-padding = 1
+tray-padding = 0
 
 ; Scale factor for tray clients
 tray-scale = 1.0
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; awesome
+;; dk
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-[bar/awesome-bar]
+[bar/dk-bar]
 inherit = bar/master
 
 modules-left = appmenu workspaces
 modules-center =  
 ; modules-right = uptime coreavg load memory battery wired-network clock
-modules-right = coregraph ramgraph battgraph wifi-net chronos
+modules-right = coregraph ramgraph lan-network chronos
 
 ; Position of the system tray window
 ; If empty or undefined, tray support will be disabled
@@ -195,32 +206,28 @@ modules-right = coregraph ramgraph battgraph wifi-net chronos
 ;   left
 ;   center
 ;   right
-tray-position = right
+;   none
+;tray-position = right
 
 ; If true, the bar will not shift its
 ; contents when the tray changes
 ;tray-detached = false
 
 ; Tray icon max size
-tray-maxsize = 18
+;tray-maxsize = 16
 
-; Enable pseudo transparency
-; Will automatically be enabled if a fully transparent
-; background color is defined using `tray-background`
-; tray-transparent = false
-
-; Background color for the tray container
+; Background color for the tray container 
+; ARGB color (e.g. #f00, #ff992a, #ddff1023)
 ; By default the tray container will use the bar
 ; background color.
-; Note: 32 bit alpha blending is not supported.
-;tray-background = ${colors.background}
+;tray-background = ${root.background}
 
 ; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
-;tray-offset-x = 0
+tray-offset-x = 0
 ;tray-offset-y = 0
 
 ; Pad the sides of each tray icon
-tray-padding = 1
+;tray-padding = 0
 
 ; Scale factor for tray clients
 ;tray-scale = 1.0

@@ -1,27 +1,18 @@
 #! /bin/sh
 
 pkill -x conky &
-pkill -x i3status &
-pkill -x polybar &
 
 # basic user environment
+
+# key bindings
+pkill sxhkd ; sxhkd &
 
 # change mouse from an "X"
 xsetroot -cursor_name left_ptr
 
-# background color
-xsetroot -solid "#406380" &
-
-# wallpaper
-fbsetbg -c -r $HOME/wallpaper/ &
-#nitrogen --restore &
-#"$HOME/.fehbg" &
-
 # polybar
-(sleep 2s && polybar bspwm-bar) &
-
-# key bindings
-sxhkd &
+#(sleep 2s && polybar bspwm-bar) &
+bspwm-bar.sh
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9
 
@@ -43,14 +34,15 @@ bspc configpointer_action1	move
 bspc config pointer_action2	resize_side
 bspc config pointer_action3	resize_corner
 
-bspc desktop 2 -l monocle
-bspc desktop 3 -l monocle
+#bspc desktop 2 -l monocle
+#bspc desktop 3 -l monocle
 
-bspc rule -a Firefox desktop='^2' follow=on state=tiled
-bspc rule -a Thunderbird desktop='^2' follow=on state=tiled
-bspc rule -a Gimp desktop='^3' follow=on state=tiled
+#bspc rule -a Firefox desktop='^2' follow=on state=tiled
+#bspc rule -a Thunderbird desktop='^2' follow=on state=tiled
+bspc rule -a Gimp desktop='^2' follow=on state=tiled
 bspc rule -a Vlc desktop='^9' follow=on  state=tiled
 bspc rule -a Audacious desktop='^9' follow=on  state=floating
+bspc rule -a Deadbeef desktop='^9' follow=on  state=floating
 bspc rule -a Asunder desktop='^9' follow=on  state=floating
 bspc rule -a XClock state=floating layer=below
 bspc rule -a Xfce4-screenshooter state=floating

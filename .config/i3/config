@@ -12,9 +12,7 @@
 exec killall -q sxhkd &
 
 # Wallpaper
-# exec nitrogen --restore &
-# exec $HOME/.fehbg &
-exec fbsetbg -c -r $HOME/wallpaper/ &
+# exec fbsetbg -c -r $HOME/wallpaper/ &
 
 set $mod Mod4
 set $alt Mod1
@@ -25,7 +23,7 @@ focus_follows_mouse no
 hide_edge_borders smart
 
 # default_border normal/none/pixel
-default_border pixel 3
+default_border pixel 1
 
 # default_floating_border normal/none/pixel
 default_floating_border pixel 2
@@ -45,21 +43,23 @@ default_floating_border pixel 2
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
-font pango: Roboto Regular 10, Roboto Regular 10
+font pango: Inconsolata Regular 10, Roboto Regular 10
+# font  pango: DejaVu Markup Book 10, DejaVu Sans Book  10
 
 # window colours:         border    background  text
-client.focused            #32363B   #32363B     #EAEAEA
-client.unfocused          #1D1E1F   #1D1E1F     #B7B7B7
-client.focused_inactive   #2D3033   #2D3033     #B7B7B7
-client.urgent             #B11E26   #B11E26     #EAEAEA
+# client.focused            #3D5066   #3D5066     #FFFFFF
+client.focused            #7A4D36   #7A4D36     #FFFFFF
+client.unfocused          #202326   #202326     #BEBEBE
+client.focused_inactive   #1F3042   #1F3042     #FFFFFF
+client.urgent             #B11E26   #B11E26     #FFFFFF
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $alt
 
 # start a terminal
+bindsym $alt+F1 exec st
 bindsym $mod+Return exec uxterm
-bindsym $mod+Shift+Return exec sakura
-bindsym $alt+F1 exec urxvt
+bindsym $mod+Shift+Return exec kitty
 
 # kill focused window
 # bindsym $mod+Shift+q kill
@@ -81,9 +81,9 @@ bindsym XF86Mail exec thunderbird
 bindsym $mod+Control+l exec subl3
 bindsym Menu exec thunar
 bindsym $mod+Control+g exec gimp
-bindsym $ALT+F3 exec st
-bindsym $ALT+Shift+F3 exec xterm -e tmux
-bindsym $mod+Control+Print exec "$HOME/bin/scrot_delay.sh"
+# bindsym $mod+Control+Print exec "$HOME/bin/scrot_delay.sh"
+bindsym $mod+Control+Print exec "maim ~/Pictures/$(date +%F_%s).png"
+bindsym Control+Print exec "maim | xclip -selection clipboard -t image/png"
 bindsym XF86Calculator exec galculator
 
 bindsym XF86AudioRaiseVolume exec "amixer -q sset PCM  5%+ unmute"
@@ -96,6 +96,12 @@ bindsym XF86AudioNext exec "mocp -f"
 
 bindsym $mod+Control+p exec "libreoffice --calc"
 bindsym $mod+Control+o exec "libreoffice --writer"
+
+# workspace layouts
+# bindsym XF86Tools exec i3-msg append_layout ~/temp/workspace-500.json
+
+bindsym XF86Tools exec --no-startup-id "i3-msg 'workspace 10; append_layout /home/doug/.config/i3/workspace-600.json'"
+bindsym $mod+XF86Tools exec --no-startup-id "i3-msg 'workspace 10; append_layout /home/doug/.config/i3/workspace-500.json'"
 
 # floating windows 2px border
 for_window [class="XFontsel"] floating enable
@@ -117,13 +123,17 @@ for_window [class="feh"] floating enable
 for_window [class="Sxiv"] floating enable
 for_window [class="Audacious"] floating enable
 for_window [class="Asunder"] floating enable
+for_window [class="Deadbeef"] floating enable
 for_window [class="Lxappearance"] floating enable
+for_window [class="Sound-juicer"] floating enable
 
 # application settings
 assign [class="Gimp"] 4
 assign [class="Audacious"] 10
+assign [class="Deadbeef"] 10
 assign [class="Asunder"] 10
 assign [class="vlc"] 10
+assign [class="Sound-juicer"] 10
 
 # change focus
 bindsym $mod+j focus left
@@ -165,7 +175,7 @@ bindsym $alt+F11 fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+shift+s layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+f floating toggle
@@ -300,17 +310,17 @@ bar {
         tray_output primary
         bindsym --release button3 Exec jgmenu --config-file=/home/doug/.config/jgmenu/jgbarmenurc
         bindsym --release button2 exec --no-startup-id import -window root -quality 100 ~/pictures/i3_screen-import-$(date +%A_%s).png
-        font pango: Roboto Mono Regular 10
+        font pango: Inconsolata LGC Markup Regular 10, Roboto Mono Regular 10
         # status_command $HOME/.config/i3/i3conkybar.sh
         # status_command i3blocks
         status_command slstatus -s
         separator_symbol " "
         colors {
-          background            #131414
-          statusline            #B7B7B7
-          focused_workspace     #32363B     #32363B     #EAEAEA
-          active_workspace      #32363B     #32363B     #B7B7B7
-          inactive_workspace    #131414     #131414     #B7B7B7
-          urgent_workspace      #D92B2B     #D92B2B     #EAEAEA
+          background            #161718
+          statusline            #BEBEBE
+          focused_workspace     #7A4D36     #7A4D36     #FFFFFF
+          active_workspace      #3D5066     #3D5066     #BEBEBE
+          inactive_workspace    #172025     #172025     #BEBEBE
+          urgent_workspace      #D92B2B     #D92B2B     #FFFFFF
      }
 }

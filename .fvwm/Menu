@@ -1,7 +1,7 @@
 #######
 # Menus
 ###########
-MenuStyle * MenuColorset 5, ActiveColorset 28, GreyedColorset 3, TitleColorset 28
+MenuStyle * MenuColorset 5, ActiveColorset 2, GreyedColorset 3, TitleColorset 2
 MenuStyle * Hilight3DOff, HilightBack, HilightTitleBack, SeparatorsLong
 MenuStyle * TrianglesSolid, TrianglesUseFore
 MenuStyle * ItemFormat "%|%3.1i%5.3l%5.3>%|"

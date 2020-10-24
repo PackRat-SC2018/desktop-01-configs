@@ -1,0 +1,166 @@
+# *FvwmButtons: (Padding 2, Panel(down, indicator) my_first_panel "Module FvwmButtons -g -30000-30000 -transientpanel my_first_panel")
+
+Style FvwmButtonsMenu !Title, BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, NeverFocus, StaysOnBottom
+Style Apps !Title, BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, NeverFocus, StaysOnTop
+Style Web !Title, BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, NeverFocus, StaysOnTop
+Style Media !Title, BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, NeverFocus, StaysOnTop
+Style Office !Title, BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, NeverFocus, StaysOnTop
+Style WinOps !Title, BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, NeverFocus, StaysOnTop
+Style Tools !Title, BorderWidth 1, HandleWidth 1, Sticky, WindowListSkip, NeverFocus, StaysOnTop
+
+DestroyModuleConfig FvwmButtonsMenu: *
+#*FvwmButtonsMenu: Fore Black
+#*FvwmButtonsMenu: Back rgb:90/80/90
+*FvwmButtonsMenu: Colorset 22
+*FvwmButtonsMenu: Geometry 550x28+660-0
+*FvwmButtonsMenu: Rows 1
+*FvwmButtonsMenu: Columns 22
+*FvwmButtonsMenu: BoxSize smart
+# *FvwmButtonsMenu: Font -*-helvetica-medium-r-*-*-12-*
+*FvwmButtonsMenu: Font "xft:Source Serif Pro:Regular:size=12:antialias=true:autohint=true"
+*FvwmButtonsMenu: Padding 1 1
+*FvwmButtonsMenu: Frame 1
+# *FvwmButtonsMenu: (2x1, Title "" Icon "/usr/share/pixmaps/filled-xterm_32x32.xpm", Action `Menu XDGMenu rectangle $widthx$height+$lleft+$top`)
+*FvwmButtonsMenu: (2x1, Title "" Icon "/home/doug/.fvwm/icons/ninja-cat-small.png", Action `Menu XMenuPrograms Root +665p +610p`)
+# *FvwmButtonsMenu: (4x1, Title Apps, Icon "", Panel Apps "Module FvwmButtons -transientpanel Apps")
+*FvwmButtonsMenu: (4x1, Title Web, Panel Web "Module FvwmButtons -transientpanel Web")
+*FvwmButtonsMenu: (4x1, Title Office, Panel Office "Module FvwmButtons -transientpanel Office")
+*FvwmButtonsMenu: (4x1, Title Media, Panel Media "Module FvwmButtons -transientpanel Media")
+*FvwmButtonsMenu: (4x1, Title WinOps, Panel WinOps "Module FvwmButtons -transientpanel WinOps")
+*FvwmButtonsMenu: (4x1, Title Tools, Panel Tools "Module FvwmButtons -transientpanel Tools")
+# *FvwmButtonsMenu: (51x1, Top, Swallow FvwmIconMan 'Module FvwmIconMan TaskBarIcons', Frame 1, Padding 1 1)
+# *FvwmButtonsMenu: (Panel(up, top, delay 3, steps 30) SubPanel "Module FvwmButtons SubPanel")
+
+# Pop up a module menu directly above the button.
+#       *FvwmButtons: (9x1+3+0, Padding 0, Title "Modules",  Action `Menu Modulepopup rectangle $widthx$height+$lleft+$top o+50 -100m`)
+
+# *FvwmTaskBar: StartMenu MenuFvwmRoot Root +1p +27p
+
+########## PANEL Apps
+DestroyModuleConfig Media: *
+#*Apps: Back gray75
+#*Apps: Fore #111111
+*Apps: Colorset 22
+*Apps: ActiveColorset 11
+*Apps: Font "xft:Sans:regular:size=10:antialias=true:autohint=on"
+*Apps: Geometry +2+2
+*Apps: Columns 1
+*Apps: BoxSize smart
+*Apps: Frame 1
+*Apps: Padding 1 1
+*Apps: (Title Terminal, Icon "", Action Exec mate-terminal)
+*Apps: (Title Thunar, Icon "", Action Exec thunar)
+*Apps: (Title Sublime, Icon "", Action Exec subl3)
+
+########## PANEL Web
+DestroyModuleConfig Web: *
+#*Web: Back gray75
+#*Web: Fore #111111
+*Web: Colorset 22
+*Web: ActiveColorset 11
+*Web: Font "xft:Sans:regular:size=10:antialias=true:autohint=on"
+*Web: Geometry +2+2
+*Web: Columns 1
+*Web: BoxSize smart
+*Web: Frame 1
+*Web: Padding 1 1
+*Web: (Title Firefox, Icon "", Action Exec firefox)
+*Web: (Title Thunderbird, Icon "", Action Exec thunderbird)
+*Web: (Title ArchLabs, Icon "", Action Exec firefox https://forum.archlabslinux.com/)
+*Web: (Title BunsenLabs, Icon "", Action Exec firefox https://forums.bunsenlabs.org/index.php)
+*Web: (Title Void Linux, Icon "", Action Exec firefox https://www.reddit.com/r/voidlinux/)
+*Web: (Title OANN, Action Exec firefox https://www.oann.com/)
+*Web: (Title MLB, Action Exec firefox https://www.mlb.com/)
+
+########## PANEL Media
+DestroyModuleConfig Media: *
+#*Media: Back gray75
+#*Media: Fore #111111
+*Media: Colorset 22
+*Media: ActiveColorset 11
+*Media: Font "xft:Sans:regular:size=10:antialias=true:autohint=on"
+*Media: Geometry +2+2
+*Media: Columns 1
+*Media: BoxSize smart
+*Media: Frame 1
+*Media: Padding 1 1
+*Media: (Title Gimp, Icon "", Action Exec gimp)
+*Media: (Title Deadbeef, Icon "", Action Exec deadbeef)
+*Media: (Title Vlc, Icon "", Action Exec vlc)
+*Media: (Title Asunder, Icon "", Action Exec Asunder)
+
+########## PANEL Office
+DestroyModuleConfig Office: *
+#*Office: Back gray75
+#*Office: Fore #111111
+*Office: Colorset 22
+*Office: ActiveColorset 11
+*Office: Font "xft:Sans:regular:size=10:antialias=true:autohint=on"
+*Office: Geometry +2+2
+*Office: Columns 1
+*Office: BoxSize smart
+*Office: Frame 1
+*Office: Padding 1 1
+*Office: (Title Document, Icon "", Action Exec "libreoffice --document")
+*Office: (Title Spreadsheet, Icon "", Action Exec "libreoffice --calc")
+*Office: (Title Calculator, Icon "", Action Exec galculator)
+
+########## PANEL WinOps
+DestroyModuleConfig WinOps: *
+#*WinOps: Back bisque2
+*WinOps: Colorset 22
+*WinOps: ActiveColorset 11
+*WinOps: Font "xft:Sans:regular:size=10:antialias=true:autohint=on"
+*WinOps: Geometry -3-3
+*WinOps: Columns 1
+*WinOps: (Title Resize, Icon resize.xpm,	 Action Resize)
+*WinOps: (Title Move,   Icon arrows2.xpm, Action Move  )
+*WinOps: (Title Lower,  Icon Down,	 Action Lower )
+*WinOps: (Title Raise,  Icon Up,		 Action Raise )
+*WinOps: (Title Kill,    Icon bomb.xpm,	 Action Destroy)
+
+########## PANEL Tools
+DestroyModuleConfig Tools: *
+# *Tools: Back bisque2
+*Tools: Colorset 22
+*Tools: ActiveColorset 11
+*Tools: Font "xft:Sans:regular:size=10:antialias=true:autohint=on"
+*Tools: Geometry -1-1
+*Tools: Columns 1
+*Tools: (Title CUPS,    Icon bomb.xpm,	 Action Exec firefox http://localhost:631/)
+*Tools: (Title LXappearance, Action Exec lxappearance)
+*Tools: (Title Wallpaper, Action Exec sxiv -t "$HOME/wallpaper/")
+*Tools: (Title Images, Action Exec sxiv -t "/mnt/public/images/")
+
+# To include the panel in a button
+#*FvwmButtons: (Panel(down, delay 0, steps 16) SubPanel "Module FvwmButtons SubPanel")
+
+# To define the panel as an instance of
+# FvwmButtons with a different name:
+*SubPanel: (Icon /usr/share/pixmaps/htop.png, Action Popup XDGMenu)
+# *SubPanel: (Icon my_move.xpm, Action Move)
+
+# Programs Menu
+#
+# This test for some common programs and adds them to the menu.
+# When adding programs you don't need to use the Test (x foo)
+# lines as this is only to help make this menu portable.
+DestroyMenu XMenuPrograms
+AddToMenu   XMenuPrograms "Programs" Title
+Test (x st) + "Terminal" Exec exec st
+Test (x subl3) + "Sublime" Exec exec subl3
+Test (x thunar) + "File Manager" Exec exec thunar
++ "Applications" Popup XDGMenu
++ "Bookmarks" Popup MenuFvwmBookmarks
++ "" Nop
+Test (x firefox) + "Firefox" Exec exec firefox
+Test (x thunderbird) + "Thunderbird" Exec exec thunderbird
+Test (x gimp) + "Gimp" Exec exec gimp
+Test (x deadbeef) + "Deadbeef" Exec exec deadbeef
+Test (x vlc) + "Vlc" Exec exec vlc
++ "" Nop
++ "Preferences" Popup MenuFvwmPref
++ "" Nop
++ "&Logout" Module FvwmForm FvwmForm-QuitVerify
++ "&Quit" Module FvwmScript FvwmScript-ConfirmQuit
+Test (x rofi-logout) + "Exit Session" Exec rofi-logout

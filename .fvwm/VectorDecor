@@ -19,7 +19,7 @@ TitleStyle Centered Height 20 -- Raised
 Style * Colorset 1
 Style * HilightColorset 2
 Style * BorderColorset 1, HilightBorderColorset 2
-Style * BorderWidth 3, HandleWidth 3, MWMButtons, MWMBorder, FirmBorder
+Style * BorderWidth 2, HandleWidth 2, MWMButtons, MWMBorder, FirmBorder
 BorderStyle Active -- Flat HiddenHandles NoInset
 BorderStyle Inactive -- Flat HiddenHandles NoInset
 #BorderStyle Active -- Flat

@@ -41,7 +41,7 @@ Widget 1
    Property
       Size 100 26
       Position 0 0
-      Font "xft:Fira Sans:pixelsize=14:Regular"
+      Font "xft:Source Serif Pro:Regular:size=11:antialias=true:autohint=true"
       Type ItemDraw
       Flags NoReliefString
    End
@@ -50,8 +50,7 @@ Widget 2
    Property
       Size 100 26
       Position 0 26
-      Font "xft:Fira Sans:pixelsize=14"
-      #Font "xft:Fira Sans:pixelsize=14"  # change size if line won't fit
+      Font "xft:Source Serif Pro:Regular:size=11:antialias=true:autohint=true"
       Type ItemDraw
       Flags NoReliefString
    End

@@ -476,12 +476,19 @@ AddToFunc NodecorMaxRight
 + I ThisWindow (!Shaded, !Iconic) Maximize 50 100
 + I ThisWindow Schedule 20 Move -0 +0
 
-Key KP_1    A   4S  NodecorBottomLeft
-Key KP_3    A   4S  NodecorBottomRight
-Key KP_7    A   4S  NodecorUpperLeft
-Key KP_9    A   4S  NodecorUpperRight
-Key KP_4    A   4S  NodecorMaxLeft
-Key KP_6    A   4S  NodecorMaxRight
+#Key KP_1     A   CM  NodecorBottomLeft
+#Key KP_3    A   4  NodecorBottomRight
+#Key KP_7    A   4  NodecorUpperLeft
+#Key KP_9    A   4  NodecorUpperRight
+#Key KP_4    A   4  NodecorMaxLeft
+#Key KP_6    A   4  NodecorMaxRight
+
+#Key h     A   4S  NodecorBottomLeft
+#Key l     A   4S  NodecorBottomRight
+#Key j     A   4S  NodecorUpperLeft
+#Key k     A   4S  NodecorUpperRight
+#Key b     A   4S  NodecorMaxLeft
+#Key m     A   4S  NodecorMaxRight
 
 # typical alt-tab window switching behaviors
 # fluxbox style
@@ -546,14 +553,29 @@ Key	KP_7	A   MS  AnimatedMove +0 +0
 Key	KP_8	A   MS  AnimatedMove 50-50w +0
 Key	KP_9	A	MS  AnimatedMove -0 +0
 
+# Scroll Desktops Open Ended
+#Key    Right   A   CM  GotoDesk    1 0
+#Key    Left    A   CM  GotoDesk    -1 0
+
+# 4 desktops
+Key  Right  A   CM   GotoDesk   1 0 3
+Key  Left   A   CM   GotoDesk  -1 0 3
+
+# Scroll Pages
+Key Right   A   C4  Scroll +100 0
+Key Left    A   C4  Scroll -100 0
+Key Up      A   C4  Scroll +0 -100
+Key Down    A   C4  Scroll +0 +100
+
 # ================
 # Applications
 # ================
 
-Key	F1      A  M    Exec exec $[infostore.terminal]
+# Key	F1      A  M    Exec exec sakura -c 100 -r 34
+Key F1      A  M    Exec exec $[infostore.terminal]
 Key	F2	    A  M    Exec exec rofi -show run
-Key	Return	A  S4   Exec exec st
-Key Return  A  4    Exec exec uxterm
+Key	Return	A  S4   Exec exec kitty
+Key Return  A  4    Exec exec xfce4-terminal
 
 Key	Menu				A	A	Exec exec $[infostore.filemgr]
 Key	XF86HomePage		A	A	Exec exec $[infostore.browser]
@@ -593,7 +615,7 @@ Key	b	A	C4	Exec exec "$HOME/bin/ConkyTao.sh"
 
 Key	q	A	4	Restart
 # Key	q	A	S4	Exec exec void-logout
-Key	q	A	S4	Exec exec rofi-logout
+Key	q	A	S4	Exec exec rofi-exit
 
 # from man page
 Key Tab A 4 WindowList
