@@ -1,0 +1,16 @@
+2021/02/10-21:38:25.123 3 Reusing MANIFEST /home/doug/.config/vivaldi/Default/Local Storage/leveldb/MANIFEST-000001
+2021/02/10-21:38:25.124 3 Recovering log #60
+2021/02/10-21:38:25.125 3 Level-0 table #62: started
+2021/02/10-21:38:25.263 3 Level-0 table #62: 15836 bytes OK
+2021/02/10-21:38:25.563 3 Delete type=0 #60
+2021/02/10-21:38:25.563 6 Compacting 4@0 + 2@1 files
+2021/02/10-21:38:25.779 6 Generated table #64@0: 580 keys, 2292614 bytes
+2021/02/10-21:38:25.879 6 Generated table #65@0: 11 keys, 764 bytes
+2021/02/10-21:38:25.879 6 Compacted 4@0 + 2@1 files => 2293378 bytes
+2021/02/10-21:38:26.107 6 compacted to: files[ 0 2 1 0 0 0 0 ]
+2021/02/10-21:38:26.114 6 Delete type=2 #53
+2021/02/10-21:38:26.114 6 Delete type=2 #52
+2021/02/10-21:38:26.114 6 Delete type=2 #55
+2021/02/10-21:38:26.114 6 Delete type=2 #62
+2021/02/10-21:38:26.114 6 Delete type=2 #59
+2021/02/10-21:38:26.114 6 Delete type=2 #57

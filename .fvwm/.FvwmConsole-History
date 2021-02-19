@@ -1,100 +1,100 @@
-KillModule FvwmButtons FvwmButtonsMenu
-Read TestPanel
-Module FvwmButtons FvwmButtonsMenu
-KillModule FvwmButtons FvwmButtonsMenu
-Read TestPanel
-Module FvwmButtons FvwmButtonsMenu
-KillModule FvwmButtons FvwmButtonsMenu
-Read TestPanel
-Read TestPanel
-Module FvwmButtons FvwmButtonsMenu
-Module FvwmButtons FvwmPagerPanel
-Read TestPanel
-Module FvwmButtons FvwmButtonsMenu
-KillModule FvwmButtons FvwmButtonsMenu
-Read TestPanel
-Module FvwmButtons FvwmButtonsMenu
-KillModule FvwmButtons FvwmButtonsMenu
-Read TestPanel
-Module FvwmButtons FvwmButtonsMenu
-KillModule FvwmButtons FvwmButtonsMenu
-Read TestPanel
-Module FvwmButtons FvwmButtonsMenu
-KillModule FvwmButtons FvwmButtonsMenu
-Read TestPanel
-Module FvwmButtons Web
-KillModule FvwmButtons Web
-Read TestPanel
-Read TestPanel
-KillModule FvwmButtons FvwmButtonsMenu
-Module FvwmButtons FvwmButtonsMenu
-KillModule FvwmButtons FvwmButtonsMenu
-Read TestPanel
-Module FvwmButtons FvwmButtonsMenu
-KillModule FvwmButtons FvwmButtonsMenu
-Read TestPanel
-Module FvwmButtons FvwmButtonsMenu
-KillModule FvwmButtons FvwmButtonsMenu
-Read TestPanel
-Module FvwmButtons FvwmButtonsMenu
-Module FvwmButtons FvwmMenuBar
-Read TestPanel
-Module FvwmButtons FvwmMenuBar
-KillModule FvwmButtons FvwmButtonsMenu
-Read TestPanel
-Module FvwmButtons FvwmMenuBar
-KillModule FvwmButtons FvwmMenuBar
-KillModule FvwmButtons FvwmMenuBar
-Read TestPanel
-KillModule FvwmButtons FvwmButtonsMenu
-Module FvwmButtons FvwmButtonsMenu
-Module FvwmButtons FvwmButtonsMenu
-KillModule FvwmButtons FvwmButtonsMenu
-Read ExampleButtons
-Read ~/temp/ExampleButtons
-Read /home/doug/temp/ExampleButtons
-Module FvwmButtons ExampleButtons
-Read ExampleButtons
-KillModule FvwmPager
-Module FvwmButtons ExampleButtons
-KillModule FvwmButtons ExampleButtons
-Read ExampleButtons
-Module FvwmButtons ExampleButtons
-KillModule FvwmButtons ExampleButtons
-KillModule FvwmPager
-Read ExampleButtons
-Module FvwmButtons ExampleButtons
-KillModule FvwmButtons ExampleButtons
-KillModule FvwmPager
-Read ExampleButtons
-Module FvwmButtons ExampleButtons
-KillModule FvwmPager
-KillModule FvwmButtons ExampleButtons
-Read ExampleButtons
-Module FvwmButtons ExampleButtons
-KillModule FvwmButtons ExampleButtons
-Read ExampleButtons
-Module FvwmButtons ExampleButtons
-Style Subl3 ResizeHintOverride, PositionPlacement Center
-Module FvwmIconMan
-KillModule FvwmIconMan
-Module FvwmButtons FvwmTaskBar
-KillModule FvwmButtons FvwmTaskBar
-Module FvwmButtons FvwmTaskBar
-KillModule FvwmButtons FvwmTaskBar
-KillModule FvwmButtons FvwmLaunchBar
-KillModule FvwmButtons FvwmLaunchBar
+GoToDesk 0 2
+Read Panels
 Module FvwmButtons FvwmLaunchBar
-SeparatorsShort
-Read Keys
-ToggleTitle
-ThisWindow (!Shaded, !Iconic) Maximize 50 50
-ThisWindow Schedule 10 Move +0 -0
-ToggleTitle
-NodecorUpperLeft
-Module FvwmPager -g +0-0
-KillModule FvwmPager -g +0-0
-KillModule FvwmPager --geometry +0-0
-Module FvwmPager --geometry +0-0
-Style FvwmPager* !Title, BorderWidth 1, HandleWidth 1, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom, !Iconifiable
-PipeRead "fvwm-menu-desktop -e"
+Module FvwmButtons FvwmLaunchBar
+KillModule FvwmButtons FvwmLaunchBar
+Read Panels
+Module FvwmButtons FvwmLaunchBar
+KillModule FvwmButtons FvwmLauncherBar
+KillModule FvwmButtons FvwmLaunchBar
+KillModule FvwmButtons SystemInfo
+Module FvwmButtons SystemInfo
+Module FvwmButtons SystemInfo
+Module FvwmButtons SystemInfo
+Module FvwmButtons SystemInfo
+KillModule FvwmButtons ChronosPanel
+Module FvwmButtons ChronosPanel
+Read TestFile
+KillModule FvwmButtons ChronosPanel
+Module FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+Read TestFile
+Module FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+Read TestFile
+Module FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+Read TestFile
+Module FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+Read TestFile
+Module FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+KillModule FvwmButtons ChronosPanel
+Read TestFile
+Module FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+Read TestFile
+Module FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+Module FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+Read TestFile
+Module FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+Read TestFile
+Module FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+Read TestFile
+Module FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+Read TestFile
+Module FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+Read TestFile
+Module FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+Read TestFile
+Module FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+Read TestFile
+Module FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+Read TestFile
+Module FvwmButtons VoidPanel
+Module FvwmScript Fvwm-Date
+Module FvwmScript FvwmScript-Date
+Module FvwmScript FvwmScript-DayDate
+Module FvwmScript FvwmScript-DayDate
+Module FvwmScript FvwmScript-DayDate
+Module FvwmScript FvwmScript-SysInfo
+KillModule FvwmScript FvwmScript-SysInfo
+Module FvwmScript FvwmScript-SysInfo
+Module FvwmScript FvwmScript-Buttons
+Module FvwmScript FvwmScript-Test
+Module FvwmButtons DeskTooClock
+KillModule FvwmButtons VoidPanel
+KillModule FvwmIconMan
+KillModule FvwmIconMan
+KillModule FvwmButtons VoidPanel
+KillModule FvwmButtons VoidPanel
+KillModule FvwmIconMan
+Module FvwmButtons TintPanel
+KillModule FvwmButtons TintPanel
+Module FvwmButtons TintPanel
+KillModule FvwmButtons TintPanel
+Read Panels
+KillModule FvwmButtons TintPanel
+Read Panels
+Module FvwmButtons TintPanel
+KillModule FvwmButtons TintPanel
+Read Panels
+Module FvwmButtons TintPanel
+KillModule FvwmButtons TintPanel
+Read Panels
+Module FvwmButtons TintPanel
+Read IndigoDecor
+Read IndigoDecor
+Read IndigoDecor
+Read IndigoDecor

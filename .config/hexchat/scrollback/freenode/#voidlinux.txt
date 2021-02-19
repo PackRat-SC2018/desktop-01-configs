@@ -1,304 +1,63 @@
-T 1541260856 19*	Now talking on 22#voidlinux
-T 1541260856 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1541260856 22*	Topic for 22#voidlinux set by 26maldridge (24Sat Sep  1 03:35:41 2018)
-T 1541261042 FiSHLiM plugin unloaded
-T 1541261309 19*	Now talking on 22#voidlinux
-T 1541261309 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1541261309 22*	Topic for 22#voidlinux set by 26maldridge (24Sat Sep  1 03:35:41 2018)
-T 1541261735 23*	mamapitufo (~mamapituf@cpc73676-dals20-2-0-cust90.20-2.cable.virginm.net23) has joined
-T 1541262489 18<vejetaryenvampir18>	You guys were know something about icecat. :) How can I prevent icecat to create the "Desktop" dir?
-T 1541262627 24*	Johnnynator has quit (Read error: Connection reset by peer)
-T 1541262677 23*	Johnnynator (~Johnnynat@p200300EC0BD720009C7055B5228E4F97.dip0.t-ipconnect.de23) has joined
-T 1541262963 23*	n4dir (~n4dir@mue-88-130-56-244.dsl.tropolys.de23) has joined
-T 1541263076 24*	Johnnynator has quit (Read error: Connection reset by peer)
-T 1541263080 FiSHLiM plugin unloaded
-T 1541600151 19*	Now talking on 22#voidlinux
-T 1541600151 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1541600151 22*	Topic for 22#voidlinux set by 26maldridge (24Sat Sep  1 03:35:41 2018)
-T 1541600170 23*	unmy (~unmy@unaffiliated/unmy23) has joined
-T 1541600178 18<Johnnynator[m]18>	Yep. It is know that the forum is down
-T 1541600206 18<ArgyroNet18>	Thanks, Johnnynator[m]
-T 1541600226 18<ArgyroNet18>	Do you know anything about this image issue ?
-T 1541600276 23*	_kaminishi_ (~kaminishi@46.12.235.81.dsl.dyn.forthnet.gr23) has joined
-T 1541600349 18<Johnnynator[m]18>	Yep. The 2018 Isos are using a somewhat broken kernel, so they should be considered quite unstable.
-T 1541600365 18<Johnnynator[m]18>	They just didn't come around yet to build some new images.
-T 1541600420 24*	kaminishi_ has quit (Ping timeout: 244 seconds)
-T 1541600536 18<ArgyroNet18>	I understand.
-T 1541600807 24*	geekboy01 has quit (Quit: Leaving)
-T 1541600841 23*	geekboy01 (~geekboy01@75.106.203.24223) has joined
-T 1541600939 18<coldpress18>	duncaen: i didn't yet give you my thanks for diagnosing that it was a /boot partition error, so thanks for that!
-T 1541601261 18<ArgyroNet18>	I'll try the xfce /current/ image then, bye and thanks.
-T 1541601264 24*	ArgyroNet has quit (Quit: Don't read me again, it tickles !)
-T 1541601975 24*	unmy has quit (Quit: unmy)
-T 1541602166 23*	fusion809 (~fusion809@2001:8003:f12a:6f00:329c:23ff:fee1:37a223) has joined
-T 1541602325 24*	untoreh has quit (Read error: Connection reset by peer)
-T 1541602365 23*	untoreh (~untoreh@87.19.74.11223) has joined
-T 1541602661 24*	untoreh has quit (Read error: Connection reset by peer)
-T 1541602714 23*	untoreh (~untoreh@87.19.74.11223) has joined
-T 1541602719 24*	untoreh has quit (Remote host closed the connection)
-T 1541602732 23*	NerdTheThird (~NerdTheTh@unaffiliated/nerdthethird23) has joined
-T 1541602791 23*	untoreh (~untoreh@87.19.74.11223) has joined
-T 1541602902 24*	untoreh has quit (Read error: Connection reset by peer)
-T 1541602960 23*	untoreh (~untoreh@87.19.74.11223) has joined
-T 1541603109 24*	untoreh has quit (Remote host closed the connection)
-T 1541603142 24*	devvesa has quit (Ping timeout: 252 seconds)
-T 1541603157 23*	chinarulezzz (~chinarule@gateway/tor-sasl/chinarulezzz23) has joined
-T 1541603163 23*	n4dir (~n4dir@i577BC8D1.versanet.de23) has joined
-T 1541603194 23*	untoreh (~untoreh@87.19.74.11223) has joined
-T 1541603338 23*	Phyrric (Phyrric@gateway/vpn/privateinternetaccess/phyrric23) has joined
-T 1541603340 24*	Neel has quit (Ping timeout: 252 seconds)
-T 1541603814 23*	caioalonso (~caio@189.54.37.23923) has joined
-T 1541603885 18<caioalonso18>	I'm sure many people already came here and asked the same thing, but I couldn't find info anywhere: why is the forum down?
-T 1541604033 18<Phyrric18>	errm, something derpd and the maintainer is mia. voidteam wants to talk to him before turning to alternatives
-T 1541604085 18<Phyrric18>	in the meantime there r/voidlinux and here I guess
-T 1541604103 24*	NerdTheThird has quit (Quit: NerdTheThird)
-T 1541604158 24*	chinarulezzz has quit (Remote host closed the connection)
-T 1541604187 23*	chinarulezzz (~chinarule@gateway/tor-sasl/chinarulezzz23) has joined
-T 1541604359 18<caioalonso18>	Phyrric, oh god not again
-T 1541604489 18<caioalonso18>	the bus factor strikes again
-T 1541604576 24*	coldpress has quit (Quit: WeeChat 2.3)
-T 1541604749 18<duncaen18>	well no one of the core team wanted the forum
-T 1541604877 24*	VartiWork has quit (Quit: Page closed)
-T 1541604941 24*	akko has quit (Ping timeout: 256 seconds)
-T 1541604957 23*	cam-v (~camille@176-141-112-111.abo.bbox.fr23) has joined
-T 1541604968 18<codedmart18>	Does the core team manage the url? It is just the forum itself that is down?
-T 1541605000 18<Phyrric18>	its a subdomain so I would assume so
-T 1541605023 18<codedmart18>	Ah right I guess I could have looked at that :).
-T 1541605054 23*	akko (~gentoo@gateway/tor-sasl/akko23) has joined
-T 1541605054 18<codedmart18>	I would be happy to help with the forum when it is back. Maybe a few different people could have access incase one is out.
-T 1541605086 18<caioalonso18>	and a backup routine
-T 1541605243 18<codedmart18>	Yes
-T 1541605430 20*	Disconnected (20)
-T 1541605437 FiSHLiM plugin unloaded
-T 1541805168 19*	Now talking on 22#voidlinux
-T 1541805168 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://repo.voidlinux.eu/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1541805168 22*	Topic for 22#voidlinux set by 26maldridge (24Sat Sep  1 03:35:41 2018)
-T 1541805214 24*	natemon has quit (Read error: Connection reset by peer)
-T 1541805336 24*	porky11 has quit (Quit: Leaving)
-T 1541805385 18<aedinius18>	no they just only support forking which runit doesn't support for services
-T 1541805388 18<aedinius18>	oh he's gone
-T 1541805606 23*	vervein (~vervein@5-49-241-78.hfc.dyn.abo.bbox.fr23) has joined
-T 1541805690 18<vervein18>	anyone experienced graphical glitches with qt5 programs on a WM when switching windows lately?
-T 1541805711 18<vervein18>	like, only partial draw
-T 1541805773 18<aedinius18>	which wm? using a compositor?
-T 1541805791 24*	\0xc0ffee has quit (Quit: pass out)
-T 1541805807 18<vervein18>	dwm with compton
-T 1541805812 23*	\0xc0ffee (~chuck@freebsd/user/-0xc0ffee23) has joined
-T 1541805919 18<vervein18>	i'm uploading a video to show whats happening
-T 1541806109 24*	Phyrric has quit (Ping timeout: 268 seconds)
-T 1541806155 23*	jack_rabbit (~jack_rabb@2601:240:8001:1a60::223) has joined
-T 1541806169 18<vervein18>	https://www.youtube.com/watch?v=zJbyKZ2Ku1U
-T 1541806200 23*	Phyrric (Phyrric@gateway/vpn/privateinternetaccess/phyrric23) has joined
-T 1541806310 18<aedinius18>	... it doesn't load
-T 1541806366 18<vervein18>	refresh? maybe it is still processing... works on my end
-T 1541806390 18<aedinius18>	I just get a (!)
-T 1541806406 24*	jack_rabbit has quit (Ping timeout: 250 seconds)
-T 1541806475 18<vervein18>	i messed with the private settings sorry
-T 1541806479 24*	r00tobo has quit (Ping timeout: 268 seconds)
-T 1541806492 18<vervein18>	should work now?
-T 1541806497 18<aedinius18>	ah, yes it does
-T 1541806516 18<aedinius18>	that is odd
-T 1541806672 18<vervein18>	what could it be you think? I'm not sure what kind of keywords to look for with this issue, happened to me since a couple of days
-T 1541806680 24*	kageru has quit (Ping timeout: 252 seconds)
-T 1541806775 24*	coldpress has quit (Read error: Connection reset by peer)
-T 1541806933 23*	coldpress (~coldpress@bb119-74-92-122.singnet.com.sg23) has joined
-T 1541807040 18<q6618>	aedinius: you could probably work around it by having the service not execute the daemon itself but rather a wrapper script monitoring the daemon
-T 1541807062 18<aedinius18>	That's an option, yeah.
-T 1541807070 18<q6618>	that way you could give runit what it wants and have it be semi-reliable
-T 1541807105 18<q6618>	just need to do an infinite loop and check for status and raise the appropriate signals as necessary
-T 1541807156 18<Nilium18>	Think I've just about settled on getting a T480 for work now
-T 1541807224 23*	BlueKiwi (~abecko@90.178.175.21423) has joined
-T 1541807340 23*	silverghost (~silver@112.65.161.21123) has joined
-T 1541807360 18<aedinius18>	One of those would be nice
-T 1541807448 23*	Selfsigned (~notacert@unaffiliated/selfsigned23) has joined
-T 1541807478 24*	EF`` has quit (Ping timeout: 268 seconds)
-T 1541807593 FiSHLiM plugin unloaded
-T 1543189519 19*	Now talking on 22#voidlinux
-T 1543189519 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1543189519 22*	Topic for 22#voidlinux set by 26maldridge (24Mon Nov 12 23:13:20 2018)
-T 1543190258 FiSHLiM plugin unloaded
-T 1543284316 19*	Now talking on 22#voidlinux
-T 1543284316 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1543284316 22*	Topic for 22#voidlinux set by 26maldridge (24Mon Nov 12 23:13:20 2018)
-T 1543284398 24*	porky11 has quit (Quit: Leaving)
-T 1543284459 23*	oro- (~oro@79-76-79-125.dynamic.dsl.as9105.com23) has joined
-T 1543284506 24*	oro has quit (Ping timeout: 250 seconds)
-T 1543284507 24*	28oro- is now known as 18oro
-T 1543284529 FiSHLiM plugin unloaded
-T 1543358226 19*	Now talking on 22#voidlinux
-T 1543358226 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1543358226 22*	Topic for 22#voidlinux set by 26maldridge (24Mon Nov 12 23:13:20 2018)
-T 1543358552 23*	kyby64 (~kyby64@188.75.108.4523) has joined
-T 1543358669 24*	_0bitcount has quit (Quit: Leaving)
-T 1543359719 19*	Now talking on 22#voidlinux
-T 1543359719 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1543359719 22*	Topic for 22#voidlinux set by 26maldridge (24Mon Nov 12 23:13:20 2018)
-T 1543359733 18<yshui18>	aedinius, other distros certainly are
-T 1543359821 18<duncaen18>	oh crypt thing
-T 1543359861 18<pardis18>	atweiden-air: Do you have musl-devel installed? I wouldn't expect a live CD to come with it
-T 1543359865 18<duncaen18>	its defined in unist.h
-T 1543359870 18<voidfan18>	So LGPL doesn't require vlicense?
-T 1543359875 18<pardis18>	You need -devel packages installed if you want to do development with a library
-T 1543359902 FiSHLiM plugin unloaded
-T 1543361539 19*	Now talking on 22#voidlinux
-T 1543361539 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1543361539 22*	Topic for 22#voidlinux set by 26maldridge (24Mon Nov 12 23:13:20 2018)
-T 1543361583 18<jellyb18>	anybody get alacritty working?
-T 1543361588 18<kempe18>	jnbr: Yes, that seems to be the same issue
-T 1543361622 18<kempe18>	I'll see about adding the details from my investigation to the issue
-T 1543361637 24*	ovrstorm (~ovrstorm@air.raid.io24) has left ("WeeChat 2.3")
-T 1543361690 24*	userbr has quit (Quit: Leaving)
-T 1543361705 18<jnbr18>	jellyb: yes
-T 1543361721 18<jellyb18>	im getting a glx error
-T 1543361942 18<jnbr18>	and you installed alacritty via xbps and your system is uptodate?
-T 1543361969 23*	exoire (~exoire@pool-100-6-83-90.pitbpa.fios.verizon.net23) has joined
-T 1543362219 18<yshui18>	I really wish the maintainers can say a little bit more than a "No" to my question
-T 1543362236 18<yshui18>	but I understand, they probably get the same stupid question again and again all the time
-T 1543362288 18<jellyb18>	yes to both
-T 1543362360 18<jnbr18>	jellyb: which architecture and libc are you using?
-T 1543362446 18<jellyb18>	x86_64, glibc
-T 1543362461 20*	Disconnected (20)
-T 1543362489 FiSHLiM plugin unloaded
-T 1543367941 19*	Now talking on 22#voidlinux
-T 1543367941 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1543367941 22*	Topic for 22#voidlinux set by 26maldridge (24Mon Nov 12 23:13:20 2018)
-T 1543367953 18<aedinius18>	ciabbata_0: is that a problem
-T 1543367985 FiSHLiM plugin unloaded
-T 1544140102 19*	Now talking on 22#voidlinux
-T 1544140102 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1544140102 22*	Topic for 22#voidlinux set by 26maldridge (24Mon Nov 12 23:13:20 2018)
-T 1544140837 23*	zachary12 (~zachary12@162.212.158.19823) has joined
-T 1544140933 24*	anthepro has quit (Remote host closed the connection)
-T 1544141385 23*	malice (~malice@sheoth.eu23) has joined
-T 1544141385 24*	vigia122 has quit (Read error: Connection reset by peer)
-T 1544141461 18<malice18>	Finally unbanned from frenode, yay
-T 1544141480 23*	vitorhugomattos (~vitorhugo@189-104-176-111.user3g.veloxzone.com.br23) has joined
-T 1544141505 24*	geekboy_01 has quit (Read error: Connection reset by peer)
-T 1544141529 18<saptech18>	to install gtk3 and its development files, what is the install names?
-T 1544141543 18<saptech18>	are*
-T 1544141560 24*	vitorhugomattos has quit (Read error: Connection reset by peer)
-T 1544141601 23*	vitorhugomattos (~vitorhugo@189-104-163-108.user3g.veloxzone.com.br23) has joined
-T 1544141628 24*	stateless has quit (Ping timeout: 252 seconds)
-T 1544141675 18<Veyrdite18>	gtk+3
-T 1544141679 18<Veyrdite18>	Just to be confusing :)
-T 1544141703 18<Veyrdite18>	(and gtk+3-devel)
-T 1544141709 23*	stateless (~sin@2001:8b0:ba6d:cdff:9076:59c5:eafb:519623) has joined
-T 1544141863 18<saptech18>	Veyrdite, thanks
-T 1544141883 18<saptech18>	wow, gtk+3-devel wants 67 files
-T 1544141939 18<jstnn18>	Jesus. I guess that's not that surprising though.
-T 1544141981 18<saptech18>	139mb of disk space...heh
-T 1544142155 24*	d_xor has quit (Remote host closed the connection)
-T 1544143095 24*	NerdTheThird has quit (Quit: sham1 sham1 ya, sham1 sham1 yam)
-T 1544143299 18<jstnn18>	is there anything weird I need to do to get audio over HDMI working properly? The screen is hooked up and working, speaker-test plays it's pink noise over HDMI correctly, but audio from cmus or mpv or wherever else continues to come out of the laptop speakers
-T 1544143346 18<jstnn18>	it's the last thing I need to get working before I can call this laptop "done", driving me nuts
-T 1544143435 18<jstnn18>	xrandr --set audio on doesn't throw errors but doesn't make the sound go over there either
-T 1544143637 18<Veyrdite18>	jstnn: Audio is handled either by alsa directly or via pulseaudio (if you have it installed)
-T 1544143647 18<Veyrdite18>	For the plain alsa route: you need to tell mpv to use a different output device
-T 1544143661 18<Veyrdite18>	eg on my laptop it's mpv --audio-device=alsa/hdmi
-T 1544143672 18<Veyrdite18>	Alternatively you can edit .asoundrc to change the defaults for all applications
-T 1544143677 18<Veyrdite18>	Overall it's not a great experience
-T 1544143698 18<Veyrdite18>	Pulseaudio provide easier ways to solve this, but it adds latency and can cause other issues (in my experiences), so I personally avoid it.  Opinions vary.
-T 1544143728 18<Veyrdite18>	Most user-friendly distros go the pulseaudio route and provide a GUI to redirecty audio.  Whether or not pulse does this automatically for you when you attach an HDMI cable depends on a lot of things.
-T 1544143832 24*	CcxWrk has quit (Ping timeout: 250 seconds)
-T 1544143881 18<jstnn18>	I don't care if it does it automatically or not. I use this laptop on several different desks with different monitor setups so I have a handful of alias that do all the xrandr shit. I just plug it in and type 'tv' or 'office' or 'bedroom' or whatever and it goes. Ideally I'd just like to be able to add another command to a couple of those that says "hey send all the audio over there"
-T 1544143895 18<jstnn18>	I have pulseaudio installed, I just followed the post-installation stuff on the wiki
-T 1544143948 18<jstnn18>	pulseaudio, alsa-utils are installed
-T 1544144265 18<Veyrdite18>	I've only ever used GUI tools for pulseaudio.  Not sure of the name, they come with DE's
-T 1544144276 18<Veyrdite18>	Try the Arch Linux wiki pages on pulseaudio
-T 1544144325 18<jstnn18>	Yeah I'm looking there now, would really prefer a cli solution since I'm not using a DE in the first place.
-T 1544144355 18<Veyrdite18>	If you jettison pulseaudio: changing the default output device in .asoundrc (when you run your 'tv', 'office', etc commands) is the other option.
-T 1544144357 18<dTal18>	pulseaudio is not CLI friendly
-T 1544144479 18<dTal18>	it's from the modern school of development where command line programs are expected to mostly be called by other programs, and helpful messages and comfortable interfaces are optional
-T 1544144498 18<dTal18>	exhibit a, try calling pactl with no arguments
-T 1544144565 18<dTal18>	does it do something useful, like display status, version, a list of valid commands, or any other helpful hint? Hell no! just "No valid command specified"
-T 1544144881 18<jstnn18>	fun
-T 1544144916 18<blackbeard42018>	pulsemixer is a nice cli
-T 1544144936 18<jstnn18>	Yeah the Archwiki had some promising stuff (I did identify the device and can play arbitrary sounds through it with aplay) but no dice other than that.
-T 1544145006 24*	Zucca has quit (Ping timeout: 246 seconds)
-T 1544145056 18<maxice8[m]18>	dTal: the pactl exit sounds fair
-T 1544145106 18<Veyrdite18>	dTal: Many cli tools are like that.  gcc, for instance.  Then there are the tools that do "bad things" to new players if they run them without args: cat, vim
-T 1544145119 18<Veyrdite18>	As much as I dislike pulse, I don't think they're any different on that point
-T 1544145158 24*	golb_ has quit (Quit: Leaving)
-T 1544145184 23*	golb (~golb@36.84.225.14423) has joined
-T 1544145266 20*	Disconnected (20)
-T 1544145273 FiSHLiM plugin unloaded
-T 1544532076 19*	Now talking on 22#voidlinux
-T 1544532076 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1544532076 22*	Topic for 22#voidlinux set by 26maldridge (24Mon Nov 12 23:13:20 2018)
-T 1544532117 24*	makaveli7 has quit (Remote host closed the connection)
-T 1544532121 24*	Nightah has quit (Quit: ZNC - https://znc.in)
-T 1544532167 23*	Nightah (~Nightah@unaffiliated/nightah23) has joined
-T 1544532478 24*	INeedTechSupport has quit (Quit: Lost terminal)
-T 1544532564 23*	Neel (~OtakuSenp@unaffiliated/neel23) has joined
-T 1544532660 23*	sidro (~sidro@82.137.13.1523) has joined
-T 1544532714 24*	Nawab has quit (Ping timeout: 250 seconds)
-T 1544532900 24*	sidro has quit (Read error: Connection reset by peer)
-T 1544532978 24*	bodhis has quit (Ping timeout: 245 seconds)
-T 1544533109 24*	Neel has quit (Remote host closed the connection)
-T 1544533128 23*	Neel (~OtakuSenp@unaffiliated/neel23) has joined
-T 1544533681 18<unmy18>	anyone using: export CHROME_FLAGS="blablabla" to set up some stuff? because chromium ignoring that and Im not sure when it started doing it
-T 1544533702 24*	D630 has quit (Quit: quit)
-T 1544533741 18<unmy18>	I think after some video acceleration patch in Void
-T 1544533768 23*	Acacia (~Acacia@unaffiliated/acacia23) has joined
-T 1544533998 18<maxice8[m]18>	yes
-T 1544534004 18<maxice8[m]18>	see the /usr/bin/chromium wrapper
-T 1544534012 18<maxice8[m]18>	guess we have to take into account user flags
-T 1544534347 18<adema18>	also, i haven't had time to understand why, but since a few weeks, if i do not remove the ~/.local/chromium, it won't start
-T 1544534372 18<adema18>	Well, process will actually start, but do nothing and hang in the background
-T 1544534474 18<unmy18>	gpu rasterization without other tweaks was abble to hang my gpu
-T 1544534532 24*	28Neel is now known as 18dx_ob
-T 1544535152 18<unmy18>	maxice8[m], thanks I added to /usr/bin/chromium CHROME_FLAGS="$CHROME_FLAGS --enable-gpu-rasterization" and working fine now
-T 1544535339 18<maxice8[m]18>	unmy:  should be after so the user can override it, a small oversight
-T 1544535357 18<maxice8[m]18>	sadly bumping chromium is super costly
-T 1544535516 18<unmy18>	ah ye true but still it can be overwriten if set this up by chrome://flags
-T 1544535624 18<unmy18>	bumping to change simple shell file in package and block builders for half day :D
-T 1544535739 23*	bunn (~bun@95.179.149.15423) has joined
-T 1544535761 24*	yo9fah has quit (Read error: Connection reset by peer)
-T 1544535776 FiSHLiM plugin unloaded
-T 1552506548 19*	Now talking on 22#voidlinux
-T 1552506548 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1552506548 22*	Topic for 22#voidlinux set by 26maldridge (24Mon Nov 12 23:13:20 2018)
-T 1552506607 23*	akko (~gentoo@gateway/tor-sasl/akko23) has joined
-T 1552506828 FiSHLiM plugin unloaded
-T 1553028448 19*	Now talking on 22#voidlinux
-T 1553028448 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1553028448 22*	Topic for 22#voidlinux set by 26maldridge (24Mon Nov 12 23:13:20 2018)
-T 1553028513 23*	bi11y_ (~bi11y@128.107.241.16223) has joined
-T 1553028566 23*	acreter (~peter@p200300D773CED1043C9DC5183CD048D9.dip0.t-ipconnect.de23) has joined
-T 1553028690 24*	bi11y has quit (Ping timeout: 264 seconds)
-T 1553028780 23*	mobinmob (~mobinmob@2a02:587:7506:fa00:efc5:7156:e12c:1bc223) has joined
-T 1553029040 24*	autrimpo has quit (Quit: WeeChat 2.4)
-T 1553029052 23*	autrimpo (~autrimpo@2001:67c:1220:c1d0:f630:b9ff:fe9f:517023) has joined
-T 1553029057 24*	gdh has quit (Quit: Leaving)
-T 1553029079 24*	flotsam has quit (Quit: Leaving)
-T 1553029451 FiSHLiM plugin unloaded
-T 1553030392 19*	Now talking on 22#voidlinux
-T 1553030392 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1553030392 22*	Topic for 22#voidlinux set by 26maldridge (24Mon Nov 12 23:13:20 2018)
-T 1553030673 24*	tune has quit (Ping timeout: 246 seconds)
-T 1553030730 23*	tune (~bard@63.228.59.24823) has joined
-T 1553030848 24*	Acacia has quit (Remote host closed the connection)
-T 1553030858 24*	kageru has quit (Ping timeout: 252 seconds)
-T 1553031058 FiSHLiM plugin unloaded
-T 1558057469 19*	Now talking on 22#voidlinux
-T 1558057469 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1558057469 22*	Topic for 22#voidlinux set by 26maldridge (24Mon Nov 12 23:13:20 2018)
-T 1558057534 18<nicolaus18>	true
-T 1558057538 18<nicolaus18>	the step number is hardcoded haha
-T 1558057543 18<nicolaus18>	very dumb thing
-T 1558057554 18<nicolaus18>	i'll try to see what I can do
-T 1558057595 23*	gyre (~gyre@c-67-161-8-248.hsd1.ca.comcast.net23) has joined
-T 1558057713 23*	alexey-nemovff (~alexey-ne@2806:102e:12:72cb:b91e:3226:c17e:942023) has joined
-T 1558057775 24*	FreeFull has quit ()
-T 1558057903 24*	johnnyhostile has quit (Ping timeout: 245 seconds)
-T 1558057922 FiSHLiM plugin unloaded
-T 1572875556 19*	Now talking on 22#voidlinux
-T 1572875556 22*	Topic for 22#voidlinux is: The Void Linux distribution http://www.voidlinux.org || images: http://alpha.de.repo.voidlinux.org/live/current || Getting started: http://www.voidlinux.org/usage/xbps/ && http://www.voidlinux.org/usage/runit
-T 1572875556 22*	Topic for 22#voidlinux set by 26maldridge (24Mon Nov 12 23:13:20 2018)
-T 1572875778 24*	aedinius[w] has quit (Remote host closed the connection)
-T 1572875804 18<TheAnachron18>	every xth update my microsd cards wont show up :(
-T 1572875829 23*	aedinius[w] (ae2e03ae@unaffiliated/aedinius23) has joined
-T 1572875907 24*	bilebucket has quit (Quit: WeeChat 2.6)
-T 1572876202 24*	TheAnachron has quit (Remote host closed the connection)
-T 1572876228 23*	TheAnachron (~TheAnachr@p200300CD072B0046ADB19FC7F4E6A6DD.dip0.t-ipconnect.de23) has joined
-T 1572876297 FiSHLiM plugin unloaded
+T 1608653222 19*	Now talking on 22#voidlinux
+T 1608653222 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1608653222 22*	Topic for 22#voidlinux set by 26maldridge!~maldridge@69.13.217.92 (24Sun Aug  2 16:02:44 2020)
+T 1608653222 22*	Channel 22#voidlinux url: 24https://www.voidlinux.org
+T 1608653258 >18NickServ<	identify ****
+T 1608653259 -18NickServ-	You are now identified for PackRat-2019.
+T 1608653284 FiSHLiM plugin unloaded
+T 1608925465 19*	Now talking on 22#voidlinux
+T 1608925465 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1608925465 22*	Topic for 22#voidlinux set by 26maldridge!~maldridge@69.13.217.92 (24Sun Aug  2 16:02:44 2020)
+T 1608925465 22*	Channel 22#voidlinux url: 24https://www.voidlinux.org
+T 1608925575 FiSHLiM plugin unloaded
+T 1613689656 19*	Now talking on 22#voidlinux
+T 1613689656 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1613689656 22*	Topic for 22#voidlinux set by 26maldridge!~maldridge@69.13.217.92 (24Sun Aug  2 16:02:44 2020)
+T 1613689656 22*	Channel 22#voidlinux url: 24https://www.voidlinux.org
+T 1613689678 24*	tuy360 has quit (Remote host closed the connection)
+T 1613689731 18<raindev18>	Hm, 20191109/ is the most recent directory to have a signature file
+T 1613690033 18<raindev18>	As well as a signing key: https://github.com/void-linux/void-packages/tree/master/srcpkgs/void-release-keys/files/
+T 1613690075 18<raindev18>	I guess, 20191109 is the most recent one intended to be used then
+T 1613690334 23*	tuy360 (~tuy360@d118-75-245-169.try.wideopenwest.com23) has joined
+T 1613690367 18<maldridge18>	indeed
+T 1613690376 18<maldridge18>	it contains the most recent qualified images
+T 1613690440 24*	tuy360 has quit (Client Quit)
+T 1613690470 18<ericonr18>	raindev: if you want to be cool and hip though, you can help me test out the new ones :p
+T 1613690560 18<raindev18>	maldridge: thanks for confirming. What's the purpose of the newer images that are available?
+T 1613690583 18<ericonr18>	20201224 will be scrapped
+T 1613690599 18<ericonr18>	2021* will be signed and released once tested
+T 1613690624 18<raindev18>	ericonr: I'd be happy to help :)
+T 1613690697 18<raindev18>	Are there any docs on the topic?
+T 1613690713 18<raindev18>	Or some automated tests?
+T 1613690869 18<ericonr18>	raindev: not really. testing images in this case is going through installs with them :p
+T 1613690900 18<ericonr18>	though I guess we could also automate virtualized tests at some point
+T 1613690906 18<heliocat18>	woops
+T 1613690911 18<heliocat18>	https://python-security.readthedocs.io/vuln/ctypes-buffer-overflow-pycarg_repr.html
+T 1613690949 18<raindev18>	ericonr: Got it :) Anything in specific you want me to pay attention to or a particular platform you're interested in?
+T 1613691011 18<ericonr18>	not sure, sorry
+T 1613691032 18<ericonr18>	though picking a graphical image is a good way of flexing themm
+T 1613691052 18<raindev18>	No problem, I could go over the installation process, play around and take notes
+T 1613691055 18<ericonr18>	heliocat: grr bad commit message, if it's the one from hackernews today
+T 1613691100 18<heliocat18>	dunno, a buddy dropped that in another irc channel
+T 1613691101 18<raindev18>	ericonr: how do I verify the images though? :P
+T 1613691215 18<fuselage18>	got the script modified to my liking
+T 1613691224 23*	tibequadorian (~tibequado@ip4d142f9c.dynamic.kabel-deutschland.de23) has joined
+T 1613691241 18<murmeli_18>	fuselage: maybe my modified version (with comments) helps: http://ix.io/2PUy/bash (note the -p option)
+T 1613691249 18<murmeli_18>	oh, was too late...
+T 1613691306 24*	tibequadorian has quit (Client Quit)
+T 1613691316 23*	tibequadorian (~tibequado@ip4d142f9c.dynamic.kabel-deutschland.de23) has joined
+T 1613691668 18<ericonr18>	raindev: lots of trust? :p
+T 1613691677 18<ericonr18>	and also SSL certs, I guess
+T 1613691816 24*	belgarath_ has quit (Quit: Lost terminal)
+T 1613691816 24*	goberghen has quit (Quit: kthxbye)
+T 1613691826 18<fuselage18>	tks murmeli_ . will look
+T 1613691946 18<raindev18>	Is alpha.de an official mirror maintained by someone from the team?
+T 1613691981 18<raindev18>	Positive, just found that in the docs
+T 1613692025 18<raindev18>	ericonr: sounds good ;)
+T 1613692031 18<heliocat18>	yes, that's the master repo
+T 1613692130 18<maldridge18>	strictly alpha.hel is the root mirror
+T 1613692143 18<maldridge18>	alpha.de is an alias that I'll probably never be able to kill off
+T 1613692205 18<heliocat18>	enshrined in api land forever
+T 1613692367 18<heliocat18>	anyway, raindev alpha in this case means "first" not "unstable bullshit"
+T 1613692370 24*	jellyb has quit (Quit: WeeChat 3.0.1)
+T 1613692389 FiSHLiM plugin unloaded

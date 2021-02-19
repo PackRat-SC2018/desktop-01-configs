@@ -69,6 +69,10 @@ else
     export BROWSER=w3m
 fi
 
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
+
 typeset -U path
 # path=(~/bin /other/things/in/path $path[@])
 path=(~/bin ~/conky $path[@])

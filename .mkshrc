@@ -57,7 +57,7 @@ smores() (
 )
 
 # customise your favourite editor here; the first one found is used
-for EDITOR in "${EDITOR:-}" jupp jstar mcedit ed vi; do
+for EDITOR in "${EDITOR:-}" jmacs joe vim vi nano; do
 	EDITOR=$(\\builtin whence -p "$EDITOR") || EDITOR=
 	[[ -n $EDITOR && -x $EDITOR ]] && break
 	EDITOR=
@@ -94,6 +94,9 @@ PS4='[$EPOCHREALTIME] '; PS1='#'; (( USER_ID )) && PS1='$'; PS1=$'\001\r''${|
 
 	\\builtin return $e
 } '"$PS1 "
+
+#export PS1=$' \1\r\1\e[7m\1$PWD\1\e[0m\1>> '
+export PS1=$'\033[0;36m\ ┌ ─ \033[1;34m\[$PWD]\1\e[0m\1\n\033[0;36m\ └ ─ \033[0;37m\$ '
 
 # utilities
 \\builtin alias doch='sudo mksh -c "$(\\builtin fc -ln -1)"'
@@ -625,5 +628,7 @@ done
 #\\builtin set -U
 
 \\builtin unset p
+
+source ~/.bash_aliases
 
 \: place customisations above this line

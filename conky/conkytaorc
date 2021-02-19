@@ -5,7 +5,7 @@ conky.config = {
 	background = true,
 --font terminus-10
 	use_xft = true,
-	font = 'Aller:regular:size=12',
+	font = 'Paprika:regular:size=9',
 	xftalpha = 1.0,
 	update_interval = 1,
 	total_run_times = 0,
@@ -44,13 +44,13 @@ conky.config = {
 	draw_outline = false,
 	draw_borders = false,
 	draw_graph_borders = false,
-	-- default_color = '#DECB9F',
-	default_color = '#E6D1A4',
-	-- default_shade_color = '#000000',
+	default_color = '#DECB9F',
+	-- default_color = '#0C0C0C',
+	default_shade_color = '#000000',
 	default_outline_color = '#828282',
-	alignment = 'bl',
+	alignment = 'ml',
 	gap_x = 8,
-	gap_y = 64,
+	gap_y = 0,
 	no_buffers = true,
 	uppercase = false,
 	cpu_avg_samples = 2,
@@ -65,10 +65,11 @@ conky.config = {
 	border_inner_margin = 2,
 	border_outer_margin = 0,
 
-	lua_load = '$HOME/conky/lua_wide.lua',
+	-- lua_load = '$HOME/conky/lua_wide.lua',
+	-- ${voffset 12}${lua_parse tao {4,0,0,0,0,0x131313,0.02,"Paprika",9,"regular:regular","$HOME/bin/taoread.sh",40,600}}
 
 };
 
 conky.text = [[
-${voffset 12}${lua_parse tao {4,0,0,0,0,0x131313,0.02,"Paprika",9,"regular:regular","$HOME/bin/taoread.sh",40,600}}
+${execpi 1800 "$HOME/bin/taoread.sh"}
 ]];

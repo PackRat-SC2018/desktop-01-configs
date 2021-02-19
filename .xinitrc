@@ -44,16 +44,13 @@ export WM="$session"
 
 # do NOT put commands below the exec lines
 case $session in
-    fluxbox)    exec dbus-launch --sh-syntax --exit-with-session startfluxbox ;;
-    openbox)    exec dbus-launch --sh-syntax --exit-with-session openbox-session ;;
-    i3)         exec dbus-launch --sh-syntax --exit-with-session i3 ;;
-    bspwm)      exec dbus-launch --sh-syntax --exit-with-session bspwm ;;
-    fvwm)       exec dbus-launch --sh-syntax --exit-with-session "$HOME/bin/start-fvwm" ;;
-    spectrwm)   exec dbus-launch --sh-syntax --exit-with-session "$HOME/bin/start-spectrwm" ;;
-    dwm)        exec dbus-launch --sh-syntax --exit-with-session "$HOME/bin/start-dwm" ;;
-    dwmt)       exec dbus-launch --sh-syntax --exit-with-session "$HOME/bin/start-dwmtab" ;;
+    fluxbox)    exec dbus-run-session startfluxbox ;;
+    fvwm)       exec dbus-run-session fvwm ;;
+    i3)         exec dbus-run-session i3 ;;
+    dwm)        exec dbus-run-session /home/doug/bin/start-dwm ;;
+    bspwm)      exec dbus-run-session bspwm ;;
+    awesome)    exec dbus-run-session awesome ;; 
     *)          exec "$session" # Unknown, try running it
 esac
 
 exit 0 ;
-

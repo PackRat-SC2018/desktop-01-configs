@@ -1,0 +1,14 @@
+T 1608651504 19*	Now talking on 22#fvwm
+T 1608651504 22*	Topic for 22#fvwm is: FVWM - a ICCCM2/EWMH compliant window manager | www.fvwm.org | forums: fvwmforums.org | #fvwm FAQ: fvwmforums.org/wiki/Irc/HashFvwmFAQ/ | Wiki: fvwm.org/Wiki | Please use fvwm3 (github.com/fvwmorg/fvwm3) | fvwm3-rc0 out for testing!
+T 1608651504 22*	Topic for 22#fvwm set by 26thomas_adam!~n6tadam@unaffiliated/thomasadam (24Wed Sep  2 12:15:43 2020)
+T 1608651505 -18ChanServ-	[#fvwm] Welcome to #fvwm -- please feel free to ask questions, we encourage that.  General channel FAQ is here:  http://fvwmforums.org/wiki/IRC/HashFvwm/
+T 1608651505 22*	Channel 22#fvwm url: 24http://www.fvwm.org/
+T 1608652632 23*	multi8 (~multi8@90-227-29-153-no173.tbcn.telia.com23) has joined
+T 1608652676 24*	Dominique_Michel has quit (Remote host closed the connection)
+T 1608652942 23*	Dominique_Michel (~Dominique@194.230.155.10623) has joined
+T 1608653149 20*	Disconnected (20)
+T 1608675405 19*	Now talking on 22#fvwm
+T 1608675405 22*	Topic for 22#fvwm is: FVWM - a ICCCM2/EWMH compliant window manager | www.fvwm.org | forums: fvwmforums.org | #fvwm FAQ: fvwmforums.org/wiki/Irc/HashFvwmFAQ/ | Wiki: fvwm.org/Wiki | Please use fvwm3 (github.com/fvwmorg/fvwm3) | fvwm3-rc0 out for testing!
+T 1608675405 22*	Topic for 22#fvwm set by 26thomas_adam!~n6tadam@unaffiliated/thomasadam (24Wed Sep  2 12:15:43 2020)
+T 1608675405 -18ChanServ-	[#fvwm] Welcome to #fvwm -- please feel free to ask questions, we encourage that.  General channel FAQ is here:  http://fvwmforums.org/wiki/IRC/HashFvwm/
+T 1608675405 22*	Channel 22#fvwm url: 24http://www.fvwm.org/

@@ -41,6 +41,7 @@ Pictures
 Downloads
 archlabs
 Willow
+Bandit
 .config/GIMP
 .config/asunder
 .config/audacious
@@ -77,3 +78,5 @@ Willow
 .config/vivaldi-snapshot
 .config/vivaldi*
 .config/opera
+.config/cmst
+.config/awesome/vicious

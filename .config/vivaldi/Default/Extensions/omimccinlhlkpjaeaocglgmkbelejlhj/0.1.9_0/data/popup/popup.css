@@ -1,0 +1,88 @@
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 370px;
+  font-size: 15px;
+  cursor: default;
+  overflow: hidden;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+table {
+  width: 100%;
+}
+
+body, table {
+  font-family: helvetica, arial, 'lucida grande', ahoma, verdana, sans-serif;
+}
+
+table tr td {
+  transition: 300ms ease all;
+  -moz-transition: 300ms ease all;
+  -webkit-transition: 300ms ease all;
+}
+
+#main {
+  table-layout: fixed;
+  border-spacing: 10px 5px;
+}
+
+#main tr td {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  color: black;
+  height: 73px;
+  cursor: pointer;
+}
+
+#main tr td:hover {
+  background-color: rgba(0,0,0,0.1) !important;
+}
+
+#main tr td[type='flash'] {
+  background: url(../icons/64-flash.png) no-repeat center center;
+}
+
+#main tr td[type='html5'] {
+  background: url(../icons/64-html5.png) no-repeat center center;
+}
+
+#main tr td[active='true'] {
+  border-bottom: solid 1px #E54D26;
+}
+
+#main tr td[active='false'] {
+  border-bottom: solid 1px rgba(0,0,0,0.1);
+}
+
+#footer {
+  border-spacing: 3px;
+  margin: 10px 0 5px 0;
+  background-color: rgba(0,0,0,0.05);
+}
+
+#footer tr td[type='info'] {
+  cursor: default;
+  text-align: center;
+  width: calc(100% - 22px);
+}
+
+#footer tr td[type='faq'] {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10px;
+  background: url(faq.png) no-repeat center center;
+  background-size: 22px;
+}
+
+#footer tr td[type='faq']:hover {
+  background: url(faq-hover.png) no-repeat center center;
+  background-size: 22px;
+}

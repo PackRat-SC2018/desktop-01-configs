@@ -1,43 +1,46 @@
 [org/gtk/settings/file-chooser]
-window-position=(538, 105)
-window-size=(864, 765)
+window-position=(528, 171)
+window-size=(864, 762)
 date-format='regular'
 location-mode='path-bar'
 show-hidden=true
 show-size-column=true
-sidebar-width=153
+show-type-column=true
+sidebar-width=261
 sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
+type-format='category'
 
-[org/xfce/mousepad/preferences/window]
-menubar-visible=true
+[com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+visible-name='Default'
+use-theme-colors=false
+foreground-color='#F8F8F2'
+background-color='#272822'
+bold-color-set=false
+badge-color-set=false
+highlight-colors-set=false
+cursor-colors-set=false
+palette=['#272822', '#F92672', '#A6E22E', '#F4BF75', '#66D9EF', '#AE81FF', '#A1EFE4', '#F8F8F2', '#75715E', '#F92672', '#A6E22E', '#F4BF75', '#66D9EF', '#AE81FF', '#A1EFE4', '#F9F8F5']
+badge-color='#AC7EA8'
+background-transparency-percent=11
+dim-transparency-percent=42
+show-scrollbar=false
 
-[org/xfce/mousepad/preferences/view]
-match-braces=false
-word-wrap=false
-color-scheme='none'
-tab-width=8
-smart-home-end='disabled'
-show-right-margin=false
-show-line-numbers=true
-show-line-marks=false
-right-margin-position=80
-insert-spaces=false
-indent-width=-1
-indent-on-tab=true
-highlight-current-line=false
-show-line-endings=false
-show-whitespace=false
-font-name='Monospace'
-auto-indent=false
+default-size-columns=128
+default-size-rows=36
+cursor-blink-mode='off'
+use-system-font=false
+font='Fira Code weight=453 9'
 
-[org/xfce/mousepad/state/window]
-width=1237
-height=864
-maximized=false
-fullscreen=false
+[com/gexperts/Tilix]
+quake-specific-monitor=0
+window-style='disable-csd-hide-toolbar'
+terminal-title-style='none'
+quake-width-percent=87
+quake-keep-on-top=false
+quake-hide-lose-focus=true
 
 [org/gtk/settings/color-chooser]
-selected-color=(true, 0.025422222222222225, 0.025422222222222225, 0.026666666666666668, 1.0)
-custom-colors=[(0.025422222222222225, 0.025422222222222225, 0.026666666666666668, 1.0), (0.086274509803921567, 0.086274509803921567, 0.086274509803921567, 1.0), (0.85098039215686272, 0.85098039215686272, 0.85098039215686272, 1.0), (0.80000000000000004, 0.80000000000000004, 0.80000000000000004, 1.0)]
+selected-color=(true, 0.15294117647058825, 0.15686274509803921, 0.13333333333333333, 1.0)
+custom-colors=[(0.15294117647058825, 0.15686274509803921, 0.13333333333333333, 1.0), (0.44705882352941179, 0.61960784313725492, 0.81176470588235294, 1.0), (0.32941176470588235, 0.32941176470588235, 0.32941176470588235, 1.0), (0.87058823529411766, 0.87058823529411766, 0.87058823529411766, 1.0), (0.97647058823529409, 0.97254901960784312, 0.96078431372549022, 1.0), (0.4392156862745098, 0.47058823529411764, 0.50196078431372548, 1.0), (0.97254901960784312, 0.97254901960784312, 0.94901960784313721, 1.0), (0.54117647058823526, 0.74509803921568629, 0.71764705882352942, 1.0)]

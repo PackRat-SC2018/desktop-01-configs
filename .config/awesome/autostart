@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+#xsetroot -cursor_name left_ptr &
+
+#pgrep -x sxhkd > /dev/null || sxhkd &
+
+feh --no-fehbg --bg-scale --no-xinerama --randomize /mnt/public/images/dual_monitor/* &
+
+# pgrep -x conky > /dev/null || conky -p 3 -d -c conkyawesomerc &
+# ~/bin/ConkyAwesome.sh &
+
+# status bar
+#pkill -x polybar &
+#(sleep 1s && polybar graph-bar) &
+
+exit 0;

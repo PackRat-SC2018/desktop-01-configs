@@ -1,0 +1,5 @@
+2021/01/15-21:22:58.197 109f Reusing MANIFEST /home/doug/.config/vivaldi/Default/IndexedDB/https_fvwmforums.org_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/15-21:26:34.730 11d0 Level-0 table #5: started
+2021/01/15-21:26:34.793 11d0 Level-0 table #5: 149680 bytes OK
+2021/01/15-21:26:34.817 11d0 Delete type=0 #3
+2021/01/15-21:26:34.818 11d0 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,156 +1,199 @@
-# example sxhkdrc for use with dk
-#########################################################
+#
+# wm independent hotkeys
+#
 
-# launcher
+# terminal emulator
+super + Return
+     st
+
+super + shift + Return
+	kitty
+
+alt + F1
+    uxterm
+
+# program launcher
+# super + space
+alt + F2
+	rofi -show run
+
 super + p
 	dmenu_run
 
-alt + F2
-    rofi -combi -modi run,drun,window -show run
+super + space
+   jgmenu_run
 
-# terminal
-super + shift + Return
-	st
-
-super + Return
-   uxterm
-
-alt + F1
-    st
-
-# screenshot and selection capture
-#{_,alt + }@Print
-#	scrot {_,-s}
-super + control + Print
-    maim ~/Pictures/$(date +%F_%s).png
+super + ctrl + l
+	subl3
 
 Menu
-   thunar
+	thunar
+
+super + ctrl + g
+	gimp
+
+super + ctrl + p
+	libreoffice --calc
+
+super + ctrl + o
+	libreoffice --writer
 
 XF86HomePage
-    firefox
+	firefox
 
-XF86Mail
-    thunderbird
-
-XF86Calculator
-    galculator
-
-super + control + l
-    subl3
-
-super + control + g
-    gimp
-
-super + control + p
-    libreoffice --calc
-
-super + control + o
-     libreoffice --writer
-
-# dedicated volume keys
-#{XF86AudioRaiseVolume,XF86AudioLowerVolume}
-#	pamixer {-i,-d} 2
+XF86Search
+	thunderbird
 
 XF86AudioRaiseVolume
-     amixer -q sset PCM  5%+ unmute
+	amixer -q sset PCM 5%+ unmute 
 
 XF86AudioLowerVolume
-    amixer -q sset PCM 5%- unmute
+	amixer -q sset PCM 5%- unmute
 
 XF86AudioMute
-    amixer sset Master,0 toggle
+	amixer sset Master,0 toggle
+
+XF86Calculator
+	galculator
+
+XF86AudioNext
+    deadbeef --next
 
 XF86AudioPrev
     deadbeef --prev
 
 XF86AudioPlay
-    deadbeef --play-pause
+    deadbeef --toggle-pause
 
-XF86AudioNext
-    deadbeef --next
+#XF86AudioPrev
+#	mocp -r
 
-# dedicated backlight keys
-#{XF86MonBrightnessUp,XF86MonBrightnessDown}
-#	xbacklight {+10,-10}
+#XF86AudioPlay
+#	mocp -G
 
-# alt volume keys
-#alt + {Insert,Delete}
-#	pamixer {-i,-d} 2
+#XF86AudioNext
+#	mocp -f
 
-# reload sxhkd
-alt + shift + x
+super + ctrl + Print
+	scrnshot
+
+super + shift q
+      rofi-logout
+
+### bspwm keys
+
+# make sxhkd reload its configuration files:
+super + Escape
 	pkill -USR1 -x sxhkd
 
+#
+# bspwm hotkeys
+#
 
-# quit dk
-super + shift + e
-	dkcmd exit
+# quit/restart bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}
 
-super + shift + q
-    rofi-logout
+# close and kill
+#super + {_,shift + }w
+#	bspc node -{c,k}
 
-# reload dkrc
-super + shift + r
-	dkcmd reload
+alt + F4
+    bspc node -c
 
-# restart dk
-# alt + ctrl + shift + r
-super + q
-	dkcmd restart
+alt + shift + F4
+    bspc node -k
 
-# focus next or previous window
-alt + Tab
-    dkcmd win focus next
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
 
-alt + shift + Tab
-    dkcmd win focus prev
+# send the newest marked node to the newest preselected node
+super + y
+	bspc node newest.marked.local -n newest.!automatic.local
 
-# close window, swap tiled window in/out of master, cycle tiled windows in place
-alt + {F4,j,k}
-	dkcmd win {kill,swap,cycle}
+# swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
 
-# toggle fullscreen and fake fullscreen (enable manipulating fullscreen window)
-{_,alt + }F11
-	dkcmd win {full,fakefull}
+#
+# state/flags
+#
 
-# toggle floating or sticky
-alt + shift + {space,s}
-	dkcmd win {float,stick}
+# set the window state
+super + {t,shift + t,f,F11}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-# move window, signed (+/-) for relative changes
-alt + shift + {h,j,k,l}
-	dkcmd win resize {x=-10,y=+10,y=-10,x=+10}
+# set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
 
-# resize window, signed (+/-) for relative changes
-alt + ctrl + {h,j,k,l}
-	dkcmd win resize {w=-10,h=+10,h=-10,w=+10}
+#
+# focus/swap
+#
 
-# view, send, or follow to a workspace (by number)
-super + {_,shift + ,ctrl + }{1-9,0}
-	dkcmd ws {view,send,follow} {1-9,10}
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
 
-# view, send, or follow to the next, previous, last active,
-# next non-empty, or prev non-empty workspace
-alt + {_,shift + ,ctrl + }{bracketleft,bracketright,BackSpace,Left,Right}
-	dkcmd ws {view,send,follow} {prev,next,last,prevne,nextne}
+# focus the node for the given path jump
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
 
-# view, send, or follow to the next, previous, or last active monitor
-alt + {_,shift + ,ctrl + }{comma,period,backslash}
-	dkcmd mon {view,send,follow} {prev,next,last}
+# focus the next/previous window in the current desktop
+super + {_,shift + }c
+	bspc node -f {next,prev}.local.!hidden.window
 
-# change active workspace layout
-alt + {t,m,g,s,w,f}
-	dkcmd set layout {tile,mono,grid,spiral,dwindle,none}
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
 
-# change number of windows in master or first stack
-alt + {_,shift + }{i,d}
-	dkcmd set {master,stack} {+1,-1}
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
 
-# change gap width
-alt + {equal,minus}
-	dkcmd set gap width {+5,-5}
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
 
-# change border widths
-alt + ctrl + {_,shift + }{equal,minus}
-	dkcmd set border {width,outer_width} {+1,-1}
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#
+# preselect
+#
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}

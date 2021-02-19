@@ -15,21 +15,21 @@ print_date() {
 
 print_uptime() {
 	UPTIME=`uptime | awk -F, '{sub(".*up ",x,$1);print $1}'`
-	echo -n "Up: ${UPTIME}  "
+	echo -n "Up: ${UPTIME}   "
 }
 
 print_mem() {
 	MEM=`/usr/bin/free -m | grep ^Mem: | sed -E 's/ +/ /g' | cut -d ' ' -f4`
-	echo -n "Free mem: ${MEM}M  "
+	echo -n "Free mem: ${MEM}M   "
 }
 
 print_memp() {
 	MEMP=`free | awk '/Mem/{printf("%.0f"), $3/$2*100}'`
-	echo -n "Mem: ${MEMP}%  "
+	echo -n "Mem: ${MEMP}%   "
 }
 
 _print_cpu() {
-	printf "CPU: %3d%% User %3d%% Nice %3d%% Sys %3d%% Idle  " $1 $2 $3 $6
+	printf "CPU: %3d%% User %3d%% Nice %3d%% Sys %3d%% Idle   " $1 $2 $3 $6
 #	printf "CPU: %3d%% User %3d%% Idle  " $1 $6
 }
 
@@ -50,7 +50,7 @@ print_cpuspeed() {
 
 print_loadavg() {
 	LOAD_AVG=`awk '{print $1" "$2" "$3}' < /proc/loadavg`
-	echo -n "Load: ${LOAD_AVG}  "
+	echo -n "Load: ${LOAD_AVG}   "
 }
 
 print_bat() {

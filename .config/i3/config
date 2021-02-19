@@ -9,13 +9,22 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-exec killall -q sxhkd &
+# exec killall -q sxhkd &
 
 # Wallpaper
-# exec fbsetbg -c -r $HOME/wallpaper/ &
+exec fbsetbg -C -R $HOME/wallpaper/ &
+
+# dual monitors
+# exec xrandr --output VGA1 --auto --right-of HDMI1
+
+# connman network manager
+# exec cmst -w 3 -m -i Vibrantly-Simple-Dark &
 
 set $mod Mod4
 set $alt Mod1
+
+workspace 1 output HDMI1
+workspace 6 output VGA1
 
 default_orientation horizontal
 workspace_layout tabbed
@@ -47,23 +56,31 @@ font pango: Inconsolata Regular 10, Roboto Regular 10
 # font  pango: DejaVu Markup Book 10, DejaVu Sans Book  10
 
 # window colours:         border    background  text
-# client.focused            #3D5066   #3D5066     #FFFFFF
-client.focused            #7A4D36   #7A4D36     #FFFFFF
-client.unfocused          #202326   #202326     #BEBEBE
-client.focused_inactive   #1F3042   #1F3042     #FFFFFF
-client.urgent             #B11E26   #B11E26     #FFFFFF
+# client.focused            #3D5066   #3D5066     #E5E5E5
+client.focused            #3D5066   #3D5066     #E5E5E5
+client.unfocused          #232E3B   #232E3B     #E5E5E5
+client.focused_inactive   #3D5066   #3D5066     #E5E5E5
+client.urgent             #B11E26   #B11E26     #E5E5E5
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $alt
 
 # start a terminal
-bindsym $alt+F1 exec st
-bindsym $mod+Return exec uxterm
+bindsym $alt+F1 exec uxterm
+bindsym $mod+Return exec st
 bindsym $mod+Shift+Return exec kitty
 
 # kill focused window
 # bindsym $mod+Shift+q kill
 bindsym $alt+F4 kill
+
+# application settings
+assign [class="Gimp"] 6
+assign [class="Audacious"] 10
+assign [class="Deadbeef"] 10
+assign [class="Asunder"] 10
+assign [class="vlc"] 10
+assign [class="Sound-juicer"] 10
 
 # start dmenu (a program launcher)
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -76,23 +93,33 @@ bindsym $mod+d exec "rofi -combi -modi drun,run,window -show run -display-drun '
 bindsym $alt+F2 exec "rofi -combi -modi run,drun,window -show run"
 bindsym $mod+p exec jgmenu_run
 
-bindsym XF86HomePage exec firefox
-bindsym XF86Mail exec thunderbird
-bindsym $mod+Control+l exec subl3
+bindsym XF86HomePage exec wmctrl -a firefox || firefox
+bindsym XF86Mail exec wmctrl -a thunderbird || thunderbird
+bindsym XF86Search exec wmctrl -a thunderbird || thunderbird
+
+#bindsym $mod+F14 exec wmctrl -a firefox || firefox
+#bindsym $mod+F13 exec wmctrl -a thunderbird || thunderbird
+
 bindsym Menu exec thunar
-bindsym $mod+Control+g exec gimp
+bindsym $mod+Control+l exec wmctrl -a subl3 || subl3
+bindsym $mod+Control+g exec wmctrl -a gimp || gimp,workspace 6;focus
 # bindsym $mod+Control+Print exec "$HOME/bin/scrot_delay.sh"
-bindsym $mod+Control+Print exec "maim ~/Pictures/$(date +%F_%s).png"
-bindsym Control+Print exec "maim | xclip -selection clipboard -t image/png"
+# bindsym $mod+Control+Print exec maim ~/Pictures/$(date +%F_%s).png
+bindsym $mod+Control+Print exec maim -u ~/Pictures/$(date +%F_%s).png
+bindsym Control+Print exec maim -u | xclip -selection clipboard -t image/png
 bindsym XF86Calculator exec galculator
 
 bindsym XF86AudioRaiseVolume exec "amixer -q sset PCM  5%+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset PCM 5%- unmute"
 bindsym XF86AudioMute exec "amixer sset Master,0 toggle"
 
-bindsym XF86AudioPrev exec "mocp -r"
-bindsym XF86AudioPlay exec "mocp -G"
-bindsym XF86AudioNext exec "mocp -f"
+bindsym XF86AudioNext exec "deadbeef --next"
+bindsym XF86AudioPrev exec "deadbeef --prev"
+bindsym XF86AudioPlay exec "deadbeef --toggle-pause"
+
+bindsym $mod+XF86AudioPrev exec "mocp -r"
+bindsym $mod+XF86AudioPlay exec "mocp -G"
+bindsym $mod+XF86AudioNext exec "mocp -f"
 
 bindsym $mod+Control+p exec "libreoffice --calc"
 bindsym $mod+Control+o exec "libreoffice --writer"
@@ -100,8 +127,8 @@ bindsym $mod+Control+o exec "libreoffice --writer"
 # workspace layouts
 # bindsym XF86Tools exec i3-msg append_layout ~/temp/workspace-500.json
 
-bindsym XF86Tools exec --no-startup-id "i3-msg 'workspace 10; append_layout /home/doug/.config/i3/workspace-600.json'"
-bindsym $mod+XF86Tools exec --no-startup-id "i3-msg 'workspace 10; append_layout /home/doug/.config/i3/workspace-500.json'"
+#bindsym XF86Tools exec --no-startup-id "i3-msg 'workspace 10; append_layout /home/doug/.config/i3/workspace-600.json'"
+#bindsym $mod+XF86Tools exec --no-startup-id "i3-msg 'workspace 10; append_layout /home/doug/.config/i3/workspace-500.json'"
 
 # floating windows 2px border
 for_window [class="XFontsel"] floating enable
@@ -126,14 +153,7 @@ for_window [class="Asunder"] floating enable
 for_window [class="Deadbeef"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [class="Sound-juicer"] floating enable
-
-# application settings
-assign [class="Gimp"] 4
-assign [class="Audacious"] 10
-assign [class="Deadbeef"] 10
-assign [class="Asunder"] 10
-assign [class="vlc"] 10
-assign [class="Sound-juicer"] 10
+for_window [class="Xcdroast"] floating enable
 
 # change focus
 bindsym $mod+j focus left
@@ -308,7 +328,7 @@ bar {
         position top
         workspace_buttons yes
         tray_output primary
-        bindsym --release button3 Exec jgmenu --config-file=/home/doug/.config/jgmenu/jgbarmenurc
+        bindsym --release button3 exec jgmenu --config-file=/home/doug/.config/jgmenu/jgbarmenurc
         bindsym --release button2 exec --no-startup-id import -window root -quality 100 ~/pictures/i3_screen-import-$(date +%A_%s).png
         font pango: Inconsolata LGC Markup Regular 10, Roboto Mono Regular 10
         # status_command $HOME/.config/i3/i3conkybar.sh
@@ -316,11 +336,12 @@ bar {
         status_command slstatus -s
         separator_symbol " "
         colors {
-          background            #161718
-          statusline            #BEBEBE
-          focused_workspace     #7A4D36     #7A4D36     #FFFFFF
-          active_workspace      #3D5066     #3D5066     #BEBEBE
-          inactive_workspace    #172025     #172025     #BEBEBE
-          urgent_workspace      #D92B2B     #D92B2B     #FFFFFF
+          background            #19191A
+          statusline            #C0C0C0
+          # focused_workspace     #7A4D36     #7A4D36     #E5E5E5
+          focused_workspace     #3D5066     #3D5066     #E5E5E5
+          inactive_workspace    #232E3B     #232E3B     #E5E5E5
+          active_workspace      #19191A     #19191A     #E5E5E5
+          urgent_workspace      #D92B2B     #D92B2B     #E5E5E5
      }
 }

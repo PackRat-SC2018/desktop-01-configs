@@ -1,0 +1,26 @@
+{
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/stock_mail.png",
+         "38": "images/stock_mail.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "description": "Adds a button and context menu item to send the page URL or a link URL via email",
+   "icons": {
+      "128": "images/stock_mail.png",
+      "16": "images/stock_mail.png",
+      "48": "images/stock_mail.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDKC15x+ky1mviIZBbPy3Syg+HS6KYVnQITiQmrnewUp0493xpbUo+cD3RFzPwoB2crqyU51EpjV1e+Tt8Jq5iBEFigmFMOJZqkzWFNcLr8ZQHVkEHc0QDV+5PGB8V1W9+ksLJMvGXVLzm3EqxS52FXnZ77zJ8QYkZozAGTygnbpQIDAQAB",
+   "manifest_version": 2,
+   "name": "Share link via email",
+   "options_page": "options.html",
+   "permissions": [ "contextMenus", "activeTab" ],
+   "short_name": "Share Link",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.2.6"
+}

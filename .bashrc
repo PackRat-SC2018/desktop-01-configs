@@ -17,6 +17,10 @@ if [ -d /etc/bash/bashrc.d/ ]; then
 	unset f
 fi
 
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
+
 shopt -s histappend
 shopt -s cmdhist
 shopt -s histverify

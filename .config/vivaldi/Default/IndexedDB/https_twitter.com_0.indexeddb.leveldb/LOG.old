@@ -1,0 +1,8 @@
+2021/01/16-20:09:45.959 117c Reusing MANIFEST /home/doug/.config/vivaldi/Default/IndexedDB/https_twitter.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/16-20:09:45.959 117c Recovering log #4
+2021/01/16-20:09:45.959 117c Reusing old log /home/doug/.config/vivaldi/Default/IndexedDB/https_twitter.com_0.indexeddb.leveldb/000004.log 
+2021/01/16-20:10:28.411 127b Level-0 table #8: started
+2021/01/16-20:10:28.411 127b Level-0 table #8: 0 bytes OK
+2021/01/16-20:10:28.432 127b Delete type=0 #4
+2021/01/16-20:10:28.433 127b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/01/16-20:10:28.433 127b Manual compaction at level-1 from (begin) .. (end); will stop at (end)

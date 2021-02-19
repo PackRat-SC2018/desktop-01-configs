@@ -1,12 +1,11 @@
 WindowTitle {Date}
-WindowSize 360 330		# Taille
+WindowSize 360 330		# Size
 WindowPosition 191 50		# Position
 ForeColor	{black}
 BackColor	{grey85}
 ShadowColor	{grey55}
 HilightColor	{grey100}
-# Font		-adobe-helvetica-bold-r-*-*-12-*
-Font "xft:Monospace:size=10:Regular"
+Font		-adobe-helvetica-bold-r-*-*-12-*
 
 Init
  Begin
@@ -105,7 +104,7 @@ Property
  Flags NoReliefString
  Type SwallowExec
  Title {xclock}
- SwallowExec {exec xclock -analog -padding 0 -geometry 70x56-0-0 -fg MidnightBlue -hd Blue -hl Blue -bg Grey85 -update 1 &}
+ SwallowExec {exec xclock -analog -padding 0 -geometry 70x56-1500-1500 -fg MidnightBlue -hd Blue -hl Blue -bg Grey85 -update 1 &}
 Main
  Case message of
   SingleClic :

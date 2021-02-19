@@ -1,0 +1,5 @@
+2021/01/15-22:36:59.793 a14 Reusing MANIFEST /home/doug/.config/vivaldi/Default/IndexedDB/https_www.youtube-nocookie.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/15-22:39:05.796 b09 Level-0 table #5: started
+2021/01/15-22:39:05.824 b09 Level-0 table #5: 1176 bytes OK
+2021/01/15-22:39:05.845 b09 Delete type=0 #3
+2021/01/15-22:39:05.846 b09 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,37 @@
+{
+   "background": {
+      "page": "lib/chrome/background.html"
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "data/icons/16.png",
+         "32": "data/icons/32.png",
+         "48": "data/icons/48.png",
+         "64": "data/icons/64.png"
+      },
+      "default_popup": "data/popup/popup.html",
+      "default_title": "Flash-HTML5 for YouTube™"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "data/communication.js", "data/content_script/inject.js" ],
+      "matches": [ "*://*.youtube.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Play YouTube Videos in Flash or HTML5 Player",
+   "homepage_url": "http://mybrowseraddon.com/youtube-flash-html.html",
+   "icons": {
+      "128": "data/icons/128.png",
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgK3pny8XJQ5UEzNfD8zw5ySH92rX033UhSdkF8s3403ilg2svnViTsqtTaEBQBsSXPynjDn+7gt0D8WCoSkAlrJhqb7Cm8fX+yqJDo2VuKhmTyU1Ui/IsG1U2MCyzd/L9d8wav+zliQ3CThM42MsKM9wtTao7cTaBFIqmZAVC9s/GT9b+ZTHoE/N5Gh5kD2sroOoCPo7inNUWUXHpshAp8fO1cqtcR7ovMGuxa+VqlSbu+rsJgPugwhcKHAYoJF0M3GrIn9ejG+YdErs3jYscQLvtGFXw0QRZk2t0a94MWwq46g9pt9yYIKxypzi4HLNyboSv4L8xp2a54ouWSnfRwIDAQAB",
+   "manifest_version": 2,
+   "name": "Flash-HTML5 for YouTube™",
+   "permissions": [ "storage", "*://*.mybrowseraddon.com/*", "*://*.youtube.com/*" ],
+   "short_name": "youtube-flash-html",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1.9"
+}

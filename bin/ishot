@@ -11,4 +11,7 @@ echo -e " █▀███████▀█"
 echo -e " ▀ ▀▄▄ ▄▄▀ ▀"
 echo -e "\033[m"
 
-scrot -b -c -d 5 -q 100 ~/pictures/"%m-%d-%s_scrot.png" & 
+# scrot -b -c -d 5 -q 100 ~/pictures/"%m-%d-%s_scrot.png" & 
+maim -d 5 ~/Pictures/$(date +%F_%s).png
+
+exit 0;

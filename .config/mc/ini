@@ -14,8 +14,8 @@ confirm_history_cleanup=true
 confirm_exit=false
 confirm_directory_hotlist_delete=false
 confirm_view_dir=false
-safe_delete=true
-safe_overwrite=true
+safe_delete=false
+safe_overwrite=false
 use_8th_bit_as_meta=false
 mouse_move_pages_viewer=true
 mouse_close_dialog=false
@@ -62,6 +62,7 @@ editor_group_undo=false
 editor_state_full_filename=false
 editor_ask_filename_before_edit=false
 nice_rotating_dash=true
+shadows=true
 mcview_remember_file_position=false
 auto_fill_mkdir_name=true
 copymove_persistent_attr=true
@@ -82,23 +83,21 @@ editor_backup_extension=~
 editor_filesize_threshold=64M
 editor_stop_format_chars=-+*\\,.;:&>
 mcview_eof=
-skin=darkfar
-
-filepos_max_saved_entries=1024
+skin=dark
 
 [Layout]
+output_lines=0
+left_panel_size=136
+top_panel_size=0
 message_visible=true
 keybar_visible=true
 xterm_title=true
-output_lines=0
 command_prompt=true
 menubar_visible=true
 free_space=true
 horizontal_split=false
 vertical_equal=true
-left_panel_size=50
 horizontal_equal=true
-top_panel_size=1
 
 [Misc]
 timeformat_recent=%b %e %H:%M
@@ -113,18 +112,8 @@ clipboard_paste=
 
 [Colors]
 base_color=
-st-256color=
-color_terminals=
-
-screen=
-
-rxvt-unicode-256color=
-
-linux=
-
 xterm=
-
-rxvt-256color=
+color_terminals=
 
 [Panels]
 show_mini_info=true
@@ -146,8 +135,6 @@ permission_mode=false
 torben_fj_mode=false
 quick_search_mode=2
 select_flags=6
-
-simple_swap=false
 
 [Panelize]
 Find *.orig after patching=find . -name \\*.orig -print

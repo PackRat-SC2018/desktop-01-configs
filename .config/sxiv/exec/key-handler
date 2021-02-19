@@ -1,4 +1,5 @@
 #!/bin/sh
+# feh --no-fehbg --bg-scale --no-xinerama --randomize /mnt/public/images/dual_monitor/* &
 while read file
 do
         case "$1" in
@@ -14,5 +15,7 @@ do
                 hsetroot -center "$file" ;;
         "C-d")
                 display -window root "$file" ;;
+        "C-w")
+               feh --no-fehbg --bg-scale --no-xinerama --randomize "$file" ;;
         esac
 done

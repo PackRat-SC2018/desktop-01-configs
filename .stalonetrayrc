@@ -1,21 +1,9 @@
 decorations none
-geometry 10x1-2-2
-# geometry 6x1
-background "#2D3238"
-# background "#C3C3BB"
-icon_size 24
-slot_size 32
-max_geometry 10x1
-parent_bg false
-transparent true
-tint_color "#FFFFFF"
-# tint_color "#31363B"
-tint_level 0
+geometry 5x1
+icon_size 18
+# slot_size 30
+max_geometry 5x1
+parent_bg true
+transparent false
 icon_gravity SE
 no_shrink true
-skip_taskbar true
-window_layer bottom
-window_strut none
-window_type normal
-sticky true
-

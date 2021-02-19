@@ -1,10 +1,10 @@
-##################################
+ ##################################
 #  ____________________________
 # (   _________________________)
 #  ) (__  _  _  _    _
 # (   __)( \/ )( \/\/ )/\/\
 #  ) (    \  /  \    //    \
-# (___)    \/    \/\/(_/\/\_) 2.6
+# (___)    \/    \/\/(_/\/\_) 3
 #
 #
 #  This is the default configuration file shipped with fvwm.
@@ -21,6 +21,10 @@
 #
 #################################
 
+# dual monitors
+# DesktopConfiguration per-monitor
+DesktopConfiguration global
+
 ImagePath $[HOME]/.fvwm/icons:+
 
 # InfoStoreAdd can be used to store variable data internal to fvwm.
@@ -32,10 +36,17 @@ ImagePath $[HOME]/.fvwm/icons:+
 # The following is used in various menus and also sets the terminal
 # that FvwmConsole uses. Change this to your terminal of choice
 InfoStoreAdd terminal uxterm
+# InfoStoreAdd terminal st
+# InfoStoreAdd terminal alacritty
+
+# This is used for "Run Command" and the Meta+Space key-binding
+InfoStoreAdd runcmd "dmenu_run -nb '#272D30' -nf '#e3e3e3' -sb '#3D4780' -sf '#e3e3e3' -fn 'xft:sans:regular:size=9'"
+
 InfoStoreAdd browser firefox
 InfoStoreAdd mail thunderbird
 InfoStoreAdd filemgr thunar
 InfoStoreAdd editor subl3
+InfoStoreAdd gimpcmd gimp
 
 ###########
 # 1: Functions
@@ -86,15 +97,14 @@ AddToFunc   ViewManPage
 # like display, feh, etc.
 DestroyFunc SetBG
 AddToFunc   SetBG
-+ I Test (f $[FVWM_USERDIR]/images/background/$0) \
-    Exec exec fvwm-root $[FVWM_USERDIR]/images/background/$0
-+ I TestRc (Match) Exec exec ln -fs images/background/$0 \
-    $[FVWM_USERDIR]/.BGdefault
++ I Test (f $[FVWM_USERDIR]/images/background/$0) Exec exec fvwm-root $[FVWM_USERDIR]/images/background/$0
++ I TestRc (Match) Exec exec ln -fs images/background/$0 $[FVWM_USERDIR]/.BGdefault
 + I TestRc (Match) Break
 + I Test (!f $[FVWM_DATADIR]/default-config/images/background/$0) Break
 + I Exec exec fvwm-root $[FVWM_DATADIR]/default-config/images/background/$0
 + I Exec exec ln -fs $[FVWM_DATADIR]/default-config/images/background/$0 \
     $[FVWM_USERDIR]/.BGdefault
+
 
 # Function: IconManClick
 #
@@ -108,16 +118,6 @@ AddToFunc   IconManClick
 + I ThisWindow Raise
 + I ThisWindow (AcceptsFocus) FlipFocus
 
-AddToFunc DeiconifyAndRearrange
-+ C Iconify off
-+ C All (CurrentPage, Iconic) PlaceAgain Icon
-
-AddToFunc IconFunc
-+ C DeiconifyAndRearrange
-+ M Raise
-+ M Move
-+ D DeiconifyAndRearrange
-
 # Function: ToggleTitle
 #
 # This function will toggle if fvwm shows the TitleBar.
@@ -128,6 +128,23 @@ AddToFunc   ToggleTitle
 + I TestRc (Match) Break
 + I WindowStyle !Title
 + I State 1 True
+
+# Function: ChangeDesk
+#
+# This function is called by FvwmEvent every time the Desk is changed.
+DestroyFunc ChangeDesk
+AddToFunc   ChangeDesk
++ I SendToModule FvwmButtons ChangeButton desk0 Colorset 9
++ I SendToModule FvwmButtons ChangeButton desk1 Colorset 9
++ I SendToModule FvwmButtons ChangeButton desk2 Colorset 9
++ I SendToModule FvwmButtons ChangeButton desk3 Colorset 9
+#+ I SendToModule FvwmButtons ChangeButton desk$0 Colorset 8
++ I SendToModule FvwmButtons ChangeButton desk$0 Colorset 29
+
+
+#############
+# 2: Styles #
+#############
 
 # Desktops and Pages
 #
@@ -141,11 +158,11 @@ AddToFunc   ToggleTitle
 #   |   |   |
 #   +---+---+
 #
-DesktopName 0 One
-DesktopName 1 Two
-DesktopName 2 Three
-DesktopName 3 Four
-# DesktopSize 3x3
+DesktopName 0 Main
+DesktopName 1 Desk1
+DesktopName 2 Desk2
+DesktopName 3 Desk3
+# DesktopSize 2x2
 DesktopSize 1x1
 
 # EdgeScroll will move the view port between the Pages when the mouse
@@ -155,14 +172,15 @@ DesktopSize 1x1
 #
 # Set EdgeScroll 0 0 and/or EdgeResistance -1 to disable.
 EdgeScroll 100 100
-EdgeResistance 1200
+EdgeResistance 1000
 EdgeThickness 1
 Style * EdgeMoveDelay 350, EdgeMoveResistance 350
 
 # EwmhBaseStruts [left] [right] [top] [bottom]
 # Reserves space along the edge(s) of the Screen that will not
 # be covered when maximizing or placing windows.
-EwmhBaseStruts 4 4 24 4
+# EwmhBaseStruts 124 0 0 0
+EwmhBaseStruts 0 0 0 0
 
 # This sets the ClickTime and MoveThreshold used to determine
 # Double Clicks, Hold and Move for the mouse.
@@ -177,9 +195,12 @@ MoveThreshold 3
 Style * ClickToFocus, MouseFocusClickRaises
 ColorMapFocus  FollowsMouse
 
+# Default Font
+DefaultFont "xft:DejaVu Sans:Book:size=9:antialias=True"
+
 # Window Placement
-!Style * MinOverlapPlacement, GrabFocusOff, !UsePPosition
-Style * MinOverlapPlacement, GrabFocus, !UsePPosition
+# Style * MinOverlapPlacement, GrabFocusOff, !UsePPosition
+Style * MinOverlapPlacement, GrabFocusOn, !UsePPosition
 
 # Sets all windows to OpaqueMove (vs a wired frame) and  windows will
 # snap to each other and the edge of the screen.
@@ -197,8 +218,248 @@ Style * WindowShadeScrolls, WindowShadeSteps 10
 # See http://fvwm.org/documentation/faq/#why-do-numlock-capslock-and-scrolllock-interfere-with-clicktofocus-andor-my-mouse-bindings
 IgnoreModifiers L25
 
+# Decor Styles
+Style * BorderWidth 3, HandleWidth 3, MWMButtons, FvwmBorder, FirmBorder
+Style * Colorset 1, HilightColorset 2
+Style * BorderColorset 3, HilightBorderColorset 4
+
+# Window Specific Styles
+Style ConfirmQuit !Title, PositionPlacement Center, WindowListSkip, Layer 6
+Style FvwmIdent WindowListSkip
+
 #######
-# 6: Decor
+# 4: Menus
+###########
+MenuStyle * MenuColorset 10, ActiveColorset 29, GreyedColorset 7, TitleColorset 28
+MenuStyle * Hilight3DOff, HilightBack, HilightTitleBack, SeparatorsShort
+MenuStyle * TrianglesSolid, TrianglesUseFore
+MenuStyle * ItemFormat "%|%3.1i%5.3l%5.3>%|"
+MenuStyle * Font "xft:DejaVu Sans:book:size=9:antialias=True"
+MenuStyle * VerticalItemSpacing 4 4 , VerticalTitleSpacing 4 4, VerticalMargins 1 1
+MenuStyle * Animation, AutomaticHotkeysOff, DoubleClickTime
+MenuStyle * BorderWidth 1, SidePic, SideColor
+MenuStyle * PopupDelayed, PopupDelay 200, PopdownDelayed, PopdownDelay 150
+MenuStyle * PopupOffset 4 100, TitleWarpOff
+
+# Root Menu
+#
+# The root menu will PopUp with a click in the root
+# window or using alt-f1 (or menu).
+DestroyMenu MenuFvwmRoot
+AddToMenu   MenuFvwmRoot "Fvwm" Title
++ "&Programs%icons/programs.png%" Popup MenuPrograms
++ "XDG &Menu%icons/apps.png%" Popup XDGMenu
++ "&XTerm%icons/terminal.png%" Exec exec uxterm
+Test (x dmenu_run) + "Run command" Exec exec $[infostore.runcmd]
++ "" Nop
++ "Fvwm&Console%icons/terminal.png%" Module FvwmConsole -terminal xterm
++ "&Wallpapers%icons/wallpaper.png%" Popup BGMenu
++ "M&an Pages%icons/help.png%" Popup MenuFvwmManPages
++ "Copy Config%icons/conf.png%" FvwmScript FvwmScript-ConfirmCopyConfig
++ "" Nop
++ "Re&fresh%icons/refresh.png%" Refresh
++ "&Restart%icons/restart.png%" Restart
++ "&Quit%icons/quit.png%" Module FvwmScript FvwmScript-ConfirmQuit
+
+# Generate XDGMenu
+PipeRead "fvwm-menu-desktop -e"
+
+# Programs Menu
+#
+# This test for some common programs and adds them to the menu.
+# When adding programs you don't need to use the Test (x foo)
+# lines as this is only to help make this menu portable.
+DestroyMenu MenuPrograms
+AddToMenu   MenuPrograms "Programs" Title
+Test (x alacritty) + "Terminal" Exec exec $[infostore.terminal]
+Test (x subl3) + "Sublime" Exec exec $[infostore.editor]
+Test (x thunar) + "File Manager" Exec exec $[infostore.filemgr]
+Test (x firefox) + "Firefox" Exec exec $[infostore.browser]
+Test (x thunderbird) + "Thunderbird" Exec exec $[infostore.mail]
+Test (x emacs) + "Emacs" Exec exec emacs
+Test (x gimp) + "Gimp" Exec exec $[infostore.gimpcmd]
+
+# Background Menu
+#
+# Backgrounds are located in ~/.fvwm/images/background/
+# Menu icons are located in ~/.fvwm/images/bgicons/
+DestroyMenu BGMenu
+AddToMenu   BGMenu "Wallpapers" Title
++ "Floral%bgicons/bg1.png%" SetBG bg1.png
++ "Circles%bgicons/bg2.png%" SetBG bg2.png
++ "Space%bgicons/bg3.png%" SetBG bg3.png
+
+# Window Operations Menus
+DestroyMenu MenuWindowOps
+AddToMenu   MenuWindowOps
++ "Move"      Move
++ "Resize"    Resize
++ "Iconify"   Iconify
++ "Maximize"  Maximize
++ "Shade"     WindowShade
++ "Stick"     Stick
++ "" Nop
++ "Close"     Close
++ "More..."   Menu MenuWindowOpsLong This 0 0
+
+DestroyMenu MenuWindowOpsLong
+AddToMenu   MenuWindowOpsLong
++ "Move%icons/win/move.png%" Move
++ "Resize%icons/win/resize.png%" Resize
++ "(De)Iconify%icons/win/iconify.png%" Iconify
++ "(Un)Maximize%icons/win/max.png%" Maximize
++ "(Un)Shade%icons/win/shade.png%" WindowShade
++ "(Un)Sticky%icons/win/sticky.png%" Stick
++ "(No)Title Bar%icons/win/title.png%" Pick (CirculateHit) ToggleTitle
++ "Send To%icons/win/sendto.png%" Popup MenuSendTo
++ "" Nop
++ "Close%icons/win/close.png%" Close
++ "Destroy%icons/win/destroy.png%" Destroy
++ "" Nop
++ "Raise%icons/win/raise.png%" Raise
++ "Lower%icons/win/lower.png%" Lower
++ "" Nop
++ "Stays On Top%icons/win/top.png%" Pick (CirculateHit) Layer 0 6
++ "Stays Put%icons/win/stays.png%" Pick (CirculateHit) Layer 0 4
++ "Stays On Bottom%icons/win/bottom.png%" Pick (CirculateHit) Layer 0 2
++ "" Nop
++ "Identify%icons/info.png%" Module FvwmIdent
+
+DestroyMenu MenuIconOps
+AddToMenu   MenuIconOps
++ "(De)Iconify%icons/win/iconify.png%"	Iconify
++ "(Un)Maximize%icons/win/max.png%" 	Maximize
++ "(Un)Shade%icons/win/shade.png%"      WindowShade
++ "(Un)Sticky%icons/win/sticky.png%"	Stick
++ "(No)TitleBar%icons/win/title.png%"	Pick (CirculateHit) ToggleTitle
++ "Send To%icons/win/sendto.png%"       Popup MenuSendTo
++ "" Nop
++ "Close%icons/win/close.png%"		Close
++ "Destroy%icons/win/destroy.png%"	Destroy
++ "" Nop
++ "Raise%icons/win/raise.png%"		Raise
++ "Lower%icons/win/lower.png%"		Lower
++ "" Nop
++ "StaysOnTop%icons/win/top.png%"       Pick (CirculateHit) Layer 0 6
++ "StaysPut%icons/win/stays.png%"       Pick (CirculateHit) Layer 0 4
++ "StaysOnBottom%icons/win/bottom.png%" Pick (CirculateHit) Layer 0 2
++ "" Nop
++ "Identify%icons/info.png%"            Module FvwmIdent
+
+DestroyMenu MenuSendTo
+AddToMenu MenuSendTo
++ "Current" MoveToCurrent
++ "Page" PopUp MenuSendToPage
++ "Desk" PopUp MenuSendToDesk
+
+DestroyMenu MenuSendToDesk
+AddToMenu   MenuSendToDesk
++ "Desk 0"	MoveToDesk 0 0
++ "Desk 1"	MoveToDesk 0 1
++ "Desk 2"	MoveToDesk 0 2
++ "Desk 3"	MoveToDesk 0 3
+
+DestroyMenu MenuSendToPage
+AddToMenu   MenuSendToPage
++ "Page (0,0)"	MoveToPage 0 0
++ "Page (0,1)"	MoveToPage 0 1
++ "Page (1,0)"	MoveToPage 1 0
++ "Page (1,1)"	MoveToPage 1 1
+
+
+# Fvwm Man Pages (Help) Menu
+DestroyMenu MenuFvwmManPages
+AddToMenu   MenuFvwmManPages "Help" Title
++ "fvwm"                ViewManPage fvwm3
++ "FvwmAnimate"         ViewManPage FvwmAnimate
++ "FvwmAuto"            ViewManPage FvwmAuto
++ "FvwmBacker"          ViewManPage FvwmBacker
++ "FvwmButtons"         ViewManPage FvwmButtons
++ "FvwmCommand"         ViewManPage FvwmCommand
++ "FvwmConsole"         ViewManPage FvwmConsole
++ "FvwmEvent"           ViewManPage FvwmEvent
++ "FvwmIconMan"         ViewManPage FvwmIconMan
++ "FvwmIdent"           ViewManPage FvwmIdent
++ "FvwmPager"           ViewManPage FvwmPager
++ "FvwmPerl"            ViewManPage FvwmPerl
++ "FvwmProxy"           ViewManPage FvwmProxy
++ "FvwmRearrange"       ViewManPage FvwmRearrange
++ "FvwmScript"          ViewManPage FvwmScript
++ "" Nop
++ "fvwm-root"	        ViewManPage fvwm-root
++ "fvwm-menu-desktop"   ViewManPage fvwm-menu-desktop
++ "fvwm-menu-directory" ViewManPage fvwm-menu-directory
++ "fvwm-menu-xlock"     ViewManPage fvwm-menu-xlock
++ "fvwm-config"         ViewManPage fvwm-config
+
+#######
+# 5: Mouse and Key bindings
+#
+# Contexts:
+#     R = Root Window                 rrrrrrrrrrrrrrrrrrrrrr
+#     W = Application Window          rIrrrr<---------^rrrrr
+#     F = Frame Corners               rrrrrr[13TTTT642]rrrrr
+#     S = Frame Sides                 rIrrrr[wwwwwwwww]rrrrr
+#     T = Title Bar                   rrrrrr[wwwwwwwww]rrrrr
+#     I = Icon                        rIrrrrv_________>rrrrr
+#                                     rrrrrrrrrrrrrrrrrrrrrr
+#
+#     Numbers are buttons: [1 3 5 7 9  TTTTT  0 8 6 4 2]
+#
+# Modifiers: (A)ny, (C)ontrol, (S)hift, (M)eta, (N)othing
+#
+# Format: Key <X>  <Context> <Modifier> <Action>
+#         Mouse <X> <Context> <Modifier> <Action>
+####################
+
+# Alt-F1 or Menu to load the root menu and Alt-Tab for a WindowList.
+# Ctrl-F1/F2/F3/F4 will switch between the Virtual Desktops.
+# Super_R (windows key) will launch a terminal.
+# Alt-Space to launch dmenu (Note: dmenu must be present in the system)
+#
+# Silent supresses any errors (such as keyboards with no Menu key).
+#Silent Key F1 A M Menu MenuFvwmRoot
+#Silent Key Menu A A Menu MenuFvwmRoot
+#Silent Key Tab A M WindowList Root c c NoDeskSort, SelectOnRelease Meta_L
+#Silent Key F1 A C GotoDesk 0 0
+#Silent Key F2 A C GotoDesk 0 1
+#Silent Key F3 A C GotoDesk 0 2
+#Silent Key F4 A C GotoDesk 0 3
+#Silent Key Super_R A A Exec exec $[infostore.terminal]
+#Silent Key Space A M Exec exec $[infostore.runcmd]
+
+# Window Buttons: [1 3 5 7 9  TTTTT  0 8 6 4 2]
+#   1 - Open the WindowOps menu.
+#   2 - Close on single click, Destory on double click.
+#   4 - Maximize (right/middle button will only maximize vertical/horizontal)
+#   6 - Iconify (minimize)
+#Mouse 1 1 A Menu MenuWindowOps Delete
+#Mouse 1 2 A Close
+#Mouse 1 4 A Maximize 100 100
+#Mouse 2 4 A Maximize 0 100
+#Mouse 3 4 A Maximize 100 0
+#Mouse 1 6 A Iconify
+
+#   TitleBar: Click to Raise, Move, Double Click to Maximize
+#             Mouse Wheel Up/Down to WindowShade On/Off
+#   Borders: Click to raise, Move to Resize
+#   Root Window: Left Click - Main Menu
+#                Right Click - WindowOps Menu
+#                Middle Click - Window List Menu
+#   Right click TitleBar/Borders for WindowOps Menu
+#Mouse 1	T    A RaiseMoveX Move Maximize
+#Mouse 1	FS   A RaiseMove Resize
+#Mouse 4	T    A WindowShade True
+#Mouse 5	T    A WindowShade False
+#Mouse 1	R    A Menu MenuFvwmRoot
+#Mouse 2	R    A WindowList
+#Mouse 3	R    A Menu MenuWindowOpsLong
+#Mouse 1	I    A RaiseMoveX Move "Iconify off"
+#Mouse 3	T    A Menu MenuWindowOps
+#Mouse 3 I    A Menu MenuIconOps
+
+#######
+# 6: Window Decor
 #
 # Buttons Locations: [1 3 5 7 9  TTTTT  0 8 6 4 2]
 #
@@ -207,29 +468,6 @@ IgnoreModifiers L25
 #   4 - Maximize
 #   6 - Minimize
 ###########
-
-# Default Decor
-
-# Default Font
-DefaultFont "xft:Source Sans Pro:Regular:size=11:antialias=true:autohint=true"
-
-TitleStyle Centered Height 20 -- Flat
-Style * BorderWidth 3, HandleWidth 3, MWMButtons, FvwmBorder, FirmBorder
-#BorderStyle Active -- Flat HiddenHandles NoInset
-#BorderStyle Inactive -- Flat HiddenHandles NoInset
-#BorderStyle Active -- Flat
-#BorderStyle Inactive -- Flat
-
-Style * Colorset 1, HilightColorset 24
-Style * BorderColorset 3, HilightBorderColorset 24
-
-# Window Specific Styles
-Style RightPanel !Title, !Borders, !Handles, Sticky, WindowListSkip, NeverFocus
-
-Style ConfirmQuit !Title, PositionPlacement Center, WindowListSkip, Layer 6
-
-Style FvwmIdent WindowListSkip
-
 TitleStyle Centered Height 18 -- Flat
 ButtonStyle All ActiveUp Vector 5 15x15@4 15x85@3 85x85@3 85x15@3 \
                 15x15@3 -- Flat
@@ -255,312 +493,9 @@ ButtonStyle 1 - MwmDecorMenu
 ButtonStyle 4 - MwmDecorMax
 ButtonStyle 6 - MwmDecorMin
 
-#######
-# 4: Menus
-###########
-
-#######
-# Menus
-###########
-MenuStyle * MenuColorset 17, ActiveColorset 2, GreyedColorset 19, TitleColorset 2
-# MenuStyle * Hilight3DOff, HilightBack, HilightTitleBack, SeparatorsLong
-MenuStyle * Hilight3DOff, HilightBack
-MenuStyle * TrianglesSolid, TrianglesUseFore
-MenuStyle * ItemFormat "%|%3.1i%5.3l%5.3>%|"
-MenuStyle * Font "xft:Source Sans Pro:Regular:size=11:antialias=true:autohint=true"
-MenuStyle * VerticalItemSpacing 4 4 , VerticalTitleSpacing 4 4, VerticalMargins 1 1
-MenuStyle * Animation, AutomaticHotkeysOff, DoubleClickTime
-MenuStyle * BorderWidth 1, SidePic, SideColor
-MenuStyle * PopupDelayed, PopupDelay 200, PopdownDelayed, PopdownDelay 150
-MenuStyle * PopupOffset 4 100, TitleWarpOff
-
-# Root Menu
-#
-# The root menu will PopUp with a click in the root
-# window or using alt-f1 (or menu).
-DestroyMenu MenuFvwmRoot
-AddToMenu   MenuFvwmRoot "Fvwm" Title
-+ "Run ...." Exec exec rofi -modi run,drun,window,combi -sidebar-mode -show run
-+ "" Nop
-+ "Terminal" Exec exec $[infostore.terminal]
-+ "Editor" Exec exec $[infostore.editor]
-Test (x thunar) + "File Manager" Exec exec $[infostore.filemgr]
-+ "Firefox" Exec exec $[infostore.browser]
-# + "XDG Menu" Popup XDGMenu
-+ "" Nop
-+ "Applications" Popup XDGMenu
-# + "Programs"     Popup MenuPrograms
-+ "Preferences"  Popup MenuFvwmPref
-+ "Utility"      Popup MenuFvwmUtility
-+ "Bookmarks"    Popup MenuFvwmBookmarks
-+ "" Nop
-+ "Fvwm&Console" Module FvwmConsole -terminal $[infostore.terminal] -fg rgb:ee/ee/ee -bg #131E30
-+ "M&an Pages" Popup MenuFvwmManPages
-+ "" Nop
-+ "Re&fresh" Refresh
-+ "&Restart" Restart
-+ "&Quit" Module FvwmScript $[FVWM_USERDIR]/FvwmScript-Quit
-
-# Generate XDGMenu
-PipeRead "fvwm-menu-desktop -e"
-
-# Programs Menu
-#
-# This test for some common programs and adds them to the menu.
-# When adding programs you don't need to use the Test (x foo)
-# lines as this is only to help make this menu portable.
-DestroyMenu MenuPrograms
-AddToMenu   MenuPrograms "Programs" Title
-Test (x st) + "Simple Terminal" Exec exec st
-Test (x subl3) + "Sublime" Exec exec subl3
-Test (x thunar) + "File Manager" Exec exec thunar
-+ "" Nop
-Test (x firefox) + "Firefox" Exec exec firefox
-Test (x thunderbird) + "Thunderbird" Exec exec thunderbird
-Test (x gimp) + "Gimp" Exec exec gimp
-Test (x audacious) + "Audacious" Exec exec audacious
-Test (x hexchat) + "Hexchat" Exec exec hexchat
-
-# Background Menu
-#
-# Backgrounds are located in ~/.fvwm/images/background/
-# Menu icons are located in ~/.fvwm/images/bgicons/
-DestroyMenu BGMenu
-AddToMenu   BGMenu "Backgrounds" Title
-+ "Floral%bgicons/bg1.png%" SetBG bg1.png
-+ "Circles%bgicons/bg2.png%" SetBG bg2.png
-+ "Space%bgicons/bg3.png%" SetBG bg3.png
-
-# Window Operations Menus
-DestroyMenu MenuWindowOps
-AddToMenu   MenuWindowOps
-+ "Move"      Move
-+ "Resize"    Resize
-+ "Iconify"   Iconify
-+ "Maximize"  Maximize
-+ "Shade"     WindowShade
-+ "Stick"     Stick
-+ "" Nop
-+ "Close"     Close
-+ "More..."   Menu MenuWindowOpsLong This 0 0
-
-DestroyMenu MenuWindowOpsLong
-AddToMenu   MenuWindowOpsLong
-+ "Move"                Move
-+ "Resize"              Resize
-+ "(De)Iconify"         Iconify
-+ "(Un)Maximize"        Maximize
-+ "(Un)Shade"           WindowShade
-+ "(Un)Sticky"		Stick
-+ "(No)TitleBar"	Pick (CirculateHit) ToggleTitle
-+ "Send To"             Popup MenuSendTo
-+ "" Nop
-+ "Close"               Close
-+ "Destroy"             Destroy
-+ "" Nop
-+ "Raise"		Raise
-+ "Lower"		Lower
-+ "" Nop
-+ "StaysOnTop"          Pick (CirculateHit) Layer 0 6
-+ "StaysPut"            Pick (CirculateHit) Layer 0 4
-+ "StaysOnBottom"       Pick (CirculateHit) Layer 0 2
-+ "" Nop
-+ "Identify"            Module FvwmIdent
-
-DestroyMenu MenuIconOps
-AddToMenu   MenuIconOps
-+ "(De)Iconify"         Iconify
-+ "(Un)Maximize"        Maximize
-+ "(Un)Shade"           WindowShade
-+ "(Un)Sticky"		Stick
-+ "(No)TitleBar"	Pick (CirculateHit) ToggleTitle
-+ "Send To"             Popup MenuSendTo
-+ "" Nop
-+ "Close"               Close
-+ "Destroy"             Destroy
-+ "" Nop
-+ "Raise"		Raise
-+ "Lower"		Lower
-+ "" Nop
-+ "StaysOnTop"          Pick (CirculateHit) Layer 0 6
-+ "StaysPut"            Pick (CirculateHit) Layer 0 4
-+ "StaysOnBottom"       Pick (CirculateHit) Layer 0 2
-+ "" Nop
-+ "Identify"            Module FvwmIdent
-
-DestroyMenu MenuSendTo
-AddToMenu MenuSendTo
-+ "Current" MoveToCurrent
-+ "Page" PopUp MenuSendToPage
-+ "Desk" PopUp MenuSendToDesk
-
-DestroyMenu MenuSendToDesk
-AddToMenu   MenuSendToDesk
-+ "Desk 0"	MoveToDesk 0 0
-+ "Desk 1"	MoveToDesk 0 1
-
-DestroyMenu MenuSendToPage
-AddToMenu   MenuSendToPage
-# 2x2
-#+ "Page (0,0)"	MoveToPage 0 0
-#+ "Page (0,1)"	MoveToPage 0 1
-#+ "Page (1,0)"	MoveToPage 1 0
-#+ "Page (1,1)"	MoveToPage 1 1
-# 3x3
-+ "Page (0,0)" MoveToPage 0 0
-+ "Page (1,0)" MoveToPage 1 0
-+ "Page (2,0)" MoveToPage 2 0
-+ "Page (0,1)" MoveToPage 0 1
-+ "Page (1,1)" MoveToPage 1 1
-+ "Page (2,1)" MoveToPage 2 1
-+ "Page (0,2)" MoveToPage 0 2
-+ "Page (1,2)" MoveToPage 1 2
-+ "Page (2,2)" MoveToPage 2 2
-
-
-# Fvwm Man Pages (Help) Menu
-DestroyMenu MenuFvwmManPages
-AddToMenu   MenuFvwmManPages "Help" Title
-+ "fvwm"                ViewManPage fvwm
-+ "FvwmAnimate"         ViewManPage FvwmAnimate
-+ "FvwmAuto"            ViewManPage FvwmAuto
-+ "FvwmBacker"          ViewManPage FvwmBacker
-+ "FvwmBanner"          ViewManPage FvwmBanner
-+ "FvwmButtons"         ViewManPage FvwmButtons
-+ "FvwmCommand"         ViewManPage FvwmCommand
-+ "FvwmConsole"         ViewManPage FvwmConsole
-+ "FvwmEvent"           ViewManPage FvwmEvent
-+ "FvwmForm"            ViewManPage FvwmForm
-+ "FvwmIconMan"         ViewManPage FvwmIconMan
-+ "FvwmIdent"           ViewManPage FvwmIdent
-+ "FvwmPager"           ViewManPage FvwmPager
-+ "FvwmPerl"            ViewManPage FvwmPerl
-+ "FvwmProxy"           ViewManPage FvwmProxy
-+ "FvwmRearrange"       ViewManPage FvwmRearrange
-+ "FvwmScript"          ViewManPage FvwmScript
-+ "" Nop
-+ "fvwm-root"	        ViewManPage fvwm-root
-+ "fvwm-menu-desktop"   ViewManPage fvwm-menu-desktop
-+ "fvwm-menu-directory" ViewManPage fvwm-menu-directory
-+ "fvwm-menu-headlines" ViewManPage fvwm-menu-headlines
-+ "fvwm-menu-xlock"     ViewManPage fvwm-menu-xlock
-+ "fvwm-config"         ViewManPage fvwm-config
-
-#DestroyMenu MenuFvwmConfig
-#AddToMenu MenuFvwmConfig
-#+ MissingSubmenuFunction WallpaperBrowser
-#+ %widget_buttons.png%"Configure FvwmForm" Module FvwmForm FvwmForm-Form
-#+ %cursor.png%"Configure Cursor" Module FvwmForm FvwmForm-RootCursor
-#+ %television.png%"Screensaver Settings" Exec exec xscreensaver-demo
-#+ %hardware_mouse.png%"Mouse Settings" Module FvwmScript FvwmScript-PointerSetup
-#+ %hardware_keyboard.png%"Keyboard Settings" Module FvwmScript FvwmScript-KeyboardSetup
-#+ %audio.png%"Configure Bell" Module FvwmScript FvwmScript-BellSetup
-#+ %tool_wrench.png%"General Settings" Module FvwmScript FvwmScript-BaseConfig
-#+ %tools.png%"Edit fvwm2rc..." Exec exec gvim -geom 139x56 $[FVWM_USERDIR]/.fvwm2rc
-#+ %plug.png%"Fvwm Modules" Popup MenuFvwmModules
-#+ %graphics_convert_polaroid.png%"Browse Wallpaper" Popup $[fvwm_wallpaper_dir]
-#+ %document_view.png%"$Revision: 1.43 $" Title
-#+ %book_help_baloon.png%"Fvwm Information..." Exec exec xmessage "$(fvwm --version)"
-#+ %computer_x11.png%"X Information..." Exec exec xmessage "$(xdpyinfo)"
-
-SetEnv fvwm_wallpaper_dir /home/doug/wallpaper
-
-DestroyMenu MenuFvwmPref
-AddToMenu MenuFvwmPref "Preferences" Title
-+ MissingSubmenuFunction WallpaperBrowser
-+ "Browse Wallpaper" Popup $[fvwm_wallpaper_dir]
-+ "&Backgrounds" Popup BGMenu
-+ "" Nop
-Test (x nitrogen) + "Nitrogen" Exec exec nitrogen
-Test (x sxiv) + "Sxiv" Exec exec sxiv -t "$HOME/wallpaper/"
-Test (x feh) + "Feh" Exec exec feh ~/wallpaper -g 640x360 --scale-down
-Test (x fbsetbg) + "Wallpaper Tiled" Exec exec fbsetbg -t -r "/mnt/public/images/tiles/"
-Test (x lxappearance) + "LXappearance" Exec exec lxappearance
-+ ""
-Test (x scrot) + "Screenshot PNG" Exec exec scrot -q 100 '%B_%s_$wx$h.png' -e 'mv $f ~/Pictures/'
-Test (x scrot) + "Screenshot PNG 5 sec." Exec exec scrot -q 100 -cd 5 '%B_%s_$wx$h.png' -e 'mv $f ~/Pictures/'
-Test (x scrot) + "Screenshot PNG select" Exec exec scrot -s -q 100 '%B_%s_$wx$h.png' -e 'mv $f ~/Pictures/'
-Test (x scrot) + "Screenshot PNG multidisp" Exec exec scrot -m -q 100 '%B_%s_$wx$h.png' -e 'mv $f ~/Pictures/'
-
-DestroyMenu MenuFvwmUtility
-AddToMenu MenuFvwmUtility "Utilities" Title
-+ "Date & Time" Module FvwmScript $[FVWM_USERDIR]/FvwmScript-Date
-+ "Time" Module FvwmScript $[FVWM_USERDIR]/scripts/Chrono/Chrono
-+ "Calendar" Module FvwmScript $[FVWM_USERDIR]/scripts/Kalende/Kalende
-+ "Day & Date" Module FvwmScript $[FVWM_USERDIR]/FvwmScript-DayDate
-+ "" Nop
-+ "&Logout" Module FvwmForm FvwmForm-QuitVerify
-+ "&Quit" Module FvwmScript FvwmScript-ConfirmQuit
-
-DestroyMenu MenuFvwmBookmarks
-AddToMenu MenuFvwmBookmarks
-+ "Forums" Popup MenuFvwmForums
-+ "News" Popup MenuFvwmNews
-+ "Sports" Popup MenuFvwmSports
-
-DestroyMenu MenuFvwmForums
-AddToMenu MenuFvwmForums
-+ "Void Linux Forum" Exec firefox --new-tab https://www.reddit.com/r/voidlinux/
-+ "ArchLabs Forum" Exec firefox --new-tab https://forum.archlabslinux.com/
-+ "ArchWiki" Exec firefox --new-tab https://wiki.archlinux.org/
-+ "BunsenLabs" Exec firefox --new-tab https://forums.bunsenlabs.org/index.php
-+ "VSIDO" Exec firefox --new-tab https://www.vsido.org
-
-DestroyMenu MenuFvwmNews
-AddToMenu MenuFvwmNews
-+ "One America News" Exec firefox --new-tab https://www.oann.com/
-+ "Fox News" Exec firefox --new-tab https://www.foxnews.com
-+ "Reuters" Exec firefox --new-tab https://https://www.reuters.com/
-+ "Treehouse" Exec firefox --new-tab https://theconservativetreehouse.com/
-
-DestroyMenu MenuFvwmSports
-AddToMenu MenuFvwmSports
-+ "Baseball" Exec firefox --new-tab https://www.mlb.com/
-+ "Football" Exec firefox --new-tab https://www.nfl.com/
-+ "ESPN" Exec firefox --new-tab https://www.espn.com/
-
 ############
 # 7: Modules
 #############
-
-# FvwmBanner
-#
-# This displays the Fvwm Logo for 5 seconds. This is displayed
-# when fvwm starts.
-DestroyModuleConfig FvwmBanner:*
-*FvwmBanner: NoDecor
-*FvwmBanner: Timeout 5
-
-# FvwmScript
-#
-# FvwmScript is a module that allows one to write custom desktop
-# widgets and various other tools. This config uses two FvwmScripts.
-#   - DateTime - uses the output of "date" to display the date/time
-#     on the RightPanel.
-#   - Quit - This is a popup that asks for quit confirmation before
-#     quitting fvwm.
-DestroyModuleConfig FvwmScript:*
-*FvwmScript: DefaultColorset 21
-
-# Function: ChangeDesk
-#
-# This function is called by FvwmEvent every time the Desk is changed.
-DestroyFunc ChangeDesk
-AddToFunc   ChangeDesk
-+ I SendToModule FvwmButtons ChangeButton desk0 Colorset 10
-+ I SendToModule FvwmButtons ChangeButton desk1 Colorset 10
-+ I SendToModule FvwmButtons ChangeButton desk2 Colorset 10
-+ I SendToModule FvwmButtons ChangeButton desk3 Colorset 10
-+ I SendToModule FvwmButtons ChangeButton desk$0 Colorset 11
-
-# FvwmEvent
-#
-# FvwmEvent is a module that can run an action or function
-# on specific events. This instance changes which desk number
-# is highlighted when the desk is changed.
-DestroyModuleConfig EventNewDesk:*
-*EventNewDesk: PassID
-*EventNewDesk: new_desk ChangeDesk
 
 #======FvwmIconBox specs [l t r b]===============#
 
@@ -572,17 +507,17 @@ Style * IconTitleRelief 1
 Style * IconBackgroundRelief 1
 Style * IconBackgroundPadding 1
 Style * IconSize 56 56 112 112
-Style * IconFont "Shadow=0 0 SE:xft:Source Sans Pro:Regular:size=9:antialias=true:autohint=true"
-Style * IconBackgroundColorset 20
+Style * IconFont "Shadow=0 0 SE:xft:DejaVu Sans:Book:size=9:antialias=true:autohint=true"
+Style * IconBackgroundColorset 18
 Style * IconTitleColorset 0
-Style * HilightIconTitleColorset 20
+Style * HilightIconTitleColorset 18
 Style * Icon unknown1.xpm
 
 # Position of IconBox
 
 # top left
-# Style "*" IconBox 4 4 240 600, IconGrid 8 8, IconFill left top
-# Style "*" IconBox 4 200 200 900, IconGrid 24 24, IconFill left top
+# Style "*" IconBox 4 4 256 640, IconGrid 12 12, IconFill left top
+# Style "*" IconBox 4 160 64 1060, IconGrid 8 8, IconFill left top
 #
 # top center
 # Style * IconBox 512 8 1066 256, IconGrid 24 24, IconFill left top
@@ -595,7 +530,7 @@ Style * Icon unknown1.xpm
 #
 # bottom left
 # Style * IconBox 192 995 700 1078, IconGrid 8 8 , IconFill left top
-Style * IconBox 480 1018 1440 1078, IconGrid 4 4 , IconFill left top
+# Style * IconBox 480 1018 1440 1078, IconGrid 4 4 , IconFill left top
 #
 # middle right
 # Style * Iconbox 1224 300 1360 600, IconGrid 36 36, IconFill left top
@@ -605,53 +540,72 @@ Style * IconBox 480 1018 1440 1078, IconGrid 4 4 , IconFill left top
 #
 # thumbnails
 # Style "*" Iconbox 4 4 288 540, IconGrid 12 12, IconFill left top
-# Style "*" Iconbox 4 540 288 1044, IconGrid 16 16, IconFill left bottom
-# Style "*" Iconbox 230 1014 1690 1072, IconGrid 20 20, IconFill left top
+# Style "*" Iconbox 384 940 1440 1076, IconGrid 16 16, IconFill left bottom
+# Style "*" Iconbox 8 940 1440 1076, IconGrid 16 16, IconFill left bottom
+Style "*" Iconbox 144 1014 1690 1072, IconGrid 12 12, IconFill left top
 
 # Uncomment to remove IconBox configurations
 # Style * !Icon
 Style * !IconTitle
 
-##  The Fvwm identify-window module - an xwininfo replacement.
-DestroyModuleConfig FvwmIdent: *
-# *FvwmIdent: Font -*-terminus-bold-*-*--14-*-*-*-*-*-*-*
-*FvwmIdent: Font "xft:Source Sans Pro:Regular:size=12:antialias=true:autohint=true"
-*FvwmIdent: Colorset 5
+# FvwmIdent
+#
+# FvwmIdent is a module that can be used to get the various info about
+# a window. One use is getting the class/resource/name of a window.
+DestroyModuleConfig FvwmIdent:*
+*FvwmIdent: Colorset 10
+*FvwmIdent: Font "xft:DejaVu Sans:Book:size=9:antialias=True"
 
-##  The fvwm animate module.
-DestroyModuleConfig FvwmAnimate: *
-*FvwmAnimate: Effect Frame
-*FvwmAnimate: Iterations 100
-*FvwmAnimate: Width 5
-*FvwmAnimate: Twist 1
-*FvwmAnimate: Delay 4
-*FvwmAnimate: Color gray50
+# FvwmScript
+#
+# FvwmScript is a module that allows one to write custom desktop
+# widgets and various other tools. This config uses two FvwmScripts.
+#   - DateTime - uses the output of "date" to display the date/time
+#     on the RightPanel.
+#   - Quit - This is a popup that asks for quit confirmation before
+#     quitting fvwm.
+DestroyModuleConfig FvwmScript:*
+*FvwmScript: DefaultColorset 10
 
 # FvwmPager
 #
 # This module displays the location of the windows on the various Pages
 # and Desks. This is setup to show only the Pages on the current Desk.
 
-Style FvwmPager* !Title, BorderWidth 1, HandleWidth 1, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom, !Iconifiable
+Style FvwmPager* !Title, BorderWidth 2, HandleWidth 2, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom, !Iconifiable
+
+#DestroyModuleConfig FvwmPager:*
+#*FvwmPager: !MiniIcons
+#*FvwmPager: UseSkipList
+#*FvwmPager: Colorset * 23
+#*FvwmPager: HilightColorset * 24
+#*FvwmPager: WindowColorsets 25 26
+#*FvwmPager: Font None
+#*FvwmPager: Balloons All
+#*FvwmPager: BalloonFont "xft:DejaVu Sans:Book:size=9:antialias=true:autohint=true"
+#*FvwmPager: BallonYOffset +2
+#*FvwmPager: BalloonColorset * 22
+#*FvwmPager: Window3dBorders
+# *FvwmPager: Monitor VGA1
 
 DestroyModuleConfig FvwmPager:*
-*FvwmPager: DeskTopScale 34
-# *FvwmPager: Geometry +847-2
-*FvwmPager: Geometry +2-2
+*FvwmPager: DeskTopScale 30
+*FvwmPager: Geometry +832+2
+# *FvwmPager: Geometry +2-2
 *FvwmPager: NoStartIconic
 *FvwmPager: Font None
-#*FvwmPager: Font "xft:Source Sans Pro:Regular:size=12:antialias=true:autohint=true"
-#*FvwmPager: SmallFont "xft:Source Sans Pro:Regular:size=9:antialias=true:autohint=true"
+*FvwmPager: Font "xft:Source Sans Pro:Regular:size=12:antialias=true:autohint=true"
+*FvwmPager: SmallFont "xft:Source Sans Pro:Regular:size=9:antialias=true:autohint=true"
 *FvwmPager: WindowBorderWidth 1
-# *FvwmPager: !Window3dBorders
+*FvwmPager: !Window3dBorders
 *FvwmPager: !MiniIcons
 *FvwmPager: UseSkipList
-*FvwmPager: Colorset * 15
-*FvwmPager: HilightColorset * 16
-*FvwmPager: BalloonColorset * 0
-*FvwmPager: WindowColorsets 10 11
+*FvwmPager: Colorset * 18
+*FvwmPager: HilightColorset * 19
+*FvwmPager: BalloonColorset * 22
+*FvwmPager: WindowColorsets 20 21
 *FvwmPager: Balloons
-*FvwmPager: BalloonFont ""xft:Source Sans Pro:Regular:size=9:antialias=true:autohint=true""
+*FvwmPager: BalloonFont "xft:DejaVu Sans:Book:size=9:antialias=true:autohint=true"
 *FvwmPager: BallonYOffset +2
 *FvwmPager: BalloonColorset 10
 
@@ -659,46 +613,87 @@ DestroyModuleConfig FvwmPager:*
 #
 # FvwmIconMan is a powerful tool to list and manage windows. This
 # is used as the window list in the panel or taskbar.
+
+Style FvwmIconMan* !Title, BorderWidth 2, HandleWidth 2, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom, !Iconifiable
+
 DestroyModuleConfig FvwmIconMan:*
+*FvwmIconMan: Title ""
 *FvwmIconMan: UseWinList true
-*FvwmIconMan: ButtonGeometry 120x20
+*FvwmIconMan: ButtonGeometry 120x24
 *FvwmIconMan: ManagerGeometry 1x1
-*FvwmIconMan: Background #003c3c
-*FvwmIconMan: Foreground #ffffff
-*FvwmIconMan: FocusColorset 11
-*FvwmIconMan: IconColorset 14
-*FvwmIconMan: FocusAndSelectColorset 12
+*FvwmIconMan: Colorset 10
+*FvwmIconMan: PlainColorset 9
+*FvwmIconMan: IconColorset 9
+*FvwmIconMan: FocusColorset 29
 *FvwmIconMan: SelectColorset 12
 *FvwmIconMan: IconAndSelectColorset 12
-*FvwmIconMan: DrawIcons always
+*FvwmIconMan: FocusAndSelectColorset 29
+*FvwmIconMan: DrawIcons false
 *FvwmIconMan: ReliefThickness 0
+*FvwmIconMan: IconButton Up
+*FvwmIconMan: PlainButton Up
+*FvwmIconMan: FocusButton Up
+*FvwmIconMan: SelectButton Up
+*FvwmIconMan: FocusAndSelectButton Up
 *FvwmIconMan: Format "%t"
-*FvwmIconMan: Font "xft:Source Sans Pro:Regular:size=12:antialias=true:autohint=true"
+*FvwmIconMan: Font "xft:DejaVu Sans:Book:size=9:antialias=True"
 *FvwmIconMan: Action Mouse 0 A ret
 *FvwmIconMan: Action Mouse 1 A sendcommand IconManClick
 *FvwmIconMan: Action Mouse 3 A sendcommand "Menu MenuIconOps"
 *FvwmIconMan: Resolution global
 *FvwmIconMan: Tips needed
+*FvwmIconMan: TipsFont "xft:DejaVu Sans:Book:size=8:antialias=True"
+*FvwmIconMan: TipsColorset 22
 *FvwmIconMan: Sort id
 
-# FvwmForm
+# FvwmEvent
 #
-# FvwmForm is a module that can be used to build a GUI
-# form. Used with fvwm-menu-desktop-config.fpl.
-# This sets the default colorsets.
-*FvwmFormDefault: Colorset 10
-*FvwmFormDefault: ItemColorset 13
+# FvwmEvent is a module that can run an action or function
+# on specific events. This instance changes which desk number
+# is highlighted when the desk is changed.
+DestroyModuleConfig EventNewDesk:*
+*EventNewDesk: PassID
+*EventNewDesk: new_desk ChangeDesk
 
-# Start the Show
+# FvwmButtons - RightPanel
+#
+# FvwmButtons is a powerful module that can be used to build custom
+# panels and docks. This config uses FvwmButtons to build the RightPanel.
+# The panel contains buttons to switch desks, FvwmPager, a system tray,
+# FvwmIconMan (list of running windows), and a clock.
+#
+# Note - To use the system tray you must have "stalonetray" installed.
 
-Read Colorsets
-Read DeskTopPanels
-Read Keys
+Style RightPanel !Title, BorderWidth 1, HandleWidth 1, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnTop
+
+DestroyModuleConfig RightPanel:*
+*RightPanel: Geometry 120x$[vp.height]+0+0
+*RightPanel: Colorset 10
+*RightPanel: Rows $[vp.height]
+*RightPanel: Columns 120
+*RightPanel: Frame 0
+*RightPanel: Font "xft:DejaVu Markup:Regular:size=10:antialias=True"
+*RightPanel: (120x45, Icon "fvwm-logo-small.png", Action `Exec jgmenu --config-file="$HOME/.config/jgmenu/jgfvwmrc"`, Frame 0)
+*RightPanel: (120x5, Frame 0)
+*RightPanel: (30x20, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 8, ActiveColorset 12, Frame 0)
+*RightPanel: (30x20, Id desk1, Title "2", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 12, Frame 0)
+*RightPanel: (30x20, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 12, Frame 0)
+*RightPanel: (30x20, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 12, Frame 0)
+#*RightPanel: (110x80, Swallow FvwmPager 'Module FvwmPager *', Frame 0)
+*RightPanel: (120x5, Frame 0)
+Test (x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[vp.height]-225)), Top, Swallow FvwmIconMan \'Module FvwmIconMan\', Frame 0)"'
+Test (!x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[vp.height]-205)), Top, Swallow FvwmIconMan \'Module FvwmIconMan\', Frame 0)"'
+Test (x stalonetray) *RightPanel: (120x20, Swallow(NoClose,UseOld) stalonetray 'Exec exec stalonetray --config "$HOME/.stalonetrayrc"', Frame 0)
+*RightPanel: (120x45, Swallow DateTime 'Module FvwmScript FvwmScript-DateTime', Frame 0)
+#*RightPanel: (120x5, Frame 0)
+
+Read ColorsStyles
+# Read VectorDecor
+Read IndigoDecor
+
 Read Mouse
-
-# other decor
-# Read BlueDecor
-Read VectorDecor
+Read Keys
+Read Panels
 
 # Start Function
 #
@@ -709,41 +704,39 @@ Read VectorDecor
 # actions that are run after a restart.
 DestroyFunc StartFunction
 AddToFunc   StartFunction
-#+ I Test (Init, f $[FVWM_USERDIR]/.BGdefault) Exec exec fvwm-root $[FVWM_USERDIR]/.BGdefault
-#+ I TestRc (NoMatch) Exec exec fvwm-root $[FVWM_DATADIR]/default-config/images/background/bg1.png
-# + I Test (Init) Module FvwmBanner
+# + I Test (Init, f $[FVWM_USERDIR]/.BGdefault) Exec exec fvwm-root $[FVWM_USERDIR]/.BGdefault
+# + I TestRc (NoMatch) Exec exec fvwm-root $[FVWM_DATADIR]/default-config/images/background/bg1.png
 
 + I Module FvwmEvent EventNewDesk
-
-# + I Module FvwmButtons DeskTopClock
-# + I Module FvwmButtons DeskTopPanel
-# + I Module FvwmPager *
++ I Module FvwmMFL
 # + I Module FvwmPager 0 3
-# + I Module FvwmButtons FvwmLaunchBar
+# + I Module FvwmIconMan
 
-# + I Module FvwmButtons FvwmTaskBar
-# + I Module FvwmButtons FvwmAppBar
-# + I Module FvwmButtons FvwmButtonsMenu
+# + I Module FvwmButtons RightPanel
+# + I Module FvwmButtons MenuPanel
 
-# Set wallpaper
-# + I Test (Init) Exec sleep 2; exec fbsetbg -c -r "/mnt/public/images/"
++ I Module FvwmButtons DesktopPanel
++ I Module FvwmButtons FvwmLaunchBar
 
-# panels and system tray ========================================
+# + I Module FvwmButtons IconBar
+# + I Module FvwmButtons VoidPanel
 
-+ I Test (Init) Exec exec "$HOME/bin/fvwm-bar.sh"
-+ I Test (Restart) Exec exec "$HOME/bin/fvwm-bar.sh"
++ I Test (Init) Exec exec fbsetbg -C -R $HOME/wallpaper
 
-+ I Test (Init) Exec sleep 3; exec stalonetray
-+ I Test (Restart) Exec exec stalonetray
++ I Test (Init) Exec exec xclock -geom +904+2
++ I Test (Restart) Exec exec xclock -geom +904+2
+
+# system tray ========================================
++ I Test (Init) Exec sleep 2; exec stalonetray --config $[FVWM_USERDIR]/.fvwmtrayrc
++ I Test (Restart) Exec exec stalonetray --config $[FVWM_USERDIR]/.fvwmtrayrc
 
 DestroyFunc ExitFunction
-AddToFunc   ExitFunction
+AddToFunc ExitFunction
+#+ I Test (Quit) Echo Bye-bye
+#+ I KillModule MyBuggyModule
+#+ I Test (ToRestart) Beep
 + I Test (!ToRestart) Exec exec rm -f $[HOME]/.fvwm/icon.tmp.*
 + I Test (!ToRestart) Exec exec rm -f $[FVWM_USERDIR]/temp/*icon*
-+ I Exec exec killall -q conky
-+ I Exec exec killall -q xclock
-+ I Exec exec killall -q dclock
-+ I Exec exec killall -q stalonetray
-+ I Exec exec killall -q polybar
-+ I Exec exec killall -q tint2
-+ I Exec exec killall -q xfce4-panel
++ I killall -q xclock
++ I killall -q stalonetray
++ I killall -q trayer

@@ -6,31 +6,32 @@ Xft.hintstyle: hintslight
 Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
+! Xcursor.size:11
 
 ! special
-*.foreground:   #DCDCDC
-*.background:   #131414
-*.cursorColor:  #CCCCCC
+*.foreground:   #c8c8c8
+*.background:   #121314
+*.cursorColor:  #c8c8c8
 
 ! black
-*.color0:       #1c1d1e
+*.color0:       #282a2e
 *.color8:       #373b41
 
 ! red
-*.color1:       #c13333
+*.color1:       #a54242
 *.color9:       #cc6666
 
 ! green
-*.color2:       #4f9440
+*.color2:       #8c9440
 *.color10:      #b5bd68
 
 ! yellow
-*.color3:       #deb940
+*.color3:       #de935f
 *.color11:      #f0c674
 
 ! blue
-*.color4:       #17578b
-*.color12:      #81a2be
+*.color4:       #3a5286
+*.color12:      #396dbc
 
 ! magenta
 *.color5:       #85678f
@@ -41,29 +42,39 @@ Xft.rgba: rgb
 *.color14:      #8abeb7
 
 ! white
-*.color7:       #C0C1C2
-*.color15:      #E1E2E3
+*.color7:       #929292
+*.color15:      #dbdbdb
 
-! URxvt -----------------------------------------------------------------------
+! Urxvt ----------------------------------------------------------------
 URxvt*termName:          rxvt-256color
+URxvt*geometry:          92x32
+URxvt.buffered:          true
 URxvt*scrollBar:         false
 URxvt*scrollBar_right:   false
-URxvt*geometry:          100x34
+URxvt*jumpScroll:        true
+URxvt*skipScroll:        true
+URxvt.secondaryScroll:   true
+URxvt*scrollstyle:       plain
+URxvt*scrollTtyOutput:   true
+URxvt*saveLines:         4096
+URxvt*internalBorder:    4
+URxvt.cutchars:          "'*,<>[]{}|-_@:/()│"
+
 URxvt*transparent:       false
-URxvt*depth:           32
-! URxvt.depth:             24
-URxvt.background:        [90]#131314
-!URxvt.iso14755:          false
-URxvt*internalBorder:    6
-! URxvt*externalBorder:    1
+URxvt*depth:             32
+URxvt.background:        [96]#121314
+URxvt*fading:            55
+URxvt*highlightColor:    #D1C384
+URxvt*highlightTextColor:  #0D0D0D
 
 !URxvt.font:              -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
 !URxct.boldFont:          -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
-URxvt.font:              xft:Code New Roman:Regular:size=12:antialias=true:autohint=true
-URxvt.boldFont:          xft:Code New Roman:Regular:size=12:antialias=true:autohint=true
+!*antialias:              true
+!*autohint:               true
+
+URxvt.font:              xft:Fira Code:Regular:size=10:antialias=true:autohint=true
+URxvt.boldFont:          xft:Fira Code:Regular:size=10:antialias=true:autohint=true
 URxvt.letterSpace: 1
-URxvt*antialias:              true
-URxvt*autohint:               true
 
 URxvt.perl-ext-common: default,matcher
 !URxvt.clipboard.autocopy: true
@@ -71,36 +82,68 @@ URxvt.perl-ext-common: default,matcher
 !URxvt.keysym.M-v: perl:clipboard:paste
 !URxvt.matcher.button: 1
 URxvt.urlLauncher:      firefox
-URxvt.tabbed.tabbar-fg: 14
+URxvt.tabbed.tabbar-fg: 8
 URxvt.tabbed.tabbar-bg: 0
-URxvt.tabbed.tab-fg:    13
+URxvt.tabbed.tab-fg:    7
 URxvt.tabbed.tab-bg:    0
 
 ! XTerminals ------------------------------------------------------------
-UXterm*termName:          xterm-256color
-UXTerm*geometry:          100x34
-!UXTerm*background:       #101012
-!UXTerm*foreground:       #E5E5E5
-!UXTerm*cursorColor:      #E5E5E5
-!UXTerm*faceName:          Monospace:regular:size=11:antialias=true:autohint=true
-UXTerm*faceName:          Office Code Pro:regular:size=12:antialias=true:autohint=true
-!UXTerm*font:              -xos4-terminus-medium-r-normal-*-16-160-72-72-c-80-iso8859-1
-!UXTerm*boldFont:          -xos4-terminus-medium-r-normal-*-16-160-72-72-c-80-iso8859-1
-UXTerm*utf8:              1
-UXTerm*scrollBar:         false
-UXTerm*rightScrollBar:    false
 
-XTerm*termName:           xterm-256color
-XTerm*geometry:           100x34
-!XTerm*background:        #101012
-!XTerm*foreground:        #E5E5E5
-!XTerm*cursorColor:       #E5E5E5
-!XTerm*font:               -xos4-terminus-medium-r-normal-*-16-160-72-72-c-80-iso8859-1
-!XTerm*boldFont:           -xos4-terminus-medium-r-normal-*-16-160-72-72-c-80-iso8859-1
-XTerm*faceName:           DejaVu Sans Mono:book:size=11:antialias=true:autohint=true
-XTerm*utf8:               1
-XTerm*scrollBar:          false
-XTerm*rightScrollBar:     false
+UXTerm.termName: UXTerm-256color
+!UXTerm.vt100..locale: true
+UXTerm.vt100..locale: false
+UXTerm.vt100..utf8: true
+UXTerm.vt100.saveLines: 4096
+UXTerm.vt100.scrollBar:          false
+UXTerm.vt100.rightScrollBar:     false
+UXTerm.vt100.geometry:           96x32
+!UXTerm.vt100.background:        #101012
+!UXTerm.vt100.foreground:        #E5E5E5
+!UXTerm.vt100.cursorColor:       #E5E5E5
+!UXTerm.vt100.font:               -xos4-terminus-medium-r-normal-*-16-160-72-72-c-80-iso8859-1
+!UXTerm.vt100.boldFont:           -xos4-terminus-medium-r-normal-*-16-160-72-72-c-80-iso8859-1
+UXTerm.vt100.faceName:           xft:DejaVu Markup:Book:size=10:antialias=true:autohint=true
+!UXTerm.vt100.faceName:          xft:fira code:style=regular:size=9:antialias=true:autohint=true
+
+UXTerm.vt100.metaSendsEscape: true
+UXTerm.vt100.backarrowKey: false
+UXTerm.ttyModes: erase ^?
+
+UXTerm.vt100.translations: #override \n\
+    Ctrl <Key>M: maximize() \n\
+    Ctrl <Key>R: restore()
+
+UXTerm*VT100.Translations: #override \
+     Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD) \n\
+     Ctrl Shift <KeyPress> V: insert-selection(CLIPBOARD)
+
+XTerm.termName: xterm-256color
+!XTerm.vt100..locale: true
+XTerm.vt100..locale: false
+XTerm.vt100..utf8: true
+XTerm.vt100.saveLines: 4096
+XTerm.vt100.scrollBar:          false
+XTerm.vt100.rightScrollBar:     false
+XTerm.vt100.geometry:           96x32
+!XTerm.vt100.background:        #101012
+!XTerm.vt100.foreground:        #E5E5E5
+!XTerm.vt100.cursorColor:       #E5E5E5
+!XTerm.vt100.font:               -xos4-terminus-medium-r-normal-*-16-160-72-72-c-80-iso8859-1
+!XTerm.vt100.boldFont:           -xos4-terminus-medium-r-normal-*-16-160-72-72-c-80-iso8859-1
+XTerm.vt100.faceName:           xft:DejaVu Markup:Book:size=10:antialias=true:autohint=true
+!XTerm.vt100.faceName:          xft:fira code:style=regular:size=9:antialias=true:autohint=true
+
+XTerm.vt100.metaSendsEscape: true
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes: erase ^?
+
+XTerm.vt100.translations: #override \n\
+    Ctrl <Key>M: maximize() \n\
+    Ctrl <Key>R: restore()
+
+XTerm*VT100.Translations: #override \
+     Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD) \n\
+     Ctrl Shift <KeyPress> V: insert-selection(CLIPBOARD)
 
 ! X-11 Apps------------------------------------------------------------------
 xpdf*Background:    #CFC6BE
@@ -175,42 +218,70 @@ dzen2.background: #191919
 !
 
 ! xosview
-xosview*geometry: 300x210+2+2
-xosview*font: -xos4-terminus-medium-r-normal-*-14-140-*-*-*-*-iso8859-1
-xosview*background: #E5E5EE
+xosview*geometry: 320x240+8+8
+xosview*font: -xos4-terminus-medium-r-normal-*-14-140-72-72-c-80-iso8859-1
+!xosview*font: -*-fixed-medium-r-normal-*-10-70-100-100-c-60-iso8859-1
+xosview*background: #1F2024
 xosview*foreground: #202020
-xosview*meterLabelColor: #202020
+xosview*meterLabelColor: #BBBBBB
+xosview*captions: true
 xosview*usedlabels: true
-xosview*usedLabelColor: #202020
+xosview*usedLabelColor: #BBBBBB
 xosview*enableStipple: false
-!xosview*graphNumCols:
+!xosview*graphNumCols: 0
 xosview*load: true
-xosview*loadIdleColor: #BBBBBB
-xosview*loadProcColor: #2A296D
+xosview*loadIdleColor: #2C2D33
+xosview*loadProcColor: #424266
 xosview*loadWarnColor: #D7AE2E
 xosview*loadCritColor: #DA1613
 !xosview*loadIdleColor:
 xosview*loadPriority: 30
+xosview*loadGraph: false
 xosview*cpu: true
+xosview*cpuGraph: false
 xosview*cpuPriority: 30
 xosview*cpuUsedFormat: percent
 xosview*cpuFormat: single
-xosview*cpuFreeColor: #BBBBBB
+!xosview*cpuFields: USED
+xosview*cpuUserColor: #424266
+xosview*cpuSystemColor: #424266
+xosview*cpuInterruptColor: #424266
+xosview*cpuSInterruptColor: #424266
+xosview*cpuWaitColor: #424266
+xosview*cpuGuestColor: #424266
+xosview*cpuNiceGuestColor: #424266
+xosview*cpuStolenColor: #424266
+xosview*cpuFreeColor: #2C2D33
 xosview*mem: true
 xosview*memPriority: 30
-xosview*memFreeColor: #BBBBBB
+xosview*memFreeColor: #2C2D33
+xosview*memUsedColor: #424266
+xosview*memSharedColor: #424266
+xosview*memBufferColor: #424266
+xosview*memCacheColor: #424266
+xosview*memSlabColor: #424266
 !
 xosview*swap: false
 xosview*page: false
 xosview*gfx: false
 xosview*disk: false
+xosview*acpitemp: false
 !
-xosview*acpitemp: true
+xosview*coretemp: true
+xosview*coretempHighest: 100
+xosview*coretempHigh: 70
+xosview*coretempDisplayType: maximum
+xosview*coretempPriority: 30
+xosview*coretempActColor: #424266
+xosview*coretempIdleColor: #424242
+xosview*coretempHighColor: #424242
+xosview*coretempUsedFormat: autoscale
+!
 xosview*battery: true
-xosview*batteryLeftColor: #2A296D
-xosview*batteryUsedColor: #4e4e4e
-!xosview*batteryChargeColor:
-xosview*batteryFullColor: #2A296D
+xosview*batteryLeftColor: #424266
+xosview*batteryUsedColor: #424242
+xosview*batteryChargeColor: #3D3D66
+xosview*batteryFullColor: #424266
 xosview*batteryLowColor: #D7AE2E
 xosview*batteryCritColor: #DA1613
 xosview*batteryUsedFormat: percent
@@ -218,25 +289,28 @@ xosview*batteryPriority: 30
 xosview*wireless: true
 xosview*PoorQualityColor: #DA1613
 xosview*FairQualityColor: #D7AE2E
-xosview*GoodQualityColor: #2A296D
+xosview*GoodQualityColor: #424266
+xosview*wirelessUsedColor: #424242
 xosview*wirelessPriority: 30
 xosview*net: true
 xosview*netIface: wlp1s0
+xosview*netUsedFormat: autoscale
+xosview*netInColor: #424266
+xosview*netOutColor: #4D805A
+xosview*netBackground: #424242
 xosview*netPriority: 30
-
-xosview*cpuGraph: false
-xosview*loadGraph: false
+xosview*netGraph: false
 
 ! XClock
 !=======================================
 XClock*analog: true
-XClock*width: 100
-XClock*height: 100
+XClock*width: 112
+XClock*height: 112
 XClock*update: 1
-XClock*background: #31363B
-XClock*foreground: #C0C7C8
-XClock*hands: #6D767A
-XClock*highlight: #6D767A
+XClock*background: #1A1B1C
+XClock*foreground: #D9D9D9
+XClock*hands: #D9D9D9
+XClock*highlight: #CCCCCC
 XClock*twentyfour: true
 XClock*chime: false
 XClock*padding: 2
@@ -245,27 +319,9 @@ XClock*render: true
 XClock*face: -xos4-terminus-medium-r-normal-*-14-140-*-*-*-*-iso8859-1
 XClock*sharp: false
 XClock*buffer: false
-XClock*hourColor: #6D767A
-XClock*minuteColor: #6D767A
+XClock*hourColor: #BBBBBB
+XClock*minuteColor: #BBBBBB
 XClock*secondColor: #5C7EA1
-XClock*majorColor: #607D8B
-XClock*minorColor: #607D8B
-
-! default wxh = 220x80
-dclock*width: 90
-dclock*height: 36
-dclock*angle: 20
-dclock*foreground: #A59F80
-dclock*background: #202326
-dclock*led_off: #202326
-dclock*bell: false
-dclock*militaryTime: true
-dclock*scroll: false
-dclock*fade: true
-dclock*seconds: false
-dclock*alarm: false
-dclock*tails: true
-dclock*blink: false
-!dclock*date: %A %e %B
-!dclock*fontName: DejaVu Sans Mono
+XClock*majorColor: #AAAAAA
+XClock*minorColor: #AAAAAA
 

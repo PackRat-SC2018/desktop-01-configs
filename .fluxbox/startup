@@ -17,20 +17,21 @@
 #xset b 33
 #xset dpms 3600 3700 4000
 
-# background and wallpaper
-# (sleep 2s && fbsetbg -c -r "$HOME/wallpaper/") &
+# wallpaper
+fbsetbg -C -R "$HOME/wallpaper/" &
 
-# 3rd party apps
-# (sleep 2s && $HOME/bin/ConkyFluxbox.sh) &
-# (sleep 2s && conky -dc $HOME/.conky10fboxrc) &
-# (sleep 2s && connman-gtk --tray) &
+# systemtray items
+# cmst -w 3 -m -i Vibrantly-Simple-Dark &
 
 # polybar
 # (sleep 2s && "$HOME/bin/fluxbox-bar.sh")
 
+# conky
+# ConkyFluxbox.sh
+
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.
-exec fluxbox
+# exec fluxbox
 
 # or if you want to keep a log:
-# exec fluxbox -log "$HOME/.fluxbox/log"
+exec fluxbox -log "$HOME/.fluxbox/log"

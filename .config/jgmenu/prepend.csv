@@ -1,8 +1,8 @@
 Terminal,uxterm,utilities-terminal
 Editor,subl3,text-editor
 File manager,thunar,system-file-manager
-Browser,firefox,firefox
-Mail,thunderbird,thunderbird
+Browser,wmctrl -a firefox || firefox,firefox
+Mail,wmctrl -a thunderbird || thunderbird,thunderbird
 Gimp,gimp,gimp
 ^sep()
 

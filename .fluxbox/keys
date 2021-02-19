@@ -114,20 +114,22 @@ XF86AudioMute :Exec amixer sset Master,0 toggle
 #XF86AudioLowerVolume :Exec pamixer -d 5
 #XF86AudioMute :Exec pamixer -t
 
-XF86AudioPlay :Exec mocp -G
-XF86AudioPrev :Exec mocp -r
-XF86AudioNext :Exec mocp -f
+XF86AudioNext :Exec deadbeef --next
+XF86AudioPrev :Exec deadbeef --prev
+XF86AudioPlay :Exec deadbeef --toggle-pause
+
+Mod4 XF86AudioPlay :Exec mocp -G
+Mod4 XF86AudioPrev :Exec mocp -r
+Mod4 XF86AudioNext :Exec mocp -f
 
 Menu :Exec thunar
-
 XF86HomePage :Exec wmctrl -a firefox || firefox
 XF86Mail :Exec wmctrl -a thunderbird || thunderbird
-Mod4 XF86HomePage :Exec wmctrl -a firefox || firefox
-Mod4 XF86Mail :Exec wmctrl -a thunderbird || thunderbird
-Mod4 w :Exec wmctrl -a firefox || firefox
-Mod4 t :Exec wmctrl -a thunderbird || thunderbird
+XF86Search :Exec wmctrl -a thunderbird || thunderbird
+#Mod4 F14 :Exec wmctrl -a firefox || firefox
+#Mod4 F13 :Exec wmctrl -a thunderbird || thunderbird
 
-XF86Tools :Exec xterm -e tmux
+#XF86Tools :Exec xterm -e tmux
 XF86Calculator :Exec Exec wmctrl -a galculator || galculator
 
 Control Mod4 l :Exec wmctrl -a subl3 || subl3
@@ -140,8 +142,8 @@ Mod4 Shift q :Exec /usr/local/bin/rofi-logout
 # Control Mod4 Print :Exec import -window root -quality 100 ~/pictures/screen-import-$(date +%F_%s).png
 # Control Mod4 Print :Exec scrot -q 100 '%B_%s_$wx$h.png' -e 'mv $f ~/Pictures/'
 ! Screenshot
-Control Print :Exec maim | xclip -selection clipboard -t image/png
-Control Mod4 Print :Exec maim ~/Pictures/$(date +%F_%s).png
+Control Print :Exec maim -u | xclip -selection clipboard -t image/png
+Control Mod4 Print :Exec maim -u ~/Pictures/$(date +%F_%s).png
 
 ! Conky
 Control Mod4 Pause :Exec /home/doug/bin/ConkyFluxbox.sh
@@ -193,6 +195,9 @@ Control Mod4 F2 :TakeToWorkspace 2
 Control Mod4 F3 :TakeToWorkspace 3
 Control Mod4 F4 :TakeToWorkspace 4
 
+Control Shift Right :SendToNextHead
+Control Shift Left :SendToPrevHead
+
 # toggledecor, show desktop
 
 Mod4 F12 :ToggleDecor
@@ -210,6 +215,17 @@ Mod1 Shift KP_6 :MoveTo 0 0 RightCenter
 Mod1 Shift KP_1 :MoveTo 0 0 LowerLeft
 Mod1 Shift KP_2 :MoveTo 0 0 BottomCenter
 Mod1 Shift KP_3 :MoveTo 0 0 LowerRight
+Mod1 Shift KP_0 :MacroCmd {SetDecor 0x67f} {MoveTo 0 0 Center}
+
+Mod4 Shift KP_7 :MacroCmd {SetDecor BORDER} {MoveTo 0 0 UpperLeft}
+Mod4 Shift KP_8 :MacroCmd {SetDecor BORDER} {MoveTo 0 0 TopCenter}
+Mod4 Shift KP_9 :MacroCmd {SetDecor BORDER} {MoveTo 0 0 UpperRight}
+Mod4 Shift KP_4 :MacroCmd {SetDecor BORDER} {MoveTo 0 0 LeftCenter}
+Mod4 Shift KP_5 :MacroCmd {SetDecor BORDER} {MoveTo 0 0 Center}
+Mod4 Shift KP_6 :MacroCmd {SetDecor BORDER} {MoveTo 0 0 RightCenter}
+Mod4 Shift KP_1 :MacroCmd {SetDecor BORDER} {MoveTo 0 0 LowerLeft}
+Mod4 Shift KP_2 :MacroCmd {SetDecor BORDER} {MoveTo 0 0 BottomCenter}
+Mod4 Shift KP_3 :MacroCmd {SetDecor BORDER} {MoveTo 0 0 LowerRight}
 
 ## manual tiling with key chains
 ##=================================================##
@@ -247,20 +263,8 @@ Ctrl Mod4 KP_1 :MacroCmd {SetDecor BORDER} {MoveTo 1% 1% LowerLeft}
 Ctrl Mod4 KP_2 :MacroCmd {SetDecor BORDER} {MoveTo 1% 1% BottomCenter}
 Ctrl Mod4 KP_3 :MacroCmd {SetDecor BORDER} {MoveTo 1% 1% LowerRight}
 
-# Quarter screen decorated
+# Tiling 50-50 split
 #===================================================##
-
-Ctrl z Mod1 KP_7 :MacroCmd {ResizeTo 40% 50%} {MoveTo 0 0 UpperLeft}
-Ctrl z Mod1 KP_9 :MacroCmd {ResizeTo 40% 50%} {MoveTo 0 0 UpperRight}
-Ctrl z Mod1 KP_1 :MacroCmd {ResizeTo 40% 50%} {MoveTo 0 0 LowerLeft}
-Ctrl z Mod1 KP_3 :MacroCmd {ResizeTo 40% 50%} {MoveTo 0 0 LowerRight}
-
-Ctrl z Mod1 KP_4 :MacroCmd {ResizeTo 60% 100%} {MoveTo 0 0 LeftCenter}
-Ctrl z Mod1 KP_6 :MacroCmd {ResizeTo 60% 100%} {MoveTo 0 0 RightCenter}
-Ctrl z Mod1 KP_8 :MacroCmd {ResizeTo 100% 50%} {MoveTo 0 0 TopCenter}
-Ctrl z Mod1 KP_2 :MacroCmd {ResizeTo 100% 50%} {MoveTo 0 0 BottomCenter}
-Ctrl z Mod1 KP_5 :MacroCmd {ResizeTo 60% 100%} {MoveTo 0 0 Center}
-Ctrl z Mod1 KP_0 :MacroCmd {SetDecor 0x67f} {ResizeTo 60% 80%} {MoveTo 0 0 Center}
 
 Ctrl a Mod1 KP_7 :MacroCmd {SetDecor 0x67f} {ResizeTo 48% 48%} {MoveTo 1% 1% UpperLeft}
 Ctrl a Mod1 KP_9 :MacroCmd {SetDecor 0x67f} {ResizeTo 48% 48%} {MoveTo 1% 1% UpperRight}
@@ -275,9 +279,6 @@ Ctrl a Mod1 KP_5 :MacroCmd {SetDecor 0x67f} {ResizeTo 98% 98%} {MoveTo 0 0 Cente
 
 Ctrl a Mod1 KP_0 :MacroCmd {SetDecor 0x67f} {ResizeTo 80% 98%} {MoveTo 0 0 Center}
 
-# Quarter screen undecorated
-##===================================================##
-
 Ctrl a Mod4 KP_7 :MacroCmd {SetDecor BORDER} {ResizeTo 48% 48%} {MoveTo 1% 1% UpperLeft}
 Ctrl a Mod4 KP_9 :MacroCmd {SetDecor BORDER} {ResizeTo 48% 48%} {MoveTo 1% 1% UpperRight}
 Ctrl a Mod4 KP_1 :MacroCmd {SetDecor BORDER} {ResizeTo 48% 48%} {MoveTo 1% 1% LowerLeft}
@@ -288,6 +289,25 @@ Ctrl a Mod4 KP_6 :MacroCmd {SetDecor BORDER} {ResizeTo 48% 98%} {MoveTo 1% 1% Up
 Ctrl a Mod4 KP_8 :MacroCmd {SetDecor BORDER} {ResizeTo 98% 48%} {MoveTo 1% 1% UpperLeft}
 Ctrl a Mod4 KP_2 :MacroCmd {SetDecor BORDER} {ResizeTo 98% 48%} {MoveTo 1% 1% LowerLeft}
 Ctrl a Mod4 KP_5 :MacroCmd {SetDecor BORDER} {ResizeTo 98% 98%} {MoveTo 0 0 Center}
+
+Ctrl a Mod4 KP_0 :MacroCmd {SetDecor BORDER} {ResizeTo 80% 98%} {MoveTo 0 0 Center}
+
+
+#
+# Tiling 60-40 split
+#
+
+Ctrl z Mod1 KP_7 :MacroCmd {ResizeTo 40% 50%} {MoveTo 0 0 UpperLeft}
+Ctrl z Mod1 KP_9 :MacroCmd {ResizeTo 40% 50%} {MoveTo 0 0 UpperRight}
+Ctrl z Mod1 KP_1 :MacroCmd {ResizeTo 40% 50%} {MoveTo 0 0 LowerLeft}
+Ctrl z Mod1 KP_3 :MacroCmd {ResizeTo 40% 50%} {MoveTo 0 0 LowerRight}
+
+Ctrl z Mod1 KP_4 :MacroCmd {ResizeTo 60% 100%} {MoveTo 0 0 LeftCenter}
+Ctrl z Mod1 KP_6 :MacroCmd {ResizeTo 60% 100%} {MoveTo 0 0 RightCenter}
+Ctrl z Mod1 KP_8 :MacroCmd {ResizeTo 100% 50%} {MoveTo 0 0 TopCenter}
+Ctrl z Mod1 KP_2 :MacroCmd {ResizeTo 100% 50%} {MoveTo 0 0 BottomCenter}
+Ctrl z Mod1 KP_5 :MacroCmd {ResizeTo 60% 100%} {MoveTo 0 0 Center}
+Ctrl z Mod1 KP_0 :MacroCmd {SetDecor 0x67f} {ResizeTo 60% 80%} {MoveTo 0 0 Center}
 
 Ctrl z Mod4 KP_7 :MacroCmd {SetDecor BORDER} {ResizeTo 40% 50%} {MoveTo 0 0 UpperLeft}
 Ctrl z Mod4 KP_9 :MacroCmd {SetDecor BORDER} {ResizeTo 40% 50%} {MoveTo 0 0 UpperRight}

@@ -6,12 +6,12 @@
 #config
 OPT="-arPh"
 SRC="/mnt/public/music/"
-DEST="/mnt/data01/music/"
+DEST="/mnt/data/music/"
 NAME="BANDIT-01"
 SPACE="."
 DATE=`date "+%F_%s"`
 
 # rsync to backup
-rsync $OPT --exclude-from='/home/doug/.rexcludes.txt' $SRC ${DEST}$NAME$SPACE$DATE
+rsync $OPT --exclude-from='/home/doug/bin/rexcludes.txt' $SRC ${DEST}$NAME$SPACE$DATE
 
 exit 0;

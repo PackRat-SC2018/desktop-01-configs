@@ -1,71 +1,23 @@
-basilisk
-guvcview
-xfburn
-lefpad
-yad --color
-lilyterm
-tilix
-thunar
-netsurf
-epiphany
-qutebrowser
-parole
-wman-logout.sh
-hexchat
-audaciouys
-leafpad
-gimp
-xfce4-screenshooter
-smplayer
-vlc
-ConkyFvwm.sh
-tint2
-xfce4-panel
-urxvt -pe tabbed
-vivaldi
-sxiv -t ~/wallpaper
-spacefm
-qterminal
-roxterm
-xfe
-uxterm
-xcalc
-filezilla
-audacious
-xfontsel
-compton
-slock
-cmst -m -i Adwaita
-rofi-logout
-pcmanfm
-lxpanel
-azote
-jgmenu_run
-xfce4-terminal --drop-down
-yad --font
-xiate
-gnome-terminal
-polybar openbox-bar
-soud-juicer
-rofi-exit
-sound-juicer
-mlterm -X 220
-mlterm -X 120
-mlterm -X 200
-mlterm --depth 32 --alpha 200
-sakura
-mlterm
-alacritty
-terminator
-xfce4-terminal
-picom -b
-fluxbox-bar.sh
-urxvt
-lxappearance
-gcolor2
-picom
 st
-yad --fonts
-xterm
+fluxbox-bar.sh
 kitty
-asunder
+terminology
+xosview
+tint2
+pavucontrol
+deadbeef
+alacritty
+pixom
+urxvt
+xfce4-terminal
+lilyterm
+tilix -q
+picom
+brave
+yad -font
+yad --font
+tilix
+vivaldi
+xterm
+gcolor2
+picom -b

@@ -1,0 +1,43 @@
+# FvwmScript-DayDate
+# Display the day and date in a window.  
+# Suitable to then be swallowed by FvwmButtons.
+
+# Modified by DMM
+# Based on a script by "TF" posted 2006-11-13 to
+# http://www.fvwmforums.org/phpBB3/viewtopic.php?f=7&t=1616
+
+# Prerequisites: 
+#   ttf-linux-libertine (for LinuxBiolinum font, or change the font).
+#   Xft (part of font-config, itself a prerequisit for many things)
+
+# Note:  For reasons I don't understand, setting ForeColor and BackColor
+#        here doesn't seem to work.  But setting FvwmScript: DefaultFore
+#        and FvwmScript: DefaultBack in .fvwm2rc does.
+
+WindowTitle {SysInfo}   # MUST use same title ("DayDate") when swallowing
+WindowSize  120 64      # 120 pixels wide to match my FvwmButtons group
+Colorset 10
+
+Init
+   Begin
+      Set $cpu  = (GetOutput {exec psuinfo -Cc -N""} 1 -1)
+      Set $mem = (GetOutput {psuinfo -Ca -N} 1 -1)
+   End
+
+Widget 1
+   Property
+      Size 120 32
+      Position 0 0
+      Font "xft:DejaVu Markup:Book:size=10:antialias=true:autohint=true"
+      Type ItemDraw
+      Flags NoReliefString
+   End
+
+Widget 2
+   Property
+      Size 120 32
+      Position 0 32
+      Font "xft:DejaVu Markup:Book:size=10:antialias=true:autohint=true"
+      Type ItemDraw
+      Flags NoReliefString
+   End

@@ -567,19 +567,25 @@ Key Left    A   C4  Scroll -100 0
 Key Up      A   C4  Scroll +0 -100
 Key Down    A   C4  Scroll +0 +100
 
+Key 1      A   4   GotoDesk 0 0
+Key 2      A   4   GotoDesk 0 1
+Key 3      A   4   GotoDesk 0 2
+Key 4      A   4   GotoDesk 0 3
+
 # ================
 # Applications
 # ================
 
-# Key	F1      A  M    Exec exec sakura -c 100 -r 34
 Key F1      A  M    Exec exec $[infostore.terminal]
-Key	F2	    A  M    Exec exec rofi -show run
+# Key	F2	    A  M    Exec exec rofi -show run
+Key F2      A  M Exec exec $[infostore.runcmd]
 Key	Return	A  S4   Exec exec kitty
-Key Return  A  4    Exec exec xfce4-terminal
+Key Return  A  4    Exec exec st
 
 Key	Menu				A	A	Exec exec $[infostore.filemgr]
 Key	XF86HomePage		A	A	Exec exec $[infostore.browser]
 Key	XF86Mail			A	A	Exec exec $[infostore.mail]
+Key XF86Search            A   A   Exec exec $[infostore.mail]
 Key XF86Calculator		A	A	Exec exec galculator
 
 ## alsa
@@ -587,14 +593,18 @@ Key	XF86AudioMute			A	A	Exec exec amixer set Master toggle -q &
 Key	XF86AudioRaiseVolume	A	A	Exec exec amixer -q sset PCM 5%+ unmute
 Key	XF86AudioLowerVolume	A	A	Exec exec amixer -q sset PCM 5%- unmute
 
+Key XF86AudioNext    A    A    Exec deadbeef --next
+Key XF86AudioPrev    A    A    Exec deadbeef --prev
+Key XF86AudioPlay    A    A    Exec deadbeef --toggle-pause
+
 ## pulseaudio
 #Key	XF86AudioMute			A	A	Exec exec pamixer -t
 #Key	XF86AudioRaiseVolume	A	A	Exec exec pamixer -i 2
 #Key	XF86AudioLowerVolume	A	A	Exec exec pamixer -d 2
 
-Key XF86AudioPlay A    A  Exec exec mocp -G
-Key XF86AudioPrev A    A  Exec exec mocp -r
-Key XF86AudioNext A    A  Exec exec mocp -f
+#Key XF86AudioPlay A    A  Exec exec mocp -G
+#Key XF86AudioPrev A    A  Exec exec mocp -r
+#Key XF86AudioNext A    A  Exec exec mocp -f
 
 Key	l	A	C4	Exec exec $[infostore.editor]
 Key	g	A	C4	Exec exec gimp
@@ -602,9 +612,11 @@ Key	p	A	C4	Exec exec libreoffice --calc
 Key	o	A	C4	Exec exec libreoffice --writer
 key p   A   4   Exec exec rofi -show run
 
-Key	Print	A	C4	Exec exec "$HOME/bin/scrnshot"
-Key	Pause	A	C4	Exec exec "$HOME/bin/ConkyFvwm.sh"
-Key	b	A	C4	Exec exec "$HOME/bin/ConkyTao.sh"
+Key    Print    A    C    Exec exec maim -u | xclip -selection clipboard -t image/png
+Key    Print    A    C4   Exec exec maim -u ~/Pictures/$(date +%F_%s).png
+
+Key	Pause	A	C4	Exec exec $HOME/bin/ConkyFvwm.sh
+Key	b	A	C4	Exec exec $HOME/bin/ConkyTao.sh
 
 #Key XF86MonBrightnessDown	A	A	Exec xbacklight -dec 10
 #Key XF86MonBrightnessDown	A	M	Exec xbacklight -dec 3

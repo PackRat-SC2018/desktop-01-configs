@@ -14,12 +14,14 @@ AddToDecor   VectorDecor
 
 # DefaultFont "xft:Fira Sans:regular:size=10:antialias=True:hintstyle=slight"
 
+Colorset 17 fg #ECECEC, bg #2B4E5E, hi #3F728A, sh #1B303B, Plain, NoShape
+
 TitleStyle Centered Height 20 -- Raised
 
-Style * Colorset 1
-Style * HilightColorset 2
-Style * BorderColorset 1, HilightBorderColorset 2
-Style * BorderWidth 2, HandleWidth 2, MWMButtons, MWMBorder, FirmBorder
+Style * Colorset 10
+Style * HilightColorset 17
+Style * BorderColorset 10, HilightBorderColorset 17
+Style * BorderWidth 4, HandleWidth 4, MWMButtons, MWMBorder, FirmBorder
 BorderStyle Active -- Flat HiddenHandles NoInset
 BorderStyle Inactive -- Flat HiddenHandles NoInset
 #BorderStyle Active -- Flat
@@ -40,3 +42,7 @@ ButtonStyle All ToggledActiveDown Vector 3 50-2px50+1p@0 50+1px50+1p@0 50+1px50-
 ButtonStyle All ToggledInactive Vector 3 50-2px50+1p@0 50+1px50+1p@0 50+1px50-2p@0 -- Flat
 
 ButtonStyle All Inactive Vector 5 40x25@1 60x25@1 60x75@0 40x75@0 40x25@1
+
+ButtonStyle 1 - MwmDecorMenu
+ButtonStyle 4 - MwmDecorMax
+ButtonStyle 6 - MwmDecorMin

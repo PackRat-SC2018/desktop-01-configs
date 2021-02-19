@@ -54,15 +54,22 @@ xset m 1/1
 # keyboard autorepeat
 xset r rate 350 60
 
-# bspwm requires this - can be run from bspwmrc; doesn't seem to matter for rest
-xsetroot -cursor_name left_ptr &
+# dual monitors
+# HDMI1 connected primary 1920x1080+0+0 (normal left inverted right x axis y axis) 530mm x 300mm
+# VGA1 connected 1920x1080+1920+0 (normal left inverted right x axis y axis) 530mm x 300mm
 
-# battery monitor
-# (sleep 2s && juiced -d) &
+#xrandr --output VGA1 --auto --right-of HDMI1 &
+
+xrandr --output HDMI1 --primary --mode 1920x1080 --rotate normal --output VGA1 --mode 1920x1080 --rotate normal --right-of HDMI1
+
+
+# bspwm requires this - can be run from bspwmrc; doesn't seem to matter for rest
+# xsetroot -cursor_name left_ptr &
 
 # background
 xsetroot -solid "#08062C" &
 
 # set wallpaper for all window manager logins; can also use feh, nitrogen etc ..
-# fbsetbg -c -r "$HOME/wallpaper/" &
-
+# fbsetbg -C -R "$HOME/wallpaper/" &
+# nitrogen --restore &
+# feh --no-fehbg --bg-scale --no-xinerama --randomize /mnt/public/images/dual_monitor/* &

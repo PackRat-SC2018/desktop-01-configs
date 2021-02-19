@@ -9,6 +9,7 @@ alias dfh='df -hT'
 alias dfk='df -kT'
 alias du='du -h'
 alias duh='du -hca'
+alias ducks='du -cks -- * | sort -rn | head'
 alias ip='ip -color'
 alias path='echo -e ${PATH//:/\\n}'
 alias emacs='emacs -nw'
@@ -18,8 +19,11 @@ alias sinfo='inxi -CSI -tcm3 -W 29803 --no-host'
 alias screenfetch='screenfetch -n'
 alias shotdate='date +%A_%s'
 alias sshot='import -window root -quality 100 ~/pictures/screen-import-$(shotdate).png'
+alias mshot='maim -u -d 5 -i root ~/pictures/maim_shot-$(date +%F_%s).png'
 alias scrotpng='scrot -q 100 -c -d 5 ~/pictures/scrot-shot-%B_%e_%s.png'
 alias scrotjpg='scrot -q 100 -c -d 5 ~/pictures/scrot-shot-%a_%e_%s.jpg'
+alias maimpng='maim -d 5 -i root ~/Pictures/maim-shot-$(shotdate).png'
+alias maimjpg='maim -d 5 -i root ~/Pictures/maim-shot-$(shotdate).jpg'
 alias kconky='killall -SIGUSR1 conky'
 alias ktint2='killall -SIGUSR1 tint2'
 alias kpolybar='killall -SIGUSR1 polybar'
@@ -27,13 +31,15 @@ alias ufont='fc-cache -f -v'
 alias rufont='sudo fc-cache -f -v'
 alias prmount='sudo mount -o rw,umask=000'
 alias usbmnt='sudo mount -o rw,umask=000 /dev/sdc1 /media/usbhd'
-alias win7mnt='sudo mount -o rw,umask=000 /dev/sda5 /mnt/Win7'
+alias win10mnt='sudo mount -o rw,umask=000 /dev/sda6 /mnt/windows'
 alias takeshot='neofetch ; scrotpng'
 alias neoinfo='neofetch --backend off --color_blocks off'
 alias getmp3='youtube-dl -x  --no-mtime --audio-format mp3 -o /mnt/public/tmp/'
 alias mntwillow='sshfs -p 1456 doug@WILLOW-01:/mnt/public /home/doug/Willow'
 alias umntwillow='fusermount -u /home/doug/Willow'
 alias playdvd='mpv dvd:// --alang=en'
+alias ytmp3='youtube-dl --add-metadata --extract-audio --audio-format mp3 --audio-quality 0 --embed-thumbnail --prefer-ffmpeg --youtube-skip-dash-manifest --ignore-errors --restrict-filenames --verbose $f'
+alias snapshot='ffmpeg -f video4linux2 -i /dev/video0 -vframes 1 snapshot-001.png'
 
 alias wget='wget -c'
 alias picom='picom -b'
@@ -41,6 +47,10 @@ alias compton='compton -cCGf'
 alias obxprop='obxprop | grep "^_OB_APP"'
 alias update-void='sudo xbps-install -Suv'
 alias update-arch='sudo pacman -Suyy'
+alias poweroff='sudo poweroff'
+alias reboot='sudo reboot'
+alias power-off='loginctl poweroff'
+alias re-boot='loginctl reboot'
 
 alias doy="date '+%j'"
 alias ydoy="date '+%j%y'"
@@ -54,9 +64,9 @@ alias isodts="date '+%G-%m-%d %H:%M:%S'"
 
 alias d="ls -1p | sed -n '/\/$/s/^/    /p;'"
 alias dl="ls -lhp | grep '^d'"
-alias DL="ls -lTthp | grep '^d'"
+alias DL="ls -lthp -T80 | grep '^d'"
 
-alias x='ls -xF'
+alias x='ls -xaF'
 alias r='ls -1RF'
 alias rr='ls -lRF'  
 alias R='BLOCKSIZE=1m ls -s1R'
@@ -85,4 +95,19 @@ alias obx-session='exec startx $HOME/.xinitrc openbox'
 alias i3-session='exec startx $HOME/.xinitrc i3'
 alias dwm-session='exec startx $HOME/.xinitrc dwm'
 alias spectrwm-session='exec startx $HOME/.xinitrc spectrwm'
-alias bspwm-session='exec startx $HOME/.xinitrc bspwm '
+alias bspwm-session='exec startx $HOME/.xinitrc bspwm'
+alias dk-session='exec startx $HOME/.xinitrc dk'
+alias awesome-session='exec startx $HOME/.xinitrc awesome'
+alias hikari-session='dbus-run-session hikari'
+alias sway-session='dbus-run-session sway'
+alias e24-session='exec startx $HOME/.xinitrc enlightenment'
+alias pekwm-session='exec startx $HOME/.xinitrc pekwm'
+#
+#
+# free -h | awk 'NR==2{printf "%s/%s",$3,$2}'; free -m |awk 'NR==2{printf "  (%u%%)\n",$3*100/$2 }'
+alias memuse='~/bin/memtot.sh'
+#
+alias setwall="feh --no-fehbg --bg-scale --no-xinerama --randomize /mnt/public/images/dual_monitor/*"
+
+alias forecast='curl http://wttr.in'
+

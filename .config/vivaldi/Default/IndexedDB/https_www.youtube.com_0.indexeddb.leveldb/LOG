@@ -1,0 +1,15 @@
+2021/02/10-21:59:09.949 5492 Reusing MANIFEST /home/doug/.config/vivaldi/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/02/10-21:59:09.949 5492 Recovering log #47
+2021/02/10-21:59:09.949 5492 Reusing old log /home/doug/.config/vivaldi/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000047.log 
+2021/02/10-22:08:58.231 5b28 Level-0 table #52: started
+2021/02/10-22:08:58.260 5b28 Level-0 table #52: 717 bytes OK
+2021/02/10-22:08:58.287 5b28 Delete type=0 #47
+2021/02/10-22:08:58.287 5b28 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/02/10-22:08:58.287 5b28 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x16\x00y\x00t\x00-\x00i\x00d\x00b\x00-\x00t\x00e\x00s\x00t\x00-\x00d\x00o\x00-\x00n\x00o\x00t\x00-\x00u\x00s\x00e' @ 451 : 1
+2021/02/10-22:08:58.287 5b28 Compacting 1@1 + 1@2 files
+2021/02/10-22:08:58.311 5b28 Generated table #53@1: 46 keys, 1696 bytes
+2021/02/10-22:08:58.311 5b28 Compacted 1@1 + 1@2 files => 1696 bytes
+2021/02/10-22:08:58.336 5b28 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/02/10-22:08:58.336 5b28 Delete type=2 #49
+2021/02/10-22:08:58.336 5b28 Delete type=2 #52
+2021/02/10-22:08:58.337 5b28 Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x16\x00y\x00t\x00-\x00i\x00d\x00b\x00-\x00t\x00e\x00s\x00t\x00-\x00d\x00o\x00-\x00n\x00o\x00t\x00-\x00u\x00s\x00e' @ 451 : 1 .. (end); will stop at (end)

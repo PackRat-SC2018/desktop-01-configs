@@ -1,0 +1,25 @@
+Style VoidPanel !Title, BorderWidth 2, HandleWidth 2, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnTop
+
+DestroyModuleConfig VoidPanel:*
+*VoidPanel: Geometry 120x$[vp.height]+0+0
+*VoidPanel: Colorset 10
+*VoidPanel: Rows $[vp.height]
+*VoidPanel: Columns 4
+*VoidPanel: Frame 1
+*VoidPanel: Padding 0 0
+*VoidPanel: Font "xft:DejaVu Markup:Regular:size=10:antialias=True"
+*VoidPanel: (4x24, Icon "", Title "Fvwm", Right, Action `Exec jgmenu --config-file="$HOME/.config/jgmenu/jgappbarrc"`, Frame 1, Padding 1 1)
+*VoidPanel: (4x120, Swallow(NoClose,UseOld) XClock 'Exec xclock -geometry -3000-3000 &', Frame 1, Padding 0 0)
+*VoidPanel: (1x20, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 8, ActiveColorset 12, Frame 1)
+*VoidPanel: (1x20, Id desk1, Title "2", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 12, Frame 1)
+*VoidPanel: (1x20, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 12, Frame 1)
+*VoidPanel: (1x20, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 12, Frame 1)
+# *VoidPanel: (2x40, Icon "ninja-cat.png", Title "", Right, Action `Exec jgmenu --config-file="$HOME/.config/jgmenu/jgappbarrc"`, Frame 1, Padding 1 1)
+*VoidPanel: (2x40, Title "", Icon "/usr/share/icons/Newaita-dark/apps/24/utilities-terminal.svg", Action `Exec st`, Frame 1)
+*VoidPanel: (2x40, Title "", Icon "/usr/share/icons/Newaita-dark/places/24/folder-light-brown.svg", Action `Exec thunar`, Frame 1)
+*VoidPanel: (2x40, Title "", Icon "/usr/share/icons/Newaita-dark/apps/24/sublime.svg", Action `Exec subl3`, Frame 1)
+*VoidPanel: (2x40, Title "", Icon "/usr/share/icons/Newaita-dark/apps/24/firefox.svg", Action `Exec firefox`, Frame 1)
+*VoidPanel: (2x40, Title "", Icon "/usr/share/icons/Newaita-dark/apps/24/thunderbird.svg", Action `Exec thunderbird`, Frame 1)
+*VoidPanel: (2x40, Title "", Icon "/usr/share/icons/Newaita-dark/apps/24/gimp.svg", Action `Exec gimp`, Frame 1)
+*VoidPanel: (4x772), Top, Swallow(UseOld,NoClose) FvwmIconMan 'Module FvwmIconMan', Frame 1, Padding 0 0)
+*VoidPanel: (4x24, Swallow(NoClose,UseOld) stalonetray 'Exec exec stalonetray --config "$HOME/.stalonetrayrc"', Frame 1)

@@ -1,3 +1,174 @@
+############
+# 7: Modules
+#############
+
+# FvwmBanner
+#
+# This displays the Fvwm Logo for 5 seconds. This is displayed
+# when fvwm starts.
+DestroyModuleConfig FvwmBanner:*
+*FvwmBanner: NoDecor
+*FvwmBanner: Timeout 5
+
+# FvwmScript
+#
+# FvwmScript is a module that allows one to write custom desktop
+# widgets and various other tools. This config uses two FvwmScripts.
+#   - DateTime - uses the output of "date" to display the date/time
+#     on the RightPanel.
+#   - Quit - This is a popup that asks for quit confirmation before
+#     quitting fvwm.
+DestroyModuleConfig FvwmScript:*
+*FvwmScript: DefaultColorset 21
+
+# Function: ChangeDesk
+#
+# This function is called by FvwmEvent every time the Desk is changed.
+DestroyFunc ChangeDesk
+AddToFunc   ChangeDesk
++ I SendToModule FvwmButtons ChangeButton desk0 Colorset 10
++ I SendToModule FvwmButtons ChangeButton desk1 Colorset 10
++ I SendToModule FvwmButtons ChangeButton desk2 Colorset 10
++ I SendToModule FvwmButtons ChangeButton desk3 Colorset 10
++ I SendToModule FvwmButtons ChangeButton desk$0 Colorset 11
+
+# FvwmEvent
+#
+# FvwmEvent is a module that can run an action or function
+# on specific events. This instance changes which desk number
+# is highlighted when the desk is changed.
+DestroyModuleConfig EventNewDesk:*
+*EventNewDesk: PassID
+*EventNewDesk: new_desk ChangeDesk
+
+#======FvwmIconBox specs [l t r b]===============#
+
+SetEnv fvwm_icon_size 56
+
+Style * StickyIcon
+Style * IconTitleFormat %i
+Style * IconTitleRelief 1
+Style * IconBackgroundRelief 1
+Style * IconBackgroundPadding 1
+Style * IconSize 56 56 112 112
+Style * IconFont "Shadow=0 0 SE:xft:Source Sans Pro:Regular:size=9:antialias=true:autohint=true"
+Style * IconBackgroundColorset 20
+Style * IconTitleColorset 0
+Style * HilightIconTitleColorset 20
+Style * Icon unknown1.xpm
+
+# Position of IconBox
+
+# top left
+# Style "*" IconBox 4 4 256 640, IconGrid 12 12, IconFill left top
+# Style "*" IconBox 4 200 200 900, IconGrid 24 24, IconFill left top
+#
+# top center
+# Style * IconBox 512 8 1066 256, IconGrid 24 24, IconFill left top
+#
+# bottom center
+# Style * IconBox  480 1015 1440 1078, IconGrid 8 8 , IconFill left top
+#
+# top right
+# Style * IconBox 1250 48 1360 640, IconGrid 24 24, IconFill left top
+#
+# bottom left
+# Style * IconBox 192 995 700 1078, IconGrid 8 8 , IconFill left top
+# Style * IconBox 480 1018 1440 1078, IconGrid 4 4 , IconFill left top
+#
+# middle right
+# Style * Iconbox 1224 300 1360 600, IconGrid 36 36, IconFill left top
+#
+# middle left
+# Style * Iconbox 16 48 256 600, IconGrid 24 24, IconFill left top
+#
+# thumbnails
+# Style "*" Iconbox 4 4 288 540, IconGrid 12 12, IconFill left top
+# Style "*" Iconbox 384 940 1440 1076, IconGrid 16 16, IconFill left bottom
+Style "*" Iconbox 8 940 1440 1076, IconGrid 16 16, IconFill left bottom
+# Style "*" Iconbox 230 1014 1690 1072, IconGrid 20 20, IconFill left top
+
+# Uncomment to remove IconBox configurations
+# Style * !Icon
+Style * !IconTitle
+
+##  The Fvwm identify-window module - an xwininfo replacement.
+DestroyModuleConfig FvwmIdent: *
+# *FvwmIdent: Font -*-terminus-bold-*-*--14-*-*-*-*-*-*-*
+*FvwmIdent: Font "xft:Source Sans Pro:Regular:size=12:antialias=true:autohint=true"
+*FvwmIdent: Colorset 5
+
+##  The fvwm animate module.
+DestroyModuleConfig FvwmAnimate: *
+*FvwmAnimate: Effect Frame
+*FvwmAnimate: Iterations 100
+*FvwmAnimate: Width 5
+*FvwmAnimate: Twist 1
+*FvwmAnimate: Delay 4
+*FvwmAnimate: Color gray50
+
+# FvwmPager
+#
+# This module displays the location of the windows on the various Pages
+# and Desks. This is setup to show only the Pages on the current Desk.
+
+Style FvwmPager* !Title, BorderWidth 2, HandleWidth 2, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom, !Iconifiable
+
+DestroyModuleConfig FvwmPager:*
+*FvwmPager: DeskTopScale 30
+*FvwmPager: Geometry +832+2
+# *FvwmPager: Geometry +2-2
+*FvwmPager: NoStartIconic
+*FvwmPager: Font None
+#*FvwmPager: Font "xft:Source Sans Pro:Regular:size=12:antialias=true:autohint=true"
+#*FvwmPager: SmallFont "xft:Source Sans Pro:Regular:size=9:antialias=true:autohint=true"
+*FvwmPager: WindowBorderWidth 1
+# *FvwmPager: !Window3dBorders
+*FvwmPager: !MiniIcons
+*FvwmPager: UseSkipList
+*FvwmPager: Colorset * 15
+*FvwmPager: HilightColorset * 16
+*FvwmPager: BalloonColorset * 0
+*FvwmPager: WindowColorsets 10 11
+*FvwmPager: Balloons
+*FvwmPager: BalloonFont ""xft:Source Sans Pro:Regular:size=9:antialias=true:autohint=true""
+*FvwmPager: BallonYOffset +2
+*FvwmPager: BalloonColorset 10
+
+# FvwmIconMan
+#
+# FvwmIconMan is a powerful tool to list and manage windows. This
+# is used as the window list in the panel or taskbar.
+DestroyModuleConfig FvwmIconMan:*
+*FvwmIconMan: UseWinList true
+*FvwmIconMan: ButtonGeometry 120x20
+*FvwmIconMan: ManagerGeometry 1x1
+*FvwmIconMan: Background #003c3c
+*FvwmIconMan: Foreground #ffffff
+*FvwmIconMan: FocusColorset 11
+*FvwmIconMan: IconColorset 14
+*FvwmIconMan: FocusAndSelectColorset 12
+*FvwmIconMan: SelectColorset 12
+*FvwmIconMan: IconAndSelectColorset 12
+*FvwmIconMan: DrawIcons always
+*FvwmIconMan: ReliefThickness 0
+*FvwmIconMan: Format "%t"
+*FvwmIconMan: Font "xft:Source Sans Pro:Regular:size=12:antialias=true:autohint=true"
+*FvwmIconMan: Action Mouse 0 A ret
+*FvwmIconMan: Action Mouse 1 A sendcommand IconManClick
+*FvwmIconMan: Action Mouse 3 A sendcommand "Menu MenuIconOps"
+*FvwmIconMan: Resolution global
+*FvwmIconMan: Tips needed
+*FvwmIconMan: Sort id
+
+# FvwmForm
+#
+# FvwmForm is a module that can be used to build a GUI
+# form. Used with fvwm-menu-desktop-config.fpl.
+# This sets the default colorsets.
+*FvwmFormDefault: Colorset 10
+*FvwmFormDefault: ItemColorset 13
+
 # panels
 
 # FvwmButtons - RightPanel
@@ -71,7 +242,7 @@ DestroyModuleConfig DeskTopClock:*
 *DeskTopClock: Columns 1
 *DeskTopClock: Frame 1
 *DeskTopClock: Padding 1
-*DeskTopClock: Font "Shadow=0 0 SE:xft:Source Serif Pro:Regular:size=12:antialias=true:autohint=true"
+*DeskTopClock: Font "Shadow=0 0 SE:xft:Source Sans Pro:Regular:size=12:antialias=true:autohint=true"
 *DeskTopClock: (1x50, Swallow(NoHints) XClock 'Exec xclock -geometry -3000-3000 &', Frame 1, Padding 1 1)
 *DeskTopClock: (1x30, Swallow(NoHints) DayDate 'Module FvwmScript $[FVWM_USERDIR]/FvwmScript-DayDate', Action (Mouse 3) `Module FvwmScript $[FVWM_USERDIR]/scripts/Kalende/Kalende`, Frame 1, Padding 1 1)
 
@@ -128,7 +299,7 @@ DestroyModuleConfig TaskBarIcons:*
 *TaskBarIcons: Action Mouse 3 A sendcommand "Menu MenuIconOps"
 
 DestroyModuleConfig FvwmTaskBar:*
-*FvwmTaskBar: Geometry 1914x24+0-0
+*FvwmTaskBar: Geometry 1918x26+0-0
 *FvwmTaskBar: Font "xft:Source Serif Pro:Regular:size=10:antialias=true:autohint=true"
 *FvwmTaskBar: Colorset 22
 *FvwmTaskBar: Rows 1
@@ -136,17 +307,18 @@ DestroyModuleConfig FvwmTaskBar:*
 *FvwmTaskBar: Frame 0
 *FvwmTaskBar: Padding 0 0
 *FvwmTaskBar: (2x1, Title "", Icon "/home/doug/.fvwm/icons/ninja-cat-small.png", Action `Exec jgmenu --config-file="$HOME/.config/jgmenu/jgfvwmrc"`, Frame 0)
-#*FvwmTaskBar: (2x1, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 11, ActiveColorset 12, Frame 0)
+#*FvwmTaskBar: (2x1, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 22, ActiveColorset 12, Frame 0)
 #*FvwmTaskBar: (2x1, Id desk1, Title "2", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 12, Frame 0)
 #*FvwmTaskBar: (2x1, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 12, Frame 0)
 #*FvwmTaskBar: (2x1, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 12, Frame 0)
-*FvwmTaskBar: (84x1, Top, Swallow(UseOld,NoClose) FvwmIconMan 'Module FvwmIconMan TaskBarIcons', Frame 0, Padding 0 0)
+*FvwmTaskBar: (76x1, Top, Swallow(UseOld,NoClose) FvwmIconMan 'Module FvwmIconMan TaskBarIcons', Frame 0, Padding 0 0)
 *FvwmTaskBar: (10x1, Swallow(NoHints) stalonetray 'Exec exec stalonetray --config "$HOME/.fvwmtrayrc"', Frame 0, Padding 0 0)
+*FvwmTaskBar: (8x1, Swallow(UseOld,NoClose) FvwmPager 'Module FvwmPager 0 3', Frame 0, Padding 0 0)
 
-Style FvwmLaunchBar* !Title, BorderWidth 3, HandleWidth 3, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom, !Iconifiable
+Style FvwmLaunchBar* !Title, BorderWidth 1, HandleWidth 1, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnBottom, !Iconifiable
 
 DestroyModuleConfig FvwmLaunchBar:*
-*FvwmLaunchBar: Geometry 256x36+0-0
+*FvwmLaunchBar: Geometry 256x36+0+0
 # *FvwmLaunchBar: Geometry 256x36+798+2
 *FvwmLaunchBar: Colorset 22
 *FvwmLaunchBar: Rows 1
@@ -162,25 +334,26 @@ DestroyModuleConfig FvwmLaunchBar:*
 *FvwmLaunchBar: (1x1, Title "", Icon "/usr/share/icons/Obsidian/apps/24/thunderbird.png", Action `Exec thunderbird`, Frame 1)
 *FvwmLaunchBar: (1x1, Title "", Icon "/usr/share/icons/Obsidian/apps/24/gimp.png", Action `Exec gimp`, Frame 1)
 
-Style FvwmAppBar* !Title, BorderWidth 3, HandleWidth 3, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnTop, !Iconifiable
+Style FvwmAppBar* !Title, BorderWidth 1, HandleWidth 1, Sticky, CirculateSkip, WindowListSkip, NeverFocus, StaysOnTop, !Iconifiable
 
 DestroyModuleConfig FvwmAppBar:*
-*FvwmAppBar: Geometry 1914x32+0-0
+*FvwmAppBar: Geometry 1918x32+0-0
 *FvwmAppBar: Colorset 22
 *FvwmAppBar: Rows 1
-*FvwmAppBar: Columns 48
+*FvwmAppBar: Columns 39
 *FvwmAppBar: Frame 1
 *FvwmAppBar: Font "xft:Source Serif Pro:Regular:size=12:antialias=true:autohint=true"
-*FvwmAppBar: (1x1, Title "", Icon "ninja-cat-small.png", Action `Exec jgmenu --config-file="$HOME/.config/jgmenu/jgfvwmrc"`, Frame 1)
+*FvwmAppBar: (1x1, Title "", Icon "ninja-cat-22px.png", Action `Exec jgmenu --config-file="$HOME/.config/jgmenu/jgfvwmrc"`, Frame 1)
 *FvwmAppBar: (1x1, Title "", Icon "/usr/share/icons/Obsidian/apps/24/utilities-terminal.png", Action `Exec uxterm`, Frame 1)
 *FvwmAppBar: (1x1, Title "", Icon "/usr/share/icons/Obsidian/devices/24/harddrive.png", Action `Exec thunar`, Frame 1)
 *FvwmAppBar: (1x1, Title "", Icon "/usr/share/icons/Obsidian/apps/24/sublime.png", Action `Exec subl3`, Frame 1)
 *FvwmAppBar: (1x1, Title "", Icon "/usr/share/icons/Obsidian/apps/24/firefox.png", Action `Exec firefox`, Frame 1)
 *FvwmAppBar: (1x1, Title "", Icon "/usr/share/icons/Obsidian/apps/24/thunderbird.png", Action `Exec thunderbird`, Frame 1)
 *FvwmAppBar: (1x1, Title "", Icon "/usr/share/icons/Obsidian/apps/24/gimp.png", Action `Exec gimp`, Frame 1)
-*FvwmAppBar: (36x1, Top, Swallow FvwmIconMan 'Module FvwmIconMan TaskBarIcons', Frame 1)
-*FvwmAppBar: (6x1, Swallow(NoClose,UseOld) stalonetray 'Exec exec stalonetray --config "$HOME/.fvwmtrayrc"', Frame 1)
+*FvwmAppBar: (41x1, Top, Swallow FvwmIconMan 'Module FvwmIconMan TaskBarIcons', Frame 1)
+*FvwmAppBar: (4x1, Swallow(NoClose,UseOld) stalonetray 'Exec exec stalonetray --config "$HOME/.fvwmtrayrc"', Frame 1)
 #*FvwmAppBar: (1x1, Id desk0, Title "1", Action (Mouse 1) GotoDesk 0 0, Colorset 11, ActiveColorset 12, Frame 1)
 #*FvwmAppBar: (1x1, Id desk1, Title "2", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 12, Frame 1)
 #*FvwmAppBar: (1x1, Id desk2, Title "3", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 12, Frame 1)
 #*FvwmAppBar: (1x1, Id desk3, Title "4", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 12, Frame 1)
+#*FvwmAppBar: (4x1, Top, Swallow FvwmPager 'Module FvwmPager 0 3', Frame 1)

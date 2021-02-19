@@ -4,7 +4,7 @@ conky.config = {
 --#############################################
 	background = true,
 	use_xft = true,
-	font = 'Fira Code:regular:size=11',	
+	font = 'Fira Code:regular:size=10',	
 	xftalpha = 1.0,
 	update_interval = 1.0,
 --	update_interval_on_battery = 30.0,
@@ -76,18 +76,16 @@ conky.config = {
 	minimum_width = 160, minimum_height = 0,
 	maximum_width = 160,
 	alignment = 'tr',
-	gap_x = 16,
-	gap_y = 16,
+	gap_x = 12,
+	gap_y = 6,
 
 };
 
 conky.text = [[
-${voffset 4}${alignc}${font Fira Code:light:size=16}${time %R}${font}
-${voffset 8}${alignc}${time %a %e %b}
-${voffset 24}Uptime:${alignr}${uptime_short}
-${voffset 16}CPU:${alignr}${if_match ${cpu}<=50}${color7}${else}${if_match ${cpu}<=70}${color8}${else}${if_match ${cpu}>70}${color9}${endif}${endif}${endif}${cpu cpu0}%${color}
-${voffset 4}${alignr}${loadavg}
-${voffset 16}Mem:${alignr}${if_match ${memperc}<=50}${color7}${else}${if_match ${memperc}<=70}${color8}${else}${if_match ${memperc}>70}${color9}${endif}${endif}${endif}${memperc}%${color}
-${voffset 16}Net:${alignr}${upspeedf enp2s0} kb/s
-${voffset 4}${alignr}${downspeedf enp2s0} kb/s
+${voffset 2}${alignc}${font Fira Code:light:size=12}${time %R}${font}
+${voffset 6}${alignc}${time %a %e %b}
+${voffset 12}CPU:${alignr}${if_match ${cpu}<=50}${color7}${else}${if_match ${cpu}<=70}${color8}${else}${if_match ${cpu}>70}${color9}${endif}${endif}${endif}${cpu cpu0}%${color}
+${voffset 6}Mem:${alignr}${if_match ${memperc}<=50}${color7}${else}${if_match ${memperc}<=70}${color8}${else}${if_match ${memperc}>70}${color9}${endif}${endif}${endif}${memperc}%${color}
+${voffset 6}Net:${alignr}${upspeedf enp2s0} kb/s
+${voffset 6}${alignr}${downspeedf enp2s0} kb/s
 ]];

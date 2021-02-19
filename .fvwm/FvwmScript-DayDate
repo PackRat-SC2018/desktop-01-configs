@@ -15,8 +15,8 @@
 #        and FvwmScript: DefaultBack in .fvwm2rc does.
 
 WindowTitle {DayDate}   # MUST use same title ("DayDate") when swallowing
-WindowSize  100 52      # 100 pixels wide to match my FvwmButtons group
-Colorset 10
+WindowSize  118 40      # 120 pixels wide to match my FvwmButtons group
+Colorset 9
 
 Init
    Begin
@@ -39,18 +39,18 @@ Begin
 
 Widget 1
    Property
-      Size 100 26
+      Size 118 19
       Position 0 0
-      Font "xft:Source Serif Pro:Regular:size=11:antialias=true:autohint=true"
+      Font "xft:Roboto:Regular:size=10:antialias=true:autohint=true"
       Type ItemDraw
       Flags NoReliefString
    End
 
 Widget 2
    Property
-      Size 100 26
-      Position 0 26
-      Font "xft:Source Serif Pro:Regular:size=11:antialias=true:autohint=true"
+      Size 118 19
+      Position 0 19
+      Font "xft:Roboto Mono:Regular:size=10:antialias=true:autohint=true"
       Type ItemDraw
       Flags NoReliefString
    End

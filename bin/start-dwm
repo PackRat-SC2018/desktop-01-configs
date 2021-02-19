@@ -10,7 +10,8 @@
 #(sleep 2s && "$HOME/.fehbg") &
 #(sleep 2s && fbsetbg -c -r "$HOME/wallpaper/") &
 #fbsetbg -t -r "/mnt/public/images/tiles/" &
-(sleep 2s && fbsetbg -c -r "/mnt/public/images/textures/") &
+#(sleep 2s && fbsetbg -c -r "$HOME/wallpaper/") &
+feh --no-fehbg --bg-scale --no-xinerama --randomize /mnt/public/images/dual_monitor/* &
 
 # (sleep 2s && conky | while read LINE; do xsetroot -name "$LINE"; done) &
 # (sleep 2s && slstatus | while read LINE; do xsetroot -name "$LINE"; done) &

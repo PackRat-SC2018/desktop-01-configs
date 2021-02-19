@@ -1,32 +1,13 @@
-<?xml encoding="UTF-8" version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <actions>
 <action>
 	<icon>utilities-terminal</icon>
 	<name>Open Terminal Here</name>
-	<unique-id>1543250053921925-1</unique-id>
+	<unique-id>1607786726999161-1</unique-id>
 	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
 	<description>Example for a custom action</description>
 	<patterns>*</patterns>
 	<startup-notify/>
 	<directories/>
-</action>
-<action>
-	<icon>feh</icon>
-	<name>Set Wallpaper with feh</name>
-	<unique-id>1558107760482810-1</unique-id>
-	<command>feh --bg-center %f</command>
-	<description>set background wallpaper</description>
-	<patterns>*.jpg, *.png</patterns>
-</action>
-<action>
-	<icon>printer</icon>
-	<name>Print File</name>
-	<unique-id>1558108457210329-1</unique-id>
-	<command>xfprint4 %f</command>
-	<description>Print files with xfprint</description>
-	<patterns>*.txt, *.pdf</patterns>
-	<startup-notify/>
-	<other-files/>
-	<text-files/>
 </action>
 </actions>

@@ -5,15 +5,10 @@
     <property name="navigationbar" type="empty">
       <property name="position" type="string" value="left"/>
     </property>
-    <property name="height" type="uint" value="550"/>
-    <property name="width" type="uint" value="960"/>
-    <property name="show-clock" type="bool" value="true"/>
-    <property name="maximize-on-startup" type="bool" value="false"/>
-  </property>
-  <property name="slideshow" type="empty">
-    <property name="timeout" type="uint" value="7"/>
+    <property name="height" type="uint" value="741"/>
+    <property name="width" type="uint" value="1190"/>
   </property>
   <property name="file" type="empty">
-    <property name="current-uri" type="string" value="file:///home/doug/wallpaper"/>
+    <property name="current-uri" type="string" value="file:///home/doug/Pictures/2021-01-04"/>
   </property>
 </channel>

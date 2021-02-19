@@ -28,14 +28,16 @@
 [submenu] (Terminals)
       [exec] (UXTerm) {uxterm}
       [exec] (XTerm) {xterm}
+      [exec] (Tmux) {xterm -e tmux}
       [exec] (URxvt) {urxvt}
+      [exec] (Simple Terminal) {st}
+      [exec] (Sakura) {sakura -c 100 -r 34 -t Sakura}
       [exec] (Xfce4 Terminal) {xfce4-terminal}
       [exec] (Xfce4 Terminal drop down) {xfce4-terminal --drop-down}
-      [exec] (Kitty) {kitty}
-      [exec] (Simple Terminal) {st}
+      [exec] (Tilix) {tilix}
       [exec] (Terminator) {terminator}
-      [exec] (Sakura) {sakura -c 100 -r 34 -t Sakura}
-      [exec] (Tmux) {urxvt -e tmux}
+      [exec] (Kitty) {kitty}
+      [exec] (Alacritty) {alacritty}
 [end]
 [submenu] (Editors)
       [exec] (Geany) {wmctrl -a geany || geany}
@@ -66,8 +68,8 @@
       [exec] (Ristretto) {ristretto}
       [exec] (LXappearance) {lxappearance}
       [exec] (Gcolor2) {gcolor2}
-      [exec] (Wallpaper) {sxiv -t "$HOME/wallpaper"}
-      [exec] (Wallpaper - tiled) {fbsetbg -t -r /mnt/public/images/tiles/}
+      [exec] (Wallpaper - sxiv) {sxiv -t "$HOME/wallpaper"}
+      [exec] (Wallpaper - feh) {feh -g 960x540+900+120 --scale-down ~/wallpaper/}
       ![exec] (Screenshot JPG) {import -window root -quality 100 ~/pictures/screen-import-$(date +%A_%s).jpg}
       ![exec] (Screenshot PNG) {import -window root -quality 100 ~/pictures/screen-import-$(date +%A_%s).png}
       ![exec] (Screenshot JPG) {scrot -q 100 '%B_%s_$wx$h.jpg' -e 'mv $f ~/Pictures/'}

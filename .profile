@@ -5,8 +5,8 @@
 umask 022
 
 # set editor
-export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'subl3'; else echo 'nano'; fi)"
-export VISUAL="$(if [[ -n $DISPLAY ]]; then echo 'subl3'; else echo 'nano'; fi)"
+export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'subl3'; else echo 'vim'; fi)"
+export VISUAL="$(if [[ -n $DISPLAY ]]; then echo 'subl3'; else echo 'vim'; fi)"
 
 if [ -n "$DISPLAY" ]; then
     export BROWSER=firefox
